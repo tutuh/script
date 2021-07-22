@@ -8,6 +8,10 @@ README：https://github.com/yichahucha/surge/tree/master
 hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com
  */
 
+/*
+README：https://github.com/yichahucha/surge/tree/master
+ */
+
 const path1 = "/interface/sdk/sdkad.php";
 const path2 = "/wbapplua/wbpullad.lua";
 
