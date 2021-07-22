@@ -9,6 +9,9 @@ hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com
  */
 
 
+/*
+README：https://github.com/yichahucha/surge/tree/master
+ */
 const path1 = "/groups/timeline";
 const path2 = "/statuses/unread";
 const path3 = "/statuses/extend";
