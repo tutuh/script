@@ -1,0 +1,5 @@
+#!name=Picsew vip
+#!desc=
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com
+Picsew = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Picsew.js
