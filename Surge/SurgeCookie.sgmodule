@@ -1,8 +1,9 @@
-# 获取Cookie订阅 
-# 该订阅仅适用于定时签到脚本的Cookie获取. 
-# 可以在使用后手动将其禁用，以免产生不必要的MITM.
 
-hostname = api.club.lenovo.cn, auto.chediandian.com, app.relxtech.com, api.tuhu.cn, passport.biligame.com, api.m.jd.com, www.52pojie.cn, h5.ele.me, maicai.api.ddxq.mobi, apph5.manmanbuy.com, c.tieba.baidu.com, zhiyou.smzdm.com, mobwsa.ximalaya.com, ccsp-egmas.sf-express.com, user.qunar.com, i.meituan.com, *.feng.com, *.bilibili.com, operation-api.jimistore.com, act.10010.com, m.client.10010.com, credits.bz.mgtv.com
+#!name=获取Cookie订阅 
+#!desc=该订阅仅适用于定时签到脚本的Cookie获取.可以在使用后手动将其禁用，以免产生不必要的MITM.
+
+[MITM]
+hostname = %APPEND% api.club.lenovo.cn, auto.chediandian.com, app.relxtech.com, api.tuhu.cn, passport.biligame.com, api.m.jd.com, www.52pojie.cn, h5.ele.me, maicai.api.ddxq.mobi, apph5.manmanbuy.com, c.tieba.baidu.com, zhiyou.smzdm.com, mobwsa.ximalaya.com, ccsp-egmas.sf-express.com, user.qunar.com, i.meituan.com, *.feng.com, *.bilibili.com, operation-api.jimistore.com, act.10010.com, m.client.10010.com, credits.bz.mgtv.com
 
 # 联想智选 api.club.lenovo.cn
 https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add url script-request-body https://raw.githubusercontent.com/tutuh/script/master/task/lenovo/lenovo.js
