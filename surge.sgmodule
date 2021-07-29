@@ -12,8 +12,7 @@ VSCO = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscri
 
 #-- BY songyangzz --
 # ulike轻颜相机 commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi
-^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body https://raw.githubusercontent.com/tutuh/script/master/JS/ulike.js
-轻颜相机
+轻颜相机 = type=http-response,pattern=^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/ulike.js
 
 #-- BY yichahucha --
 # 微博去广告 api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, 
@@ -22,9 +21,10 @@ VSCO = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscri
 
 #-- BY 黑黑酱 --  
 # 美图秀秀 v9.0.51版本 api.xiuxiu.meitu.com  
-^https:\/\/api\.xiuxiu\.meitu\.com\/v1\/user\/show\.json url script-response-body https://raw.githubusercontent.com/tutuh/script/master/JS/mtxx.js
+美图秀秀 = type=http-response,pattern=^https:\/\/api\.xiuxiu\.meitu\.com\/v1\/user\/show\.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/mtxx.js
+
 # 美颜相机 v9.6.20版本）api.meiyan.com
-^https:\/\/api\.meiyan\.com\/vip\/user_info url script-response-body https://raw.githubusercontent.com/tutuh/script/master/JS/Meiyanxiangji.js
+美颜相机 = type=http-response,pattern=^https:\/\/api\.meiyan\.com\/vip\/user_info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Meiyanxiangji.js
 
 #-- BY blackmatrix7 --
 #彩云天气pro vip   biz.caiyunapp.com
@@ -32,5 +32,4 @@ VSCO = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscri
 
 #-- BY langkhach270389 --
 # PdfExpert vip  license.pdfexpert.com
-Documents-PdfExpert = type=http-response,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/PdfExpert.js
-
+PdfExpert = type=http-response,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/PdfExpert.js
