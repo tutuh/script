@@ -3,16 +3,11 @@
 #!desc=该订阅仅适用于定时签到脚本的Cookie获取.可以在使用后手动将其禁用，以免产生不必要的MITM.
 
 [MITM]
-hostname = %APPEND% api.club.lenovo.cn, auto.chediandian.com, app.relxtech.com, api.tuhu.cn, passport.biligame.com, api.m.jd.com, www.52pojie.cn, h5.ele.me, maicai.api.ddxq.mobi, apph5.manmanbuy.com, c.tieba.baidu.com, zhiyou.smzdm.com, mobwsa.ximalaya.com, ccsp-egmas.sf-express.com, user.qunar.com, i.meituan.com, *.feng.com, *.bilibili.com, operation-api.jimistore.com, act.10010.com, m.client.10010.com, credits.bz.mgtv.com
+hostname = %APPEND% app.relxtech.com, api.tuhu.cn, passport.biligame.com, api.m.jd.com, www.52pojie.cn, c.tieba.baidu.com, zhiyou.smzdm.com, mobwsa.ximalaya.com, ccsp-egmas.sf-express.com, user.qunar.com, i.meituan.com, *.feng.com, *.bilibili.com, operation-api.jimistore.com, act.10010.com, m.client.10010.com, credits.bz.mgtv.com
 
-# 联想智选 api.club.lenovo.cn
-https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add url script-request-body https://raw.githubusercontent.com/tutuh/script/master/task/lenovo/lenovo.js
-# 微信小程序"太平洋车生活" auto.chediandian.com
-https:\/\/auto\.chediandian\.com\/activity\/tb-sign\/sign-handle url script-request-body https://raw.githubusercontent.com/tutuh/script/master/task/cpic/cpic.js
+
 # 悦刻app app.relxtech.com
-https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in url script-request-header https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js
-# 途虎养车 api.tuhu.cn
-https:\/\/api\.tuhu\.cn\/User\/UserCheckInVersion1 url script-request-header https://raw.githubusercontent.com/tutuh/script/master/task/tuhu/tuhu.js
+悦刻app cookie = type=http-request,pattern=https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in,script-path=ttps://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js
 
 
 # --- by  NobyDa ---
@@ -26,15 +21,9 @@ https:\/\/api\.tuhu\.cn\/User\/UserCheckInVersion1 url script-request-header htt
 # 爱奇艺会员签到cookie ifac*.iqiyi.com
 爱奇艺获取Cookie = type=http-request,pattern=^https?:\/\/iface(\d)?\.iqiyi\.com\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
-# --- by songyangzz ---
-# 饿了么 h5.ele.me
-^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ url script-request-header https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemGetCookies.js
 
-# --- by blackmatrix7  ---
-# 叮咚买菜 maicai.api.ddxq.mobi
-^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
-# 慢慢买 apph5.manmanbuy.com
-https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) url script-request-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js
+
+
 # 中国联通 m.client.10010.com  
 # 进入“我的”-”天天抽奖“，弹出 Cookie、手机号、手机号密文、城市四个项目获取成功即可。
 ^https?:\/\/m\.client\.10010\.com\/dailylottery\/static\/(integral|doubleball)\/firstpage url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/unicom_signin.min.js
