@@ -16,7 +16,7 @@ obj ={
   "error": "Ok",
   "msg": "成功",
   "data": {
-    "uid": 1794626726,
+    "uid": 1840452070,
     "mt_num": 0,
     "type": 0,
     "screen_name": "勇敢图图",
