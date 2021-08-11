@@ -19,7 +19,7 @@ obj ={
     "uid": 1794626726,
     "mt_num": 0,
     "type": 0,
-    "screen_name": "黑黑酱",
+    "screen_name": "勇敢图图",
     "core": false,
     "avatar_url": "http://maavatar1.meitudata.com/5fbde7a5c10621905.jpg",
     "gender": "f",
