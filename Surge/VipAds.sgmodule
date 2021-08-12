@@ -4,7 +4,7 @@
 [MITM]
 hostname = %APPEND% ap*.intsig.net, api.picsart.c*, api.meiease.c*, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, api.xiuxiu.meitu.com, api.meiyan.com, api.vuevideo.net, vsco.co, api.revenuecat.com, biz.caiyunapp.com, license.pdfexpert.com, 
 
-#-- BY NobyDa --
+#-- BY NobyDa -- 
 # 扫描全能王CamScanner pro    ap*.intsig.net 
 扫描全能王 = type=http-response,pattern=http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/CamScanner.js
 # PicsArt美易 pro   api.picsart.c*, api.meiease.c* 
