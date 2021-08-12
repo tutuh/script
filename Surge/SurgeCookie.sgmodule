@@ -5,7 +5,7 @@
 [MITM]
 hostname = %APPEND% app.relxtech.com, api.tuhu.cn, passport.biligame.com, api.m.jd.com, www.52pojie.cn, c.tieba.baidu.com, zhiyou.smzdm.com, mobwsa.ximalaya.com, ccsp-egmas.sf-express.com, user.qunar.com, i.meituan.com, *.feng.com, *.bilibili.com, operation-api.jimistore.com, act.10010.com, m.client.10010.com, credits.bz.mgtv.com
 
-
+[Script]
 # 悦刻app app.relxtech.com
 悦刻app cookie = type=http-request,pattern=https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in,script-path=ttps://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js
 
