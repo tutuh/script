@@ -1,0 +1,3 @@
+blank_dict.json为空文件
+
+目录中的空文件，仅作为Surge中Mock模块的远端文件使用，无其他用途。
