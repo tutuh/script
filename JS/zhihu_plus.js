@@ -1,5 +1,4 @@
-/* BY blackmatrix7
-*/
+// by blackmatrix7
 const scriptName = "知乎助手";
 const blockedUsersKey = "zhihu_blocked_users";
 const currentUserInfoKey = "zhihu_current_userinfo";
