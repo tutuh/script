@@ -1,4 +1,4 @@
-#!name=Unlock Buy Apple BY  langkhach270389 
+#!name=Unlock Buy Apple  
 #!desc=buy.itunes.apple.com
 [MITM]
 hostname = %APPEND% buy.itunes.apple.com
