@@ -1,27 +1,37 @@
 /*
 BY NobyDa
 哔哩哔哩漫画签到
+
 脚本兼容: QuantumultX, Surge, Loon
 电报频道：@NobyDa
 问题反馈：@NobyDa_bot
 如果转载，请注明出处
+
 说明：
 打开哔哩哔哩漫画后 (AppStore中国区)，单击"我的", 如果通知获取cookie成功, 则可以使用此脚本. 
+
 脚本将在每天上午9点执行。 您可以修改执行时间。
+
 ~~~~~~~~~~~~~~~~
 Surge 4.2.0+ :
+
 [Script]
 Bili漫画签到 = type=cron,cronexp=0 9 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
+
 Bili漫画Cookie = type=http-request,pattern=^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
+
 [MITM]
 hostname = passport.biligame.com
 ~~~~~~~~~~~~~~~~
 QX 1.0.10+ :
+
 [task_local]
 0 9 * * * https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js, tag=Bili漫画签到
+
 [rewrite_local]
 #获取Bili漫画Cookie
 ^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
+
 [mitm]
 hostname = passport.biligame.com
 ~~~~~~~~~~~~~~~~
