@@ -1,3 +1,4 @@
+// by blackmatrix7 
 const getLotteryCookieRegex = /^https?:\/\/m\.client\.10010\.com\/dailylottery\/static\/(integral|doubleball)\/firstpage/;
 const unicomCookieKey = "unicom_user_cookie";
 const mobileKey = "unicom_mobile";
