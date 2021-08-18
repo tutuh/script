@@ -1,4 +1,4 @@
-# BY-- NobyDa -- QX需开解析器
+# BY-- NobyDa --
 # This ruleset includes 99% of apple inc network connections(global). If there are any missing, please PR.
 
 DOMAIN-SUFFIX,apple.co
