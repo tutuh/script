@@ -2,16 +2,13 @@
 #!desc=自用，收集自各大佬脚本，该订阅仅适用于定时签到脚本的Cookie获取.可以在使用后手动将其禁用，以免产生不必要的MITM
 
 [MITM]
-hostname = %APPEND% api.club.lenovo.cn, auto.chediandian.com, app.relxtech.com, api.tuhu.cn, passport.biligame.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, www.52pojie.cn, h5.ele.me, maicai.api.ddxq.mobi, apph5.manmanbuy.com, c.tieba.baidu.com, zhiyou.smzdm.com, mobwsa.ximalaya.com, ccsp-egmas.sf-express.com, user.qunar.com, i.meituan.com, *.feng.com, *.bilibili.com, operation-api.jimistore.com, act.10010.com, m.client.10010.com, credits.bz.mgtv.com
+hostname = %APPEND% api.club.lenovo.cn,  app.relxtech.com, api.tuhu.cn, passport.biligame.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, www.52pojie.cn, h5.ele.me, maicai.api.ddxq.mobi, apph5.manmanbuy.com, c.tieba.baidu.com, zhiyou.smzdm.com, mobwsa.ximalaya.com, ccsp-egmas.sf-express.com, user.qunar.com, i.meituan.com, *.feng.com, *.bilibili.com, operation-api.jimistore.com, act.10010.com, m.client.10010.com, credits.bz.mgtv.com
 
 # 联想智选 api.club.lenovo.cn
-https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add url script-request-body https://raw.githubusercontent.com/tutuh/script/master/task/lenovo/lenovo.js
-# 微信小程序"太平洋车生活" auto.chediandian.com
-https:\/\/auto\.chediandian\.com\/activity\/tb-sign\/sign-handle url script-request-body https://raw.githubusercontent.com/tutuh/script/master/task/cpic/cpic.js
+联想智选 Cookie = script-path=https://raw.githubusercontent.com/tutuh/script/master/task/lenovo/lenovo.js,requires-body=true,type=http-request,pattern=https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add
 # 悦刻app app.relxtech.com
-https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in url script-request-header https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js
-# 途虎养车 api.tuhu.cn
-https:\/\/api\.tuhu\.cn\/User\/UserCheckInVersion1 url script-request-header https://raw.githubusercontent.com/tutuh/script/master/task/tuhu/tuhu.js
+悦刻cookie = script-path=https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js,type=http-request,pattern=https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in
+
 
 # --- by  NobyDa ---
 # 哔哩哔哩漫画cookie  passport.biligame.com
@@ -51,33 +48,32 @@ http-request ^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$ script-pat
 
 # --- by chavyleung  ---
 # 喜马拉雅 mobwsa.ximalaya.com
-^https?:\/\/.*\/mobile\-user\/homePage\/.* url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js
+http-request ^https?:\/\/.*\/mobile\-user\/homePage\/.* script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js
 # 顺丰速运 ccsp-egmas.sf-express.com
-^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
-^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+顺丰速运 = type=http-request, pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,requires-body=true
 # 去哪儿 user.qunar.com
-^https:\/\/user.qunar.com\/webapi\/member\/signIndexV2.htm url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qunar/qunar.cookie.js
+http-request ^https:\/\/user.qunar.com\/webapi\/member\/signIndexV2.htm script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qunar/qunar.cookie.js
 # 美团 i.meituan.com
-^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
+http-request ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js, requires-body=true
 # 威锋网 *.feng.com
-^https:\/\/(www\.)?feng\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js
+feng = type=http-request,pattern=^http:\/\/49.234.36.200:9091\/v1\/auth\/signin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js,requires-body=true
 # 哔哩哔哩视频 *.bilibili.com
-^https:\/\/(www|live)\.bilibili\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
+http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
 # 中国联通 act.10010.com, m.client.10010.com
-#^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
-#^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
-#^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+http-request ^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+http-request ^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+http-request ^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
 #芒果TV credits.bz.mgtv.com
-^https:\/\/credits.bz.mgtv.com\/user\/creditsTake url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.cookie.js
+http-request ^https:\/\/credits.bz.mgtv.com\/user\/creditsTake script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.cookie.js
 
 # --- by yangtingxiao  ---
 # 天天挖矿 operation-api.jimistore.com
-^https:\/\/operation-api\.jimistore\.com\/* url script-request-body https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js
+天天挖矿 = type=http-request,pattern=^https:\/\/operation-api\.jimistore\.com\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js
 
 # --- by photonmang  ---
 #途虎养车 api.tuhu.cn
-https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo url script-request-header https://raw.githubusercontent.com/photonmang/quantumultX/master/tuhu/tuhu.Cookie.js
+http-request https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/tuhu/tuhu.Cookie.js
 
 # --- by dompling  ---
 #中国联通
-^https:\/\/m\.client\.10010\.com\/mobileserviceimportant\/smart\/smartwisdomCommon  url script-request-header https://raw.githubusercontent.com/dompling/Script/master/10010/index.js
+联通 headers = type=http-request,pattern=https:\/\/m\.client\.10010\.com\/mobileserviceimportant\/smart\/smartwisdomCommon,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/10010/index.js,script-update-interval=0
