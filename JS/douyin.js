@@ -1,4 +1,15 @@
 /* ----BY Choler -----
+[Rule]
+URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
+
+[URL Rewrite]
+^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/ https://aweme.snssdk.com/aweme/v1/ header
+
+[Script]
+douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path=https://Choler.github.io/Surge/Script/douyin.js
+
+[MITM]
+hostname = %APPEND% api*.amemv.com, aweme.snssdk.com
 */
   
 const enabled_live = false; // 开启直播推荐，默认关闭
