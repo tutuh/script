@@ -1,4 +1,14 @@
-// by blackmatrix7 
+/* by blackmatrix7 
+QX:
+^https?:\/\/m\.client\.10010\.com\/dailylottery\/static\/(integral|doubleball)\/firstpage url script-request-header https://raw.githubusercontent.com/tutuh/script/master/JS/10010.js
+hostname = m.client.10010.com
+Surge
+联通_获取cookie = type=http-request,pattern=^https?:\/\/m\.client\.10010\.com\/dailylottery\/static\/(integral|doubleball)\/firstpage,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/10010.js
+
+[MITM]
+hostname = %APPEND% m.client.10010.com
+*/
+
 const getLotteryCookieRegex = /^https?:\/\/m\.client\.10010\.com\/dailylottery\/static\/(integral|doubleball)\/firstpage/;
 const unicomCookieKey = "unicom_user_cookie";
 const mobileKey = "unicom_mobile";
