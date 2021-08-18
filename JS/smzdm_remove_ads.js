@@ -1,4 +1,4 @@
-// BY  blackmatrix7  
+// by blackmatrix7
 const scriptName = "什么值得买";
 let magicJS = MagicJS(scriptName, "INFO");
 
