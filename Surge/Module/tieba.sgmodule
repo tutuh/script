@@ -1,0 +1,16 @@
+#!name=贴吧广告
+#!desc=贴吧广告
+#!system=ios
+[Rule]
+AND,((USER-AGENT,TBClient*), (OR,((AND,((GEOIP,CN,no-resolve), (DEST-PORT,443))), (DOMAIN-KEYWORD,gdt), (DOMAIN-KEYWORD,feed), (DOMAIN-KEYWORD,toutiao), (DOMAIN-KEYWORD,snssdk), (DOMAIN-KEYWORD,360buy), (DOMAIN-KEYWORD,kuaishou), (DOMAIN-KEYWORD,aod-image), (DOMAIN,afd.baidu.com)))),REJECT
+URL-REGEX,^http:\/\/(m|nad.+|a.d.+)\.baidu\.com\/(baidu\.php|.+\.mp4|\d\/pic\/),REJECT
+DOMAIN-SUFFIX,dsp-idea.cdn.bcebos.com,REJECT-TINYGIF
+DOMAIN-SUFFIX,fc-feed.cdn.bcebos.com,REJECT-TINYGIF
+DOMAIN-SUFFIX,bj.bcebos.com,REJECT-TINYGIF
+DOMAIN-SUFFIX,aod-image.baidu.com,REJECT-TINYGIF
+DOMAIN-SUFFIX,feed-image.baidu.com,REJECT-TINYGIF
+DOMAIN-SUFFIX,internal-amis-res.cdn.bcebos.com,REJECT-TINYGIF
+DOMAIN-SUFFIX,paimgcdn-feed.baidu.com,REJECT-TINYGIF
+DOMAIN-SUFFIX,pmp-ad.cdn.bcebos.com,REJECT-TINYGIF
+[MITM]
+hostname = %APPEND% pimlog.baidu.com, crab.baidu.com, sofire.baidu.com, himg.bdimg.com, external-preview.redd.it, api.flexibits.com, hmma.baidu.com, feed-image.baidu.com, als.baidu.com, crab.baidu.com, mobads.baidu.com, mobads-logs.baidu.com, afd.baidu.com, nsclick.baidu.com, *.bdstatic.com, pmp-ad.cdn.bcebos.com, tiebapic.baidu.com,internal-amis-res.cdn.bcebos.com, paimgcdn-feed.baidu.com, mpics.bdstatic.com, bizres.bj.bcebos.com
