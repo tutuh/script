@@ -9,6 +9,7 @@ hostname = %APPEND% api.club.lenovo.cn, app app.relxtech.com, passport.biligame.
 联想智选 Cookie = script-path=https://raw.githubusercontent.com/tutuh/script/master/task/lenovo/lenovo.js,requires-body=true,type=http-request,pattern=https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add
 
 # 悦刻        app app.relxtech.com
+
 悦刻cookie = script-path=https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js,type=http-request,pattern=https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in
 
 
