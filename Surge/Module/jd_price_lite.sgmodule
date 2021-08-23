@@ -1,5 +1,5 @@
-#!name=京东比价
-#!desc=京东比价 
+#!name=jd_price_lite
+#!desc=京东比价
 [MITM]
 hostname = %APPEND% api.m.jd.com
 [Script]
