@@ -1,6 +1,6 @@
 #!name=Picsew vip
 #!desc=解锁后需禁用mitm
 [MITM]
-#hostname = %APPEND% buy.itunes.apple.com
+hostname = %APPEND% buy.itunes.apple.com
 [Script]
 Picsew = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Picsew.js
