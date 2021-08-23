@@ -1,5 +1,7 @@
 #!name=京东比价
 #!desc=京东比价(弹窗版)
+#!system=ios
+
 [MITM]
 hostname = %APPEND% api.m.jd.com
 [Script]
