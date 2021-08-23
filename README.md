@@ -17,11 +17,11 @@
 [@songyangz](https://github.com/songyangz)  
 [@Sunert](https://github.com/Sunert)  
 [@chavyleung](https://github.com/chavyleung)  
-[@lxk0301](https://github.com/lxk0301)  
 [@dompling](https://github.com/dompling/Script)  
 [@DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)
 [@Tartarus2014](https://github.com/Tartarus2014/Script)    
 [@yichahucha](https://github.com/yichahucha/surge)  
+[@langkhach270389](https://github.com/langkhach270389/Surge-LK/tree/main)    
 
 
   
