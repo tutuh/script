@@ -12,7 +12,7 @@
                          
 ## 感谢以下各位大佬(排名不分先后)：  
 
-[@NobyDa](https://github.com/NobyDa)  
+[@NobyDa](https://github.com/NobyDa/Script)  
 [@blackmatrix7](https://github.com/blackmatrix7)  
 [@songyangz](https://github.com/songyangz)  
 [@Sunert](https://github.com/Sunert)  
