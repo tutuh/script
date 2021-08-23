@@ -1,5 +1,5 @@
 #!name=Picsew vip
-#!desc=
+#!desc=解锁后需禁用mitm
 [MITM]
 #hostname = %APPEND% buy.itunes.apple.com
 [Script]
