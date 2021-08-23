@@ -13,7 +13,7 @@
 ## 感谢以下各位大佬(排名不分先后)：  
 
 [@NobyDa](https://github.com/NobyDa/Script)  
-[@blackmatrix7](https://github.com/blackmatrix7)  
+[@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script)  
 [@songyangz](https://github.com/songyangz)  
 [@Sunert](https://github.com/Sunert)  
 [@chavyleung](https://github.com/chavyleung)  
