@@ -1,5 +1,6 @@
-#!name=Unlock App
-#!desc=解锁vip
+#!name=VIP解锁
+#!desc=解锁扫描全能王、PicsArt美易、VUE Vlo、VSCO、MIX、ulike轻颜相机、美图秀秀、美颜相机、PdfExpert、彩云天气pro VIP
+
 
 [MITM]
 hostname = %APPEND% ap*.intsig.net, api.picsart.c*, api.meiease.c*, api.vuevideo.net, vsco.co, api.revenuecat.com, bmall.camera360.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, api.xiuxiu.meitu.com, api.meiyan.com, license.pdfexpert.com, biz.caiyunapp.com, 
