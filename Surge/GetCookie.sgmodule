@@ -2,12 +2,9 @@
 #!desc= 收集自各大佬脚本，该订阅仅适用于定时签到脚本的Cookie获取.可以在使用后手动将其禁用，以免产生不必要的MITM
 
 [MITM]
-hostname = %APPEND% api.club.lenovo.cn, app.relxtech.com, passport.biligame.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, ifac*.iqiyi.com, h5.ele.me, maicai.api.ddxq.mobi, apph5.manmanbuy.com, m.client.10010.com, c.tieba.baidu.com, zhiyou.smzdm.com, mobwsa.ximalaya.com, ccsp-egmas.sf-express.com, user.qunar.com, i.meituan.com, *.feng.com, *.bilibili.com, credits.bz.mgtv.com, operation-api.jimistore.com, api.tuhu.cn
+hostname = %APPEND% app.relxtech.com, passport.biligame.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, ifac*.iqiyi.com, h5.ele.me, maicai.api.ddxq.mobi, apph5.manmanbuy.com, m.client.10010.com, c.tieba.baidu.com, zhiyou.smzdm.com, mobwsa.ximalaya.com, ccsp-egmas.sf-express.com, user.qunar.com, i.meituan.com, *.feng.com, *.bilibili.com, credits.bz.mgtv.com, operation-api.jimistore.com, api.tuhu.cn
 
 [Script]
-# 联想智选 api.club.lenovo.cn
-联想智选 Cookie = script-path=https://raw.githubusercontent.com/tutuh/script/master/task/lenovo/lenovo.js,requires-body=true,type=http-request,pattern=https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add
-
 # 悦刻        app.relxtech.com
 
 悦刻cookie = script-path=https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js,type=http-request,pattern=https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in
