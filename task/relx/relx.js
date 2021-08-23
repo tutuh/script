@@ -140,7 +140,7 @@ function tutuh() {
               callback(error, adapterStatus(response), body)
             })
           }
-    const post = (options, callback) => {
+     const post = (options, callback) => {
         if (isQuanX) {
             if (typeof options == "string") options = { url: options }
             options["method"] = "POST"
@@ -149,12 +149,8 @@ function tutuh() {
                 callback(null, response, response.body)
             }, reason => callback(reason.error, null, null))
         }
-        if (isSurge) {
-              $httpClient.post(options, (error, response, body) => {
-                callback(error, adapterStatus(response), body)
-              })
-            }
-          }
+        if (isSurge) $httpClient.post(options, callback)
+    }
   const done = (value = {}) => {
       if (isQuanX) return $done(value)
       if (isSurge) isRequest ? $done(value) : $done()
