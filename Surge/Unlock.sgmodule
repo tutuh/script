@@ -1,5 +1,5 @@
 #!name=Unlock App
-#!desc=自用，收集自各大佬脚本
+#!desc=解锁vip
 
 [MITM]
 hostname = %APPEND% ap*.intsig.net, api.picsart.c*, api.meiease.c*, api.vuevideo.net, vsco.co, api.revenuecat.com, bmall.camera360.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, api.xiuxiu.meitu.com, api.meiyan.com, license.pdfexpert.com, biz.caiyunapp.com, 
