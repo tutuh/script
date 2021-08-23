@@ -4,6 +4,7 @@
 [MITM]
 hostname = %APPEND% api.club.lenovo.cn, app app.relxtech.com, passport.biligame.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, ifac*.iqiyi.com, h5.ele.me, maicai.api.ddxq.mobi, apph5.manmanbuy.com, m.client.10010.com, c.tieba.baidu.com, zhiyou.smzdm.com, mobwsa.ximalaya.com, ccsp-egmas.sf-express.com, user.qunar.com, i.meituan.com, *.feng.com, *.bilibili.com, credits.bz.mgtv.com, operation-api.jimistore.com, api.tuhu.cn
 
+[Script]
 # 联想智选 api.club.lenovo.cn
 联想智选 Cookie = script-path=https://raw.githubusercontent.com/tutuh/script/master/task/lenovo/lenovo.js,requires-body=true,type=http-request,pattern=https:\/\/api\.club\.lenovo\.cn\/common\/signin\/add
 
@@ -15,7 +16,6 @@ hostname = %APPEND% api.club.lenovo.cn, app app.relxtech.com, passport.biligame.
 
 # 哔哩哔哩漫画     passport.biligame.com
 Bili漫画Cookie = type=http-request,pattern=^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
-
 
 # 京东签到      ms.jr.jd.com, me-api.jd.com, api.m.jd.com
 获取京东Cookie = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
