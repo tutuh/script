@@ -22,6 +22,6 @@
 [@Tartarus2014](https://github.com/Tartarus2014/Script)    
 [@yichahucha](https://github.com/yichahucha/surge)  
 [@langkhach270389](https://github.com/langkhach270389/Surge-LK/tree/main)    
-
+[@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)  
 
   
