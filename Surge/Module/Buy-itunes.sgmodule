@@ -1,5 +1,7 @@
 #!name=Unlock Buy Apple  
 #!desc=buy.itunes.apple.com
+#!system=ios
+
 [MITM]
 hostname = %APPEND% buy.itunes.apple.com
 [Script]
