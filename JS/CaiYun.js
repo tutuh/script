@@ -1,5 +1,5 @@
-/*  By 
-2069年 Tartarus2014
+/* By Tartarus2014
+ * 2069年
  * [MITM]	
  * hostname = biz.caiyunapp.com	
  * 	
