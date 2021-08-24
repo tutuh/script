@@ -1,4 +1,4 @@
-#!name=URL Redirect重定向 BY DivineEngine
+#!name=URL Redirect BY DivineEngine
 #!desc=通用的 URL 重定向优化（如 Google 搜索及地图、AbeamTV 区域限制等）
 
 [URL Rewrite]
