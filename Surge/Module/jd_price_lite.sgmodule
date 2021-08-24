@@ -5,4 +5,4 @@
 [MITM]
 hostname = %APPEND% api.m.jd.com
 [Script]
-京东比价 = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/tutuh/script/master/JS/jd_price_lite.js,script-update-interval=0
+京东比价 = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/jd_price_lite.js,script-update-interval=0
