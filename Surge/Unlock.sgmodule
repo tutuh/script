@@ -40,7 +40,7 @@ http-response https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery requires-body
 # PdfExpert vip  license.pdfexpert.com
 Documents-PdfExpert = type=http-response,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/PdfExpert.js,script-update-interval=-1
 
-# -- BY blackmatrix7 --
+# -- BY Tartarus2014 --
 # 彩云天气pro vip   biz.caiyunapp.com
-彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/caiyun.js 
+彩云天气SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/CaiYun.js
 
