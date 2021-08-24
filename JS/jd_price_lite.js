@@ -1,5 +1,5 @@
-/*
-BY Tartarus2014
+/* 
+By Tartarus2014
 Loon：
 [Script]
 http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_price_lite.js, tag=京东比价
