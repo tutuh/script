@@ -7,7 +7,6 @@ hostname = %APPEND% app.relxtech.com, passport.biligame.com, ms.jr.jd.com, me-ap
 
 [Script]
 # 悦刻        app.relxtech.com
-
 悦刻cookie = script-path=https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js,type=http-request,pattern=https:\/\/app\.relxtech\.com\/dianziyan-api\/api\/v3\/community\/check-in
 
 
