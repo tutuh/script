@@ -53,7 +53,7 @@ BiliBili_我的页面处理 = type=http-response,requires-body=1,max-size=0,patt
 
 [Rule]
 # 抖音去广告
-#URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
+# URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
 
 # 哔哩哔哩动画
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
