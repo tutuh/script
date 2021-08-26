@@ -1,4 +1,7 @@
 # By DivineEngine
+# REPO: https://github.com/DivineEngine/Profiles/tree/master/Surge/Ruleset
+# 
+
 # (DNS Cache Pollution)
 # > Amazon
 DOMAIN-SUFFIX,amazon.co.jp
