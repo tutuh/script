@@ -1,6 +1,7 @@
 # By DivineEngine
 # 开解析器可用于QuantumultX
-# 白名单
+# REPO: https://github.com/DivineEngine/Profiles/tree/master/Surge/Ruleset/Guard
+# 隐私保护
 
 # Privacy
 DOMAIN-SUFFIX,adjust.com
