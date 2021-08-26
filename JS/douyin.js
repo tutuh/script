@@ -1,12 +1,19 @@
-/* ----BY Choler -----
-[Rule]
-URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
-
+/* ----By Choler -----
+Surge
 [URL Rewrite]
-^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/ https://aweme.snssdk.com/aweme/v1/ header
+# > Douyin(<= 16.2.0) By Choler
+^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/(?!(comment|namek)) https://aweme.snssdk.com/aweme/v1/ header
 
 [Script]
-douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path=https://Choler.github.io/Surge/Script/douyin.js
+# ---(By Choler)---
+# > Douyin(<= 16.2.0) - api*.amemv.com, aweme.snssdk.com
+douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js
+# ------
+
+QX
+# > Douyin(<= 16.2.0) - api*.amemv.com,aweme.snssdk.com
+^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/(?!(comment|namek)) url request-header ^GET \/aweme\/v\d\/(.+\r\n)Host:.+(\r\n) request-header GET /aweme/v1/$1Host: aweme.snssdk.com$2
+^https?:\/\/api.*\.amemv\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\? url script-response-body https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js
 
 [MITM]
 hostname = %APPEND% api*.amemv.com, aweme.snssdk.com
