@@ -1,4 +1,7 @@
 # By DivineEngine
+# REPO: https://github.com/DivineEngine/Profiles/tree/master/Quantumult/Filter
+
+# Global Rule
 # (DNS Cache Pollution)
 # > Amazon
 DOMAIN-SUFFIX,amazon.co.jp
