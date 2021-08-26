@@ -1,5 +1,6 @@
 # By DivineEngine
-# iCloud 分流规则
+# Telegram Rule
+# REPO: https://github.com/DivineEngine/Profiles/tree/master/Quantumult/Filter/Extra/Apple
 
 DOMAIN-SUFFIX,apple-cloudkit.com,PROXY
 DOMAIN-SUFFIX,icloud.com,PROXY
