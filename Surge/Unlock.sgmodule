@@ -5,9 +5,9 @@
 [MITM]
 hostname = %APPEND% ap*.intsig.net, api.picsart.c*, api.meiease.c*, api.vuevideo.net, vsco.co, api.revenuecat.com, bmall.camera360.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, api.xiuxiu.meitu.com, api.meiyan.com, license.pdfexpert.com, biz.caiyunapp.com, 
 
-[Script]
-# -- BY NobyDa -- 
 
+[Script]
+# > By NobyDa
 # 扫描全能王CamScanner pro    ap*.intsig.net 
 http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/CamScanner.js
 
@@ -23,24 +23,22 @@ http-response ^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/
 # MIX 解锁高级特权 (需恢复购买)  bmall.camera360.com
 http-response https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/MIX.js
 
-# -- BY songyangzz --
-
+# > By songyangzz
 # ulike轻颜相机 commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi
 轻颜相机 = type=http-response,pattern=^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/ulike.js
 
-# -- BY 黑黑酱 --  
-
+# > By 黑黑酱
 # 美图秀秀 v9.0.51版本 api.xiuxiu.meitu.com  
 美图秀秀 = type=http-response,pattern=^https:\/\/api\.xiuxiu\.meitu\.com\/v1\/user\/show\.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/mtxx.js
 
 # 美颜相机 v9.6.20版本）api.meiyan.com
 美颜相机 = type=http-response,pattern=^https:\/\/api\.meiyan\.com\/vip\/user_info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Meiyanxiangji.js
 
-#-- BY langkhach270389 --
+# > By langkhach270389
 # PdfExpert vip  license.pdfexpert.com
 Documents-PdfExpert = type=http-response,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/PdfExpert.js,script-update-interval=-1
 
-# -- BY Tartarus2014 --
+# > By Tartarus2014
 # 彩云天气pro vip   biz.caiyunapp.com
 彩云天气SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path= https://raw.githubusercontent.com/tutuh/script/master/JS/CaiYun.js
 
