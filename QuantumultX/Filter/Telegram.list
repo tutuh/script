@@ -1,7 +1,7 @@
 # By DivineEngine
-# Telegram Rule
-# REPO: https://github.com/DivineEngine/Profiles/blob/master/Quantumult/Filter/Extra/Telegram/Telegram.list
+# REPO: https://github.com/DivineEngine/Profiles/tree/master/Quantumult/Filter/Extra/Telegram
 
+# Telegram Rule
 DOMAIN-SUFFIX,t.me,Telegram
 DOMAIN-SUFFIX,tdesktop.com,Telegram
 DOMAIN-SUFFIX,telegra.ph,Telegram
