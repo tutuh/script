@@ -8,7 +8,7 @@ hostname = %APPEND% api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, app.bilibili.
 [Script]
 # -- BY Choler --
 # 抖音去广告 - api*.amemv.com, aweme.snssdk.com
-抖音去广告 = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path= https://raw.githubusercontent.com/tutuh/script/master/JS/douyin.js
+抖音去广告 = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/douyin.js
 
 
 # -- BY yichahucha --
@@ -67,7 +67,7 @@ RULE-SET,https://raw.githubusercontent.com/tutuh/script/master/JS/zhihu_remove_a
 
 [URL Rewrite]
 # 抖音去广告
-^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/ https://aweme.snssdk.com/aweme/v1/ header
+^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/(?!(comment|namek)) https://aweme.snssdk.com/aweme/v1/ header
 
 # 哔哩哔哩动画
 # 去除搜索中的大家都在搜
