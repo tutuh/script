@@ -1,6 +1,8 @@
-#!name=抖音短视频,By Choler
+#!name=抖音短视频去广告 
 #!desc=最高支持版本号为16.2.0 
 #!system=ios
+#!By Choler
+
 
 [Rule]
 URL-REGEX,^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/,REJECT
