@@ -1,4 +1,4 @@
-// By DivineEngine
+// By DivineEngine (https://github.com/DivineEngine/Profiles/blob/master/Surge/Rewrite/bstar.js)
 
 let body = $request.body;
 
