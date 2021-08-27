@@ -108,8 +108,8 @@ URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.comic\/flash,REJE
 
 [Map Local]
 # 知乎去除最常访问
-^https?:\/\/api\.zhihu\.com\/moments\/recent data="https://raw.githubusercontent.com/tutuh/script/master/Surge/blank_dict.json"
+^https?:\/\/api\.zhihu\.com\/moments\/recent data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/blank_dict.json"
 # 知乎其他广告拦截
-^https?:\/\/api\.zhihu\.com\/(notifications\/v\d\/count|v\d\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|.*featured-comment-ad) data="https://raw.githubusercontent.com/tutuh/script/master/Surge/blank_dict.json"
+^https?:\/\/api\.zhihu\.com\/(notifications\/v\d\/count|v\d\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|.*featured-comment-ad) data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/blank_dict.json"
 # 屏蔽消息页面上拉的用户精选
-^https?:\/\/api\.zhihu\.com/moments/hybrid\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/blank_dict.json"
+^https?:\/\/api\.zhihu\.com/moments/hybrid\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/blank_dict.json"
