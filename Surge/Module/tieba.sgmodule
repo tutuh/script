@@ -1,5 +1,5 @@
-#!name=贴吧广告
-#!desc=贴吧广告
+#!name=贴吧去广告
+#!desc=贴吧qu广告
 #!system=ios
 [Rule]
 AND,((USER-AGENT,TBClient*), (OR,((AND,((GEOIP,CN,no-resolve), (DEST-PORT,443))), (DOMAIN-KEYWORD,gdt), (DOMAIN-KEYWORD,feed), (DOMAIN-KEYWORD,toutiao), (DOMAIN-KEYWORD,snssdk), (DOMAIN-KEYWORD,360buy), (DOMAIN-KEYWORD,kuaishou), (DOMAIN-KEYWORD,aod-image), (DOMAIN,afd.baidu.com)))),REJECT
