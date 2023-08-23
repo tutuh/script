@@ -53,4 +53,4 @@ Sub-Store Core=type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api
 Sub-Store Simple=type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body=true
 
 [MITM]
-hostname = %APPEND% mp.weixin.qq.com, tiebac.baidu.com, ad.12306.cn, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, m.douban.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, img.meituan.net, www.meituan.com
+hostname = %APPEND% mp.weixin.qq.com, tiebac.baidu.com, ad.12306.cn, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, m.douban.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store
