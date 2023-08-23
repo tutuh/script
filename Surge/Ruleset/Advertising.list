@@ -310,11 +310,6 @@ DOMAIN,stat.10jqka.com.cn
 DOMAIN,adsp.xunlei.com
 DOMAIN,etl.xlmc.sandai.net
 
-# (U)
-# > UnionPay 云闪付
-DOMAIN-KEYWORD,ads.95516.com
-DOMAIN-KEYWORD,switch.cup.com.cn
-
 # (V)
 # > vivo
 DOMAIN,adlog.vivo.com.cn
@@ -377,6 +372,9 @@ DOMAIN,saxs.sina.com.cn
 DOMAIN,saxn.sina.com.cn
 
 # (Y)
+# > 云闪付
+DOMAIN-KEYWORD,ads.95516.com
+DOMAIN-KEYWORD,switch.cup.com.cn
 # > 优酷
 DOMAIN-SUFFIX,atm.youku.com
 DOMAIN,ad.mobile.youku.com
