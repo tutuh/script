@@ -68,8 +68,8 @@ AND,((OR,((USER-AGENT,*%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*))), (URL-REGEX,amdc
 ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject
 ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr - reject
 # > 必胜客 - res.pizzahut.com.cn
-^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/member\/app\/member- reject
-^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome- reject
+^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/member\/app\/member - reject
+^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome - reject
 
 # C
 # > CSDN - app-gw.csdn.net
