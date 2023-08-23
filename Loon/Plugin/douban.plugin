@@ -1,0 +1,9 @@
+#!name=豆瓣电影移动版网页增强
+#!desc=Douban+ 
+#!icon=https://raw.githubusercontent.com/tutuh/script/master/icons/douban.png
+
+[Script]
+http-response ^https://m.douban.com/movie/subject/.+ script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Douban.js, requires-body=true, tag=豆瓣网页增强
+
+[MITM]
+hostname = m.douban.com
