@@ -1,4 +1,5 @@
 # Advertising
+
 # > General
 DOMAIN-KEYWORD,adservice
 
@@ -17,7 +18,6 @@ DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
 DOMAIN-SUFFIX,unityads.unity3d.com
 # > Alibaba
 DOMAIN,tunion-api.m.taobao.com
-
 # > 爱奇艺
 DOMAIN,t7z.cupid.iqiyi.com
 DOMAIN,t7z.cupid.ptqy.gitv.tv
@@ -53,21 +53,20 @@ DOMAIN,advertise.baicizhan.com
 DOMAIN,advertise.baicizhan.org
 
 # (C)
-# > CCTVVideo
+# > CCTV Video
 DOMAIN,adstore-index-1252524079.file.myqcloud.com
 # > CNTV
 DOMAIN,galaxy.bjcathay.com
 DOMAIN,mdrecv.app.cntvwb.cn
 DOMAIN,sdapprecv.app.cntvwb.cn
 DOMAIN,vdapprecv.app.cntvwb.cn
-
-# > Chelaile
-DOMAIN,atrace.chelaile.net.cn
-DOMAIN,logs.chelaile.net.cn
 # > Camera360
 DOMAIN,dispatcher.360in.com
 DOMAIN,ad.360in.com
 DOMAIN,exp.360in.com
+# > 车来了
+DOMAIN,atrace.chelaile.net.cn
+DOMAIN,logs.chelaile.net.cn
 # > 菜鸟
 DOMAIN,iyes.youku.com
 DOMAIN,vali.cp31.ott.cibntv.net
@@ -77,8 +76,14 @@ IP-CIDR,117.161.156.227/32,no-resolve
 # > 豆瓣
 AND,((USER-AGENT,Frodo*), (DOMAIN,119.29.29.29))
 
+# (F)
+# > 飞常准
+DOMAIN,adv-adlog.variflight.com
+DOMAIN,adv-ads.variflight.com
+DOMAIN,app-ad.variflight.com
+
 # (G)
-# > Google
+# > 谷歌
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN-SUFFIX,googleadservices.com
 DOMAIN-SUFFIX,googleadsserving.cn
@@ -89,19 +94,6 @@ DOMAIN,optimus-ads.amap.com
 DOMAIN,optimus-ads.amap.com.w.alikunlun.com
 
 # (H)
-# > HunanTV
-DOMAIN-SUFFIX,da.mgtv.com
-DOMAIN-SUFFIX,da.hunantv.com
-DOMAIN-SUFFIX,log.hunantv.com
-DOMAIN-SUFFIX,v2.hunantv.com
-# > happycast
-DOMAIN,ad.hpplay.cn
-DOMAIN,adc.hpplay.cn
-DOMAIN,adcdn.hpplay.cn
-DOMAIN,adeng.hpplay.cn
-DOMAIN,pin.hpplay.cn
-DOMAIN,rp.hpplay.cn
-DOMAIN,rpt.hpplay.cn
 # > 虎牙直播
 DOMAIN,business.msstatic.com
 DOMAIN,pp-cdnfile2pcdn.msstatic.com
@@ -112,12 +104,10 @@ DOMAIN,adx-api.hupu.com
 DOMAIN,goblin.hupu.com
 
 # (J)
-# >jxedt
+# > 驾校一点通
 DOMAIN,richmanapi.jxedt.com
 DOMAIN,richmanmain.jxedt.com
 DOMAIN,richmanrules.jxedt.com
-
-# (K)
 # > 金山
 DOMAIN,ad-stat.ksosoft.com
 DOMAIN,img.auction-ads.wpscdn.cn
@@ -127,6 +117,8 @@ DOMAIN,minfo.wps.cn
 DOMAIN,mobad.ijinshan.com
 DOMAIN,ups.ksmobile.net
 DOMAIN,ws.ksmobile.net
+
+# (K)
 # > 快手
 DOMAIN-SUFFIX,e.kuaishou.com
 DOMAIN,js-ad.a.yximgs.com
@@ -142,7 +134,14 @@ DOMAIN,ark.letv.com
 DOMAIN,emma-414870e223.huodonghezi.com
 DOMAIN,g3.letv.com
 DOMAIN,n.mark.letv.com
-
+# > 乐播投屏
+DOMAIN,ad.hpplay.cn
+DOMAIN,adc.hpplay.cn
+DOMAIN,adcdn.hpplay.cn
+DOMAIN,adeng.hpplay.cn
+DOMAIN,pin.hpplay.cn
+DOMAIN,rp.hpplay.cn
+DOMAIN,rpt.hpplay.cn
 
 # (M)
 # > Microsoft
@@ -152,12 +151,7 @@ DOMAIN-SUFFIX,ads2.msn.com
 DOMAIN-SUFFIX,bingads.microsoft.com
 DOMAIN-SUFFIX,rads.msn.com
 DOMAIN,mobileads.msn.com
-# > MojiWeather
-DOMAIN,ad.api.moji.com
-DOMAIN,adlaunch.moji.com
-DOMAIN,ads.mojicdn.com
-DOMAIN,v1.log.moji.com
-# > MiguVideo
+# > 咪咕视频
 DOMAIN-SUFFIX,ad.cmvideo.cn
 DOMAIN,ggc.cmvideo.cn
 DOMAIN,ggic03.miguvideo.com
@@ -165,6 +159,16 @@ DOMAIN,ggmk.miguvideo.com
 DOMAIN,ggv.cmvideo.cn
 DOMAIN,ggx.cmvideo.cn
 DOMAIN,ggx03.miguvideo.com
+# > 墨迹天气
+DOMAIN,ad.api.moji.com
+DOMAIN,adlaunch.moji.com
+DOMAIN,ads.mojicdn.com
+DOMAIN,v1.log.moji.com
+# > 芒果TV
+DOMAIN-SUFFIX,da.mgtv.com
+DOMAIN-SUFFIX,da.hunantv.com
+DOMAIN-SUFFIX,log.hunantv.com
+DOMAIN-SUFFIX,v2.hunantv.com
 # > 美颜相机
 DOMAIN,adui.tg.meitu.com
 DOMAIN,aaid.uyunad.com
@@ -182,24 +186,7 @@ DOMAIN,sdkconfig.ad.xiaomi.com
 DOMAIN-KEYWORD,c-hzgt2.getui.com
 
 # (N)
-# > 网易
-DOMAIN-SUFFIX,dsp.youdao.com
-DOMAIN-SUFFIX,union.youdao.com
-DOMAIN,ad.bn.netease.com
-DOMAIN,ad.yixin.im
-DOMAIN,admusicpic.music.126.net
-DOMAIN,g1.163.com
-DOMAIN,gorgon.youdao.com
-DOMAIN,iad.g.163.com
-DOMAIN,iadmat.nosdn.127.net
-DOMAIN,iadmusicmat.music.126.net
-DOMAIN,iadmusicmatvideo.music.126.net
-DOMAIN,impservice.dictapp.youdao.com
-DOMAIN,impservice.youdao.com
-DOMAIN,n.3g.163.com
-DOMAIN,nex.163.com
-DOMAIN,yt-adp.nosdn.127.net
-DOMAIN,yt-adp.ws.126.net
+
 
 # (O)
 # > Oray 向日葵远程控制
@@ -334,10 +321,6 @@ DOMAIN-KEYWORD,ads.95516.com
 DOMAIN-KEYWORD,switch.cup.com.cn
 
 # (V)
-# > VariFlight
-DOMAIN,adv-adlog.variflight.com
-DOMAIN,adv-ads.variflight.com
-DOMAIN,app-ad.variflight.com
 # > vivo
 DOMAIN,adlog.vivo.com.cn
 DOMAIN,adreq.vivo.com.cn
@@ -352,6 +335,26 @@ DOMAIN-KEYWORD,stsdk.vivoglobal.com
 DOMAIN,ads.viber.com
 DOMAIN,ads-d.viber.com
 DOMAIN,ads.aws.viber.com
+
+# (W)
+# > 网易
+DOMAIN-SUFFIX,dsp.youdao.com
+DOMAIN-SUFFIX,union.youdao.com
+DOMAIN,ad.bn.netease.com
+DOMAIN,ad.yixin.im
+DOMAIN,admusicpic.music.126.net
+DOMAIN,g1.163.com
+DOMAIN,gorgon.youdao.com
+DOMAIN,iad.g.163.com
+DOMAIN,iadmat.nosdn.127.net
+DOMAIN,iadmusicmat.music.126.net
+DOMAIN,iadmusicmatvideo.music.126.net
+DOMAIN,impservice.dictapp.youdao.com
+DOMAIN,impservice.youdao.com
+DOMAIN,n.3g.163.com
+DOMAIN,nex.163.com
+DOMAIN,yt-adp.nosdn.127.net
+DOMAIN,yt-adp.ws.126.net
 
 # (X)
 # > 喜马拉雅
