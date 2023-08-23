@@ -328,6 +328,8 @@ DOMAIN,ads.aws.viber.com
 # > 网易
 DOMAIN-SUFFIX,dsp.youdao.com
 DOMAIN-SUFFIX,union.youdao.com
+DOMAIN,impservice.dictapp.youdao.com
+DOMAIN,impservice.youdao.com
 DOMAIN,ad.bn.netease.com
 DOMAIN,ad.yixin.im
 DOMAIN,admusicpic.music.126.net
@@ -335,14 +337,18 @@ DOMAIN,g1.163.com
 DOMAIN,gorgon.youdao.com
 DOMAIN,iad.g.163.com
 DOMAIN,iadmat.nosdn.127.net
-DOMAIN,iadmusicmat.music.126.net
-DOMAIN,iadmusicmatvideo.music.126.net
-DOMAIN,impservice.dictapp.youdao.com
-DOMAIN,impservice.youdao.com
 DOMAIN,n.3g.163.com
 DOMAIN,nex.163.com
 DOMAIN,yt-adp.nosdn.127.net
 DOMAIN,yt-adp.ws.126.net
+DOMAIN,gdt.qq.com
+DOMAIN,httpdns.n.netease.com
+DOMAIN,iadmat.nosdn.127.net
+DOMAIN,iadmusicmat.music.126.net
+DOMAIN,iadmusicmatvideo.music.126.net
+DOMAIN-SUFFIX,163jiasu.com
+# > 网上国网
+DOMAIN,h5-api.feiersmart.com
 
 # (X)
 # > 喜马拉雅
@@ -379,6 +385,9 @@ DOMAIN,ad.mobile.youku.com
 DOMAIN,adx.op.cp18.ott.cibntv.net
 DOMAIN,iyes.youku.com
 DOMAIN,pl.cp31.ott.cibntv.net
+DOMAIN,amdc.m.youku.com
+DOMAIN,yk-ssp.ad.youku.com
+DOMAIN,ykad-data.youku.com
 # > 雅虎
 DOMAIN-SUFFIX,adserver.yahoo.com
 DOMAIN-SUFFIX,adspecs.yahoo.com
