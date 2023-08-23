@@ -5,7 +5,7 @@
 force-http-engine-hosts = %APPEND% mobileapi-v6.elong.com, wmapi.meituan.com
 
 [Rule]
-# > JD
+# > 京东
 URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 
 # > 飞猪
@@ -191,9 +191,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # > 科大讯飞 - imeclient.openspeech.cn
 ^https?:\/\/imeclient\.openspeech\.cn\/adservice\/ - reject
 # > 肯德基 - res.kfc.com
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome - reject
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? - reject
-^https?:\/\/res\.kfc\.com.\cn\/advertisement\/ - reject
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apprn\/\w+\.json\? - reject
 
 # L
 # > 来疯直播 - api.laifeng.com
