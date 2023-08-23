@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-08-22 08:50
+// 2023-08-23 12:10
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -389,34 +389,36 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       delete poi.feed_rec_tab;
     }
   } else if (obj?.data?.modules) {
-    let list = obj.data.modules.not_parse_result.data.list_data.content[0];
-    // 详情页 底部 房产推广
-    if (list?.hookInfo) {
-      let hookData = list.hookInfo.data;
-      if (hookData?.header) {
-        delete hookData.header;
+    if (obj?.data?.modules?.not_parse_result?.data?.list_data) {
+      let list = obj.data.modules.not_parse_result.data.list_data.content[0];
+      // 详情页 底部 房产推广
+      if (list?.hookInfo) {
+        let hookData = list.hookInfo.data;
+        if (hookData?.header) {
+          delete hookData.header;
+        }
+        if (hookData?.house_info) {
+          delete hookData.house_info;
+        }
       }
-      if (hookData?.house_info) {
-        delete hookData.house_info;
+      // 详情页 底部 订酒店
+      if (list?.map_bottom_bar?.hotel) {
+        delete list.map_bottom_bar.hotel;
       }
-    }
-    // 详情页 底部 订酒店
-    if (list?.map_bottom_bar?.hotel) {
-      delete list.map_bottom_bar.hotel;
-    }
-    if (list?.poi?.item_info?.tips_bottombar_button?.hotel) {
-      delete list.poi.item_info.tips_bottombar_button.hotel;
-    }
-    // 地图优惠推广
-    if (list?.map?.main_point) {
-      delete list.map.main_point;
-    }
-    // 左上角动图推广
-    if (list?.tips_operation_info) {
-      delete list.tips_operation_info;
-    }
-    if (list?.bottom?.bottombar_button?.hotel) {
-      delete list.bottom.bottombar_button.hotel;
+      if (list?.poi?.item_info?.tips_bottombar_button?.hotel) {
+        delete list.poi.item_info.tips_bottombar_button.hotel;
+      }
+      // 地图优惠推广
+      if (list?.map?.main_point) {
+        delete list.map.main_point;
+      }
+      // 左上角动图推广
+      if (list?.tips_operation_info) {
+        delete list.tips_operation_info;
+      }
+      if (list?.bottom?.bottombar_button?.hotel) {
+        delete list.bottom.bottombar_button.hotel;
+      }
     }
   }
 } else if (url.includes("/shield/search_poi/sug")) {
