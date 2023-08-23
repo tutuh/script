@@ -1,0 +1,31 @@
+#!name=Panel
+#!desc=网络连通测试、机场流量信息、流媒体解锁检测、网络信息
+#!system=ios
+
+# 机场流量信息说明
+# encode链接： https://www.urlencoder.org
+# 先将带有流量信息的节点订阅链接encode，用encode后的链接替换"url="后面的[encode后的机场节点链接]
+# 可选参数 &reset_day，后面的数字替换成流量每月重置的日期，如1号就写1，8号就写8。如"&reset_day=8",不加该参数不显示流量重置信息。
+# 可选参数 &expire，机场链接不带expire信息的，可以手动传入expire参数，如"&expire=2022-02-01",注意一定要按照yyyy-MM-dd的格式。不希望显示到期信息也可以添加&expire=false取消显示。
+# 可选参数"title=xxx" 可以自定义标题。
+# 可选参数"icon=xxx" 可以自定义图标，内容为任意有效的 SF Symbol Name，如 bolt.horizontal.circle.fill，详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336
+# 可选参数"color=xxx" 当使用 icon 字段时，可传入 color 字段控制图标颜色，字段内容为颜色的 HEX 编码。如：color=#007aff
+
+[Panel]
+面板策略 = script-name=网络测速,update-interval=-1
+面板策略 = script-name=网络连通测试,update-interval=1
+面板策略 = script-name=网络信息, title="",content="",style=info,update-interval=30
+面板策略 = script-name=机场流量信息,update-interval=3600
+面板策略 = script-name=流媒体解锁检测, title="流媒体解锁检测", content="请刷新面板", update-interval=3600
+面板策略 = script-name=配置重载,title=配置重载,content=配置重载,style=info,update-interval=-1
+
+[Script]
+网络测速 = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Network_Speed.js,argument=icon=arrow.down.circle&icon-color=#5d84f8&mb=1
+网络连通测试 = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Network_Connectivity.js,argument=icon=icloud.and.arrow.down&color=#FF9F0A&server=false
+网络信息 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Network-Info.js
+机场流量信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,script-update-interval=0,argument=url=encode后的机场节点链接&reset_day=1&title=你机场名字&icon=externaldrive.fill.badge.icloud=#007aff
+流媒体解锁检测 = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Stream-All.js
+配置重载 = type=generic,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Profile-Reload.js
+
+[Host]
+ip-api.com = 208.95.112.1

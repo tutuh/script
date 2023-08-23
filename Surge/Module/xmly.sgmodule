@@ -1,0 +1,67 @@
+#!name=喜马拉雅去广告
+#!desc=喜马拉雅页面去广告优化
+#!system=ios
+
+[General]
+# DNS劫持
+hijack-dns = %APPEND% 114.114.114.114
+
+[Rule]
+# 阻止IP变化
+DOMAIN,gslbali.ximalaya.com,REJECT
+DOMAIN,gslbtx.ximalaya.com,REJECT
+
+[URL Rewrite]
+# 喜马拉雅_屏蔽开屏广告
+#^http:\/\/adse\.ximalaya\.com\/(?!.*preSale) - reject
+# 喜马拉雅_修复轮播Ad失效Bug
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF - reject
+# 喜马拉雅_播放页_Live
+^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ - reject
+# 喜马拉雅_MyInfo红点提醒
+^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list - reject
+# 喜马拉雅_屏蔽大红包Tips
+^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status - reject
+# 喜马拉雅_屏蔽gif弹窗Ad
+^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ - reject
+# 喜马拉雅_gslb
+^https?:\/\/gslb.*\.xima.*\.com\/ - reject
+# 喜马拉雅_屏蔽Aged请求
+^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) - reject
+# 喜马拉雅_部分Tab弹窗
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant - reject
+# 喜马拉雅_屏蔽红点提示
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread - reject
+# 喜马拉雅_屏蔽minor请求
+^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop - reject
+# 喜马拉雅_屏蔽隐私搜集
+^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d - reject
+# 喜马拉雅_屏蔽版本更新
+^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck - reject
+# 喜马拉雅_屏蔽开屏广告
+^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* - reject
+# 喜马拉雅_屏蔽位置请求
+^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location - reject
+# 喜马拉雅_屏蔽热搜词
+^https?:\/\/.*\.xima.*\.com\/hotWord - reject
+# 喜马拉雅_屏蔽搜索框定时_Ad
+^https?:\/\/.*\.xima.*\.com\/guideWord - reject
+# 喜马拉雅_屏蔽实时Ad请求
+^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime - reject
+# 喜马拉雅_屏蔽ting_Ad
+^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? - reject
+
+[Script]
+# 喜马拉雅_去横幅广告
+喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
+# 喜马拉雅_去首页动态
+喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
+# 喜马拉雅_去Tab页滚动
+喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
+# 喜马拉雅_去我的页面Ad_Tag
+喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
+# 喜马拉雅_去除首页顶部直播
+喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
+
+[MITM]
+hostname = %APPEND% *.xima*.*, *.xmcdn.*

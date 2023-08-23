@@ -1,0 +1,6 @@
+# Apple Proxy
+
+DOMAIN,iosapps.itunes.apple.com
+DOMAIN,swcdn.apple.com
+DOMAIN,updates-http.cdn-apple.com
+DOMAIN,updates.cdn-apple.com

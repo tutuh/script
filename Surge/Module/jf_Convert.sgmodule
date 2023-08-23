@@ -1,0 +1,9 @@
+#!name=京粉转链
+#!desc=京东返利
+#!system=ios
+
+[Script]
+京粉转链 = type=http-response,pattern=^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jf_Convert.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND% api.m.jd.com

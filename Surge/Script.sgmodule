@@ -1,0 +1,56 @@
+#!name=去广告及VIP解锁(脚本)
+#!desc=AdBlock and Unlock
+#!system=ios
+# 去广告：贴吧、微信公众号、12306
+# 解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF
+# 其他：豆瓣网页增强、Sub-Store订阅工具、Boxjs会话工具
+
+[General] 
+force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+
+[Rule]
+# > 贴吧去广告
+RULE-SET,https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad.list,REJECT-DROP
+
+[Map Local]
+# > 微信公众号去广告 - mp.weixin.qq.com
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/wechat.json"
+
+[Script]
+# >> 去广告脚本 <<
+# > 百度贴吧去广告 - tiebac.baidu.com
+贴吧json = type=http-response,pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(frs\/(page|threadlist|generalTabList)|pb\/(pic)?page|excellent\/personalized))$|tiebaads\/commonbatch\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js,script-update-interval=0
+贴吧proto = type=http-response,pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js,script-update-interval=0
+
+# > 12306去广告 - ad.12306.cn
+12306去广告 = type=http-request,pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/12306.js
+
+# >> 解锁VIP <<
+# > 扫描全能王CamScanner pro - ap*.intsig.net 
+扫描全能王_解锁 = type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/CamScanner.js
+
+# > MIX 解锁高级特权 (需恢复购买) - bmall.camera360.com
+MIX_解锁 = type=http-response,pattern=https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/MIX.js
+
+# > 美图秀秀 - *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com
+美图秀秀_解锁 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/mtxx.js
+
+# > 美颜相机 - *.meiyan.com
+美颜相机_解锁 = type=http-response,pattern=^https:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/myxj.js
+
+# > iLovePDF - service.ilovepdf.com
+iLovePDF_解锁 = type=http-response,pattern=https://service.ilovepdf.com/v1/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/LovePDF.js
+
+# >> 其他 <<
+# > 豆瓣网页增强 - m.douban.com
+豆瓣网页增强 = type=http-response,pattern=^https://m.douban.com/movie/subject/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Douban.js
+
+# > Boxjs会话工具 - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+BoxJs Rewrite = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js,requires-body=true,timeout=120
+
+# > Sub-Store订阅工具 - sub.store
+Sub-Store Core=type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body=true,timeout=120
+Sub-Store Simple=type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body=true
+
+[MITM]
+hostname = %APPEND% mp.weixin.qq.com, tiebac.baidu.com, ad.12306.cn, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, m.douban.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, img.meituan.net, www.meituan.com

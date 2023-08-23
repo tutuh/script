@@ -1,0 +1,83 @@
+#!name=快捷搜索
+#!desc=Safari Search Add-ons
+#!system=ios
+
+# Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
+# 注：先进入设置更改 Safari 默认搜索为 DuckDuckGO
+
+[URL Rewrite]
+# bd xxx (百度)
+^https:\/\/duckduckgo.com\/\?q=bd(\+|%20)([^&]+).+ https://www.baidu.com/s?wd=$2 302
+
+# bk xxx (百度百科)
+^https:\/\/duckduckgo.com\/\?q=bk(\+|%20)([^&]+).+ https://baike.baidu.com/item/$2 302
+
+# db xxx (豆瓣)
+^https:\/\/duckduckgo.com\/\?q=db(\+|%20)([^&]+).+ https://www.douban.com/search?q=$2 302
+
+# zh xxx (知乎)
+^https:\/\/duckduckgo.com\/\?q=zh(\+|%20)([^&]+).+ https://www.zhihu.com/search?q=$2 302
+
+# wb xxx (微博)
+^https:\/\/duckduckgo.com\/\?q=wb(\+|%20)([^&]+).+ https://s.weibo.com/weibo/$2 302
+
+# gp xxx (Google 图片)
+^https:\/\/duckduckgo.com\/\?q=gp(\+|%20)([^&]+).+ https://www.google.com/search?&tbm=isch&q=$2 302
+
+# wiki xxx (维基百科)
+^https:\/\/duckduckgo.com\/\?q=wiki(\+|%20)([^&]+).+ https://wikipedia.org/wiki/$2 302
+
+# wk xxx (维基中文)
+^https:\/\/duckduckgo.com\/\?q=wk(\+|%20)([^&]+).+ https://zh.wikipedia.org/wiki/$2 302
+
+# gh xxx (GitHub)
+^https:\/\/duckduckgo.com\/\?q=gh(\+|%20)([^&]+).+ https://github.com/search?q=$2 302
+
+# tf xxx (Google 搜索 TestFlight)
+^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
+
+# yd xxx (有道词典)
+^https:\/\/duckduckgo.com\/\?q=yd(\+|%20)([^&]+).+ https://dict.youdao.com/search?q=$2 302
+
+# trc xxx (Google 译至中)
+^https:\/\/duckduckgo.com\/\?q=trc(\+|%20)([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$2 302
+
+# tre xxx (Google 译至英)
+^https:\/\/duckduckgo.com\/\?q=tre(\+|%20)([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$2 302
+
+# trj xxx (Google 译至日)
+^https:\/\/duckduckgo.com\/\?q=trj(\+|%20)([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$2 302
+
+# csdn xxx (CSDN)
+^https:\/\/duckduckgo.com\/\?q=csdn\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
+
+# ssp xxx (少数派)
+^https:\/\/duckduckgo.com\/\?q=ssp(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=sspai.com 302
+
+# tw xxx (Twitter)
+^https:\/\/duckduckgo.com\/\?q=tw(\+|%20)([^&]+).+ https://twitter.com/search?q=$2 302
+
+# ytb xxx (YouTube)
+^https:\/\/duckduckgo.com\/\?q=ytb(\+|%20)([^&]+).+ https://www.youtube.com/results?search_query=$2 302
+
+# bli xxx (哔哩哔哩) 
+^https:\/\/duckduckgo.com\/\?q=bli\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
+
+# cbh xxx (茶杯狐) 
+^https:\/\/duckduckgo.com\/\?q=cbh\+([^&]+).+ https://www.cupfox.app/s/$1 302
+
+# ph xxx (PornHub) 
+^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
+
+# by xxx (必应)
+^https:\/\/duckduckgo.com\/\?q=by\+([^&]+).+ https://cn.bing.com/search?q=$1 302
+
+# ddg xxx (还原 DuckDuckGo)
+^https:\/\/duckduckgo.com\/\?q=ddg(\+|%20)([^&]+).+ https://duckduckgo.com/?ia=about&q=$2 302
+
+# xxx （无指令默认为 Google）
+^https:\/\/duckduckgo.com\/\?q=(?!dl(c|e|j)(\+|%20))([^&]+).+ https://www.google.com/search?q=$3&num=100 302
+
+
+[MITM]
+hostname = %APPEND% duckduckgo.com

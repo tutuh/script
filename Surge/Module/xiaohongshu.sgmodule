@@ -1,0 +1,29 @@
+#!name=小红书去广告 
+#!desc=小红书APP去开屏、信息流、搜索页广告、照片视频去水印
+#By RuCu6
+
+[Script]
+# 详情页、小部件
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/note\/widgets,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+# 搜索页
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/(banner|hot)_lis,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/(hint|trending)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+# 开屏广告
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+# 信息流
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/(followfeed|homefeed|note\/(feed|videofeed))\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+
+[Map Local]
+# 惊喜弹窗
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(get_style|open|submit_action) data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+# 详情页小部件
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/note\/widgets data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+# 信息流
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/note\/guide\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+
+[MITM]
+hostname = %APPEND% edith.xiaohongshu.com, www.xiaohongshu.com

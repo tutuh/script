@@ -1,0 +1,9 @@
+#!name=心脏+
+#!desc=解锁心脏+
+#!system=ios
+
+[Script]
+心脏+ = type=http-response,pattern=^https?:\/\/api\.995120\.cn\/mini\/api\/appleplus\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xinzang.js
+
+[MITM]
+hostname = %APPEND% api.995120.cn

@@ -1,0 +1,59 @@
+#!name=Cookie获取
+#!desc=在使用后手动将其禁用，以免产生不必要的MITM.
+
+[Script]
+# > 哔哩哔哩漫画 - app.bilibili.com
+# 打开：哔哩哔哩漫画APP 获取cookie
+哔哩哔哩漫画_Cookie = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
+
+# > 京东签到 - ms.jr.jd.com, me-api.jd.com,api.m.jd.com
+# 打开：https://bean.m.jd.com/bean/signIndex.action 获取cookie
+京东_Cookie = type=http-request,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+# > 爱奇艺会员 - passport.iqiyi.com
+# 打开：https://m.iqiyi.com/user.html 获取cookie
+爱奇艺会员_Cookie = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+
+# > 叮咚买菜 - sunquan.api.ddxq.mobi
+# 打开：叮咚买菜 -> 我的 -> 福利积分 -> 签到 获取cookie
+叮咚买菜_Cookie = type=http-request,pattern=^https:\/\/sunquan\.api\.ddxq\.mobi\/api\/v2\/user\/signin,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/ddmc.js
+
+# > 百度贴吧 - c.tieba.baidu.com, tiebac.baidu.com
+# 打开：百度贴吧APP 获取cookie
+贴吧_获取cookie1 = type=http-request,pattern=^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+贴吧_获取cookie2 = type=http-request,pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+贴吧_获取cookie3 = type=http-request,pattern=^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+
+# > 顺丰速运 - ccsp-egmas.sf-express.com
+# 打开：顺丰速运APP 获取cookie
+顺丰速运_Cookie = type=http-request,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+
+# > 喜马拉雅 - *.ximalaya.com
+# 打开：喜马拉雅APP 获取cookie
+喜马拉雅_Cookie = type=http-request,pattern=^https?:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/app-skin-service\/skin\/,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/xmly.js,requires-body=0
+
+# > 哔哩哔哩 - app.bilibili.com, m.bilibili.com
+# 打开：哔哩哔哩APP 或者 https://www.bilibili.com 获取cookie
+哔哩哔哩APP_Cookie = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\?,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js,script-update-interval=0
+哔哩哔哩网页_Cookie = type=http-request,pattern=^https?:\/\/m.bilibili.com/$,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js,script-update-interval=0
+
+# > 美团买菜币 - mall.meituan.com
+# 打开：美团APP -> 美团买菜 -> 我的 -> 买菜币 获取cookie
+美团买菜币_Cookie = type=http-request,pattern=^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\?,requires-body=0,script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js
+
+# > 阿里云盘 - auth.alipan.com
+# 打开：阿里云盘APP 获取token
+阿里云盘_Cookie = type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,requires-body=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+
+# > 途虎养车车 - api.tuhu.cn
+# 打开：途虎养车APP -> 我的 -> 积分 获取cookie
+途虎养车_Cookie = type=http-request,pattern=^https:\/\/api\.tuhu\.cn\/User\/UserCheckInVersion1,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/tuhu.js
+# 打开：微信途虎养车小程序 -> 我的 -> 积分 获取cookie
+途虎养车小程序_Cookie = type=http-request,pattern=^https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/tuhu_MiniProgram.js
+
+# > 高德打车 - *.amap.com
+# 打开：高德地图APP -> 打车 -> 福利中心签到 获取cookie
+高德打车_Cookie = type=http-response,pattern=^https:\/\/m5(-zb)?\.amap\.com\/ws\/yuece\/(act|openapi)\/(activity\/current\/)?query,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
+
+[MITM]
+hostname = %APPEND% app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, sunquan.api.ddxq.mobi, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, *.ximalaya.com, m.bilibili.com, mall.meituan.com, auth.alipan.com, api.tuhu.cn, *.amap.com
