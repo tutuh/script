@@ -185,10 +185,10 @@ DOMAIN,sdkconfig.ad.xiaomi.com
 # > 买单吧
 DOMAIN-KEYWORD,c-hzgt2.getui.com
 
-# (N)
-
-
 # (O)
+# > OPPO
+DOMAIN-SUFFIX,ads.oppomobile.com
+DOMAIN,adsfs.oppomobile.com
 # > Oray 向日葵远程控制
 DOMAIN,dm.toutiao.com
 DOMAIN,sl-tk.oray.com
@@ -224,13 +224,10 @@ DOMAIN,api.newad.ifeng.com
 DOMAIN,ifengad.3g.ifeng.com
 
 # (Q)
-# > QingTing
+# > 蜻蜓FM
 DOMAIN,ad.qingting.fm
 DOMAIN,adlaunch.qingting.fm
 DOMAIN,ad-cdn.qingting.fm
-# > OPPO
-DOMAIN-SUFFIX,ads.oppomobile.com
-DOMAIN,adsfs.oppomobile.com
 # > 汽车之家
 DOMAIN,adproxy.autohome.com.cn
 DOMAIN,rd.autohome.com.cn
@@ -271,8 +268,6 @@ DOMAIN,pgdt.gtimg.com
 DOMAIN,pgdt.ugdtimg.com
 DOMAIN,splashqqlive.gtimg.com
 DOMAIN,wa.gtimg.com
-# DOMAIN,wxsnsdy.wxs.qq.com
-# DOMAIN,wxsnsdythumb.wxs.qq.com
 # > Tencent Music (TME)
 DOMAIN,ad.tencentmusic.com
 DOMAIN,adstats.tencentmusic.com
@@ -371,15 +366,15 @@ DOMAIN,ads-img-qc.xhscdn.com
 DOMAIN,ads-video-al.xhscdn.com
 DOMAIN,ads-video-qc.xhscdn.com
 DOMAIN,t-ads.xiaohongshu.com
-# > 新浪
-# DOMAIN-SUFFIX,alitui.weibo.com
-# DOMAIN-SUFFIX,beacon.sina.com.cn
-# DOMAIN,adimg.uve.weibo.com
-# DOMAIN,adimg.vue.weibo.com
-# DOMAIN,u1.img.mobile.sina.cn
-# DOMAIN,sax.sina.com.cn
-# DOMAIN,saxs.sina.com.cn
-# DOMAIN,saxn.sina.com.cn
+# > 新浪微博
+DOMAIN-SUFFIX,alitui.weibo.com
+DOMAIN-SUFFIX,beacon.sina.com.cn
+DOMAIN,adimg.uve.weibo.com
+DOMAIN,adimg.vue.weibo.com
+DOMAIN,u1.img.mobile.sina.cn
+DOMAIN,sax.sina.com.cn
+DOMAIN,saxs.sina.com.cn
+DOMAIN,saxn.sina.com.cn
 
 # (Y)
 # > 优酷
