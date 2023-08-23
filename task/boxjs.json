@@ -1,0 +1,65 @@
+{
+  "id": "tutuh.app.sub",
+  "name": "tutuh应用订阅",
+  "author": "@tutuh",
+  "icon": "https://avatars.githubusercontent.com/u/63507813?v=4?s=400",
+  "repo": "https://github.com/tutuh/script",
+  "apps": [
+    {
+      "id": "Relx_ck",
+      "name": "悦刻签到",
+      "keys": ["ckhdname"],
+      "author": "@tutuh",
+      "repo": "https://github.com/tutuh/script/tree/master",
+      "script": "https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.js",
+      "icons": [
+        "https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.png",
+        "https://raw.githubusercontent.com/tutuh/script/master/task/relx/relx.png"
+      ]
+    },
+    {
+      "id": "Tuhu_APP",
+      "name": "途虎养车APP",
+      "keys": [
+        "tuhu_url",
+        "tuhu_header"
+      ],
+      "author": "@tutuh",
+      "repo": "https://github.com/tutuh/script/tree/master",
+      "script": "https://raw.githubusercontent.com/tutuh/script/master/task/tuhu.js",
+      "icons": [
+        "https://raw.githubusercontent.com/tutuh/script/master/icons/tuhu.png",
+        "https://raw.githubusercontent.com/tutuh/script/master/icons/tuhu.png"
+      ]
+    },
+        {
+      "id": "Tuhu_MiniProgram",
+      "name": "途虎养车微信小程序",
+      "keys": [
+        "tuhumini_url",
+        "tuhumini_header",
+        "tuhumini_body"
+      ],
+      "author": "@tutuh",
+      "repo": "https://github.com/tutuh/script/tree/master",
+      "script": "https://raw.githubusercontent.com/tutuh/script/master/task/tuhu_MiniProgram.js",
+      "icons": [
+        "https://raw.githubusercontent.com/tutuh/script/master/icons/tuhu.png",
+        "https://raw.githubusercontent.com/tutuh/script/master/icons/tuhu.png"
+      ]
+    },
+       {
+      "id": "ddmc",
+      "name": "叮咚买菜",
+      "keys": ["ddmc_header"],
+      "author": "@tutuh",
+      "repo": "https://github.com/tutuh/script/tree/master",
+      "script": "https://raw.githubusercontent.com/tutuh/script/master/task/ddmc.js",
+      "icons": [
+        "https://raw.githubusercontent.com/tutuh/script/master/icons/dingdong.png",
+        "https://raw.githubusercontent.com/tutuh/script/master/icons/dingdong.png"
+      ]
+    }
+    
+  ]
+}
