@@ -173,13 +173,11 @@ DOMAIN-SUFFIX,v2.hunantv.com
 DOMAIN,adui.tg.meitu.com
 DOMAIN,aaid.uyunad.com
 # > 美团
-DOMAIN,flowplus.meituan.net
-DOMAIN-SUFFIX,analytics.meituan.net
-DOMAIN-SUFFIX,meituan.xn--io0a7i
-DOMAIN-SUFFIX,meituan.yoga
-DOMAIN-SUFFIX,meituangov.cn
-DOMAIN-SUFFIX,report.meituan.com
-DOMAIN-SUFFIX,wmlog.meituan.com
+DOMAIN,al-log.d.meituan.net
+DOMAIN,babel-statistics-android.d.meituan.net
+DOMAIN,maplocatesdksnapshot.d.meituan.net
+DOMAIN,metrics-picture.d.meituan.net
+DOMAIN,route-stats.d.meituan.net
 # > 米家
 DOMAIN,sdkconfig.ad.xiaomi.com
 # > 买单吧
