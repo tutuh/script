@@ -45,11 +45,9 @@
 # 打开：阿里云盘APP 获取token
 阿里云盘_Cookie = type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,requires-body=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 
-# > 途虎养车车 - api.tuhu.cn
-# 打开：途虎养车APP -> 我的 -> 积分 获取cookie
-途虎养车_Cookie = type=http-request,pattern=^https:\/\/api\.tuhu\.cn\/User\/UserCheckInVersion1,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/tuhu.js
+# > 途虎养车app及小程序 - api.tuhu.cn
 # 打开：微信途虎养车小程序 -> 我的 -> 积分 获取cookie
-途虎养车小程序_Cookie = type=http-request,pattern=^https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/tuhu_MiniProgram.js
+途虎养车_Cookie = type=http-request,pattern=https://api.tuhu.cn/User/GetInternalCenterInfo,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
 
 # > 高德打车 - *.amap.com
 # 打开：高德地图APP -> 打车 -> 福利中心签到 获取cookie
