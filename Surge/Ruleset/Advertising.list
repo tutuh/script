@@ -17,18 +17,14 @@ DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
 DOMAIN-SUFFIX,unityads.unity3d.com
 # > Alibaba
 DOMAIN,tunion-api.m.taobao.com
-# > AMap
-DOMAIN,optimus-ads.amap.com
-DOMAIN,optimus-ads.amap.com.w.alikunlun.com
-# > Autohome
-DOMAIN,adproxy.autohome.com.cn
-DOMAIN,rd.autohome.com.cn
-DOMAIN,al.autohome.com.cn
-DOMAIN,applogapi.autohome.com.cn
-DOMAIN,adm0.autoimg.cn
-DOMAIN,adm1.autoimg.cn
-DOMAIN,adm2.autoimg.cn
-DOMAIN,adm3.autoimg.cn
+
+# > 爱奇艺
+DOMAIN,t7z.cupid.iqiyi.com
+DOMAIN,t7z.cupid.ptqy.gitv.tv
+IP-CIDR,101.227.97.240/32,no-resolve
+IP-CIDR,101.227.200.11/32,no-resolve
+IP-CIDR,101.227.200.28/32,no-resolve
+IP-CIDR,124.192.153.42/32,no-resolve
 
 # (B)
 # --- (Baidu) ---
@@ -42,19 +38,6 @@ DOMAIN,mobads.baidu.com
 DOMAIN,mobads-logs.baidu.com
 DOMAIN,nadvideo2.baidu.com
 DOMAIN,nsclick.baidu.com
-# ------
-# > ByteDance
-DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
-DOMAIN,ad.toutiao.com
-DOMAIN,dsp.toutiao.com
-DOMAIN,pangolin.snssdk.com
-# > baicizhan
-DOMAIN,advertise.baicizhan.com
-DOMAIN,advertise.baicizhan.org
-# > BitAuto
-DOMAIN,adx.yiche.com
-DOMAIN,log.ycapp.yiche.com
 # > Braze
 DOMAIN-SUFFIX,iad.appboy.com
 DOMAIN-SUFFIX,iad-03.appboy.com
@@ -65,6 +48,9 @@ DOMAIN-SUFFIX,iad-04.braze.com
 DOMAIN-SUFFIX,iad-05.braze.com
 DOMAIN-SUFFIX,iad-06.braze.com
 DOMAIN-SUFFIX,iad-08.braze.com
+# > 百词斩
+DOMAIN,advertise.baicizhan.com
+DOMAIN,advertise.baicizhan.org
 
 # (C)
 # > CCTVVideo
@@ -74,11 +60,7 @@ DOMAIN,galaxy.bjcathay.com
 DOMAIN,mdrecv.app.cntvwb.cn
 DOMAIN,sdapprecv.app.cntvwb.cn
 DOMAIN,vdapprecv.app.cntvwb.cn
-# > ChinaTelecom
-DOMAIN,ad.21cn.com
-DOMAIN,ad.k.21cn.com
-DOMAIN,admarket.21cn.com
-DOMAIN,adshows.21cn.com
+
 # > Chelaile
 DOMAIN,atrace.chelaile.net.cn
 DOMAIN,logs.chelaile.net.cn
@@ -86,9 +68,13 @@ DOMAIN,logs.chelaile.net.cn
 DOMAIN,dispatcher.360in.com
 DOMAIN,ad.360in.com
 DOMAIN,exp.360in.com
+# > 菜鸟
+DOMAIN,iyes.youku.com
+DOMAIN,vali.cp31.ott.cibntv.net
+IP-CIDR,117.161.156.227/32,no-resolve
 
 # (D)
-# > Douban
+# > 豆瓣
 AND,((USER-AGENT,Frodo*), (DOMAIN,119.29.29.29))
 
 # (G)
@@ -98,6 +84,9 @@ DOMAIN-SUFFIX,googleadservices.com
 DOMAIN-SUFFIX,googleadsserving.cn
 DOMAIN-SUFFIX,googlesyndication.com
 DOMAIN-SUFFIX,googletagservices.com
+# > 高德地图
+DOMAIN,optimus-ads.amap.com
+DOMAIN,optimus-ads.amap.com.w.alikunlun.com
 
 # (H)
 # > HunanTV
@@ -105,10 +94,6 @@ DOMAIN-SUFFIX,da.mgtv.com
 DOMAIN-SUFFIX,da.hunantv.com
 DOMAIN-SUFFIX,log.hunantv.com
 DOMAIN-SUFFIX,v2.hunantv.com
-# > Hupu
-DOMAIN,adx.hupu.com
-DOMAIN,adx-api.hupu.com
-DOMAIN,goblin.hupu.com
 # > happycast
 DOMAIN,ad.hpplay.cn
 DOMAIN,adc.hpplay.cn
@@ -117,19 +102,14 @@ DOMAIN,adeng.hpplay.cn
 DOMAIN,pin.hpplay.cn
 DOMAIN,rp.hpplay.cn
 DOMAIN,rpt.hpplay.cn
-# > Huya
+# > 虎牙直播
 DOMAIN,business.msstatic.com
 DOMAIN,pp-cdnfile2pcdn.msstatic.com
 DOMAIN,livewebbs2pcdn.msstatic.com
-
-#(I)
-# > iQIYI
-DOMAIN,t7z.cupid.iqiyi.com
-DOMAIN,t7z.cupid.ptqy.gitv.tv
-IP-CIDR,101.227.97.240/32,no-resolve
-IP-CIDR,101.227.200.11/32,no-resolve
-IP-CIDR,101.227.200.28/32,no-resolve
-IP-CIDR,124.192.153.42/32,no-resolve
+# > 虎扑
+DOMAIN,adx.hupu.com
+DOMAIN,adx-api.hupu.com
+DOMAIN,goblin.hupu.com
 
 # (J)
 # >jxedt
@@ -138,7 +118,7 @@ DOMAIN,richmanmain.jxedt.com
 DOMAIN,richmanrules.jxedt.com
 
 # (K)
-# > Kingsoft
+# > 金山
 DOMAIN,ad-stat.ksosoft.com
 DOMAIN,img.auction-ads.wpscdn.cn
 DOMAIN,counter.kingsoft.com
@@ -147,21 +127,22 @@ DOMAIN,minfo.wps.cn
 DOMAIN,mobad.ijinshan.com
 DOMAIN,ups.ksmobile.net
 DOMAIN,ws.ksmobile.net
-# > Kuaishou
+# > 快手
 DOMAIN-SUFFIX,e.kuaishou.com
 DOMAIN,js-ad.a.yximgs.com
 
 # (L)
-# > Le
+# > LinkWiFi
+DOMAIN,a.wkanx.com
+DOMAIN,cwx.lianwangtech.com
+DOMAIN,c1wx.lianwangtech.com
+# > 乐视
 DOMAIN-SUFFIX,webp2p.letv.com
 DOMAIN,ark.letv.com
 DOMAIN,emma-414870e223.huodonghezi.com
 DOMAIN,g3.letv.com
 DOMAIN,n.mark.letv.com
-# > LinkWiFi
-DOMAIN,a.wkanx.com
-DOMAIN,cwx.lianwangtech.com
-DOMAIN,c1wx.lianwangtech.com
+
 
 # (M)
 # > Microsoft
@@ -184,7 +165,7 @@ DOMAIN,ggmk.miguvideo.com
 DOMAIN,ggv.cmvideo.cn
 DOMAIN,ggx.cmvideo.cn
 DOMAIN,ggx03.miguvideo.com
-# > Meiyanxiangji
+# > 美颜相机
 DOMAIN,adui.tg.meitu.com
 DOMAIN,aaid.uyunad.com
 # > 美团
@@ -195,9 +176,13 @@ DOMAIN-SUFFIX,meituan.yoga
 DOMAIN-SUFFIX,meituangov.cn
 DOMAIN-SUFFIX,report.meituan.com
 DOMAIN-SUFFIX,wmlog.meituan.com
+# > 米家
+DOMAIN,sdkconfig.ad.xiaomi.com
+# > 买单吧
+DOMAIN-KEYWORD,c-hzgt2.getui.com
 
 # (N)
-# > NetEase
+# > 网易
 DOMAIN-SUFFIX,dsp.youdao.com
 DOMAIN-SUFFIX,union.youdao.com
 DOMAIN,ad.bn.netease.com
@@ -259,23 +244,17 @@ DOMAIN,ad-cdn.qingting.fm
 # > OPPO
 DOMAIN-SUFFIX,ads.oppomobile.com
 DOMAIN,adsfs.oppomobile.com
+# > 汽车之家
+DOMAIN,adproxy.autohome.com.cn
+DOMAIN,rd.autohome.com.cn
+DOMAIN,al.autohome.com.cn
+DOMAIN,applogapi.autohome.com.cn
+DOMAIN,adm0.autoimg.cn
+DOMAIN,adm1.autoimg.cn
+DOMAIN,adm2.autoimg.cn
+DOMAIN,adm3.autoimg.cn
 
 # (S)
-# > Sina
-# DOMAIN-SUFFIX,alitui.weibo.com
-# DOMAIN-SUFFIX,beacon.sina.com.cn
-# DOMAIN,adimg.uve.weibo.com
-# DOMAIN,adimg.vue.weibo.com
-# DOMAIN,u1.img.mobile.sina.cn
-# DOMAIN,sax.sina.com.cn
-# DOMAIN,saxs.sina.com.cn
-# DOMAIN,saxn.sina.com.cn
-# > SOHU
-DOMAIN-SUFFIX,ad.sohu.com
-DOMAIN-SUFFIX,ads.sohu.com
-DOMAIN-SUFFIX,aty.sohu.com
-DOMAIN,hui.sohu.com
-DOMAIN-SUFFIX,pv.sohu.com
 # > Snapchat
 DOMAIN,ads.snapchat.com
 DOMAIN,adsapi.snapchat.com
@@ -283,6 +262,12 @@ DOMAIN,adsapi.snapchat.com
 DOMAIN-SUFFIX,hoisin.coocaa.com
 DOMAIN-SUFFIX,hoisin.coocaatv.com
 DOMAIN,data-hoisin.coocaa.com
+# > 搜狐
+DOMAIN-SUFFIX,ad.sohu.com
+DOMAIN-SUFFIX,ads.sohu.com
+DOMAIN-SUFFIX,aty.sohu.com
+DOMAIN,hui.sohu.com
+DOMAIN-SUFFIX,pv.sohu.com
 
 # (T)
 # --- (Tencent) ---
@@ -323,14 +308,23 @@ DOMAIN-SUFFIX,android.rqd.qq.com
 DOMAIN-SUFFIX,beacon.qq.com
 DOMAIN-SUFFIX,v.gdt.qq.com
 # ------
-# > TongHuaShun
-DOMAIN,adm.10jqka.com.cn
-DOMAIN,stat.10jqka.com.cn
 # > The Paper
 DOMAIN,admonitor.thepaper.cn
 DOMAIN,adpai.thepaper.cn
 DOMAIN,imgadpai.thepaper.cn
-# > Thunder
+# > TubeMax  
+DOMAIN-SUFFIX,adjust.com
+DOMAIN-SUFFIX,applvn.com
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,pangle.io
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,appier.net
+DOMAIN-SUFFIX,adsmoloco.com
+DOMAIN-SUFFIX,adcanvas.com
+# > 同花顺
+DOMAIN,adm.10jqka.com.cn
+DOMAIN,stat.10jqka.com.cn
+# > 迅雷
 DOMAIN,adsp.xunlei.com
 DOMAIN,etl.xlmc.sandai.net
 
@@ -360,7 +354,7 @@ DOMAIN,ads-d.viber.com
 DOMAIN,ads.aws.viber.com
 
 # (X)
-# > Ximalaya
+# > 喜马拉雅
 DOMAIN,ad.ximalaya.com
 DOMAIN,adbs.ximalaya.com
 DOMAIN,adse.ximalaya.com
@@ -369,20 +363,29 @@ DOMAIN,adbehavior.wsa.ximalaya.com
 DOMAIN,adbehavior.ximalaya.com
 DOMAIN,adsebs.ximalaya.com
 DOMAIN,adwbs.ximalaya.com
-# > Xiaohongshu
+# > 小红书
 DOMAIN,ads-img-qc.xhscdn.com
 DOMAIN,ads-video-al.xhscdn.com
 DOMAIN,ads-video-qc.xhscdn.com
 DOMAIN,t-ads.xiaohongshu.com
+# > 新浪
+# DOMAIN-SUFFIX,alitui.weibo.com
+# DOMAIN-SUFFIX,beacon.sina.com.cn
+# DOMAIN,adimg.uve.weibo.com
+# DOMAIN,adimg.vue.weibo.com
+# DOMAIN,u1.img.mobile.sina.cn
+# DOMAIN,sax.sina.com.cn
+# DOMAIN,saxs.sina.com.cn
+# DOMAIN,saxn.sina.com.cn
 
 # (Y)
-# > YOUKU
+# > 优酷
 DOMAIN-SUFFIX,atm.youku.com
 DOMAIN,ad.mobile.youku.com
 DOMAIN,adx.op.cp18.ott.cibntv.net
 DOMAIN,iyes.youku.com
 DOMAIN,pl.cp31.ott.cibntv.net
-# > Yahoo
+# > 雅虎
 DOMAIN-SUFFIX,adserver.yahoo.com
 DOMAIN-SUFFIX,adspecs.yahoo.com
 DOMAIN-SUFFIX,advertising.yahoo.com
@@ -392,8 +395,29 @@ DOMAIN,ads.auctions.yahoo.com
 DOMAIN,ads.finance.yahoo.com
 DOMAIN,ads.yahoo.com
 DOMAIN,ads.yahoo.de
+# > 易车网
+DOMAIN,adx.yiche.com
+DOMAIN,log.ycapp.yiche.com
 
 # (Z)
 # > ZOL
 DOMAIN,apppv.zol.com.cn
 DOMAIN,pvnapp.zol.com.cn
+# > 字节跳动
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
+DOMAIN,ad.toutiao.com
+DOMAIN,dsp.toutiao.com
+DOMAIN,pangolin.snssdk.com
+# > 中国电信
+DOMAIN,ad.21cn.com
+DOMAIN,ad.k.21cn.com
+DOMAIN,admarket.21cn.com
+DOMAIN,adshows.21cn.com
+# > 中华万年历广告
+DOMAIN-KEYWORD,lkme.cc
+DOMAIN-KEYWORD,api.freed.so 
+DOMAIN-KEYWORD,log-dmp.suishenyun.cn
+DOMAIN-KEYWORD,client-dmp.suishenyun.cn
+DOMAIN-KEYWORD,pc.suishenyun.net 
+DOMAIN-KEYWORD,v0-client-lz.rili.cn
