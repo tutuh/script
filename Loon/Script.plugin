@@ -20,19 +20,19 @@ http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList requires-body=1, max
 
 # >> 解锁VIP <<
 # > 扫描全能王CamScanner pro - ap*.intsig.net  
-http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/CamScanner.js, requires-body=true, timeout=10, tag扫描全能王_解锁
+http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? script-path=https://raw.githubusercontent.com/tutuh/Surge/main/Script/CamScanner.js, requires-body=true, timeout=10, tag扫描全能王_解锁
 
 # > MIX 解锁高级特权 (需恢复购买) - bmall.camera360.com
-http-response https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/MIX.js, requires-body=true, timeout=10, tag=MIX Vip
+http-response https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery script-path=https://raw.githubusercontent.com/tutuh/Surge/main/Script/MIX.js, requires-body=true, timeout=10, tag=MIX Vip
 
 # > 美图秀秀 - *.xiuxiu.meitu.com
-http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/mtxx.js, requires-body=true, timeout=10, tag=美图秀秀_解锁
+http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/tutuh/Surge/main/Script/mtxx.js, requires-body=true, timeout=10, tag=美图秀秀_解锁
 
 # > 美颜相机 - *.meiyan.com
-http-response ^https:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)) script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/myxj.js, requires-body=true, timeout=10, tag=美颜相机_解锁
+http-response ^https:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)) script-path=https://raw.githubusercontent.com/tutuh/Surge/main/Script/myxj.js, requires-body=true, timeout=10, tag=美颜相机_解锁
 
 # > iLovePDF - service.ilovepdf.com
-http-response https://service.ilovepdf.com/v1/user script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/LovePDF.js, requires-body=true, timeout=10, tag=iLovePDF_解锁
+http-response https://service.ilovepdf.com/v1/user script-path=https://raw.githubusercontent.com/tutuh/Surge/main/Script/LovePDF.js, requires-body=true, timeout=10, tag=iLovePDF_解锁
 
 # >> 其他 <<
 # > 豆瓣网页增强 - m.douban.com
