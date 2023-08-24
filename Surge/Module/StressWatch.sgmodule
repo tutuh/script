@@ -1,9 +1,0 @@
-#!name=StressWatch Pro
-#!desc=Unlock StressWatch
-
-[Script]
-StressWatch = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/StressWatch.js
-StressWatch = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/StressWatch.js
-
-[MITM]
-hostname = %APPEND% api.revenuecat.com
