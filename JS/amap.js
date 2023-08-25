@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-08-23 12:10
+// 2023-08-24 14:50
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -185,6 +185,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "co_branded_card",
     "collector_guide", // 游玩的图文指南
     "common_coupon_bar", // 领券条幅 新客专享 省钱卡
+    "common_coupon_card", // 优惠券卡片
     // "companyInfo", // 简介
     "comprehensiveEditEntrance", // 编辑地点信息
     // "consultancy",
@@ -235,6 +236,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "legal_document", // 房源法律信息
     "listBizRec_1",
     "listBizRec_2", // 周边餐饮
+    "matrix_banner", // 高德车服
     "merchantSettlement", // 商家店铺管理
     "membership", // 高德菲住卡 会员项目
     "movie_info", // 优惠购票 景点宣传片
