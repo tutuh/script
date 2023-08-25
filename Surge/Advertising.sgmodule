@@ -358,7 +358,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # > 云宝宝大数据 - nnapp.cloudbae.cn
 ^https?:\/\/nnapp\.cloudbae\.cn:\d+\/mc\/api\/advert/ - reject
 # > 猿辅导 -  xyst.yuanfudao.com
-^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV\d url reject-200
+^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV\d - reject
 
 # Z
 # > 直播8 - a.qiumibao.com
