@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-08-24 08:45
+// 2023-08-24 18:00
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -176,8 +176,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.datas = newItems;
-    } else if (obj?.rootComment?.length > 0) {
-      if (obj.rootComment?.comment_bubble) {
+    } else if (obj?.rootComment) {
+      if (obj?.rootComment?.comment_bubble) {
         delete obj.rootComment.comment_bubble;
       }
     } else if (obj?.root_comments?.length > 0) {
