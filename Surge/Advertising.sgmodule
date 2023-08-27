@@ -181,7 +181,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/imeclient\.openspeech\.cn\/adservice\/ - reject
 # > 肯德基 - res.kfc.com
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apprn\/\w+\.json\? - reject
-^http:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/configuration\/w+\.json - reject
+^http:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/configuration\/\w+\.json - reject
 
 # L
 # > 来疯直播 - api.laifeng.com
