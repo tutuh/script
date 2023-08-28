@@ -182,6 +182,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # > 肯德基 - res.kfc.com
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apprn\/\w+\.json\? - reject
 ^http:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/configuration\/\w+\.json - reject
+^https:\/\/res\.kfc\.com\.cn\/advertisement - reject
 
 # L
 # > 来疯直播 - api.laifeng.com
