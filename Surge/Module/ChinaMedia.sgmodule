@@ -1,7 +1,8 @@
-#!name=爱奇艺去广告
-#!desc=爱奇艺APP去广告优化
+#!name=爱优腾芒去广告
+#!desc=爱奇艺、优酷、腾讯视频、芒果TV APP去广告优化
 
 [Script]
+# > 爱奇艺 - -i.vip.iqiyi.com, *.iqiyi.com
 # 开屏广告,播放广告
 爱奇艺去广告 = type=http-response,pattern=^http:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 首页,信息流广告,我的页面,左上角天气,底部菜单,顶部菜单,青少年弹窗
@@ -19,11 +20,15 @@
 # 评论区
 爱奇艺去广告 = type=http-response,pattern=^https:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
+# > 优酷 - un-acs.youku.com
+优酷去广告 = type=http-response,pattern=^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/cnftp.js
+
 [Map Local]
+# > 爱奇艺
 # 首页,信息流广告,我的页面,左上角天气,底部菜单,顶部菜单,青少年弹窗
 ^https:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 # 播放页,开通会员提示
 ^https:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 
 [MITM]
-hostname = %APPEND% -i.vip.iqiyi.com, *.iqiyi.com
+hostname = %APPEND% -i.vip.iqiyi.com, *.iqiyi.com, un-acs.youku.com
