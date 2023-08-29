@@ -42,7 +42,7 @@ AND,((OR,((USER-AGENT,*%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*))), (URL-REGEX,amdc
 # ---
 # > 爱美剧 - api.bjxkhc.com
 ^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/ - reject
-# > 爱奇艺 
+# > 爱奇艺  整合在ChinaMediaAds模块
 #^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&dis_dz= - reject
 #^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&z=\w - reject
 #^https?:\/\/.+\/videos\/other\/ - reject
@@ -283,9 +283,9 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info - reject
 # > Tencent Map - 4gimg.map.qq.com
 ^https?:\/\/4gimg\.map\.qq\.com\/mwaSplash\/ - reject
-# > Tencent Video
-^http:\/\/[0-9\.:]*\/?(defaultts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
-^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
+# > Tencent Video 整合在ChinaMediaAds模块
+#^http:\/\/[0-9\.:]*\/?(defaultts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
+#^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
 # > Tencent News - r.inews.qq.com
 ^https?:\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) - reject
 # > Tencent Sports - news.ssp.qq.com
