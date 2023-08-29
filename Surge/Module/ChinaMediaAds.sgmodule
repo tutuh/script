@@ -30,7 +30,7 @@
 
 # > 芒果TV - *.mgtv.com
 芒果TV去广告 = type=http-response,pattern=^http://dc.bz.mgtv.com/dynamic/v1/channel/index/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/cnftp.js
-芒果TV去广告 = type=http-response,pattern=^https://dc.bz.mgtv.com/dynamic/v1/channel/vrsList,requires-body=1,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/replace-body.js, argument=.->{}
+芒果TV去广告 = type=http-response,pattern=^https://dc.bz.mgtv.com/dynamic/v1/channel/vrsList,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/replace-body.js, argument=.->{}
 
 [Map Local]
 # > 爱奇艺
