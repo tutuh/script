@@ -2,6 +2,7 @@
 # https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/ProxyLite.list
 # https://github.com/DivineEngine/Profiles/blob/master/Surge/Ruleset/Global.list
 
+DOMAIN-SUFFIX,vercel.app
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
 DOMAIN,addons.mozilla.org
