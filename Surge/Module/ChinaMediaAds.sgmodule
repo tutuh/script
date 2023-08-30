@@ -25,7 +25,16 @@
 # 评论区
 爱奇艺去广告 = type=http-response,pattern=^https:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/cnftp.js
 
-# > 优酷 - un-acs.youku.com
+# > 优酷 - acs.youku.com, push.m.youku.com, un-acs.youku.com
+# 首页信息流,首页菜单,我的页面,底部菜单
+优酷去广告 = type=http-response,pattern=^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.relationrecommend\.wirelessrecommend\.recommend,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/cnftp.js
+优酷去广告 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(home|uc)\.query,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/cnftp.js
+优酷去广告 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/cnftp.js
+# 青少年模式弹窗
+优酷去广告 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/cnftp.js
+# 热剧弹窗
+优酷去广告 = type=http-response,pattern=^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/cnftp.js
+# 开屏广告
 优酷去广告 = type=http-response,pattern=^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/cnftp.js
 
 # > 芒果TV - *.mgtv.com
@@ -70,4 +79,4 @@
 ^https?:\/\/vip\.bz\.mgtv\.com\/client\/dynamic_entry.+ data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-200.txt"
 
 [MITM]
-hostname = %APPEND% -i.vip.iqiyi.com, *.iqiyi.com, un-acs.youku.com, *.mgtv.com
+hostname = %APPEND% -i.vip.iqiyi.com, *.iqiyi.com, acs.youku.com, push.m.youku.com, un-acs.youku.com, *.mgtv.com
