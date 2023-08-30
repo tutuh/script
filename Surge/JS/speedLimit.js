@@ -245,7 +245,7 @@ const _policy0 = cache[Group]?.policy0;
             $notification.post(
                `策略切换 监控时长${time}秒`,
                `当前下载速度 ➟ ${speed_unit(current_speed)}`,
-               `下载速度低于${minSpeed} MB/s 已切换至${p}`,
+               `下载速度低于${minSpeed} MB/S 已切换至${p}`,
             );
          else throw new Error(`${p}在策略组中不存在`);
       }
