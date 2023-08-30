@@ -19,6 +19,7 @@ DOMAIN-SUFFIX,unityads.unity3d.com
 # > Alibaba
 DOMAIN,tunion-api.m.taobao.com
 # > 爱奇艺
+DOMAIN,api.iqiyi.com
 DOMAIN,t7z.cupid.iqiyi.com
 DOMAIN,t7z.cupid.ptqy.gitv.tv
 IP-CIDR,101.227.97.240/32,no-resolve
@@ -38,6 +39,10 @@ DOMAIN,mobads.baidu.com
 DOMAIN,mobads-logs.baidu.com
 DOMAIN,nadvideo2.baidu.com
 DOMAIN,nsclick.baidu.com
+DOMAIN,afdconf.baidu.com
+DOMAIN,httpdns.baidubce.com
+DOMAIN,lc.map.baidu.com
+
 # > Braze
 DOMAIN-SUFFIX,iad.appboy.com
 DOMAIN-SUFFIX,iad-03.appboy.com
@@ -92,6 +97,9 @@ DOMAIN-SUFFIX,googletagservices.com
 # > 高德地图
 DOMAIN,optimus-ads.amap.com
 DOMAIN,optimus-ads.amap.com.w.alikunlun.com
+DOMAIN,amap-aos-info-nogw.amap.com
+DOMAIN,awaken.amap.com
+DOMAIN,free-aos-cdn-image.amap.com
 
 # (H)
 # > 虎牙直播
@@ -122,6 +130,13 @@ DOMAIN,ws.ksmobile.net
 # > 快手
 DOMAIN-SUFFIX,e.kuaishou.com
 DOMAIN,js-ad.a.yximgs.com
+# > 酷我音乐
+DOMAIN,ad.tencentmusic.com
+DOMAIN,g.koowo.com
+DOMAIN,mobilead.kuwo.cn
+DOMAIN,rich.kuwo.cn
+DOMAIN,tmead.y.qq.com
+DOMAIN,tmeadcomm.y.qq.com
 
 # (L)
 # > LinkWiFi
@@ -142,6 +157,8 @@ DOMAIN,adeng.hpplay.cn
 DOMAIN,pin.hpplay.cn
 DOMAIN,rp.hpplay.cn
 DOMAIN,rpt.hpplay.cn
+# > 蓝奏云
+DOMAIN,statics.woozooo.com
 
 # (M)
 # > Microsoft
@@ -253,15 +270,23 @@ DOMAIN-SUFFIX,pv.sohu.com
 
 # (T)
 # --- (Tencent) ---
+# >  Tencent Video
+DOMAIN,adsmind.gdtimg.com
+DOMAIN,btrace.qq.com
+DOMAIN,info4.video.qq.com
+DOMAIN,info6.video.qq.com
+DOMAIN,ios.video.mpush.qq.com
+DOMAIN,mtrace.qq.com
+DOMAIN,pgdt.gtimg.cn
+DOMAIN,vv.video.qq.com
+# >  Tencent
 DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN,adsmind.apdcdn.tc.qq.com
-DOMAIN,adsmind.gdtimg.com
 DOMAIN,adsmind.tc.qq.com
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,livep.l.t002.ottcn.com
-DOMAIN,pgdt.gtimg.cn
 DOMAIN,pgdt.gtimg.com
 DOMAIN,pgdt.ugdtimg.com
 DOMAIN,splashqqlive.gtimg.com
@@ -336,11 +361,11 @@ DOMAIN,admusicpic.music.126.net
 DOMAIN,g1.163.com
 DOMAIN,gorgon.youdao.com
 DOMAIN,iad.g.163.com
-DOMAIN,iadmat.nosdn.127.net
 DOMAIN,n.3g.163.com
 DOMAIN,nex.163.com
 DOMAIN,yt-adp.nosdn.127.net
 DOMAIN,yt-adp.ws.126.net
+# > 网易云音乐
 DOMAIN,gdt.qq.com
 DOMAIN,httpdns.n.netease.com
 DOMAIN,iadmat.nosdn.127.net
@@ -374,18 +399,27 @@ DOMAIN,u1.img.mobile.sina.cn
 DOMAIN,sax.sina.com.cn
 DOMAIN,saxs.sina.com.cn
 DOMAIN,saxn.sina.com.cn
+# > 微博开屏广告
+DOMAIN,adstrategy.biz.weibo.com
+DOMAIN,kadmimage.biz.weibo.com
+DOMAIN,sdkaction.biz.weibo.com
+DOMAIN,sdkclick.biz.weibo.com
+DOMAIN,sdkmonitor.biz.weibo.com
+# > 小米
+DOMAIN,sdkconfig.ad.xiaomi.com
 
 # (Y)
 # > 云闪付
 DOMAIN-KEYWORD,ads.95516.com
 DOMAIN-KEYWORD,switch.cup.com.cn
 # > 优酷
-DOMAIN-SUFFIX,atm.youku.com
-DOMAIN,ad.mobile.youku.com
-DOMAIN,adx.op.cp18.ott.cibntv.net
-DOMAIN,iyes.youku.com
-DOMAIN,pl.cp31.ott.cibntv.net
+DOMAIN,adsmind.ugdtimg.com
 DOMAIN,amdc.m.youku.com
+DOMAIN,httpdns.alicdn.com
+DOMAIN,huichuan-mc.sm.cn
+DOMAIN,huichuan.sm.cn
+DOMAIN,vali-ugc.cp31.ott.cibntv.net
+DOMAIN,valipl.cp31.ott.cibntv.net
 DOMAIN,yk-ssp.ad.youku.com
 DOMAIN,ykad-data.youku.com
 # > 雅虎
