@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-08-29 13:30
+// 2023-08-30 08:30
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -38,22 +38,22 @@ const itemMenusConfig = {
 if (url.includes("/interface/sdk/sdkad.php")) {
   // 开屏广告
   let obj = JSON.parse(body.substring(0, body.length - 2));
-  if (obj.needlocation) {
+  if (obj?.needlocation) {
     obj.needlocation = false;
   }
-  if (obj.show_push_splash_ad) {
+  if (obj?.show_push_splash_ad) {
     obj.show_push_splash_ad = false;
   }
-  if (obj.background_delay_display_time) {
+  if (obj?.background_delay_display_time) {
     obj.background_delay_display_time = 31536000; // 60 * 60 * 24 * 365 = 31536000
   }
-  if (obj.lastAdShow_delay_display_time) {
+  if (obj?.lastAdShow_delay_display_time) {
     obj.lastAdShow_delay_display_time = 31536000;
   }
-  if (obj.realtime_ad_video_stall_time) {
+  if (obj?.realtime_ad_video_stall_time) {
     obj.realtime_ad_video_stall_time = 0;
   }
-  if (obj.realtime_ad_timeout_duration) {
+  if (obj?.realtime_ad_timeout_duration) {
     obj.realtime_ad_timeout_duration = 0;
   }
   if (obj?.ads?.length > 0) {
@@ -69,7 +69,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
 } else {
   let obj = JSON.parse(body);
   if (url.includes("/2/cardlist")) {
-    if (obj.cards) {
+    if (obj?.cards?.length > 0) {
       let newCards = [];
       for (let card of obj.cards) {
         let cardGroup = card.card_group;
@@ -79,14 +79,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             let cardType = group.card_type;
             // 120,145 视频版块轮播图
             // 192 横版热门视频 电影 颜值 电视剧等
-            if ([120, 145, 192].includes(cardType)) {
+            if ([120, 145, 192]?.includes(cardType)) {
               continue;
             }
             // 搜索框 我的热搜 查看更多热搜
-            if ([4, 6, 101].includes(cardType)) {
+            if ([4, 6, 101]?.includes(cardType)) {
               continue;
             }
-            if (group.mblog) {
+            if (group?.mblog) {
               // 移除卡片挂件,关注按钮
               removeAvatar(group.mblog);
             }
@@ -97,10 +97,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         } else {
           let cardType = card.card_type;
           // 17猜你想搜 58搜索偏好设置
-          if ([17, 58].includes(cardType)) {
+          if ([17, 58]?.includes(cardType)) {
             continue;
           }
-          if (card.mblog) {
+          if (card?.mblog) {
             // 移除 卡片挂件,关注按钮
             removeAvatar(card.mblog);
           }
@@ -110,12 +110,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.cards = newCards;
     }
     // 我的热搜
-    if (obj.cardlistInfo?.page_type === "08") {
+    if (obj?.cardlistInfo?.page_type === "08") {
       delete obj.cardlistInfo;
     }
   } else if (url.includes("/2/checkin/show")) {
     // 首页签到
-    if (obj.show) {
+    if (obj?.show) {
       obj.show = 0;
     }
   } else if (url.includes("/2/client/publisher_list")) {
@@ -133,53 +133,51 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj?.datas?.length > 0) {
       let newItems = [];
       for (let item of obj.datas) {
-        if (!isAd(item.data)) {
-          // 微博伪装评论
-          if (item.data.user) {
-            // 头像挂件,关注按钮
-            removeAvatar(item.data);
+        if (item?.data) {
+          if (!isAd(item.data)) {
+            // 微博伪装评论
+            if (item.data.user) {
+              // 头像挂件,关注按钮
+              removeAvatar(item.data);
+              if (
+                item.data?.user?.name === "超话社区" ||
+                item.data?.user?.name === "微博视频"
+              ) {
+                continue;
+              }
+            }
+            // 评论气泡
+            if (item?.data?.comment_bubble) {
+              delete item.data.comment_bubble;
+            }
+            // 评论弹幕
+            if (item?.data?.comment_bullet_screens_message) {
+              delete item.data.comment_bullet_screens_message;
+            }
+            // 热评小图标 弹幕 首评
+            if (item?.data?.hot_icon) {
+              delete item.data.hot_icon;
+            }
+            // 会员气泡按钮
+            if (item?.data?.vip_button) {
+              delete item.data.vip_button;
+            }
+            // 6为你推荐更多精彩内容 15过滤提示
+            if (item?.type === 6 || item?.type === 15) {
+              continue;
+            }
             if (
-              item.data.user.name === "超话社区" ||
-              item.data.user.name === "微博视频"
+              item?.adType === "相关内容" ||
+              item?.adType === "相关评论" ||
+              item?.adType === "推荐"
             ) {
               continue;
             }
+            newItems.push(item);
           }
-          // 评论气泡
-          if (item.data?.comment_bubble) {
-            delete item.data.comment_bubble;
-          }
-          // 评论弹幕
-          if (item.data?.comment_bullet_screens_message) {
-            delete item.data.comment_bullet_screens_message;
-          }
-          // 热评小图标 弹幕 首评
-          if (item.data?.hot_icon) {
-            delete item.data.hot_icon;
-          }
-          // 会员气泡按钮
-          if (item.data?.vip_button) {
-            delete item.data.vip_button;
-          }
-          // 6为你推荐更多精彩内容 15过滤提示
-          if (item?.type === 6 || item?.type === 15) {
-            continue;
-          }
-          if (
-            item?.adType === "相关内容" ||
-            item?.adType === "相关评论" ||
-            item?.adType === "推荐"
-          ) {
-            continue;
-          }
-          newItems.push(item);
         }
       }
       obj.datas = newItems;
-    } else if (obj?.rootComment) {
-      if (obj?.rootComment?.comment_bubble) {
-        delete obj.rootComment.comment_bubble;
-      }
     } else if (obj?.root_comments?.length > 0) {
       let newItems = [];
       for (let item of obj.root_comments) {
@@ -189,8 +187,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 头像挂件,关注按钮
             removeAvatar(item);
             if (
-              item.user.name === "超话社区" ||
-              item.user.name === "微博视频"
+              item?.user?.name === "超话社区" ||
+              item?.user?.name === "微博视频"
             ) {
               continue;
             }
@@ -218,7 +216,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     } else if (obj?.comments?.length > 0) {
       let newItems = [];
       for (let item of obj.comments) {
-        if (item.user?.icons) {
+        if (item?.user?.icons) {
           delete item.user.icons;
         }
         if (item?.reply_comment?.comment_badge) {
@@ -227,6 +225,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         newItems.push(item);
       }
       obj.comments = newItems;
+    }
+    if (obj?.rootComment) {
+      if (obj?.rootComment?.comment_bubble) {
+        delete obj.rootComment.comment_bubble;
+      }
     }
   } else if (url.includes("/2/container/asyn")) {
     if (obj?.items?.length > 0) {
@@ -252,15 +255,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       );
     }
   } else if (url.includes("/2/flowlist")) {
-    if (obj.items) {
-      let item = obj.items;
-      if (item?.length > 0) {
-        for (let i of item) {
-          if (i.items) {
-            let ii = i?.items;
-            for (let l of ii) {
-              removeAvatar(l?.data);
-            }
+    if (obj?.items?.length > 0) {
+      for (let item of obj.items) {
+        if (item?.items?.length > 0) {
+          for (let i of item.items) {
+            removeAvatar(i?.data);
           }
         }
       }
@@ -270,7 +269,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj?.messages?.length > 0) {
       let newMsgs = [];
       for (let msg of obj.messages) {
-        if (msg.msg_card?.ad_tag) {
+        if (msg?.msg_card?.ad_tag) {
           continue;
         } else {
           newMsgs.push(msg);
@@ -281,7 +280,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   } else if (url.includes("/2/page")) {
     // 搜索页列表,超话
     if (obj?.cards?.length > 0) {
-      if (obj.cards[0]?.card_group?.length > 0) {
+      if (obj?.cards?.[0]?.card_group?.length > 0) {
         obj.cards[0].card_group = obj.cards[0].card_group.filter(
           (c) =>
             !(
@@ -316,32 +315,36 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj?.items?.length > 0) {
       let newItems = [];
       for (let item of obj.items) {
-        if (item.category === "card") {
+        if (item?.category === "card") {
           // 筛选按钮
-          if (item.data.card_type === 216) {
+          if (item?.data?.card_type === 216) {
             newItems.push(item);
           }
-        } else if (item.category === "group") {
-          // 遍历group,保留置顶微博
-          for (let ii of item.items) {
-            if (ii.category === "feed") {
-              // 头像挂件,关注按钮
-              removeAvatar(ii.data);
-              newItems.push(item);
+        } else if (item?.category === "group") {
+          if (item?.items?.length > 0) {
+            // 遍历group,保留置顶微博
+            for (let ii of item.items) {
+              if (ii?.category === "feed") {
+                // 头像挂件,关注按钮
+                removeAvatar(ii.data);
+                newItems.push(item);
+              }
             }
           }
           if (item?.header?.data?.icon) {
             // 置顶微博背景图
             delete item.header.data.icon;
           }
-        } else if (item.category === "feed") {
-          if (!isAd(item.data)) {
-            removeFeedAd(item.data);
-            if (item?.data?.title?.structs?.length > 0) {
-              // 赞过的微博
-              continue;
+        } else if (item?.category === "feed") {
+          if (item?.data) {
+            if (!isAd(item.data)) {
+              removeFeedAd(item.data);
+              if (item?.data?.title?.structs?.length > 0) {
+                // 赞过的微博
+                continue;
+              }
+              newItems.push(item);
             }
-            newItems.push(item);
           }
         }
       }
@@ -349,7 +352,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/2/profile/me")) {
     // 我的页面
-    if (obj.vipHeaderBgImage) {
+    if (obj?.vipHeaderBgImage) {
       delete obj.vipHeaderBgImage;
     }
     if (obj?.items?.length > 0) {
@@ -357,18 +360,20 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       for (let item of obj.items) {
         let itemId = item.itemId;
         if (itemId === "profileme_mine") {
-          if (item.header) {
+          if (item?.header) {
             delete item.header.vipView;
             delete item.header.vipCenter;
             delete item.header.vipIcon;
           }
-          for (let d of item.items) {
-            if (d.itemId === "mainnums_friends") {
-              let s = d.click.modules[0].scheme;
-              d.click.modules[0].scheme = s.replace(
-                "231093_-_selfrecomm",
-                "231093_-_selffollowed"
-              );
+          if (item?.items?.length > 0) {
+            for (let d of item.items) {
+              if (d.itemId === "mainnums_friends") {
+                let s = d.click.modules[0].scheme;
+                d.click.modules[0].scheme = s.replace(
+                  "231093_-_selfrecomm",
+                  "231093_-_selffollowed"
+                );
+              }
             }
           }
           newItems.push(item);
@@ -388,21 +393,21 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
           newItems.push(item);
         } else if (itemId === "100505_-_manage") {
-          if (item.style) {
+          if (item?.style) {
             delete item.style;
           }
           // 移除分隔符的点点点
-          if (item.images) {
+          if (item?.images) {
             delete item.images;
           }
           newItems.push(item);
         } else if (itemId === "100505_-_manage2") {
           // 移除面板样式
-          if (item.footer) {
+          if (item?.footer) {
             delete item.footer;
           }
           // 移除框内推广
-          if (item.body) {
+          if (item?.body) {
             delete item.body;
           }
           newItems.push(item);
@@ -431,19 +436,19 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       if (obj?.items?.length > 0) {
         let newItems = [];
         for (let item of obj.items) {
-          if (item.category === "feed") {
+          if (item?.category === "feed") {
             if (!isAd(item.data)) {
               removeFeedAd(item.data);
               newItems.push(item);
             }
-          } else if (item.category === "card") {
+          } else if (item?.category === "card") {
             if (!checkSearchWindow(item)) {
               newItems.push(item);
             }
-          } else if (item.category === "cell") {
+          } else if (item?.category === "cell") {
             // 保留信息流分割线
             newItems.push(item);
-          } else if (item.category === "group") {
+          } else if (item?.category === "group") {
             if (item?.items?.length > 0) {
               item.items = item.items.filter((i) => i.data?.card_type === 17);
               newItems.push(item);
@@ -457,36 +462,36 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
     } else if (url.includes("finder")) {
       let channels = obj.channelInfo.channels;
-      if (channels) {
+      if (channels?.length > 0) {
         for (let channel of channels) {
           let payload = channel.payload;
           if (payload) {
-            if (payload.loadedInfo) {
+            if (payload?.loadedInfo) {
               // 去除搜索框填充词
-              if (payload.loadedInfo.searchBarContent) {
+              if (payload?.loadedInfo?.searchBarContent) {
                 delete payload.loadedInfo.searchBarContent;
               }
               // 去除搜索背景图片
-              if (payload.loadedInfo.headerBack?.channelStyleMap) {
+              if (payload?.loadedInfo?.headerBack?.channelStyleMap) {
                 delete payload.loadedInfo.headerBack.channelStyleMap;
               }
             }
             if (payload?.items?.length > 0) {
               let newItems = [];
               for (let item of payload.items) {
-                if (item.category === "feed") {
+                if (item?.category === "feed") {
                   if (!isAd(item.data)) {
                     removeFeedAd(item.data);
                     newItems.push(item);
                   }
-                } else if (item.category === "card") {
+                } else if (item?.category === "card") {
                   if (!checkSearchWindow(item)) {
                     newItems.push(item);
                   }
-                } else if (item.category === "cell") {
+                } else if (item?.category === "cell") {
                   // 保留信息流分割线
                   newItems.push(item);
-                } else if (item.category === "group") {
+                } else if (item?.category === "group") {
                   if (item?.items?.length > 0) {
                     item.items = item.items.filter(
                       (i) => i.data?.card_type === 17
@@ -509,9 +514,18 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         if (cardGroup?.length > 0) {
           let newGroup = [];
           for (let group of cardGroup) {
-            if (group.mblog) {
+            if (group?.mblog) {
               // 头像挂件,关注按钮
               removeAvatar(group.mblog);
+              if (group?.mblog?.title_source) {
+                delete group.mblog.title_source;
+              }
+              if (group?.mblog?.source_tag_struct) {
+                delete group.mblog.source_tag_struct;
+              }
+              if (group?.mblog?.extend_info) {
+                delete group.mblog.extend_info;
+              }
             }
             let cardType = group.card_type;
             // 3 信息流商家卡片
@@ -520,23 +534,34 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 25 超话卡片(单个)
             // 42 正在热搜标题
             // 182 超话卡片(多个)
-            if (![3, 17, 22, 25, 42, 118, 182].includes(cardType)) {
-              if (!isAd(group.mblog)) {
-                // 商品橱窗
-                if (group.mblog?.common_struct) {
-                  delete group.mblog.common_struct;
+            if (![3, 17, 22, 25, 42, 118, 182]?.includes(cardType)) {
+              if (group?.mblog) {
+                if (!isAd(group.mblog)) {
+                  // 商品橱窗
+                  if (group?.mblog?.common_struct) {
+                    delete group.mblog.common_struct;
+                  }
                 }
-                newGroup.push(group);
               }
             }
+            newGroup.push(group);
           }
           card.card_group = newGroup;
           newCards.push(card);
         } else {
-          if (card.mblog) {
+          if (card?.mblog) {
             if (!isAd(card.mblog)) {
               // 头像挂件,关注按钮
               removeAvatar(card.mblog);
+              if (card?.mblog?.title_source) {
+                delete card.mblog.title_source;
+              }
+              if (card?.mblog?.source_tag_struct) {
+                delete card.mblog.source_tag_struct;
+              }
+              if (card?.mblog?.extend_info) {
+                delete card.mblog.extend_info;
+              }
               newCards.push(card);
             }
           }
@@ -550,7 +575,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     url.includes("/2/statuses/container_timeline_hot")
   ) {
     // 首页关注tab信息流
-    if (obj.loadedInfo?.headers) {
+    if (obj?.loadedInfo?.headers) {
       delete obj.loadedInfo.headers;
     }
     // 商品橱窗
@@ -561,14 +586,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       let newItems = [];
       for (let item of obj.items) {
         if (!isAd(item.data)) {
-          if (item.category === "feed") {
+          if (item?.category === "feed") {
             removeFeedAd(item.data);
             if (item.data?.title?.structs) {
               // 移除 未关注人消息 (你关注的博主，他自己关注的别的博主的微博消息)
               continue;
             }
             newItems.push(item);
-          } else if (item.category === "feedBiz") {
+          } else if (item?.category === "feedBiz") {
             // 管理特别关注按钮
             newItems.push(item);
           } else {
@@ -588,26 +613,26 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj?.items?.length > 0) {
       let newItems = [];
       for (let item of obj.items) {
-        if (item.category === "feed") {
+        if (item?.category === "feed") {
           if (item.data) {
             // 头像挂件,关注按钮
             removeAvatar(item.data);
             if (!isAd(item.data)) {
-              if (item.data?.title?.text?.includes("新人导师")) {
+              if (item?.data?.title?.text?.includes("新人导师")) {
                 // 萌新帖 互动赢新人导师
                 delete item.data.title;
               }
               newItems.push(item);
             }
           }
-        } else if (item.category === "card") {
-          if (![4, 197, 1012].includes(item?.data?.card_type)) {
+        } else if (item?.category === "card") {
+          if (![4, 197, 1012]?.includes(item?.data?.card_type)) {
             // 4 你可能感兴趣的超话
             // 197 你可能感兴趣的超话
             // 1012 热门超话
             newItems.push(item);
           }
-        } else if (item.category === "group") {
+        } else if (item?.category === "group") {
           if (item?.itemId === null) {
             // 超话页顶部乱七八糟
             if (item?.items?.length > 0) {
@@ -667,11 +692,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
     const item = [
       "bubble_guide_data", // 评论区弹窗
+      "display_info", // 二楼
       "extend_info", // 拓展卡片
       "follow_data", // 关注提醒
       "head_cards", // 超话投票
+      "highlight", // 二楼
       "page_alerts", // 超话新帖 新用户通知
-      "reward_info" // 公益赞赏
+      "reward_info", // 公益赞赏
+      "source_tag_struct" // 二楼
     ];
     if (obj) {
       item.forEach((i) => {
@@ -704,7 +732,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   } else if (url.includes("/2/statuses/unread_hot_timeline")) {
     // 首页推荐tab信息流
     for (let s of ["ad", "advertises", "trends", "headers"]) {
-      if (obj[s]) {
+      if (obj?.[s]) {
         delete obj[s];
       }
     }
