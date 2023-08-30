@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-08-29 13:40
+// 2023-08-29 16:30
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -32,16 +32,19 @@ if (url.includes("/v1/search/banner_list")) {
   url.includes("/v2/note/feed") ||
   url.includes("/v3/note/videofeed")
 ) {
+  // 信息流
   if (obj?.data?.length > 0) {
     if (obj?.data?.[0]?.note_list?.length > 0) {
       let note = obj.data[0].note_list;
       for (let i of note) {
         if (i?.media_save_config) {
+          // 水印
           i.media_save_config.disable_save = false;
           i.media_save_config.disable_watermark = true;
           i.media_save_config.disable_weibo_cover = true;
         }
         if (i?.share_info) {
+          // 下载限制
           i.share_info.function_entries = [
             { type: "video_download" },
             { type: "generate_image" },
@@ -57,11 +60,13 @@ if (url.includes("/v1/search/banner_list")) {
     } else {
       for (let i of obj.data) {
         if (i?.media_save_config) {
+          // 水印
           i.media_save_config.disable_save = false;
           i.media_save_config.disable_watermark = true;
           i.media_save_config.disable_weibo_cover = true;
         }
         if (i?.share_info) {
+          // 下载限制
           i.share_info.function_entries = [
             { type: "video_download" },
             { type: "generate_image" },
@@ -116,24 +121,22 @@ if (url.includes("/v1/search/banner_list")) {
     // 信息流广告
     let newItems = [];
     for (let item of obj.data) {
-      // 信息流-直播
       if (item.model_type === "live_v2") {
+        // 信息流-直播
         continue;
+      } else if (item.hasOwnProperty("ads_info")) {
         // 信息流-赞助
-      } else if (item?.model_type === "note") {
+        continue;
+      } else if (item.hasOwnProperty("card_icon")) {
+        // 信息流-带货
+        continue;
+      } else if (item?.note_attributes?.includes("goods")) {
+        // 信息流-商品
+        continue;
+      } else {
         if (item?.related_ques) {
           delete item.related_ques;
         }
-        newItems.push(item);
-      } else if (item.ads_info) {
-        continue;
-        // 信息流-带货
-      } else if (item.card_icon) {
-        continue;
-        // 信息流-商品
-      } else if (item?.note_attributes?.includes("goods")) {
-        continue;
-      } else {
         newItems.push(item);
       }
     }
