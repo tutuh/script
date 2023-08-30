@@ -3,8 +3,10 @@
 #By RuCu6
 
 [Url Rewrite]
-# 腾讯视频
+# > 腾讯视频
 ^http:\/\/[0-9\.:]*\/?(defaultts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
+^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
+^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|varietyts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
 
 [Script]
 # > 爱奇艺 - -i.vip.iqiyi.com, *.iqiyi.com
@@ -47,9 +49,6 @@
 ^https:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 # 播放页,开通会员提示
 ^https:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
-
-# > 腾讯视频
-^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 
 # > 芒果TV
 ^http://dflow.bz.mgtv.com/flow/getExtensionPosition data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-200.txt"
