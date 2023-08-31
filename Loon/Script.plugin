@@ -1,5 +1,6 @@
 #!name=去广告及VIP解锁(脚本)
-#!desc=去广告：贴吧、微信公众号、12306; 解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF; 其他：豆瓣网页增强
+#!desc=去广告：贴吧、微信公众号、12306; 解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF; 其他：豆瓣网页增强、Sub-Store订阅工具
+
 
 [Rule]
 # > 贴吧去广告
@@ -38,5 +39,9 @@ http-response https://service.ilovepdf.com/v1/user script-path=https://raw.githu
 # > 豆瓣网页增强 - m.douban.com
 http-response ^https://m.douban.com/movie/subject/.+ script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Douban.js, requires-body=true, tag=豆瓣网页增强
 
+# > Sub-Store订阅工具 - sub.store
+http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js, requires-body=true, timeout=120, tag=Sub-Store Core
+http-request ^https?:\/\/sub\.store script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js, requires-body=true, timeout=120, tag=Sub-Store Simple
+
 [Mitm]
-hostname = tiebac.baidu.com, mp.weixin.qq.com, ad.12306.cn, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, *.meiyan.com, service.ilovepdf.com, m.douban.com
+hostname = tiebac.baidu.com, mp.weixin.qq.com, ad.12306.cn, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, *.meiyan.com, service.ilovepdf.com, m.douban.com, sub.store
