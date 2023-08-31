@@ -1,8 +1,0 @@
-#!name=去广告测试
-#!desc=test
-
-[Script]
-去广告
-
-[MITM]
-hostname = %APPEND% 
