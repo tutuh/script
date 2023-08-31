@@ -40,6 +40,8 @@ AND,((OR,((USER-AGENT,*AMap*), (USER-AGENT,*Cainiao4iPhone*), (USER-AGENT,*Aliba
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ - reject
 # > 盒马 - acs.m.taobao.com
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.wdk\.render\.querysinglepage\/3\.0 - reject
+# > 支付宝 菜鸟小程序 - guide-acs.m.taobao.com
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad - reject
 # ---
 # > 爱美剧 - api.bjxkhc.com
 ^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/ - reject
