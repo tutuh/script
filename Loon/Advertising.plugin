@@ -4,10 +4,10 @@
 
 [Script]
 # > 根据User-Agent精准屏蔽amdc - 菜鸟、高德地图、飞猪
-http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path=https://raw.githubusercontent.com/tutuh/script/master/Loon/JS/amdc_reject.js, timeout=10, tag=amdc
+http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path=https://raw.githubusercontent.com/tutuh/script/master/Loon/JS/amdc_reject.js, timeout=10, tag=amdc精准定位
 
 [Rule]
-# > JD
+# > 京东
 URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 
 [URL Rewrite]
@@ -41,11 +41,11 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 # ---
 # > 爱美剧 - api.bjxkhc.com
 ^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/ - reject
-# > 爱奇艺 
-^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&dis_dz= - reject
-^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&z=\w - reject
-^https?:\/\/.+\/videos\/other\/ - reject
-^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch - reject
+# > 爱奇艺  整合在ChinaMediaAds模块
+#^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&dis_dz= - reject
+#^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&z=\w - reject
+#^https?:\/\/.+\/videos\/other\/ - reject
+#^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch - reject
 # > 爱回收 - gw.aihuishou.com
 ^https?:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement - reject
 
@@ -180,6 +180,8 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/imeclient\.openspeech\.cn\/adservice\/ - reject
 # > 肯德基 - res.kfc.com
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apprn\/\w+\.json\? - reject
+^http:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/configuration\/\w+\.json - reject
+^https:\/\/res\.kfc\.com\.cn\/advertisement - reject
 
 # L
 # > 来疯直播 - api.laifeng.com
@@ -257,9 +259,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/adproxy\.autohome\.com\.cn\/AdvertiseService\/ - reject
 ^https?:\/\/app2\.autoimg\.cn\/apppdfs\/ - reject
 
-# R 
-
-
 # S
 # > 搜狐 - *.k.sohu.com, *.tv.sohu.com
 ^https?:\/\/api\.k\.sohu\.com\/api\/news\/adsense - reject
@@ -283,9 +282,10 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info - reject
 # > Tencent Map - 4gimg.map.qq.com
 ^https?:\/\/4gimg\.map\.qq\.com\/mwaSplash\/ - reject
-# > Tencent Video - vv.video.qq.com
-^https?:\/\/vv\.video\.qq\.com\/getvmind\? - reject
-(?i)\btc\.qq\.com\/[\w\/\.-]+[a-z]\d+\.mp4\? - reject
+# > Tencent Video 整合在ChinaMediaAds模块
+#^http:\/\/[0-9\.:]*\/?(defaultts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
+#^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
+#^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|varietyts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
 # > Tencent News - r.inews.qq.com
 ^https?:\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) - reject
 # > Tencent Sports - news.ssp.qq.com
@@ -345,8 +345,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # Y
 # > 印象笔记 - app.yinxiang.com
 ^https?:\/\/app\.yinxiang\.com\/ads\/ - reject
-# > 优酷
-^https?:\/\/.+?\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= - reject
 # > 萤石 - i.ys7.com
 ^https?:\/\/i\.ys7\.com\/api\/ads - reject
 # > 云宝宝大数据 - nnapp.cloudbae.cn
@@ -376,4 +374,4 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad\/ - reject
 
 [MITM]
-hostname = %APPEND% api.21jingji.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, api.bjxkhc.com, gw.aihuishou.com, issuecdn.baidupcs.com, pan.baidu.com, appwk.baidu.com, mime.baidu.com, app.api.ke.com, manga.bilibili.com, api.vc.bilibili.com, res.pizzahut.com.cn, app-gw.csdn.net, www.cntv.com, api.chelaile.net.cn, web.chelaile.net.cn, cap.caocaokeji.cn, api.caijingmobile.com, app.dewu.com, api.dangdang.com, e.dangdang.com, capis*.didapinche.com, api.douban.com, res.xiaojukeji.com, daoyu.sdo.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, www.flyertea.com, dsa-mfp.fengshows.cn, api*.futunn.com, app.variflight.com, api.cdmcaac.com, dl.app.gtja.com, smkmp.96225.com, business.msstatic.com, ib-soft.net, www.inoreader.com, api.m.jd.com, api.jxedt.com, *.kakamobi.cn, *.kingsoft-office-service.com, api.gotokeep.com, api.kkmh.com, open.e.kuaishou.com, api.vistopia.com.cn, imeclient.openspeech.cn, res.kfc.com, api.laifeng.com, api.club.lenovo.cn, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com, v?-api.miaopai.com, mapi.mafengwo.cn, mob.mddcloud.com.cn , api.mwee.cn, peisongapi.meituan.com, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, wmapi.meituan.com, www.meituan.com, appconf.mail.163.com, interface*.music.163.com, p.du.163.com, slapi.oray.net, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, open.qyer.com, media.qyer.com, api.qbb6.com, magev6.if.qidian.com, adproxy.autohome.com, app2.autoimg.cn, *.k.sohu.com, *.tv.sohu.com, gw-passenger.01zhuanche.com, mpcs.suning.com, ccsp-egmas.sf-express.com, shopic.sf-express.com, ssl.kohsocialapp.qq.com, 4gimg.map.qq.com, vv.video.qq.com, r.inews.qq.com, news.ssp.qq.com, m.tuniu.com, cloud.189.cn, tqt.weibo.cn, mrobot.pconline.com.cn, mrobot.pcauto.com.cn, img*.10101111cdn.com, msg.umengcloud.com, api.vuevideo.net, thor.weidian.com, appconf.mail.163.com, client.mail.163.com, gw.kaola.com, *-release.wuta-cam.com, app.mixcapp.com, api.xiachufang.com, m.ctrip.com, app-api.niu.com, app.yinxiang.com, i.ys7.com, nnapp.cloudbae.cn, xyst.yuanfudao.com, a.qiumibao.com, syh.zybang.com, api.izuiyou.com, app.badmintoncn.com
+hostname = %APPEND% api.21jingji.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, api.bjxkhc.com, gw.aihuishou.com, issuecdn.baidupcs.com, pan.baidu.com, appwk.baidu.com, mime.baidu.com, app.api.ke.com, manga.bilibili.com, api.vc.bilibili.com, res.pizzahut.com.cn, app-gw.csdn.net, www.cntv.com, api.chelaile.net.cn, web.chelaile.net.cn, cap.caocaokeji.cn, api.caijingmobile.com, app.dewu.com, api.dangdang.com, e.dangdang.com, capis*.didapinche.com, api.douban.com, res.xiaojukeji.com, daoyu.sdo.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, www.flyertea.com, dsa-mfp.fengshows.cn, api*.futunn.com, app.variflight.com, api.cdmcaac.com, dl.app.gtja.com, smkmp.96225.com, business.msstatic.com, ib-soft.net, www.inoreader.com, api.m.jd.com, api.jxedt.com, *.kakamobi.cn, *.kingsoft-office-service.com, api.gotokeep.com, api.kkmh.com, open.e.kuaishou.com, api.vistopia.com.cn, imeclient.openspeech.cn, res.kfc.com, api.laifeng.com, api.club.lenovo.cn, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com, v?-api.miaopai.com, mapi.mafengwo.cn, mob.mddcloud.com.cn , api.mwee.cn, peisongapi.meituan.com, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, wmapi.meituan.com, www.meituan.com, appconf.mail.163.com, interface*.music.163.com, p.du.163.com, slapi.oray.net, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, open.qyer.com, media.qyer.com, api.qbb6.com, magev6.if.qidian.com, adproxy.autohome.com, app2.autoimg.cn, *.k.sohu.com, *.tv.sohu.com, gw-passenger.01zhuanche.com, mpcs.suning.com, ccsp-egmas.sf-express.com, shopic.sf-express.com, ssl.kohsocialapp.qq.com, 4gimg.map.qq.com, r.inews.qq.com, news.ssp.qq.com, m.tuniu.com, cloud.189.cn, tqt.weibo.cn, mrobot.pconline.com.cn, mrobot.pcauto.com.cn, img*.10101111cdn.com, msg.umengcloud.com, api.vuevideo.net, thor.weidian.com, appconf.mail.163.com, client.mail.163.com, gw.kaola.com, *-release.wuta-cam.com, app.mixcapp.com, api.xiachufang.com, m.ctrip.com, app-api.niu.com, app.yinxiang.com, i.ys7.com, nnapp.cloudbae.cn, xyst.yuanfudao.com, a.qiumibao.com, syh.zybang.com, api.izuiyou.com, app.badmintoncn.com
