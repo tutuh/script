@@ -4,7 +4,8 @@
 
 [Rule]
 # 根据User-Agent精准屏蔽amdc、这条必须添加否则脚本失效
-AND,((OR,((USER-AGENT,*AMap*))), (URL-REGEX,amdc/mobileDispatch$)),REJECT
+# 已编辑进Advertising.sgmodule
+# AND,((OR,((USER-AGENT,*AMap*))), (URL-REGEX,amdc/mobileDispatch$)),REJECT
 
 [URL Rewrite]
 # 通用广告请求
