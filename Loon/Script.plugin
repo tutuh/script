@@ -14,7 +14,7 @@ http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(fr
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=贴吧proto
 
 # > 微信去除公众号文章底部广告 - mp.weixin.qq.com
-http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js, tag=微信公众号去广告
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Wechat.js, tag=微信公众号去广告
 
 # > 12306去广告 - ad.12306.cn
 http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/12306.js, tag=12306去广告
