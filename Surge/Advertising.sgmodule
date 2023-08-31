@@ -6,7 +6,7 @@ force-http-engine-hosts = %APPEND% mobileapi-v6.elong.com
 
 [Rule]
 # > 根据User-Agent精准屏蔽amdc
-AND,((OR,((USER-AGENT,*AMap*), (USER-AGENT,*Cainiao4iPhone*), (USER-AGENT,*Alibaba*), (USER-AGENT,*%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*))), (URL-REGEX,amdc/mobileDispatch$)),REJECT  // 高德 AMap、菜鸟 Cainiao4iPhone、阿里巴巴 Alibaba、飞猪 %E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C
+AND,((OR,((USER-AGENT,*AMap*), (USER-AGENT,*Cainiao4iPhone*), (USER-AGENT,*Alibaba*), (USER-AGENT,*%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*))), (URL-REGEX,amdc/mobileDispatch$)),REJECT // 高德 AMap、菜鸟 Cainiao4iPhone、阿里巴巴 Alibaba、飞猪 %E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C
 
 # > 京东
 URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
