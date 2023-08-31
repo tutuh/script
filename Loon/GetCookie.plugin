@@ -50,7 +50,7 @@ http-response https:\/\/auth.alipan.com\/v2\/account\/token script-path=https://
 # > 途虎养车 - api.tuhu.cn
 # 打开：途虎养车APP -> 我的 -> 积分 获取cookie
 http-response ^https:\/\/api\.tuhu\.cn\/User\/UserCheckInVersion1 script-path=https://raw.githubusercontent.com/tutuh/script/master/task/tuhu.js, requires-body=1, tag=途虎养车_Cookie 
-http-response ^https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Vxtuhu.js, requires-body=1, tag=途虎养车微信小程序_Cookie 
+http-response ^https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo script-path=https://raw.githubusercontent.com/tutuh/script/master/task/tuhu_MiniProgram.js, requires-body=1, tag=途虎养车微信小程序_Cookie 
 
 # > 叮咚买菜 - sunquan.api.ddxq.mobi
 # 打开：叮咚买菜 -> 我的 -> 福利积分 -> 签到 获取cookie
