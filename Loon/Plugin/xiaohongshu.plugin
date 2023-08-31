@@ -10,6 +10,8 @@
 # 信息流
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/note\/guide\? reject-dict
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource\? reject-dict
+# 详情页小部件
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/note\/widgets reject-dict
 
 
 [Script]
