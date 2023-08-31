@@ -244,8 +244,8 @@ const _policy0 = cache[Group]?.policy0;
          if ($surge.setSelectGroupPolicy(`${Group}`, `${p}`))
             $notification.post(
                `策略切换 监控时间${time}秒`,
-               `当前速度 ➟ ${speed_unit(current_speed)} MB/S`,
-               `${host}平均 下载速度低于${minSpeed} MB/S 已自动切换至${p}策略`,
+               `当前下载速度 ➟ ${speed_unit(current_speed)}`,
+               `下载速度低于${minSpeed} MB/S 已切换至${p}策略`,
             );
          else throw new Error(`${p}在策略组中不存在`);
       }
