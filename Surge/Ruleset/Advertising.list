@@ -42,17 +42,6 @@ DOMAIN,nsclick.baidu.com
 DOMAIN,afdconf.baidu.com
 DOMAIN,httpdns.baidubce.com
 DOMAIN,lc.map.baidu.com
-
-# > Braze
-DOMAIN-SUFFIX,iad.appboy.com
-DOMAIN-SUFFIX,iad-03.appboy.com
-DOMAIN-SUFFIX,iad-01.braze.com
-DOMAIN-SUFFIX,iad-02.braze.com
-DOMAIN-SUFFIX,iad-03.braze.com
-DOMAIN-SUFFIX,iad-04.braze.com
-DOMAIN-SUFFIX,iad-05.braze.com
-DOMAIN-SUFFIX,iad-06.braze.com
-DOMAIN-SUFFIX,iad-08.braze.com
 # > 百词斩
 DOMAIN,advertise.baicizhan.com
 DOMAIN,advertise.baicizhan.org
@@ -72,10 +61,6 @@ DOMAIN,exp.360in.com
 # > 车来了
 DOMAIN,atrace.chelaile.net.cn
 DOMAIN,logs.chelaile.net.cn
-# > 菜鸟
-DOMAIN,iyes.youku.com
-DOMAIN,vali.cp31.ott.cibntv.net
-IP-CIDR,117.161.156.227/32,no-resolve
 
 # (D)
 # > 豆瓣
@@ -182,10 +167,17 @@ DOMAIN,adlaunch.moji.com
 DOMAIN,ads.mojicdn.com
 DOMAIN,v1.log.moji.com
 # > 芒果TV
-DOMAIN-SUFFIX,da.mgtv.com
-DOMAIN-SUFFIX,da.hunantv.com
-DOMAIN-SUFFIX,log.hunantv.com
-DOMAIN-SUFFIX,v2.hunantv.com
+DOMAIN,dflow.bz.mgtv.com
+DOMAIN,encounter.bz.mgtv.com
+DOMAIN,floor.bz.mgtv.com
+DOMAIN,img.da.mgtv.com
+DOMAIN,layer.bz.mgtv.com
+DOMAIN,mob.bz.mgtv.com
+DOMAIN,mobile.da.mgtv.com
+DOMAIN,v2.da.mgtv.com
+DOMAIN,video.da.mgtv.com
+DOMAIN,vip.bz.mgtv.com
+DOMAIN,ys.da.mgtv.com
 # > 美颜相机
 DOMAIN,adui.tg.meitu.com
 DOMAIN,aaid.uyunad.com
@@ -215,17 +207,9 @@ DOMAIN-KEYWORD,upload-cdn.orayimg.com
 DOMAIN-KEYWORD,upload-cdn.orayimg.com-upload-activity
 
 # (P)
-# > PPTV
-DOMAIN,ads.aplus.pptv.com
-DOMAIN,ads.aplusapi.pptv.com
-DOMAIN,asimgs.pplive.cn
-DOMAIN,de.as.pptv.com
 # > Photoable
 DOMAIN,regist.fotoable.com
 DOMAIN,cdn.adapi.fotoable.com
-# > PeanutWiFi
-DOMAIN,adnew.wifi8.com
-DOMAIN,adfile.wifi8.com
 # > PConline
 DOMAIN,ad-analysis.pconline.com.cn
 DOMAIN,iad0ssl.pcauto.com.cn
@@ -329,9 +313,6 @@ DOMAIN-SUFFIX,adcanvas.com
 # > 同花顺
 DOMAIN,adm.10jqka.com.cn
 DOMAIN,stat.10jqka.com.cn
-# > 迅雷
-DOMAIN,adsp.xunlei.com
-DOMAIN,etl.xlmc.sandai.net
 
 # (V)
 # > vivo
@@ -412,13 +393,16 @@ DOMAIN,sdkconfig.ad.xiaomi.com
 # > 云闪付
 DOMAIN-KEYWORD,ads.95516.com
 DOMAIN-KEYWORD,switch.cup.com.cn
-# > 优酷
+# > 优酷 & 菜鸟
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,amdc.m.youku.com
+DOMAIN,apiv4-iyes.youku.com
 DOMAIN,httpdns.alicdn.com
 DOMAIN,huichuan-mc.sm.cn
 DOMAIN,huichuan.sm.cn
+DOMAIN,iyes.youku.com
 DOMAIN,vali-ugc.cp31.ott.cibntv.net
+DOMAIN,vali.cp31.ott.cibntv.net
 DOMAIN,valipl.cp31.ott.cibntv.net
 DOMAIN,yk-ssp.ad.youku.com
 DOMAIN,ykad-data.youku.com
