@@ -42,6 +42,8 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ - reject
 # > 盒马 - acs.m.taobao.com
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.wdk\.render\.querysinglepage\/3\.0 - reject
+# > 菜鸟 - cn-acs.m.cainiao.com
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ - reject
 # ---
 # > 爱美剧 - api.bjxkhc.com
 ^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/ - reject
@@ -81,6 +83,7 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 
 # > CSDN - app-gw.csdn.net
 ^https?:\/\/app-gw\.csdn\.net\/cms-app\/v\d\/home_page\/open_advertisement - reject
+^https?:\/\/app-gw\.csdn\.net\/silkroad-api\/api\/v\d\/assemble\/list\/pub\/channel\/app_open_screen_ad - reject
 # > CNTV - www.cntv.com
 ^https?:\/\/www\.cntv\.com\/nettv\/adp\/ - reject
 # > 车来了 - api.chelaile.net.cn, web.chelaile.net.cn
@@ -113,7 +116,7 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject
 ^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* - reject
 # > 滴滴出行 - res.xiaojukeji.com
-https?://res\.xiaojukeji\.com\/resapi\/activity\/mget - reject
+https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget - reject
 https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) - reject
 # > 叨鱼社区 - daoyu.sdo.com
 ^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd - reject
@@ -406,4 +409,4 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad\/ - reject
 
 [MITM]
-hostname = %APPEND% api.21jingji.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, api.bjxkhc.com, gw.aihuishou.com, issuecdn.baidupcs.com, pan.baidu.com, appwk.baidu.com, mime.baidu.com, app.api.ke.com, manga.bilibili.com, api.vc.bilibili.com, res.pizzahut.com.cn, app-gw.csdn.net, www.cntv.com, api.chelaile.net.cn, web.chelaile.net.cn, cap.caocaokeji.cn, api.caijingmobile.com, app.dewu.com, api.dangdang.com, e.dangdang.com, capis*.didapinche.com, api.douban.com, res.xiaojukeji.com, daoyu.sdo.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, www.flyertea.com, dsa-mfp.fengshows.cn, api*.futunn.com, app.variflight.com, api.cdmcaac.com, dl.app.gtja.com, smkmp.96225.com, business.msstatic.com, ib-soft.net, www.inoreader.com, api.m.jd.com, api.jxedt.com, *.kakamobi.cn, *.kingsoft-office-service.com, api.gotokeep.com, api.kkmh.com, open.e.kuaishou.com, api.vistopia.com.cn, imeclient.openspeech.cn, res.kfc.com, api.laifeng.com, api.club.lenovo.cn, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com, v?-api.miaopai.com, mapi.mafengwo.cn, mob.mddcloud.com.cn , api.mwee.cn, peisongapi.meituan.com, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, wmapi.meituan.com, www.meituan.com, slapi.oray.net, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, mage*.if.qidian.com, adproxy.autohome.com, app2.autoimg.cn, *.k.sohu.com, *.tv.sohu.com, gw-passenger.01zhuanche.com, mpcs.suning.com, ccsp-egmas.sf-express.com, shopic.sf-express.com, ssl.kohsocialapp.qq.com, 4gimg.map.qq.com, r.inews.qq.com, news.ssp.qq.com, m.tuniu.com, cloud.189.cn, tqt.weibo.cn, mrobot.pconline.com.cn, mrobot.pcauto.com.cn, msg.umengcloud.com, api.vuevideo.net, appconf.mail.163.com, client.mail.163.com, gw.kaola.com, p.du.163.com, interface*.music.163.com, *-release.wuta-cam.com, app.mixcapp.com, api.xiachufang.com, m.ctrip.com, app-api.niu.com, app.yinxiang.com, i.ys7.com, xyst.yuanfudao.com, a.qiumibao.com, syh.zybang.com, api.izuiyou.com
+hostname = %APPEND% api.21jingji.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, cn-acs.m.cainiao.com, api.bjxkhc.com, gw.aihuishou.com, issuecdn.baidupcs.com, pan.baidu.com, appwk.baidu.com, mime.baidu.com, app.api.ke.com, manga.bilibili.com, api.vc.bilibili.com, res.pizzahut.com.cn, app-gw.csdn.net, www.cntv.com, api.chelaile.net.cn, web.chelaile.net.cn, cap.caocaokeji.cn, api.caijingmobile.com, app.dewu.com, api.dangdang.com, e.dangdang.com, capis*.didapinche.com, api.douban.com, res.xiaojukeji.com, daoyu.sdo.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, www.flyertea.com, dsa-mfp.fengshows.cn, api*.futunn.com, app.variflight.com, api.cdmcaac.com, dl.app.gtja.com, smkmp.96225.com, business.msstatic.com, ib-soft.net, www.inoreader.com, api.m.jd.com, api.jxedt.com, *.kakamobi.cn, *.kingsoft-office-service.com, api.gotokeep.com, api.kkmh.com, open.e.kuaishou.com, api.vistopia.com.cn, imeclient.openspeech.cn, res.kfc.com, api.laifeng.com, api.club.lenovo.cn, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com, v?-api.miaopai.com, mapi.mafengwo.cn, mob.mddcloud.com.cn , api.mwee.cn, peisongapi.meituan.com, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, wmapi.meituan.com, www.meituan.com, slapi.oray.net, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, mage*.if.qidian.com, adproxy.autohome.com, app2.autoimg.cn, *.k.sohu.com, *.tv.sohu.com, gw-passenger.01zhuanche.com, mpcs.suning.com, ccsp-egmas.sf-express.com, shopic.sf-express.com, ssl.kohsocialapp.qq.com, 4gimg.map.qq.com, r.inews.qq.com, news.ssp.qq.com, m.tuniu.com, cloud.189.cn, tqt.weibo.cn, mrobot.pconline.com.cn, mrobot.pcauto.com.cn, msg.umengcloud.com, api.vuevideo.net, appconf.mail.163.com, client.mail.163.com, gw.kaola.com, p.du.163.com, interface*.music.163.com, *-release.wuta-cam.com, app.mixcapp.com, api.xiachufang.com, m.ctrip.com, app-api.niu.com, app.yinxiang.com, i.ys7.com, xyst.yuanfudao.com, a.qiumibao.com, syh.zybang.com, api.izuiyou.com
