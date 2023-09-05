@@ -1,11 +1,19 @@
 // By RuCu6
-// 2023-08-24 14:50
+// 2023-09-05 14:10
 
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
-if (url.includes("/faas/amap-navigation/main-page")) {
+if (url.includes("/faas/amap-navigation/card-service-plan-home")) {
+  // 路线规划页
+  if (obj?.data?.children?.length > 0) {
+    // 有schema参数的为推广
+    obj.data.children = obj.data.children.filter(
+      (i) => !i?.hasOwnProperty("schema")
+    );
+  }
+} else if (url.includes("/faas/amap-navigation/main-page")) {
   // 首页底部卡片
   if (obj?.data?.cardList?.length > 0) {
     obj.data.cardList = obj.data.cardList.filter(
@@ -21,6 +29,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     );
   }
 } else if (url.includes("/perception/drive/routePlan")) {
+    // 路线规划页
   if (obj?.data?.front_end) {
     const item = ["global_guide_data", "route_search"];
     for (let i of item) {
@@ -47,6 +56,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     }
   }
 } else if (url.includes("/sharedtrip/taxi/order_detail_car_tips")) {
+  // 打车页
   if (obj.data?.carTips?.data?.popupInfo) {
     delete obj.data.carTips.data.popupInfo;
   }
@@ -324,6 +334,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     }
   }
 } else if (url.includes("/shield/search_poi/homepage")) {
+  // 首页 搜索框历史记录 推广标签
   if (obj?.history_tags) {
     delete obj.history_tags;
   }
