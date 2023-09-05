@@ -23,9 +23,9 @@ if (url.includes("/faas/amap-navigation/main-page")) {
 } else if (url.includes("/perception/drive/routePlan")) {
   if (obj?.data?.front_end) {
     const item = ["global_guide_data", "route_search"];
-    item.forEach((i) => {
+    for (let i of item) {
       delete obj.data.front_end[i];
-    });
+    }
   }
 } else if (url.includes("/promotion-web/resource")) {
   // 打车页面
@@ -42,9 +42,9 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "tips"
   ];
   if (obj?.data) {
-    item.forEach((i) => {
+    for (let i of item) {
       delete obj.data[i];
-    });
+    }
   }
 } else if (url.includes("/sharedtrip/taxi/order_detail_car_tips")) {
   if (obj.data?.carTips?.data?.popupInfo) {
@@ -319,9 +319,9 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "waterFallFeedTitle" // 更多好去处
   ];
   if (obj?.data?.modules) {
-    item.forEach((i) => {
+    for (let i of item) {
       delete obj.data.modules[i];
-    });
+    }
   }
 } else if (url.includes("/shield/search_poi/homepage")) {
   if (obj?.history_tags) {
@@ -472,7 +472,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   if (obj?.data?.coupon) {
     delete obj.data.coupon;
   }
-  const bar = [
+  const item = [
     "belt",
     "common_float_bar",
     "common_image_banner",
@@ -486,9 +486,9 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "tips_top_banner"
   ];
   if (obj?.data?.modules) {
-    bar.forEach((i) => {
+    for (let i of item) {
       delete obj.data.modules[i];
-    });
+    }
   }
 } else if (url.includes("/valueadded/alimama/splash_screen")) {
   // 开屏广告
