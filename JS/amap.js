@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-09-05 14:10
+// 2023-09-05 17:45
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -29,7 +29,7 @@ if (url.includes("/faas/amap-navigation/card-service-plan-home")) {
     );
   }
 } else if (url.includes("/perception/drive/routePlan")) {
-    // 路线规划页
+  // 路线规划页
   if (obj?.data?.front_end) {
     const item = ["global_guide_data", "route_search"];
     for (let i of item) {
@@ -89,6 +89,7 @@ if (url.includes("/faas/amap-navigation/card-service-plan-home")) {
     "_user_profile_",
     "air_card",
     "amapCoin",
+    "amap_basemap_config",
     "aos_feedback",
     "apple_location_log_collect",
     "collect",
