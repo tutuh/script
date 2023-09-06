@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-09-05 20:00
+// 2023-09-05 22:45
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -314,6 +314,8 @@ if (url.includes("/faas/amap-navigation/card-service-plan-home")) {
     // "shop_news",
     "smallListBizRec", // 周边热门酒店
     "smallOrListBizRec",
+    "surroundOldSellHouse", // 同城二手房
+    "surroundRentHouse", // 附近租房
     "surround_facility",
     "surround_facility_new",
     "surround_house_tab",
