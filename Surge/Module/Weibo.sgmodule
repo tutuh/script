@@ -2,6 +2,7 @@
 #!desc=新浪微博APP净化
 #!system=ios
 #By RuCu6
+#!update = 2023-09-06 18:55
 
 [Rule]
 # DOMAIN,sdkapp.uve.weibo.com,DIRECT
