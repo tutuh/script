@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-09-05 13:35
+// 2023-09-06 17:15
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -41,18 +41,14 @@ if (url.includes("/v1/search/banner_list")) {
           item.media_save_config.disable_watermark = true;
           item.media_save_config.disable_weibo_cover = true;
         }
-        if (item?.share_info) {
+        if (item?.share_info?.function_entries?.length > 0) {
           // 下载限制
-          item.share_info.function_entries = [
-            { type: "video_download" },
-            { type: "generate_image" },
-            { type: "copy_link" },
-            { type: "native_voice" },
-            { type: "video_speed" },
-            { type: "dislike" },
-            { type: "report" },
-            { type: "video_feedback" }
-          ];
+          const additem = { type: "video_download" };
+          let func = item.share_info.function_entries;
+          if (!["video_download"]?.includes(func?.type)) {
+            // 向数组开头添加对象
+            func.unshift(additem);
+          }
         }
       }
     }
@@ -67,18 +63,14 @@ if (url.includes("/v1/search/banner_list")) {
         item.media_save_config.disable_watermark = true;
         item.media_save_config.disable_weibo_cover = true;
       }
-      if (item?.share_info) {
+      if (item?.share_info?.function_entries?.length > 0) {
         // 下载限制
-        item.share_info.function_entries = [
-          { type: "video_download" },
-          { type: "generate_image" },
-          { type: "copy_link" },
-          { type: "native_voice" },
-          { type: "video_speed" },
-          { type: "dislike" },
-          { type: "report" },
-          { type: "video_feedback" }
-        ];
+        const additem = { type: "video_download" };
+        let func = item.share_info.function_entries;
+        if (!["video_download"]?.includes(func?.type)) {
+          // 向数组开头添加对象
+          func.unshift(additem);
+        }
       }
     }
   }
