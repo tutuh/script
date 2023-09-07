@@ -1,6 +1,7 @@
 #!name=高德地图去广告
 #!desc=高德地图APP净化
 #By RuCu6
+#!update = 2023-09-05 14:10
 
 [Rule]
 # 根据User-Agent精准屏蔽amdc、这条必须添加否则脚本失效
