@@ -39,6 +39,7 @@ amap = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/t
 # 首页,推广卡片,红点角标,右上角动图,搜索框热词,左下角天气,消息横幅
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-(assets|location)\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 ^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword)\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 # 打车页,红点角标,弹窗,天气图标,推广卡片
