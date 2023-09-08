@@ -6,6 +6,9 @@
 # > 跳过部分应用的代理检测
 skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn,gate.lagou.com, www.abchina.com.cn, www.shanbay.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com
 
+# > BoxJs
+force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+
 [Rule]
 # > AppStore策略切换
 AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,speedLimit)),AppStore
@@ -21,5 +24,8 @@ speedLimit = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/
 Sub-Store Core=type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body=true,timeout=120
 Sub-Store Simple=type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body=true
 
+# > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+Rewrite: BoxJs = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
+
 [MITM]
-hostname = %APPEND% m.douban.com, sub.store
+hostname = %APPEND% m.douban.com, sub.store, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
