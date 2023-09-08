@@ -6,7 +6,14 @@
 # > 跳过部分应用的代理检测
 skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn,gate.lagou.com, www.abchina.com.cn, www.shanbay.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com
 
+[Rule]
+# > AppStore策略切换
+AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,speedLimit)),AppStore
+
 [Script]
+# > AppStore策略切换
+speedLimit = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/speedLimit.js,argument="Return=10min,Group=AppStore&policy=DIRECT,HK&time=15&minSpeed=8"
+
 # > 豆瓣网页增强 - m.douban.com
 豆瓣网页增强 = type=http-response,pattern=^https://m.douban.com/movie/subject/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Douban.js
 
