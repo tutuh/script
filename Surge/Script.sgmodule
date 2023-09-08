@@ -1,5 +1,5 @@
 #!name=多功能组合配置
-#!desc=跳过部分应用的代理检测、豆瓣网页增强、Sub-Store订阅工具
+#!desc=跳过部分应用的代理检测、豆瓣网页增强、Sub-Store订阅工具、AppStore策略切换
 #!system=ios
 
 [General]
