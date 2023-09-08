@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-09-07 22:00
+// 2023-09-08 20:35
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -89,26 +89,25 @@ if (url.includes("/faas/amap-navigation/card-service-plan-home")) {
     "SplashScreenControl",
     "TipsTaxiButton",
     // "TrainOrderBanner", // 火车票订单
-
-    "_testmark_info",
-    "_user_profile_",
-    "air_card",
+    // "_testmark_info",
+    // "_user_profile_",
+    // "air_card",
     // "amap_basemap_config", // 基本库
     "amapCoin",
-    "aos_feedback",
-    "app_improve", // app改进
-    "apple_location_log_collect",
-    "collect",
-    "comment_info",
-    "deviceml_force_recommend",
-    "deviceml_update_apk_conf",
+    // "aos_feedback",
+    // "app_improve", // app改进
+    // "apple_location_log_collect",
+    // "collect",
+    // "comment_info",
+    // "deviceml_force_recommend",
+    // "deviceml_update_apk_conf",
     "feedback_banner", // 店主专属通道
     "footprint", // 足迹
-    "gd_code_cover",
-    "gd_notch_logo",
+    // "gd_code_cover",
+    // "gd_notch_logo",
     "his_input_tip",
     "home_business_position_config", // 首页右上角动图
-    "homepage_resource_config",
+    // "homepage_resource_config",
     // "hotcity", // 热门城市
     "hotel_activity",
     "hotel_fillin_opt",
@@ -116,38 +115,38 @@ if (url.includes("/faas/amap-navigation/card-service-plan-home")) {
     "hotel_portal",
     "hotel_tipsicon",
     "hotsaleConfig", // 酒店限时抢购
-    "icon_show",
-    "info_env_setting",
-    "ip_square",
-    "ip_square_share",
-    "isNewSearchMapCard", // 可能是足迹
-    "isPoiBubbleDisplay",
-    "lab_beta",
-    "lab_screenrecording",
+    // "icon_show",
+    // "info_env_setting",
+    // "ip_square",
+    // "ip_square_share",
+    // "isNewSearchMapCard", // 可能是足迹
+    // "isPoiBubbleDisplay",
+    // "lab_beta",
+    // "lab_screenrecording",
     "landing_page_info", // 发现吃喝玩乐好去处
-    "list_action_drawer",
-    "listguide",
-    "map_environment_air",
-    "map_weather_switch", // 天气
-    "maplayers", // 赏花地图
-    "message_tab",
+    // "list_action_drawer",
+    // "listguide",
+    // "map_environment_air",
+    // "map_weather_switch", // 天气
+    // "maplayers", // 赏花地图
+    // "message_tab",
     "navi_end", // 导航结束 领油滴
-    "nearby",
+    // "nearby",
     "nearby_business_popup",
     "nearby_map_entry_guide",
     "nearby_map_pull_down_guide",
-    "newcommentreply",
-    "nore_rec",
+    // "newcommentreply",
+    // "nore_rec",
     "operation_layer", // 首页右上角图层
-    "photo_with_location",
-    "poi_rec",
-    "preword",
-    "profileHeaderPic",
-    "profiletTopBtn",
-    "recommend_api",
-    "recommend_key",
-    "redesign_user",
-    "renovate_control", // 今夜特价
+    // "photo_with_location",
+    // "poi_rec",
+    // "preword",
+    // "profileHeaderPic",
+    // "profiletTopBtn",
+    // "recommend_api",
+    // "recommend_key",
+    // "redesign_user",
+    // "renovate_control", // 今夜特价
     "route_banner", // 搜索路线 免费抽机票
     "routeresult_banner",
     "search_homepage",
@@ -166,16 +165,16 @@ if (url.includes("/faas/amap-navigation/card-service-plan-home")) {
     "splashview_config",
     "sur_bar", // 十一特惠
     "taxi_activity", // 打车活动
-    "tel_retention_popup",
+    // "tel_retention_popup",
     "testflight_adiu",
     "tf_remind", // tf测试版
-    "third_party_places",
+    // "third_party_places",
     "tips_bar_black_list",
-    "tips_hook",
-    "trackupload",
-    "user_insight", // 您对本次导航满意吗
-    "vip",
-    "weather_restrict_config"
+    // "tips_hook",
+    // "trackupload",
+    // "user_insight", // 您对本次导航满意吗
+    "vip"
+    // "weather_restrict_config",
   ];
   for (let i of item) {
     if (obj?.data?.[i]) {
