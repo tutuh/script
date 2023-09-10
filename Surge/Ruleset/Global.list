@@ -2,6 +2,7 @@
 # https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/ProxyLite.list
 # https://github.com/DivineEngine/Profiles/blob/master/Surge/Ruleset/Global.list
 
+
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
 DOMAIN,addons.mozilla.org
@@ -42,6 +43,7 @@ DOMAIN,steampipe.akamaized.net
 DOMAIN,steamstore-a.akamaihd.net
 DOMAIN,steamusercontent-a.akamaihd.net
 DOMAIN,steamuserimages-a.akamaihd.net
+DOMAIN,sub-store.vercel.app
 DOMAIN,testflight.apple.com
 DOMAIN,tv.apple.com
 DOMAIN,wego.here.com
@@ -583,7 +585,6 @@ DOMAIN-SUFFIX,ustream.tv
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,valvesoftware.com
 DOMAIN-SUFFIX,venturebeat.com
-DOMAIN-SUFFIX,sub-store.vercel.app
 DOMAIN-SUFFIX,viber.com
 DOMAIN-SUFFIX,videopress.com
 DOMAIN-SUFFIX,vikacg.com
