@@ -1,0 +1,64 @@
+{
+  "name": "自用图标订阅",
+  "description": "一些自己使用的图标",
+   "icons": [
+    {
+      "name": "amap",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/amap.png"
+    },
+      {
+      "name": "555",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/555.png"
+    },
+      {
+      "name": "Unlock",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/Unlock.png"
+    },     
+     {
+      "name": "dingdong",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/dingdong.png"
+    },
+    
+     {
+      "name": "weibo",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/weibo.png"
+    },    
+     {
+      "name": "tuhu",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/tuhu.png"
+    },    
+     {
+      "name": "ximalaya",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/ximalaya.png"
+    },    
+     {
+      "name": "tieba",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/tieba.png"
+    },
+     {
+      "name": "meituan",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/meituan.png"
+    },         
+     {
+      "name": "mall.meituan",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/mall.meituan.png"
+    },
+     {
+      "name": "mall.meituan",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/mall.meituan.png"
+    },
+      {
+      "name": "aliYunPan",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/aliYunPan.png"
+    },
+      {
+      "name": "douban",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/douban.png"
+    },
+      {
+      "name": "zhihu",
+      "url": "https://raw.githubusercontent.com/tutuh/script/master/icons/zhihu.png"
+    }     
+     
+  ]
+}
