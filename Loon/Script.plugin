@@ -1,46 +1,19 @@
-#!name=去广告及VIP解锁(脚本)
-#!desc=去广告：贴吧、微信公众号、12306; 解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF; 其他：豆瓣网页增强、Sub-Store订阅工具
+#!name=多功能组合模块
+#!desc=豆瓣网页增强、Sub-Store订阅工具、Boxjs配置
 
 [Rule]
-# > 贴吧去广告
-DOMAIN,180.76.76.200,REJECT
-IP-CIDR,180.76.76.200/32,REJECT,no-resolve
+DOMAIN-SUFFIX,jsdelivr.net,PROXY
 
 [Script]
-# >> 去广告脚本 <<
-# > 贴吧去广告 - tiebac.baidu.com
-http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(frs\/(page|threadlist|generalTabList)|pb\/(pic)?page|excellent\/personalized))$|tiebaads\/commonbatch\?) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body=true, timeout=10, tag=贴吧json
-http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=贴吧proto
-
-# > 微信去除公众号文章底部广告 - mp.weixin.qq.com
-http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Wechat.js, tag=微信公众号去广告
-
-# > 12306去广告 - ad.12306.cn
-http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/12306.js, tag=12306去广告
-
-# >> 解锁VIP <<
-# > 扫描全能王CamScanner pro - ap*.intsig.net  
-http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? script-path=https://raw.githubusercontent.com/tutuh/Surge/main/Script/CamScanner.js, requires-body=true, timeout=10, tag扫描全能王_解锁
-
-# > MIX 解锁高级特权 (需恢复购买) - bmall.camera360.com
-http-response https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery script-path=https://raw.githubusercontent.com/tutuh/Surge/main/Script/MIX.js, requires-body=true, timeout=10, tag=MIX Vip
-
-# > 美图秀秀 - *.xiuxiu.meitu.com
-http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/tutuh/Surge/main/Script/mtxx.js, requires-body=true, timeout=10, tag=美图秀秀_解锁
-
-# > 美颜相机 - *.meiyan.com
-http-response ^https:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)) script-path=https://raw.githubusercontent.com/tutuh/Surge/main/Script/myxj.js, requires-body=true, timeout=10, tag=美颜相机_解锁
-
-# > iLovePDF - service.ilovepdf.com
-http-response https://service.ilovepdf.com/v1/user script-path=https://raw.githubusercontent.com/tutuh/Surge/main/Script/LovePDF.js, requires-body=true, timeout=10, tag=iLovePDF_解锁
-
-# >> 其他 <<
-# > 豆瓣网页增强 - m.douban.com
-http-response ^https://m.douban.com/movie/subject/.+ script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Douban.js, requires-body=true, tag=豆瓣网页增强
+# > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120, tag=BoxJs
 
 # > Sub-Store订阅工具 - sub.store
 http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js, requires-body=true, timeout=120, tag=Sub-Store Core
 http-request ^https?:\/\/sub\.store script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js, requires-body=true, timeout=120, tag=Sub-Store Simple
 
+# > 豆瓣网页增强 - m.douban.com
+http-response ^https://m.douban.com/movie/subject/.+ script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Douban.js, requires-body=true, tag=豆瓣网页增强
+
 [Mitm]
-hostname = tiebac.baidu.com, mp.weixin.qq.com, ad.12306.cn, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, *.meiyan.com, service.ilovepdf.com, m.douban.com, sub.store
+hostname = sub.store, m.douban.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
