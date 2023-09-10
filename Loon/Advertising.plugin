@@ -2,6 +2,14 @@
 #!desc=Block Advertising
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png 
 
+[Rule]
+# > 贴吧去广告
+DOMAIN,180.76.76.200,REJECT
+IP-CIDR,180.76.76.200/32,REJECT,no-resolve
+
+# > 京东
+URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
+
 [Script]
 # > 根据User-Agent精准屏蔽amdc - 菜鸟、高德地图、飞猪
 http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path=https://raw.githubusercontent.com/tutuh/script/master/Loon/JS/amdc_reject.js, timeout=10, tag=amdc精准定位
@@ -16,9 +24,6 @@ http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|t
 # > 12306去广告 - ad.12306.cn
 http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/12306.js, tag=12306去广告
 
-[Rule]
-# > 京东
-URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 
 [URL Rewrite]
 # ======= 0~9 ======= #
