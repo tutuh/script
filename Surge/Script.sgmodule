@@ -1,5 +1,5 @@
 #!name=多功能组合模块
-#!desc=跳过代理检测、AppStore策略切换、豆瓣网页增强、Sub-Store订阅工具、Script Hub规则转换、Boxjs配置
+#!desc=跳过代理检测、豆瓣网页增强、Sub-Store订阅工具、Script Hub规则转换、Boxjs配置
 #!system=ios
 
 [General]
@@ -9,14 +9,7 @@ skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn,gate.lagou.c
 # > BoxJs
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, script.hub, *.script.hub
 
-[Rule]
-# > AppStore策略切换
-AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,speedLimit)),AppStore
-
 [Script]
-# > AppStore策略切换
-speedLimit = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/speedLimit.js,argument="Return=10min,Group=AppStore&policy=DIRECT,AUTO-HK&time=15&minSpeed=5"
-
 # > 豆瓣网页增强 - m.douban.com
 豆瓣网页增强 = type=http-response,pattern=^https://m.douban.com/movie/subject/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Douban.js
 
