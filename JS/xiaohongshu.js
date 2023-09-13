@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-09-06 17:15
+// 2023-09-13 18:55
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -44,7 +44,7 @@ if (url.includes("/v1/search/banner_list")) {
         if (item?.share_info?.function_entries?.length > 0) {
           // 下载限制
           const additem = { type: "video_download" };
-          let func = item.share_info.function_entries;
+          let func = item.share_info.function_entries[0];
           if (!["video_download"]?.includes(func?.type)) {
             // 向数组开头添加对象
             func.unshift(additem);
@@ -66,7 +66,7 @@ if (url.includes("/v1/search/banner_list")) {
       if (item?.share_info?.function_entries?.length > 0) {
         // 下载限制
         const additem = { type: "video_download" };
-        let func = item.share_info.function_entries;
+        let func = item.share_info.function_entries[0];
         if (!["video_download"]?.includes(func?.type)) {
           // 向数组开头添加对象
           func.unshift(additem);
