@@ -23,7 +23,7 @@ if (url.includes("/v1/search/banner_list")) {
     }
   }
 } else if (url.includes("/v2/note/widgets")) {
-  const item = ["generic"];
+  const item = ["generic_params"];
   if (obj?.data) {
     for (let i of item) {
       delete obj.data[i];
