@@ -280,21 +280,15 @@ DOMAIN,pgdt.ugdtimg.com
 DOMAIN,splashqqlive.gtimg.com
 DOMAIN,wa.gtimg.com
 # > Tencent Music (TME)
-DOMAIN,ad.tencentmusic.com
 DOMAIN,adstats.tencentmusic.com
 DOMAIN,adserviceretry.kugou.com
 DOMAIN,ads.service.kugou.com
 DOMAIN,adsfile.bssdlbig.kugou.com
-DOMAIN,g.koowo.com
 DOMAIN,kgmobilestat.kugou.com
 DOMAIN,kgmobilestatbak.kugou.com
 DOMAIN,mobilelog.kugou.com
-DOMAIN,mobilead.kuwo.cn
-DOMAIN,rich.kuwo.cn
-DOMAIN,tmead.y.qq.com
 DOMAIN,splashimgbssdl.yun.kugou.com
 DOMAIN,adsfilebssdlbig.tx.kugou.com
-DOMAIN,tmeadcomm.y.qq.com
 DOMAIN-SUFFIX,rqd.qq.com
 DOMAIN-SUFFIX,wup.imtt.qq.com
 DOMAIN-SUFFIX,android.rqd.qq.com
@@ -305,7 +299,7 @@ DOMAIN-SUFFIX,v.gdt.qq.com
 DOMAIN,admonitor.thepaper.cn
 DOMAIN,adpai.thepaper.cn
 DOMAIN,imgadpai.thepaper.cn
-# > TubeMax  
+# > TubeMax
 DOMAIN-SUFFIX,adjust.com
 DOMAIN-SUFFIX,applvn.com
 DOMAIN-SUFFIX,app-measurement.com
@@ -391,14 +385,12 @@ DOMAIN,sdkaction.biz.weibo.com
 DOMAIN,sdkclick.biz.weibo.com
 DOMAIN,sdkmonitor.biz.weibo.com
 # > 小米
-DOMAIN,sdkconfig.ad.xiaomi.com
 
 # (Y)
 # > 云闪付
 DOMAIN-KEYWORD,ads.95516.com
 DOMAIN-KEYWORD,switch.cup.com.cn
 # > 优酷 & 菜鸟
-DOMAIN,adsmind.ugdtimg.com
 DOMAIN,amdc.m.youku.com
 DOMAIN,apiv4-iyes.youku.com
 DOMAIN,httpdns.alicdn.com
@@ -442,8 +434,8 @@ DOMAIN,admarket.21cn.com
 DOMAIN,adshows.21cn.com
 # > 中华万年历广告
 DOMAIN-KEYWORD,lkme.cc
-DOMAIN-KEYWORD,api.freed.so 
+DOMAIN-KEYWORD,api.freed.so
 DOMAIN-KEYWORD,log-dmp.suishenyun.cn
 DOMAIN-KEYWORD,client-dmp.suishenyun.cn
-DOMAIN-KEYWORD,pc.suishenyun.net 
+DOMAIN-KEYWORD,pc.suishenyun.net
 DOMAIN-KEYWORD,v0-client-lz.rili.cn
