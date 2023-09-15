@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-09-08 20:35
+// 2023-09-15 11:20
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -181,16 +181,18 @@ if (url.includes("/faas/amap-navigation/card-service-plan-home")) {
       obj.data[i] = { status: 1, version: "", value: "" };
     }
   }
-  if (obj?.data?.amap_basemap_config) {
-    let basemap = obj.data.amap_basemap_config;
-    if (basemap?.status === 1 && basemap?.value !== "") {
-      let objVal = JSON.parse(basemap.value);
-      if (objVal?.v13Switch) {
-        objVal.v13Switch = 0;
-      }
-      basemap.value = JSON.stringify(objVal);
-    }
-  }
+  /**
+   * if (obj?.data?.amap_basemap_config) {
+   * let basemap = obj.data.amap_basemap_config;
+   * if (basemap?.status === 1 && basemap?.value !== "") {
+   * let objVal = JSON.parse(basemap.value);
+   * if (objVal?.v13Switch) {
+   * objVal.v13Switch = 0;
+   * }
+   * basemap.value = JSON.stringify(objVal);
+   * }
+   * }
+   */
 } else if (url.includes("/shield/search/common/coupon/info")) {
   if (obj?.data) {
     obj.data = {};
@@ -198,9 +200,8 @@ if (url.includes("/faas/amap-navigation/card-service-plan-home")) {
 } else if (url.includes("/shield/search/nearbyrec_smart")) {
   // 附近页面
   if (obj?.data?.modules?.length > 0) {
-    obj.data.modules = obj.data.modules.filter(
-      (i) => i === "head" || i === "search_hot_words" || i === "feed_rec"
-    );
+    const item = ["head", "search_hot_words", "feed_rec"];
+    obj.data.modules = obj.data.modules.filter((i) => item?.includes(i));
   }
 } else if (url.includes("/shield/search/poi/detail")) {
   // 搜索结果 模块详情
