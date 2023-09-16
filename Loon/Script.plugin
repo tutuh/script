@@ -1,5 +1,5 @@
 #!name=多功能组合模块
-#!desc=豆瓣网页增强、Sub-Store订阅工具、Boxjs配置
+#!desc=豆瓣网页增强、Sub-Store订阅工具、Boxjs配置、GitHub Private
 
 [Rule]
 DOMAIN-SUFFIX,jsdelivr.net,PROXY
@@ -7,6 +7,9 @@ DOMAIN-SUFFIX,jsdelivr.net,PROXY
 [Script]
 # > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120, tag=BoxJs
+
+# > GitHub Private - raw.githubusercontent.com, gist.githubusercontent.com
+http-request ^https?:\/\/(raw|gist)\.githubusercontent.com script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.js, requires-body=true, timeout=10, tag=github
 
 # > Sub-Store订阅工具 - sub.store
 http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js, requires-body=true, timeout=120, tag=Sub-Store Core
@@ -16,4 +19,4 @@ http-request ^https?:\/\/sub\.store script-path=https://github.com/sub-store-org
 http-response ^https://m.douban.com/movie/subject/.+ script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Douban.js, requires-body=true, tag=豆瓣网页增强
 
 [Mitm]
-hostname = sub.store, m.douban.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+hostname = sub.store, m.douban.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, raw.githubusercontent.com, gist.githubusercontent.com
