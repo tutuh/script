@@ -258,12 +258,15 @@ DOMAIN-SUFFIX,pv.sohu.com
 # > Tencent Video
 DOMAIN,adsmind.gdtimg.com
 DOMAIN,btrace.qq.com
+DOMAIN,btrace.video.qq.com
 DOMAIN,info4.video.qq.com
 DOMAIN,info6.video.qq.com
 DOMAIN,ios.video.mpush.qq.com
 DOMAIN,mtrace.qq.com
+DOMAIN,p.l.qq.com
 DOMAIN,pgdt.gtimg.cn
-DOMAIN,vv.video.qq.com
+DOMAIN,rpt.gdt.qq.com
+DOMAIN,trace.qq.com
 # > Tencent
 DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
