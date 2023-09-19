@@ -5,7 +5,7 @@
  * 更新日期：2023.04.22
  * 版本：3.5
  */
-let args = getArgs();
+
 /**
  * 网络请求封装为 Promise
  * Usage: httpMethod.get(option).then(response => { logger.log(data) }).catch(error => { logger.log(error) })
@@ -231,20 +231,11 @@ function getNetworkInfo(retryTimes = 5, retryInterval = 1000) {
       $done({
         title: '发生错误',
         content: '无法获取当前网络信息\n请检查网络状态后重试',
-        icon: args.icon || 'wifi.exclamationmark',
-        'icon-color': args.color || '#CB1B45',
+        icon: 'wifi.exclamationmark',
+        'icon-color': '#CB1B45',
       });
     }
   });
-}
-
-function getArgs() {
-  return Object.fromEntries(
-    $argument
-      .split("&")
-      .map((item) => item.split("="))
-      .map(([k, v]) => [k, decodeURIComponent(v)])
-  );
 }
 
 /**
@@ -264,8 +255,8 @@ function getArgs() {
     $done({
       title: "请求超时",
       content: "连接请求超时\n请检查网络状态后重试",
-      icon: args.icon || 'wifi.exclamationmark',
-      'icon-color': args.color || '#CB1B45',
+      icon: 'wifi.exclamationmark',
+      'icon-color': '#CB1B45',
     });
   }, scriptTimeout > surgeMaxTimeout ? surgeMaxTimeout : scriptTimeout);
 
