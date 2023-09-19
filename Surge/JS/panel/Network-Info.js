@@ -255,8 +255,8 @@ function getNetworkInfo(retryTimes = 5, retryInterval = 1000) {
     $done({
       title: "请求超时",
       content: "连接请求超时\n请检查网络状态后重试",
-      icon: args.icon || 'wifi.exclamationmark',
-      'icon-color': args.color || '#CB1B45',
+      icon: 'wifi.exclamationmark',
+      'icon-color': '#CB1B45',
     });
   }, scriptTimeout > surgeMaxTimeout ? surgeMaxTimeout : scriptTimeout);
 
