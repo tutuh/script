@@ -12,9 +12,9 @@
 # 可选参数"color=xxx" 当使用 icon 字段时，可传入 color 字段控制图标颜色，字段内容为颜色的 HEX 编码。如：color=#007aff
 
 [Panel]
-面板策略 = script-name=网络信息, title="",content="",style=info,update-interval=30
+面板策略 = script-name=网络信息,title="",content="",style=info,update-interval=30
 面板策略 = script-name=机场流量信息,update-interval=3600
-面板策略 = script-name=流媒体解锁检测, title="流媒体解锁检测", content="请刷新面板", update-interval=3600
+面板策略 = script-name=流媒体解锁检测,title="流媒体解锁检测",content="请刷新面板",update-interval=3600
 面板策略 = script-name=配置重载,title=配置重载,content=配置重载,style=info,update-interval=-1
 
 [Script]
