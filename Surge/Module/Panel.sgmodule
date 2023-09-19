@@ -12,16 +12,12 @@
 # 可选参数"color=xxx" 当使用 icon 字段时，可传入 color 字段控制图标颜色，字段内容为颜色的 HEX 编码。如：color=#007aff
 
 [Panel]
-面板策略 = script-name=网络测速,update-interval=-1
-面板策略 = script-name=网络连通测试,update-interval=1
 面板策略 = script-name=网络信息, title="",content="",style=info,update-interval=30
 面板策略 = script-name=机场流量信息,update-interval=3600
 面板策略 = script-name=流媒体解锁检测, title="流媒体解锁检测", content="请刷新面板", update-interval=3600
 面板策略 = script-name=配置重载,title=配置重载,content=配置重载,style=info,update-interval=-1
 
 [Script]
-网络测速 = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Network_Speed.js,argument=icon=arrow.down.circle&icon-color=#5d84f8&mb=1
-网络连通测试 = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Network_Connectivity.js,argument=icon=icloud.and.arrow.down&color=#FF9F0A&server=false
 网络信息 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Network-Info.js
 机场流量信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,script-update-interval=0,argument=url=encode后的机场节点链接&reset_day=1&title=你机场名字&icon=externaldrive.fill.badge.icloud=#007aff
 流媒体解锁检测 = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Stream-All.js
@@ -29,3 +25,6 @@
 
 [Host]
 ip-api.com = 208.95.112.1
+
+[Rule]
+DOMAIN-SUFFIX,ip-api.com,Proxy
