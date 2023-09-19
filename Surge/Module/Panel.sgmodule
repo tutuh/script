@@ -19,7 +19,7 @@
 
 [Script]
 网络信息 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Network-Info.js
-机场流量信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,script-update-interval=0,argument=url=encode后的机场节点链接&reset_day=1&title=你机场名字&icon=externaldrive.fill.badge.icloud=#007aff
+机场流量信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,script-update-interval=0,argument=url=encode后的机场节点链接&reset_day=1&title=你机场名字&icon=externaldrive.fill.badge.icloud&color=#007aff
 流媒体解锁检测 = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Stream-All.js
 配置重载 = type=generic,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Profile-Reload.js
 
