@@ -10,7 +10,7 @@ IP-CIDR,47.110.187.87/32,REJECT
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
 
 # > 百度贴吧去广告
-RULE-SET,https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad.list,REJECT-DROP
+OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DROP
 
 # > 京东
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT-TINYGIF
