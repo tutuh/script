@@ -260,7 +260,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/v\d-api\.miaopai\.com\/miaopai\/advertisement\/ - reject
 # > 马蜂窝 - mapi.mafengwo.cn
 ^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad\/ - reject
-# > 埋堆堆 - mob.mddcloud.com.cn 
+# > 埋堆堆 - mob.mddcloud.com.cn
 ^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert - reject
 # > 美味不用等 - api.mwee.cn
 ^https?:\/\/capi\.mwee\.cn\/app-api\/V\d{2}\/app\/(ad|getstartad) - reject
@@ -338,7 +338,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/r\.inews\.qq\.com\/(getBannerAds|getNewsRemoteConfig|getSplash|searchHotCatList|upLoadLoc) - reject
 # > Tencent Sports - news.ssp.qq.com
 ^https?:\/\/news\.ssp\.qq\.com\/app - reject
-# ---
 # > 途牛 - m.tuniu.com
 ^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ - reject
 # > 天翼云盘 - cloud.189.cn
