@@ -1,9 +1,6 @@
 #!name=去广告黑名单
 #!desc=Block Advertising
 
-[General]
-force-http-engine-hosts = %APPEND% mobileapi-v6.elong.com
-
 [Rule]
 # > 根据User-Agent精准屏蔽amdc
 AND,((OR,((USER-AGENT,*AMap*), (USER-AGENT,*Cainiao4iPhone*), (USER-AGENT,*Alibaba*), (USER-AGENT,*%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*))), (URL-REGEX,amdc/mobileDispatch$)),REJECT // 高德、菜鸟、阿里巴巴、飞猪
@@ -135,8 +132,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo - reject
 
 # (E)
-# > 艺龙旅行 - mobileapi-v6.elong.com
-^https?:\/\/mobileapi-v6\.elong\.com\/adgateway\/ - reject
 # > e代驾
 ^https?:\/\/pic\.edaijia\.cn\/adsplash\/ - reject
 # > 饿了么 - elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com
