@@ -167,6 +167,9 @@ DOMAIN,adlaunch.moji.com
 DOMAIN,ads.mojicdn.com
 DOMAIN,v1.log.moji.com
 # > 芒果TV
+DOMAIN,credits.bz.mgtv.com
+DOMAIN,credits2.bz.mgtv.com
+DOMAIN,credits3.bz.mgtv.com
 DOMAIN,dflow.bz.mgtv.com
 DOMAIN,encounter.bz.mgtv.com
 DOMAIN,floor.bz.mgtv.com
@@ -266,7 +269,7 @@ DOMAIN,mtrace.qq.com
 DOMAIN,p.l.qq.com
 DOMAIN,pgdt.gtimg.cn
 DOMAIN,rpt.gdt.qq.com
-DOMAIN-SUFFIX,trace.qq.com
+HOST-SUFFIX, trace.qq.com
 # > Tencent
 DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
