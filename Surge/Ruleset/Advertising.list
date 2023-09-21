@@ -202,12 +202,12 @@ DOMAIN-SUFFIX,ads.oppomobile.com
 DOMAIN,adsfs.oppomobile.com
 # > Oray 向日葵远程控制
 DOMAIN,dm.toutiao.com
+DOMAIN-KEYWORD,upload-cdn.orayimg.com
 DOMAIN,ddns.oray.com
 DOMAIN,sl-tk.oray.com
 DOMAIN,client-api.oray.com
 DOMAIN,push.oray.com
 DOMAIN-SUFFIX,offline-adv.oray.com
-DOMAIN-KEYWORD,upload-cdn.orayimg.com
 DOMAIN-KEYWORD,upload-cdn.orayimg.com-upload-activity
 
 # (P)
