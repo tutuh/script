@@ -19,7 +19,6 @@ DOMAIN-SUFFIX,unityads.unity3d.com
 # > Alibaba
 DOMAIN,tunion-api.m.taobao.com
 # > 爱奇艺
-DOMAIN,api.iqiyi.com
 DOMAIN,t7z.cupid.iqiyi.com
 DOMAIN,t7z.cupid.ptqy.gitv.tv
 IP-CIDR,101.227.97.240/32,no-resolve
@@ -166,22 +165,6 @@ DOMAIN,ad.api.moji.com
 DOMAIN,adlaunch.moji.com
 DOMAIN,ads.mojicdn.com
 DOMAIN,v1.log.moji.com
-# > 芒果TV
-DOMAIN,credits.bz.mgtv.com
-DOMAIN,credits2.bz.mgtv.com
-DOMAIN,credits3.bz.mgtv.com
-DOMAIN,dflow.bz.mgtv.com
-DOMAIN,encounter.bz.mgtv.com
-DOMAIN,floor.bz.mgtv.com
-DOMAIN,img.da.mgtv.com
-DOMAIN,layer.bz.mgtv.com
-DOMAIN,mob.bz.mgtv.com
-DOMAIN,mobile.da.mgtv.com
-DOMAIN,rc-topic-api.bz.mgtv.com
-DOMAIN,v2.da.mgtv.com
-DOMAIN,video.da.mgtv.com
-DOMAIN,vip.bz.mgtv.com
-DOMAIN,ys.da.mgtv.com
 # > 美颜相机
 DOMAIN,adui.tg.meitu.com
 DOMAIN,aaid.uyunad.com
@@ -258,18 +241,6 @@ DOMAIN-SUFFIX,pv.sohu.com
 
 # (T)
 # --- (Tencent) ---
-# > Tencent Video
-DOMAIN,adsmind.gdtimg.com
-DOMAIN,btrace.qq.com
-DOMAIN,btrace.video.qq.com
-DOMAIN,info4.video.qq.com
-DOMAIN,info6.video.qq.com
-DOMAIN,ios.video.mpush.qq.com
-DOMAIN,mtrace.qq.com
-DOMAIN,p.l.qq.com
-DOMAIN,pgdt.gtimg.cn
-DOMAIN,rpt.gdt.qq.com
-DOMAIN-SUFFIX,trace.qq.com
 # > Tencent
 DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
@@ -391,20 +362,6 @@ DOMAIN,sdkmonitor.biz.weibo.com
 # > 云闪付
 DOMAIN-KEYWORD,ads.95516.com
 DOMAIN-KEYWORD,switch.cup.com.cn
-# > 优酷 & 菜鸟
-DOMAIN,adsmind.ugdtimg.com
-DOMAIN,amdc.m.youku.com
-DOMAIN,apiv4-iyes.youku.com
-DOMAIN,httpdns.alicdn.com
-DOMAIN,huichuan-mc.sm.cn
-DOMAIN,huichuan.sm.cn
-DOMAIN,iyes.youku.com
-DOMAIN,m-vali.cp31.ott.cibntv.net
-DOMAIN,mc.atm.youku.com
-DOMAIN,vali-g1.cp31.ott.cibntv.net
-DOMAIN,vali-ugc.cp31.ott.cibntv.net
-DOMAIN,yk-ssp.ad.youku.com
-DOMAIN,ykad-data.youku.com
 # > 雅虎
 DOMAIN-SUFFIX,adserver.yahoo.com
 DOMAIN-SUFFIX,adspecs.yahoo.com
