@@ -61,11 +61,6 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMa
 # ---
 # > 爱美剧 - api.bjxkhc.com
 ^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/ - reject
-# > 爱奇艺
-^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&dis_dz= - reject
-^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&z=\w - reject
-^https?:\/\/.+\/videos\/other\/ - reject
-^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch - reject
 # > 爱回收 - gw.aihuishou.com
 ^https?:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement - reject
 
