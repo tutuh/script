@@ -269,7 +269,7 @@ DOMAIN,mtrace.qq.com
 DOMAIN,p.l.qq.com
 DOMAIN,pgdt.gtimg.cn
 DOMAIN,rpt.gdt.qq.com
-HOST-SUFFIX,trace.qq.com
+DOMAIN-SUFFIX,trace.qq.com
 # > Tencent
 DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
