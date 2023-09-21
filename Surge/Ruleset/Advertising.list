@@ -269,6 +269,18 @@ DOMAIN,pgdt.gtimg.com
 DOMAIN,pgdt.ugdtimg.com
 DOMAIN,splashqqlive.gtimg.com
 DOMAIN,wa.gtimg.com
+# > Tencent Video
+DOMAIN,adsmind.gdtimg.com
+DOMAIN,btrace.qq.com
+DOMAIN,btrace.video.qq.com
+DOMAIN,info4.video.qq.com
+DOMAIN,info6.video.qq.com
+DOMAIN,ios.video.mpush.qq.com
+DOMAIN,mtrace.qq.com
+DOMAIN,p.l.qq.com
+DOMAIN,pgdt.gtimg.cn
+DOMAIN,rpt.gdt.qq.com
+HOST-SUFFIX, trace.qq.com
 # > Tencent Music (TME)
 DOMAIN,adstats.tencentmusic.com
 DOMAIN,adserviceretry.kugou.com
