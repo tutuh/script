@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-09-12 22:10
+// 2023-09-27 09:00
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -262,6 +262,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         }
       }
+    }
+  } else if (url.includes("/2/groups/allgroups")) {
+    // 顶部tab
+    if (obj?.pageDatas?.length > 0) {
+      // homeFeed关注 homeHot推荐
+      obj.pageDatas = obj.pageDatas.filter((i) => i?.pageDataType !== "homeExtend");
     }
   } else if (url.includes("/2/messageflow/notice")) {
     // 消息动态页
@@ -588,6 +594,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (item.data?.title?.structs) {
               // 移除 未关注人消息 (你关注的博主，他自己关注的别的博主的微博消息)
               continue;
+            }
+            if (item?.data?.action_button_icon_dic) {
+              delete item.data.action_button_icon_dic;
             }
             newItems.push(item);
           } else if (item?.category === "feedBiz") {
