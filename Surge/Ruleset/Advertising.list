@@ -274,9 +274,13 @@ DOMAIN,info4.video.qq.com
 DOMAIN,info6.video.qq.com
 DOMAIN,ios.video.mpush.qq.com
 DOMAIN,mtrace.qq.com
+DOMAIN,otheve.beacon.qq.com
 DOMAIN,p.l.qq.com
 DOMAIN,pgdt.gtimg.cn
 DOMAIN,rpt.gdt.qq.com
+DOMAIN,tpns.qq.com
+DOMAIN,tytx.m.cn.miaozhen.com
+DOMAIN,vv6.video.qq.com
 DOMAIN-SUFFIX,trace.qq.com
 # > Tencent Music (TME)
 DOMAIN,adstats.tencentmusic.com
