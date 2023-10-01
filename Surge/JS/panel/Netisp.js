@@ -4,7 +4,7 @@ By Keywos
 https://github.com/Keywos/rule/blob/main/JS/Netisp.js
 
 #!name=NetISP 面板
-#!desc=可在工具>脚本编辑器>左下角齿轮图标>$persistentStore找到 KeyNetisp 中更改是否在面板中显示  内网或者本机 true or false
+#!desc=可在工具>脚本编辑器>左下角齿轮图标>$persistentStore找到 KeyNetisp 中更改是否在面板中更改图标或其他参数/默认隐藏IP段
 #!system=ios
 
 [Script]
