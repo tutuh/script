@@ -1,7 +1,9 @@
 #!name=Keep去广告 
-#!desc=Keep超级净化 
+#!desc=Keep APP净化
 
 [Url Rewrite]
+# > 屏蔽应用内弹窗
+^https?:\/\/api\.gotokeep\.com\/guide-webapp\/v\d\/popup\/getPopUp - reject
 # > 屏蔽部分启动弹窗
 ^https?:\/\/api\.gotokeep\.com\/kprime\/v\d\/popups\/primeGuide - reject
 # > 屏蔽开屏广告请求
@@ -25,15 +27,15 @@
 
 [Script]
 # > 我的页面去推广
-keepStyle = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js
+keepStyle = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/KeepStyle.js
 # > 应用底部栏净化
-keepStyle = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js
+keepStyle = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/KeepStyle.js
 # > 发现页处理
-keepStyle = type=http-response,pattern=https://api.gotokeep.com/homepage/v\d/tab,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js
+keepStyle = type=http-response,pattern=https://api.gotokeep.com/homepage/v\d/tab,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/KeepStyle.js
 # > 课程预览页广告
-keepStyle = type=http-response,pattern=https://api.gotokeep.com/nuocha/course/v2/\w+/preview,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js
+keepStyle = type=http-response,pattern=https://api.gotokeep.com/nuocha/course/v2/\w+/preview,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/KeepStyle.js
 # > 我的运动页面去除下方推荐
-keepStyle = type=http-response,pattern=https://api.gotokeep.com/sportpage/sport/v3/mysport,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js
+keepStyle = type=http-response,pattern=https://api.gotokeep.com/sportpage/sport/v3/mysport,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/KeepStyle.js
 
 [MITM]
 hostname = %APPEND% api.gotokeep.com, kad.gotokeep.com
