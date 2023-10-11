@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-10-08 13:10
+// 2023-10-10 11:20
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -334,6 +334,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               if (ii?.category === "feed") {
                 // 头像挂件,关注按钮
                 removeAvatar(ii.data);
+                // 投票窗口
+                if (ii?.data?.page_info?.media_info?.vote_info) {
+                  delete ii.data.page_info.media_info.vote_info;
+                }
                 newItems.push(item);
               }
             }
@@ -346,20 +350,46 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           if (item?.data) {
             if (!isAd(item.data)) {
               removeFeedAd(item.data);
+              // 投票窗口
+              if (item?.data?.page_info?.media_info?.vote_info) {
+                delete item.data.page_info.media_info.vote_info;
+              }
               if (
                 item?.data?.title?.text !== "热门" &&
                 item?.data?.title?.structs?.length > 0
               ) {
                 // 移除赞过的微博 保留热门内容
                 continue;
-              } else {
-                newItems.push(item);
               }
+              newItems.push(item);
             }
           }
         }
       }
       obj.items = newItems;
+    }
+  } else if (
+    url.includes("/2/profile/dealatt") ||
+    url.includes("/2/friendships/destroy")
+  ) {
+    // 个人主页点击关注后展示菜单
+    if (obj?.cards) {
+      // 相关推荐卡片
+      delete obj.cards;
+    }
+    if (obj?.toolbar_menus_new?.items?.length > 0) {
+      // 底部菜单
+      obj.toolbar_menus_new.items = obj.toolbar_menus_new.items.filter((i) => {
+        if (i?.identifier === "recommend") {
+          // 相关推荐
+          return false;
+        } else if (/reward_/?.test(i?.identifier)) {
+          // 赞赏
+          return false;
+        } else {
+          return true;
+        }
+      });
     }
   } else if (url.includes("/2/profile/me")) {
     // 我的页面
@@ -433,6 +463,26 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.items = newItems;
+    }
+  } else if (url.includes("/2/profile/userinfo")) {
+    // 个人主页整体界面
+    let footer = obj.footer;
+    if (footer?.data) {
+      let toolbar = footer.data.toolbar_menus_new;
+      if (toolbar?.items?.length > 0) {
+        // 底部菜单
+        toolbar.items = toolbar.items.filter((i) => {
+          if (i?.identifier === "recommend") {
+            // 相关推荐
+            return false;
+          } else if (/reward_/?.test(i?.identifier)) {
+            // 赞赏
+            return false;
+          } else {
+            return true;
+          }
+        });
+      }
     }
   } else if (url.includes("/2/push/active")) {
     // 首页右上角红包图标
@@ -547,6 +597,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                   if (group?.mblog?.common_struct) {
                     delete group.mblog.common_struct;
                   }
+                  // 投票窗口
+                  if (group?.mblog?.page_info?.media_info?.vote_info) {
+                    delete group.mblog.page_info.media_info.vote_info;
+                  }
                   newGroup.push(group);
                 }
               } else {
@@ -570,6 +624,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               }
               if (card?.mblog?.extend_info) {
                 delete card.mblog.extend_info;
+              }
+              // 商品橱窗
+              if (card?.mblog?.common_struct) {
+                delete card.mblog.common_struct;
               }
               newCards.push(card);
             }
@@ -706,6 +764,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       "button_extra_info", // 推荐评论
       "display_info", // 二楼
       "extend_info", // 拓展卡片
+      "floating_button", // 悬浮购物车按钮
       "follow_data", // 关注提醒
       "head_cards", // 超话投票
       "highlight", // 二楼
