@@ -28,23 +28,11 @@ IP-CIDR,101.227.200.28/32,no-resolve
 IP-CIDR,124.192.153.42/32,no-resolve
 
 # (B)
-# --- (Baidu) ---
-DOMAIN-SUFFIX,duapps.com
-DOMAIN-SUFFIX,cpro.baidu.com
-DOMAIN-SUFFIX,pos.baidu.com
-DOMAIN,afd.baidu.com
-DOMAIN,als.baidu.com
-DOMAIN,duclick.baidu.com
-DOMAIN,mobads.baidu.com
-DOMAIN,mobads-logs.baidu.com
-DOMAIN,nadvideo2.baidu.com
-DOMAIN,nsclick.baidu.com
-DOMAIN,afdconf.baidu.com
-DOMAIN,httpdns.baidubce.com
-DOMAIN,lc.map.baidu.com
-# > 百词斩
-DOMAIN,advertise.baicizhan.com
-DOMAIN,advertise.baicizhan.org
+# 百度
+DOMAIN-SUFFIX,pos.baidu.com,REJECT
+# 百度网盘
+DOMAIN,mobads.baidu.com,REJECT
+DOMAIN,sf3-fe-tos.pglstatp-toutiao.com,REJECT
 
 # (C)
 # > CCTV Video
