@@ -4,7 +4,7 @@
 
 [Rule]
 # 百度地图
-# DOMAIN,afd.baidu.com,REJECT
+DOMAIN,afd.baidu.com,REJECT
 DOMAIN,afdconf.baidu.com,REJECT
 DOMAIN,httpdns.baidubce.com,REJECT
 DOMAIN,lc.map.baidu.com,REJECT
