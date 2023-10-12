@@ -79,11 +79,6 @@ DOMAIN-SUFFIX,googleadservices.com
 DOMAIN-SUFFIX,googleadsserving.cn
 DOMAIN-SUFFIX,googlesyndication.com
 DOMAIN-SUFFIX,googletagservices.com
-# > 高德地图
-DOMAIN,afd.baidu.com
-DOMAIN,afdconf.baidu.com
-DOMAIN,httpdns.baidubce.com
-DOMAIN,lc.map.baidu.com
 
 # (H)
 # > 虎牙直播
