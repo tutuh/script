@@ -350,12 +350,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/syh\.zybang\.com\/com\/adx\/ - reject
 # > 最右 - api.izuiyou.com
 ^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
-# > 字节跳动
-^https?:\/\/[\w-]+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ - reject
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/ad\/ - reject
-^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\/ - reject
-^https?:\/\/[\w-]+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
-^https?:\/\/.+?\/img\/ad\.union\.api\/ - reject
 # > 掌阅
 ^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad\/ - reject
 ^https?:\/\/ih2\.ireader\.com\/zyapi\/self\/screen\/ad - reject
