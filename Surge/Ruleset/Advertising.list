@@ -341,15 +341,7 @@ DOMAIN-SUFFIX,163jiasu.com
 DOMAIN,h5-api.feiersmart.com
 
 # (X)
-# > 喜马拉雅
-DOMAIN,ad.ximalaya.com
-DOMAIN,adbs.ximalaya.com
-DOMAIN,adse.ximalaya.com
-DOMAIN,adse.wsa.ximalaya.com
-DOMAIN,adbehavior.wsa.ximalaya.com
-DOMAIN,adbehavior.ximalaya.com
-DOMAIN,adsebs.ximalaya.com
-DOMAIN,adwbs.ximalaya.com
+
 
 # (Y)
 # > 优酷 & 菜鸟
