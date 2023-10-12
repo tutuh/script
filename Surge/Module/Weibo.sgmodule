@@ -6,6 +6,11 @@
 
 [Rule]
 DOMAIN,sdkapp.uve.weibo.com,DIRECT
+DOMAIN,adstrategy.biz.weibo.com,REJECT
+DOMAIN,kadmimage.biz.weibo.com,REJECT
+DOMAIN,sdkaction.biz.weibo.com,REJECT
+DOMAIN,sdkclick.biz.weibo.com,REJECT
+DOMAIN,sdkmonitor.biz.weibo.com,REJECT
 
 [Url Rewrite]
 # 开屏广告 
