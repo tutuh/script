@@ -1,8 +1,0 @@
-#!name=优酷去广告
-#!desc=优酷APP去广告优化
-
-[Script]
-优酷去广告 = type=http-response,pattern=^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/cnftp.js
-
-[MITM]
-hostname = %APPEND% un-acs.youku.com
