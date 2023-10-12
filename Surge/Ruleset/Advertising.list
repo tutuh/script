@@ -362,26 +362,6 @@ DOMAIN,adbehavior.wsa.ximalaya.com
 DOMAIN,adbehavior.ximalaya.com
 DOMAIN,adsebs.ximalaya.com
 DOMAIN,adwbs.ximalaya.com
-# > 小红书
-DOMAIN,ads-img-qc.xhscdn.com
-DOMAIN,ads-video-al.xhscdn.com
-DOMAIN,ads-video-qc.xhscdn.com
-DOMAIN,t-ads.xiaohongshu.com
-# > 新浪微博
-DOMAIN-SUFFIX,alitui.weibo.com
-DOMAIN-SUFFIX,beacon.sina.com.cn
-DOMAIN,adimg.uve.weibo.com
-DOMAIN,adimg.vue.weibo.com
-DOMAIN,u1.img.mobile.sina.cn
-DOMAIN,sax.sina.com.cn
-DOMAIN,saxs.sina.com.cn
-DOMAIN,saxn.sina.com.cn
-# > 微博开屏广告
-DOMAIN,adstrategy.biz.weibo.com
-DOMAIN,kadmimage.biz.weibo.com
-DOMAIN,sdkaction.biz.weibo.com
-DOMAIN,sdkclick.biz.weibo.com
-DOMAIN,sdkmonitor.biz.weibo.com
 
 # (Y)
 # > 优酷 & 菜鸟
