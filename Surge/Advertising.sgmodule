@@ -5,6 +5,9 @@
 # > 根据User-Agent精准屏蔽amdc
 AND,((OR,((USER-AGENT,*AMap*), (USER-AGENT,*Cainiao4iPhone*), (USER-AGENT,*Alibaba*), (USER-AGENT,*%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*))), (URL-REGEX,amdc/mobileDispatch$)),REJECT // 高德、菜鸟、阿里巴巴、飞猪
 
+# > 美团查询失败域名
+OR,((DOMAIN,metrics-picture.d.meituan.net), (DOMAIN,route-stats.d.meituan.net), (DOMAIN,maplocatesdksnapshot.d.meituan.net), (DOMAIN,al-log.d.meituan.net), (DOMAIN,babel-statistics-android.d.meituan.net)),REJECT
+
 # > 腾讯视频去开屏广告
 IP-CIDR,47.110.187.87/32,REJECT
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
