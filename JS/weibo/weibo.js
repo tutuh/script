@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-10-15 22:20
+// 2023-10-17 17:40
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -581,6 +581,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (group?.card_type === 22) {
               // 先筛选card_group里面的card_type
               // 横版广告图
+              continue;
+            } else if (group?.card_type === 42 && group?.title_extra_text === "广告") {
+              // 推荐品牌广告
+              continue;
+            } else if (group?.card_type === 3 && group?.pics?.length > 0) {
+              // 推荐品牌广告图
               continue;
             } else {
               if (group?.mblog) {
