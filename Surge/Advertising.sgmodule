@@ -34,6 +34,12 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMa
 ^https:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 ^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-200.txt"
 
+
+# > 肯德基 - res.kfc.com
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apprn\/\w+\.json\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-200.txt"
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/configuration\/\w+\.json data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+
+
 [Script]
 # >> 去广告脚本 <<
 # > 百度贴吧去广告 - tiebac.baidu.com
@@ -211,9 +217,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/advertisement - reject
 # > 科大讯飞 - imeclient.openspeech.cn
 ^https?:\/\/imeclient\.openspeech\.cn\/adservice\/ - reject
-# > 肯德基 - res.kfc.com
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apprn\/\w+\.json\? - reject
-^http:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/configuration\/\w+\.json - reject
+
 ^https:\/\/res\.kfc\.com\.cn\/advertisement - reject
 
 # (L)
