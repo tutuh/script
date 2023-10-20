@@ -31,6 +31,9 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMa
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 ^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 
+^https:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-200.txt"
+
 [Script]
 # >> 去广告脚本 <<
 # > 百度贴吧去广告 - tiebac.baidu.com
