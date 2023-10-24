@@ -61,6 +61,14 @@ DOMAIN,adv-ads.variflight.com
 DOMAIN,app-ad.variflight.com
 
 # (G)
+# 广告联盟
+DOMAIN,is.snssdk.com
+DOMAIN,mi.gdt.qq.com
+DOMAIN,open.e.kuaishou.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
+DOMAIN-SUFFIX,pangolin.snssdk.com
 # > 谷歌
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN-SUFFIX,googleadservices.com
@@ -235,6 +243,8 @@ DOMAIN-SUFFIX,ads.sohu.com
 DOMAIN-SUFFIX,aty.sohu.com
 DOMAIN,hui.sohu.com
 DOMAIN-SUFFIX,pv.sohu.com
+# > 数字联盟
+DOMAIN-SUFFIX,shuzilm.cn
 
 # (T)
 # --- (Tencent) ---
