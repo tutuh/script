@@ -12,7 +12,7 @@ AND,((OR,((USER-AGENT,*AMap*), (USER-AGENT,*Cainiao4iPhone*), (USER-AGENT,*Aliba
 OR,((DOMAIN,metrics-picture.d.meituan.net), (DOMAIN,route-stats.d.meituan.net), (DOMAIN,maplocatesdksnapshot.d.meituan.net), (DOMAIN,al-log.d.meituan.net), (DOMAIN,babel-statistics-android.d.meituan.net)),REJECT
 
 # > 腾讯视频去开屏广告
-IP-CIDR,47.110.187.87/32,REJECT
+IP-CIDR,47.110.187.87/32,REJECT,no-resolve
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
 
 # > 百度贴吧去广告
