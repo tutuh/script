@@ -332,7 +332,6 @@ DOMAIN,impservice.dictapp.youdao.com
 DOMAIN,impservice.youdao.com
 DOMAIN,ad.bn.netease.com
 DOMAIN,ad.yixin.im
-DOMAIN,admusicpic.music.126.net
 DOMAIN,g1.163.com
 DOMAIN,gorgon.youdao.com
 DOMAIN,iad.g.163.com
@@ -342,8 +341,10 @@ DOMAIN,yt-adp.nosdn.127.net
 DOMAIN,yt-adp.ws.126.net
 # > 网易云音乐
 DOMAIN,gdt.qq.com
+DOMAIN,httpdns.music.163.com
 DOMAIN,httpdns.n.netease.com
 DOMAIN,iadmat.nosdn.127.net
+DOMAIN,iadmatapk.nosdn.127.net
 DOMAIN,iadmusicmat.music.126.net
 DOMAIN,iadmusicmatvideo.music.126.net
 DOMAIN-SUFFIX,163jiasu.com
@@ -355,19 +356,26 @@ DOMAIN,h5-api.feiersmart.com
 
 # (Y)
 # > 优酷 & 菜鸟
+#DOMAIN,acs.youku.com
+DOMAIN,acs4baichuan.m.taobao.com
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,amdc.m.youku.com
+DOMAIN,api.sm.cn
 DOMAIN,apiv4-iyes.youku.com
+DOMAIN,baichuan-sdk.alicdn.com
 DOMAIN,httpdns.alicdn.com
 DOMAIN,huichuan-mc.sm.cn
 DOMAIN,huichuan.sm.cn
 DOMAIN,iyes.youku.com
 DOMAIN,m-vali.cp31.ott.cibntv.net
 DOMAIN,mc.atm.youku.com
+DOMAIN,nbsdk-baichuan.alicdn.com
+DOMAIN,pre-acs.youku.com
 DOMAIN,vali-g1.cp31.ott.cibntv.net
 DOMAIN,vali-ugc.cp31.ott.cibntv.net
 DOMAIN,yk-ssp.ad.youku.com
 DOMAIN,ykad-data.youku.com
+DOMAIN,youku-acs.m.taobao.com
 # > 云闪付
 DOMAIN-KEYWORD,ads.95516.com
 DOMAIN-KEYWORD,switch.cup.com.cn
