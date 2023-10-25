@@ -4,7 +4,7 @@
 DOMAIN-KEYWORD,adservice
 
 # (0~9)
-# > 51wnl
+# > 51万年历
 DOMAIN,ad.51wnl-cq.com
 DOMAIN,adextra.51wnl-cq.com
 DOMAIN,log.51wnl-cq.com
@@ -199,9 +199,6 @@ DOMAIN-SUFFIX,offline-adv.oray.com
 DOMAIN-KEYWORD,upload-cdn.orayimg.com-upload-activity
 
 # (P)
-# > Photoable
-DOMAIN,regist.fotoable.com
-DOMAIN,cdn.adapi.fotoable.com
 # > PConline
 DOMAIN,ad-analysis.pconline.com.cn
 DOMAIN,iad0ssl.pcauto.com.cn
