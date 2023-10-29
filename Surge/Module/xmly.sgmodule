@@ -2,12 +2,16 @@
 #!desc=喜马拉雅APP净化
 #!system=ios
 
+[General]
+# DNS劫持
+hijack-dns = %APPEND% 114.114.114.114
+
 [Rule]
 # 阻止IP变化
 DOMAIN,gslbali.ximalaya.com,REJECT
 DOMAIN,gslbtx.ximalaya.com,REJECT
 # 喜马拉雅_屏蔽开屏广告
-URL-REGEX,^http:\/\/adse\.ximalaya\.com\/(?!.*preSale),REJECT
+# URL-REGEX,^http:\/\/adse\.ximalaya\.com\/(?!.*preSale),REJECT
 # 喜马拉雅_修复轮播Ad失效Bug
 URL-REGEX,^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF,REJECT
 # 喜马拉雅_播放页_Live
