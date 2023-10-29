@@ -55,8 +55,7 @@ URL-REGEX,^https:\/\/res\.kfc\.com\.cn\/advertisement,REJECT
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) - reject
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) - reject
 # > 10086 - client.app.coc.10086.cn
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit - reject
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList - reject
+^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) - reject
 
 # (A)
 # > AcFun - api-new.app.acfun.cn
