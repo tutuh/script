@@ -43,7 +43,7 @@ URL-REGEX,^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location,REJECT
 # 喜马拉雅_屏蔽热搜词
 URL-REGEX,^https?:\/\/.*\.xima.*\.com\/hotWord,REJECT
 # 喜马拉雅_屏蔽搜索框定时_Ad
-URL-REGEX,^https?:\/\/.*\.xima.*\.com\/guideWord,REJECT
+URL-REGEX,^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord,REJECT
 # 喜马拉雅_屏蔽实时Ad请求
 URL-REGEX,^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime,REJECT
 # 喜马拉雅_屏蔽ting_Ad
