@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-10-29 17:00
+// 2023-10-30 15:45
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -676,11 +676,37 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
       obj.cards = newCards;
     }
-  } else if (
-    url.includes("/2/statuses/container_timeline?") ||
-    url.includes("/2/statuses/container_timeline_unread") ||
-    url.includes("/2/statuses/container_timeline_hot")
-  ) {
+  } else if (url.includes("/2/statuses/container_timeline_hot")) {
+    // 商品橱窗
+    if (obj?.common_struct) {
+      delete obj?.common_struct;
+    }
+    if (obj?.items?.length > 0) {
+      let newItems = [];
+      for (let item of obj.items) {
+        if (!isAd(item?.data)) {
+          if (item?.category === "feed") {
+            // 信息流推广
+            removeFeedAd(item?.data);
+            if (item?.data?.action_button_icon_dic) {
+              delete item.data.action_button_icon_dic;
+            }
+            // 投票窗口
+            removeVoteInfo(item?.data);
+            // 博主top100
+            if (item?.data?.tag_struct?.length > 0) {
+              item.data.tag_struct = [];
+            }
+            newItems.push(item);
+          } else {
+            // 移除所有的推广
+            continue;
+          }
+        }
+      }
+      obj.items = newItems;
+    }
+  } else if (url.includes("/2/statuses/container_timeline?") || url.includes("/2/statuses/container_timeline_unread")) {
     // 首页关注tab信息流
     if (obj?.loadedInfo?.headers) {
       delete obj.loadedInfo.headers;
@@ -708,6 +734,22 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 快转内容
             if (item?.data?.screen_name_suffix_new?.length > 0) {
               continue;
+            }
+            // 美妆精选季
+            if (item?.data?.title?.text?.includes("精选")) {
+              continue;
+            }
+            // 未关注博主
+            if (item?.data?.user?.following === false) {
+              continue;
+            }
+            // 关闭关注推荐
+            if (item?.data?.user?.unfollowing_recom_switch === 1) {
+              item.data.user.unfollowing_recom_switch = 0;
+            }
+            // 博主top100
+            if (item?.data?.tag_struct?.length > 0) {
+              item.data.tag_struct = [];
             }
             newItems.push(item);
           } else if (item?.category === "feedBiz") {
