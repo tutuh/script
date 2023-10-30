@@ -9,7 +9,7 @@
 
 途虎养车_签到 = type=cron,cronexp=30 2 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
 
-百度贴吧_签到 = type=cron,cronexp=50 2 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js,script-update-interval=0
+百度贴吧_签到 = type=cron,cronexp=50 2 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 
 顺丰速运_签到 = type=cron,cronexp=30 3 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
 
@@ -32,4 +32,4 @@ Boxjs数据备份 = type=cron,cronexp=10 8 0 * * *,wake-system=1,timeout=180,scr
 #Sub-Store同步订阅 = type=cron,cronexp=30 9 0 * * *,wake-system=1,timeout=120,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js
 
 # > 哔哩哔哩常驻更新Cookie - app.bilibili.com
-哔哩哔哩APP_Cookie = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js,requires-body=0
+哔哩哔哩APP_Cookie = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\?,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
