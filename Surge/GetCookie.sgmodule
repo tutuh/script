@@ -28,10 +28,6 @@
 # 打开：顺丰速运APP 获取cookie
 顺丰速运_Cookie = type=http-request,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
 
-# > 喜马拉雅 - *.ximalaya.com
-# 打开：喜马拉雅APP 获取cookie
-喜马拉雅_Cookie = type=http-request,pattern=^https?:\/\/mobile\.ximalaya\.com\/app-skin-service\/skin\/,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/xmly.js
-
 # > 哔哩哔哩 - app.bilibili.com, m.bilibili.com
 # 打开：哔哩哔哩APP 或者 https://www.bilibili.com 获取cookie
 哔哩哔哩APP_Cookie = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\?,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
@@ -54,4 +50,4 @@
 高德打车_Cookie = type=http-response,pattern=^https:\/\/m5(-zb)?\.amap\.com\/ws\/yuece\/(act|openapi)\/(activity\/current\/)?query,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, sunquan.api.ddxq.mobi, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, *.ximalaya.com, m.bilibili.com, mall.meituan.com, auth.alipan.com, api.tuhu.cn, *.amap.com
+hostname = %APPEND% app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, sunquan.api.ddxq.mobi, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, mall.meituan.com, auth.alipan.com, api.tuhu.cn, *.amap.com
