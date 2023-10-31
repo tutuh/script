@@ -30,10 +30,6 @@ http-request ^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/u
 http-request ^https:\/\/api\.tuhu\.cn\/User\/UserCheckInVersion1 script-path=https://raw.githubusercontent.com/tutuh/script/master/task/tuhu.js, requires-body=1, tag=途虎养车APP_Cookie 
 http-request ^https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo script-path=https://raw.githubusercontent.com/tutuh/script/master/task/tuhu_MiniProgram.js, requires-body=1, tag=途虎养车微信小程序_Cookie 
 
-# > 喜马拉雅 - *.ximalaya.com
-# 打开：喜马拉雅APP 获取cookie
-http-request ^https?:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/app-skin-service\/skin\/ script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/xmly.js, requires-body=0, tag=喜马拉雅_Cookie 
-
 # > 哔哩哔哩 - app.bilibili.com,m.bilibili.com
 # 打开：哔哩哔哩APP 或者 https://www.bilibili.com 获取cookie
 http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=哔哩哔哩APP_Cookie 
@@ -57,4 +53,4 @@ http-response ^https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo script-path=
 http-response ^https:\/\/sunquan\.api\.ddxq\.mobi\/api\/v2\/user\/signin script-path=https://raw.githubusercontent.com/tutuh/script/master/task/ddmc.js, requires-body=1, tag=叮咚买菜_Cookie 
 
 [MITM]
-hostname = app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, api.tuhu.cn, *.ximalaya.com, m.bilibili.com, mall.meituan.com, auth.alipan.com, api.tuhu.cn, sunquan.api.ddxq.mobi
+hostname = app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, api.tuhu.cn, m.bilibili.com, mall.meituan.com, auth.alipan.com, api.tuhu.cn, sunquan.api.ddxq.mobi
