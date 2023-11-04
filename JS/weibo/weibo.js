@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-10-30 16:00
+// 2023-11-04 19:25
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -974,7 +974,7 @@ function isAd(data) {
     if (data?.content_auth_info?.content_auth_title?.includes("广告")) {
       return true;
     }
-    if (data?.extend_info?.hasOwnProperty("ad")) {
+    if (data?.ads_material_info?.is_ads === true) {
       return true;
     }
   }
