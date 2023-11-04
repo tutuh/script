@@ -60,7 +60,7 @@ weibo = type=http-response,pattern=^https:\/\/wbapp\.uve\.weibo\.com\/(preload\/
 ^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 ^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 # 开屏广告
-^https:\/\/bootrealtime\.uve\.weibo\.com\/v3\/ad\/realtime data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+^https:\/\/bootrealtime\.uve\.weibo\.com\/v[23]\/ad\/realtime data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 # 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
