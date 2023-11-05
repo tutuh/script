@@ -12,6 +12,8 @@ DOMAIN,passport.bilibili.com,REJECT
 ^https:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ - reject
 # IP请求,地理位置请求 //api.bilibili.com
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+# 开屏广告
+^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH - reject
 
 [Script]
 # Proto 动态广告,后台播放限制,播放页广告 - app.bilibili.com
