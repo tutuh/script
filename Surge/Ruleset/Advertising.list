@@ -29,8 +29,8 @@ IP-CIDR,124.192.153.42/32,no-resolve
 
 # (B)
 # 百度
-DOMAIN,mobads.baidu.com,REJECT
-DOMAIN-SUFFIX,pos.baidu.com,REJECT
+DOMAIN,mobads.baidu.com
+DOMAIN-SUFFIX,pos.baidu.com
 
 # (C)
 # > CCTV Video
