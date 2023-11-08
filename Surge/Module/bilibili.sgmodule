@@ -1,7 +1,7 @@
 #!name=哔哩哔哩去广告
 #!desc=哔哩哔哩APP净化
 #!author = RuCu6 Maasea
-#!update = 2023-11-02 22:30
+#!update = 2023-11-08 14:50
 
 [URL Rewrite]
 # > 首页 DefaultWord,推荐,热搜发现,右上角活动,标签页,观影页,直播,直播间商品广告浮窗
