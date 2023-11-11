@@ -60,10 +60,12 @@ DOMAIN,app-ad.variflight.com
 
 # (G)
 # 广告联盟
+DOMAIN,i.snssdk.com
+DOMAIN,is.snssdk.com
 DOMAIN,mi.gdt.qq.com
 DOMAIN,open.e.kuaishou.com
-DOMAIN-SUFFIX,snssdk.com
 DOMAIN-KEYWORD,pangolin-sdk-toutiao
+DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-KEYWORD,pglstatp-toutiao
 # > 谷歌
 DOMAIN-SUFFIX,doubleclick.net
