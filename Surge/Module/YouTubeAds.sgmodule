@@ -7,7 +7,8 @@
 # 3. 相对于非Beta版本，占用更多的内存，但加载速度得到一些提升
 
 [Rule]
-AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT-NO-DROP
+# 阻止YouTube UDP流量
+AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
 
 [Script]
 YouTube去广告 = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\?,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/YouTube/YouTube.js
