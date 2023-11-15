@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-11-15 16:25
+// 2023-11-15 17:20
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -48,8 +48,7 @@ if (url.includes("/x/resource/show/skin")) {
       if (["创作中心", "推荐服务"]?.includes(item?.title)) {
         // 不必要项目
         continue;
-      }
-      if (item?.title === "更多服务") {
+      } else if (item?.title === "更多服务") {
         if (item?.items?.length > 0) {
           let newItems = [];
           for (let i of item.items) {
