@@ -5,11 +5,7 @@
 #!update = 2023-10-23 12:55
 
 [Rule]
-DOMAIN,adstrategy.biz.weibo.com,REJECT
-DOMAIN,kadmimage.biz.weibo.com,REJECT
-DOMAIN,sdkaction.biz.weibo.com,REJECT
-DOMAIN,sdkclick.biz.weibo.com,REJECT
-DOMAIN,sdkmonitor.biz.weibo.com,REJECT
+DOMAIN-SUFFIX,biz.weibo.com,REJECT
 
 [Url Rewrite]
 # 开屏广告 
