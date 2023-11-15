@@ -1,7 +1,7 @@
 #!name=高德地图去广告
 #!desc=高德地图APP净化
 #!author = RuCu6
-#!update = 2023-09-08 22:05
+#!update = 2023-11-15 14:45
 
 [Rule]
 # 根据User-Agent精准屏蔽amdc、这条必须添加否则脚本失效
@@ -20,6 +20,7 @@ DOMAIN,free-aos-cdn-image.amap.com,REJECT
 # 导航详情页,路线规划,地点详情页,搜索详情页,导航结束页
 amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/routePlan\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(homepage|mps|search\/sp|sug|tips_operation_location)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 # 首页,推广卡片,红点角标,右上角动图,搜索框热词,左下角天气,消息横幅
 amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(card-service-plan-home|main-page)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
