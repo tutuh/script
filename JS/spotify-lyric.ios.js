@@ -1,5 +1,5 @@
 /*
-转自 2YA
+
 需要配置 boxjs 参数 BaiDu_APP_ID，BaiDu_SECURITY_KEY
 
 原作者：@app2smile （https://github.com/app2smile）
