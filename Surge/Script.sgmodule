@@ -1,5 +1,5 @@
 #!name=多功能组合模块
-#!desc=跳过代理检测、豆瓣网页增强、Sub-Store订阅工具、Boxjs配置
+#!desc=跳过代理检测、Sub-Store订阅工具、Boxjs配置、Spotify
 #!system=ios
 
 [General]
@@ -10,15 +10,19 @@ skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn,gate.lagou.c
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 
 [Script]
-# > 豆瓣网页增强 - m.douban.com
-豆瓣网页增强 = type=http-response,pattern=^https://m.douban.com/movie/subject/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Douban.js
-
 # > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 Rewrite: BoxJs = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
+
+# > Spotify歌词翻译 - spclient.wg.spotify.com
+Spotify歌词翻译 = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/spotify/spotify-lyric.ios.js
+
+# > Spotify解锁
+spotify-json = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
+spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
 
 # > Sub-Store订阅工具 - sub.store
 Sub-Store Core=type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body=true,timeout=120
 Sub-Store Simple=type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body=true
 
 [MITM]
-hostname = %APPEND% m.douban.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store
+hostname = %APPEND%  boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, spclient.wg.spotify.com
