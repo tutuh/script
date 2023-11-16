@@ -1,10 +1,10 @@
 #!name=多功能组合模块
-#!desc=跳过代理检测、Sub-Store订阅工具、Boxjs配置、Spotify
+#!desc=跳过代理检测、Sub-Store订阅工具、Boxjs配置、Spotify、TestFlight账户管理
 #!system=ios
 
 [General]
 # > 跳过部分应用的代理检测
-skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn,gate.lagou.com, www.abchina.com.cn, www.shanbay.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com
+skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn,gate.lagou.com, www.abchina.com.cn, www.shanbay.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com, iosapps.itunes.apple.com
 
 # > BoxJs
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
@@ -24,5 +24,8 @@ spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com
 Sub-Store Core=type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body=true,timeout=120
 Sub-Store Simple=type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body=true
 
+# > TestFlight账户管理 - iosapps.itunes.apple.com, testflight.apple.com
+TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
+
 [MITM]
-hostname = %APPEND%  boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, sub.store, spclient.wg.spotify.com
+hostname = %APPEND%  boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, spclient.wg.spotify.com, sub.store, testflight.apple.com
