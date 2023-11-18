@@ -14,10 +14,6 @@
 # 打开：https://m.iqiyi.com/user.html 获取cookie
 爱奇艺会员_Cookie = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
-# > 叮咚买菜 - sunquan.api.ddxq.mobi
-# 打开：叮咚买菜 -> 我的 -> 福利积分 -> 签到 获取cookie
-叮咚买菜_Cookie = type=http-request,pattern=^https:\/\/sunquan\.api\.ddxq\.mobi\/api\/v2\/user\/signin,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/ddmc.js
-
 # > 百度贴吧 - c.tieba.baidu.com, tiebac.baidu.com
 # 打开：百度贴吧APP 获取cookie
 贴吧_获取cookie1 = type=http-request,pattern=^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
@@ -50,4 +46,4 @@
 高德打车_Cookie = type=http-response,pattern=^https:\/\/m5(-zb)?\.amap\.com\/ws\/yuece\/(act|openapi)\/(activity\/current\/)?query,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, sunquan.api.ddxq.mobi, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, mall.meituan.com, auth.alipan.com, api.tuhu.cn, *.amap.com
+hostname = %APPEND% app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, mall.meituan.com, auth.alipan.com, api.tuhu.cn, *.amap.com
