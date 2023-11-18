@@ -19,8 +19,6 @@
 
 高德打车_签到 = type=cron,cronexp=30 5 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
 
-叮咚买菜_签到 = type=cron,cronexp=10 6 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/ddmc.js
-
 美团买菜_签到 = type=cron,cronexp="30 7  0,3 * * *",wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js
 
 Boxjs数据备份 = type=cron,cronexp=10 8 0 * * *,wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
