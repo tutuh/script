@@ -9,15 +9,15 @@
 
 途虎养车_签到 = type=cron,cronexp=30 2 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
 
-百度贴吧_签到 = type=cron,cronexp=30 3 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+百度贴吧_签到 = type=cron,cronexp=10 3 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 
-顺丰速运_签到 = type=cron,cronexp=10 4 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
+顺丰速运_签到 = type=cron,cronexp=55 3 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
 
-阿里云盘_签到 = type=cron,cronexp=50 4 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+阿里云盘_签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 
 爱奇艺_签到 = type=cron,cronexp=30 5 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
-高德打车_签到 = type=cron,cronexp=30 6 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
+高德打车_签到 = type=cron,cronexp=20 6 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
 
 Boxjs数据备份 = type=cron,cronexp=10 8 1 * * *,wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
 
