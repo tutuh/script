@@ -29,10 +29,6 @@
 哔哩哔哩APP_Cookie = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\?,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
 哔哩哔哩网页_Cookie = type=http-request,pattern=^https?:\/\/m\.bilibili\.com/$,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
 
-# > 美团买菜币 - mall.meituan.com
-# 打开：美团APP -> 美团买菜 -> 我的 -> 买菜币 获取cookie
-美团买菜币_Cookie = type=http-request,pattern=^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\?,requires-body=0,script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js
-
 # > 阿里云盘 - auth.alipan.com
 # 打开：阿里云盘APP 获取token
 阿里云盘_Cookie = type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,requires-body=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
@@ -46,4 +42,4 @@
 高德打车_Cookie = type=http-response,pattern=^https:\/\/m5(-zb)?\.amap\.com\/ws\/yuece\/(act|openapi)\/(activity\/current\/)?query,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, mall.meituan.com, auth.alipan.com, api.tuhu.cn, *.amap.com
+hostname = %APPEND% app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, auth.alipan.com, api.tuhu.cn, *.amap.com
