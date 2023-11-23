@@ -2,6 +2,7 @@
 # https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/ChinaDomain.list
 # https://github.com/DivineEngine/Profiles/blob/master/Surge/Ruleset/China.list
 
+DOMAIN-SUFFIX,fileball.app
 DOMAIN,csgo.wmsj.cn
 DOMAIN,dl.steam.clngaa.com
 DOMAIN,dl.steam.ksyna.com
