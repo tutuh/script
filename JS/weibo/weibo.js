@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-11-26 16:35
+// 2023-12-07 20:40
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -313,8 +313,17 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             newItems.push(item);
           }
         } else if (item?.category === "group") {
+          // 遍历group,保留置顶微博
+          if (item?.header?.data?.icon) {
+            // 置顶微博背景图
+            delete item.header.data.icon;
+          }
+          if (item?.itemId?.includes("INTEREST_PEOPLE")) {
+            // 可能感兴趣的人
+            continue;
+          }
           if (item?.items?.length > 0) {
-            // 遍历group,保留置顶微博
+            let newII = [];
             for (let ii of item.items) {
               if (ii?.category === "feed") {
                 // 头像挂件,关注按钮
@@ -327,14 +336,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                 if (ii?.data?.enable_comment_guide) {
                   ii.data.enable_comment_guide = false;
                 }
-                newItems.push(item);
               }
+              newII.push(ii);
             }
+            item.items = newII;
           }
-          if (item?.header?.data?.icon) {
-            // 置顶微博背景图
-            delete item.header.data.icon;
-          }
+          newItems.push(item);
         } else if (item?.category === "feed") {
           if (item?.data) {
             if (!isAd(item.data)) {
