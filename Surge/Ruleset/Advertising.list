@@ -353,7 +353,7 @@ DOMAIN,h5-api.feiersmart.com
 
 # (Y)
 # > 优酷 & 菜鸟
-;DOMAIN,acs.youku.com
+#DOMAIN,acs.youku.com
 DOMAIN,acs4baichuan.m.taobao.com
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,amdc.m.youku.com
