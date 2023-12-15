@@ -2,7 +2,7 @@
 # https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/ChinaDomain.list
 # https://github.com/DivineEngine/Profiles/blob/master/Surge/Ruleset/China.list
 
-DOMAIN-SUFFIX,fileball.app
+
 DOMAIN,csgo.wmsj.cn
 DOMAIN,dl.steam.clngaa.com
 DOMAIN,dl.steam.ksyna.com
@@ -104,6 +104,10 @@ DOMAIN-SUFFIX,aliyun.com
 DOMAIN-SUFFIX,aliyuncdn.com
 DOMAIN-SUFFIX,aliyuncs.com
 DOMAIN-SUFFIX,aliyundrive.com
+DOMAIN-SUFFIX,aliyundrive.net
+DOMAIN-SUFFIX,allawnfs.com
+DOMAIN-SUFFIX,allawno.com
+DOMAIN-SUFFIX,allawntech.com
 DOMAIN-SUFFIX,amap.com
 DOMAIN-SUFFIX,amemv.com
 DOMAIN-SUFFIX,animebytes.tv
@@ -142,6 +146,7 @@ DOMAIN-SUFFIX,biquge.com
 DOMAIN-SUFFIX,bitauto.com
 DOMAIN-SUFFIX,bokecc.com
 DOMAIN-SUFFIX,bootcss.com
+DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,broadcasthe.net
 DOMAIN-SUFFIX,byted-static.com
 DOMAIN-SUFFIX,bytedance.com
@@ -178,6 +183,7 @@ DOMAIN-SUFFIX,cn163.net
 DOMAIN-SUFFIX,cnblogs.com
 DOMAIN-SUFFIX,cnki.net
 DOMAIN-SUFFIX,cnmstl.net
+DOMAIN-SUFFIX,coloros.com
 DOMAIN-SUFFIX,comicat.org
 DOMAIN-SUFFIX,coolapk.com
 DOMAIN-SUFFIX,coolapkmarket.com
@@ -228,6 +234,7 @@ DOMAIN-SUFFIX,feelgood.cn
 DOMAIN-SUFFIX,feiliao.com
 DOMAIN-SUFFIX,feng.com
 DOMAIN-SUFFIX,fengkongcloud.com
+DOMAIN-SUFFIX,fileball.app
 DOMAIN-SUFFIX,fir.im
 DOMAIN-SUFFIX,flyert.com
 DOMAIN-SUFFIX,foxmail.com
@@ -260,6 +267,11 @@ DOMAIN-SUFFIX,hdhome.org
 DOMAIN-SUFFIX,hdsky.me
 DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,helpshift.com
+DOMAIN-SUFFIX,heytap.com
+DOMAIN-SUFFIX,heytapcs.com
+DOMAIN-SUFFIX,heytapdownload.com
+DOMAIN-SUFFIX,heytapimage.com
+DOMAIN-SUFFIX,heytapmobi.com
 DOMAIN-SUFFIX,hichina.com
 DOMAIN-SUFFIX,hicloud.com
 DOMAIN-SUFFIX,hihonor.com
@@ -400,6 +412,8 @@ DOMAIN-SUFFIX,oneplus.com
 DOMAIN-SUFFIX,onlinedown.net
 DOMAIN-SUFFIX,open.cd
 DOMAIN-SUFFIX,oppo.com
+DOMAIN-SUFFIX,oppoer.me
+DOMAIN-SUFFIX,oppomobile.com
 DOMAIN-SUFFIX,oracle.com
 DOMAIN-SUFFIX,oschina.net
 DOMAIN-SUFFIX,ourbits.club
@@ -508,6 +522,7 @@ DOMAIN-SUFFIX,taobaocdn.com
 DOMAIN-SUFFIX,tbcache.com
 DOMAIN-SUFFIX,tbcdn.com
 DOMAIN-SUFFIX,teamviewer.com
+DOMAIN-SUFFIX,tebex.io
 DOMAIN-SUFFIX,tencent-cloud.net
 DOMAIN-SUFFIX,tencent.com
 DOMAIN-SUFFIX,tencentmind.com
@@ -623,6 +638,7 @@ DOMAIN-SUFFIX,zhenguanyu.biz
 DOMAIN-SUFFIX,zhenguanyu.com
 DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
+DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,zhongsou.com
 DOMAIN-SUFFIX,zhuihd.com
 DOMAIN-SUFFIX,zijieapi.com
