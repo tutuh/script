@@ -105,6 +105,7 @@ DOMAIN-SUFFIX,anchor.fm
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,androidify.com
 DOMAIN-SUFFIX,androidtv.com
+DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,aolcdn.com
 DOMAIN-SUFFIX,apache.org
 DOMAIN-SUFFIX,api.ai
@@ -168,6 +169,7 @@ DOMAIN-SUFFIX,box.com
 DOMAIN-SUFFIX,brave.com
 DOMAIN-SUFFIX,btlibrary.me
 DOMAIN-SUFFIX,bullguard.com
+DOMAIN-SUFFIX,buzzsprout.com
 DOMAIN-SUFFIX,bybit.com
 DOMAIN-SUFFIX,c-span.org
 DOMAIN-SUFFIX,cachefly.net
@@ -179,6 +181,7 @@ DOMAIN-SUFFIX,change.org
 DOMAIN-SUFFIX,chaturbate.com
 DOMAIN-SUFFIX,chrome.com
 DOMAIN-SUFFIX,chromium.org
+DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,cloudcone.com
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,clubhouseapi.com
@@ -237,6 +240,7 @@ DOMAIN-SUFFIX,f8.com
 DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,facebookmail.com
 DOMAIN-SUFFIX,fanatical.com
+DOMAIN-SUFFIX,fanbox.cc
 DOMAIN-SUFFIX,fastmail.com
 DOMAIN-SUFFIX,fb.com
 DOMAIN-SUFFIX,fb.me
@@ -648,6 +652,8 @@ DOMAIN-SUFFIX,zaobao.com.sg
 DOMAIN-SUFFIX,zb.com
 DOMAIN-SUFFIX,zello.com
 DOMAIN-SUFFIX,zeronet.io
+DOMAIN-SUFFIX,zoom.us
+DOMAIN-SUFFIX,zoomgov.com
 DOMAIN-SUFFIX,zophar.net
 DOMAIN-SUFFIX,zynamics.com
 DOMAIN-SUFFIX,zyxel.com
