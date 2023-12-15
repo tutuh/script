@@ -17,6 +17,8 @@
 小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v4\/followfeed|v6\/homefeed)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
 # 图片水印,视频水印
 小红书去水印 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v2\/note\/feed|v3\/note\/videofeed)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+# live photo水印
+小红书live去水印 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/live_photo\/save,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
 
 [Map Local]
 # 惊喜弹窗
