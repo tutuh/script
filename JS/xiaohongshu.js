@@ -1,5 +1,5 @@
 // By RuCu6
-// 2023-12-19 16:10
+// 2023-12-20 19:00
 
 const url = $request.url;
 const isQuanX = typeof $task !== "undefined";
@@ -41,14 +41,15 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
 } else if (url.includes("/v1/note/live_photo/save")) {
   // 实况照片保存请求
   let livePhoto;
+  let newDatas = [];
   // 读取持久化存储
   if (isQuanX) {
     livePhoto = JSON.parse($prefs.valueForKey("redBookLivePhoto"));
   } else {
     livePhoto = JSON.parse($persistentStore.read("redBookLivePhoto"));
   }
-  if (obj?.data?.datas?.length > 0 && livePhoto?.length > 0) {
-    let newDatas = [];
+  if (livePhoto?.length > 0) {
+    // 持久化存储
     for (let item of livePhoto) {
       if (item.live_photo_file_id) {
         let myData = {
@@ -59,7 +60,9 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
         newDatas.push(myData);
       }
     }
-    // 交换url数据
+  }
+  if (obj?.data?.datas?.length > 0) {
+    // 原始数据没问题 交换url数据
     obj.data.datas.forEach((itemA) => {
       newDatas.forEach((itemB) => {
         if (itemB.file_id === itemA.file_id && itemA.url.includes(".mp4")) {
@@ -67,9 +70,9 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
         }
       });
     });
-    $done({ body: JSON.stringify(obj) });
   } else {
-    $done({});
+    // 原始数据有问题 强制返回成功响应
+    obj = { code: 0, success: true, msg: "成功", data: { datas: newDatas } };
   }
 } else if (url.includes("/v1/search/banner_list")) {
   if (obj?.data) {
