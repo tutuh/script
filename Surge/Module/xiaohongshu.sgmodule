@@ -28,7 +28,7 @@
 ^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 # 信息流,详情页感兴趣的人
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/note\/guide\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
-^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
 
 [MITM]
 hostname = %APPEND% edith.xiaohongshu.com, www.xiaohongshu.com
