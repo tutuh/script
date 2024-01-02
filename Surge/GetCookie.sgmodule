@@ -37,9 +37,5 @@
 # 打开：微信途虎养车小程序 -> 我的 -> 积分 获取cookie
 途虎养车_Cookie = type=http-request,pattern=https://api.tuhu.cn/User/GetInternalCenterInfo,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
 
-# > 高德打车 - *.amap.com
-# 打开：高德地图APP -> 打车 -> 福利中心签到 获取cookie
-高德打车_Cookie = type=http-response,pattern=^https:\/\/m5(-zb)?\.amap\.com\/ws\/yuece\/(act|openapi)\/(activity\/current\/)?query,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
-
 [MITM]
-hostname = %APPEND% app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, auth.alipan.com, api.tuhu.cn, *.amap.com
+hostname = %APPEND% app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, auth.alipan.com, api.tuhu.cn
