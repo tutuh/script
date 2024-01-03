@@ -4,10 +4,6 @@
 #!update = 2023-11-15 14:45
 
 [Rule]
-# 根据User-Agent精准屏蔽amdc、这条必须添加否则脚本失效
-# 已编辑进Advertising.sgmodule
-# AND,((OR,((USER-AGENT,*AMap*))), (URL-REGEX,amdc/mobileDispatch$)),REJECT
-
 DOMAIN,amap-aos-info-nogw.amap.com,REJECT
 DOMAIN,awaken.amap.com,REJECT
 DOMAIN,free-aos-cdn-image.amap.com,REJECT
