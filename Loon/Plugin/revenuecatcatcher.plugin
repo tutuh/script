@@ -1,0 +1,13 @@
+#!name = revenuecat 匹配
+#!desc = 抓取会员信息
+#!openUrl = 
+#!author = @leepyer
+#!homepage = https://github.com/leey668
+#!icon = https://www.revenuecat.com/icons/icon-512x512.png
+#!date = 2023-12-15 00:00:00
+
+[Script]
+http-response https:\/\/api\.revenuecat\.com\/v1\/(product_entitlement_mapping|subscribers\/.+\/(offerings|products)) script-path=https://raw.githubusercontent.com/leey668/pyer/main/revenuecatcatcher.js, requires-body=true, timeout=60, tag=revenuecatcatcher
+
+[Mitm]
+hostname = api.revenuecat.com
