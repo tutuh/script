@@ -1,4 +1,5 @@
 // By leey668/pyer
+// https://github.com/leey668/pyer/tree/main
 
 const pyer1 = {};
 const pyer2 = JSON.parse(typeof $response != "undefined" && $response.body || null);
