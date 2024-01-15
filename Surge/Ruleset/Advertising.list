@@ -20,8 +20,6 @@ DOMAIN-SUFFIX,unityads.unity3d.com
 DOMAIN,tunion-api.m.taobao.com
 # > 爱奇艺
 DOMAIN,api.iqiyi.com
-DOMAIN,t7z.cupid.iqiyi.com
-DOMAIN,t7z.cupid.ptqy.gitv.tv
 IP-CIDR,101.227.97.240/32,no-resolve
 IP-CIDR,101.227.200.11/32,no-resolve
 IP-CIDR,101.227.200.28/32,no-resolve
@@ -64,7 +62,7 @@ DOMAIN,ad.zijieapi.com
 DOMAIN,i.snssdk.com
 DOMAIN,is.snssdk.com
 DOMAIN,open.e.kuaishou.com
-DOMAIN-SUFFIX,miaozhen.com
+DOMAIN-SUFFIX, miaozhen.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,-tos.pstatp.com
 DOMAIN-KEYWORD,asiad.byteactivity
@@ -113,8 +111,6 @@ DOMAIN,ad.tencentmusic.com
 DOMAIN,g.koowo.com
 DOMAIN,mobilead.kuwo.cn
 DOMAIN,rich.kuwo.cn
-DOMAIN,tmead.y.qq.com
-DOMAIN,tmeadcomm.y.qq.com
 
 # (L)
 # > LinkWiFi
@@ -256,6 +252,9 @@ DOMAIN,info6.video.qq.com
 DOMAIN,ios.video.mpush.qq.com
 DOMAIN,otheve.beacon.qq.com
 DOMAIN,pgdt.gtimg.cn
+DOMAIN,tmead.y.qq.com
+DOMAIN,tmeadbak.y.qq.com
+DOMAIN,tmeadcomm.y.qq.com
 DOMAIN,tpns.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
