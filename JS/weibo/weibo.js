@@ -1,5 +1,5 @@
 // By RuCu6
-// 2024-01-19 10:35
+// 2024-01-21 10:40
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -589,8 +589,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               newItems.push(item);
             }
           } else if (item?.category === "card") {
-            // 19热议等tab 118横版图片广告 208实况热聊 217错过了热词 249横版视频广告
-            if ([19, 118, 208, 217, 249]?.includes(item?.data?.card_type)) {
+            // 19热议等tab 118横版图片广告 208实况热聊 217错过了热词 206,249横版视频广告
+            if ([19, 118, 206, 208, 217, 249]?.includes(item?.data?.card_type)) {
               continue;
             } else {
               newItems.push(item);
@@ -649,8 +649,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                     newItems.push(item);
                   }
                 } else if (item?.category === "card") {
-                  // 19热议等tab 118横版图片广告 208实况热聊 217错过了热词 249横版视频广告
-                  if ([19, 118, 208, 217, 249]?.includes(item?.data?.card_type)) {
+                  // 19热议等tab 118横版图片广告 208实况热聊 217错过了热词 206,249横版视频广告
+                  if ([19, 118, 206, 208, 217, 249]?.includes(item?.data?.card_type)) {
                     continue;
                   } else {
                     newItems.push(item);
@@ -1061,7 +1061,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     removeVoteInfo(obj);
   } else if (url.includes("/2/video/tiny_stream_video_list")) {
     if (obj?.statuses?.length > 0) {
-      obj.statuses = obj.statuses.filter((m) => !(m.mblogtypename === "广告"));
+      // 移除视频自动连播
+      obj.statuses = [];
+      // obj.statuses = obj.statuses.filter((m) => !(m.mblogtypename === "广告"));
+    }
+    if (obj?.tab_list?.length > 0) {
+      obj.tab_list = [];
     }
   } else if (url.includes("/2/!/huati/discovery_home_bottom_channels")) {
     // 超话左上角,右上角图标
