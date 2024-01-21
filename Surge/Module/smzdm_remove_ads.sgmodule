@@ -1,5 +1,6 @@
 #!name=什么值得买
 #!desc=什么值得买APP去广告
+#!category=去广告
 
 [URL Rewrite]
 # 什么值得买_好价详情页去广告
