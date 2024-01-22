@@ -1,5 +1,5 @@
 // By RuCu6
-// 2024-01-21 10:40
+// 2024-01-22 11:35
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -589,8 +589,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               newItems.push(item);
             }
           } else if (item?.category === "card") {
-            // 19热议等tab 118横版图片广告 208实况热聊 217错过了热词 206,249横版视频广告
-            if ([19, 118, 206, 208, 217, 249]?.includes(item?.data?.card_type)) {
+            // 19热议等tab 208实况热聊 206,249横版视频广告
+            if ([19, 206, 208, 249]?.includes(item?.data?.card_type)) {
               continue;
             } else {
               newItems.push(item);
@@ -602,8 +602,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (item?.items?.length > 0) {
               let newII = [];
               for (let ii of item.items) {
-                if (ii?.data?.card_type === 182) {
-                  // 热议话题
+                // 118横版广告图片 182热议话题 217错过了热词 247横版视频广告
+                if ([118, 182, 217, 247]?.includes(ii?.data?.card_type)) {
                   continue;
                 } else {
                   newII.push(ii);
@@ -649,8 +649,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                     newItems.push(item);
                   }
                 } else if (item?.category === "card") {
-                  // 19热议等tab 118横版图片广告 208实况热聊 217错过了热词 206,249横版视频广告
-                  if ([19, 118, 206, 208, 217, 249]?.includes(item?.data?.card_type)) {
+                  // 19热议等tab 208实况热聊 206,249横版视频广告
+                  if ([19, 206, 208, 249]?.includes(item?.data?.card_type)) {
                     continue;
                   } else {
                     newItems.push(item);
@@ -662,8 +662,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                   if (item?.items?.length > 0) {
                     let newII = [];
                     for (let ii of item.items) {
-                      if (ii?.data?.card_type === 182) {
-                        // 热议话题
+                      // 118横版广告图片 182热议话题 217错过了热词 247横版视频广告
+                      if ([118, 182, 217, 247]?.includes(ii?.data?.card_type)) {
                         continue;
                       } else {
                         newII.push(ii);
