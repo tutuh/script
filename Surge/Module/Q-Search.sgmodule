@@ -1,6 +1,7 @@
 #!name=快捷搜索
 #!desc=Safari Search Add-ons
 #!system=ios
+#!category=⚙️ 本地模块
 
 # Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
 # 注：先进入设置更改 Safari 默认搜索为 DuckDuckGO
@@ -62,9 +63,6 @@
 
 # bli xxx (哔哩哔哩) 
 ^https:\/\/duckduckgo.com\/\?q=bli\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
-
-# cbh xxx (茶杯狐) 
-^https:\/\/duckduckgo.com\/\?q=cbh\+([^&]+).+ https://www.cupfox.app/s/$1 302
 
 # ph xxx (PornHub) 
 ^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
