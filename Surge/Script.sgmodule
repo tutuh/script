@@ -1,6 +1,7 @@
 #!name=多功能组合模块
 #!desc=跳过代理检测、Boxjs配置、Spotify、TestFlight账户管理
 #!system=ios
+#!category=⚙️ 本地模块
 
 [General]
 # > 跳过部分应用的代理检测
