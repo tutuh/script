@@ -233,6 +233,10 @@ DOMAIN,adsapi.snapchat.com
 DOMAIN-SUFFIX,hoisin.coocaa.com
 DOMAIN-SUFFIX,hoisin.coocaatv.com
 DOMAIN,data-hoisin.coocaa.com
+# > Speedtest
+DOMAIN,ads.pubmatic.com
+DOMAIN,id.hadron.ad.gt
+DOMAIN-KEYWORD,-adsystem.com
 # > 搜狐
 DOMAIN-SUFFIX,ad.sohu.com
 DOMAIN-SUFFIX,ads.sohu.com
