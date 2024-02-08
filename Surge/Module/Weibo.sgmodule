@@ -3,7 +3,7 @@
 #!system=ios
 #!category=🛡️ 去广告
 #!author=RuCu6
-#!update = 2024-01-22 17:00
+#!update = 2024-02-08 13:00
 
 [Rule]
 DOMAIN,huodong.weibo.cn,REJECT
