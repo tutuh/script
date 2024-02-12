@@ -2,7 +2,7 @@
 #!desc=高德地图APP净化
 #!category=🛡️ 去广告
 #!author = RuCu6
-#!update = 2024-01-11 17:00
+#!update = 2024-02-11 20:25
 
 [Rule]
 DOMAIN,amap-aos-info-nogw.amap.com,REJECT
@@ -15,7 +15,7 @@ DOMAIN,free-aos-cdn-image.amap.com,REJECT
 
 [Script]
 # 导航详情页,路线规划,地点详情页,搜索详情页,导航结束页
-amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/routePlan\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(routeInfo|routePlan)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(homepage|mps|search\/sp|sug|tips_operation_location)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
