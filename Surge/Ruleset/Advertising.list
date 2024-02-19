@@ -62,8 +62,13 @@ DOMAIN,ad.zijieapi.com
 DOMAIN,i.snssdk.com
 DOMAIN,is.snssdk.com
 DOMAIN,open.e.kuaishou.com
+DOMAIN,pagead2.googlesyndication-cn.com
+DOMAIN,pagead2.googlesyndication.com
+DOMAIN,www.googleadservices.com
+DOMAIN-SUFFIX,adservice.google.com
 DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
+DOMAIN-KEYWORD,ads.g.doubleclick
 DOMAIN-KEYWORD,asiad.byteactivity
 DOMAIN-KEYWORD,pangolin-sdk-toutiao
 DOMAIN-KEYWORD,pangolin.snssdk.com
