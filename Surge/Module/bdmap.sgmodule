@@ -7,9 +7,7 @@
 # 百度地图
 DOMAIN,afd.baidu.com,REJECT
 DOMAIN,afdconf.baidu.com,REJECT
-DOMAIN,httpdns.baidubce.com,REJECT
 DOMAIN,lc.map.baidu.com,REJECT
-IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 
 [Script]
 # 组件包、我的页面
