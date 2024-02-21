@@ -1,5 +1,8 @@
 #!name=多功能组合模块
-#!desc=豆瓣网页增强、Sub-Store订阅工具、Boxjs配置 
+#!desc=Boxjs配置、TestFlight账户管理
+
+[General]
+skip-proxy = iosapps.itunes.apple.com
 
 [Rule]
 DOMAIN-SUFFIX,jsdelivr.net,PROXY
@@ -8,12 +11,8 @@ DOMAIN-SUFFIX,jsdelivr.net,PROXY
 # > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120, tag=BoxJs
 
-# > Sub-Store订阅工具 - sub.store
-http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js, requires-body=true, timeout=120, tag=Sub-Store Core
-http-request ^https?:\/\/sub\.store script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js, requires-body=true, timeout=120, tag=Sub-Store Simple
-
-# > 豆瓣网页增强 - m.douban.com
-http-response ^https://m.douban.com/movie/subject/.+ script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Douban.js, requires-body=true, tag=豆瓣网页增强
+# > TestFlight账户管理 - testflight.apple.com
+http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理
 
 [Mitm]
-hostname = sub.store, m.douban.com, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, testflight.apple.com
