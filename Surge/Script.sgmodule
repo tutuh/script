@@ -12,7 +12,7 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 
 [URL Rewrite]
 # Redirect Google Search Service - www.google.cn
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com
+^https?://(www\.)?(g|google)\.cn https://www.google.com 302
 
 [Script]
 # > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
