@@ -1,8 +1,0 @@
-#!name=AppStore策略切换
-#!desc=苹果商店下载速度未达标，自动切换策略
-
-[Rule]
-AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,speedLimit)),AppStore
-
-[Script]
-speedLimit = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/speedLimit.js,argument="Return=10min,Group=AppStore&policy=DIRECT,Proxy&time=15&minSpeed=10"
