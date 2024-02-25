@@ -6,8 +6,8 @@
 #!update = 2024-02-08 13:00
 
 [Rule]
-DOMAIN,huodong.weibo.cn,REJECT
-DOMAIN-SUFFIX,biz.weibo.com,REJECT
+DOMAIN,huodong.weibo.cn,REJECT,extended-matching
+DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching
 
 [Url Rewrite]
 # 开屏广告 
