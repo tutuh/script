@@ -5,9 +5,9 @@
 
 [Rule]
 # 百度地图
-DOMAIN,afd.baidu.com,REJECT
-DOMAIN,afdconf.baidu.com,REJECT
-DOMAIN,lc.map.baidu.com,REJECT
+DOMAIN,afd.baidu.com,REJECT,extended-matching
+DOMAIN,afdconf.baidu.com,REJECT,extended-matching
+DOMAIN,lc.map.baidu.com,REJECT,extended-matching
 
 [Script]
 # 组件包、我的页面
