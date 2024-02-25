@@ -1,6 +1,4 @@
 # IOS App Store Proxy
 
-DOMAIN,iosapps.itunes.apple.com
-DOMAIN,swcdn.apple.com
-DOMAIN,updates-http.cdn-apple.com
-DOMAIN,updates.cdn-apple.com
+DOMAIN,apps.apple.com
+DOMAIN,itunes.apple.com
