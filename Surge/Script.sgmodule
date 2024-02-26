@@ -26,7 +26,7 @@ spotify-json = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/
 spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
 
 # > TestFlight账户管理 - iosapps.itunes.apple.com, testflight.apple.com
-TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
+TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
 
 [MITM]
 hostname = %APPEND% www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, spclient.wg.spotify.com, testflight.apple.com
