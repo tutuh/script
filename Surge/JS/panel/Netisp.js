@@ -1,7 +1,7 @@
 /****************
 By Keywos  
 
-https://github.com/Keywos/rule/tree/main/script/netisp
+https://github.com/Keywos/rule/blob/main/script/netisp/netisp.sgmodule
 
 #!name= NetISP 面板
 #!desc= 可自定义隐藏IP段/超时
