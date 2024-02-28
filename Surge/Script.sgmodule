@@ -7,10 +7,8 @@
 # > 跳过部分应用的代理检测
 skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn,gate.lagou.com, www.abchina.com.cn, www.shanbay.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com, iosapps.itunes.apple.com
 
-force-http-engine-hosts = www.google.cn
-
-# > BoxJs
-force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+# > BoxJs、Google重定向
+force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, www.google.cn
 
 [URL Rewrite]
 # Redirect Google Search Service - www.google.cn
