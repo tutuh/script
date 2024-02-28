@@ -1,9 +1,9 @@
 #!name=百度地图去广告
 #!desc=百度地图APP净化
 #!system=ios
+#!category=去广告黑名单
 #!arguments=脚本执行引擎:jsc
 #!arguments-desc=脚本引擎：[auto, jsc, webview]
-#!category=🛡️ 去广告
 
 [Rule]
 # 百度地图
