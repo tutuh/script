@@ -5,6 +5,12 @@
 0️⃣ 
 1. 使用Surge模块:
 https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.sgmodule
+
+[Script]
+Github Private = type=http-request,pattern=^https?:\/\/(raw|gist)\.githubusercontent.com,requires-body=0,engine=jsc,script-path=****.js
+
+[MITM]
+hostname = %APPEND% raw.githubusercontent.com, gist.githubusercontent.com
 2. 使用Loon插件:
 https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.plugin
 1️⃣ 登陆Github > 点击头像下拉菜单 > 选择Settings > 左边菜单栏选择最后一个Developer settings > 选择Personal access tokens > Generate new token > Note里面填写token名字 > ☑️下面的勾选框选择第一项repo打钩（所有子项目自动勾选）> 点击Generate token按钮保存并返回。
@@ -32,4 +38,3 @@ const username = $request.url.match(
 if (username == config.username) {
   console.log(`ACCESSING PRIVATE REPO: ${$request.url}`);
   $done({ headers: {...$request.headers, Authorization: `token ${config.token}`} });
-} else $done({});
