@@ -1,6 +1,6 @@
 #!name=高德地图去广告
 #!desc=高德地图APP净化
-#!category=🛡️ 去广告
+#!category=去广告黑名单
 #!arguments=脚本执行引擎:jsc
 #!arguments-desc=脚本引擎：[auto, jsc, webview]
 #!author = RuCu6
