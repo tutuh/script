@@ -1,9 +1,10 @@
 #!name=喜马拉雅去广告
 #!desc=喜马拉雅APP净化
 #!system=ios
+#!category=去广告黑名单
 #!arguments=脚本执行引擎:jsc
 #!arguments-desc=脚本引擎：[auto, jsc, webview]
-#!category=去广告黑名单
+
 
 [General]
 # 喜马拉雅 - DNS劫持
