@@ -1,6 +1,6 @@
 #!name=去广告黑名单
 #!desc=Block Advertising
-#!category=🛡️ 去广告
+#!category=去广告黑名单
 
 [Rule]
 # > 根据User-Agent精准屏蔽amdc
