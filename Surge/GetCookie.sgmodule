@@ -1,6 +1,6 @@
 #!name=Cookie获取
 #!desc=在使用后手动将其禁用，以免产生不必要的MITM.
-#!category=☑️ 签到模块
+#!category=签到模块
 
 [Script]
 # > 哔哩哔哩漫画 - app.bilibili.com
