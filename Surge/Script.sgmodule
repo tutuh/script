@@ -19,11 +19,11 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 Rewrite: BoxJs = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 
 # > Spotify歌词翻译 - spclient.wg.spotify.com
-Spotify歌词翻译 = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/,requires-body=1,binary-body-mode=1,engine=jsc,max-size=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/spotify/spotify-lyric.ios.js
+Spotify歌词翻译 = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/,requires-body=1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/dompling/Script/master/spotify/spotify-lyric.ios.js
 
 # > Spotify解锁
 spotify-json = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,engine=jsc,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
-spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,engine=jsc,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
+spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
 
 # > TestFlight账户管理 - iosapps.itunes.apple.com, testflight.apple.com
 TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
