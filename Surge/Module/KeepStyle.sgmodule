@@ -3,39 +3,39 @@
 #!category=🛡️ 去广告
 
 [Url Rewrite]
-# > 屏蔽应用内弹窗
+# > Keep - 屏蔽应用内弹窗
 ^https?:\/\/api\.gotokeep\.com\/guide-webapp\/v\d\/popup\/getPopUp - reject
-# > 屏蔽部分启动弹窗
+# > Keep - 屏蔽部分启动弹窗
 ^https?:\/\/api\.gotokeep\.com\/kprime\/v\d\/popups\/primeGuide - reject
-# > 屏蔽开屏广告请求
+# > Keep - 屏蔽开屏广告请求
 ^https?:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v\d\/ad - reject
-# > 屏蔽青少年弹窗
+# > Keep - 屏蔽青少年弹窗
 ^https?:\/\/api.gotokeep.com/cauchy/growth/init - reject
-# > 屏蔽搜索栏自动填充词
+# > Keep - 屏蔽搜索栏自动填充词
 ^https?:\/\/api\.gotokeep\.com\/search\/v\d\/default\/keyword\/list - reject
-# > 屏蔽热词
+# > Keep - 屏蔽热词
 ^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotword\/list - reject
-# > 屏蔽hotCourse
+# > Keep - 屏蔽hotCourse
 ^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotCourse\/list - reject
-# > 屏蔽adwebapp
+# > Keep - 屏蔽adwebapp
 ^https?:\/\/api\.gotokeep\.com\/op-engine-webapp\/v\d\/ad - reject
-# > 屏蔽广告预加载
+# > Keep - 屏蔽广告预加载
 ^https?:\/\/api\.gotokeep\.com\/ads\/v\d\/ads\/preload - reject
-# > 屏蔽adbox
+# > Keep - 屏蔽adbox
 ^https?:\/\/api\.gotokeep\.com\/training\/box\/config - reject
-# > 屏蔽更新
+# > Keep - 屏蔽更新
 ^https?:\/\/api\.gotokeep\.com\/anno\/v\d\/upgrade\/check - reject
 
 [Script]
-# > 我的页面去推广
+# > Keep - 我的页面去推广
 keepStyle = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/KeepStyle.js
-# > 应用底部栏净化
+# > Keep - 应用底部栏净化
 keepStyle = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/KeepStyle.js
-# > 发现页处理
+# > Keep - 发现页处理
 keepStyle = type=http-response,pattern=https://api.gotokeep.com/homepage/v\d/tab,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/KeepStyle.js
-# > 课程预览页广告
+# > Keep - 课程预览页广告
 keepStyle = type=http-response,pattern=https://api.gotokeep.com/nuocha/course/v2/\w+/preview,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/KeepStyle.js
-# > 我的运动页面去除下方推荐
+# > Keep - 我的运动页面去除下方推荐
 keepStyle = type=http-response,pattern=https://api.gotokeep.com/sportpage/sport/v3/mysport,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/KeepStyle.js
 
 [MITM]
