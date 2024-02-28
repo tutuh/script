@@ -2,6 +2,8 @@
 #!desc=新浪微博APP净化
 #!system=ios
 #!category=🛡️ 去广告
+#!arguments=脚本执行引擎:jsc
+#!arguments-desc=脚本引擎：[auto, jsc, webview]
 #!author=RuCu6
 #!update = 2024-02-08 13:00
 
@@ -15,30 +17,30 @@ DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching
 
 [Script]
 # 首页 签到,发布按钮,侧边栏,右上角红包,顶部tab,侧边栏提醒,超话tab悬浮,顶部直播
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/(checkin\/show|client\/publisher_list|push\/active)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/groups\/allgroups\/v2\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/(checkin\/show|client\/publisher_list|push\/active)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/groups\/allgroups\/v2\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
 # 详情页 超话,评论区,看图界面,个人主页,我的页面,信息流,商品橱窗,视频流,视频号,视频调查,话题卡片
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/(cardlist|page)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/(container\/asyn|flowlist|flowpage)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/friendships\/(create|destroy)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/profile\/(container_timeline|dealatt|me|statuses\/tab|userinfo)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_timeline(_hot|_topic|_topicpage|_unread)?|unread_hot_timeline)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/(extend|show)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/video\/tiny_stream_video_list\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/(cardlist|page)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/(container\/asyn|flowlist|flowpage)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/friendships\/(create|destroy)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/profile\/(container_timeline|dealatt|me|statuses\/tab|userinfo)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_timeline(_hot|_topic|_topicpage|_unread)?|unread_hot_timeline)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/(extend|show)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/video\/tiny_stream_video_list\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
 # 消息页
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/direct_messages\/user_list\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/messageflow\/notice\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/direct_messages\/user_list\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/messageflow\/notice\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
 # 发现页 热门微博信息流,搜索列表,热搜提醒,猜你想搜,视频流红包
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/search\/(container_timeline|finder)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/searchall\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/search\/(container_timeline|finder)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/searchall\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
 # 开屏广告
-weibo = type=http-response,pattern=^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
-weibo = type=http-response,pattern=^https:\/\/wbapp\.uve\.weibo\.com\/(preload\/get_ad|wbapplua\/wbpullad\.lua)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+weibo = type=http-response,pattern=^https:\/\/wbapp\.uve\.weibo\.com\/(preload\/get_ad|wbapplua\/wbpullad\.lua)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
 # 会员图标 - new.vip.weibo.cn
-#weibo = type=http-response,pattern=^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
+#weibo = type=http-response,pattern=^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/weibo/weibo.js
 
 [Map Local]
 # 首页 签到,发布按钮,侧边栏,右上角红包,顶部tab,侧边栏提醒,超话tab悬浮,顶部直播
