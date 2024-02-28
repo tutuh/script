@@ -52,11 +52,11 @@ URL-REGEX,^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)?,REJECT
 
 [Script]
 # 屏蔽首页动态、屏蔽Tab页滚动、去除我的页面Ad
-喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/(discovery-feed|discovery-category|mobile-user)\/v\d\/(mix|category|homePage),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
+喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/(discovery-feed|discovery-category|mobile-user)\/v\d\/(mix|category|homePage),requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
 # 首页顶部去除直播
-喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
+喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
 # 屏蔽首页横幅
-喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
+喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
 
 [MITM]
 hostname = %APPEND% *.xima*.*, *.xmcdn.*
