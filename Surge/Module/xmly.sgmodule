@@ -5,7 +5,6 @@
 #!arguments=脚本执行引擎:jsc
 #!arguments-desc=脚本引擎：[auto, jsc, webview]
 
-
 [General]
 # 喜马拉雅 - DNS劫持
 hijack-dns = %APPEND% 114.114.114.114
