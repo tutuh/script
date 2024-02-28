@@ -2,7 +2,7 @@
 #!desc=小红书APP去开屏、信息流、搜索页广告、照片视频去水印
 #!category=🛡️ 去广告
 #!arguments=脚本执行引擎:jsc
-#!arguments-desc=- 脚本引擎：[auto, jsc, webview]
+#!arguments-desc=脚本引擎：[auto, jsc, webview]
 #!author = RuCu6 fmz200
 #!update = 2023-12-19 16:00
 
