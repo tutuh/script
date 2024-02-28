@@ -10,7 +10,7 @@
 hijack-dns = %APPEND% 114.114.114.114
 
 [Rule]
-# 阻止IP变化
+# 喜马拉雅 - 阻止IP变化
 DOMAIN,gslbali.ximalaya.com,REJECT,extended-matching
 DOMAIN,gslbtx.ximalaya.com,REJECT,extended-matching
 # 喜马拉雅 - 屏蔽开屏广告
