@@ -1,6 +1,8 @@
 #!name=百度地图去广告
 #!desc=百度地图APP净化
 #!system=ios
+#!arguments=脚本执行引擎:jsc
+#!arguments-desc=脚本引擎：[auto, jsc, webview]
 #!category=🛡️ 去广告
 
 [Rule]
@@ -11,7 +13,7 @@ DOMAIN,lc.map.baidu.com,REJECT,extended-matching
 
 [Script]
 # 组件包、我的页面
-百度地图去广告 = type=http-response,pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/(imap\/dl\/s\/UpdateInfo\.php|usersystem\/mine\/page)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/baidu/baidumap.js
+百度地图去广告 = type=http-response,pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/(imap\/dl\/s\/UpdateInfo\.php|usersystem\/mine\/page)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/baidu/baidumap.js
 
 [Map Local]
 # 组件包
