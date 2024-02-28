@@ -1,6 +1,8 @@
 #!name=高德地图去广告
 #!desc=高德地图APP净化
 #!category=🛡️ 去广告
+#!arguments=脚本执行引擎:jsc
+#!arguments-desc=脚本引擎：[auto, jsc, webview]
 #!author = RuCu6
 #!update = 2024-02-11 20:25
 
@@ -15,23 +17,23 @@ DOMAIN,free-aos-cdn-image.amap.com,REJECT,extended-matching
 
 [Script]
 # 导航详情页,路线规划,地点详情页,搜索详情页,导航结束页
-amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(routeInfo|routePlan)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
-amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
-amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
-amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(homepage|mps|search\/sp|sug|tips_operation_location)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(routeInfo|routePlan)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(homepage|mps|search\/sp|sug|tips_operation_location)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 # 首页,推广卡片,红点角标,右上角动图,搜索框热词,左下角天气,消息横幅
-amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(card-service-plan-home|main-page)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
-amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(card-service-plan-home|main-page)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 # 我的页面,推广卡片
-amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 # 附近页
-amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 # 开屏广告
-amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 # 打车页,红点角标,弹窗,天气图标,推广卡片
-amap = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(car\/order\/content_info|order_web\/friendly_information)\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
-amap = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
-amap = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(car\/order\/content_info|order_web\/friendly_information)\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+amap = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 
 [Map Local]
 # 导航详情页,路线规划,地点详情页,搜索详情页,导航结束页
