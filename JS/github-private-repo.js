@@ -38,3 +38,4 @@ const username = $request.url.match(
 if (username == config.username) {
   console.log(`ACCESSING PRIVATE REPO: ${$request.url}`);
   $done({ headers: {...$request.headers, Authorization: `token ${config.token}`} });
+} else $done({});
