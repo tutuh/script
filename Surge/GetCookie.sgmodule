@@ -32,11 +32,11 @@
 
 # > 阿里云盘 - auth.alipan.com, auth.aliyundrive.com
 # 打开：阿里云盘APP 获取token
-阿里云盘_Cookie = type=http-request,pattern=^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
+阿里云盘_Cookie = type=http-request,pattern=^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token,requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
 
 # > 途虎养车app及小程序 - api.tuhu.cn
 # 打开：微信途虎养车小程序 -> 我的 -> 积分 获取cookie
-途虎养车_Cookie = type=http-request,pattern=https://api.tuhu.cn/User/GetInternalCenterInfo,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
+途虎养车_Cookie = type=http-request,pattern=https://api.tuhu.cn/User/GetInternalCenterInfo,requires-body=0,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
 
 [MITM]
 hostname = %APPEND% app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, auth.alipan.com, auth.aliyundrive.com, api.tuhu.cn
