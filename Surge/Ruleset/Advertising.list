@@ -180,7 +180,6 @@ DOMAIN,aaid.uyunad.com
 DOMAIN,maplocatesdksnapshot.d.meituan.net
 DOMAIN,metrics-picture.d.meituan.net
 IP-CIDR,103.37.155.60/32,no-resolve
-
 # > 米家
 DOMAIN,sdkconfig.ad.xiaomi.com
 # > 买单吧
@@ -343,8 +342,7 @@ DOMAIN-SUFFIX,163jiasu.com
 DOMAIN,h5-api.feiersmart.com
 
 # (X)
-# > 小米
-DOMAIN,sdkconfig.ad.xiaomi.com
+
 
 # (Y)
 # > 优酷 & 菜鸟
