@@ -1,6 +1,6 @@
 #!name=知乎去广告
 #!desc=知乎APP去广告
-#!category=去广告黑名单
+#!category=Tutu
 
 [Rule]
 # 拦截开屏广告
