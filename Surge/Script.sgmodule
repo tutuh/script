@@ -1,5 +1,5 @@
 #!name=多功能组合模块
-#!desc=跳过代理检测、Boxjs配置、Spotify、TestFlight账户管理
+#!desc=跳过代理检测、Boxjs配置、Spotify、TestFlight账户管理；解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF、B612咔叽、心脏+
 #!system=ios
 #!category=Tutu
 
@@ -29,4 +29,4 @@ spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com
 TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
 
 [MITM]
-hostname = %APPEND% www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, spclient.wg.spotify.com, testflight.apple.com
+hostname = %APPEND% www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, spclient.wg.spotify.com, testflight.apple.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, user-kaji-api.b612kaji.com, api.995120.cn
