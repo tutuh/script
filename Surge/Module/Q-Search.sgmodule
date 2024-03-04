@@ -1,7 +1,7 @@
 #!name=快捷搜索
 #!desc=Safari Search Add-ons
 #!system=ios
-#!category=本地模块
+#!category=Tutu
 
 # Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
 # 注：先进入设置更改 Safari 默认搜索为 DuckDuckGO
