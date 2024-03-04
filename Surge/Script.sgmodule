@@ -11,7 +11,7 @@ skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn,gate.lagou.c
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, www.google.cn
 
 [URL Rewrite]
-# Redirect Google Search Service - www.google.cn
+# > Redirect Google Search Service - www.google.cn
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
 [Script]
