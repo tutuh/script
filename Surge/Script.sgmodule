@@ -5,28 +5,28 @@
 
 [General]
 # > 跳过部分应用的代理检测
-skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn,gate.lagou.com, www.abchina.com.cn, www.shanbay.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com, iosapps.itunes.apple.com
+skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn, gate.lagou.com, www.abchina.com.cn, www.shanbay.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com, iosapps.itunes.apple.com
 
-# > BoxJs、Google重定向
-force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, www.google.cn
+# > BoxJs
+force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 
 [URL Rewrite]
 # > Redirect Google Search Service - www.google.cn
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+^https?://(www\.)?(g|google)\.cn https://www.google.com 302
 
 [Script]
 # > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 Rewrite: BoxJs = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 
-# > Spotify歌词翻译 - spclient.wg.spotify.com
-Spotify歌词翻译 = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/,requires-body=1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/dompling/Script/master/spotify/spotify-lyric.ios.js
-
-# > Spotify解锁
-spotify-json = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,engine=jsc,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
-spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
-
 # > TestFlight账户管理 - iosapps.itunes.apple.com, testflight.apple.com
 TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
+
+# > Spotify歌词翻译 - spclient.wg.spotify.com
+Spotify歌词翻译 = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/,requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/spotify/spotify-lyric.ios.js
+
+# > Spotify解锁
+spotify-json = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
+spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
 
 # > 扫描全能王CamScanner pro - ap*.intsig.net
 扫描全能王_解锁 = type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/tutuh/9d2267b6da8974baf48b8d1fffc4ae41/raw/c4bf4bf2935b1a8efd9f578a3d0cf2b6cbff90c2/CamScanner.js
@@ -47,4 +47,4 @@ iLovePDF_解锁 = type=http-response,pattern=https://service.ilovepdf.com/v1/use
 心脏+_解锁 = type=http-response,pattern=^https:\/\/api\.995120\.cn\/mini\/api\/appleplus,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/tutuh/bc9dd61182aeb074203be152aa847f1d/raw/32518b3140cb5062c12641f62b0f3e50d57d1076/xizang.js
 
 [MITM]
-hostname = %APPEND% www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, spclient.wg.spotify.com, testflight.apple.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn
+hostname = %APPEND% www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, testflight.apple.com, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn
