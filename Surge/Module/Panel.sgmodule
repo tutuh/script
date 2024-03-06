@@ -30,7 +30,7 @@
 
 节点入口查询 = type=generic, timeout=8, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Netisp.js, script-update-interval={{{script-update}}}, argument=icolor={{{icolor}}}&icon={{{icons}}}&GPT={{{GPT}}}&hideIP={{{HideIP}}}&cnTimeout={{{cnTimeout}}}&usTimeout={{{usTimeout}}}
 
-机场流量信息 = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js, script-update-interval={{{script-update}}}, argument=url=encode后的机场节点链接&reset_day=1&title=你机场名字&icon=network&color=#3B7FF7
+机场流量信息 = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js, argument=url=encode后的机场节点链接&reset_day=1&title=你机场名字&icon=network&color=#3B7FF7
 
 流媒体解锁检测 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Stream-All.js, argument=title=流媒体解锁检测&icon=play.tv.fill&color=#D22F20
 
