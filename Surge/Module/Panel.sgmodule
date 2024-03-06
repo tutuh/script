@@ -1,6 +1,9 @@
 #!name=Panel
-#!desc=网络连通测试、机场流量信息、流媒体解锁检测、网络信息
+#!desc=机场流量、流媒体解锁检测、网络信息、配置重载
 #!system=ios
+#!arguments= script-update:-1 ,icons:globe.asia.australia, icolor:#6699FF, GPT:0 ,HideIP:1, cnTimeout:1000, usTimeout:3000,
+#!arguments-desc= 入口查询超时: cnTimeout\n落地查询超时: usTimeout\n隐藏IP: HideIP \n\n开启为: 1\n关闭为: 0
+#!category=本地模块
 
 # 机场流量信息说明
 # encode链接： https://www.urlencoder.org
@@ -12,16 +15,26 @@
 # 可选参数"color=xxx" 当使用 icon 字段时，可传入 color 字段控制图标颜色，字段内容为颜色的 HEX 编码。如：color=#007aff
 
 [Panel]
-面板策略 = script-name=网络信息, title="",content="",style=info,update-interval=30
-面板策略 = script-name=机场流量信息, update-interval=3600
-面板策略 = script-name=流媒体解锁检测, title="流媒体解锁检测",content="请刷新面板",update-interval=3600
-面板策略 = script-name=配置重载, title=配置重载, content=配置重载, style=info, update-interval=-1
+网络信息 = script-name=网络信息, title="", content="", style=info, update-interval=600
+
+节点入口 = script-name=节点入口查询, update-interval=600
+
+机场流量查询 = script-name=机场流量信息, update-interval=3600
+
+流媒体检测 = script-name=流媒体解锁检测, update-interval=-1
+
+配置重载 = script-name=配置重载, title=配置重载, content=配置重载, style=info, update-interval=-1
 
 [Script]
 网络信息 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Network-Info.js
-机场流量信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,script-update-interval=0,argument=url=encode后的机场节点链接&reset_day=1&title=你机场名字&icon=externaldrive.fill.badge.icloud&color=#007aff
-流媒体解锁检测 = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Stream-All.js
-配置重载 = type=generic,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Profile-Reload.js
+
+节点入口查询 = type=generic, timeout=8, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Netisp.js, script-update-interval={{{script-update}}}, argument=icolor={{{icolor}}}&icon={{{icons}}}&GPT={{{GPT}}}&hideIP={{{HideIP}}}&cnTimeout={{{cnTimeout}}}&usTimeout={{{usTimeout}}}
+
+机场流量信息 = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js, script-update-interval={{{script-update}}}, argument=url=encode后的机场节点链接&reset_day=1&title=你机场名字&icon=network&color=#3B7FF7
+
+流媒体解锁检测 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Stream-All.js, argument=title=流媒体解锁检测&icon=play.tv.fill&color=#D22F20
+
+配置重载 = type=generic, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Profile-Reload.js
 
 [Host]
 ip-api.com = 208.95.112.1
