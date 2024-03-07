@@ -1,5 +1,6 @@
-# Apple CDN
+# Apple
 # https://ruleset.skk.moe/List/non_ip/apple_cdn.conf
+# https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Apple.list
 
 DOMAIN,apple.comscoreresearch.com
 DOMAIN-SUFFIX,a1.mzstatic.com
