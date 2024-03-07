@@ -1,62 +1,22 @@
 # 代理列表 合并
 # https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/ProxyGFWlist.list
-# https://github.com/DivineEngine/Profiles/blob/master/Surge/Ruleset/Global.list
 # https://ruleset.skk.moe/List/non_ip/global.conf
 # ------------------------------------------------------------- #
 
-DOMAIN,a248.e.akamai.net
-DOMAIN,a771.dscq.akamai.net
 DOMAIN,addons.mozilla.org
-DOMAIN,amp-api.podcasts.apple.com
-DOMAIN,apple.comscoreresearch.com
-DOMAIN,apps.apple.com
-DOMAIN,assets1.xboxlive.com
-DOMAIN,assets2.xboxlive.com
-DOMAIN,az416426.vo.msecnd.net
-DOMAIN,az668014.vo.msecnd.net
-DOMAIN,beta.music.apple.com
-DOMAIN,books.apple.com
-DOMAIN,books.itunes.apple.com
 DOMAIN,ccmdl.adobe.com
-DOMAIN,cloud-cdn-digitalocean-com.global.ssl.fastly.net
 DOMAIN,cloud.oracle.com
-DOMAIN,clubhouse.pubnubapi.com
-DOMAIN,d3c33hcgiwev3.cloudfront.net
-DOMAIN,disk.yandex.com
 DOMAIN,ees.elsevier.com
-DOMAIN,gateway.icloud.com
-DOMAIN,github.global.ssl.fastly.net
-DOMAIN,itunes.apple.com
-DOMAIN,lab.skk.moe
-DOMAIN,lookup-api.apple.com
 DOMAIN,media.steampowered.com
-DOMAIN,news-assets.apple.com
-DOMAIN,news-client-search.apple.com
-DOMAIN,news-client.apple.com
-DOMAIN,news-edge.apple.com
-DOMAIN,news-events.apple.com
-DOMAIN,nytimes.map.fastly.net
-DOMAIN,ocsp.int-x3.letsencrypt.org
 DOMAIN,onedrive.live.com
-DOMAIN,payments-jp.amazon.com
 DOMAIN,pki.goog
-DOMAIN,radio.itunes.apple.com
-DOMAIN,s3-ap-northeast-1.amazonaws.com
-DOMAIN,s3-ap-southeast-2.amazonaws.com
-DOMAIN,search.yahoo.co.jp
 DOMAIN,steambroadcast.akamaized.net
 DOMAIN,steamcommunity-a.akamaihd.net
 DOMAIN,steampipe.akamaized.net
 DOMAIN,steamstore-a.akamaihd.net
 DOMAIN,steamusercontent-a.akamaihd.net
 DOMAIN,steamuserimages-a.akamaihd.net
-DOMAIN,sub-store.vercel.app
-DOMAIN,testflight.apple.com
-DOMAIN,tv.apple.com
 DOMAIN,wego.here.com
-DOMAIN-KEYWORD,.blogspot.
-DOMAIN-KEYWORD,.facebook.
-DOMAIN-KEYWORD,.pinterest.
 DOMAIN-KEYWORD,1drv
 DOMAIN-KEYWORD,1e100
 DOMAIN-KEYWORD,abema
@@ -294,7 +254,6 @@ DOMAIN-SUFFIX,ait.org.tw
 DOMAIN-SUFFIX,aiweiwei.com
 DOMAIN-SUFFIX,aiweiweiblog.com
 DOMAIN-SUFFIX,ajsands.com
-DOMAIN-SUFFIX,aka.ms
 DOMAIN-SUFFIX,akademiye.org
 DOMAIN-SUFFIX,akamai.net
 DOMAIN-SUFFIX,akamaihd.net
@@ -425,7 +384,6 @@ DOMAIN-SUFFIX,aplusvpn.com
 DOMAIN-SUFFIX,app-measurement.net
 DOMAIN-SUFFIX,appbrain.com
 DOMAIN-SUFFIX,appdownloader.net
-DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,appledaily.com
 DOMAIN-SUFFIX,appledaily.com.hk
 DOMAIN-SUFFIX,appledaily.com.tw
@@ -656,9 +614,7 @@ DOMAIN-SUFFIX,bitly.com
 DOMAIN-SUFFIX,bitmex.com
 DOMAIN-SUFFIX,bitshare.com
 DOMAIN-SUFFIX,bitsnoop.com
-DOMAIN-SUFFIX,bitstamp.net
 DOMAIN-SUFFIX,bitterwinter.org
-DOMAIN-SUFFIX,bittrex.com
 DOMAIN-SUFFIX,bitvise.com
 DOMAIN-SUFFIX,bitz.ai
 DOMAIN-SUFFIX,bizhat.com
@@ -1116,13 +1072,11 @@ DOMAIN-SUFFIX,codeskulptor.org
 DOMAIN-SUFFIX,coin2co.in
 DOMAIN-SUFFIX,coinbase.com
 DOMAIN-SUFFIX,coinbene.com
-DOMAIN-SUFFIX,coincheck.com
 DOMAIN-SUFFIX,coinegg.com
 DOMAIN-SUFFIX,coinex.com
 DOMAIN-SUFFIX,coingecko.com
 DOMAIN-SUFFIX,coingi.com
 DOMAIN-SUFFIX,coinmarketcap.com
-DOMAIN-SUFFIX,coinone.co.kr
 DOMAIN-SUFFIX,coinrail.co.kr
 DOMAIN-SUFFIX,cointiger.com
 DOMAIN-SUFFIX,cointobe.com
@@ -1521,7 +1475,6 @@ DOMAIN-SUFFIX,edns.biz
 DOMAIN-SUFFIX,edoors.com
 DOMAIN-SUFFIX,edubridge.com
 DOMAIN-SUFFIX,edupro.org
-DOMAIN-SUFFIX,edx-cdn.org
 DOMAIN-SUFFIX,eesti.ee
 DOMAIN-SUFFIX,eevpn.com
 DOMAIN-SUFFIX,efcc.org.hk
@@ -1895,7 +1848,6 @@ DOMAIN-SUFFIX,freetcp.com
 DOMAIN-SUFFIX,freetibet.net
 DOMAIN-SUFFIX,freetibet.org
 DOMAIN-SUFFIX,freetibetanheroes.org
-DOMAIN-SUFFIX,freetls.fastly.net
 DOMAIN-SUFFIX,freetribe.me
 DOMAIN-SUFFIX,freeviewmovies.com
 DOMAIN-SUFFIX,freevpn.me
@@ -1925,9 +1877,7 @@ DOMAIN-SUFFIX,frontlinedefenders.org
 DOMAIN-SUFFIX,frootvpn.com
 DOMAIN-SUFFIX,fscked.org
 DOMAIN-SUFFIX,fsurf.com
-DOMAIN-SUFFIX,ft.com
 DOMAIN-SUFFIX,ftchinese.com
-DOMAIN-SUFFIX,ftimg.net
 DOMAIN-SUFFIX,ftp1.biz
 DOMAIN-SUFFIX,ftpserver.biz
 DOMAIN-SUFFIX,ftv.com.tw
@@ -2020,7 +1970,6 @@ DOMAIN-SUFFIX,geekerhome.com
 DOMAIN-SUFFIX,geekheart.info
 DOMAIN-SUFFIX,gekikame.com
 DOMAIN-SUFFIX,gelbooru.com
-DOMAIN-SUFFIX,gemini.com
 DOMAIN-SUFFIX,generated.photos
 DOMAIN-SUFFIX,genius.com
 DOMAIN-SUFFIX,geocities.co.jp
@@ -2114,7 +2063,6 @@ DOMAIN-SUFFIX,gmx.net
 DOMAIN-SUFFIX,gnci.org.hk
 DOMAIN-SUFFIX,gnews.org
 DOMAIN-SUFFIX,go-pki.com
-DOMAIN-SUFFIX,go.dev
 DOMAIN-SUFFIX,go141.com
 DOMAIN-SUFFIX,goagent.biz
 DOMAIN-SUFFIX,goagentplus.com
@@ -2155,7 +2103,6 @@ DOMAIN-SUFFIX,goodreads.com
 DOMAIN-SUFFIX,goodtv.com.tw
 DOMAIN-SUFFIX,goodtv.tv
 DOMAIN-SUFFIX,goofind.com
-DOMAIN-SUFFIX,goog
 DOMAIN-SUFFIX,google.ac
 DOMAIN-SUFFIX,google.ad
 DOMAIN-SUFFIX,google.ae
@@ -3131,7 +3078,6 @@ DOMAIN-SUFFIX,kone.com
 DOMAIN-SUFFIX,koolsolutions.com
 DOMAIN-SUFFIX,koornk.com
 DOMAIN-SUFFIX,koranmandarin.com
-DOMAIN-SUFFIX,korbit.co.kr
 DOMAIN-SUFFIX,korenan2.com
 DOMAIN-SUFFIX,kqes.net
 DOMAIN-SUFFIX,kr
@@ -3194,7 +3140,6 @@ DOMAIN-SUFFIX,leeao.com.cn
 DOMAIN-SUFFIX,lefora.com
 DOMAIN-SUFFIX,left21.hk
 DOMAIN-SUFFIX,legalporno.com
-DOMAIN-SUFFIX,legra.ph
 DOMAIN-SUFFIX,legsjapan.com
 DOMAIN-SUFFIX,leirentv.ca
 DOMAIN-SUFFIX,leisurecafe.ca
@@ -3227,7 +3172,6 @@ DOMAIN-SUFFIX,liberal.org.hk
 DOMAIN-SUFFIX,libertytimes.com.tw
 DOMAIN-SUFFIX,libraryinformationtechnology.com
 DOMAIN-SUFFIX,libredd.it
-DOMAIN-SUFFIX,licdn.com
 DOMAIN-SUFFIX,lifemiles.com
 DOMAIN-SUFFIX,lighten.org.tw
 DOMAIN-SUFFIX,lighti.me
@@ -3267,7 +3211,6 @@ DOMAIN-SUFFIX,linux.org.hk
 DOMAIN-SUFFIX,linuxtoy.org
 DOMAIN-SUFFIX,lionsroar.com
 DOMAIN-SUFFIX,lipuman.com
-DOMAIN-SUFFIX,liquid.com
 DOMAIN-SUFFIX,liquiditytp.com
 DOMAIN-SUFFIX,liquidvpn.com
 DOMAIN-SUFFIX,list-manage.com
@@ -3423,7 +3366,6 @@ DOMAIN-SUFFIX,mediachinese.com
 DOMAIN-SUFFIX,mediafire.com
 DOMAIN-SUFFIX,mediafreakcity.com
 DOMAIN-SUFFIX,mediawiki.org
-DOMAIN-SUFFIX,medibang.com
 DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,meetav.com
 DOMAIN-SUFFIX,meetup.com
@@ -3524,7 +3466,6 @@ DOMAIN-SUFFIX,mitbbs.com
 DOMAIN-SUFFIX,mitbbsau.com
 DOMAIN-SUFFIX,mixero.com
 DOMAIN-SUFFIX,mixi.jp
-DOMAIN-SUFFIX,mixlr.com
 DOMAIN-SUFFIX,mixpod.com
 DOMAIN-SUFFIX,mixx.com
 DOMAIN-SUFFIX,mizzmona.com
@@ -4414,13 +4355,11 @@ DOMAIN-SUFFIX,rcinet.ca
 DOMAIN-SUFFIX,rd.com
 DOMAIN-SUFFIX,rdio.com
 DOMAIN-SUFFIX,rdtcdn.com
-DOMAIN-SUFFIX,reabble.com
 DOMAIN-SUFFIX,read01.com
 DOMAIN-SUFFIX,read100.com
 DOMAIN-SUFFIX,readdle.com
 DOMAIN-SUFFIX,readingtimes.com.tw
 DOMAIN-SUFFIX,readmoo.com
-DOMAIN-SUFFIX,readyatdawn.com
 DOMAIN-SUFFIX,readydown.com
 DOMAIN-SUFFIX,realcourage.org
 DOMAIN-SUFFIX,realitykings.com
@@ -4775,7 +4714,6 @@ DOMAIN-SUFFIX,smchbooks.com
 DOMAIN-SUFFIX,smh.com.au
 DOMAIN-SUFFIX,smhric.org
 DOMAIN-SUFFIX,smith.edu
-DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN-SUFFIX,smyxy.org
 DOMAIN-SUFFIX,snap-dev.net
 DOMAIN-SUFFIX,snap.com
@@ -4862,7 +4800,6 @@ DOMAIN-SUFFIX,spencertipping.com
 DOMAIN-SUFFIX,spendee.com
 DOMAIN-SUFFIX,spicevpn.com
 DOMAIN-SUFFIX,spideroak.com
-DOMAIN-SUFFIX,spiegel.de
 DOMAIN-SUFFIX,spike.com
 DOMAIN-SUFFIX,spoprod-a.akamaihd.net
 DOMAIN-SUFFIX,spotflux.com
@@ -4944,7 +4881,6 @@ DOMAIN-SUFFIX,stranabg.com
 DOMAIN-SUFFIX,straplessdildo.com
 DOMAIN-SUFFIX,streamable.com
 DOMAIN-SUFFIX,streamate.com
-DOMAIN-SUFFIX,streaming.mediaservices.windows.net
 DOMAIN-SUFFIX,streamingthe.net
 DOMAIN-SUFFIX,streema.com
 DOMAIN-SUFFIX,streetvoice.com
@@ -4986,7 +4922,6 @@ DOMAIN-SUFFIX,surfeasy.com.au
 DOMAIN-SUFFIX,surfshark.com
 DOMAIN-SUFFIX,suroot.com
 DOMAIN-SUFFIX,surrenderat20.net
-DOMAIN-SUFFIX,sushi.com
 DOMAIN-SUFFIX,sustainability.google
 DOMAIN-SUFFIX,svsfx.com
 DOMAIN-SUFFIX,swagbucks.com
@@ -5113,7 +5048,6 @@ DOMAIN-SUFFIX,telegraph.co.uk
 DOMAIN-SUFFIX,telesco.pe
 DOMAIN-SUFFIX,tellme.pw
 DOMAIN-SUFFIX,tenacy.com
-DOMAIN-SUFFIX,tenor.com
 DOMAIN-SUFFIX,tensorflow.org
 DOMAIN-SUFFIX,tenzinpalmo.com
 DOMAIN-SUFFIX,terabox.com
@@ -5125,7 +5059,6 @@ DOMAIN-SUFFIX,tfhub.dev
 DOMAIN-SUFFIX,tfiflve.com
 DOMAIN-SUFFIX,thaicn.com
 DOMAIN-SUFFIX,thb.gov.tw
-DOMAIN-SUFFIX,theage.com.au
 DOMAIN-SUFFIX,theatlantic.com
 DOMAIN-SUFFIX,theatrum-belli.com
 DOMAIN-SUFFIX,theaustralian.com.au
@@ -5575,7 +5508,6 @@ DOMAIN-SUFFIX,unicode.org
 DOMAIN-SUFFIX,unification.net
 DOMAIN-SUFFIX,unification.org.tw
 DOMAIN-SUFFIX,unirule.cloud
-DOMAIN-SUFFIX,uniswap.org
 DOMAIN-SUFFIX,unitedsocialpress.com
 DOMAIN-SUFFIX,unix100.com
 DOMAIN-SUFFIX,unknownspace.org
@@ -5663,7 +5595,6 @@ DOMAIN-SUFFIX,velkaepocha.sk
 DOMAIN-SUFFIX,venbbs.com
 DOMAIN-SUFFIX,venchina.com
 DOMAIN-SUFFIX,venetianmacao.com
-DOMAIN-SUFFIX,venturebeat.com
 DOMAIN-SUFFIX,ventureswell.com
 DOMAIN-SUFFIX,veoh.com
 DOMAIN-SUFFIX,vercel.app
@@ -5910,7 +5841,6 @@ DOMAIN-SUFFIX,wikileaks.pl
 DOMAIN-SUFFIX,wikilivres.info
 DOMAIN-SUFFIX,wikimapia.org
 DOMAIN-SUFFIX,wikimedia.org
-DOMAIN-SUFFIX,wikimediafoundation.org
 DOMAIN-SUFFIX,wikinews.org
 DOMAIN-SUFFIX,wikipedia.org
 DOMAIN-SUFFIX,wikiquote.org
@@ -6299,7 +6229,6 @@ IP-CIDR,120.253.253.226/32,no-resolve
 IP-CIDR,120.253.255.162/32,no-resolve
 IP-CIDR,120.253.255.34/32,no-resolve
 IP-CIDR,120.253.255.98/32,no-resolve
-IP-CIDR,125.209.208.0/20,no-resolve
 IP-CIDR,129.134.0.0/17,no-resolve
 IP-CIDR,13.32.0.0/15,no-resolve
 IP-CIDR,13.35.0.0/17,no-resolve
@@ -6325,9 +6254,7 @@ IP-CIDR,180.163.151.162/32,no-resolve
 IP-CIDR,180.163.151.34/32,no-resolve
 IP-CIDR,184.173.128.0/17,no-resolve
 IP-CIDR,185.60.216.0/22,no-resolve
-IP-CIDR,185.76.151.0/24,no-resolve
 IP-CIDR,203.104.128.0/19,no-resolve
-IP-CIDR,203.104.144.0/21,no-resolve
 IP-CIDR,203.208.39.0/24,no-resolve
 IP-CIDR,203.208.40.0/24,no-resolve
 IP-CIDR,203.208.41.0/24,no-resolve
@@ -6361,17 +6288,8 @@ IP-CIDR,69.63.176.0/20,no-resolve
 IP-CIDR,74.119.76.0/22,no-resolve
 IP-CIDR,74.125.0.0/16,no-resolve
 IP-CIDR,75.126.150.0/16,no-resolve
-IP-CIDR,91.105.192.0/23,no-resolve
 IP-CIDR,91.108.0.0/16,no-resolve
-IP-CIDR,91.108.12.0/22,no-resolve
-IP-CIDR,91.108.16.0/22,no-resolve
-IP-CIDR,91.108.20.0/22,no-resolve
-IP-CIDR,91.108.4.0/22,no-resolve
-IP-CIDR,91.108.56.0/22,no-resolve
-IP-CIDR,91.108.8.0/22,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,no-resolve
-IP-CIDR6,2001:b28:f23c::/48,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
-IP-CIDR6,2a0a:f280::/32,no-resolve
 USER-AGENT,Roam*
