@@ -2,7 +2,7 @@
 # https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/ChinaDomain.list
 # https://github.com/DivineEngine/Profiles/blob/master/Surge/Ruleset/China.list
 # https://ruleset.skk.moe/List/non_ip/domestic.conf
-#-------------------------------------------------------------#
+# ------------------------------------------------------------- #
 
 DOMAIN,cdn.bootcdn.net
 DOMAIN,cdn.bootcss.com
