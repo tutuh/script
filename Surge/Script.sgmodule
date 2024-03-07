@@ -11,8 +11,8 @@ skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn, gate.lagou.
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 
 [URL Rewrite]
-# > Redirect Google Search Service - www.google.cn
-^https?://(www\.)?(g|google)\.cn https://www.google.com 302
+# > Redirect Google Search Service - g.cn,www.g.cn,google.cn,www.google.cn
+^https?://(www.)?(g|google)\.cn https://www.google.com 307
 
 [Script]
 # > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
@@ -47,4 +47,4 @@ iLovePDF_解锁 = type=http-response,pattern=https://service.ilovepdf.com/v1/use
 心脏+_解锁 = type=http-response,pattern=^https:\/\/api\.995120\.cn\/mini\/api\/appleplus,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/tutuh/bc9dd61182aeb074203be152aa847f1d/raw/32518b3140cb5062c12641f62b0f3e50d57d1076/xizang.js
 
 [MITM]
-hostname = %APPEND% www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, testflight.apple.com, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn
+hostname = %APPEND% g.cn, www.g.cn, google.cn, www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, testflight.apple.com, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn
