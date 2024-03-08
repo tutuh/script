@@ -1,8 +1,9 @@
+################################
 # 代理列表 合并
 # https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/ProxyLite.list
 # https://ruleset.skk.moe/List/non_ip/global.conf
 # https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list
-# ---------------------- #
+################################
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
