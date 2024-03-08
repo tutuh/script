@@ -49,5 +49,8 @@ iLovePDF_解锁 = type=http-response,pattern=https://service.ilovepdf.com/v1/use
 # > 咔叽 - purchase-*-api.*.com, user-kaji-api.b612kaji.com
 咔叽_解锁 = type=http-response,pattern=^https?:\/\/(purchase-.*-api|user-kaji-api)\.(yiruikecorp|b612kaji|tianyancam)\.com\/v\d\/purchase\/subscription\/subscriber\/status,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/tutuh/b56cb47439d694e2dfd0ca35540a2cb7/raw/f05f0ab6485b4623006ddf63639ca33e49b0ca65/B12kj.js
 
+# > 17个乐器 - *api.quthing.com
+17个乐器_解锁 = type=http-response,pattern=^https:\/\/.*api\.quthing\.com\/(.+\/vip|vip|student|user|appearance|background|rest),requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/tutuh/38e199e78dbabd2ffce987661d869c00/raw/99976d2c2b10b92cad62744c9fbca6097cb5fd4d/yueqi.js
+ 
 [MITM]
-hostname = %APPEND% www.g.cn, www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, testflight.apple.com, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com
+hostname = %APPEND% www.g.cn, www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, testflight.apple.com, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com
