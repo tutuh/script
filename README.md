@@ -20,7 +20,6 @@
 [@DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)         
 [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)   
 [@app2smile](https://github.com/app2smile/rules)   
-[@zmqcherish](https://github.com/zmqcherish/proxy-script)   
 [@Neurogram-R](https://github.com/Neurogram-R/Surge)  
 [@Rabbit-Spec](https://github.com/Rabbit-Spec/Surge)   
 [@Tartarus2014](https://github.com/Tartarus2014/Script)  
