@@ -1,9 +1,7 @@
-################################
 # 直连列表 合并
 # https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/ChinaDomain.list
 # https://ruleset.skk.moe/List/non_ip/domestic.conf
 # https://github.com/DivineEngine/Profiles/blob/master/Surge/Ruleset/China.list
-################################
 
 DOMAIN,cdn.bootcdn.net
 DOMAIN,cdn.bootcss.com
@@ -515,6 +513,7 @@ DOMAIN-SUFFIX,kankan.com
 DOMAIN-SUFFIX,kaola.com
 DOMAIN-SUFFIX,keepcdn.com
 DOMAIN-SUFFIX,keepfrds.com
+DOMAIN-SUFFIX,kingsoft-office-service.com
 DOMAIN-SUFFIX,kkmh.com
 DOMAIN-SUFFIX,knewone.com
 DOMAIN-SUFFIX,koowo.com
@@ -998,6 +997,8 @@ IP-CIDR6,2a0b:b580::/48,no-resolve
 IP-CIDR6,2a0b:b581::/48,no-resolve
 IP-CIDR6,2a0b:b582::/48,no-resolve
 IP-CIDR6,2a0b:b583::/48,no-resolve
+PROCESS-NAME,WeChat
+PROCESS-NAME,WeCom
 USER-AGENT,%E4%BC%98%E9%85%B7*
 USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*
 USER-AGENT,MicroMessenger Client
