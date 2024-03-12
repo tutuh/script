@@ -27,8 +27,8 @@
 [@dompling](https://github.com/dompling/Script)  
 [@kokoryh](https://github.com/kokoryh/Script)   
 [@RuCu6](https://github.com/RuCu6/QuanX)  
-[@ACL4SSR 分流](https://github.com/ACL4SSR/ACL4SSR/tree/master)     
-[@SukkaW 规则分流](https://github.com/SukkaW/Surge)  
+[@ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master)     
+[@SukkaW](https://github.com/SukkaW/Surge)  
 
 
 
