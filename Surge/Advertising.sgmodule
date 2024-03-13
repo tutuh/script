@@ -22,7 +22,8 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMa
 
 [Map Local]
 # > 微信公众号去广告 - mp.weixin.qq.com
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/wechat.json"
+#^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/wechat.json"
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data-type=text data="{}" status-code="advertisement_num": 0,"advertisement_info": []
 
 # > 美团 & 美团外卖 - flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
