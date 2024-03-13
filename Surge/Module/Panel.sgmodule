@@ -3,7 +3,6 @@
 #!system=ios
 #!arguments= icons:globe.asia.australia, icolor:#6699FF, GPT:0 ,HideIP:1, cnTimeout:1000, usTimeout:3000,
 #!arguments-desc= 入口查询超时: cnTimeout\n落地查询超时: usTimeout\n隐藏IP: HideIP \n\n开启为: 1\n关闭为: 0
-#!category=本地模块
 
 # 机场流量信息说明
 # encode链接： https://www.urlencoder.org
