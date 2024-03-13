@@ -3,10 +3,7 @@
 #!category=Tutu
 
 # 新版Map Local Surge ≥5.21.0(3066)
-# ^http://surgetest\.com/json data-type=text data="{}" status-code=500
-# ^http://surgetest\.com/gif data-type=tiny-gif status-code=200
-# ^http://surgetest\.com/file data-type=file data="data/map-local.json" header="a:b|foo:bar"
-# ^http://surgetest\.com/base64 data="dGVzdA==" data-type=base64
+# https://manual.nssurge.com/http-processing/mock.html
 
 [Rule]
 # > 根据User-Agent精准屏蔽amdc
