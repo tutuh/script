@@ -185,7 +185,7 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMa
 ^https:\/\/openapi\.laiyifen\.com\/advert-app-api\/bootScreen\/v1\/startScreen - reject
 
 # (M)
-# > MI - api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com
+# > MI - api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com, api-mifit-cn3.zepp.com
 # > 小米
 ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start - reject
 # 小米金融
@@ -195,6 +195,8 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMa
 ^https?:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig - reject
 # > 米家
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) - reject
+# > 小米运动
+^https:\/\/api-mifit-cn3\.zepp\.com\/discovery\/mi\/cards\/(home_page_promotion|startpage_ad) - reject
 # ------
 # > 秒拍 - v?-api.miaopai.com
 ^https?:\/\/v\d-api\.miaopai\.com\/miaopai\/advertisement\/ - reject
@@ -296,4 +298,4 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMa
 ^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad\/ - reject
 
 [MITM]
-hostname = %APPEND% mp.weixin.qq.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, res.kfc.com.cn, tiebac.baidu.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, acs-m.freshippo.com, cn-acs.m.cainiao.com, gw.aihuishou.com, issuecdn.baidupcs.com, pan.baidu.com, mime.baidu.com, app.api.ke.com, manga.bilibili.com, api.vc.bilibili.com, res.pizzahut.com.cn, app-gw.csdn.net, www.cntv.com, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, capis*.didapinche.com, api.douban.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, switch.jumpvg.com, api.m.jd.com, *.kingsoft-office-service.com, api.gotokeep.com, api.kkmh.com, open.e.kuaishou.com, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com, v?-api.miaopai.com, mapi.mafengwo.cn, mob.mddcloud.com.cn, api.mwee.cn, slapi.oray.net, pss.txffp.com, iobs.pingan.com.cn, mage*.if.qidian.com, adproxy.autohome.com, app2.autoimg.cn, *.k.sohu.com, *.tv.sohu.com, mpcs.suning.com, ccsp-egmas.sf-express.com, shopic.sf-express.com, m.tuniu.com, cloud.189.cn, tqt.weibo.cn, msg.umengcloud.com, api.vuevideo.net, appconf.mail.163.com, client.mail.163.com, gw.kaola.com, p.du.163.com, interface*.music.163.com, *-release.wuta-cam.com, api.wfdata.club, api.xiachufang.com, app-api.niu.com, app.yinxiang.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
+hostname = %APPEND% mp.weixin.qq.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, res.kfc.com.cn, tiebac.baidu.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, acs-m.freshippo.com, cn-acs.m.cainiao.com, gw.aihuishou.com, issuecdn.baidupcs.com, pan.baidu.com, mime.baidu.com, app.api.ke.com, manga.bilibili.com, api.vc.bilibili.com, res.pizzahut.com.cn, app-gw.csdn.net, www.cntv.com, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, capis*.didapinche.com, api.douban.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, switch.jumpvg.com, api.m.jd.com, *.kingsoft-office-service.com, api.gotokeep.com, api.kkmh.com, open.e.kuaishou.com, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com, api-mifit-cn3.zepp.com, v?-api.miaopai.com, mapi.mafengwo.cn, mob.mddcloud.com.cn, api.mwee.cn, slapi.oray.net, pss.txffp.com, iobs.pingan.com.cn, mage*.if.qidian.com, adproxy.autohome.com, app2.autoimg.cn, *.k.sohu.com, *.tv.sohu.com, mpcs.suning.com, ccsp-egmas.sf-express.com, shopic.sf-express.com, m.tuniu.com, cloud.189.cn, tqt.weibo.cn, msg.umengcloud.com, api.vuevideo.net, appconf.mail.163.com, client.mail.163.com, gw.kaola.com, p.du.163.com, interface*.music.163.com, *-release.wuta-cam.com, api.wfdata.club, api.xiachufang.com, app-api.niu.com, app.yinxiang.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
