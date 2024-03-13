@@ -10,6 +10,7 @@ AND,((OR,((USER-AGENT,AMap*), (USER-AGENT,Cainiao*), (USER-AGENT,Alibaba*), (USE
 OR,((DOMAIN,waapdg.jd.com), (DOMAIN,metrics-picture.d.meituan.net), (DOMAIN,route-stats.d.meituan.net), (DOMAIN,maplocatesdksnapshot.d.meituan.net), (DOMAIN,al-log.d.meituan.net), (DOMAIN,babel-statistics-android.d.meituan.net)),REJECT-DROP
 
 # > 腾讯视频去开屏广告
+URL-REGEX,^https:\/\/ossgw\.alicdn\.com\/creatives-assets/prod/feupload/user,REJECT
 IP-CIDR,47.110.187.87/32,REJECT,no-resolve
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
 
