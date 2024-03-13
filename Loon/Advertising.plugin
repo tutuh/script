@@ -3,23 +3,35 @@
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png 
 
 [Rule]
+# > 根据User-Agent精准屏蔽amdc，高德、菜鸟、阿里巴巴、飞猪
+AND,((OR,((USER-AGENT,AMap*), (USER-AGENT,Cainiao*), (USER-AGENT,Alibaba*), (USER-AGENT,%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP
+# > 百度贴吧去广告（需配合下方脚本）
+OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DROP
+
 # > 贴吧去广告
-DOMAIN,180.76.76.200,REJECT
-IP-CIDR,180.76.76.200/32,REJECT,no-resolve
+#DOMAIN,180.76.76.200,REJECT
+#IP-CIDR,180.76.76.200/32,REJECT,no-resolve
+
+# > 屏蔽无效域名
+OR,((DOMAIN,waapdg.jd.com), (DOMAIN,metrics-picture.d.meituan.net), (DOMAIN,route-stats.d.meituan.net), (DOMAIN,maplocatesdksnapshot.d.meituan.net), (DOMAIN,al-log.d.meituan.net), (DOMAIN,babel-statistics-android.d.meituan.net)),REJECT-DROP
 
 # > 美团无效域名
-DOMAIN,metrics-picture.d.meituan.net,REJECT
-DOMAIN,route-stats.d.meituan.net,REJECT
-DOMAIN,maplocatesdksnapshot.d.meituan.net,REJECT
-DOMAIN,al-log.d.meituan.net,REJECT
-DOMAIN,babel-statistics-android.d.meituan.net,REJECT
+#DOMAIN,metrics-picture.d.meituan.net,REJECT
+#DOMAIN,route-stats.d.meituan.net,REJECT
+#DOMAIN,maplocatesdksnapshot.d.meituan.net,REJECT
+#DOMAIN,al-log.d.meituan.net,REJECT
+#DOMAIN,babel-statistics-android.d.meituan.net,REJECT
+
+# > 腾讯视频去开屏广告
+IP-CIDR,47.110.187.87/32,REJECT,no-resolve
+OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
 
 # > 京东
 URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 
 [Script]
 # > 根据User-Agent精准屏蔽amdc - 菜鸟、高德地图、飞猪
-http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path=https://raw.githubusercontent.com/tutuh/script/master/Loon/JS/amdc_reject.js, timeout=10, tag=amdc精准定位
+#http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path=https://raw.githubusercontent.com/tutuh/script/master/Loon/JS/amdc_reject.js, timeout=10, tag=amdc精准定位
 
 # > 微信去除公众号文章底部广告 - mp.weixin.qq.com
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Wechat.js, tag=微信公众号去广告
@@ -28,25 +40,17 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1, 
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(frs\/(page|threadlist|generalTabList)|pb\/(pic)?page|excellent\/personalized))$|tiebaads\/commonbatch\?) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body=true, timeout=10, tag=贴吧json
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=贴吧proto
 
-# > 12306去广告 - ad.12306.cn
-http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/12306.js, tag=12306去广告
-
-
 [URL Rewrite]
 # > 美团 & 美团外卖 - flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
 ^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg reject-dict
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
+^https:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json reject-dict
 ^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
 
-# > 大众点评
-^https:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png reject-dict
-^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) reject-200
-
-# > 肯德基 - res.kfc.com
-^https:\/\/res\.kfc\.com\.cn\/advertisement reject
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apprn\/\w+\.json\? reject-200
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/configuration\/\w+\.json reject-dict
+# > 肯德基 - res.kfc.com.cn
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome reject-dict
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? reject-dict
 
 # (0~9)
 # > 12123 - gab.122.gov.cn
@@ -87,8 +91,6 @@ http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList requires-body=1, max
 # > 百度网盘 - issuecdn.baidupcs.com, pan.baidu.com
 ^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) reject
 ^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao reject
-# > 百度文库 - appwk.baidu.com
-^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad reject
 # > 百度输入法 - mime.baidu.com
 ^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo$ reject
 ^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement reject
@@ -259,18 +261,6 @@ http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList requires-body=1, max
 ^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen reject
 
 # (T)
-# ---(Tencent)---
-# > Tencent Game - ssl.kohsocialapp.qq.com
-^https?:\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons reject
-^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info reject
-# > Tencent Map - 4gimg.map.qq.com
-^https?:\/\/4gimg\.map\.qq\.com\/mwaSplash\/ reject
-# > Tencent News - r.inews.qq.com
-^https?:\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) reject
-^https?:\/\/r\.inews\.qq\.com\/(getBannerAds|getNewsRemoteConfig|getSplash|searchHotCatList|upLoadLoc) reject
-# > Tencent Sports - news.ssp.qq.com
-^https?:\/\/news\.ssp\.qq\.com\/app reject
-# ------
 # > 途牛 - m.tuniu.com
 ^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ reject
 # > 天翼云盘 - cloud.189.cn
@@ -328,12 +318,10 @@ http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList requires-body=1, max
 # (Z)
 # > 作业帮 - syh.zybang.com
 ^https?:\/\/syh\.zybang\.com\/com\/adx\/ reject
-# > 最右 - api.izuiyou.com
-^https?:\/\/api\.izuiyou\.com\/ad\/ reject
 # > 掌阅
 ^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad\/ reject
 ^https?:\/\/ih2\.ireader\.com\/zyapi\/self\/screen\/ad reject
 ^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad\/ reject
 
 [MITM]
-hostname = mp.weixin.qq.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, res.kfc.com, tiebac.baidu.com, ad.12306.cn, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, cn-acs.m.cainiao.com, gw.aihuishou.com, issuecdn.baidupcs.com, pan.baidu.com, appwk.baidu.com, mime.baidu.com, app.api.ke.com, manga.bilibili.com, api.vc.bilibili.com, res.pizzahut.com.cn, app-gw.csdn.net, www.cntv.com, api.chelaile.net.cn, web.chelaile.net.cn, api.caijingmobile.com, api.dangdang.com, e.dangdang.com, capis*.didapinche.com, api.douban.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, api.m.jd.com, api.jxedt.com, *.kakamobi.cn, *.kingsoft-office-service.com, api.gotokeep.com, api.kkmh.com, open.e.kuaishou.com, api.vistopia.com.cn, imeclient.openspeech.cn, api.laifeng.com, api.club.lenovo.cn, openapi.laiyifen.com, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com, v?-api.miaopai.com, mapi.mafengwo.cn, mob.mddcloud.com.cn, api.mwee.cn, slapi.oray.net, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, mage*.if.qidian.com, adproxy.autohome.com, app2.autoimg.cn, *.k.sohu.com, *.tv.sohu.com, mpcs.suning.com, ccsp-egmas.sf-express.com, shopic.sf-express.com, ssl.kohsocialapp.qq.com, 4gimg.map.qq.com, r.inews.qq.com, news.ssp.qq.com, m.tuniu.com, cloud.189.cn, tqt.weibo.cn, mrobot.pconline.com.cn, mrobot.pcauto.com.cn, msg.umengcloud.com, api.vuevideo.net, appconf.mail.163.com, client.mail.163.com, gw.kaola.com, p.du.163.com, interface*.music.163.com, *-release.wuta-cam.com, app.mixcapp.com, api.wfdata.club, api.xiachufang.com, app-api.niu.com, app.yinxiang.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com, api.izuiyou.com
+hostname = mp.weixin.qq.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, res.kfc.com.cn, tiebac.baidu.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, cn-acs.m.cainiao.com, gw.aihuishou.com, issuecdn.baidupcs.com, pan.baidu.com, mime.baidu.com, app.api.ke.com, manga.bilibili.com, api.vc.bilibili.com, res.pizzahut.com.cn, app-gw.csdn.net, www.cntv.com, api.chelaile.net.cn, web.chelaile.net.cn, api.caijingmobile.com, api.dangdang.com, e.dangdang.com, capis*.didapinche.com, api.douban.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, api.m.jd.com, api.jxedt.com, *.kakamobi.cn, *.kingsoft-office-service.com, api.gotokeep.com, api.kkmh.com, open.e.kuaishou.com, api.vistopia.com.cn, imeclient.openspeech.cn, api.laifeng.com, api.club.lenovo.cn, openapi.laiyifen.com, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com, v?-api.miaopai.com, mapi.mafengwo.cn, mob.mddcloud.com.cn, api.mwee.cn, slapi.oray.net, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, mage*.if.qidian.com, adproxy.autohome.com, app2.autoimg.cn, *.k.sohu.com, *.tv.sohu.com, mpcs.suning.com, ccsp-egmas.sf-express.com, shopic.sf-express.com, m.tuniu.com, cloud.189.cn, tqt.weibo.cn, mrobot.pconline.com.cn, mrobot.pcauto.com.cn, msg.umengcloud.com, api.vuevideo.net, appconf.mail.163.com, client.mail.163.com, gw.kaola.com, p.du.163.com, interface*.music.163.com, *-release.wuta-cam.com, app.mixcapp.com, api.wfdata.club, api.xiachufang.com, app-api.niu.com, app.yinxiang.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
