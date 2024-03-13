@@ -289,7 +289,7 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMa
 
 # (Z)
 # > 作业帮 - syh.zybang.com
-^https?:\/\/syh\.zybang\.com\/com\/adx\/ - reject
+^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ - reject
 # > 掌阅
 ^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad\/ - reject
 ^https?:\/\/ih2\.ireader\.com\/zyapi\/self\/screen\/ad - reject
