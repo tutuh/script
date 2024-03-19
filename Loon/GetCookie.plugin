@@ -27,7 +27,7 @@ http-request ^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/u
 
 # > 哔哩哔哩 - app.bilibili.com,m.bilibili.com
 # 打开：哔哩哔哩APP 或者 https://www.bilibili.com 获取cookie
-http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=哔哩哔哩APP_Cookie 
+http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=哔哩哔哩APP_Cookie 
 http-request ^https?:\/\/m\.bilibili\.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=哔哩哔哩网页_Cookie
 
 # > 阿里云盘 - auth.alipan.com
