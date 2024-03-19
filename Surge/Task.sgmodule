@@ -25,4 +25,4 @@ Boxjs数据备份 = type=cron,cronexp=10 8 1 * * *,wake-system=1,timeout=180,scr
 #Sub-Store同步订阅 = type=cron,cronexp=30 12 1 * * *,wake-system=1,timeout=120,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js
 
 # > 哔哩哔哩常驻更新Cookie - app.bilibili.com
-哔哩哔哩APP_Cookie = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\?,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
+哔哩哔哩APP_Cookie = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
