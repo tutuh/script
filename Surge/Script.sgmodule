@@ -20,7 +20,7 @@ skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn, gate.lagou.
 always-real-ip = %APPEND% easy-login.10099.com.cn
 
 # > BoxJs
-force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
+force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, www.google.cn
 
 [URL Rewrite]
 # > 谷歌中国重定向 - www.g.cn, www.google.cn
