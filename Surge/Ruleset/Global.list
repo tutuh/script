@@ -239,6 +239,7 @@ DOMAIN-SUFFIX,cryptocompare.com
 DOMAIN-SUFFIX,dailymail.co.uk
 DOMAIN-SUFFIX,dailymotion.com
 DOMAIN-SUFFIX,daum.net
+DOMAIN-SUFFIX,dcard.tw
 DOMAIN-SUFFIX,dditscdn.com
 DOMAIN-SUFFIX,deadline.com
 DOMAIN-SUFFIX,debug.com
@@ -263,6 +264,7 @@ DOMAIN-SUFFIX,dlive.tv
 DOMAIN-SUFFIX,dns.google
 DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,dowjones.com
+DOMAIN-SUFFIX,dribbble.com
 DOMAIN-SUFFIX,dropbox-dns.com
 DOMAIN-SUFFIX,dropbox.com
 DOMAIN-SUFFIX,dropboxapi.com
@@ -364,6 +366,14 @@ DOMAIN-SUFFIX,gongm.in
 DOMAIN-SUFFIX,goo.gl
 DOMAIN-SUFFIX,goodreads.com
 DOMAIN-SUFFIX,goog
+DOMAIN-SUFFIX,google.co.jp
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,google.com.hk
+DOMAIN-SUFFIX,google.com.sg
+DOMAIN-SUFFIX,google.com.tw
+DOMAIN-SUFFIX,google.hk
+DOMAIN-SUFFIX,google.jp
+DOMAIN-SUFFIX,google.tw
 DOMAIN-SUFFIX,googleapis.cn
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,grammarly.com
@@ -383,6 +393,7 @@ DOMAIN-SUFFIX,hackmd.io
 DOMAIN-SUFFIX,hbg.com
 DOMAIN-SUFFIX,he.net
 DOMAIN-SUFFIX,heroku.com
+DOMAIN-SUFFIX,hinet.net
 DOMAIN-SUFFIX,hk
 DOMAIN-SUFFIX,hket.com
 DOMAIN-SUFFIX,hockeyapp.net
@@ -423,6 +434,7 @@ DOMAIN-SUFFIX,jsdelivr.com
 DOMAIN-SUFFIX,jsdelivr.net
 DOMAIN-SUFFIX,jtvnw.net
 DOMAIN-SUFFIX,justpaste.it
+DOMAIN-SUFFIX,kagi.com
 DOMAIN-SUFFIX,kakao.co.kr
 DOMAIN-SUFFIX,kakao.com
 DOMAIN-SUFFIX,kakaocdn.net
@@ -488,6 +500,7 @@ DOMAIN-SUFFIX,missav.com
 DOMAIN-SUFFIX,mixlr.com
 DOMAIN-SUFFIX,mojang.com
 DOMAIN-SUFFIX,moon.fm
+DOMAIN-SUFFIX,mozilla.com
 DOMAIN-SUFFIX,msn.com
 DOMAIN-SUFFIX,mubi.com
 DOMAIN-SUFFIX,mvnrepository.com
@@ -601,6 +614,7 @@ DOMAIN-SUFFIX,rocksdb.org
 DOMAIN-SUFFIX,rsshub.app
 DOMAIN-SUFFIX,rthk.hk
 DOMAIN-SUFFIX,rule34.xxx
+DOMAIN-SUFFIX,run.app
 DOMAIN-SUFFIX,saucenao.com
 DOMAIN-SUFFIX,sb-cd.com
 DOMAIN-SUFFIX,sc-cdn.net
@@ -608,6 +622,7 @@ DOMAIN-SUFFIX,schema.org
 DOMAIN-SUFFIX,scmp.com
 DOMAIN-SUFFIX,scribd.com
 DOMAIN-SUFFIX,search.com
+DOMAIN-SUFFIX,sendbird.com
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,setapp.com
 DOMAIN-SUFFIX,sfx.ms
@@ -651,6 +666,7 @@ DOMAIN-SUFFIX,spoprod-a.akamaihd.net
 DOMAIN-SUFFIX,spring.io
 DOMAIN-SUFFIX,spring.net
 DOMAIN-SUFFIX,stackblitz.com
+DOMAIN-SUFFIX,stackexchange.com
 DOMAIN-SUFFIX,stackoverflow.com
 DOMAIN-SUFFIX,startpage.com
 DOMAIN-SUFFIX,static-economist.com
@@ -668,6 +684,7 @@ DOMAIN-SUFFIX,storage.msn.com
 DOMAIN-SUFFIX,straitstimes.com
 DOMAIN-SUFFIX,streamable.com
 DOMAIN-SUFFIX,streaming.mediaservices.windows.net
+DOMAIN-SUFFIX,stripchat.com
 DOMAIN-SUFFIX,substack.com
 DOMAIN-SUFFIX,surfshark.com
 DOMAIN-SUFFIX,sushi.com
