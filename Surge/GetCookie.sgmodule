@@ -36,7 +36,7 @@
 
 # > 途虎养车app及小程序 - api.tuhu.cn
 # 打开：微信途虎养车小程序 -> 我的 -> 积分 获取cookie
-途虎养车_Cookie = type=http-request,pattern=https://api.tuhu.cn/User/GetInternalCenterInfo,requires-body=0,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
+途虎养车_Cookie = type=http-request,pattern=https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo,requires-body=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js
 
 [MITM]
 hostname = %APPEND% app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, auth.alipan.com, auth.aliyundrive.com, api.tuhu.cn
