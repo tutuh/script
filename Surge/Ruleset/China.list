@@ -1,7 +1,7 @@
 # 直连列表 合并
 # https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/ChinaDomain.list
 # https://ruleset.skk.moe/List/non_ip/domestic.conf
-# https://github.com/DivineEngine/Profiles/blob/master/Surge/Ruleset/China.list
+# DivineEngine
 
 DOMAIN,cdn.bootcdn.net
 DOMAIN,cdn.bootcss.com
