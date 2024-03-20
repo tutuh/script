@@ -21,8 +21,16 @@ DOMAIN,cupid.iqiyi.com
 
 # (B)
 # 百度
-DOMAIN,mobads.baidu.com
+DOMAIN-SUFFIX,duapps.com
+DOMAIN-SUFFIX,cpro.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
+DOMAIN,afd.baidu.com
+DOMAIN,als.baidu.com
+DOMAIN,duclick.baidu.com
+DOMAIN,mobads.baidu.com
+DOMAIN,mobads-logs.baidu.com
+DOMAIN,nadvideo2.baidu.com
+DOMAIN,nsclick.baidu.com
 
 # (C)
 # > CCTV Video
@@ -82,12 +90,9 @@ DOMAIN-SUFFIX,googleadservices.com
 DOMAIN-SUFFIX,googleadsserving.cn
 DOMAIN-SUFFIX,googlesyndication.com
 DOMAIN-SUFFIX,googletagservices.com
+DOMAIN,ads.youtube.com
 
 # (H)
-# > 虎牙直播
-DOMAIN,business.msstatic.com
-DOMAIN,pp-cdnfile2pcdn.msstatic.com
-DOMAIN,livewebbs2pcdn.msstatic.com
 # > 虎扑
 DOMAIN,adx.hupu.com
 DOMAIN,adx-api.hupu.com
@@ -96,8 +101,11 @@ DOMAIN,goblin.hupu.com
 # (J)
 # > 驾校一点通
 DOMAIN,richmanapi.jxedt.com
+DOMAIN,richmanapi.ksedt.com
 DOMAIN,richmanmain.jxedt.com
+DOMAIN,richmanrank.ksedt.com
 DOMAIN,richmanrules.jxedt.com
+DOMAIN,richmanrules.ksedt.com
 # > 金山
 DOMAIN,ad-stat.ksosoft.com
 DOMAIN,img.auction-ads.wpscdn.cn
@@ -110,6 +118,7 @@ DOMAIN,ws.ksmobile.net
 
 # (K)
 # > 快手
+DOMAIN-SUFFIX,e.kuaishou.cn
 DOMAIN-SUFFIX,e.kuaishou.com
 DOMAIN,js-ad.a.yximgs.com
 # > 酷我音乐
@@ -119,12 +128,6 @@ DOMAIN,mobilead.kuwo.cn
 DOMAIN,rich.kuwo.cn
 
 # (L)
-# > 乐视
-DOMAIN-SUFFIX,webp2p.letv.com
-DOMAIN,ark.letv.com
-DOMAIN,emma-414870e223.huodonghezi.com
-DOMAIN,g3.letv.com
-DOMAIN,n.mark.letv.com
 # > 乐播投屏
 DOMAIN,ad.hpplay.cn
 DOMAIN,adc.hpplay.cn
@@ -171,9 +174,6 @@ DOMAIN,ad.api.moji.com
 DOMAIN,adlaunch.moji.com
 DOMAIN,ads.mojicdn.com
 DOMAIN,v1.log.moji.com
-# > 美颜相机
-DOMAIN,adui.tg.meitu.com
-DOMAIN,aaid.uyunad.com
 # > 美团
 DOMAIN,maplocatesdksnapshot.d.meituan.net
 DOMAIN,metrics-picture.d.meituan.net
@@ -222,18 +222,12 @@ DOMAIN,adm3.autoimg.cn
 # > Snapchat
 DOMAIN,ads.snapchat.com
 DOMAIN,adsapi.snapchat.com
-# > Speedtest
-DOMAIN,ads.pubmatic.com
-DOMAIN,id.hadron.ad.gt
-DOMAIN-KEYWORD,-adsystem.com
 # > 搜狐
 DOMAIN-SUFFIX,ad.sohu.com
 DOMAIN-SUFFIX,ads.sohu.com
 DOMAIN-SUFFIX,aty.sohu.com
 DOMAIN,hui.sohu.com
 DOMAIN-SUFFIX,pv.sohu.com
-# > 数字联盟
-DOMAIN-SUFFIX,shuzilm.cn
 
 # (T)
 # --- (Tencent) ---
@@ -280,17 +274,22 @@ DOMAIN-KEYWORD,stsdk.vivoglobal.com
 # > 网易
 DOMAIN-SUFFIX,dsp.youdao.com
 DOMAIN-SUFFIX,union.youdao.com
-DOMAIN,impservice.dictapp.youdao.com
-DOMAIN,impservice.youdao.com
 DOMAIN,ad.bn.netease.com
 DOMAIN,ad.yixin.im
+DOMAIN,admusicpic.music.126.net
 DOMAIN,g1.163.com
 DOMAIN,gorgon.youdao.com
 DOMAIN,iad.g.163.com
+DOMAIN,iadmat.nosdn.127.net
+DOMAIN,iadmusicmat.music.126.net
+DOMAIN,iadmusicmatvideo.music.126.net
+DOMAIN,impservice.dictapp.youdao.com
+DOMAIN,impservice.youdao.com
 DOMAIN,n.3g.163.com
 DOMAIN,nex.163.com
 DOMAIN,yt-adp.nosdn.127.net
 DOMAIN,yt-adp.ws.126.net
+
 # > 网上国网
 DOMAIN,h5-api.feiersmart.com
 
