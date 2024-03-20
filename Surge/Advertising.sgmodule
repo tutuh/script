@@ -54,7 +54,7 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 (?i)\b\/ads\? - reject
 
 (?i)\badvertisement - reject
-#(?i)\badvertising - reject
+# (?i)\badvertising - reject
 (?i)\bsplash_screen - reject
 
 
