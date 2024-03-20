@@ -75,15 +75,11 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 # > 淘宝 - gw.alicdn.com, heic.alicdn.com
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/\w{2}\/.+\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q\d0\.jpg_\.(heic|webp)$ - reject
 # > 一淘网 - acs.m.taobao.com
+^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ - reject
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash - reject
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise - reject
-# > 淘票票 - acs.m.taobao.com
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise - reject
 # > 盒马 - acs.m.taobao.com, acs-m.freshippo.com
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.wdk\.render\.querysinglepage - reject
 ^https?:\/\/acs-m\.freshippo\.com\/gw\/mtop\.wdk\.render\.querysinglepage - reject
-# > 菜鸟 - cn-acs.m.cainiao.com
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ - reject
 # > 闲鱼 - gw.alicdn.com, acs.m.taobao.com
 ^https:\/\/gw\.alicdn\.com\/mt\/ - reject
 ^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} - reject
@@ -91,17 +87,16 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
 # ------------
 # > 爱回收 - gw.aihuishou.com
-^https?:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement - reject
+^https:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement - reject
 
 # (B)
 # > 百度网盘 - issuecdn.baidupcs.com, pan.baidu.com
-^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) - reject
+^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx - reject
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry - reject
 ^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao - reject
 # > 百度输入法 - mime.baidu.com
-^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo$ - reject
-^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement - reject
-# > 贝壳找房- app.api.ke.com
-^https?:\/\/app\.api\.ke\.com\/config\/config\/bootpage - reject
+#^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo$ - reject
+#^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement - reject
 # > 哔哩哔哩漫画 - manga.bilibili.com, api.vc.bilibili.com
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash - reject
@@ -114,13 +109,9 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 
 # (C)
 # > CSDN - app-gw.csdn.net
-^https?:\/\/app-gw\.csdn\.net\/cms-app\/v\d\/home_page\/open_advertisement - reject
-^https?:\/\/app-gw\.csdn\.net\/silkroad-api\/api\/v\d\/assemble\/list\/pub\/channel\/app_open_screen_ad - reject
-# > CNTV - www.cntv.com
-^https?:\/\/www\.cntv\.com\/nettv\/adp\/ - reject
+^https:\/\/app-gw\.csdn\.net\/cms-app\/v\d\/home_page\/open_advertisement - reject
 # > 车来了 - api.chelaile.net.cn, web.chelaile.net.cn
 ^https?:\/\/api\.chelaile\.net\.cn\/adpub\/ - reject
-^https?:\/\/api\.chelaile\.net\.cn\/goocity\/advert\/ - reject
 ^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub\/ - reject
 
 # (D)
@@ -158,7 +149,7 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start - reject
 # > 金山 - *.kingsoft-office-service.com
 ^https?:\/\/service\.iciba\.com\/popo\/open\/screens\/v\d\?adjson - reject
-# > 驾考宝典- *.kakamobi.cn
+# > 驾考宝典 - *.kakamobi.cn
 ^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ - reject
 
 # (K)
@@ -172,22 +163,17 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 ^https:\/\/openapi\.laiyifen\.com\/advert-app-api\/bootScreen\/v1\/startScreen - reject
 
 # (M)
-# > MI - api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com, api-mifit-cn3.zepp.com
-# > 小米
-^https?:\/\/api\.m\.mi\.com\/v1\/app\/start - reject
-# 小米金融
+# > 小米 - api.m.mi.com
+^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start - reject
+# > 米家 - home.mi.com
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) - reject
+# > 小米金融 - api.jr.mi.com
 ^https:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen - reject
 ^https:\/\/api\.jr\.mi\.com\/v\d\/adv - reject
-# > 小米有品
-^https?:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig - reject
-# > 米家
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) - reject
-# > 小米运动
-^https:\/\/api-mifit-cn3\.zepp\.com\/discovery\/mi\/cards\/(home_page_promotion|startpage_ad) - reject
+# > 美味不用等 - capi.mwee.cn
+^https?:\/\/capi\.mwee\.cn\/app-api\/V\d+\/app\/(ad|getstartad) - reject
 # > 秒拍 - v?-api.miaopai.com
 # > 马蜂窝 - mapi.mafengwo.cn
-# > 美味不用等 - api.mwee.cn
-^https?:\/\/capi\.mwee\.cn\/app-api\/V\d+\/app\/(ad|getstartad) - reject
 
 # (O)
 # > Oray - slapi.oray.net, client-api-v?.oray.com
@@ -255,4 +241,4 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 ^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad\/ - reject
 
 [MITM]
-hostname = %APPEND% mp.weixin.qq.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, res.kfc.com.cn, tiebac.baidu.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, acs-m.freshippo.com, cn-acs.m.cainiao.com, gw.aihuishou.com, issuecdn.baidupcs.com, pan.baidu.com, mime.baidu.com, app.api.ke.com, manga.bilibili.com, api.vc.bilibili.com, res.pizzahut.com.cn, app-gw.csdn.net, www.cntv.com, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, api.douban.com, rtbapi.douyucdn.cn, cube.elemecdn.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, api.m.jd.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, api.m.mi.com, api.jr.mi.com, shopapi.io.mi.com, home.mi.com, api-mifit-cn3.zepp.com, v?-api.miaopai.com, mapi.mafengwo.cn, api.mwee.cn, slapi.oray.net, client-api-v?.oray.com, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, mpcs.suning.com, ccsp-egmas.sf-express.com, shopic.sf-express.com, m.tuniu.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, gw.kaola.com, p.du.163.com, *-release.wuta-cam.com, api.xiachufang.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
+hostname = %APPEND% mp.weixin.qq.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, res.kfc.com.cn, tiebac.baidu.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, acs-m.freshippo.com, gw.aihuishou.com, issuecdn.baidupcs.com, pan.baidu.com, mime.baidu.com, manga.bilibili.com, api.vc.bilibili.com, res.pizzahut.com.cn, app-gw.csdn.net, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, api.douban.com, rtbapi.douyucdn.cn, cube.elemecdn.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, api.m.jd.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, api.m.mi.com, api.jr.mi.com, home.mi.com, capi.mwee.cn, v?-api.miaopai.com, mapi.mafengwo.cn, slapi.oray.net, client-api-v?.oray.com, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, mpcs.suning.com, ccsp-egmas.sf-express.com, shopic.sf-express.com, m.tuniu.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, gw.kaola.com, p.du.163.com, *-release.wuta-cam.com, api.xiachufang.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
