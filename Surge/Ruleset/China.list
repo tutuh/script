@@ -21,7 +21,6 @@ DOMAIN,outlook.office365.com
 DOMAIN,sms.imagetasks.com
 DOMAIN,smtp-mail.outlook.com
 DOMAIN,smtp.office365.com
-DOMAIN,speedtest.macpaw.com
 DOMAIN,st.dl.bscstorage.net
 DOMAIN,st.dl.eccdnx.com
 DOMAIN,st.dl.pinyuncloud.com
@@ -607,7 +606,6 @@ DOMAIN-SUFFIX,nearme.com.cn
 DOMAIN-SUFFIX,neixin.cn
 DOMAIN-SUFFIX,netease.com
 DOMAIN-SUFFIX,netease.im
-DOMAIN-SUFFIX,netspeedtestmaster.com
 DOMAIN-SUFFIX,netstatic.net
 DOMAIN-SUFFIX,npmmirror.com
 DOMAIN-SUFFIX,nruan.com
