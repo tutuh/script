@@ -23,8 +23,8 @@ always-real-ip = %APPEND% easy-login.10099.com.cn
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, www.google.cn
 
 [URL Rewrite]
-# > 谷歌中国重定向 - www.g.cn, www.google.cn
-^https?://(www.)?(g|google)\.cn https://www.google.com 307
+# > 谷歌中国重定向 - www.google.cn
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com header
 
 [Script]
 # > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
