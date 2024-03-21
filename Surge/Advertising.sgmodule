@@ -53,8 +53,8 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 (?i)\b\/ads\? - reject
 
 (?i)\badvertisement - reject
-# (?i)\badvertising - reject  // Mitm Github 会导致无法更新 advertising 文件
 (?i)\bsplash_screen - reject
+# (?i)\badvertising - reject  // Mitm Github 会导致无法更新 advertising 文件
 
 # (0~9)
 # > 12123 - gab.122.gov.cn
@@ -63,8 +63,7 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm - reject
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd - reject
 # > 10086 - client.app.coc.10086.cn
-^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit - reject
-^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query - reject
+^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) url reject-dict
 
 # (A)
 # > AcFun - api-new.app.acfun.cn
