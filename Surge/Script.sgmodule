@@ -1,5 +1,5 @@
 #!name=多功能组合模块
-#!desc=跳过代理检测、Boxjs配置、Spotify、TestFlight账户管理；解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF、心脏+
+#!desc=跳过代理检测、Boxjs配置、Spotify；解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF、心脏+
 #!system=ios
 #!category=Tutu
 
@@ -17,7 +17,7 @@
 
 [General]
 # > 跳过部分应用的代理检测
-skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn, gate.lagou.com, www.abchina.com.cn, www.shanbay.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com, iosapps.itunes.apple.com
+skip-proxy = %APPEND% www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn, gate.lagou.com, www.abchina.com.cn, www.shanbay.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com
 
 # > Always Real IP Hosts
 always-real-ip = %APPEND% easy-login.10099.com.cn
@@ -68,4 +68,4 @@ iLovePDF_解锁 = type=http-response,pattern=https://service.ilovepdf.com/v1/use
 17个乐器_解锁 = type=http-response,pattern=^https:\/\/.*api\.quthing\.com\/(.+\/vip|vip|student|user|appearance|background|rest),requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/tutuh/38e199e78dbabd2ffce987661d869c00/raw/99976d2c2b10b92cad62744c9fbca6097cb5fd4d/yueqi.js
  
 [MITM]
-hostname = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, testflight.apple.com, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com
+hostname = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com
