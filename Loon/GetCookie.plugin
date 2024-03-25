@@ -36,7 +36,7 @@ http-response ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token scr
 
 # > 途虎养车 - api.tuhu.cn
 # 打开：途虎养车小程序 -> 我的 -> 积分 获取cookie
-http-response ttern=https://api.tuhu.cn/User/GetInternalCent script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js, requires-body=1, tag=途虎养车_Cookie
+http-response ttern=https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js, requires-body=1, tag=途虎养车_Cookie
 
 [MITM]
 hostname = app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, auth.alipan.com, api.tuhu.cn
