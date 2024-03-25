@@ -16,7 +16,10 @@
 > data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-img.gif"   
 
 "reject-array" 策略返回 HTTP 状态码 200，同时附带一个空的 JSON 数组      
-> data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-array.json"    
+> data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-array.json"
+
+
+状态码：status-code=200  
 
 reject-img Surge中使用URL-REGEX
 
