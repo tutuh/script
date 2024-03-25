@@ -23,18 +23,18 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 [Map Local]
 # > 微信公众号去广告 - mp.weixin.qq.com
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/wechat.json"
-#^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data-type=text data="{"advertisement_num": 0,"advertisement_info": []}"
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad data-type=text data="{"advertisement_num": 0,"advertisement_info": []}"
 
 # > 美团 & 美团外卖 - flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
-^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
-^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
-^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
-^https:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
-^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data-type=text data="{}"
+^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg data-type=text data="{}"
+^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg data-type=text data="{}"
+^https:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json data-type=text data="{}"
+^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ data-type=text data="{}"
 
 # > 肯德基 - res.kfc.com.cn
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data="https://raw.githubusercontent.com/tutuh/script/master/Surge/Map_Local/reject-dict.json"
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data-type=text data="{}"
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data-type=text data="{}"
 
 [Script]
 # >> 去广告脚本 <<
@@ -63,7 +63,7 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm - reject
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd - reject
 # > 10086 - client.app.coc.10086.cn
-^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) url reject-dict
+^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) - reject
 
 # (A)
 # > AcFun - api-new.app.acfun.cn
