@@ -12,7 +12,7 @@ DOMAIN-SUFFIX,jsdelivr.net,PROXY
 http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120, tag=BoxJs
 
 # > TestFlight账户管理 - testflight.apple.com
-http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理
+http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理
 
 [Mitm]
 hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, testflight.apple.com
