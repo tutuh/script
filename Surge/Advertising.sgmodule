@@ -169,7 +169,6 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 ^https:\/\/api\.jr\.mi\.com\/v\d\/adv - reject
 # > 美味不用等 - capi.mwee.cn
 ^https?:\/\/capi\.mwee\.cn\/app-api\/V\d+\/app\/(ad|getstartad) - reject
-# > 秒拍 - 
 # > 马蜂窝 - mapi.mafengwo.cn
 ^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config.* - reject
 ^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad - reject
@@ -217,7 +216,7 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 # > 网易考拉 - gw.kaola.com
 ^https?:\/\/gw\.kaola\.com\/gw\/dgmobile\/newOpenAd - reject
 # > 网易蜗牛读书 - p.du.163.com
-^https?:\/\/p\.du\.163\.com\/ad\/ - reject
+#^https?:\/\/p\.du\.163\.com\/ad\/ - reject
 # > 无他相机 - *-release.wuta-cam.com
 ^https?:\/\/api-release\.wuta-cam\.com\/ad_tree - reject
 ^https?:\/\/res-release\.wuta-cam\.com\/json\/ads_component_cache\.json - reject
@@ -236,7 +235,7 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DRO
 
 # (Z)
 # > 作业帮 - syh.zybang.com
-^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ - reject
+#^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ - reject
 # > 掌阅
 ^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad\/ - reject
 ^https?:\/\/ih2\.ireader\.com\/zyapi\/self\/screen\/ad - reject
