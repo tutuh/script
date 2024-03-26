@@ -339,6 +339,8 @@ DOMAIN,log.ycapp.yiche.com
 # > 中关村
 DOMAIN,apppv.zol.com.cn
 DOMAIN,pvnapp.zol.com.cn
+# > 中国联通
+DOMAIN-SUFFIX,m1.ad.10010.com
 # > 中国电信
 DOMAIN,ad.21cn.com
 DOMAIN,ad.k.21cn.com
