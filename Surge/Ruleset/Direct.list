@@ -16,7 +16,10 @@ DOMAIN,ip.istatmenus.app
 DOMAIN,lv.queniujq.cn
 DOMAIN,ntservicepack.microsoft.com
 DOMAIN,origin-a.akamaihd.net
+DOMAIN,outlook.office365.com
 DOMAIN,sms.imagetasks.com
+DOMAIN,smtp-mail.outlook.com
+DOMAIN,smtp.office365.com
 DOMAIN,st.dl.bscstorage.net
 DOMAIN,st.dl.eccdnx.com
 DOMAIN,st.dl.pinyuncloud.com
@@ -638,9 +641,6 @@ DOMAIN-SUFFIX,nruan.com
 DOMAIN-SUFFIX,nubia.cn
 DOMAIN-SUFFIX,nubia.com
 DOMAIN-SUFFIX,nuomi.com
-DOMAIN-SUFFIX,office.com
-DOMAIN-SUFFIX,office.net
-DOMAIN-SUFFIX,office365.com
 DOMAIN-SUFFIX,onedns.net
 DOMAIN-SUFFIX,oneplus.cn
 DOMAIN-SUFFIX,oneplus.com
