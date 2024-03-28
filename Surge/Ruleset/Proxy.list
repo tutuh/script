@@ -1,7 +1,6 @@
-# 代理列表 合并 
+# Proxy
 # https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/ProxyLite.list
 # https://ruleset.skk.moe/List/non_ip/global.conf
-# DivineEngine
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -721,6 +720,7 @@ DOMAIN-SUFFIX,teraboxcdn.com
 DOMAIN-SUFFIX,textnow.com
 DOMAIN-SUFFIX,textnow.me
 DOMAIN-SUFFIX,tfbnw.net
+DOMAIN-SUFFIX,tgstat.ru
 DOMAIN-SUFFIX,theage.com.au
 DOMAIN-SUFFIX,theatlantic.com
 DOMAIN-SUFFIX,theaustralian.com.au
