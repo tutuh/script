@@ -16,10 +16,7 @@ DOMAIN,ip.istatmenus.app
 DOMAIN,lv.queniujq.cn
 DOMAIN,ntservicepack.microsoft.com
 DOMAIN,origin-a.akamaihd.net
-DOMAIN,outlook.office365.com
 DOMAIN,sms.imagetasks.com
-DOMAIN,smtp-mail.outlook.com
-DOMAIN,smtp.office365.com
 DOMAIN,st.dl.bscstorage.net
 DOMAIN,st.dl.eccdnx.com
 DOMAIN,st.dl.pinyuncloud.com
@@ -42,6 +39,7 @@ DOMAIN-KEYWORD,ccgslb
 DOMAIN-KEYWORD,chinacache
 DOMAIN-KEYWORD,duobao
 DOMAIN-KEYWORD,jdpay
+DOMAIN-KEYWORD,microsoft
 DOMAIN-KEYWORD,moke
 DOMAIN-KEYWORD,qhimg
 DOMAIN-KEYWORD,vpimg
@@ -599,6 +597,8 @@ DOMAIN-SUFFIX,mgtv.com
 DOMAIN-SUFFIX,mi-img.com
 DOMAIN-SUFFIX,mi.com
 DOMAIN-SUFFIX,miaopai.com
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,microsoftonline.com
 DOMAIN-SUFFIX,mifile.cn
 DOMAIN-SUFFIX,migu.cn
 DOMAIN-SUFFIX,migucloud.com
@@ -641,6 +641,7 @@ DOMAIN-SUFFIX,nruan.com
 DOMAIN-SUFFIX,nubia.cn
 DOMAIN-SUFFIX,nubia.com
 DOMAIN-SUFFIX,nuomi.com
+DOMAIN-SUFFIX,office365.com
 DOMAIN-SUFFIX,onedns.net
 DOMAIN-SUFFIX,oneplus.cn
 DOMAIN-SUFFIX,oneplus.com
@@ -661,14 +662,11 @@ DOMAIN-SUFFIX,oray.net
 DOMAIN-SUFFIX,orayimg.com
 DOMAIN-SUFFIX,oschina.net
 DOMAIN-SUFFIX,ourdvs.com
+DOMAIN-SUFFIX,outlook.com
 DOMAIN-SUFFIX,p2cdn.com
 DOMAIN-SUFFIX,p4pfile.com
 DOMAIN-SUFFIX,paipai.com
 DOMAIN-SUFFIX,paragon.com
-DOMAIN-SUFFIX,paypal-mktg.com
-DOMAIN-SUFFIX,paypal.com
-DOMAIN-SUFFIX,paypal.me
-DOMAIN-SUFFIX,paypalobjects.com
 DOMAIN-SUFFIX,pcauto.com.cn
 DOMAIN-SUFFIX,pconline.com.cn
 DOMAIN-SUFFIX,pddpic.com
@@ -758,6 +756,7 @@ DOMAIN-SUFFIX,rsproxy.cn
 DOMAIN-SUFFIX,ruguoapp.com
 DOMAIN-SUFFIX,ruiwen.com
 DOMAIN-SUFFIX,runoob.com
+DOMAIN-SUFFIX,s-microsoft.com
 DOMAIN-SUFFIX,s-reader.com
 DOMAIN-SUFFIX,sandai.net
 DOMAIN-SUFFIX,sankuai.com
