@@ -14,6 +14,7 @@ DOMAIN-SUFFIX,ads.internal.unity3d.com
 DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
 DOMAIN-SUFFIX,unityads.unity3d.com
 # > Alibaba
+DOMAIN,hc-ssp.sm.cn
 DOMAIN,tunion-api.m.taobao.com
 # > 爱奇艺
 DOMAIN,api.iqiyi.com
@@ -48,13 +49,8 @@ DOMAIN,exp.360in.com
 DOMAIN,atrace.chelaile.net.cn
 DOMAIN,logs.chelaile.net.cn
 # > 创维集团
-DOMAIN-SUFFIX,hoisin.coocaa.com
-DOMAIN-SUFFIX,hoisin.coocaatv.com
-DOMAIN,data-hoisin.coocaa.com
-
-# (D)
-# > 豆瓣
-AND,((USER-AGENT,Frodo*), (DOMAIN,119.29.29.29))
+DOMAIN-KEYWORD,hoisin.coocaa.com
+DOMAIN-KEYWORD,hoisin.coocaatv.com
 
 # (F)
 # > 飞常准
