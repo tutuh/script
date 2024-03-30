@@ -18,7 +18,7 @@
 
 爱奇艺_签到 = type=cron,cronexp=30 5 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
-蜜雪冰城_签到 = type=cron,cronexp=30 8 0 * * *,wake-system=1,timeout=30,script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js
+蜜雪冰城_签到 = type=cron,cronexp=30 8 0 * * *,wake-system=1,timeout=120,script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js
 
 Boxjs数据备份 = type=cron,cronexp=10 8 1 * * *,wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
 
