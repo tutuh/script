@@ -181,7 +181,7 @@ DOMAIN-SUFFIX,doubleverify.com
 DOMAIN-SUFFIX,doudouguo.com
 DOMAIN-SUFFIX,doumob.com
 DOMAIN-SUFFIX,duanat.com
-DOMAIN-SUFFIX,duiba.com.cn
+# DOMAIN-SUFFIX,duiba.com.cn  // 屏蔽此域名会导致蜜雪冰城雪王铺被拦截
 DOMAIN-SUFFIX,duomeng.cn
 DOMAIN-SUFFIX,dxpmedia.com
 DOMAIN-SUFFIX,edigitalsurvey.com
