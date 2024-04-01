@@ -1,8 +1,8 @@
 #!name=Panel
 #!desc=机场流量、流媒体解锁检测、网络信息、配置重载
 #!system=ios
-#!arguments= icons:globe.asia.australia, icolor:#6699FF, GPT:0 ,HideIP:1, cnTimeout:1000, usTimeout:3000,AIRPORT_NAME_1:机场1,URL_1:编码后的订阅_1,RESET_DAY_1:1,TITLE_1:机场信息1,ICON_1:network,COLOR_1:#3B7FF7,UPDATE_INTERVAL_1:3600,AIRPORT_NAME_2:机场2,URL_2:编码后的订阅_2,RESET_DAY_2:1,TITLE_2:机场信息2,ICON_2:network,COLOR_2:#3B7FF7,UPDATE_INTERVAL_2:3600
-#!arguments-desc= [网络信息参数说明]：\n入口查询超时: cnTimeout\n落地查询超时: usTimeout\n隐藏IP: HideIP \n\n开启为: 1\n关闭为: 0\n\n[机场流量参数设置]：\nAIRPORT_NAME: 默认开启单订阅,如需开启多订阅需修改此参数为机场名称;\nURL: 机场订阅链接,需要"https://www.urlencoder.org"进行URL编码;\nRESET_DAY: 流量每月重置的日期,如30号就写30,不设置则默认1号为流量重置日,设置为0则不显示流量重置日,仅显示到期日期;\nTITLE: 自定义面板标题,如不设置则默认显示"机场信息";\nICON: 自定义图标,内容为任意有效的SFSymbolName,默认为"network";\n COLOR: 自定义图标颜色,需为颜色的HEX编码,默认为"#3B7FF7";\nUPDATE_INTERVAL: 自定义刷新间隔时间,单位为秒,默认每3600秒刷新一次;
+#!arguments= icons:globe.asia.australia, icolor:#6699FF, GPT:0 ,HideIP:1, cnTimeout:1000, usTimeout:3000,AIRPORT_NAME_1:机场名称1,URL_1:编码后的订阅_1,RESET_DAY_1:1,TITLE_1:机场信息1,ICON_1:network,COLOR_1:#3B7FF7,UPDATE_INTERVAL_1:3600,AIRPORT_NAME_2:#机场2,URL_2:编码后的订阅_2,RESET_DAY_2:1,TITLE_2:机场名称2,ICON_2:network,COLOR_2:#3B7FF7,UPDATE_INTERVAL_2:3600
+#!arguments-desc= [网络信息参数说明]：\n入口查询超时: cnTimeout\n落地查询超时: usTimeout\n隐藏IP: HideIP \n开启为: 1\n关闭为: 0\n\n[机场流量参数设置]：\nAIRPORT_NAME: 默认开启单订阅,如需开启多订阅需修改此参数为机场名称;\nURL: 机场订阅链接,需要"https://www.urlencoder.org"进行URL编码;\nRESET_DAY: 流量每月重置的日期,如30号就写30,不设置则默认1号为流量重置日,设置为0则不显示流量重置日,仅显示到期日期;\nTITLE: 自定义面板标题,如不设置则默认显示"机场信息";\nICON: 自定义图标,内容为任意有效的SFSymbolName,默认为"network";\n COLOR: 自定义图标颜色,需为颜色的HEX编码,默认为"#3B7FF7";\nUPDATE_INTERVAL: 自定义刷新间隔时间,单位为秒,默认每3600秒刷新一次;
 
 # 机场流量信息说明
 # encode链接： https://www.urlencoder.org
@@ -18,7 +18,6 @@
 
 节点入口 = script-name=节点入口查询, update-interval=600
 
-# 机场流量查询 = script-name=机场流量信息, update-interval=3600
 {{{AIRPORT_NAME_1}}} = script-name={{{AIRPORT_NAME_1}}},update-interval={{{UPDATE_INTERVAL_1}}}
 {{{AIRPORT_NAME_2}}} = script-name={{{AIRPORT_NAME_2}}},update-interval={{{UPDATE_INTERVAL_2}}}
 
@@ -31,12 +30,9 @@
 
 节点入口查询 = type=generic, timeout=8, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Netisp.js, argument=icolor={{{icolor}}}&icon={{{icons}}}&GPT={{{GPT}}}&hideIP={{{HideIP}}}&cnTimeout={{{cnTimeout}}}&usTimeout={{{usTimeout}}}
 
-#机场流量信息 = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js, argument=url=encode后的机场节点链接&reset_day=1&title=你机场名字&icon=network&color=#3B7FF7
-
 {{{AIRPORT_NAME_1}}} = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,script-update-interval=0,argument=url={{{URL_1}}}&reset_day={{{RESET_DAY_1}}}&title={{{TITLE_1}}}&icon={{{ICON_1}}}&color={{{COLOR_1}}}
 
 {{{AIRPORT_NAME_2}}} = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,script-update-interval=0,argument=url={{{URL_2}}}&reset_day={{{RESET_DAY_2}}}&title={{{TITLE_2}}}&icon={{{ICON_2}}}&color={{{COLOR_2}}}
-
 
 流媒体解锁检测 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Stream-All.js, argument=title=流媒体解锁检测&icon=play.tv.fill&color=#D22F20
 
