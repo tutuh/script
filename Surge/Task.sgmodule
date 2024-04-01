@@ -16,7 +16,7 @@
 
 阿里云盘_签到 = type=cron,cronexp="30 4 0,9,12 * * *",wake-system=1,timeout=120,script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
 
-爱奇艺_签到 = type=cron,cronexp=30 5 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+#爱奇艺_签到 = type=cron,cronexp=30 5 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 蜜雪冰城_签到 = type=cron,cronexp=30 8 0 * * *,wake-system=1,timeout=120,script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js
 
