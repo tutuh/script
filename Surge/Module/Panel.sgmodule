@@ -2,16 +2,7 @@
 #!desc=机场流量、流媒体解锁检测、网络信息
 #!system=ios
 #!arguments= icons:globe.asia.australia, icolor:#6699FF, GPT:0, HideIP:1, cnTimeout:1000, usTimeout:3000, Blank:Blank, Airport_Name_1:机场名称1, URL_1:编码后的订阅_1, Reset_Day_1:1, Title_1:机场信息1, ICON_1:network, Color_1:#3B7FF7,update-interval_1:3600, Airport_Name_2:#机场名称2, URL_2:编码后的订阅_2, Reset_Day_2:1, Title_2:机场信息2, ICON_2:network, Color_2:#3B7FF7, update-interval_2:3600
-#!arguments-desc= [网络信息参数说明]：\n1.入口查询超时: cnTimeout\n2.落地查询超时: usTimeout\n3.隐藏IP: HideIP\n4.开启为: 1\n5.关闭为: 0\n\n[机场流量参数设置]：\n1.Airport_Name: 默认开启单订阅,如需开启多订阅需修改此参数为机场名称;\n2.URL: 机场订阅链接,需要"https://www.urlencoder.org"进行URL编码;\n3.Reset_Day: 流量每月重置的日期,如30号就写30,不设置则默认1号为流量重置日,设置为0则不显示流量重置日,仅显示到期日期;\n4.Title: 自定义面板标题,如不设置则默认显示"机场信息";\n5.ICON: 自定义图标,内容为任意有效的SFSymbolName,默认为"network";\n6.Color: 自定义图标颜色,需为颜色的HEX编码,默认为"#3B7FF7";\n7.update-interval: 自定义刷新间隔时间,单位为秒,默认每3600秒刷新一次;
-
-# 机场流量信息说明
-# encode链接： https://www.urlencoder.org
-# 先将带有流量信息的节点订阅链接encode，用encode后的链接替换"url="后面的[encode后的机场节点链接]
-# 可选参数 &reset_day，后面的数字替换成流量每月重置的日期，如1号就写1，8号就写8。如"&reset_day=8",不加该参数不显示流量重置信息。
-# 可选参数 &expire，机场链接不带expire信息的，可以手动传入expire参数，如"&expire=2022-02-01",注意一定要按照yyyy-MM-dd的格式。不希望显示到期信息也可以添加&expire=false取消显示。
-# 可选参数"title=xxx" 可以自定义标题。
-# 可选参数"icon=xxx" 可以自定义图标，内容为任意有效的 SF Symbol Name，如 bolt.horizontal.circle.fill，详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336
-# 可选参数"color=xxx" 当使用 icon 字段时，可传入 color 字段控制图标颜色，字段内容为颜色的 HEX 编码。如：color=#007aff
+#!arguments-desc= [网络信息参数说明]：\n❶入口查询超时: cnTimeout\n❷落地查询超时: usTimeout\n❸隐藏IP: HideIP\n❹开启为: 1\n❺关闭为: 0\n\n[机场流量参数设置]：\n❶Airport_Name: 默认开启单订阅,开启多订阅需修改此参数为机场名称\n❷URL: 机场订阅链接,需要"https://www.urlencoder.org"进行URL编码,用encode后的链接替换\n❸Reset_Day: 流量每月重置的日期,如30号就写30,默认1号流量重置日,设置为0则不显示流量重置日,仅显示到期日期\n❹Title: 自定义面板标题,默认显示"机场信息"\n❺ICON: 自定义图标,内容为任意有效的SFSymbolName,默认"network"\n❻Color: 自定义图标颜色,需为颜色的HEX编码,默认"#3B7FF7"\n❼update-interval: 自定义刷新间隔时间,单位为秒,默认每3600秒刷新一次
 
 [Panel]
 {{{Airport_Name_1}}} = script-name={{{Airport_Name_1}}}, update-interval={{{update-interval_1}}}
@@ -24,13 +15,13 @@
 流媒体检测 = script-name=流媒体解锁检测, update-interval=-1
 
 [Script]
-网络信息 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Network-Info.js
-
-节点入口查询 = type=generic, timeout=8, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Netisp.js, argument=icolor={{{icolor}}}&icon={{{icons}}}&GPT={{{GPT}}}&hideIP={{{HideIP}}}&cnTimeout={{{cnTimeout}}}&usTimeout={{{usTimeout}}}
-
 {{{Airport_Name_1}}} = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js, argument=url={{{URL_1}}}&reset_day={{{Reset_Day_1}}}&title={{{Title_1}}}&icon={{{ICON_1}}}&color={{{Color_1}}}
 
 {{{Airport_Name_2}}} = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js, argument=url={{{URL_2}}}&reset_day={{{Reset_Day_2}}}&title={{{Title_2}}}&icon={{{ICON_2}}}&color={{{Color_2}}}
+
+网络信息 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Network-Info.js
+
+节点入口查询 = type=generic, timeout=8, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Netisp.js, argument=icolor={{{icolor}}}&icon={{{icons}}}&GPT={{{GPT}}}&hideIP={{{HideIP}}}&cnTimeout={{{cnTimeout}}}&usTimeout={{{usTimeout}}}
 
 流媒体解锁检测 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Stream-All.js, argument=title=流媒体解锁检测&icon=play.tv.fill&color=#D22F20
 
