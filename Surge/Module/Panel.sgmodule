@@ -1,7 +1,7 @@
 #!name=Panel
 #!desc=机场流量、流媒体解锁检测、网络信息、配置重载
 #!system=ios
-#!arguments= icons:globe.asia.australia, icolor:#6699FF, GPT:0, HideIP:1, @#  ,cnTimeout:1000, usTimeout:3000, AIRPORT_NAME_1:机场名称1, URL_1:编码后的订阅_1,RESET_DAY_1:1, TITLE_1:机场信息1,ICON_1:network, COLOR_1:#3B7FF7,UPDATE_INTERVAL_1:3600, AIRPORT_NAME_2:#机场名称2, URL_2:编码后的订阅_2, RESET_DAY_2:1, TITLE_2:机场信息2, ICON_2:network,COLOR_2:#3B7FF7, UPDATE_INTERVAL_2:3600
+#!arguments= icons:globe.asia.australia, icolor:#6699FF, GPT:0, HideIP:1, @# , cnTimeout:1000, usTimeout:3000, AIRPORT_NAME_1:机场名称1, URL_1:编码后的订阅_1, RESET_DAY_1:1, TITLE_1:机场信息1, ICON_1:network, COLOR_1:#3B7FF7,UPDATE_INTERVAL_1:3600, AIRPORT_NAME_2:#机场名称2, URL_2:编码后的订阅_2, RESET_DAY_2:1, TITLE_2:机场信息2, ICON_2:network, COLOR_2:#3B7FF7, UPDATE_INTERVAL_2:3600
 #!arguments-desc= [网络信息参数说明]：\n入口查询超时: cnTimeout\n落地查询超时: usTimeout\n隐藏IP: HideIP \n开启为: 1\n关闭为: 0\n\n[机场流量参数设置]：\nAIRPORT_NAME: 默认开启单订阅,如需开启多订阅需修改此参数为机场名称;\nURL: 机场订阅链接,需要"https://www.urlencoder.org"进行URL编码;\nRESET_DAY: 流量每月重置的日期,如30号就写30,不设置则默认1号为流量重置日,设置为0则不显示流量重置日,仅显示到期日期;\nTITLE: 自定义面板标题,如不设置则默认显示"机场信息";\nICON: 自定义图标,内容为任意有效的SFSymbolName,默认为"network";\n COLOR: 自定义图标颜色,需为颜色的HEX编码,默认为"#3B7FF7";\nUPDATE_INTERVAL: 自定义刷新间隔时间,单位为秒,默认每3600秒刷新一次;
 
 # 机场流量信息说明
