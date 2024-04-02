@@ -2,7 +2,7 @@
 #!desc=检测 Netflix,Disney+,YouTube 的解锁状态
 #!category=Panel
 #!arguments=UPDATE-INTERVAL:-1,TITLE:流媒体解锁检测,ICON:play.tv.fill,COLOR:#D22F20
-#!arguments-desc=[参数说明]\nUPDATE-INTERVAL：刷新间隔时间、默认不刷新
+#!arguments-desc=[参数说明]\n\nUPDATE-INTERVAL：刷新间隔时间、默认不刷新
 
 [Panel]
 流媒体解锁检测 = script-name=流媒体解锁检测,update-interval={{{UPDATE-INTERVAL}}}
