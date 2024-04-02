@@ -35,18 +35,12 @@
       content.push(`到期：${formatTime(args.expire || info.expire)}`);
     }
   }
-  
-  let now = new Date();
-  let hour = now.getHours();
-  let minutes = now.getMinutes();
-  hour = hour > 9 ? hour : "0" + hour;
-  minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title} | ${hour}:${minutes}`,
+    title: `${args.title}`,
     content: content.join("\n"),
-    icon: args.icon || "airplane.circle",
-    "icon-color": args.color || "#007aff",
+    icon: args.icon || "tornado",
+    "icon-color": args.color || "#DF4688",
   });
 })();
 
@@ -150,6 +144,9 @@ function bytesToSize(bytes) {
 }
 
 function formatTime(time) {
+  // 检查时间戳是否为秒单位，如果是，则转换为毫秒
+  if (time < 1000000000000) time *= 1000;
+
   let dateObj = new Date(time);
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
