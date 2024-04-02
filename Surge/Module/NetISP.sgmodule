@@ -2,7 +2,7 @@
 #!desc=查询：国内外 IP, ISP, 入口落地;策略
 #!category=Panel
 #!arguments=UPDATE-INTERVAL:1800, icons:globe.asia.australia, icolor:#6699FF, GPT:0 ,HideIP:1, cnTimeout:1000, usTimeout:3000
-#!arguments-desc=[参数说明]：\n\nUPDATE-INTERVAL: 默认每1800秒刷新\n\ncnTimeout: 入口查询超时\n\nusTimeout: 落地查询超时\n\nHideIP: 隐藏IP\n开启为: 1\n关闭为: 0
+#!arguments-desc=[参数说明]：\nUPDATE-INTERVAL: 默认每1800秒刷新\n\ncnTimeout: 入口查询超时\n\nusTimeout: 落地查询超时\n\nHideIP: 隐藏IP\n开启为: 1\n关闭为: 0
 
 [Panel]
 NetISP = script-name=NetISP,update-interval={{{UPDATE-INTERVAL}}}
