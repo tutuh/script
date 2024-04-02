@@ -18,7 +18,7 @@ let args = getArgs();
   let expire = args.expire || info.expire;
   let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
 
-  if (!resetDayLeft && !expire) {
+  if (!resetDayLeft && !${formatTime(expire)}) {
   let percentage = ((used / total) * 100).toFixed(1);
     content.push(`提醒：流量包，已使用${percentage}%`);
    } else {    
