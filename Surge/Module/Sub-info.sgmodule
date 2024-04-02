@@ -5,9 +5,9 @@
 #!arguments-desc=[机场流量参数设置]：\n①Airport_Name: 默认开启单订阅,开启多订阅需修改此参数为机场名称\n②url: 机场订阅链接,需要"https://www.urlencoder.org"进行url编码,用encode后的链接替换\n③reset_day: 流量每月重置的日期,如30号就写30,默认1号流量重置日,设置为0则不显示流量重置日,仅显示到期日期\n④title: 自定义面板标题,默认显示"机场信息"\n⑤icons: 自定义图标,内容为任意有效的SFSymbolName,默认"network"\n⑥color: 自定义图标颜色,需为颜色的HEX编码,默认"#3B7FF7"\n⑦update-interval: 自定义刷新间隔时间,默认每21600秒（6小时）刷新一次
 
 [Panel]
-{{{Airport_Name_1}}} = script-name={{{Airport_Name_1}}}, update-interval={{{update-interval_1}}}
-{{{Airport_Name_2}}} = script-name={{{Airport_Name_2}}}, update-interval={{{update-interval_2}}}
+{{{Airport_Name_1}}} = script-name={{{Airport_Name_1}}},update-interval={{{update-interval_1}}}
+{{{Airport_Name_2}}} = script-name={{{Airport_Name_2}}},update-interval={{{update-interval_2}}}
 
 [Script]
-{{{Airport_Name_1}}} = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js, argument=url={{{url_1}}}&reset_day={{{reset_day_1}}}&title={{{title_1}}}&icon={{{icons_1}}}&color={{{color_1}}}
-{{{Airport_Name_2}}} = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js, argument=url={{{url_2}}}&reset_day={{{reset_day_2}}}&title={{{title_2}}}&icon={{{icons_2}}}&color={{{color_2}}}
+{{{Airport_Name_1}}} = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,argument=url={{{url_1}}}&reset_day={{{reset_day_1}}}&title={{{title_1}}}&icon={{{icons_1}}}&color={{{color_1}}}
+{{{Airport_Name_2}}} = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,argument=url={{{url_2}}}&reset_day={{{reset_day_2}}}&title={{{title_2}}}&icon={{{icons_2}}}&color={{{color_2}}}
