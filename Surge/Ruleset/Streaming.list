@@ -24,10 +24,12 @@ DOMAIN-SUFFIX,kkbox.com.tw
 DOMAIN-SUFFIX,kfs.io
 
 # > Pandora
+USER-AGENT,Pandora*
 DOMAIN-SUFFIX,pandora.com
-DOMAIN-SUFFIX,p-cdn.us
 
 # > SoundCloud
+USER-AGENT,SoundCloud*
+DOMAIN-SUFFIX,p-cdn.us
 DOMAIN-SUFFIX,sndcdn.com
 DOMAIN-SUFFIX,soundcloud.com
 
