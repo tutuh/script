@@ -2,7 +2,7 @@
 #!desc=默认单流量查询,多订阅需修改参数Airport_Name
 #!category=Panel
 #!arguments=Airport_Name_1:机场名称1, URL_1:编码后的订阅_1, RESET-DAY_1:0, TITLE_1:机场信息1, ICON_1:network, COLOR_1:#3B7FF7, UPDATE-INTERVAL_1:21600, Airport_Name_2:#机场名称2, URL_2:编码后的订阅_2, RESET-DAY_2:0, TITLE_2:机场信息2, ICON_2:network, COLOR_2:#3B7FF7, UPDATE-INTERVAL_2:21600
-#!arguments-desc=[参数说明]：\n\nAirport_Name: 默认单订阅,开启多订阅需修改此参数为机场名称\n\nURL: 机场订阅链接,需要"https://www.urlencoder.org"进行URL编码,用encode后的链接替换\n\nRESET-DAY: 每月流量重置日期,如8号就写8,默认0,仅显示到期日期\n\nTITLE: 面板标题,默认显示"机场信息"\n\nUPDATE-INTERVAL: 刷新间隔时间,默认每21600秒（6小时）刷新一次
+#!arguments-desc=[参数说明]\n\nAirport_Name: 默认单订阅,开启多订阅需修改此参数为机场名称\n\nURL: 机场订阅链接,需要"https://www.urlencoder.org"进行URL编码,用encode后的链接替换\n\nRESET-DAY: 每月流量重置日期,如8号就写8,默认0,仅显示到期日期\n\nTITLE: 面板标题,默认显示"机场信息"\n\nUPDATE-INTERVAL: 刷新间隔时间,默认每21600秒（6小时）刷新一次
 
 [Panel]
 {{{Airport_Name_1}}} = script-name={{{Airport_Name_1}}},update-interval={{{UPDATE-INTERVAL_1}}}
