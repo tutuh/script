@@ -2,9 +2,6 @@
 #!desc=Block Advertising
 #!category=Tutu
 
-# 新版Map Local Surge ≥5.21.0(3066)
-# https://manual.nssurge.com/http-processing/mock.html
-
 [Rule]
 URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 
