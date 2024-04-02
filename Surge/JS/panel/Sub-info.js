@@ -37,7 +37,7 @@
   }
 
   $done({
-    title: `${args.title}`,
+    title: `${args.title} | ${hour}:${minutes}`,
     content: content.join("\n"),
     icon: args.icon || "tornado",
     "icon-color": args.color || "#DF4688",
