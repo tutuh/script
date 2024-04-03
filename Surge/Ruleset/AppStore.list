@@ -1,6 +1,15 @@
-# IOS App Store Proxy
+# AppStore & Update
 
+# > AppStore
+USER-AGENT,com.apple.appstored*
+DOMAIN-SUFFIX,mzstatic.com
 DOMAIN,iosapps.itunes.apple.com
+DOMAIN,osxapps.itunes.apple.com
+
+#  > Update
+DOMAIN,updates.cdn-apple.com //system update
+DOMAIN,supportdownload.apple.com
+DOMAIN,appldnld.apple.com
 DOMAIN,swcdn.apple.com
+DOMAIN,apptrailers.itunes.apple.com
 DOMAIN,updates-http.cdn-apple.com
-DOMAIN,updates.cdn-apple.com
