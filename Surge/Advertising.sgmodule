@@ -12,7 +12,7 @@ OR,((DOMAIN,waapdg.jd.com), (DOMAIN-SUFFIX,jddebug.com), (DOMAIN,metrics-picture
 # > 百度贴吧去广告（需配合下方脚本）
 OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200/32)),REJECT-DROP
 
-# > 掌阅 去广告
+# > 掌阅
 URL-REGEX,^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad\/,REJECT-TINYGIF
 URL-REGEX,^https?:\/\/ih2\.ireader\.com\/zyapi\/self\/screen\/ad,REJECT-TINYGIF
 URL-REGEX,^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad\/,REJECT-TINYGIF
