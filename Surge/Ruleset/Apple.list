@@ -1,8 +1,6 @@
 # Apple
-# https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Apple/Apple.list
-# https://ruleset.skk.moe/List/non_ip/apple_cdn.conf
+# https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/
 
-# Apple
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.com
@@ -24,22 +22,6 @@ DOMAIN-KEYWORD,apple.com.edgekey.net
 DOMAIN-KEYWORD,apple-support.akadns.net
 DOMAIN-KEYWORD,icloud.com.akadns.net
 
-
-DOMAIN-SUFFIX,akadns.net
-DOMAIN-SUFFIX,apple-dns.net
-DOMAIN-SUFFIX,apple.news
-DOMAIN-SUFFIX,crashlytics.com
-DOMAIN-SUFFIX,itunes.com
-IP-CIDR,17.0.0.0/8,no-resolve
-IP-CIDR,63.92.224.0/19,no-resolve
-IP-CIDR,65.199.22.0/23,no-resolve
-IP-CIDR,139.178.128.0/18,no-resolve
-IP-CIDR,144.178.0.0/19,no-resolve
-IP-CIDR,144.178.36.0/22,no-resolve
-IP-CIDR,144.178.48.0/20,no-resolve
-IP-CIDR,192.35.50.0/24,no-resolve
-IP-CIDR,198.183.17.0/24,no-resolve
-IP-CIDR,205.180.175.0/24,no-resolve
 
 
 
