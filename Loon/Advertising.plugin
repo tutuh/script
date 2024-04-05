@@ -3,24 +3,20 @@
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png 
 
 [Rule]
+# > 根据 User-Agent 精准屏蔽 amdc ,高德、菜鸟、阿里巴巴、飞猪
+AND,((OR,((USER-AGENT,AMap*), (USER-AGENT,Cainiao*), (USER-AGENT,Alibaba*), (USER-AGENT,%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP
+
+# > 屏蔽无效域名
+OR,((DOMAIN,waapdg.jd.com), (DOMAIN-SUFFIX,jddebug.com), (DOMAIN,metrics-picture.d.meituan.net), (DOMAIN,route-stats.d.meituan.net), (DOMAIN,maplocatesdksnapshot.d.meituan.net), (DOMAIN,al-log.d.meituan.net), (DOMAIN,babel-statistics-android.d.meituan.net)),REJECT-DROP
+
 # > 贴吧去广告
 DOMAIN,180.76.76.200,REJECT
 IP-CIDR,180.76.76.200/32,REJECT,no-resolve
-
-# > 美团无效域名
-DOMAIN,metrics-picture.d.meituan.net,REJECT
-DOMAIN,route-stats.d.meituan.net,REJECT
-DOMAIN,maplocatesdksnapshot.d.meituan.net,REJECT
-DOMAIN,al-log.d.meituan.net,REJECT
-DOMAIN,babel-statistics-android.d.meituan.net,REJECT
 
 # > 京东
 URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 
 [Script]
-# > 根据User-Agent精准屏蔽amdc - 菜鸟、高德地图、飞猪
-http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path=https://raw.githubusercontent.com/tutuh/script/master/Loon/JS/amdc_reject.js, timeout=10, tag=amdc精准定位
-
 # > 微信去除公众号文章底部广告 - mp.weixin.qq.com
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/Wechat.js, tag=微信公众号去广告
 
