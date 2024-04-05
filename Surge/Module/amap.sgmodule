@@ -1,5 +1,5 @@
 #!name=高德地图去广告
-#!desc=高德地图APP净化
+#!desc=高德地图APP 净化
 #!category=Tutu
 #!arguments=脚本执行引擎:jsc
 #!arguments-desc=脚本引擎：[auto, jsc, webview]
