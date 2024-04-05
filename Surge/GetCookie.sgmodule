@@ -4,42 +4,42 @@
 
 [Script]
 # > 哔哩哔哩漫画 - app.bilibili.com
-# 打开：哔哩哔哩漫画APP 获取cookie
+# 打开：哔哩哔哩漫画APP 获取 cookie
 哔哩哔哩漫画_Cookie = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
 
 # > 京东签到 - ms.jr.jd.com, me-api.jd.com,api.m.jd.com
-# 打开：https://bean.m.jd.com/bean/signIndex.action 获取cookie
+# 打开：https://bean.m.jd.com/bean/signIndex.action 获取 cookie
 京东_Cookie = type=http-request,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 # > 爱奇艺会员 - passport.iqiyi.com
-# 打开：https://m.iqiyi.com/user.html 获取cookie
+# 打开：https://m.iqiyi.com/user.html 获取 cookie
 爱奇艺会员_Cookie = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 # > 百度贴吧 - c.tieba.baidu.com, tiebac.baidu.com
-# 打开：百度贴吧APP 获取cookie
+# 打开：百度贴吧APP 获取 cookie
 贴吧_获取cookie1 = type=http-request,pattern=^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 贴吧_获取cookie2 = type=http-request,pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 贴吧_获取cookie3 = type=http-request,pattern=^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 
 # > 顺丰速运 - ccsp-egmas.sf-express.com
-# 打开：顺丰速运APP 获取cookie
+# 打开：顺丰速运APP 获取 cookie
 顺丰速运_Cookie = type=http-request,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
 
 # > 哔哩哔哩 - app.bilibili.com, m.bilibili.com
-# 打开：哔哩哔哩APP 或者 https://www.bilibili.com 获取cookie
+# 打开：哔哩哔哩APP 或者 https://www.bilibili.com 获取 cookie
 哔哩哔哩APP_Cookie = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
 哔哩哔哩网页_Cookie = type=http-request,pattern=^https?:\/\/m\.bilibili\.com/$,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
 
 # > 阿里云盘 - auth.alipan.com, auth.aliyundrive.com
-# 打开：阿里云盘APP 获取token
+# 打开：阿里云盘APP 获取 token
 阿里云盘_Cookie = type=http-request,pattern=^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token,requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
 
 # > 途虎养车小程序 - api.tuhu.cn
-# 打开：微信途虎养车小程序 -> 我的 -> 积分 获取cookie
+# 打开：微信途虎养车小程序 -> 我的 -> 积分 获取 cookie
 途虎养车_Cookie = type=http-request,pattern=https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo,requires-body=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js
 
 # > 蜜雪冰城小程序 - mxsa.mxbc.net
-# 打开：蜜雪冰城小程序 -> 我的页面 -> 获取cookie
+# 打开：蜜雪冰城小程序 -> 我的页面 -> 获取 cookie
 蜜雪冰城_Cookie = type=http-response,pattern=^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info,requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js
 
 [MITM]
