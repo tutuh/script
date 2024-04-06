@@ -1,15 +1,15 @@
 #!name=YouTube 去广告
 #!desc=去除 Youtube 广告 By Maasea
 #!icon=https://raw.githubusercontent.com/tutuh/script/master/icons/YouTube.png
-#!select=隐藏上传按钮, true, false
-#!select=隐藏选段按钮, true, false
-#!select=字幕翻译语言, zh-Hans, ja, ko, en
-#!select=歌词翻译语言, zh-Hans, ja, ko, en
-#!select=启用调试模式, true, false
+#!select = 隐藏上传按钮, true, false
+#!select = 隐藏选段按钮, true, false
+#!select = 字幕翻译语言, zh-Hans, zh-Hant, ja, ko, en
+#!select = 歌词翻译语言, zh-Hans, zh-Hant, ja, ko, en
+#!select = 启用调试模式, true, false
 
 [Rule]
-AND, ((DOMAIN-SUFFIX, googlevideo.com), (PROTOCOL,QUIC)), REJECT
-AND, ((DOMAIN, youtubei.googleapis.com), (PROTOCOL,QUIC)), REJECT
+AND,((DOMAIN-SUFFIX, googlevideo.com), (PROTOCOL,QUIC)), REJECT
+AND,((DOMAIN, youtubei.googleapis.com), (PROTOCOL,QUIC)), REJECT
 
 [Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-dict
