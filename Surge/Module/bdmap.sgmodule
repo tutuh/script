@@ -2,8 +2,8 @@
 #!desc=百度地图APP 净化
 #!system=ios
 #!category=Tutu
-#!arguments=脚本执行引擎:jsc
-#!arguments-desc=脚本引擎：[auto, jsc, webview]
+#!arguments=Engine:jsc
+#!arguments-desc=Engine 默认 jsc,可选:auto, jsc, webview
 
 [Rule]
 # 百度地图
@@ -13,9 +13,9 @@ DOMAIN,lc.map.baidu.com,REJECT,extended-matching
 
 [Script]
 # 百度地图 - 组件包
-百度地图去广告 = type=http-response,pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/imap\/dl\/s\/UpdateInfo\.php\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/baidu/baidumap.js
+百度地图去广告 = type=http-response,pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/imap\/dl\/s\/UpdateInfo\.php\?,requires-body=1,engine={{{Engine}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/baidu/baidumap.js
 # 百度地图 - 我的页面
-百度地图去广告 = type=http-response,pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/usersystem\/mine\/page\?,requires-body=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/baidu/baidumap.js
+百度地图去广告 = type=http-response,pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/usersystem\/mine\/page\?,requires-body=1,engine={{{Engine}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/baidu/baidumap.js
 
 [Map Local]
 # 百度地图 - 组件包
