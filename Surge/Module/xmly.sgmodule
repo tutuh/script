@@ -3,7 +3,7 @@
 #!system=ios
 #!category=Tutu
 #!arguments=Engine:jsc
-#!arguments-desc=Engine 默认 jsc,可选:auto, jsc, webview
+#!arguments-desc=执行引擎:\nEngine 默认 jsc, 可选: auto, jsc, webview
 
 [General]
 # 喜马拉雅 - DNS劫持
