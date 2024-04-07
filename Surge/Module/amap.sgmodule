@@ -2,7 +2,7 @@
 #!desc=高德地图APP 净化
 #!category=Tutu
 #!arguments=Engine:jsc
-#!arguments-desc=Engine 默认 jsc,可选:auto, jsc, webview
+#!arguments-desc=执行引擎:\nEngine 默认 jsc, 可选: auto, jsc, webview
 #!author = RuCu6
 #!update = 2024-02-11 20:25
 
