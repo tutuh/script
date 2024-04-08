@@ -2,7 +2,7 @@
 #!desc=喜马拉雅APP 净化
 #!category=Tutu
 #!arguments=脚本引擎:jsc
-#!arguments-desc=脚本引擎:默认 jsc, 可选: auto, jsc, webview
+#!arguments-desc=脚本引擎：默认 jsc, 可选：auto, jsc, webview
 
 [General]
 # 喜马拉雅 - DNS劫持
