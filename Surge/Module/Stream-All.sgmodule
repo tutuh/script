@@ -2,7 +2,7 @@
 #!desc=检测 Netflix, Disney+, YouTube 的解锁状态
 #!category=Panel
 #!arguments=更新频率:-1, 请求超时:30, 面板名称:流媒体解锁检测, 图标:play.tv.fill, 图标颜色:#D22F20
-#!arguments-desc=[参数说明]\n\n更新频率：刷新间隔时间、默认不刷新\n\n请求超时：默认30秒，单位：秒
+#!arguments-desc=[参数说明]\n\n更新频率：面板刷新的间隔时间、默认手动刷新\n\n请求超时：默认30秒，单位：秒
 
 [Panel]
 {{{面板名称}}} = script-name={{{面板名称}}},update-interval={{{更新频率}}}
