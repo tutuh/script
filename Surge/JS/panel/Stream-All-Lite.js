@@ -1,9 +1,6 @@
 /*
  * 由@githubdulong编写
  * 原脚本地址：https://raw.githubusercontent.com/githubdulong/Script/master/Stream-All.js
- * 由@Rabbit-Spec修改
- * 更新日期：2022.10.28
- * 版本：1.0
  */
 
 let args = getArgs();
