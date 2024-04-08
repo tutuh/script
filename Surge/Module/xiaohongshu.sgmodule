@@ -2,7 +2,7 @@
 #!desc=小红书APP 去开屏、信息流、搜索页广告、照片视频去水印
 #!category=Tutu
 #!arguments=脚本引擎:jsc
-#!arguments-desc=脚本引擎:默认 jsc, 可选: auto, jsc, webview
+#!arguments-desc=脚本引擎：默认 jsc, 可选：auto, jsc, webview
 #!author = RuCu6 fmz200
 #!update = 2023-12-19 16:00
 
