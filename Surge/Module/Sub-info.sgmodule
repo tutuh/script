@@ -9,5 +9,5 @@
 {{{2号机场}}} = script-name={{{面板名称2}}},update-interval={{{面板刷新}}}
 
 [Script]
-{{{1号机场}}} = type=generic,timeout={{{请求超时}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,argument=url={{{机场订阅}}}&reset_day={{{重置日期}}}&title={{{面板名称}}}&icon={{{图标}}}&color={{{图标颜色}}}
-{{{2号机场}}} = type=generic,timeout={{{请求超时}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,argument=url={{{机场订阅}}}&reset_day={{{重置日期}}}&title={{{面板名称}}}&icon={{{图标}}}&color={{{图标颜色}}}
+{{{1号机场}}} = type=generic,timeout={{{请求超时}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,argument=url={{{机场订阅1}}}&reset_day={{{重置日期}}}&title={{{面板名称}}}&icon={{{图标}}}&color={{{图标颜色}}}
+{{{2号机场}}} = type=generic,timeout={{{请求超时}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,argument=url={{{机场订阅2}}}&reset_day={{{重置日期}}}&title={{{面板名称}}}&icon={{{图标}}}&color={{{图标颜色}}}
