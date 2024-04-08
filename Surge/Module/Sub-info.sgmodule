@@ -1,13 +1,13 @@
 #!name=机场流量查询
 #!desc=默认单流量查询，多订阅需修改参数"机场名称"
 #!category=Panel
-#!arguments=机场名称_1:机场名称1, 请求超时_1:30, 机场订阅_1:编码后的订阅1, 重置日期_1:0, 面板名称_1:机场信息1, 图标_1:network, 图标颜色_1:#3B7FF7, 更新频率_1:21600, 机场名称_2:#机场名称2, 请求超时_2:30, 机场订阅_2:编码后的订阅2, 重置日期_2:0, 面板名称_2:机场信息2, 图标_2:network, 图标颜色_2:#3B7FF7, 更新频率_2:21600
+#!arguments=1号机场:机场名称1, 请求超时_1:30, 机场订阅_1:编码后的订阅1, 重置日期_1:0, 面板名称_1:机场信息1, 图标_1:network, 图标颜色_1:#3B7FF7, 更新频率_1:21600, 机场名称_2:#机场名称2, 请求超时_2:30, 机场订阅_2:编码后的订阅2, 重置日期_2:0, 面板名称_2:机场信息2, 图标_2:network, 图标颜色_2:#3B7FF7, 更新频率_2:21600
 #!arguments-desc=[参数说明]\n\n机场名称：默认单订阅，开启多订阅需修改此参数为机场名称\n\n请求超时：默认30秒，单位：秒\n\n⭐️机场订阅：需"https://www.urlencoder.org"进行URL编码，用encode后的链接替换机场订阅链接\n\n重置日期：每月流量重置日期，如8号就写8。默认0，仅显示到期日期\n\n面板名称：面板标题，默认显示"机场信息"\n\n更新频率：刷新间隔时间，默认21600秒（6小时）刷新一次
 
 [Panel]
-{{{机场名称_1}}} = script-name={{{机场名称_1}}},update-interval={{{更新频率_1}}}
-{{{机场名称_2}}} = script-name={{{机场名称_2}}},update-interval={{{更新频率_2}}}
+{{{1号机场}}} = script-name={{{机场名称_1}}},update-interval={{{更新频率_1}}}
+{{{2号机场}}} = script-name={{{机场名称_2}}},update-interval={{{更新频率_2}}}
 
 [Script]
-{{{机场名称_1}}} = type=generic,timeout={{{请求超时_1}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,argument=url={{{机场订阅_1}}}&reset_day={{{重置日期_1}}}&title={{{面板名称_1}}}&icon={{{图标_1}}}&color={{{图标颜色_1}}}
-{{{机场名称_2}}} = type=generic,timeout={{{请求超时_2}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,argument=url={{{机场订阅_2}}}&reset_day={{{重置日期_2}}}&title={{{面板名称_2}}}&icon={{{图标_2}}}&color={{{图标颜色_2}}}
+{{{1号机场}}} = type=generic,timeout={{{请求超时_1}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,argument=url={{{机场订阅_1}}}&reset_day={{{重置日期_1}}}&title={{{面板名称_1}}}&icon={{{图标_1}}}&color={{{图标颜色_1}}}
+{{{2号机场}}} = type=generic,timeout={{{请求超时_2}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/panel/Sub-info.js,argument=url={{{机场订阅_2}}}&reset_day={{{重置日期_2}}}&title={{{面板名称_2}}}&icon={{{图标_2}}}&color={{{图标颜色_2}}}
