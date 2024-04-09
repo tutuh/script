@@ -1,5 +1,5 @@
 #!name=Cookie 获取
-#!desc=在使用后手动将其禁用,以免产生不必要的 MITM
+#!desc=在使用后手动将其禁用，以免产生不必要的 MITM
 #!category=签到模块
 
 [Script]
