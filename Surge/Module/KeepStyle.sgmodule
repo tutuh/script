@@ -1,5 +1,5 @@
-#!name=Keep 去广告 
-#!desc=KeepAPP 净化
+#!name=Keep
+#!desc=KeepAPP 去广告
 #!category=Tutu
 #!arguments=脚本引擎:jsc
 #!arguments-desc=脚本引擎：默认 jsc, 可选：auto, jsc, webview
