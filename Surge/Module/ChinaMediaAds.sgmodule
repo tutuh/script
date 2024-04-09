@@ -1,5 +1,5 @@
-#!name=爱优腾芒去广告
-#!desc=爱奇艺、优酷、腾讯视频、芒果TV APP净化
+#!name=ChinaMediaAds
+#!desc=爱奇艺、优酷、腾讯视频、芒果TV APP 去广告
 #!category=Tutu
 #!arguments=脚本引擎:jsc
 #!arguments-desc=脚本引擎:默认 jsc, 可选: auto, jsc, webview
