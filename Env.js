@@ -29,6 +29,14 @@ function Env(name, opts) {
 
   return new (class {
     constructor(name, opts) {
+      this.logLevels = { debug: 0, info: 1, warn: 2, error: 3 }
+      this.logLevelPrefixs = {
+        debug: '[DEBUG] ',
+        info: '[INFO] ',
+        warn: '[WARN] ',
+        error: '[ERROR] '
+      }
+      this.logLevel = 'info'
       this.name = name
       this.http = new Http(this)
       this.data = null
@@ -86,9 +94,9 @@ function Env(name, opts) {
       }
     }
 
-    toStr(obj, defaultValue = null) {
+    toStr(obj, defaultValue = null, ...args) {
       try {
-        return JSON.stringify(obj)
+        return JSON.stringify(obj, ...args)
       } catch {
         return defaultValue
       }
@@ -304,8 +312,15 @@ function Env(name, opts) {
       this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar()
       if (opts) {
         opts.headers = opts.headers ? opts.headers : {}
-        if (undefined === opts.headers.Cookie && undefined === opts.cookieJar) {
-          opts.cookieJar = this.ckjar
+        if (opts) {
+          opts.headers = opts.headers ? opts.headers : {}
+          if (
+            undefined === opts.headers.cookie &&
+            undefined === opts.headers.Cookie &&
+            undefined === opts.cookieJar
+          ) {
+            opts.cookieJar = this.ckjar
+          }
         }
       }
     }
@@ -323,9 +338,15 @@ function Env(name, opts) {
         request.url += '?' + this.queryStr(request.params)
       }
       // followRedirect 禁止重定向
-      if (typeof request.followRedirect !== 'undefined' && !request['followRedirect']) {
-        if (this.isSurge() || this.isLoon()) request['auto-redirect'] = false  // Surge & Loon
-        if (this.isQuanX()) request.opts ? request['opts']['redirection'] = false : request.opts = { redirection: false }  // Quantumult X
+      if (
+        typeof request.followRedirect !== 'undefined' &&
+        !request['followRedirect']
+      ) {
+        if (this.isSurge() || this.isLoon()) request['auto-redirect'] = false // Surge & Loon
+        if (this.isQuanX())
+          request.opts
+            ? (request['opts']['redirection'] = false)
+            : (request.opts = { redirection: false }) // Quantumult X
       }
       switch (this.getEnv()) {
         case 'Surge':
@@ -439,9 +460,15 @@ function Env(name, opts) {
         delete request.headers['content-length']
       }
       // followRedirect 禁止重定向
-      if (typeof request.followRedirect !== 'undefined' && !request['followRedirect']) {
-        if (this.isSurge() || this.isLoon()) request['auto-redirect'] = false  // Surge & Loon
-        if (this.isQuanX()) request.opts ? request['opts']['redirection'] = false : request.opts = { redirection: false }  // Quantumult X
+      if (
+        typeof request.followRedirect !== 'undefined' &&
+        !request['followRedirect']
+      ) {
+        if (this.isSurge() || this.isLoon()) request['auto-redirect'] = false // Surge & Loon
+        if (this.isQuanX())
+          request.opts
+            ? (request['opts']['redirection'] = false)
+            : (request.opts = { redirection: false }) // Quantumult X
       }
       switch (this.getEnv()) {
         case 'Surge':
@@ -588,8 +615,9 @@ function Env(name, opts) {
      * @param {*} opts 通知参数
      *
      */
-    msg(title = name, subt = '', desc = '', opts) {
+    msg(title = name, subt = '', desc = '', opts = {}) {
       const toEnvOpts = (rawopts) => {
+        const { $open, $copy, $media, $mediaMime } = rawopts
         switch (typeof rawopts) {
           case undefined:
             return rawopts
@@ -613,27 +641,108 @@ function Env(name, opts) {
               case 'Stash':
               case 'Shadowrocket':
               default: {
+                const options = {}
+
+                // 打开URL
                 let openUrl =
-                  rawopts.url || rawopts.openUrl || rawopts['open-url']
-                return { url: openUrl }
+                  rawopts.openUrl || rawopts.url || rawopts['open-url'] || $open
+                if (openUrl)
+                  Object.assign(options, { action: 'open-url', url: openUrl })
+
+                // 粘贴板
+                let copy =
+                  rawopts['update-pasteboard'] ||
+                  rawopts.updatePasteboard ||
+                  $copy
+                if (copy) {
+                  Object.assign(options, { action: 'clipboard', text: copy })
+                }
+
+                if ($media) {
+                  let mediaUrl = undefined
+                  let media = undefined
+                  let mime = undefined
+                  // http 开头的网络地址
+                  if ($media.startsWith('http')) {
+                    mediaUrl = $media
+                  }
+                  // 带标识的 Base64 字符串
+                  // data:image/png;base64,iVBORw0KGgo...
+                  else if ($media.startsWith('data:')) {
+                    const [data] = $media.split(';')
+                    const [, base64str] = $media.split(',')
+                    media = base64str
+                    mime = data.replace('data:', '')
+                  }
+                  // 没有标识的 Base64 字符串
+                  // iVBORw0KGgo...
+                  else {
+                    // https://stackoverflow.com/questions/57976898/how-to-get-mime-type-from-base-64-string
+                    const getMimeFromBase64 = (encoded) => {
+                      const signatures = {
+                        'JVBERi0': 'application/pdf',
+                        'R0lGODdh': 'image/gif',
+                        'R0lGODlh': 'image/gif',
+                        'iVBORw0KGgo': 'image/png',
+                        '/9j/': 'image/jpg'
+                      }
+                      for (var s in signatures) {
+                        if (encoded.indexOf(s) === 0) {
+                          return signatures[s]
+                        }
+                      }
+                      return null
+                    }
+                    media = $media
+                    mime = getMimeFromBase64($media)
+                  }
+
+                  Object.assign(options, {
+                    'media-url': mediaUrl,
+                    'media-base64': media,
+                    'media-base64-mime': $mediaMime ?? mime
+                  })
+                }
+
+                Object.assign(options, {
+                  'auto-dismiss': rawopts['auto-dismiss'],
+                  'sound': rawopts['sound']
+                })
+                return options
               }
               case 'Loon': {
+                const options = {}
+
                 let openUrl =
-                  rawopts.openUrl || rawopts.url || rawopts['open-url']
+                  rawopts.openUrl || rawopts.url || rawopts['open-url'] || $open
+                if (openUrl) Object.assign(options, { openUrl })
+
                 let mediaUrl = rawopts.mediaUrl || rawopts['media-url']
-                return { openUrl, mediaUrl }
+                if ($media?.startsWith('http')) mediaUrl = $media
+                if (mediaUrl) Object.assign(options, { mediaUrl })
+
+                console.log(JSON.stringify(options))
+                return options
               }
               case 'Quantumult X': {
+                const options = {}
+
                 let openUrl =
-                  rawopts['open-url'] || rawopts.url || rawopts.openUrl
+                  rawopts['open-url'] || rawopts.url || rawopts.openUrl || $open
+                if (openUrl) Object.assign(options, { 'open-url': openUrl })
+
                 let mediaUrl = rawopts['media-url'] || rawopts.mediaUrl
-                let updatePasteboard =
-                  rawopts['update-pasteboard'] || rawopts.updatePasteboard
-                return {
-                  'open-url': openUrl,
-                  'media-url': mediaUrl,
-                  'update-pasteboard': updatePasteboard
-                }
+                if ($media?.startsWith('http')) mediaUrl = $media
+                if (mediaUrl) Object.assign(options, { 'media-url': mediaUrl })
+
+                let copy =
+                  rawopts['update-pasteboard'] ||
+                  rawopts.updatePasteboard ||
+                  $copy
+                if (copy) Object.assign(options, { 'update-pasteboard': copy })
+
+                console.log(JSON.stringify(options))
+                return options
               }
               case 'Node.js':
                 return undefined
@@ -668,11 +777,55 @@ function Env(name, opts) {
       }
     }
 
+    debug(...logs) {
+      if (this.logLevels[this.logLevel] <= this.logLevels.debug) {
+        if (logs.length > 0) {
+          this.logs = [...this.logs, ...logs]
+        }
+        console.log(
+          `${this.logLevelPrefixs.debug}${logs.map((l) => l ?? String(l)).join(this.logSeparator)}`
+        )
+      }
+    }
+
+    info(...logs) {
+      if (this.logLevels[this.logLevel] <= this.logLevels.info) {
+        if (logs.length > 0) {
+          this.logs = [...this.logs, ...logs]
+        }
+        console.log(
+          `${this.logLevelPrefixs.info}${logs.map((l) => l ?? String(l)).join(this.logSeparator)}`
+        )
+      }
+    }
+
+    warn(...logs) {
+      if (this.logLevels[this.logLevel] <= this.logLevels.warn) {
+        if (logs.length > 0) {
+          this.logs = [...this.logs, ...logs]
+        }
+        console.log(
+          `${this.logLevelPrefixs.warn}${logs.map((l) => l ?? String(l)).join(this.logSeparator)}`
+        )
+      }
+    }
+
+    error(...logs) {
+      if (this.logLevels[this.logLevel] <= this.logLevels.error) {
+        if (logs.length > 0) {
+          this.logs = [...this.logs, ...logs]
+        }
+        console.log(
+          `${this.logLevelPrefixs.error}${logs.map((l) => l ?? String(l)).join(this.logSeparator)}`
+        )
+      }
+    }
+
     log(...logs) {
       if (logs.length > 0) {
         this.logs = [...this.logs, ...logs]
       }
-      console.log(logs.join(this.logSeparator))
+      console.log(logs.map((l) => l ?? String(l)).join(this.logSeparator))
     }
 
     logErr(err, msg) {
@@ -683,10 +836,16 @@ function Env(name, opts) {
         case 'Shadowrocket':
         case 'Quantumult X':
         default:
-          this.log('', `❗️${this.name}, 错误!`, err)
+          this.log('', `❗️${this.name}, 错误!`, msg, err)
           break
         case 'Node.js':
-          this.log('', `❗️${this.name}, 错误!`, err.stack)
+          this.log(
+            '',
+            `❗️${this.name}, 错误!`,
+            msg,
+            typeof err.message !== 'undefined' ? err.message : err,
+            err.stack
+          )
           break
       }
     }
