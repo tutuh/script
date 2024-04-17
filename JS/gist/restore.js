@@ -53,10 +53,6 @@ const cacheArr = {
   appSubCaches: { label: "应用订阅缓存", key: $.KEY_app_subCaches },
 };
 
-for (let index = 0; index < $.dataSplit; index++) {
-  cacheArr[`datas${index || ""}`] = { label: `用户数据第${index + 1}段` };
-}
-
 $.http = new HTTP({
   baseURL: `https://api.github.com`,
   headers: {
@@ -72,6 +68,14 @@ $.setval = (val, key) => {
     return $prefs.setValueForKey(val, key);
   } else {
     return $persistentStore.write(val, key);
+  }
+};
+
+$.getval = (t) => {
+  if ($.env.isQX) {
+    return $prefs.valueForKey(t);
+  } else {
+    return $persistentStore.read(t);
   }
 };
 
@@ -122,28 +126,34 @@ $.setdata = (val, key) => {
 
   const boxjsdata = gistList.find((item) => item.description === $.desc);
   if (!boxjsdata) throw "未找到 Gist 备份信息，请先备份";
+  let datasIndex = 0;
+  Object.keys(boxjsdata.files).forEach((key) => {
+    if (key.indexOf("datas") !== -1) {
+      datasIndex += 1;
+      cacheArr[key.replace(".json", "")] = {
+        label: `用户数据第${datasIndex}段`,
+      };
+    }
+  });
 
   for (const cacheArrKey in cacheArr) {
     const item = cacheArr[cacheArrKey];
     const saveKey = `${cacheArrKey}.json`;
-    let fielUri = boxjsdata.files[saveKey].raw_url.replace(
+    const fileUri = boxjsdata.files[saveKey].raw_url.replace(
       /\/raw\/(.*)\//,
       "/raw/"
     );
-
-    const content = await getBackGist(fielUri);
+    const content = await getBackGist(fileUri);
     if (content) {
       try {
+        $.info(fileUri);
         if (!item.key) {
           Object.keys(content || {}).forEach((key) => {
             const val = content[key];
-            $.setdata({
-              key: key,
-              val: val,
-            });
+            $.setdata(val, key);
           });
         } else {
-          $.setdata({ key: item.key, val: JSON.stringify(content) });
+          $.setdata(JSON.stringify(content), item.key);
         }
         $.msg += `${item.label}：备份恢复成功 \n`;
         $.info(`${item.label}：备份恢复成功`);
@@ -155,7 +165,6 @@ $.setdata = (val, key) => {
       $.info(`${item.label}：未找到备份，请先备份`);
     }
   }
-  $.info("所有备份恢复成功");
 })()
   .then(() => {
     $.notify("gist 备份恢复", "", `${$.username}：\n${$.msg}`);
