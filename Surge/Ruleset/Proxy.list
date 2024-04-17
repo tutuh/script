@@ -24,7 +24,6 @@ DOMAIN,lab.skk.moe
 DOMAIN,media.steampowered.com
 DOMAIN,nytimes.map.fastly.net
 DOMAIN,ocsp.int-x3.letsencrypt.org
-DOMAIN,onedrive.live.com
 DOMAIN,payments-jp.amazon.com
 DOMAIN,pki.goog
 DOMAIN,s3-ap-northeast-1.amazonaws.com
@@ -95,6 +94,8 @@ DOMAIN-SUFFIX,ahcdn.com
 DOMAIN-SUFFIX,aicoin.com
 DOMAIN-SUFFIX,aimoon.com
 DOMAIN-SUFFIX,aka.ms
+DOMAIN-SUFFIX,akamai.net
+DOMAIN-SUFFIX,akamaihd.net
 DOMAIN-SUFFIX,amazon.co.jp
 DOMAIN-SUFFIX,amazon.com
 DOMAIN-SUFFIX,amazonaws.com
@@ -169,6 +170,7 @@ DOMAIN-SUFFIX,blizzard.com
 DOMAIN-SUFFIX,blogblog.com
 DOMAIN-SUFFIX,blogcdn.com
 DOMAIN-SUFFIX,blogger.com
+DOMAIN-SUFFIX,blogimg.jp
 DOMAIN-SUFFIX,bloglovin.com
 DOMAIN-SUFFIX,blogsmithmedia.com
 DOMAIN-SUFFIX,blogspot.com
@@ -210,6 +212,7 @@ DOMAIN-SUFFIX,cloudcone.com
 DOMAIN-SUFFIX,cloudflare-dns.com
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,cloudflareresolve.com
+DOMAIN-SUFFIX,cloudflarestatus.com
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,cloudfunctions.net
 DOMAIN-SUFFIX,clubhouse.com
@@ -344,6 +347,7 @@ DOMAIN-SUFFIX,gcld-line.com
 DOMAIN-SUFFIX,gcr.io
 DOMAIN-SUFFIX,gemini.com
 DOMAIN-SUFFIX,genius.com
+DOMAIN-SUFFIX,getchu.com
 DOMAIN-SUFFIX,getdropbox.com
 DOMAIN-SUFFIX,getmdl.io
 DOMAIN-SUFFIX,getoutline.org
@@ -443,6 +447,7 @@ DOMAIN-SUFFIX,iwara.tv
 DOMAIN-SUFFIX,ixquick.com
 DOMAIN-SUFFIX,ixxx.com
 DOMAIN-SUFFIX,jable.tv
+DOMAIN-SUFFIX,java.com
 DOMAIN-SUFFIX,jitpack.io
 DOMAIN-SUFFIX,jkforum.net
 DOMAIN-SUFFIX,joinclubhouse.com
@@ -490,7 +495,6 @@ DOMAIN-SUFFIX,linetv.tw
 DOMAIN-SUFFIX,linkedin.at
 DOMAIN-SUFFIX,linkedin.com
 DOMAIN-SUFFIX,listennotes.com
-DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,live.net
 DOMAIN-SUFFIX,livefilestore.com
 DOMAIN-SUFFIX,livejasmin.com
@@ -503,6 +507,7 @@ DOMAIN-SUFFIX,madewithcode.com
 DOMAIN-SUFFIX,mailchimp.com
 DOMAIN-SUFFIX,majsoul.union-game.com
 DOMAIN-SUFFIX,manhuabika.com
+DOMAIN-SUFFIX,mapbox.com
 DOMAIN-SUFFIX,mastodon.social
 DOMAIN-SUFFIX,material.io
 DOMAIN-SUFFIX,matrix.org
@@ -519,6 +524,7 @@ DOMAIN-SUFFIX,messenger.com
 DOMAIN-SUFFIX,metamask.io
 DOMAIN-SUFFIX,mexc.com
 DOMAIN-SUFFIX,missav.com
+DOMAIN-SUFFIX,misskey.io
 DOMAIN-SUFFIX,mixlr.com
 DOMAIN-SUFFIX,mod.io
 DOMAIN-SUFFIX,moegirl.uk
@@ -528,6 +534,7 @@ DOMAIN-SUFFIX,mozilla.com
 DOMAIN-SUFFIX,mozilla.org
 DOMAIN-SUFFIX,msn.com
 DOMAIN-SUFFIX,mubi.com
+DOMAIN-SUFFIX,muku.tv
 DOMAIN-SUFFIX,mvnrepository.com
 DOMAIN-SUFFIX,myfreecams.com
 DOMAIN-SUFFIX,mypikpak.com
@@ -547,6 +554,7 @@ DOMAIN-SUFFIX,newsweek.com
 DOMAIN-SUFFIX,newyorker.com
 DOMAIN-SUFFIX,newyorktimes.com
 DOMAIN-SUFFIX,nhentai.net
+DOMAIN-SUFFIX,nhentai.xxx
 DOMAIN-SUFFIX,nhncorp.jp
 DOMAIN-SUFFIX,nicehash.com
 DOMAIN-SUFFIX,nintendo.net
@@ -554,6 +562,7 @@ DOMAIN-SUFFIX,noip.com
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,now.com
 DOMAIN-SUFFIX,npm.im
+DOMAIN-SUFFIX,npm.io
 DOMAIN-SUFFIX,npmjs.com
 DOMAIN-SUFFIX,npr.org
 DOMAIN-SUFFIX,nsstatic.net
@@ -743,6 +752,7 @@ DOMAIN-SUFFIX,streamable.com
 DOMAIN-SUFFIX,streaming.mediaservices.windows.net
 DOMAIN-SUFFIX,stripchat.com
 DOMAIN-SUFFIX,substack.com
+DOMAIN-SUFFIX,supjav.com
 DOMAIN-SUFFIX,surfshark.com
 DOMAIN-SUFFIX,swissinfo.ch
 DOMAIN-SUFFIX,symauth.com
@@ -893,6 +903,8 @@ DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,yadi.sk
 DOMAIN-SUFFIX,yahoo.co.jp
 DOMAIN-SUFFIX,yahoo.com
+DOMAIN-SUFFIX,yandex.com
+DOMAIN-SUFFIX,yandex.net
 DOMAIN-SUFFIX,yandex.ru
 DOMAIN-SUFFIX,you-get.org
 DOMAIN-SUFFIX,youtu.be
