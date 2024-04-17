@@ -18,6 +18,7 @@ DOMAIN,outlook.office365.com
 DOMAIN,sms.imagetasks.com
 DOMAIN,smtp-mail.outlook.com
 DOMAIN,smtp.office365.com
+DOMAIN,speedtest.macpaw.com
 DOMAIN,st.dl.bscstorage.net
 DOMAIN,st.dl.eccdnx.com
 DOMAIN,st.dl.pinyuncloud.com
@@ -55,6 +56,7 @@ DOMAIN-SUFFIX,115cdn.net
 DOMAIN-SUFFIX,115img.com
 DOMAIN-SUFFIX,12306.cn
 DOMAIN-SUFFIX,12306.com
+DOMAIN-SUFFIX,123pan.com
 DOMAIN-SUFFIX,126.com
 DOMAIN-SUFFIX,126.link
 DOMAIN-SUFFIX,126.net
@@ -96,6 +98,7 @@ DOMAIN-SUFFIX,360safe.com
 DOMAIN-SUFFIX,360tpcdn.com
 DOMAIN-SUFFIX,360webcache.com
 DOMAIN-SUFFIX,36kr.com
+DOMAIN-SUFFIX,36krcdn.com
 DOMAIN-SUFFIX,39.net
 DOMAIN-SUFFIX,3dmgame.com
 DOMAIN-SUFFIX,423down.com
@@ -116,9 +119,11 @@ DOMAIN-SUFFIX,71.am.com
 DOMAIN-SUFFIX,71edge.com
 DOMAIN-SUFFIX,7766.org
 DOMAIN-SUFFIX,8686c.com
+DOMAIN-SUFFIX,88.com
 DOMAIN-SUFFIX,8800.org
 DOMAIN-SUFFIX,8866.org
 DOMAIN-SUFFIX,88cdn.com
+DOMAIN-SUFFIX,88y.cn
 DOMAIN-SUFFIX,91.com
 DOMAIN-SUFFIX,95516.com
 DOMAIN-SUFFIX,95588.com
@@ -550,6 +555,7 @@ DOMAIN-SUFFIX,kaiyanapp.com
 DOMAIN-SUFFIX,kanimg.com
 DOMAIN-SUFFIX,kankan.com
 DOMAIN-SUFFIX,kaola.com
+DOMAIN-SUFFIX,kdslife.net
 DOMAIN-SUFFIX,keepcdn.com
 DOMAIN-SUFFIX,kfc.com.cn
 DOMAIN-SUFFIX,kingsoft-office-service.com
@@ -661,6 +667,7 @@ DOMAIN-SUFFIX,neea.cn
 DOMAIN-SUFFIX,neixin.cn
 DOMAIN-SUFFIX,netease.com
 DOMAIN-SUFFIX,netease.im
+DOMAIN-SUFFIX,netspeedtestmaster.com
 DOMAIN-SUFFIX,netstatic.net
 DOMAIN-SUFFIX,npmmirror.com
 DOMAIN-SUFFIX,nruan.com
@@ -693,6 +700,8 @@ DOMAIN-SUFFIX,p4pfile.com
 DOMAIN-SUFFIX,paipai.com
 DOMAIN-SUFFIX,paragon.com
 DOMAIN-SUFFIX,pcauto.com.cn
+DOMAIN-SUFFIX,pchome.net
+DOMAIN-SUFFIX,pchpic.net
 DOMAIN-SUFFIX,pconline.com.cn
 DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pddugc.com
@@ -1050,6 +1059,7 @@ DOMAIN-SUFFIX,zmz2019.com
 DOMAIN-SUFFIX,zmzapi.com
 DOMAIN-SUFFIX,zmzapi.net
 DOMAIN-SUFFIX,zmzfile.com
+DOMAIN-SUFFIX,zol-img.com.cn
 DOMAIN-SUFFIX,zol.com.cn
 DOMAIN-SUFFIX,zui.com
 DOMAIN-SUFFIX,zuimeitianqi.com
