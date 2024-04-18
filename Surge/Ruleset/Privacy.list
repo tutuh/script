@@ -64,6 +64,7 @@ DOMAIN,tracklog.58.com
 # > Antiy
 DOMAIN,miav-cse.avlyun.com
 DOMAIN,miui-fxcse.avlyun.com
+# > Apple
 DOMAIN,token.safebrowsing.apple
 # > Baidu
 DOMAIN,hm.baidu.com
@@ -92,6 +93,7 @@ DOMAIN,flash.sec.miui.com
 DOMAIN,tracking.intl.miui.com
 DOMAIN,a0.app.xiaomi.com
 DOMAIN,api.installer.xiaomi.com
+# > Microsoft
 DOMAIN,c.bing.com
 DOMAIN,c.clarity.ms
 DOMAIN,o.clarity.ms
