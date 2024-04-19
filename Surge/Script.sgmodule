@@ -75,4 +75,4 @@ iLovePDF_解锁 = type=http-response,pattern=https://service.ilovepdf.com/v1/use
 ^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/homefeatures\? data-type=text data="{}"
  
 [MITM]
-hostname = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, *.cyapi.cn
+hostname = %APPEND% www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, *.cyapi.cn
