@@ -27,7 +27,7 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 
 [URL Rewrite]
 # > 谷歌中国重定向 - www.google.cn
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com header
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
 [Script]
 # > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
