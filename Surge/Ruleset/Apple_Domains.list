@@ -1,6 +1,6 @@
 # Apple Domains
 # 排除了有国内 CDN 节点的域名和国区专用域名以后，苹果和微软其余的域名
-# https://blog.skk.moe/post/i-have-my-unique-surge-setup/
+# https://ruleset.skk.moe/List/non_ip/apple_services.conf
 
 DOMAIN,api.smoot.apple.cn
 DOMAIN-SUFFIX,aaplimg.com
