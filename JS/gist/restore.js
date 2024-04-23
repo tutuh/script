@@ -38,7 +38,7 @@ $.KEY_cursessions = "chavy_boxjs_cur_sessions";
 
 $.token = $.read("token");
 $.username = $.read("username");
-$.dataSplit = Number($.read("split") | "1") | 1;
+$.versionId = $.read("revision_id");
 
 $.cacheKey = "BoxJS-Data";
 $.desc = "BoxJS-Data Backup";
@@ -52,6 +52,11 @@ const cacheArr = {
   globalbaks: { label: "备份索引", key: $.KEY_backups },
   appSubCaches: { label: "应用订阅缓存", key: $.KEY_app_subCaches },
 };
+
+$.backupType =
+  $.read("backup_type") || [...Object.keys(cacheArr), "datas"].join(",");
+
+$.backupType = $.backupType.split(",");
 
 $.http = new HTTP({
   baseURL: `https://api.github.com`,
@@ -124,25 +129,32 @@ $.setdata = (val, key) => {
       `Gist 列表请求失败:${gistList.message}\n请检查 Gist 账号配置`
     );
 
-  const boxjsdata = gistList.find((item) => item.description === $.desc);
+  let boxjsdata = gistList.find((item) => item.description === $.desc);
   if (!boxjsdata) throw "未找到 Gist 备份信息，请先备份";
-  let datasIndex = 0;
-  Object.keys(boxjsdata.files).forEach((key) => {
-    if (key.indexOf("datas") !== -1) {
-      datasIndex += 1;
-      cacheArr[key.replace(".json", "")] = {
-        label: `用户数据第${datasIndex}段`,
-      };
-    }
-  });
+
+  if ($.versionId) {
+    boxjsdata = await getGistRevision(boxjsdata.id, $.versionId);
+  }
+
+  if ($.backupType.indexOf(`datas`) !== -1) {
+    let datasIndex = 0;
+    Object.keys(boxjsdata.files).forEach((key) => {
+      if (key.indexOf("datas") !== -1) {
+        datasIndex += 1;
+        $.backupType.push(key.replace(".json", ""));
+        cacheArr[key.replace(".json", "")] = {
+          label: `用户数据第${datasIndex}段`,
+        };
+      }
+    });
+  }
 
   for (const cacheArrKey in cacheArr) {
+    if ($.backupType.indexOf(cacheArrKey) === -1) continue;
+
     const item = cacheArr[cacheArrKey];
     const saveKey = `${cacheArrKey}.json`;
-    const fileUri = boxjsdata.files[saveKey].raw_url.replace(
-      /\/raw\/(.*)\//,
-      "/raw/"
-    );
+    const fileUri = boxjsdata.files[saveKey].raw_url;
     const content = await getBackGist(fileUri);
     if (content) {
       try {
@@ -167,28 +179,39 @@ $.setdata = (val, key) => {
   }
 })()
   .then(() => {
-    $.notify("gist 备份恢复", "", `${$.username}：\n${$.msg}`);
+    $.write("", "revision_id");
+    if ($.versionId) {
+      $.notify("gist 历史备份恢复", $.versionId, `${$.username}：\n${$.msg}`);
+    } else {
+      $.notify("gist 备份恢复", "", `${$.username}：\n${$.msg}`);
+    }
   })
   .catch((e) => {
     $.error(e);
-    $.notify("gist 备份", "", `❌${e.message || e}`);
+    if ($.versionId) {
+      $.notify("gist 历史备份恢复", $.versionId, `❌${e.message || e}`);
+    } else {
+      $.notify("gist 备份恢复", "", `❌${e.message || e}`);
+    }
   })
   .finally(() => {
     $.done();
   });
 
-function getGistUrl(api) {
-  return `${api}`;
-}
-
 function getGist() {
   return $.http
-    .get({ url: getGistUrl(`/users/${$.username}/gists`) })
+    .get({ url: `/users/${$.username}/gists` })
     .then((response) => JSON.parse(response.body));
 }
 
 function getBackGist(url) {
   return $.http.get({ url }).then((response) => JSON.parse(response.body));
+}
+
+function getGistRevision(gist_id, revision_id) {
+  return $.http
+    .get({ url: `/gists/${gist_id}/${revision_id}` })
+    .then((response) => JSON.parse(response.body));
 }
 
 /* prettier-ignore */
