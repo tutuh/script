@@ -92,6 +92,11 @@ const cacheArr = {
   appSubCaches: "应用订阅缓存",
 };
 
+$.backupType =
+  $.read("backup_type") || [...Object.keys(cacheArr), "datas"].join(",");
+
+$.backupType = $.backupType.split(",");
+
 (async () => {
   if (!$.token || !$.username) throw "请去 boxjs 完善信息";
 
@@ -108,6 +113,8 @@ const cacheArr = {
   const all_params = { ...commonParams };
   const files = {};
   for (const cacheArrKey in cacheArr) {
+    if ($.backupType.indexOf(cacheArrKey) === -1) continue;
+
     const label = cacheArr[cacheArrKey];
     const saveKey = `${cacheArrKey}.json`;
     $.msg += `${label}：${saveKey}\n`;
@@ -124,26 +131,38 @@ const cacheArr = {
   const dataItemNum = Math.ceil(dataKeys.length / $.dataSplit);
   const datas = chunk(dataKeys, dataItemNum);
 
-  for (let index = 0; index < datas.length; index++) {
-    const element = datas[index];
-    const saveKey = `datas${index || ""}.json`;
-    const saveValue = {};
-    element.forEach((key) => {
-      saveValue[key] = backup["datas"][key];
-    });
-    const dataFiles = {
-      files: { [saveKey]: { content: JSON.stringify(saveValue) } },
-    };
-    const result = await backGist(dataFiles, isBackUp);
-    $.msg += `用户数据：datas 第${index + 1}段备份${
-      result.message ? "失败" + `(${result.message})` : "成功"
-    }\n`;
+  if ($.backupType.indexOf(`datas`) > -1) {
+    for (let index = 0; index < datas.length; index++) {
+      const element = datas[index];
+      const saveKey = `datas${index || ""}.json`;
+      const saveValue = {};
+      element.forEach((key) => {
+        saveValue[key] = backup["datas"][key];
+      });
+      const dataFiles = {
+        files: { [saveKey]: { content: JSON.stringify(saveValue) } },
+      };
+      const result = await backGist(dataFiles, isBackUp);
+      $.msg += `用户数据：datas 第${index + 1}段备份${
+        result.message ? "失败" + `(${result.message})` : "成功"
+      }\n`;
+    }
   }
 
   if (response.message) {
     $.error(`结果：gist 备份失败（${JSON.stringify(response)}❌`);
     throw `结果：gist 备份失败（${JSON.stringify(response)}）❌ \n`;
   } else {
+    const commits = await getGistCommit(response.id);
+
+    const checkboxs = {};
+    commits.forEach((item) => {
+      const label = convertTimeToHumanReadable(item.committed_at);
+      if (!checkboxs[label]) checkboxs[label] = { key: item.version, label };
+    });
+
+    $.write(Object.values(checkboxs), "revision_options");
+    $.msg += `历史 Commit 缓存成功\n`;
     $.msg += `结果：gist（${$.desc}） 备份成功 ✅\n`;
     $.info($.msg);
   }
@@ -163,6 +182,40 @@ function getGist() {
   return $.http
     .get({ url: `/users/${$.username}/gists` })
     .then((response) => JSON.parse(response.body));
+}
+
+function getGistCommit(gist_id) {
+  return $.http
+    .get({ url: `/gists/${gist_id}/commits?per_page=100` })
+    .then((response) => JSON.parse(response.body));
+}
+
+Date.prototype.Format = function (fmt) {
+  var o = {
+    "M+": this.getMonth() + 1, //月份
+    "d+": this.getDate(), //日
+    "h+": this.getHours(), //小时
+    "m+": this.getMinutes(), //分
+    "s+": this.getSeconds(), //秒
+    "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+    S: this.getMilliseconds(), //毫秒
+  };
+  if (/(y+)/.test(fmt))
+    fmt = fmt.replace(
+      RegExp.$1,
+      (this.getFullYear() + "").substr(4 - RegExp.$1.length)
+    );
+  for (var k in o)
+    if (new RegExp("(" + k + ")").test(fmt))
+      fmt = fmt.replace(
+        RegExp.$1,
+        RegExp.$1.length == 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length)
+      );
+  return fmt;
+};
+
+function convertTimeToHumanReadable(dateTime) {
+  return new Date(dateTime).Format("yyyy-MM-dd hh:mm");
 }
 
 function chunk(arr, num) {
