@@ -1,5 +1,5 @@
-# Apple_CDN
-# 苹果国内 CDN 节点
+# Apple_CDN & Apple_CN
+# 苹果国内 CDN 节点、云上贵州（icloud.com.cn）和苹果地图国内版等服务的域名
 # https://ruleset.skk.moe/List/non_ip/apple_cdn.conf
 
 DOMAIN-SUFFIX,a1.mzstatic.com
@@ -168,3 +168,8 @@ DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net
 DOMAIN-SUFFIX,www.apple.com.edgekey.net
 DOMAIN-SUFFIX,www.apple.com
 DOMAIN-SUFFIX,xp.apple.com
+
+# Apple_CN
+DOMAIN-SUFFIX,cn.apple.com
+DOMAIN-SUFFIX,cn.ls.apple.com
+DOMAIN-SUFFIX,cn-ssl.ls.apple.com
