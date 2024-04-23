@@ -1,0 +1,33 @@
+# Apple Domains
+# 排除了有国内 CDN 节点的域名和国区专用域名以后，苹果和微软其余的域名
+# https://blog.skk.moe/post/i-have-my-unique-surge-setup/
+
+DOMAIN,api.smoot.apple.cn
+DOMAIN-SUFFIX,aaplimg.com
+DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX,apple.co
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,apple.com.cn
+DOMAIN-SUFFIX,appstore.com
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,me.com
+DOMAIN-SUFFIX,organicfruitapps.com
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,apple-mapkit.com
+DOMAIN-SUFFIX,appsto.re
+DOMAIN-SUFFIX,itunes.com
+DOMAIN-SUFFIX,apple.news
+DOMAIN-SUFFIX,push-apple.com.akadns.net
+PROCESS-NAME,trustd
+PROCESS-NAME,netbiosd
+PROCESS-NAME,com.apple.geod
+PROCESS-NAME,mapspushd
+PROCESS-NAME,com.apple.Maps
+PROCESS-NAME,apsd
+PROCESS-NAME,fmfd
+PROCESS-NAME,findmydevice-user-agent
+PROCESS-NAME,CoreLocationAgent
+PROCESS-NAME,WeatherWidget
