@@ -18,15 +18,15 @@ DOMAIN,lc.map.baidu.com,REJECT,extended-matching
 
 [Map Local]
 # 百度地图 - 组件包
-^https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?container=(du_aide_module|du_card_ugc|du_trip_route_tab) data-type=text data="{}"
-^https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?oem= data-type=text data="{}"
+^https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?container=(du_aide_module|du_card_ugc|du_trip_route_tab) data-type=text data="{}" status-code=200
+^https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?oem= data-type=text data="{}" status-code=200
 # 百度地图 - 首页 小横条,左上角动图
-^https:\/\/newclient\.map\.baidu\.com\/client\/(noticebar\/get\?|phpui2\/\?qt=ads) data-type=text data="{}"
+^https:\/\/newclient\.map\.baidu\.com\/client\/(noticebar\/get\?|phpui2\/\?qt=ads) data-type=text data="{}" status-code=200
 # 百度地图 - 我的页面
-^https:\/\/newclient\.map\.baidu\.com\/grow-engine\/api\/common\/userHome\? data-type=text data="{}"
+^https:\/\/newclient\.map\.baidu\.com\/grow-engine\/api\/common\/userHome\? data-type=text data="{}" status-code=200
 # 百度地图 - 打车页
-^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/(notice|baseinfo) data-type=text data="{}"
-^https:\/\/yongche\.baidu\.com\/gomarketing\/api\/(activity\/talos\/activitycard\?|popup\/getentrancecordovaurl) data-type=text data="{}"
+^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/(notice|baseinfo) data-type=text data="{}" status-code=200
+^https:\/\/yongche\.baidu\.com\/gomarketing\/api\/(activity\/talos\/activitycard\?|popup\/getentrancecordovaurl) data-type=text data="{}" status-code=200
 
 [MITM]
 hostname = %APPEND% newclient.map.baidu.com, yongche.baidu.com
