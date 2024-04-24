@@ -20,6 +20,8 @@
 
 #爱奇艺_签到 = type=cron,cronexp=30 5 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
+达美乐_签到 = type=cron,cronexp=30 10 0 * * *,wake-system=1,timeout=300,script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js
+
 Boxjs 数据备份 = type=cron,cronexp=10 8 1 * * *,wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
 
 #Boxjs 数据恢复 = type=cron,cronexp=30 10 5 * * *,wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js
