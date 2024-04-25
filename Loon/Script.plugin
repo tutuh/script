@@ -1,5 +1,5 @@
 #!name=多功能组合模块
-#!desc=跳过代理检测、Boxjs 配置、Spotify；解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF、心脏+
+#!desc=跳过代理检测、Boxjs 配置；解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF、心脏+
 
 [General]
 skip-proxy = iosapps.itunes.apple.com
@@ -13,15 +13,6 @@ http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path=https://raw.githubu
 
 # > TestFlight账户管理 - testflight.apple.com
 http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理
-
-# > Spotify 歌词翻译 - spclient.wg.spotify.com
-http-request ^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/ script-path=https://raw.githubusercontent.com/dompling/Script/master/spotify/spotify-lyric.request.js, requires-body=true timeout=10, tag=spotify歌词请求
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/ script-path=https://raw.githubusercontent.com/dompling/Script/master/spotify/spotify-lyric.search.js, requires-body=true, binary-body-mode=true, timeout=10, tag=spotify歌词翻译
-
-# > Spotify 解锁
-http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, tag=spotify-json
-
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, tag=spotify-proto
 
 # > 扫描全能王 CamScanner pro - ap*.intsig.net
 http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? script-path=https://gist.githubusercontent.com/tutuh/9d2267b6da8974baf48b8d1fffc4ae41/raw/c4bf4bf2935b1a8efd9f578a3d0cf2b6cbff90c2/CamScanner.js, requires-body=true, tag=扫描全能王_解锁
@@ -45,4 +36,4 @@ http-response ^https:\/\/api\.995120\.cn\/mini\/api\/appleplus script-path=https
 http-response ^https?:\/\/(purchase-.*-api|user-kaji-api)\.(yiruikecorp|b612kaji|tianyancam)\.com\/v\d\/purchase\/subscription\/subscriber\/status script-path=https://gist.githubusercontent.com/tutuh/b56cb47439d694e2dfd0ca35540a2cb7/raw/f05f0ab6485b4623006ddf63639ca33e49b0ca65/B12kj.js, requires-body=true, tag=咔叽_解锁
 
 [Mitm]
-hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com
+hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com
