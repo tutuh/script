@@ -6,6 +6,7 @@ const pyer2 = JSON.parse(typeof $response != "undefined" && $response.body || nu
 
 const names = $persistentStore.read("name") ? $persistentStore.read("name").split(",") : [];
 const appids = $persistentStore.read("appid") ? $persistentStore.read("appid").split(",") : [];
+const forever = $persistentStore.read("forever");
 
 if (typeof $response == "undefined") {
   delete $request.headers["x-revenuecat-etag"];
@@ -18,12 +19,21 @@ if (typeof $response == "undefined") {
   for (let i = 0; i < names.length && i < appids.length; i++) {
     const name = names[i];
     const appid = appids[i];
-
-    const data = {
-      "product_identifier": appid,
-      "expires_date": "2099-09-09T09:09:09Z",
-      "purchase_date": "2023-09-09T09:09:09Z"
+		let data = {
+      "product_identifier": appid
     };
+    if (forever) {
+      data = {
+        ...data,
+        "purchase_date": "2023-09-09T09:09:09Z"
+      };
+    } else {
+      data = {
+        ...data,
+        "expires_date": "2099-09-09T09:09:09Z",
+        "purchase_date": "2023-09-09T09:09:09Z"
+      };
+    }
 
     pyer2.subscriber.entitlements[name] = data;
     pyer2.subscriber.subscriptions[appid] = {  
@@ -33,7 +43,7 @@ if (typeof $response == "undefined") {
       "ownership_type": "PURCHASED"
     };
   }
-
+  
   pyer1.body = JSON.stringify(pyer2);
 }
 
