@@ -14,5 +14,34 @@ http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path=https://raw.githubu
 # > TestFlight账户管理 - testflight.apple.com
 http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理
 
+# > Spotify 歌词翻译 - spclient.wg.spotify.com
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/ script-path=https://raw.githubusercontent.com/dompling/Script/master/spotify/spotify-lyric.ios.js, requires-body=true, binary-body-mode=true, tag=Spotify歌词翻译
+
+# > Spotify 解锁
+http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, tag=spotify-json
+
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, tag=spotify-proto
+
+# > 扫描全能王 CamScanner pro - ap*.intsig.net
+http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? script-path=https://gist.githubusercontent.com/tutuh/9d2267b6da8974baf48b8d1fffc4ae41/raw/c4bf4bf2935b1a8efd9f578a3d0cf2b6cbff90c2/CamScanner.js, requires-body=true, tag=扫描全能王_解锁
+
+# > MIX 解锁高级特权 (需恢复购买) - bmall.camera360.com
+http-response https?:\/\/bmall\.camera360\.com\/api\/mix\/recovery script-path=https://gist.githubusercontent.com/tutuh/97cb902af967688de7fa41fcef9e606a/raw/63a648a8af1aa3a79a63874372557ddf78f968ff/MIX.js, requires-body=true, tag=MIX_解锁
+
+# > 美图秀秀 - *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com
+http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://gist.githubusercontent.com/tutuh/d477396a8554130c42dd8856f481f529/raw/95595586bbb6bcef8b11ab4a26a82b6d95f7daee/mtxx.js, requires-body=true, tag=美图秀秀_解锁
+
+# > 美颜相机 - *.meiyan.com
+http-response ^https:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)) script-path=https://gist.githubusercontent.com/tutuh/5306e49864b4e2623c1cd8fcbbf11ca0/raw/af6abcc986e4d38a673e0e758b6aff9e4c153d29/myxj.js, requires-body=true, tag=美颜相机_解锁
+
+# > iLovePDF - service.ilovepdf.com
+http-response https://service.ilovepdf.com/v1/user script-path=https://gist.githubusercontent.com/tutuh/6e1251cdeb237a17c923989fef1c2a2a/raw/83d11cd44169a7f17f378d600d7851f4683b0243/iLovePDF.js, requires-body=true, tag=iLovePDF_解锁
+
+# > 心脏+ - api.995120.cn
+http-response ^https:\/\/api\.995120\.cn\/mini\/api\/appleplus script-path=https://gist.githubusercontent.com/tutuh/bc9dd61182aeb074203be152aa847f1d/raw/32518b3140cb5062c12641f62b0f3e50d57d1076/xizang.js, requires-body=true, tag=心脏+_解锁
+
+# > 咔叽 - purchase-*-api.*.com, user-kaji-api.b612kaji.com
+http-response ^https?:\/\/(purchase-.*-api|user-kaji-api)\.(yiruikecorp|b612kaji|tianyancam)\.com\/v\d\/purchase\/subscription\/subscriber\/status script-path=https://gist.githubusercontent.com/tutuh/b56cb47439d694e2dfd0ca35540a2cb7/raw/f05f0ab6485b4623006ddf63639ca33e49b0ca65/B12kj.js, requires-body=true, tag=咔叽_解锁
+
 [Mitm]
-hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, testflight.apple.com
+hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com
