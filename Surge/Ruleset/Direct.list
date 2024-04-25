@@ -20,6 +20,7 @@ DOMAIN-KEYWORD,qhimg
 DOMAIN-KEYWORD,vpimg
 DOMAIN-KEYWORD,xiami
 DOMAIN-KEYWORD,xiaomi
+
 DOMAIN,gs-loc-cn.apple.com
 DOMAIN,cdn.bootcdn.net
 DOMAIN,cdn.bootcss.com
@@ -762,6 +763,7 @@ USER-AGENT,WeChat*
 USER-AGENT,TeslaMap
 PROCESS-NAME,WeChat
 PROCESS-NAME,WeCom
+
 DOMAIN,injections.adguard.org
 DOMAIN,local.adguard.org
 DOMAIN-SUFFIX,52pt.site
