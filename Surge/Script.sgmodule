@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=跳过代理检测、Boxjs 配置、Spotify；解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF、心脏+
+#!desc=跳过代理检测、Boxjs 配置；解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF、心脏+
 #!system=ios
 #!category=Tutu
 
@@ -32,13 +32,6 @@ force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.ne
 [Script]
 # > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 Rewrite: BoxJs = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
-
-# > Spotify 歌词翻译 - spclient.wg.spotify.com
-Spotify歌词翻译 = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/,requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/spotify/spotify-lyric.ios.js
-
-# > Spotify 解锁
-spotify-json = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
-spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
 
 # > 扫描全能王 CamScanner pro - ap*.intsig.net
 扫描全能王_解锁 = type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/tutuh/9d2267b6da8974baf48b8d1fffc4ae41/raw/c4bf4bf2935b1a8efd9f578a3d0cf2b6cbff90c2/CamScanner.js
@@ -75,4 +68,4 @@ iLovePDF_解锁 = type=http-response,pattern=https://service.ilovepdf.com/v1/use
 ^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/homefeatures\? data-type=text data="{}" status-code=200
  
 [MITM]
-hostname = %APPEND% www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, spclient.wg.spotify.com, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, *.cyapi.cn
+hostname = %APPEND% www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, *.cyapi.cn
