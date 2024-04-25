@@ -1,5 +1,5 @@
 #!name=多功能组合模块
-#!desc=Boxjs配置、TestFlight账户管理
+#!desc=跳过代理检测、Boxjs 配置、Spotify；解锁：扫描全能王、MIX、美图秀秀、美颜相机、iLovePDF、心脏+
 
 [General]
 skip-proxy = iosapps.itunes.apple.com
