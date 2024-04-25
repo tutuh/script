@@ -1,9 +1,8 @@
 /*
 By app2smile  (https://github.com/app2smile/rules/blob/master/js/tieba-json.js)
 # 贴吧屏蔽域名dns查询
-IP-CIDR,180.76.76.200/32,REJECT
-# 贴吧屏蔽ws(副作用:消息通知功能失效,需手动进入查看),强制帖子接口走http
-HOST,im.tieba.baidu.com,REJECT
+DOMAIN,180.76.76.200
+IP-CIDR,180.76.76.200/32,no-resolve
 */
 
 const url = $request.url;
