@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,cn
 DOMAIN-SUFFIX,xn--fiqs8s
 DOMAIN-SUFFIX,xn--55qx5d
 DOMAIN-SUFFIX,xn--io0a7i
+
 DOMAIN-KEYWORD,360buy
 DOMAIN-KEYWORD,alicdn
 DOMAIN-KEYWORD,alimama
@@ -257,7 +258,7 @@ DOMAIN-SUFFIX,8686c.com
 DOMAIN-SUFFIX,pphimalayanrt.com
 DOMAIN-SUFFIX,baishancdnx.cn
 DOMAIN-SUFFIX,steamchina.com
-DOMAIN-SUFFIX,cdn.ubionline.com.cn
+DOMAIN-SUFFIX,ubionline.com.cn
 DOMAIN-SUFFIX,battlenet.com.cn
 DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
 DOMAIN-SUFFIX,sharepoint.cn
@@ -290,6 +291,7 @@ DOMAIN-SUFFIX,webok.net
 DOMAIN-SUFFIX,eatuo.com
 DOMAIN-SUFFIX,gov.cn
 DOMAIN-SUFFIX,edu.cn
+DOMAIN-SUFFIX,jetbrains.com.cn
 DOMAIN-SUFFIX,12306.cn
 DOMAIN-SUFFIX,12306.com
 DOMAIN-SUFFIX,123pan.com
@@ -756,13 +758,6 @@ DOMAIN-SUFFIX,yunpan.com
 DOMAIN-SUFFIX,yunpan.com.cn
 DOMAIN-SUFFIX,qh-cdn.com
 DOMAIN-SUFFIX,baomitu.com
-USER-AGENT,%E4%BC%98%E9%85%B7*
-USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*
-USER-AGENT,MicroMessenger Client
-USER-AGENT,WeChat*
-USER-AGENT,TeslaMap
-PROCESS-NAME,WeChat
-PROCESS-NAME,WeCom
 
 DOMAIN,injections.adguard.org
 DOMAIN,local.adguard.org
@@ -888,40 +883,3 @@ DOMAIN-KEYWORD,sciencedirect
 DOMAIN-KEYWORD,elsevier
 DOMAIN-KEYWORD,deepdyve
 DOMAIN-KEYWORD,els-cdn
-USER-AGENT,%E8%BF%85%E9%9B%B7
-PROCESS-NAME,v2ray
-PROCESS-NAME,xray
-PROCESS-NAME,ss-local
-PROCESS-NAME,clash
-PROCESS-NAME,ClashX
-PROCESS-NAME,trojan
-PROCESS-NAME,trojan-go
-PROCESS-NAME,privoxy
-PROCESS-NAME,cloudflared
-PROCESS-NAME,aria2c
-PROCESS-NAME,fdm
-PROCESS-NAME,Folx
-PROCESS-NAME,NetTransport
-PROCESS-NAME,Thunder
-PROCESS-NAME,ThunderVIP
-PROCESS-NAME,Transmission
-PROCESS-NAME,transmission-daemon
-PROCESS-NAME,transmission-qt
-PROCESS-NAME,BitComet
-PROCESS-NAME,uTorrent
-PROCESS-NAME,qbittorrent*
-PROCESS-NAME,DownloadService
-PROCESS-NAME,qBittorrent
-PROCESS-NAME,qbittorrent-nox
-PROCESS-NAME,WebTorrent
-PROCESS-NAME,WebTorrent Helper
-PROCESS-NAME,amuled
-PROCESS-NAME,Motrix.app
-PROCESS-NAME,UUBooster
-PROCESS-NAME,tailscaled
-PROCESS-NAME,parsecd
-PROCESS-NAME,SunloginClient_Desktop
-PROCESS-NAME,SunloginClient_Helper
-PROCESS-NAME,BaiduNetdisk_mac
-PROCESS-NAME,Logi Options
-PROCESS-NAME,Logi Options Daemon
