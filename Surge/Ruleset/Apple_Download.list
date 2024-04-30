@@ -2,17 +2,10 @@
 
 # > AppStore
 DOMAIN-SUFFIX,apps.apple.com
-DOMAIN-SUFFIX,itunes.apple.com
-DOMAIN-SUFFIX,itunes-apple.com.akadns.net
-DOMAIN-SUFFIX,mzstatic.com
 DOMAIN,iosapps.itunes.apple.com // iOS Store
 DOMAIN,osxapps.itunes.apple.com // Mac Store
-DOMAIN,ppq.apple.com // Enterprise App validation
 
 #  > Update
 DOMAIN,updates.cdn-apple.com //system update
 DOMAIN,updates-http.cdn-apple.com
-DOMAIN,supportdownload.apple.com
-DOMAIN,appldnld.apple.com
 DOMAIN,swcdn.apple.com
-DOMAIN,apptrailers.itunes.apple.com
