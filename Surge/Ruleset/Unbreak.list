@@ -11,6 +11,7 @@ DOMAIN,sycm.mmstat.com
 
 # > Google
 DOMAIN-SUFFIX,blog.google
+DOMAIN,ci.android.com
 DOMAIN,clientservices.googleapis.com
 DOMAIN,update.googleapis.com
 DOMAIN,dl.google.com
