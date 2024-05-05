@@ -7,7 +7,7 @@
 AND,((OR,((USER-AGENT,AMap*), (USER-AGENT,Cainiao*), (USER-AGENT,Alibaba*), (USER-AGENT,%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP // 高德、菜鸟、阿里巴巴、飞猪
 
 # > 屏蔽无效域名
-# OR,((DOMAIN,waapdg.jd.com), (DOMAIN-SUFFIX,jddebug.com), (DOMAIN,metrics-picture.d.meituan.net), (DOMAIN,route-stats.d.meituan.net), (DOMAIN,maplocatesdksnapshot.d.meituan.net), (DOMAIN,al-log.d.meituan.net), (DOMAIN,babel-statistics-android.d.meituan.net)),REJECT-DROP
+OR,((DOMAIN,waapdg.jd.com), (DOMAIN-SUFFIX,jddebug.com), (DOMAIN,metrics-picture.d.meituan.net), (DOMAIN,route-stats.d.meituan.net), (DOMAIN,maplocatesdksnapshot.d.meituan.net), (DOMAIN,al-log.d.meituan.net), (DOMAIN,babel-statistics-android.d.meituan.net)),REJECT-DROP
 
 # > 百度贴吧去广告（需配合下方脚本）
 OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200)),REJECT-DROP
