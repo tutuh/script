@@ -677,7 +677,7 @@ DOMAIN-SUFFIX,zyxel.com
 # > Apple
 DOMAIN,testflight.apple.com
 
-# 国外域名
+# > 国外域名
 DOMAIN-SUFFIX,eu
 DOMAIN-SUFFIX,hk
 DOMAIN-SUFFIX,jp
@@ -686,7 +686,7 @@ DOMAIN-SUFFIX,sg
 DOMAIN-SUFFIX,tw
 DOMAIN-SUFFIX,uk
 
-# 国外域名关键字
+# > 国外域名关键字
 DOMAIN-KEYWORD,1e100
 DOMAIN-KEYWORD,abema
 DOMAIN-KEYWORD,appledaily
