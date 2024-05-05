@@ -2,12 +2,10 @@
 # 排除了有国内 CDN 节点的域名和国区专用域名以后，苹果其余的域名
 # https://ruleset.skk.moe/List/non_ip/apple_services.conf
 
-DOMAIN,api.smoot.apple.cn
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.com
-DOMAIN-SUFFIX,apple.com.cn
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,crashlytics.com
@@ -21,3 +19,13 @@ DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,push-apple.com.akadns.net
+PROCESS-NAME,trustd
+PROCESS-NAME,netbiosd
+PROCESS-NAME,com.apple.geod
+PROCESS-NAME,mapspushd
+PROCESS-NAME,com.apple.Maps
+PROCESS-NAME,apsd
+PROCESS-NAME,fmfd
+PROCESS-NAME,findmydevice-user-agent
+PROCESS-NAME,CoreLocationAgent
+PROCESS-NAME,WeatherWidget
