@@ -1,5 +1,6 @@
 # Proxy
 
+DOMAIN,testflight.apple.com
 DOMAIN,addons.mozilla.org
 DOMAIN,ccmdl.adobe.com
 DOMAIN,ees.elsevier.com
@@ -33,6 +34,7 @@ DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,anchor.fm
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,androidify.com
+DOMAIN-SUFFIX,annas-archive.org
 DOMAIN-SUFFIX,apibay.org
 DOMAIN-SUFFIX,apk-dl.com
 DOMAIN-SUFFIX,apkmirror.com
@@ -95,6 +97,7 @@ DOMAIN-SUFFIX,castbox.fm
 DOMAIN-SUFFIX,cbc.ca
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,cdnst.net
+DOMAIN-SUFFIX,cdpn.io
 DOMAIN-SUFFIX,certificate-transparency.org
 DOMAIN-SUFFIX,change.org
 DOMAIN-SUFFIX,character.ai
@@ -144,6 +147,7 @@ DOMAIN-SUFFIX,deezer.com
 DOMAIN-SUFFIX,depositphotos.com
 DOMAIN-SUFFIX,deviantart.com
 DOMAIN-SUFFIX,deviantart.net
+DOMAIN-SUFFIX,devv.ai
 DOMAIN-SUFFIX,dialogflow.com
 DOMAIN-SUFFIX,digitalocean.com
 DOMAIN-SUFFIX,dis.gd
@@ -291,6 +295,7 @@ DOMAIN-SUFFIX,huobi.pro
 DOMAIN-SUFFIX,i-cable.com
 DOMAIN-SUFFIX,ibb.co
 DOMAIN-SUFFIX,ifixit.com
+DOMAIN-SUFFIX,imageglass.org
 DOMAIN-SUFFIX,imgur.com
 DOMAIN-SUFFIX,independent.co.uk
 DOMAIN-SUFFIX,initiummall.com
@@ -460,6 +465,7 @@ DOMAIN-SUFFIX,prowritingaid.com
 DOMAIN-SUFFIX,proxifier.com
 DOMAIN-SUFFIX,pscp.tv
 DOMAIN-SUFFIX,pximg.net
+DOMAIN-SUFFIX,qbittorrent.org
 DOMAIN-SUFFIX,quillbot.com
 DOMAIN-SUFFIX,quora.com
 DOMAIN-SUFFIX,quoracdn.net
@@ -588,6 +594,7 @@ DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,twitpic.com
 DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,twitter.jp
+DOMAIN-SUFFIX,typeset.io
 DOMAIN-SUFFIX,ubuntu.com
 DOMAIN-SUFFIX,uptodown.com
 DOMAIN-SUFFIX,urbandictionary.com
@@ -643,6 +650,7 @@ DOMAIN-SUFFIX,wordtune.com
 DOMAIN-SUFFIX,workers.dev
 DOMAIN-SUFFIX,worldcat.org
 DOMAIN-SUFFIX,wp.com
+DOMAIN-SUFFIX,writesonic.com
 DOMAIN-SUFFIX,wsj.com
 DOMAIN-SUFFIX,wsj.net
 DOMAIN-SUFFIX,x.co
@@ -673,20 +681,6 @@ DOMAIN-SUFFIX,zendesk.com
 DOMAIN-SUFFIX,zeronet.io
 DOMAIN-SUFFIX,zophar.net
 DOMAIN-SUFFIX,zyxel.com
-
-# > Apple
-DOMAIN,testflight.apple.com
-
-# > 国外域名
-DOMAIN-SUFFIX,eu
-DOMAIN-SUFFIX,hk
-DOMAIN-SUFFIX,jp
-DOMAIN-SUFFIX,kr
-DOMAIN-SUFFIX,sg
-DOMAIN-SUFFIX,tw
-DOMAIN-SUFFIX,uk
-
-# > 国外域名关键字
 DOMAIN-KEYWORD,1e100
 DOMAIN-KEYWORD,abema
 DOMAIN-KEYWORD,appledaily
@@ -707,6 +701,10 @@ DOMAIN-KEYWORD,telegram
 DOMAIN-KEYWORD,twitter
 DOMAIN-KEYWORD,whatsapp
 DOMAIN-KEYWORD,youtube
-DOMAIN-KEYWORD,discord
-DOMAIN-KEYWORD,jav
-DOMAIN-KEYWORD,pinterest
+DOMAIN-SUFFIX,eu
+DOMAIN-SUFFIX,hk
+DOMAIN-SUFFIX,jp
+DOMAIN-SUFFIX,kr
+DOMAIN-SUFFIX,sg
+DOMAIN-SUFFIX,tw
+DOMAIN-SUFFIX,uk
