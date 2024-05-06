@@ -1,6 +1,5 @@
 # Proxy
 
-DOMAIN,testflight.apple.com
 DOMAIN,addons.mozilla.org
 DOMAIN,ccmdl.adobe.com
 DOMAIN,ees.elsevier.com
@@ -687,6 +686,7 @@ DOMAIN-KEYWORD,appledaily
 DOMAIN-KEYWORD,avtb
 DOMAIN-KEYWORD,beetalk
 DOMAIN-KEYWORD,blogspot
+DOMAIN-KEYWORD,discord
 DOMAIN-KEYWORD,dropbox
 DOMAIN-KEYWORD,facebook
 DOMAIN-KEYWORD,fbcdn
@@ -694,6 +694,8 @@ DOMAIN-KEYWORD,github
 DOMAIN-KEYWORD,gmail
 DOMAIN-KEYWORD,google
 DOMAIN-KEYWORD,instagram
+DOMAIN-KEYWORD,jav
+DOMAIN-KEYWORD,pinterest
 DOMAIN-KEYWORD,porn
 DOMAIN-KEYWORD,sci-hub
 DOMAIN-KEYWORD,spotify
