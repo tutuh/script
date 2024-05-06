@@ -1,6 +1,5 @@
 # Apple Domains
 # 排除了有国内 CDN 节点的域名和国区专用域名以后，苹果其余的域名
-# https://ruleset.skk.moe/List/non_ip/apple_services.conf
 
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,apple-dns.net
