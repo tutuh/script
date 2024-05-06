@@ -1,4 +1,4 @@
-# Apple Domains
+# Apple_Services
 # 排除了有国内 CDN 节点的域名和国区专用域名以后，苹果其余的域名
 
 DOMAIN-SUFFIX,aaplimg.com
