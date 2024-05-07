@@ -740,7 +740,11 @@ DOMAIN-SUFFIX,yunpan.com
 DOMAIN-SUFFIX,yunpan.com.cn
 DOMAIN-SUFFIX,qh-cdn.com
 DOMAIN-SUFFIX,baomitu.com
-DOMAIN-SUFFIX,cn
+USER-AGENT,%E4%BC%98%E9%85%B7*
+USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*
+USER-AGENT,MicroMessenger Client
+USER-AGENT,WeChat*
+USER-AGENT,TeslaMap
 
 # > Outlook
 DOMAIN,outlook.office365.com
