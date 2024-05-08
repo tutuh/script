@@ -49,5 +49,5 @@ DOMAIN-SUFFIX,ol.epicgames.com
 # > Getui
 DOMAIN-SUFFIX,dizhensubao.getui.com
 
-# > Mozilla
-DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
+# > Strava
+DOMAIN,analytics.strava.com
