@@ -5,66 +5,66 @@
 #!arguments-desc=脚本引擎：默认 jsc, 可选：auto, jsc, webview
 
 [General]
-# 喜马拉雅 - DNS劫持
+# > 喜马拉雅 - DNS劫持
 hijack-dns = %APPEND% 114.114.114.114
 
 [Rule]
-# 喜马拉雅 - 阻止IP变化
+# > 喜马拉雅 - 阻止IP变化
 DOMAIN,gslbali.ximalaya.com,REJECT,extended-matching
 DOMAIN,gslbtx.ximalaya.com,REJECT,extended-matching
 
 [URL Rewrite]
-# 喜马拉雅 - 屏蔽开屏广告
-# ^http:\/\/adse\.ximalaya\.com\/(?!.*preSale) - reject
-# 喜马拉雅 - 修复轮播Ad失效Bug
+# > 喜马拉雅 - 屏蔽开屏广告
+# > ^http:\/\/adse\.ximalaya\.com\/(?!.*preSale) - reject
+# > 喜马拉雅 - 修复轮播Ad失效Bug
 ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF - reject
-# 喜马拉雅 - 播放页_Live
+# > 喜马拉雅 - 播放页_Live
 ^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ - reject
-# 喜马拉雅 - MyInfo红点提醒
+# > 喜马拉雅 - MyInfo红点提醒
 ^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list - reject
-# 喜马拉雅 - 屏蔽大红包Tips
+# > 喜马拉雅 - 屏蔽大红包Tips
 ^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status - reject
-# 喜马拉雅 - 屏蔽gif弹窗Ad
+# > 喜马拉雅 - 屏蔽gif弹窗Ad
 ^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ - reject
-# 喜马拉雅 - gslb
+# > 喜马拉雅 - gslb
 ^https?:\/\/gslb.*\.xima.*\.com\/ - reject
-# 喜马拉雅 - 屏蔽Aged请求
+# > 喜马拉雅 - 屏蔽Aged请求
 ^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) - reject
-# 喜马拉雅 - 部分Tab弹窗
+# > 喜马拉雅 - 部分Tab弹窗
 ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant - reject
-# 喜马拉雅 - 屏蔽红点提示
+# > 喜马拉雅 - 屏蔽红点提示
 ^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread - reject
-# 喜马拉雅 - 屏蔽minor请求
+# > 喜马拉雅 - 屏蔽minor请求
 ^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop - reject
-# 喜马拉雅 - 屏蔽隐私搜集
+# > 喜马拉雅 - 屏蔽隐私搜集
 ^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d - reject
-# 喜马拉雅 - 屏蔽版本更新
+# > 喜马拉雅 - 屏蔽版本更新
 ^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck - reject
-# 喜马拉雅 - 屏蔽开屏广告
+# > 喜马拉雅 - 屏蔽开屏广告
 ^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* - reject
-# 喜马拉雅 - 屏蔽位置请求
+# > 喜马拉雅 - 屏蔽位置请求
 ^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location - reject
-# 喜马拉雅 - 屏蔽热搜词
+# > 喜马拉雅 - 屏蔽热搜词
 ^https?:\/\/.*\.xima.*\.com\/(hub\/)?hotWord - reject
-# 喜马拉雅 - 屏蔽热搜board
+# > 喜马拉雅 - 屏蔽热搜board
 ^https?:\/\/.*\.xima.*\.com\/(hub\/)?hotWordBillboard - reject
-# 喜马拉雅 - 屏蔽搜索框定时_Ad
+# > 喜马拉雅 - 屏蔽搜索框定时_Ad
 ^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord - reject
-# 喜马拉雅 - 屏蔽实时Ad请求
+# > 喜马拉雅 - 屏蔽实时Ad请求
 ^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime - reject
-# 喜马拉雅 - 屏蔽ting_Ad
+# > 喜马拉雅 - 屏蔽ting_Ad
 ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? - reject
 
 [Script]
-# 喜马拉雅 - 屏蔽首页横幅
+# > 喜马拉雅 - 屏蔽首页横幅
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
-# 喜马拉雅 - 屏蔽首页动态
+# > 喜马拉雅 - 屏蔽首页动态
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
-# 喜马拉雅 - 屏蔽Tab页滚动
+# > 喜马拉雅 - 屏蔽Tab页滚动
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
-# 喜马拉雅 - 去除我的页面Ad_Tag
+# > 喜马拉雅 - 去除我的页面Ad_Tag
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
-# 喜马拉雅 - 首页顶部去除直播
+# > 喜马拉雅 - 首页顶部去除直播
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
 
 [MITM]
