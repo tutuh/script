@@ -21,7 +21,7 @@ DOMAIN,api.iqiyi.com
 DOMAIN,cupid.iqiyi.com
 
 # (B)
-# 百度
+# > 百度
 DOMAIN-SUFFIX,duapps.com
 DOMAIN-SUFFIX,cpro.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
@@ -63,7 +63,7 @@ DOMAIN,api.newad.ifeng.com
 DOMAIN,ifengad.3g.ifeng.com
 
 # (G)
-# 广告联盟
+# > 广告联盟
 DOMAIN,ad.zijieapi.com
 DOMAIN,init.supersonicads.com
 DOMAIN,is.snssdk.com
@@ -233,7 +233,6 @@ DOMAIN,hui.sohu.com
 DOMAIN-SUFFIX,pv.sohu.com
 
 # (T)
-# --- (Tencent) ---
 # > Tencent 腾讯
 DOMAIN,adsmind.gdtimg.com
 DOMAIN,info4.video.qq.com
