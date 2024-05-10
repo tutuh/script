@@ -16,10 +16,12 @@
 # 小红书 - 开屏广告
 小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
 小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 小红书 - 图片水印,视频水印
+
+# 小红书 - 视频水印
 小红书去水印 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/(redtube|videofeed)\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 小红书 - live photo水印
+# 小红书 - 图片水印
 小红书live去水印 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/(feed\?|imagefeed),requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+
 # 小红书 - 信息流,详情页感兴趣的人
 小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/followfeed\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
 小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v5\/recommend\/user\/follow_recommend\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
