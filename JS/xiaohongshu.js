@@ -6,7 +6,7 @@ const isQuanX = typeof $task !== "undefined";
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
-if (url.includes("d/note/imagefeed") || url.includes("d/note/feed\?")) {
+if (url.includes("d/note/imagefeed") || url.includes("d/note/feed")) {
   // 信息流 图片
   if (obj?.data?.length > 0) {
     let data0 = obj.data[0];
