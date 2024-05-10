@@ -112,10 +112,6 @@ DOMAIN,ups.ksmobile.net
 DOMAIN,ws.ksmobile.net
 
 # (K)
-# > 快手
-DOMAIN-SUFFIX,e.kuaishou.cn
-DOMAIN-SUFFIX,e.kuaishou.com
-DOMAIN,js-ad.a.yximgs.com
 # > 酷我音乐
 DOMAIN,ad.tencentmusic.com
 DOMAIN,g.koowo.com
