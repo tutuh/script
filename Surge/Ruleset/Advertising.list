@@ -87,14 +87,6 @@ DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-KEYWORD,pglstatp-toutiao
 DOMAIN-KEYWORD,video-cn.snssdk.com
 
-# > 谷歌
-DOMAIN-SUFFIX,doubleclick.net
-DOMAIN-SUFFIX,googleadservices.com
-DOMAIN-SUFFIX,googleadsserving.cn
-DOMAIN-SUFFIX,googlesyndication.com
-DOMAIN-SUFFIX,googletagservices.com
-DOMAIN,ads.youtube.com
-
 # (H)
 # > 虎扑
 DOMAIN,adx.hupu.com
