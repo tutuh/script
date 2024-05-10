@@ -745,16 +745,3 @@ DOMAIN-SUFFIX,yunpan.com
 DOMAIN-SUFFIX,yunpan.com.cn
 DOMAIN-SUFFIX,qh-cdn.com
 DOMAIN-SUFFIX,baomitu.com
-
-# > Outlook
-DOMAIN,outlook.office365.com
-DOMAIN,smtp-mail.outlook.com
-DOMAIN,smtp.office365.com
-
-# > Windows Server Update Services
-DOMAIN-SUFFIX,update.microsoft.com
-DOMAIN-SUFFIX,windowsupdate.com
-DOMAIN-SUFFIX,windowsupdate.microsoft.com
-DOMAIN,download.microsoft.com
-DOMAIN,wustat.windows.com
-DOMAIN,ntservicepack.microsoft.com
