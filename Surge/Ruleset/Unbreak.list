@@ -51,3 +51,6 @@ DOMAIN-SUFFIX,dizhensubao.getui.com
 
 # > Strava
 DOMAIN,analytics.strava.com
+
+# > Qardio
+DOMAIN-SUFFIX,api.segment.io
