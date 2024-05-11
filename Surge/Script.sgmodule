@@ -26,8 +26,8 @@ always-real-ip = %APPEND% easy-login.10099.com.cn
 force-http-engine-hosts = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, www.google.cn
 
 [URL Rewrite]
-# > 谷歌中国重定向 - g.cn, www.g.cn, google.cn, www.google.cn
-^https?://(www.)?(g|google)\.cn https://www.google.com 307
+# > 谷歌中国重定向 - www.g.cn, www.google.cn
+^https?:\/\/www\.g(oogle)?\.cn https://www.google.com 307
 
 [Script]
 # > BoxJs - boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
@@ -68,4 +68,4 @@ iLovePDF_解锁 = type=http-response,pattern=https://service.ilovepdf.com/v1/use
 ^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/homefeatures\? data-type=text data="{}" status-code=200
  
 [MITM]
-hostname = %APPEND% g.cn, www.g.cn, google.cn, www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, *.cyapi.cn
+hostname = %APPEND% www.g.cn, www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, *.cyapi.cn
