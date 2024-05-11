@@ -53,4 +53,4 @@ DOMAIN-SUFFIX,dizhensubao.getui.com
 DOMAIN,analytics.strava.com
 
 # > Qardio
-DOMAIN-SUFFIX,api.segment.io
+DOMAIN,api.segment.io
