@@ -1,6 +1,6 @@
 #!name=高德地图
 #!desc=高德地图APP 去广告
-#!category=Tutu
+#!category=Ad Blocking
 #!arguments=脚本引擎:jsc
 #!arguments-desc=脚本引擎：默认 jsc, 可选：auto, jsc, webview
 #!author = RuCu6
