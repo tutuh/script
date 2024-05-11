@@ -1,5 +1,5 @@
 #!name=小红书
-#!desc=小红书APP 去广告、照片视频去水印
+#!desc=小红书APP 去广告；照片、视频去水印
 #!category=Ad Blocking
 #!arguments=脚本引擎:jsc
 #!arguments-desc=脚本引擎：默认 jsc, 可选：auto, jsc, webview
