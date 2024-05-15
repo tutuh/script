@@ -1,8 +1,6 @@
 #!name=小红书去广告 
-#!desc=小红书APP 去开屏、信息流、搜索页广告、照片视频去水印
+#!desc=小红书APP 去广告；照片、视频去水印
 #!icon=https://raw.githubusercontent.com/tutuh/script/master/icons/xiaohongshu.png
-#!author=RuCu6 fmz200
-#!update=2023-12-31 13:20
 
 [Rewrite]
 # > 小红书 - 通用广告请求
