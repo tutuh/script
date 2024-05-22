@@ -30,15 +30,15 @@
 
 [Map Local]
 # > 小红书 - 通用广告请求
-^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/(tag\/)?ads data-type=text data="{}" status-code=200
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/(tag\/)?ads data-type=text data="{}"
 # > 小红书 - 隐私屏蔽
-^https?:\/\/referee\.xiaohongshu\.com\/v\d\/stateReport data-type=text data="{}" status-code=200
+^https?:\/\/referee\.xiaohongshu\.com\/v\d\/stateReport data-type=text data="{}"
 # > 小红书 - Switches
-^https?:\/\/pages\.xiaohongshu\.com\/data\/native\/matrix_switches data-type=text data="{}" status-code=200
+^https?:\/\/pages\.xiaohongshu\.com\/data\/native\/matrix_switches data-type=text data="{}"
 # > 小红书 - 青少年请求
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/user\/teenager\/status data-type=text data="{}" status-code=200
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/user\/teenager\/status data-type=text data="{}"
 # > 小红书 - 启动引导
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/home_guide data-type=text data="{}" status-code=200
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/home_guide data-type=text data="{}"
 
 [MITM]
 hostname = %APPEND% edith.xiaohongshu.com, www.xiaohongshu.com, pages.xiaohongshu.com, referee.xiaohongshu.com
