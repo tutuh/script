@@ -1,8 +1,6 @@
 #!name=新浪微博
 #!desc=新浪微博APP 去广告
 #!category=Ad Blocking
-#!arguments=脚本引擎:jsc
-#!arguments-desc=脚本引擎：默认 jsc, 可选：auto, jsc, webview
 #!author=RuCu6
 #!update = 2024-02-08 13:00
 
