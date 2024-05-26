@@ -6,6 +6,63 @@
 #!author = RuCu6
 #!update = 2023-12-09 13:30
 
+
+[Rule]
+# > 芒果TV
+DOMAIN,credits.bz.mgtv.com,REJECT
+DOMAIN,credits2.bz.mgtv.com,REJECT
+DOMAIN,credits3.bz.mgtv.com,REJECT
+DOMAIN,dflow.bz.mgtv.com,REJECT
+DOMAIN,encounter.bz.mgtv.com,REJECT
+DOMAIN,floor.bz.mgtv.com,REJECT
+DOMAIN,layer.bz.mgtv.com,REJECT
+DOMAIN,mob.bz.mgtv.com,REJECT
+DOMAIN,rc-topic-api.bz.mgtv.com,REJECT
+DOMAIN,rprain.bz.mgtv.com,REJECT
+DOMAIN,rprain.log.mgtv.com,REJECT
+DOMAIN,vip.bz.mgtv.com,REJECT
+DOMAIN-SUFFIX,da.mgtv.com,REJECT
+
+# > Tencent 腾讯
+DOMAIN,adsmind.gdtimg.com,REJECT
+DOMAIN,info4.video.qq.com,REJECT
+DOMAIN,info6.video.qq.com,REJECT
+DOMAIN,ios.video.mpush.qq.com,REJECT
+DOMAIN,otheve.beacon.qq.com,REJECT
+DOMAIN,pgdt.gtimg.cn,REJECT
+DOMAIN,tmead.y.qq.com,REJECT
+DOMAIN,tmeadbak.y.qq.com,REJECT
+DOMAIN,tmeadcomm.y.qq.com,REJECT
+DOMAIN,tpns.qq.com,REJECT
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,l.qq.com,REJECT
+DOMAIN-KEYWORD,trace.qq.com,REJECT
+DOMAIN-KEYWORD,trace.video.qq.com,REJECT
+IP-CIDR,47.110.187.87/32,no-resolve,REJECT
+
+# > 优酷
+#DOMAIN,acs.youku.com,REJECT
+DOMAIN,acs4baichuan.m.taobao.com,REJECT
+DOMAIN,adsmind.ugdtimg.com,REJECT
+DOMAIN,amdc.m.youku.com,REJECT
+DOMAIN,api.sm.cn,REJECT
+DOMAIN,apiv4-iyes.youku.com,REJECT
+DOMAIN,baichuan-sdk.alicdn.com,REJECT
+DOMAIN,cad.youku.com,REJECT
+DOMAIN,huichuan-mc.sm.cn,REJECT
+DOMAIN,huichuan.sm.cn,REJECT
+DOMAIN,iyes.youku.com,REJECT
+DOMAIN,m-vali.cp31.ott.cibntv.net
+DOMAIN,mc.atm.youku.com,REJECT
+DOMAIN,nbsdk-baichuan.alicdn.com,REJECT
+DOMAIN,pre-acs.youku.com,REJECT
+DOMAIN,vali-g1.cp31.ott.cibntv.net
+DOMAIN,vali-ugc.cp31.ott.cibntv.net
+DOMAIN,yk-ssp.ad.youku.com,REJECT
+DOMAIN,ykad-data.youku.com,REJECT
+DOMAIN,youku-acs.m.taobao.com,REJECT
+
+
 [Url Rewrite]
 # > 腾讯视频 - vv.video.qq.com
 ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ - reject
