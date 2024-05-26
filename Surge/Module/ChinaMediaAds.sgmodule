@@ -38,7 +38,7 @@ DOMAIN-SUFFIX,gdt.qq.com,REJECT
 DOMAIN-SUFFIX,l.qq.com,REJECT
 DOMAIN-KEYWORD,trace.qq.com,REJECT
 DOMAIN-KEYWORD,trace.video.qq.com,REJECT
-IP-CIDR,47.110.187.87/32,no-resolve,REJECT
+IP-CIDR,47.110.187.87/32,REJECT,no-resolve
 
 # > 优酷
 #DOMAIN,acs.youku.com,REJECT
@@ -52,16 +52,15 @@ DOMAIN,cad.youku.com,REJECT
 DOMAIN,huichuan-mc.sm.cn,REJECT
 DOMAIN,huichuan.sm.cn,REJECT
 DOMAIN,iyes.youku.com,REJECT
-DOMAIN,m-vali.cp31.ott.cibntv.net
+DOMAIN,m-vali.cp31.ott.cibntv.net,REJECT
 DOMAIN,mc.atm.youku.com,REJECT
 DOMAIN,nbsdk-baichuan.alicdn.com,REJECT
 DOMAIN,pre-acs.youku.com,REJECT
-DOMAIN,vali-g1.cp31.ott.cibntv.net
-DOMAIN,vali-ugc.cp31.ott.cibntv.net
+DOMAIN,vali-g1.cp31.ott.cibntv.net,REJECT
+DOMAIN,vali-ugc.cp31.ott.cibntv.net,REJECT
 DOMAIN,yk-ssp.ad.youku.com,REJECT
 DOMAIN,ykad-data.youku.com,REJECT
 DOMAIN,youku-acs.m.taobao.com,REJECT
-
 
 [Url Rewrite]
 # > 腾讯视频 - vv.video.qq.com
