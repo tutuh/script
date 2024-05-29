@@ -1,8 +1,8 @@
 #!name=ChinaMediaAds
 #!desc=爱奇艺、优酷、腾讯视频、芒果TV APP 去广告
 #!category=Ad Blocking
-#!arguments=脚本引擎:jsc
-#!arguments-desc=脚本引擎:默认 jsc, 可选: auto, jsc, webview
+#!arguments=脚本引擎:auto
+#!arguments-desc=脚本引擎:默认 auto, 可选: auto, jsc, webview
 #!author = RuCu6
 #!update = 2023-12-09 13:30
 
