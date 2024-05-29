@@ -22,9 +22,6 @@ DOMAIN,cupid.iqiyi.com
 
 # (B)
 # > 百度
-DOMAIN-SUFFIX,duapps.com
-DOMAIN-SUFFIX,cpro.baidu.com
-DOMAIN-SUFFIX,pos.baidu.com
 DOMAIN,afd.baidu.com
 DOMAIN,als.baidu.com
 DOMAIN,duclick.baidu.com
@@ -32,6 +29,9 @@ DOMAIN,mobads.baidu.com
 DOMAIN,mobads-logs.baidu.com
 DOMAIN,nadvideo2.baidu.com
 DOMAIN,nsclick.baidu.com
+DOMAIN-SUFFIX,duapps.com
+DOMAIN-SUFFIX,cpro.baidu.com
+DOMAIN-SUFFIX,pos.baidu.com
 
 # (C)
 # > CCTV Video
@@ -58,9 +58,9 @@ DOMAIN,adv-adlog.variflight.com
 DOMAIN,adv-ads.variflight.com
 DOMAIN,app-ad.variflight.com
 # > 凤凰新媒体
-DOMAIN-SUFFIX,deliver.ifeng.com
 DOMAIN,api.newad.ifeng.com
 DOMAIN,ifengad.3g.ifeng.com
+DOMAIN-SUFFIX,deliver.ifeng.com
 
 # (G)
 # > 广告联盟
@@ -136,12 +136,12 @@ DOMAIN,statics.woozooo.com
 
 # (M)
 # > Microsoft
+DOMAIN,mobileads.msn.com
 DOMAIN-SUFFIX,ads.msn.com
 DOMAIN-SUFFIX,ads1.msn.com
 DOMAIN-SUFFIX,ads2.msn.com
 DOMAIN-SUFFIX,bingads.microsoft.com
 DOMAIN-SUFFIX,rads.msn.com
-DOMAIN,mobileads.msn.com
 # > 芒果TV
 DOMAIN,credits.bz.mgtv.com
 DOMAIN,credits2.bz.mgtv.com
@@ -157,13 +157,13 @@ DOMAIN,rprain.log.mgtv.com
 DOMAIN,vip.bz.mgtv.com
 DOMAIN-SUFFIX,da.mgtv.com
 # > 咪咕视频
-DOMAIN-SUFFIX,ad.cmvideo.cn
 DOMAIN,ggc.cmvideo.cn
 DOMAIN,ggic03.miguvideo.com
 DOMAIN,ggmk.miguvideo.com
 DOMAIN,ggv.cmvideo.cn
 DOMAIN,ggx.cmvideo.cn
 DOMAIN,ggx03.miguvideo.com
+DOMAIN-SUFFIX,ad.cmvideo.cn
 # > 墨迹天气
 DOMAIN,ad.api.moji.com
 DOMAIN,adlaunch.moji.com
@@ -180,16 +180,16 @@ DOMAIN-KEYWORD,c-hzgt2.getui.com
 
 # (O)
 # > OPPO
-DOMAIN-SUFFIX,ads.oppomobile.com
 DOMAIN,adsfs.oppomobile.com
+DOMAIN-SUFFIX,ads.oppomobile.com
 # > Oray 向日葵远程控制
 DOMAIN,dm.toutiao.com
-DOMAIN-KEYWORD,upload-cdn.orayimg.com
 DOMAIN,ddns.oray.com
 DOMAIN,sl-tk.oray.com
 DOMAIN,client-api.oray.com
 DOMAIN,push.oray.com
 DOMAIN-SUFFIX,offline-adv.oray.com
+DOMAIN-KEYWORD,upload-cdn.orayimg.com
 DOMAIN-KEYWORD,upload-cdn.orayimg.com-upload-activity
 
 # (P)
@@ -218,17 +218,14 @@ DOMAIN,adm3.autoimg.cn
 DOMAIN,ads.snapchat.com
 DOMAIN,adsapi.snapchat.com
 # > 搜狐
+DOMAIN,hui.sohu.com
 DOMAIN-SUFFIX,ad.sohu.com
 DOMAIN-SUFFIX,ads.sohu.com
 DOMAIN-SUFFIX,aty.sohu.com
-DOMAIN,hui.sohu.com
 DOMAIN-SUFFIX,pv.sohu.com
 
 # (T)
 # > Tencent 腾讯
-DOMAIN-SUFFIX,e.qq.com
-DOMAIN-SUFFIX,gdt.qq.com
-DOMAIN-SUFFIX,l.qq.com
 DOMAIN,adsmind.gdtimg.com
 DOMAIN,info4.video.qq.com
 DOMAIN,info6.video.qq.com
@@ -239,6 +236,9 @@ DOMAIN,tmead.y.qq.com
 DOMAIN,tmeadbak.y.qq.com
 DOMAIN,tmeadcomm.y.qq.com
 DOMAIN,tpns.qq.com
+DOMAIN-SUFFIX,e.qq.com
+DOMAIN-SUFFIX,gdt.qq.com
+DOMAIN-SUFFIX,l.qq.com
 DOMAIN-KEYWORD,trace.qq.com
 DOMAIN-KEYWORD,trace.video.qq.com
 IP-CIDR,47.110.187.87/32,no-resolve
@@ -267,8 +267,6 @@ DOMAIN-KEYWORD,stsdk.vivoglobal.com
 
 # (W)
 # > 网易
-DOMAIN-SUFFIX,dsp.youdao.com
-DOMAIN-SUFFIX,union.youdao.com
 DOMAIN,ad.bn.netease.com
 DOMAIN,ad.yixin.im
 DOMAIN,admusicpic.music.126.net
@@ -284,6 +282,8 @@ DOMAIN,n.3g.163.com
 DOMAIN,nex.163.com
 DOMAIN,yt-adp.nosdn.127.net
 DOMAIN,yt-adp.ws.126.net
+DOMAIN-SUFFIX,dsp.youdao.com
+DOMAIN-SUFFIX,union.youdao.com
 # > 网上国网
 DOMAIN,h5-api.feiersmart.com
 
@@ -312,15 +312,15 @@ DOMAIN,youku-acs.m.taobao.com
 DOMAIN-KEYWORD,ads.95516.com
 DOMAIN-KEYWORD,switch.cup.com.cn
 # > 雅虎
-DOMAIN-SUFFIX,adserver.yahoo.com
-DOMAIN-SUFFIX,adspecs.yahoo.com
-DOMAIN-SUFFIX,advertising.yahoo.com
-DOMAIN-SUFFIX,gemini.yahoo.com
 DOMAIN,admarketing.yahoo.net
 DOMAIN,ads.auctions.yahoo.com
 DOMAIN,ads.finance.yahoo.com
 DOMAIN,ads.yahoo.com
 DOMAIN,ads.yahoo.de
+DOMAIN-SUFFIX,adserver.yahoo.com
+DOMAIN-SUFFIX,adspecs.yahoo.com
+DOMAIN-SUFFIX,advertising.yahoo.com
+DOMAIN-SUFFIX,gemini.yahoo.com
 # > 易车网
 DOMAIN,adx.yiche.com
 DOMAIN,log.ycapp.yiche.com
