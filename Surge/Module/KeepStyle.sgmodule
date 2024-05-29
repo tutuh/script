@@ -2,7 +2,7 @@
 #!desc=KeepAPP 去广告
 #!category=Ad Blocking
 #!arguments=脚本引擎:auto
-#!arguments-desc=脚本引擎:默认 jsc, 可选: auto, jsc, webview
+#!arguments-desc=脚本引擎:默认 auto, 可选: auto, jsc, webview
 
 [Script]
 # > Keep - 我的页面去推广
