@@ -6,9 +6,6 @@
 #!author = RuCu6
 #!update = 2024-02-11 20:25
 
-[Rule]
-DOMAIN,amap-aos-info-nogw.amap.com,REJECT,extended-matching
-
 [URL Rewrite]
 # > 高德地图 - 通用广告请求
 # ^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution - reject
