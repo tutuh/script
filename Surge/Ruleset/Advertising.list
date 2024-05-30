@@ -24,7 +24,7 @@ DOMAIN,api.iqiyi.com
 # (B)
 # > 百度
 DOMAIN,mobads.baidu.com
-HOST-SUFFIX, pos.baidu.com
+DOMAIN-SUFFIX,pos.baidu.com
 # > 百度地图
 DOMAIN,afd.baidu.com
 DOMAIN,afdconf.baidu.com
