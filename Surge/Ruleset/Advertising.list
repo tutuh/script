@@ -20,20 +20,15 @@ DOMAIN,ossgw.alicdn.com
 DOMAIN-SUFFIX,ut.taobao.com
 # > 爱奇艺
 DOMAIN,api.iqiyi.com
-DOMAIN,cupid.iqiyi.com
 
 # (B)
 # > 百度
-DOMAIN,afd.baidu.com
-DOMAIN,als.baidu.com
-DOMAIN,duclick.baidu.com
 DOMAIN,mobads.baidu.com
-DOMAIN,mobads-logs.baidu.com
-DOMAIN,nadvideo2.baidu.com
-DOMAIN,nsclick.baidu.com
-DOMAIN-SUFFIX,duapps.com
-DOMAIN-SUFFIX,cpro.baidu.com
-DOMAIN-SUFFIX,pos.baidu.com
+HOST-SUFFIX, pos.baidu.com
+# > 百度地图
+DOMAIN,afd.baidu.com
+DOMAIN,afdconf.baidu.com
+DOMAIN,lc.map.baidu.com
 
 # (C)
 # > CCTV Video
