@@ -6,10 +6,6 @@
 #!author=RuCu6
 #!update = 2024-02-08 13:00
 
-[Rule]
-DOMAIN,huodong.weibo.cn,REJECT,extended-matching
-DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching
-
 [Url Rewrite]
 # > 微博 - 开屏广告 
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) - reject
