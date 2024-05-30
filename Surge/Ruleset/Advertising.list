@@ -86,6 +86,8 @@ DOMAIN-KEYWORD,pangolin-sdk-toutiao
 DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-KEYWORD,pglstatp-toutiao
 DOMAIN-KEYWORD,video-cn.snssdk.com
+# > 高德地图
+DOMAIN,amap-aos-info-nogw.amap.com
 
 # (H)
 # > 虎扑
@@ -262,6 +264,9 @@ DOMAIN-KEYWORD,stsdk.vivo.com.cn
 DOMAIN-KEYWORD,stsdk.vivoglobal.com
 
 # (W)
+# > 微博
+DOMAIN,huodong.weibo.cn
+DOMAIN-SUFFIX,biz.weibo.com
 # > 网易
 DOMAIN,ad.bn.netease.com
 DOMAIN,ad.yixin.im
