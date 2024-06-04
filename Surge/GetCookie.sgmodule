@@ -26,9 +26,9 @@
 哔哩哔哩APP_Cookie = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
 哔哩哔哩网页_Cookie = type=http-request,pattern=^https?:\/\/m\.bilibili\.com/$,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
 
-# > 阿里云盘 - auth.alipan.com, auth.aliyundrive.com
+# > 阿里云盘 - auth.alipan.com
 # 打开：阿里云盘APP 获取 token
-阿里云盘_Cookie = type=http-request,pattern=^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token,requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
+阿里云盘_Cookie = type=http-request,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,requires-body=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 
 # > 途虎养车小程序 - api.tuhu.cn
 # 打开：微信途虎养车小程序 -> 我的 -> 积分 获取 cookie
@@ -43,4 +43,4 @@
 达美乐披萨_Cookie = type=http-request, pattern=^https:\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone,requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, auth.alipan.com, auth.aliyundrive.com, api.tuhu.cn, mxsa.mxbc.net, game.dominos.com.cn
+hostname = %APPEND% app.bilibili.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, auth.alipan.com, api.tuhu.cn, mxsa.mxbc.net, game.dominos.com.cn
