@@ -18,7 +18,7 @@
 
 # > 百度贴吧 - c.tieba.baidu.com, tiebac.baidu.com
 # 打开：百度贴吧APP 获取 cookie
-贴吧_获取cookie= type=http-request,pattern=^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
+百度贴吧_Cookie = type=http-request,pattern=^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
 
 # > 顺丰速运 - ccsp-egmas.sf-express.com
 # 打开：顺丰速运APP 获取 cookie
