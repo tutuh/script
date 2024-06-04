@@ -4,17 +4,19 @@
 #!category=签到模块
 
 [Script]
-哔哩哔哩漫画_签到 = type=cron,cronexp=10 0 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
+哔哩哔哩漫画_签到 = type=cron,cronexp=5 0 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
 
-哔哩哔哩_签到 = type=cron,cronexp=50 0 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
+哔哩哔哩_签到 = type=cron,cronexp=35 0 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
 
-途虎养车_签到 = type=cron,cronexp=50 1 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js
+途虎养车_签到 = type=cron,cronexp=45 1 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js
 
-百度贴吧_签到 = type=cron,cronexp=30 2 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
+百度贴吧_签到 = type=cron,cronexp=15 2 0 * * *,wake-system=1,timeout=30,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 
-顺丰速运_签到 = type=cron,cronexp=15 3 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
+顺丰速运_签到 = type=cron,cronexp=55 2 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
 
-蜜雪冰城_签到 = type=cron,cronexp=55 3 0 * * *,wake-system=1,timeout=60,script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js
+蜜雪冰城_签到 = type=cron,cronexp=45 3 0 * * *,wake-system=1,timeout=60,script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js
+
+阿里云盘_签到 = type=cron,cronexp=35 4 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 
 Boxjs 数据备份 = type=cron,cronexp=10 8 1 * * *,wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
 
