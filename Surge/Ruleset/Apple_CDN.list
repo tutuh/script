@@ -130,9 +130,7 @@ DOMAIN-SUFFIX,seed-sequoia.siri.apple.com
 DOMAIN-SUFFIX,seed-swallow.siri.apple.com
 DOMAIN-SUFFIX,seed.siri.apple.com
 DOMAIN-SUFFIX,sequoia.apple.com
-DOMAIN-SUFFIX,sh-pod2-smp-device.apple.com
 DOMAIN-SUFFIX,shazam-insights.cdn-apple.com
-DOMAIN-SUFFIX,smp-device-content.apple.com
 DOMAIN-SUFFIX,static.gc.apple.com
 DOMAIN-SUFFIX,stocks-sparkline-lb.apple.com.akadns.net
 DOMAIN-SUFFIX,stocks-sparkline.apple.com
@@ -154,7 +152,6 @@ DOMAIN-SUFFIX,swdist.apple.com
 DOMAIN-SUFFIX,swscan-cdn.apple.com.akadns.net
 DOMAIN-SUFFIX,swscan.apple.com
 DOMAIN-SUFFIX,sylvan.apple.com
-DOMAIN-SUFFIX,tj-pod1-smp-device.apple.com
 DOMAIN-SUFFIX,updates-http.cdn-apple.com.akadns.net
 DOMAIN-SUFFIX,updates-http.cdn-apple.com
 DOMAIN-SUFFIX,updates.cdn-apple.com
@@ -169,6 +166,7 @@ DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net
 DOMAIN-SUFFIX,www.apple.com.edgekey.net
 DOMAIN-SUFFIX,www.apple.com
 DOMAIN-SUFFIX,xp.apple.com
+DOMAIN-KEYWORD,smp-device
 
 # > Apple_CN
 DOMAIN,api.smoot.apple.cn
