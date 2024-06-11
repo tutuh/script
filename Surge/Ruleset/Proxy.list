@@ -116,7 +116,9 @@ DOMAIN-SUFFIX,git.io
 DOMAIN-SUFFIX,githubapp.com
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,githubapp.com
 DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,globo.com
 DOMAIN-SUFFIX,foxnews.com
 DOMAIN-SUFFIX,cnn.com
@@ -272,6 +274,7 @@ DOMAIN-SUFFIX,bestbuy.com
 DOMAIN-SUFFIX,bet365.com
 DOMAIN-SUFFIX,bgp.tools
 DOMAIN-SUFFIX,bibox.com
+DOMAIN-SUFFIX,binance.com
 DOMAIN-SUFFIX,bitbucket.io
 DOMAIN-SUFFIX,bitfinex.com
 DOMAIN-SUFFIX,bit.ly
@@ -513,6 +516,7 @@ DOMAIN-SUFFIX,v2fly.org
 DOMAIN-SUFFIX,v2ray.com
 DOMAIN-SUFFIX,vercel.app
 DOMAIN-SUFFIX,vimeo.com
+DOMAIN-SUFFIX,vine.co
 DOMAIN-SUFFIX,viber.com
 DOMAIN-SUFFIX,vivaldi.com
 DOMAIN-SUFFIX,voachinese.com
