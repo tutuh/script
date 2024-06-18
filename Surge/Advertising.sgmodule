@@ -200,7 +200,7 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200)),REJECT-DROP
 # (Y)
 # > 萤石 - i.ys7.com
 #^https?:\/\/i\.ys7\.com\/api\/ads - reject
-# > 猿辅导 -  xyst.yuanfudao.com
+# > 猿辅导 - xyst.yuanfudao.com
 ^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV\d - reject
 
 # (Z)
