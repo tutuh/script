@@ -9,7 +9,6 @@ DOMAIN,books.itunes.apple.com // iBooks Store download
 DOMAIN,facetime.apple.com // FaceTime Links
 DOMAIN,lookup-api.apple.com // Look Up
 DOMAIN,radio.itunes.apple.com // Apple Music Radio
-DOMAIN,xp.apple.com
 
 # > Web Preview
 DOMAIN,apps.apple.com
