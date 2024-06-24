@@ -20,7 +20,7 @@
   // 判断是否为不限时套餐
   if (!resetDayLeft && !expireDaysLeft) {
     let percentage = ((used / total) * 100).toFixed(1);
-    content.push(`提醒：流量包，已使用${percentage}%`);
+    content.push(`提醒：流量已使用${percentage}%`);
   } else {
     if (resetDayLeft && expireDaysLeft) {
       content.push(`提醒：${resetDayLeft}天后重置，${expireDaysLeft}天后到期`);
@@ -36,17 +36,11 @@
     }
   }
 
-  let now = new Date();
-  let hour = now.getHours();
-  let minutes = now.getMinutes();
-  hour = hour > 9 ? hour : "0" + hour;
-  minutes = minutes > 9 ? minutes : "0" + minutes;
-
   $done({
-    title: `${args.title} | ${hour}:${minutes}`,
+    title: `${args.title}`,
     content: content.join("\n"),
-    icon: args.icon || "airplane.circle",
-    "icon-color": args.color || "#007aff",
+    icon: args.icon || "tornado",
+    "icon-color": args.color || "#DF4688",
   });
 })();
 
