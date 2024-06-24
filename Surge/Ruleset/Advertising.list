@@ -1,6 +1,10 @@
 # Advertising
 
 # (0~9)
+# > 360
+DOMAIN,ad.jia.360.cn
+DOMAIN,ad.life.360.cn
+DOMAIN,ad.iot.360.cn
 # > 51万年历
 DOMAIN,ad.51wnl-cq.com
 DOMAIN,adextra.51wnl-cq.com
