@@ -20,9 +20,9 @@
 # 打开：百度贴吧APP 获取 cookie
 百度贴吧_Cookie = type=http-request,pattern=^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
 
-# > 顺丰速运 - ccsp-egmas.sf-express.com
+# > 顺丰速运 - mcs-mimp-web.sf-express.com
 # 打开：顺丰速运APP 获取 cookie
-顺丰速运_Cookie = type=http-request,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+顺丰速运_Cookie = type=http-request,pattern=^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+,requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js
 
 # > 途虎养车小程序 - api.tuhu.cn
 # 打开：微信途虎养车小程序 -> 我的 -> 积分 获取 cookie
@@ -33,4 +33,4 @@
 蜜雪冰城_Cookie = type=http-response,pattern=^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info,requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, m.bilibili.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, api.tuhu.cn, mxsa.mxbc.net
+hostname = %APPEND% app.bilibili.com, m.bilibili.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, mcs-mimp-web.sf-express.com, api.tuhu.cn, mxsa.mxbc.net
