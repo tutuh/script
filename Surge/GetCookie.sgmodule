@@ -21,8 +21,8 @@
 百度贴吧_Cookie = type=http-request,pattern=^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
 
 # > 顺丰速运 - mcs-mimp-web.sf-express.com
-# 打开：顺丰速运APP 获取 cookie
-顺丰速运_Cookie = type=http-request,pattern=^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+,requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js
+# 打开：顺丰小程序 -> 我的 -> 优惠券 获取 cookie
+顺丰速运_Cookie = type=http-response,pattern=^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+,requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js
 
 # > 途虎养车小程序 - api.tuhu.cn
 # 打开：微信途虎养车小程序 -> 我的 -> 积分 获取 cookie
