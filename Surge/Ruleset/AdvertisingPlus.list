@@ -1,9 +1,5 @@
-# Advertising Plus
-
 # > General
-# Advertising
 DOMAIN-KEYWORD,adservice
-
 DOMAIN-SUFFIX,17gouwuba.com
 DOMAIN-SUFFIX,186078.com
 DOMAIN-SUFFIX,189key.com
@@ -632,11 +628,9 @@ DOMAIN-SUFFIX,zunmi.cn
 DOMAIN-SUFFIX,zwaar.org
 DOMAIN-SUFFIX,zxrtb.com
 DOMAIN-SUFFIX,zzd6.com
-
 DOMAIN-SUFFIX,ad.daum.net
 DOMAIN-SUFFIX,ad.g.daum.net
 DOMAIN-SUFFIX,ads.roku.com
-
 DOMAIN,abema-adx.ameba.jp
 DOMAIN,ad.12306.cn
 DOMAIN,ad.caiyunapp.com
