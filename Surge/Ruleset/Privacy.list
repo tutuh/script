@@ -3,7 +3,6 @@
 DOMAIN,analytics.slashdotmedia.com
 DOMAIN,zgsdk.zhugeio.com
 DOMAIN-SUFFIX,adjust.com
-DOMAIN-SUFFIX,ads.linkedin.com
 DOMAIN-SUFFIX,airpr.com
 DOMAIN-SUFFIX,cr-nielsen.com
 DOMAIN-SUFFIX,hotjar.com
@@ -63,7 +62,6 @@ DOMAIN,tracklog.58.com
 # > Antiy
 DOMAIN,miav-cse.avlyun.com
 DOMAIN,miui-fxcse.avlyun.com
-# > Apple
 DOMAIN,token.safebrowsing.apple
 # > Baidu
 DOMAIN,hm.baidu.com
@@ -92,7 +90,6 @@ DOMAIN,flash.sec.miui.com
 DOMAIN,tracking.intl.miui.com
 DOMAIN,a0.app.xiaomi.com
 DOMAIN,api.installer.xiaomi.com
-# > Microsoft
 DOMAIN,c.bing.com
 DOMAIN,c.clarity.ms
 DOMAIN,o.clarity.ms
