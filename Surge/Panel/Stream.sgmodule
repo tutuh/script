@@ -2,7 +2,7 @@
 #!desc=Netflix, Disney+, YouTube 解锁检测
 #!category=Panel
 #!arguments=更新频率:-1, 请求超时:30, 面板名称:流媒体解锁检测, 图标:play.tv.fill, 图标颜色:#D22F20
-#!arguments-desc=[参数说明]\n\n更新频率：面板刷新频率，默认手动刷新。\n\n面板名称：可自定义面板标题。\n\n请求超时：默认30秒，单位：秒。
+#!arguments-desc=[参数说明]\n\n更新频率：面板刷新频率，默认手动刷新。\n\n面板名称：自定义面板标题。\n\n请求超时：默认30秒，单位：秒。
 
 [Panel]
 流媒体解锁检测 = script-name=流媒体解锁,update-interval={{{更新频率}}}
