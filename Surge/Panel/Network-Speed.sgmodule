@@ -2,7 +2,7 @@
 #!desc=快速测试下行速率与延迟
 #!category=Panel
 #!arguments=更新频率:-1, 请求超时:60, 面板名称:网速测试, 下载流量:1
-#!arguments-desc=[参数说明]\n\n更新频率: 面板刷新的间隔时间，默认手动刷新。\n\n请求超时: 默认60秒，单位：秒。\n\n面板名称: 可自定义面板标题。\n\n下载流量: 默认1MB，最大3MB。
+#!arguments-desc=[参数说明]\n\n更新频率: 面板刷新频率，默认手动刷新。\n\n请求超时: 默认60秒，单位：秒。\n\n面板名称: 自定义面板标题。\n\n下载流量: 默认1MB，最大3MB。
 
 [Panel]
 Network-Speed = script-name=Network-Speed,update-interval={{{更新频率}}}
