@@ -1,0 +1,11 @@
+#!name=网络测速
+#!desc=快速测试下行速率与延迟
+#!category=Panel
+#!arguments=更新频率:-1, 面板名称:网速测试, 下载流量:3
+#!arguments-desc=[参数说明]\n\n更新频率: 默认不刷新。\n\n面板名称：可自定义面板标题\n\nmb: 下载流量，默认3MB。
+
+[Panel]
+Network-Speed = script-name=Network-Speed,update-interval={{{更新频率}}}
+
+[Script]
+Network-Speed = type=generic,script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Network-Speed.js,argument=title={{{面板名称}}}&iconfast=bolt&iconmid=hare&iconslow=tortoise&colorlow=#06D6A0&colormid=#FFD166&colorhigh=#EF476F&mb={{{下载流量}}}
