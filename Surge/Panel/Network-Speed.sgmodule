@@ -8,4 +8,4 @@
 Network-Speed = script-name=Network-Speed,update-interval={{{更新频率}}}
 
 [Script]
-Network-Speed = type=generic,timeout={{{请求超时}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Network-Speed.js,argument=title={{{面板名称}}}&icon=arrow.down.circle&iconfast=bolt&iconmid=hare&iconslow=tortoise&colorlow=#06D6A0&colormid=#FFD166&colorhigh=#EF476F&mb={{{下载流量}}}
+Network-Speed = type=generic,timeout={{{请求超时}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Network-Speed.js,argument=title={{{面板名称}}}&iconfast=bolt&iconmid=hare&iconslow=tortoise&colorlow=#06D6A0&colormid=#FFD166&colorhigh=#EF476F&mb={{{下载流量}}}
