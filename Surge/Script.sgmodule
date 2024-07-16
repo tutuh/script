@@ -65,7 +65,7 @@ iLovePDF_解锁 = type=http-response,pattern=https://service.ilovepdf.com/v1/use
 [Map Local]
 # > 彩云天气去广告
 ^https:\/\/biz\.cyapi\.cn\/p\/v1\/entries\? data-type=text data="{}"
-^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/homefeatures\? data-type=text data="{}"
+^https:\/\/starplucker\.cyapi\.cn\/v3\/(config\/cypage\/home_activity\/conditions|notification\/message_center|operation\/homefeatures) data-type=text data="{}"
  
 [MITM]
 hostname = %APPEND% www.g.cn, www.google.cn, boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, ap*.intsig.net, bmall.camera360.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com, *.meiyan.com, service.ilovepdf.com, api.995120.cn, purchase-*-api.*.com, user-kaji-api.b612kaji.com, *api.quthing.com, *.cyapi.cn
