@@ -15,15 +15,15 @@
 流媒体检测 = script-name=流媒体解锁检测, update-interval=-1
 
 [Script]
-{{{Airport_Name_1}}} = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/Panel/Sub-info.js, argument=url={{{URL_1}}}&reset_day={{{Reset_Day_1}}}&title={{{Title_1}}}&icon={{{ICON_1}}}&color={{{Color_1}}}
+{{{Airport_Name_1}}} = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Sub-info.js, argument=url={{{URL_1}}}&reset_day={{{Reset_Day_1}}}&title={{{Title_1}}}&icon={{{ICON_1}}}&color={{{Color_1}}}
 
-{{{Airport_Name_2}}} = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/Panel/Sub-info.js, argument=url={{{URL_2}}}&reset_day={{{Reset_Day_2}}}&title={{{Title_2}}}&icon={{{ICON_2}}}&color={{{Color_2}}}
+{{{Airport_Name_2}}} = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Sub-info.js, argument=url={{{URL_2}}}&reset_day={{{Reset_Day_2}}}&title={{{Title_2}}}&icon={{{ICON_2}}}&color={{{Color_2}}}
 
-{{{Netisp}}} = type=generic, timeout=8, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/Panel/Netisp.js, argument=icolor={{{icolor}}}&icon={{{icons}}}&GPT={{{GPT}}}&hideIP={{{HideIP}}}&cnTimeout={{{cnTimeout}}}&usTimeout={{{usTimeout}}}
+{{{Netisp}}} = type=generic, timeout=8, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Netisp.js, argument=icolor={{{icolor}}}&icon={{{icons}}}&GPT={{{GPT}}}&hideIP={{{HideIP}}}&cnTimeout={{{cnTimeout}}}&usTimeout={{{usTimeout}}}
 
-{{{Network-Info}}} = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/Panel/Network-Info.js
+{{{Network-Info}}} = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Network-Info.js
 
-流媒体解锁检测 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/JS/Panel/Stream-All.js, argument=title=流媒体解锁检测&icon=play.tv.fill&color=#D22F20
+流媒体解锁检测 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Stream-All.js, argument=title=流媒体解锁检测&icon=play.tv.fill&color=#D22F20
 
 [Rule]
 DOMAIN-SUFFIX,ip-api.com,Proxy
