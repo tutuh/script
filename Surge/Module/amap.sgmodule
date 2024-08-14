@@ -4,7 +4,7 @@
 #!arguments=脚本引擎:auto
 #!arguments-desc=脚本引擎:默认 auto, 可选: auto, jsc, webview
 #!author = RuCu6
-#!update = 2024-08-07 19:25
+#!update = 2024-08-13 19:45
 
 [URL Rewrite]
 # > 高德地图 - 通用广告请求
@@ -12,7 +12,7 @@
 
 [Script]
 # > 高德地图 - 导航详情页,路线规划,地点详情页,搜索详情页,导航结束页
-高德去广告 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/c3frontend\/af-hotel\/page\/main\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
+高德去广告 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/c3frontend\/af-(hotel|launch)\/page\/main\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 高德去广告 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(routeInfo|routePlan),requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 高德去广告 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail),requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
 高德去广告 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/amap.js
@@ -44,7 +44,7 @@
 ^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? data-type=text data="{}"
 
 # > 高德地图 - 首页,推广卡片,红点角标,右上角动图,搜索框热词,左下角天气,消息横幅
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-(assets|location) data-type=text data="{}"
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(main-page-assets|main-page-location|ridewalk-end-fc) data-type=text data="{}"
 ^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) data-type=text data="{}"
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? data-type=text data="{}"
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? data-type=text data="{}"
