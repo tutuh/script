@@ -14,36 +14,37 @@ DOMAIN,gslbali.ximalaya.com,REJECT,extended-matching
 DOMAIN,gslbtx.ximalaya.com,REJECT,extended-matching
 
 [URL Rewrite]
+# > 喜马拉雅
 ^https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 - reject
-# > 喜马拉雅 - 播放页Live
+# 播放页Live
 ^https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ - reject
-# > 喜马拉雅 - MyInfo红点提醒
+# MyInfo红点提醒
 ^https?:\/\/.*\.ximalaya\.com\/chaos-notice-web\/v1\/message\/preview\/list - reject
-# > 喜马拉雅 - 大红包Tips
+# 大红包Tips
 ^https?:\/\/.*\.ximalaya\.com\/social-web\/bottomTabs\/dynamicEntrance\/status - reject
-# > 喜马拉雅 - 屏蔽gif弹窗Ad
+# 屏蔽gif弹窗Ad
 ^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ - reject
-# > 喜马拉雅 - 屏蔽Aged请求
+# 屏蔽Aged请求
 ^https?:\/\/.*\.ximalaya\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) - reject
-# > 喜马拉雅 - 部分Tab弹窗
+# 部分Tab弹窗
 ^https?:\/\/.*\.ximalaya\.com\/discovery-feed\/isShowUserGiftPendant - reject
-# > 喜马拉雅 - 屏蔽消息红点提示
+# 屏蔽消息红点提示
 ^https?:\/\/.*\.ximalaya\.com\/mobile-user\/unread - reject
-# > 喜马拉雅 - 屏蔽minor请求
+# 屏蔽minor请求
 ^https?:\/\/.*\.ximalaya\.com\/mobile-user\/minorProtection\/pop - reject
-# > 喜马拉雅 - 屏蔽隐私搜集
+# 屏蔽隐私搜集
 ^https?:\/\/.*\.ximalaya\.com\/collector\/xl\/v\d - reject
-# > 喜马拉雅 - 屏蔽版本更新
+# 屏蔽版本更新
 ^https?:\/\/.*\.ximalaya\.com\/butler-portal\/versionCheck - reject
-# > 喜马拉雅 - 屏蔽开屏广告
+# 屏蔽开屏广告
 ^https?:\/\/(adse\.wsa|adse|adbehavior)\.ximalaya\.com\/.* - reject
-# > 喜马拉雅 - 屏蔽位置请求
+# 屏蔽位置请求
 ^https?:\/\/.*\.ximalaya\.com\/mobile\/discovery\/v\d\/location - reject
-# > 喜马拉雅 - 屏蔽实时Ad请求
+# 屏蔽实时Ad请求
 ^https?:\/\/.*\.ximalaya\.com\/api\/v\d\/adRealTime - reject
-# > 喜马拉雅 - 屏蔽ting_Ad
+# 屏蔽ting_Ad
 ^https?:\/\/.*\.ximalaya\.com\/ting\/(loading|feed|home)? - reject
-# > 喜马拉雅 - 修复轮播Ad失效Bug
+# 修复轮播Ad失效Bug
 ^https?:\/\/.*\.ximalaya\.com\/discovery-feed\/focus\/queryF - reject
 ^https?:\/\.*linkeye-cloud\/checkIP - reject
 ^https?:\/\/www\.taobao\.com\/help\/getip\.php - reject
@@ -51,15 +52,16 @@ DOMAIN,gslbtx.ximalaya.com,REJECT,extended-matching
 ^https?:\/\/passport(ws)?\.ximalaya\.com\/user-http-app\/v1\/token\/refresh - reject
 
 [Script]
-# > 喜马拉雅 - 首页顶部去除直播
+# > 喜马拉雅
+# 首页顶部去除直播
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
-# > 喜马拉雅 - 屏蔽首页横幅
+# 屏蔽首页横幅
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
-# > 喜马拉雅 - 屏蔽首页动态
+# 屏蔽首页动态
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
-# > 喜马拉雅 - 屏蔽Tab页滚动
+# 屏蔽Tab页滚动
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
-# > 喜马拉雅 - 去除我的页面Ad_Tag
+# 去除我的页面Ad_Tag
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
 
 [MITM]
