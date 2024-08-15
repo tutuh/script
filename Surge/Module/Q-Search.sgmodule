@@ -6,6 +6,7 @@
 # 注：先进入设置更改 Safari 默认搜索为 DuckDuckGO
 
 [URL Rewrite]
+# > 快捷搜索
 # bd xxx (百度)
 ^https:\/\/duckduckgo.com\/\?q=bd(\+|%20)([^&]+).+ https://www.baidu.com/s?wd=$2 302
 
@@ -74,7 +75,6 @@
 
 # xxx （无指令默认为 Google）
 ^https:\/\/duckduckgo.com\/\?q=(?!dl(c|e|j)(\+|%20))([^&]+).+ https://www.google.com/search?q=$3&num=100 302
-
 
 [MITM]
 hostname = %APPEND% duckduckgo.com
