@@ -53,7 +53,7 @@ OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200)),REJECT-DROP
 贴吧去广告 = type=http-response,pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd,requires-body=1,binary-body-mode=1,engine=auto,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js,argument=per_filter_video_thread=1
 
 [URL Rewrite]
-# 通用广告关键词
+# > 通用广告关键词
 (?i)\b\/ad\/ - reject
 (?i)\b\/ads\/ - reject
 (?i)\b\/adv\/ - reject
