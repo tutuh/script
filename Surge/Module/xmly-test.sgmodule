@@ -10,41 +10,41 @@ hijack-dns = %APPEND% 114.114.114.114
 
 [Rule]
 # > 喜马拉雅 - 阻止IP变化
-DOMAIN,gslbali.ximalaya.com,REJECT,extended-matching
-DOMAIN,gslbtx.ximalaya.com,REJECT,extended-matching
+DOMAIN,gslbali.ximalaya.com,REJECT
+DOMAIN,gslbtx.ximalaya.com,REJECT
 
 [URL Rewrite]
 # > 喜马拉雅
 ^https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 - reject
-# 播放页Live
+#播放页Live
 ^https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ - reject
-# MyInfo红点提醒
+#MyInfo红点提醒
 ^https?:\/\/.*\.ximalaya\.com\/chaos-notice-web\/v1\/message\/preview\/list - reject
-# 大红包Tips
+#大红包Tips
 ^https?:\/\/.*\.ximalaya\.com\/social-web\/bottomTabs\/dynamicEntrance\/status - reject
-# 屏蔽gif弹窗Ad
+#屏蔽gif弹窗Ad
 ^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ - reject
-# 屏蔽Aged请求
+#屏蔽Aged请求
 ^https?:\/\/.*\.ximalaya\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) - reject
-# 部分Tab弹窗
+#部分Tab弹窗
 ^https?:\/\/.*\.ximalaya\.com\/discovery-feed\/isShowUserGiftPendant - reject
-# 屏蔽消息红点提示
+#屏蔽消息红点提示
 ^https?:\/\/.*\.ximalaya\.com\/mobile-user\/unread - reject
-# 屏蔽minor请求
+#屏蔽minor请求
 ^https?:\/\/.*\.ximalaya\.com\/mobile-user\/minorProtection\/pop - reject
-# 屏蔽隐私搜集
+#屏蔽隐私搜集
 ^https?:\/\/.*\.ximalaya\.com\/collector\/xl\/v\d - reject
-# 屏蔽版本更新
+#屏蔽版本更新
 ^https?:\/\/.*\.ximalaya\.com\/butler-portal\/versionCheck - reject
-# 屏蔽开屏广告
+#屏蔽开屏广告
 ^https?:\/\/(adse\.wsa|adse|adbehavior)\.ximalaya\.com\/.* - reject
-# 屏蔽位置请求
+#屏蔽位置请求
 ^https?:\/\/.*\.ximalaya\.com\/mobile\/discovery\/v\d\/location - reject
-# 屏蔽实时Ad请求
+#屏蔽实时Ad请求
 ^https?:\/\/.*\.ximalaya\.com\/api\/v\d\/adRealTime - reject
-# 屏蔽ting_Ad
+#屏蔽ting_Ad
 ^https?:\/\/.*\.ximalaya\.com\/ting\/(loading|feed|home)? - reject
-# 修复轮播Ad失效Bug
+#修复轮播Ad失效Bug
 ^https?:\/\/.*\.ximalaya\.com\/discovery-feed\/focus\/queryF - reject
 ^https?:\/\.*linkeye-cloud\/checkIP - reject
 ^https?:\/\/www\.taobao\.com\/help\/getip\.php - reject
