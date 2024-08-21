@@ -4,7 +4,7 @@
 #!arguments=脚本引擎:auto
 #!arguments-desc=脚本引擎:默认 auto, 可选: auto, jsc, webview
 #!author=RuCu6
-#!update = 2024-07-23 10:45
+#!update = 2024-08-18 08:10
 
 [Url Rewrite]
 # > 微博 - 开屏广告 
@@ -63,10 +63,11 @@
 
 # 开屏广告
 ^https:\/\/bootrealtime\.uve\.weibo\.com\/v[23]\/ad\/realtime data-type=text data="{}"
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) url reject
 
 # 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? data-type=text data="{}"
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? data-type=text data="{}"
 
 [MITM]
-hostname = %APPEND% *.weibo.cn, *.weibo.com
+hostname = %APPEND% *.weibo.cn, *.weibo.com, weibo.com
