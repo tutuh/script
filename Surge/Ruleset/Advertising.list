@@ -19,9 +19,8 @@ DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
 DOMAIN-SUFFIX,unityads.unity3d.com
 # > Alibaba
 DOMAIN,ems.youku.com
-DOMAIN,ossgw.alicdn.com
-DOMAIN,h-adashx.ut.taobao.com
-DOMAIN,ut.taobao.com
+DOMAIN,hc-ssp.sm.cn
+DOMAIN,tunion-api.m.taobao.com
 # > 爱奇艺
 DOMAIN,api.iqiyi.com
 
