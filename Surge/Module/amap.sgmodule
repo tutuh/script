@@ -4,7 +4,7 @@
 #!arguments=脚本引擎:auto
 #!arguments-desc=脚本引擎:默认 auto, 可选: auto, jsc, webview
 #!author = RuCu6
-#!update = 2024-08-14 15:25
+#!update = 2024-08-24 07:50
 
 [URL Rewrite]
 # > 高德地图 - 通用广告请求
@@ -43,7 +43,6 @@
 # > 高德地图 
 # 导航详情页,路线规划,地点详情页,搜索详情页,导航结束页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(car-end|route-plan) data-type=text data="{}"
-^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? data-type=text data="{}"
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? data-type=text data="{}"
 ^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? data-type=text data="{}"
 
