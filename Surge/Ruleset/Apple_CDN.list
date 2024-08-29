@@ -50,6 +50,7 @@ DOMAIN-SUFFIX,clientflow.apple.com
 DOMAIN-SUFFIX,cn-smp-paymentservices.apple.com
 DOMAIN-SUFFIX,configuration.apple.com.akadns.net
 DOMAIN-SUFFIX,configuration.apple.com
+DOMAIN-SUFFIX,crl.apple.com
 DOMAIN-SUFFIX,cstat.apple.com
 DOMAIN-SUFFIX,cstat.cdn-apple.com
 DOMAIN-SUFFIX,dd-cdn.origin-apple.com.akadns.net
