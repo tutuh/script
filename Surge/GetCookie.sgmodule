@@ -32,5 +32,10 @@
 # 打开：蜜雪冰城小程序 -> 我的页面 -> 获取 cookie
 蜜雪冰城_Cookie = type=http-response,pattern=^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info,requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js
 
+# > 奶茶多合一 - webapi2.qmai.cn, webapi.qmai.cn, qmwebapi.qmai.cn
+# 打开：相关小程序 -> 手动签到一次 -> 获取 cookie
+奶茶获取_Cookie = type=http-response, pattern=^https:\/\/(webapi|webapi2)\.qmai\.cn\/web\/seller\/(oauth\/flash-sale-login|account\/login-minp),requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js
+奶茶获取_Cookie = type=http-request, pattern=^https:\/\/(webapi|webapi2|qmwebapi)\.qmai\.cn\/web\/(catering\/integral|cmk-center)\/sign\/(signIn|takePartInSign),requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js
+
 [MITM]
-hostname = %APPEND% app.bilibili.com, m.bilibili.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, mcs-mimp-web.sf-express.com, api.tuhu.cn, mxsa.mxbc.net
+hostname = %APPEND% app.bilibili.com, m.bilibili.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, mcs-mimp-web.sf-express.com, api.tuhu.cn, mxsa.mxbc.net, webapi2.qmai.cn, webapi.qmai.cn, qmwebapi.qmai.cn
