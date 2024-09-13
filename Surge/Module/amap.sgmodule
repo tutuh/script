@@ -4,7 +4,7 @@
 #!arguments=脚本引擎:auto
 #!arguments-desc=脚本引擎:默认 auto, 可选: auto, jsc, webview
 #!author = RuCu6
-#!update = 2024-08-27 11:45
+#!update = 2024-09-12 10:40
 
 [URL Rewrite]
 # > 高德地图 - 通用广告请求
@@ -48,6 +48,7 @@
 ^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? data-type=text data="{}"
 
 # 首页,推广卡片,红点角标,右上角动图,搜索框热词,左下角天气,消息横幅
+^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? data-type=text data="{}"
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(main-page-assets|main-page-location|ridewalk-end-fc) data-type=text data="{}"
 ^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) data-type=text data="{}"
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? data-type=text data="{}"
