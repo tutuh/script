@@ -4,6 +4,13 @@
 #!arguments=脚本引擎:auto
 #!arguments-desc=脚本引擎:默认 auto, 可选: auto, jsc, webview
 
+[Rule]
+# > 百度地图
+DOMAIN,afd.baidu.com,REJECT
+DOMAIN,afdconf.baidu.com,REJECT
+DOMAIN,httpdns.baidubce.com,REJECT
+DOMAIN,lc.map.baidu.com,REJECT
+
 [Script]
 # > 百度地图 - 组件包
 百度地图去广告 = type=http-response,pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/imap\/dl\/s\/UpdateInfo\.php\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/baidu/baidumap.js
