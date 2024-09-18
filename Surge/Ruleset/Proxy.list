@@ -194,6 +194,7 @@ DOMAIN-SUFFIX,dns-oarc.net
 DOMAIN-SUFFIX,deviantart.net
 DOMAIN-SUFFIX,daum.net
 DOMAIN-SUFFIX,cloudfront.net
+DOMAIN-SUFFIX,cachefly.net
 DOMAIN-SUFFIX,bwh1.net
 DOMAIN-SUFFIX,bloomberg.net
 DOMAIN-SUFFIX,behance.net
@@ -333,6 +334,7 @@ DOMAIN-SUFFIX,mojang.com
 DOMAIN-SUFFIX,missav.com
 DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,meetup.com
+DOMAIN-SUFFIX,macpaw.com
 DOMAIN-SUFFIX,mapbox.com
 DOMAIN-SUFFIX,ledger.com
 DOMAIN-SUFFIX,leetcode.com
@@ -643,3 +645,4 @@ DOMAIN-KEYWORD,dropbox
 DOMAIN-KEYWORD,jav
 DOMAIN-KEYWORD,pinterest
 DOMAIN-KEYWORD,porn
+USER-AGENT,Roam*
