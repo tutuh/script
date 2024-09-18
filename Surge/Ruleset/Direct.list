@@ -28,6 +28,7 @@ DOMAIN-SUFFIX,9966.org
 DOMAIN-SUFFIX,8866.org
 DOMAIN-SUFFIX,7766.org
 DOMAIN-SUFFIX,3322.org
+DOMAIN-SUFFIX,juejin.im
 DOMAIN-SUFFIX,netease.im
 DOMAIN-SUFFIX,haowu.link
 DOMAIN-SUFFIX,yqkk.link
@@ -147,8 +148,10 @@ DOMAIN-SUFFIX,m1905.cn
 DOMAIN-SUFFIX,linkedin.cn
 DOMAIN-SUFFIX,leetcode.cn
 DOMAIN-SUFFIX,kuwo.cn
+DOMAIN-SUFFIX,juejin.cn
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,jiguang.cn
+DOMAIN-SUFFIX,infoq.cn
 DOMAIN-SUFFIX,gaokao.cn
 DOMAIN-SUFFIX,dxy.cn
 DOMAIN-SUFFIX,digicert.cn
@@ -523,7 +526,6 @@ DOMAIN-SUFFIX,kaiyanapp.com
 DOMAIN-SUFFIX,jiemian.com
 DOMAIN-SUFFIX,jianshu.com
 DOMAIN-SUFFIX,ithome.com
-DOMAIN-SUFFIX,infinitynewtab.com
 DOMAIN-SUFFIX,ifengimg.com
 DOMAIN-SUFFIX,ifeng.com
 DOMAIN-SUFFIX,id6.com
@@ -531,6 +533,7 @@ DOMAIN-SUFFIX,ibuscloud.com
 DOMAIN-SUFFIX,ibreader.com
 DOMAIN-SUFFIX,huya.com
 DOMAIN-SUFFIX,huxiucdn.com
+DOMAIN-SUFFIX,huxiu.com
 DOMAIN-SUFFIX,hupu.com
 DOMAIN-SUFFIX,hongxiu.com
 DOMAIN-SUFFIX,hc-cdn.com
@@ -763,3 +766,10 @@ DOMAIN-SUFFIX,heytapcs.com
 DOMAIN-SUFFIX,heytap.com
 DOMAIN-SUFFIX,coloros.com
 DOMAIN-SUFFIX,vivo.com
+USER-AGENT,%E4%BC%98%E9%85%B7*
+USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*
+USER-AGENT,MicroMessenger Client
+USER-AGENT,WeChat*
+USER-AGENT,TeslaMap
+PROCESS-NAME,WeChat
+PROCESS-NAME,WeCom
