@@ -3,48 +3,45 @@
 #!category=Ad Blocking
 #!arguments=脚本引擎:auto
 #!arguments-desc=脚本引擎:默认 auto, 可选: auto, jsc, webview
+#!author = RuCu6
+#!update = 2024-04-13 14:20:28
+
+[Rule]
+AND,((PROTOCOL, UDP), (DOMAIN-SUFFIX, xiaohongshu.com)),REJECT
 
 [Script]
 # > 小红书
-# 搜索结果推荐广告
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 视频播放页商品推广
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/widgets,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 短视频流去水印+强制开启保存功能
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/redtube\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 信息流视频去水印+强制开启保存功能
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/videofeed\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 信息流图片去水印
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/feed\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 信息流图片去水印[部分用户是下面请求]
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/imagefeed,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+# 详情页小部件、关注页感兴趣的人
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/(?:note\/widgets|user\/followings\/followfeed),requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+
+# 搜索页
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/(?:banner|hot)_list,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/(?:hint|trending),requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+
 # 开屏广告
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 首页瀑布流
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 启动处理
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 热搜发现
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 默认填词
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hint,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 去除购物
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\/categories,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
-# 猜你想搜
-小红书去广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+
+# 信息流、详情页感兴趣的人
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/followfeed\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+小红书去广告 = type=http-response,pattern=https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v5\/recommend\/user\/follow_recommend\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?,requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+
+# 移除图片和视频水印
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/note\/feed|v3\/note\/videofeed),requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
+
+# 移除图片和实况照片水印
+小红书去广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/(?:imagefeed|live_photo\/save),requires-body=1,engine={{{脚本引擎}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xiaohongshu.js
 
 [Map Local]
 # > 小红书
-# 通用广告请求
-^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/(tag\/)?ads data-type=text data="{}"
-# 隐私屏蔽
-^https?:\/\/referee\.xiaohongshu\.com\/v\d\/stateReport data-type=text data="{}"
-# Switches
-^https?:\/\/pages\.xiaohongshu\.com\/data\/native\/matrix_switches data-type=text data="{}"
-# 青少年请求
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/user\/teenager\/status data-type=text data="{}"
-# 启动引导
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/home_guide data-type=text data="{}"
+# 惊喜弹窗
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) data-type=text data="{}"
+^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}"
+# 信息流
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/guide\/user_banner|v3\/note\/guide) data-type=text data="{}"
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(?:v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) data-type=text data="{}"
 
 [MITM]
-hostname = %APPEND% edith.xiaohongshu.com, www.xiaohongshu.com, pages.xiaohongshu.com, referee.xiaohongshu.com
+hostname = %APPEND% edith.xiaohongshu.com, www.xiaohongshu.com
