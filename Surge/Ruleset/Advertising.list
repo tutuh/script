@@ -59,10 +59,44 @@ DOMAIN-SUFFIX,deliver.ifeng.com
 
 # (G)
 # > 广告联盟
-DOMAIN,mi.gdt.qq.com
+DOMAIN,ad.zijieapi.com
+DOMAIN,adapi.izuiyou.com
+DOMAIN,adtracker.adfunlink.com
+DOMAIN,dig.bdurl.net
+DOMAIN,dsp-x.jd.com
+DOMAIN,et.tanx.com
+DOMAIN,gdfp.gifshow.com
+DOMAIN,init.supersonicads.com
+DOMAIN,janapi.jd.com
+DOMAIN,mercury-gateway.ixiaochuan.cn
 DOMAIN,open.e.kuaishou.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
+DOMAIN,open.kuaishou.com
+DOMAIN,pagead2.googlesyndication-cn.com
+DOMAIN,pagead2.googlesyndication.com
+DOMAIN,sdk.e.qq.com
+DOMAIN,tangram.e.qq.com
+DOMAIN,ws.tapjoyads.com
+DOMAIN,www.googleadservices.com
+DOMAIN-SUFFIX,ads.linkedin.com
+DOMAIN-SUFFIX,ads.vungle.com
+DOMAIN-SUFFIX,adservice.google.com
+DOMAIN-SUFFIX,adukwai.com
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,applvn.com
+DOMAIN-SUFFIX,appsflyer.com
+DOMAIN-SUFFIX,appsflyersdk.com
+DOMAIN-SUFFIX,kuaishouzt.com
+DOMAIN-SUFFIX,miaozhen.com
+DOMAIN-SUFFIX,ubixioe.com
+DOMAIN-SUFFIX,v.smtcdns.com
+DOMAIN-SUFFIX,zijieapi.com
+DOMAIN-KEYWORD,-ad-sign.byteimg.com
+DOMAIN-KEYWORD,ads.g.doubleclick
+DOMAIN-KEYWORD,asiad.byteactivity
+DOMAIN-KEYWORD,pangolin-sdk-toutiao
+DOMAIN-KEYWORD,pangolin.snssdk.com
+DOMAIN-KEYWORD,pglstatp-toutiao
+DOMAIN-KEYWORD,video-cn.snssdk.com
 # > 高德地图
 DOMAIN,amap-aos-info-nogw.amap.com
 
@@ -216,12 +250,11 @@ DOMAIN,tmead.y.qq.com
 DOMAIN,tmeadbak.y.qq.com
 DOMAIN,tmeadcomm.y.qq.com
 DOMAIN,tpns.qq.com
-DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN-KEYWORD,trace.qq.com
 DOMAIN-KEYWORD,trace.video.qq.com
-IP-CIDR,47.110.187.87/32,no-resolve
+IP-CIDR,47.110.187.87/32
 # > 同花顺
 DOMAIN,adm.10jqka.com.cn
 DOMAIN,stat.10jqka.com.cn
@@ -232,6 +265,8 @@ DOMAIN,iad0ssl.pconline.com.cn
 DOMAIN,imgad0.pcauto.com.cn
 DOMAIN,imgad0.pconline.com.cn
 DOMAIN,ivy.pchouse.com.cn
+# > 太平洋保险
+DOMAIN,a.cpic.com.cn
 
 # (V)
 # > vivo
@@ -315,9 +350,6 @@ DOMAIN,log.ycapp.yiche.com
 # > 中关村
 DOMAIN,apppv.zol.com.cn
 DOMAIN,pvnapp.zol.com.cn
-# 字节跳动
-DOMAIN,ad.zijieapi.com
-DOMAIN-KEYWORD,-ad-sign.byteimg.com
 # > 中国联通
 DOMAIN-SUFFIX,m1.ad.10010.com
 # > 中国电信
