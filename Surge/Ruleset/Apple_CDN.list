@@ -178,9 +178,9 @@ DOMAIN-KEYWORD,smp-device
 
 # > Apple_CN
 DOMAIN,api.smoot.apple.cn
-DOMAIN,gs-loc-cn.apple.com
-DOMAIN-SUFFIX,icloud.com.cn
-DOMAIN-SUFFIX,apple.com.cn
-DOMAIN-SUFFIX,cn-ssl.ls.apple.com
-DOMAIN-SUFFIX,cn.ls.apple.com
 DOMAIN-SUFFIX,cn.apple.com
+DOMAIN-SUFFIX,cn.ls.apple.com
+DOMAIN,gs-loc-cn.apple.com
+DOMAIN-SUFFIX,cn-ssl.ls.apple.com
+DOMAIN-SUFFIX,apple.com.cn
+DOMAIN-SUFFIX,icloud.com.cn
