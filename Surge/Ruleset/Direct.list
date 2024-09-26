@@ -421,9 +421,9 @@ DOMAIN-SUFFIX,bcelive.com
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,bilibili.cn
-DOMAIN-SUFFIX,bilibili.tv
 DOMAIN-SUFFIX,biligame.cn
 DOMAIN-SUFFIX,biliimg.com
+DOMAIN-SUFFIX,byteimg.com
 DOMAIN-SUFFIX,bytetcc.com
 DOMAIN-SUFFIX,c-ctrip.com
 DOMAIN-SUFFIX,cainiao.com
@@ -722,7 +722,6 @@ DOMAIN-SUFFIX,leetcode-cn.com
 DOMAIN-SUFFIX,pconline.com.cn
 DOMAIN-SUFFIX,dl.pinyuncloud.com
 DOMAIN-SUFFIX,taopiaopiao.com
-DOMAIN-SUFFIX,tencent-coud.cn
 DOMAIN-SUFFIX,toutiaopage.com
 DOMAIN-SUFFIX,xiaohongshu.com
 DOMAIN-SUFFIX,aicoinstorge.com
