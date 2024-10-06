@@ -1,15 +1,7 @@
 # Advertising
 
 # ======= (0~9) ======= #
-# > 360
-DOMAIN,ad.jia.360.cn
-DOMAIN,ad.life.360.cn
-DOMAIN,ad.iot.360.cn
-# > 51万年历
-DOMAIN,ad.51wnl-cq.com
-DOMAIN,adextra.51wnl-cq.com
-DOMAIN,log.51wnl-cq.com
-DOMAIN,r.51wnl-cq.com
+
 
 # ======= (A) ======= #
 # > Apple
@@ -27,25 +19,6 @@ DOMAIN,api.iqiyi.com
 # > 百度
 DOMAIN,mobads.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
-
-# ======= (C) ======= #
-# > CCTV Video
-DOMAIN,adstore-index-1252524079.file.myqcloud.com
-# > CNTV
-DOMAIN,galaxy.bjcathay.com
-DOMAIN,mdrecv.app.cntvwb.cn
-DOMAIN,sdapprecv.app.cntvwb.cn
-DOMAIN,vdapprecv.app.cntvwb.cn
-# > Camera360
-DOMAIN,dispatcher.360in.com
-DOMAIN,ad.360in.com
-DOMAIN,exp.360in.com
-# > 车来了
-DOMAIN,atrace.chelaile.net.cn
-DOMAIN,logs.chelaile.net.cn
-# > 创维集团
-DOMAIN-KEYWORD,hoisin.coocaa.com
-DOMAIN-KEYWORD,hoisin.coocaatv.com
 
 # ======= (F) ======= #
 # > 飞常准
@@ -192,9 +165,6 @@ DOMAIN,sdkconfig.ad.xiaomi.com
 DOMAIN-KEYWORD,c-hzgt2.getui.com
 
 # ======= (O) ======= #
-# > OPPO
-DOMAIN,adsfs.oppomobile.com
-DOMAIN-SUFFIX,ads.oppomobile.com
 # > Oray 向日葵远程控制
 DOMAIN,dm.toutiao.com
 DOMAIN,ddns.oray.com
@@ -227,9 +197,6 @@ DOMAIN,adm2.autoimg.cn
 DOMAIN,adm3.autoimg.cn
 
 # ======= (S) ======= #
-# > Snapchat
-DOMAIN,ads.snapchat.com
-DOMAIN,adsapi.snapchat.com
 # > 搜狐
 DOMAIN,hui.sohu.com
 DOMAIN-SUFFIX,ad.sohu.com
@@ -256,30 +223,8 @@ DOMAIN-SUFFIX,l.qq.com
 DOMAIN-KEYWORD,trace.qq.com
 DOMAIN-KEYWORD,trace.video.qq.com
 IP-CIDR,47.110.187.87/32,no-resolve
-# > 同花顺
-DOMAIN,adm.10jqka.com.cn
-DOMAIN,stat.10jqka.com.cn
-# > 太平洋电脑网
-DOMAIN,ad-analysis.pconline.com.cn
-DOMAIN,iad0ssl.pcauto.com.cn
-DOMAIN,iad0ssl.pconline.com.cn
-DOMAIN,imgad0.pcauto.com.cn
-DOMAIN,imgad0.pconline.com.cn
-DOMAIN,ivy.pchouse.com.cn
 # > 太平洋保险
 DOMAIN,a.cpic.com.cn
-
-# ======= (V) ======= #
-# > vivo
-DOMAIN,adlog.vivo.com.cn
-DOMAIN,adreq.vivo.com.cn
-DOMAIN,ads-marketing-vivofs.vivo.com.cn
-DOMAIN,adsdk.vivo.com.cn
-DOMAIN,adsstatic.vivo.com.cn
-DOMAIN,adxlog.vivo.com.cn
-DOMAIN,vcardsdkservice.vivo.com.cn
-DOMAIN-KEYWORD,stsdk.vivo.com.cn
-DOMAIN-KEYWORD,stsdk.vivoglobal.com
 
 # ======= (W) ======= #
 # > 微博
@@ -332,19 +277,6 @@ DOMAIN,ykad-data.youku.com
 DOMAIN,youku-acs.m.taobao.com
 # > 云闪付
 DOMAIN-KEYWORD,ads.95516.com
-# > 雅虎
-DOMAIN,admarketing.yahoo.net
-DOMAIN,ads.auctions.yahoo.com
-DOMAIN,ads.finance.yahoo.com
-DOMAIN,ads.yahoo.com
-DOMAIN,ads.yahoo.de
-DOMAIN-SUFFIX,adserver.yahoo.com
-DOMAIN-SUFFIX,adspecs.yahoo.com
-DOMAIN-SUFFIX,advertising.yahoo.com
-DOMAIN-SUFFIX,gemini.yahoo.com
-# > 易车网
-DOMAIN,adx.yiche.com
-DOMAIN,log.ycapp.yiche.com
 
 # ======= (Z) ======= #
 # > 中关村
@@ -357,13 +289,6 @@ DOMAIN,ad.21cn.com
 DOMAIN,ad.k.21cn.com
 DOMAIN,admarket.21cn.com
 DOMAIN,adshows.21cn.com
-# > 中华万年历广告
-DOMAIN-KEYWORD,lkme.cc
-DOMAIN-KEYWORD,api.freed.so
-DOMAIN-KEYWORD,log-dmp.suishenyun.cn
-DOMAIN-KEYWORD,client-dmp.suishenyun.cn
-DOMAIN-KEYWORD,pc.suishenyun.net
-DOMAIN-KEYWORD,v0-client-lz.rili.cn
 # > 知乎
 DOMAIN,appcloud.zhihu.com
 DOMAIN,appcloud2.in.zhihu.com
