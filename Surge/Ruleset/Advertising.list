@@ -1,6 +1,6 @@
 # Advertising
 
-# (0~9)
+# ======= (0~9) ======= #
 # > 360
 DOMAIN,ad.jia.360.cn
 DOMAIN,ad.life.360.cn
@@ -11,7 +11,7 @@ DOMAIN,adextra.51wnl-cq.com
 DOMAIN,log.51wnl-cq.com
 DOMAIN,r.51wnl-cq.com
 
-# (A)
+# ======= (A) ======= #
 # > Apple
 DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,ads.internal.unity3d.com
@@ -23,12 +23,12 @@ DOMAIN,tunion-api.m.taobao.com
 # > 爱奇艺
 DOMAIN,api.iqiyi.com
 
-# (B)
+# ======= (B) ======= #
 # > 百度
 DOMAIN,mobads.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
 
-# (C)
+# ======= (C) ======= #
 # > CCTV Video
 DOMAIN,adstore-index-1252524079.file.myqcloud.com
 # > CNTV
@@ -47,7 +47,7 @@ DOMAIN,logs.chelaile.net.cn
 DOMAIN-KEYWORD,hoisin.coocaa.com
 DOMAIN-KEYWORD,hoisin.coocaatv.com
 
-# (F)
+# ======= (F) ======= #
 # > 飞常准
 DOMAIN,adv-adlog.variflight.com
 DOMAIN,adv-ads.variflight.com
@@ -57,7 +57,7 @@ DOMAIN,api.newad.ifeng.com
 DOMAIN,ifengad.3g.ifeng.com
 DOMAIN-SUFFIX,deliver.ifeng.com
 
-# (G)
+# ======= (G) ======= #
 # > 广告联盟
 DOMAIN,ad.zijieapi.com
 DOMAIN,adapi.izuiyou.com
@@ -101,13 +101,13 @@ DOMAIN-KEYWORD,video-cn.snssdk.com
 # > 高德地图
 DOMAIN,amap-aos-info-nogw.amap.com
 
-# (H)
+# ======= (H) ======= #
 # > 虎扑
 DOMAIN,adx.hupu.com
 DOMAIN,adx-api.hupu.com
 DOMAIN,goblin.hupu.com
 
-# (J)
+# ======= (J) ======= #
 # > 驾校一点通
 DOMAIN,richmanapi.jxedt.com
 DOMAIN,richmanapi.ksedt.com
@@ -125,14 +125,14 @@ DOMAIN,mobad.ijinshan.com
 DOMAIN,ups.ksmobile.net
 DOMAIN,ws.ksmobile.net
 
-# (K)
+# ======= (K) ======= #
 # > 酷我音乐
 DOMAIN,ad.tencentmusic.com
 DOMAIN,g.koowo.com
 DOMAIN,mobilead.kuwo.cn
 DOMAIN,rich.kuwo.cn
 
-# (L)
+# ======= (L) ======= #
 # > 乐播投屏
 DOMAIN,ad.hpplay.cn
 DOMAIN,adc.hpplay.cn
@@ -144,7 +144,7 @@ DOMAIN,rpt.hpplay.cn
 # > 蓝奏云
 DOMAIN,statics.woozooo.com
 
-# (M)
+# ======= (M) ======= #
 # > Microsoft
 DOMAIN,mobileads.msn.com
 DOMAIN-SUFFIX,ads.msn.com
@@ -191,7 +191,7 @@ DOMAIN,sdkconfig.ad.xiaomi.com
 # > 买单吧
 DOMAIN-KEYWORD,c-hzgt2.getui.com
 
-# (O)
+# ======= (O) ======= #
 # > OPPO
 DOMAIN,adsfs.oppomobile.com
 DOMAIN-SUFFIX,ads.oppomobile.com
@@ -205,13 +205,13 @@ DOMAIN-SUFFIX,offline-adv.oray.com
 DOMAIN-KEYWORD,upload-cdn.orayimg.com
 DOMAIN-KEYWORD,upload-cdn.orayimg.com-upload-activity
 
-# (P)
+# ======= (P) ======= #
 # > 澎湃新闻
 DOMAIN,admonitor.thepaper.cn
 DOMAIN,adpai.thepaper.cn
 DOMAIN,imgadpai.thepaper.cn
 
-# (Q)
+# ======= (Q) ======= #
 # > 蜻蜓FM
 DOMAIN,ad.qingting.fm
 DOMAIN,adlaunch.qingting.fm
@@ -226,7 +226,7 @@ DOMAIN,adm1.autoimg.cn
 DOMAIN,adm2.autoimg.cn
 DOMAIN,adm3.autoimg.cn
 
-# (S)
+# ======= (S) ======= #
 # > Snapchat
 DOMAIN,ads.snapchat.com
 DOMAIN,adsapi.snapchat.com
@@ -239,7 +239,7 @@ DOMAIN-SUFFIX,pv.sohu.com
 # 数字联盟
 DOMAIN-SUFFIX,shuzilm.cn
 
-# (T)
+# ======= (T) ======= #
 # > Tencent 腾讯
 DOMAIN,adsmind.gdtimg.com
 DOMAIN,info4.video.qq.com
@@ -269,7 +269,7 @@ DOMAIN,ivy.pchouse.com.cn
 # > 太平洋保险
 DOMAIN,a.cpic.com.cn
 
-# (V)
+# ======= (V) ======= #
 # > vivo
 DOMAIN,adlog.vivo.com.cn
 DOMAIN,adreq.vivo.com.cn
@@ -281,7 +281,7 @@ DOMAIN,vcardsdkservice.vivo.com.cn
 DOMAIN-KEYWORD,stsdk.vivo.com.cn
 DOMAIN-KEYWORD,stsdk.vivoglobal.com
 
-# (W)
+# ======= (W) ======= #
 # > 微博
 DOMAIN,adstrategy.biz.weibo.com
 DOMAIN,kadmimage.biz.weibo.com
@@ -309,7 +309,7 @@ DOMAIN-SUFFIX,union.youdao.com
 # > 网上国网
 DOMAIN,h5-api.feiersmart.com
 
-# (Y)
+# ======= (Y) ======= #
 # > 优酷 & 菜鸟
 DOMAIN,acs4baichuan.m.taobao.com
 DOMAIN,adsmind.ugdtimg.com
@@ -346,7 +346,7 @@ DOMAIN-SUFFIX,gemini.yahoo.com
 DOMAIN,adx.yiche.com
 DOMAIN,log.ycapp.yiche.com
 
-# (Z)
+# ======= (Z) ======= #
 # > 中关村
 DOMAIN,apppv.zol.com.cn
 DOMAIN,pvnapp.zol.com.cn
