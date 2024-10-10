@@ -59,6 +59,7 @@ DOMAIN-SUFFIX,cctv.cn
 DOMAIN-SUFFIX,cntv.cn
 DOMAIN-SUFFIX,dns.pub
 DOMAIN-SUFFIX,doh.pub
+DOMAIN-SUFFIX,dot.pub
 DOMAIN-SUFFIX,id6.com
 DOMAIN-SUFFIX,kuwo.cn
 DOMAIN-SUFFIX,migu.cn
@@ -141,6 +142,8 @@ DOMAIN-SUFFIX,soku.com
 DOMAIN-SUFFIX,soso.com
 DOMAIN-SUFFIX,tanx.com
 DOMAIN-SUFFIX,tmall.hk
+DOMAIN,dl.ubnt.com
+DOMAIN,config.ubnt.com
 DOMAIN-SUFFIX,uczzd.cn
 DOMAIN-SUFFIX,udesk.cn
 DOMAIN-SUFFIX,v-56.com
