@@ -30,25 +30,13 @@ DOMAIN-SUFFIX,deliver.ifeng.com
 
 # ======= (G) ======= #
 # > 广告联盟
-DOMAIN,ad.zijieapi.com
-DOMAIN,adapi.izuiyou.com
-DOMAIN,adtracker.adfunlink.com
-DOMAIN,dig.bdurl.net
-DOMAIN,dsp-x.jd.com
-DOMAIN,et.tanx.com
-DOMAIN,gdfp.gifshow.com
-DOMAIN,init.supersonicads.com
-DOMAIN,janapi.jd.com
-DOMAIN,lf-ad-ies.bytecdn.cn
-DOMAIN,mercury-gateway.ixiaochuan.cn
-DOMAIN,open.e.kuaishou.com
-DOMAIN,open.kuaishou.com
-DOMAIN,pagead2.googlesyndication-cn.com
-DOMAIN,pagead2.googlesyndication.com
-DOMAIN,sdk.e.qq.com
-DOMAIN,tangram.e.qq.com
-DOMAIN,ws.tapjoyads.com
-DOMAIN,www.googleadservices.com
+DOMAIN-KEYWORD,-ad-sign.byteimg.com
+DOMAIN-KEYWORD,ads.g.doubleclick
+DOMAIN-KEYWORD,asiad.byteactivity
+DOMAIN-KEYWORD,pangolin-sdk-toutiao
+DOMAIN-KEYWORD,pangolin.snssdk.com
+DOMAIN-KEYWORD,pglstatp-toutiao
+DOMAIN-KEYWORD,video-cn.snssdk.com
 DOMAIN-SUFFIX,ads.linkedin.com
 DOMAIN-SUFFIX,ads.vungle.com
 DOMAIN-SUFFIX,adservice.google.com
@@ -60,15 +48,28 @@ DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,kuaishouzt.com
 DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-SUFFIX,ubixioe.com
+DOMAIN-SUFFIX,unityads.unity3d.com
 DOMAIN-SUFFIX,v.smtcdns.com
-DOMAIN-SUFFIX,zijieapi.com
-DOMAIN-KEYWORD,-ad-sign.byteimg.com
-DOMAIN-KEYWORD,ads.g.doubleclick
-DOMAIN-KEYWORD,asiad.byteactivity
-DOMAIN-KEYWORD,pangolin-sdk-toutiao
-DOMAIN-KEYWORD,pangolin.snssdk.com
-DOMAIN-KEYWORD,pglstatp-toutiao
-DOMAIN-KEYWORD,video-cn.snssdk.com
+DOMAIN,ad.zijieapi.com
+DOMAIN,adapi.izuiyou.com
+DOMAIN,adtracker.adfunlink.com
+DOMAIN,dig.bdurl.net
+DOMAIN,dsp-x.jd.com
+DOMAIN,et.tanx.com
+DOMAIN,gdfp.gifshow.com
+DOMAIN,init.supersonicads.com
+DOMAIN,janapi.jd.com
+DOMAIN,lf-ad-ies.bytecdn.cn
+DOMAIN,mercury-gateway.ixiaochuan.cn
+DOMAIN,mon.toutiaocloud.com
+DOMAIN,open.e.kuaishou.com
+DOMAIN,open.kuaishou.com
+DOMAIN,pagead2.googlesyndication-cn.com
+DOMAIN,pagead2.googlesyndication.com
+DOMAIN,sdk.e.qq.com
+DOMAIN,tangram.e.qq.com
+DOMAIN,ws.tapjoyads.com
+DOMAIN,www.googleadservices.com
 # > 高德地图
 DOMAIN,amap-aos-info-nogw.amap.com
 
