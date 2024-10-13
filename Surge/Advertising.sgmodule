@@ -12,6 +12,9 @@ OR,((DOMAIN,waapdg.jd.com), (DOMAIN-SUFFIX,jddebug.com), (DOMAIN,metrics-picture
 # > 百度贴吧去广告（需配合下方脚本）
 OR,((IP-CIDR,180.76.76.200/32,no-resolve), (DOMAIN,180.76.76.200)),REJECT-DROP
 
+# > 广告联盟
+AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEYWORD,-misc-)),REJECT
+
 [Map Local]
 # > 美团 & 美团外卖 - flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data-type=text data="{}"
