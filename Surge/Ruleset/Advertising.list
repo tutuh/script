@@ -12,8 +12,6 @@ DOMAIN-SUFFIX,unityads.unity3d.com
 # > Alibaba
 DOMAIN,hc-ssp.sm.cn
 DOMAIN,tunion-api.m.taobao.com
-# > 爱奇艺
-DOMAIN,api.iqiyi.com
 
 # ======= (B) ======= #
 # > 百度
@@ -125,28 +123,6 @@ DOMAIN-SUFFIX,ads1.msn.com
 DOMAIN-SUFFIX,ads2.msn.com
 DOMAIN-SUFFIX,bingads.microsoft.com
 DOMAIN-SUFFIX,rads.msn.com
-# > 芒果TV
-DOMAIN,credits.bz.mgtv.com
-DOMAIN,credits2.bz.mgtv.com
-DOMAIN,credits3.bz.mgtv.com
-DOMAIN,dflow.bz.mgtv.com
-DOMAIN,encounter.bz.mgtv.com
-DOMAIN,floor.bz.mgtv.com
-DOMAIN,layer.bz.mgtv.com
-DOMAIN,mob.bz.mgtv.com
-DOMAIN,rc-topic-api.bz.mgtv.com
-DOMAIN,rprain.bz.mgtv.com
-DOMAIN,rprain.log.mgtv.com
-DOMAIN,vip.bz.mgtv.com
-DOMAIN-SUFFIX,da.mgtv.com
-# > 咪咕视频
-DOMAIN,ggc.cmvideo.cn
-DOMAIN,ggic03.miguvideo.com
-DOMAIN,ggmk.miguvideo.com
-DOMAIN,ggv.cmvideo.cn
-DOMAIN,ggx.cmvideo.cn
-DOMAIN,ggx03.miguvideo.com
-DOMAIN-SUFFIX,ad.cmvideo.cn
 # > 墨迹天气
 DOMAIN,ad.api.moji.com
 DOMAIN,adlaunch.moji.com
