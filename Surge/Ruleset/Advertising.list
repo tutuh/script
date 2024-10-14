@@ -66,8 +66,6 @@ DOMAIN,sdk.e.qq.com
 DOMAIN,tangram.e.qq.com
 DOMAIN,ws.tapjoyads.com
 DOMAIN,www.googleadservices.com
-# > 高德地图
-DOMAIN,amap-aos-info-nogw.amap.com
 
 # ======= (H) ======= #
 # > 虎扑
