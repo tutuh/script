@@ -178,12 +178,6 @@ DOMAIN-SUFFIX,shuzilm.cn
 DOMAIN,a.cpic.com.cn
 
 # ======= (W) ======= #
-# > 微博
-DOMAIN,adstrategy.biz.weibo.com
-DOMAIN,kadmimage.biz.weibo.com
-DOMAIN,sdkaction.biz.weibo.com
-DOMAIN,sdkclick.biz.weibo.com
-DOMAIN,sdkmonitor.biz.weibo.com
 # > 网上国网
 DOMAIN,h5-api.feiersmart.com
 
