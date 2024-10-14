@@ -63,6 +63,3 @@ DOMAIN,analytics.strava.com
 
 # > Qardio
 DOMAIN,api.segment.io
-
-# > 广告联盟
-DOMAIN-KEYWORD,-normal-lq.zijieapi.com
