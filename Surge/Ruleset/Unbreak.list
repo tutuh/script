@@ -5,9 +5,6 @@ DOMAIN,app.adjust.com
 DOMAIN,app.appsflyer.com
 DOMAIN,bdtj.tagtic.cn
 
-# > 12306
-DOMAIN,ad.12306.cn
-
 # > Apple
 DOMAIN,ca.iadsdk.apple.com
 
