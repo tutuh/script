@@ -12,8 +12,8 @@ DOMAIN,tunion-api.m.taobao.com
 
 # ======= (B) ======= #
 # > 百度
-DOMAIN,mobads.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
+DOMAIN,mobads.baidu.com
 
 # ======= (F) ======= #
 # > 飞常准
