@@ -67,8 +67,8 @@ AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEY
 (?i)\b\/ads\? - reject
 
 (?i)\badvertisement - reject
+(?i)\badvertising - reject // 如 MITM Github 会导致无法更新 advertising 文件
 (?i)\bsplash_screen - reject
-(?i)\badvertising - reject  // 如 MITM Github 会导致无法更新 advertising 文件
 
 # (0~9)
 # > 12123 - gab.122.gov.cn
