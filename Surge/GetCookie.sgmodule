@@ -12,10 +12,6 @@
 哔哩哔哩APP_Cookie = type=http-request,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\?,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
 哔哩哔哩网页_Cookie = type=http-request,pattern=^https?:\/\/m\.bilibili\.com/$,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
 
-# > 爱奇艺会员 - passport.iqiyi.com
-# 打开：https://m.iqiyi.com/user.html 获取 cookie
-爱奇艺会员_Cookie = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
-
 # > 百度贴吧 - c.tieba.baidu.com, tiebac.baidu.com
 # 打开：百度贴吧APP 获取 cookie
 百度贴吧_Cookie = type=http-request,pattern=^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
@@ -38,4 +34,4 @@
 奶茶获取_Cookie = type=http-request, pattern=^https:\/\/(webapi|webapi2|qmwebapi)\.qmai\.cn\/web\/(catering\/integral|cmk-center)\/sign\/(signIn|takePartInSign),requires-body=1,script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, m.bilibili.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, mcs-mimp-web.sf-express.com, api.tuhu.cn, mxsa.mxbc.net, webapi2.qmai.cn, webapi.qmai.cn, qmwebapi.qmai.cn
+hostname = %APPEND% app.bilibili.com, m.bilibili.com, c.tieba.baidu.com, tiebac.baidu.com, mcs-mimp-web.sf-express.com, api.tuhu.cn, mxsa.mxbc.net, webapi2.qmai.cn, webapi.qmai.cn, qmwebapi.qmai.cn
