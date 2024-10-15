@@ -7,6 +7,11 @@
 # 打开：哔哩哔哩漫画APP 获取cookie
 http-request ^https:\/\/app\.bilibili\.com\/x\/v\d\/account\/myinfo script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js, requires-body=0, script-update-interval=0, tag=哔哩哔哩漫画_Cookie 
 
+# > 哔哩哔哩 - app.bilibili.com,m.bilibili.com
+# 打开：哔哩哔哩APP 或者 https://www.bilibili.com 获取cookie
+http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=哔哩哔哩APP_Cookie 
+http-request ^https?:\/\/m\.bilibili\.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=哔哩哔哩网页_Cookie
+
 # > 百度贴吧 - c.tieba.baidu.com, tiebac.baidu.com
 # 打开：百度贴吧APP 获取cookie
 http-request ^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=贴吧_获取_Cookie
@@ -15,14 +20,18 @@ http-request ^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login script-path=
 # 打开：顺丰速运APP 获取cookie
 http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://raw.githubusercontent.com/tutuh/script/master/task/sfsy.js, requires-body=1, tag=顺丰速运_Cookie 
 
-# > 哔哩哔哩 - app.bilibili.com,m.bilibili.com
-# 打开：哔哩哔哩APP 或者 https://www.bilibili.com 获取cookie
-http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=哔哩哔哩APP_Cookie 
-http-request ^https?:\/\/m\.bilibili\.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=哔哩哔哩网页_Cookie
-
 # > 途虎养车 - api.tuhu.cn
 # 打开：途虎养车小程序 -> 我的 -> 积分 获取cookie
 http-request https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js, requires-body=1, tag=途虎养车_Cookie
 
+# > 蜜雪冰城小程序 - mxsa.mxbc.net
+# 打开：蜜雪冰城小程序 -> 我的页面 -> 获取 cookie
+http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, requires-body=1, tag=蜜雪冰城_Cookie
+
+# > 奶茶多合一 - webapi2.qmai.cn, webapi.qmai.cn, qmwebapi.qmai.cn
+# 打开：相关小程序 -> 手动签到一次 -> 获取 cookie
+http-response ^https:\/\/(webapi|webapi2)\.qmai\.cn\/web\/seller\/(oauth\/flash-sale-login|account\/login-minp) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=1, tag=奶茶多合一_Cookie
+http-request ^https:\/\/(webapi|webapi2|qmwebapi)\.qmai\.cn\/web\/(catering\/integral|cmk-center)\/sign\/(signIn|takePartInSign) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=1, tag=奶茶多合一_Cookie
+
 [MITM]
-hostname = app.bilibili.com, c.tieba.baidu.com, tiebac.baidu.com, mcs-mimp-web.sf-express.com, m.bilibili.com, api.tuhu.cn
+hostname = app.bilibili.com, m.bilibili.com, c.tieba.baidu.com, tiebac.baidu.com, mcs-mimp-web.sf-express.com, api.tuhu.cn, mxsa.mxbc.net, webapi2.qmai.cn, webapi.qmai.cn, qmwebapi.qmai.cn
