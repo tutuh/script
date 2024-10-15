@@ -5,38 +5,24 @@
 [Script]
 # > 哔哩哔哩漫画 - app.bilibili.com
 # 打开：哔哩哔哩漫画APP 获取cookie
-http-request ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js, requires-body=0, script-update-interval=0, tag=哔哩哔哩漫画_Cookie 
+http-request ^https:\/\/app\.bilibili\.com\/x\/v\d\/account\/myinfo script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js, requires-body=0, script-update-interval=0, tag=哔哩哔哩漫画_Cookie 
 
-# > 京东签到 - ms.jr.jd.com,me-api.jd.com,api.m.jd.com
-# 打开：https://bean.m.jd.com/bean/signIndex.action 获取cookie
-http-request ^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?) script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, requires-body=1, tag=京东_Cookie 
-
-# > 爱奇艺会员 - passport.iqiyi.com
-# 打开：https://m.iqiyi.com/user.html 获取cookie
-http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺_Cookie 
-
-# > 百度贴吧 - c.tieba.baidu.com,tiebac.baidu.com
+# > 百度贴吧 - c.tieba.baidu.com, tiebac.baidu.com
 # 打开：百度贴吧APP 获取cookie
-http-request ^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, tag=贴吧_获取cookie1 
-http-request ^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, tag=贴吧_获取cookie2 
-http-request ^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, tag=贴吧_获取cookie3 
+http-request ^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=贴吧_获取_Cookie
 
-# > 顺丰速运 - ccsp-egmas.sf-express.com
+# > 顺丰速运 - mcs-mimp-web.sf-express.com
 # 打开：顺丰速运APP 获取cookie
-http-request ^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js, requires-body=1, tag=顺丰速运_Cookie 
+http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://raw.githubusercontent.com/tutuh/script/master/task/sfsy.js, requires-body=1, tag=顺丰速运_Cookie 
 
 # > 哔哩哔哩 - app.bilibili.com,m.bilibili.com
 # 打开：哔哩哔哩APP 或者 https://www.bilibili.com 获取cookie
 http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=哔哩哔哩APP_Cookie 
 http-request ^https?:\/\/m\.bilibili\.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=哔哩哔哩网页_Cookie
 
-# > 阿里云盘 - auth.alipan.com
-# 打开：阿里云盘APP 获取token
-http-response ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=1, tag=阿里云盘_Cookie 
-
 # > 途虎养车 - api.tuhu.cn
 # 打开：途虎养车小程序 -> 我的 -> 积分 获取cookie
-http-response ttern=https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js, requires-body=1, tag=途虎养车_Cookie
+http-request https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js, requires-body=1, tag=途虎养车_Cookie
 
 [MITM]
-hostname = app.bilibili.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, passport.iqiyi.com, c.tieba.baidu.com, tiebac.baidu.com, ccsp-egmas.sf-express.com, m.bilibili.com, auth.alipan.com, api.tuhu.cn
+hostname = app.bilibili.com, c.tieba.baidu.com, tiebac.baidu.com, mcs-mimp-web.sf-express.com, m.bilibili.com, api.tuhu.cn
