@@ -1,5 +1,6 @@
 #!name=Skip Proxy And Real-IP Lists
 #!desc=跳过部分应用的代理检测
+#!category=Tutu
 
 [General]
 # > 跳过部分应用的代理检测
