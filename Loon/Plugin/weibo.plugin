@@ -74,4 +74,4 @@ http-response ^https:\/\/wbapp\.uve\.weibo\.com\/(?:preload\/get_ad|wbapplua\/wb
 http-response ^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\? script-path=https://raw.githubusercontent.com/tutuh/script/refs/heads/master/JS/weibo.js, requires-body=true, tag=会员图标
 
 [MITM]
-hostname=*.weibo.cn, *.weibo.com, weibo.com
+hostname = *.weibo.cn, *.weibo.com, weibo.com
