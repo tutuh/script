@@ -2,6 +2,7 @@
 
 DOMAIN-SUFFIX,chaoxing.cc
 DOMAIN-SUFFIX,3.cn
+DOMAIN-SUFFIX,6.cn
 DOMAIN-SUFFIX,t.cn
 DOMAIN-SUFFIX,22.cn
 DOMAIN-SUFFIX,sm.cn
@@ -18,8 +19,9 @@ DOMAIN-SUFFIX,edu.cn
 DOMAIN-SUFFIX,gov.cn
 DOMAIN-SUFFIX,itc.cn
 DOMAIN-SUFFIX,nmc.cn
+DOMAIN-SUFFIX,org.cn
 DOMAIN-SUFFIX,php.cn
-DOMAIN-SUFFIX,url.cn
+DOMAIN,url.cn
 DOMAIN-SUFFIX,wps.cn
 DOMAIN-SUFFIX,2144.cn
 DOMAIN-SUFFIX,cctv.cn
@@ -67,6 +69,7 @@ DOMAIN-SUFFIX,juejin.cn
 DOMAIN-SUFFIX,mifile.cn
 DOMAIN-SUFFIX,mybank.cn
 DOMAIN-SUFFIX,neixin.cn
+DOMAIN-SUFFIX,pplive.cn
 DOMAIN-SUFFIX,qqmail.cn
 DOMAIN-SUFFIX,roblox.cn
 DOMAIN-SUFFIX,sinajs.cn
@@ -84,6 +87,7 @@ DOMAIN-SUFFIX,oneplus.cn
 DOMAIN-SUFFIX,outlook.cn
 DOMAIN-SUFFIX,rsproxy.cn
 DOMAIN-SUFFIX,sinaimg.cn
+DOMAIN-SUFFIX,soulapp.cn
 DOMAIN-SUFFIX,tripcdn.cn
 DOMAIN-SUFFIX,51ctocdn.cn
 DOMAIN-SUFFIX,bilibili.cn
@@ -125,8 +129,9 @@ DOMAIN-SUFFIX,id6.me
 DOMAIN-SUFFIX,qbox.me
 DOMAIN-SUFFIX,coding.me
 DOMAIN-SUFFIX,oppoer.me
-DOMAIN-SUFFIX,acg.tv
-DOMAIN-SUFFIX,b23.tv
+DOMAIN,acg.tv
+DOMAIN,b23.tv
+DOMAIN-SUFFIX,fun.tv
 DOMAIN-SUFFIX,pps.tv
 DOMAIN-SUFFIX,douyu.tv
 DOMAIN-SUFFIX,maoyun.tv
@@ -151,6 +156,7 @@ DOMAIN-SUFFIX,360.com
 DOMAIN-SUFFIX,bh3.com
 DOMAIN-SUFFIX,ccb.com
 DOMAIN-SUFFIX,id6.com
+DOMAIN-SUFFIX,ku6.com
 DOMAIN-SUFFIX,qcc.com
 DOMAIN-SUFFIX,vip.com
 DOMAIN-SUFFIX,ys7.com
@@ -178,7 +184,9 @@ DOMAIN-SUFFIX,miui.com
 DOMAIN-SUFFIX,mubu.com
 DOMAIN-SUFFIX,oppo.com
 DOMAIN-SUFFIX,oray.com
+DOMAIN-SUFFIX,pptv.com
 DOMAIN-SUFFIX,psbc.com
+DOMAIN-SUFFIX,qiku.com
 DOMAIN-SUFFIX,qiyi.com
 DOMAIN-SUFFIX,qyer.com
 DOMAIN-SUFFIX,sina.com
@@ -257,6 +265,7 @@ DOMAIN-SUFFIX,tvzhe.com
 DOMAIN-SUFFIX,upyun.com
 DOMAIN-SUFFIX,vmall.com
 DOMAIN-SUFFIX,weibo.com
+DOMAIN-SUFFIX,wifi8.com
 DOMAIN-SUFFIX,xiami.com
 DOMAIN-SUFFIX,xiniu.com
 DOMAIN-SUFFIX,xmcdn.com
@@ -423,7 +432,6 @@ DOMAIN-SUFFIX,myzaker.com
 DOMAIN-SUFFIX,netease.com
 DOMAIN-SUFFIX,oppopay.com
 DOMAIN-SUFFIX,orayimg.com
-DOMAIN-SUFFIX,qhimgs?.com
 DOMAIN-SUFFIX,qihucdn.com
 DOMAIN-SUFFIX,qingcdn.com
 DOMAIN-SUFFIX,qiyipic.com
@@ -436,8 +444,10 @@ DOMAIN-SUFFIX,tbcache.com
 DOMAIN-SUFFIX,tencent.com
 DOMAIN-SUFFIX,tnkjmec.com
 DOMAIN-SUFFIX,toutiao.com
+DOMAIN-SUFFIX,udqqimg.com
 DOMAIN-SUFFIX,volccdn.com
 DOMAIN-SUFFIX,weidian.com
+DOMAIN-SUFFIX,xoyocdn.com
 DOMAIN-SUFFIX,xycloud.com
 DOMAIN-SUFFIX,zhangzs.com
 DOMAIN-SUFFIX,163jiasu.com
@@ -676,6 +686,7 @@ DOMAIN-SUFFIX,bilivideo.net
 DOMAIN-SUFFIX,netstatic.net
 DOMAIN-SUFFIX,pinduoduo.net
 DOMAIN-SUFFIX,aliyundrive.net
+DOMAIN-SUFFIX,steamserver.net
 DOMAIN-SUFFIX,yunjiasu-cdn.net
 DOMAIN-SUFFIX,coolapkmarket.net
 DOMAIN-SUFFIX,tencent-cloud.net
@@ -689,9 +700,9 @@ DOMAIN-SUFFIX,9966.org
 DOMAIN-SUFFIX,aliapp.org
 DOMAIN-SUFFIX,docschina.org
 DOMAIN-SUFFIX,icourse163.org
-DOMAIN-SUFFIX,dns.pub
-DOMAIN-SUFFIX,doh.pub
-DOMAIN-SUFFIX,dot.pub
+DOMAIN,dns.pub
+DOMAIN,doh.pub
+DOMAIN,dot.pub
 DOMAIN-SUFFIX,landian.vip
 DOMAIN-SUFFIX,126.link
 DOMAIN-SUFFIX,yqkk.link
@@ -743,10 +754,10 @@ DOMAIN-SUFFIX,mcdonalds.com.cn
 DOMAIN-SUFFIX,ubionline.com.cn
 DOMAIN-SUFFIX,chinatelecom.com.cn
 DOMAIN-SUFFIX,assets.msn.cn
-DOMAIN-SUFFIX,ntp.org.cn
-DOMAIN-SUFFIX,moegirl.org.cn
 DOMAIN,www.intel.cn
 DOMAIN,lv.queniujq.cn
+DOMAIN,assets1.xboxlive.cn
+DOMAIN,assets2.xboxlive.cn
 DOMAIN-SUFFIX,71.am.com
 DOMAIN,dl.ubnt.com
 DOMAIN,config.ubnt.com
@@ -759,10 +770,7 @@ DOMAIN-SUFFIX,dl.bscstorage.net
 DOMAIN,cn.download.nvidia.com
 DOMAIN,gstore.val.manlaxy.com
 DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
+DOMAIN-WILDCARD,*.qhimgs?.com
 USER-AGENT,%E4%BC%98%E9%85%B7*
 USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*
-USER-AGENT,MicroMessenger Client
-USER-AGENT,WeChat*
 USER-AGENT,TeslaMap
-PROCESS-NAME,WeChat
-PROCESS-NAME,WeCom
