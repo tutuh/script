@@ -153,8 +153,8 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   if (obj?.data) {
     delete obj.data.tipData;
     // delete obj.data.footPrintV2; // 足迹
-    delete obj.data.memberInfo; // 成就勋章 lv1见习达人
-    delete obj.data.topMixedCard; // 顶部足迹、贡献卡片
+   // delete obj.data.memberInfo; // 成就勋章 lv1见习达人
+  //  delete obj.data.topMixedCard; // 顶部足迹、贡献卡片
     if (obj?.data?.cardList?.length > 0) {
       obj.data.cardList = obj.data.cardList.filter((i) => i?.dataKey === "MyOrderCard");
     }
