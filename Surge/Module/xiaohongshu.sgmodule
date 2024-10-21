@@ -5,7 +5,7 @@
 #!date=2024-10-15 10:45
 
 [Rule]
-AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX, xiaohongshu.com)),REJECT
+AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,xiaohongshu.com)),REJECT
 
 [Script]
 # > 小红书
