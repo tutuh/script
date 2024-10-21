@@ -168,7 +168,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "amapCoin",
     "favorites_info", // 收藏夹顶部横图推广
     "feedback_banner", // 店主专属通道
-    "footprint", // 足迹
+  // "footprint", // 足迹
     "his_input_tip",
     "home_business_position_config", // 首页右上角动图
     "hotel_activity",
