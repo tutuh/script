@@ -4,6 +4,10 @@
 #!author=RuCu6
 #!date=2024-10-19 22:45
 
+[Rule]
+# > 根据 UA 精准屏蔽高德、菜鸟 amdc
+AND,((OR,((USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP
+
 [Script]
 # > 高德地图 
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
