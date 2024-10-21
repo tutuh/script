@@ -1,8 +1,8 @@
 #!name=百度地图去广告
 #!desc=百度地图APP优化
 #!icon=https://raw.githubusercontent.com/tutuh/icon/main/iconSet/bdmap.png
-#!author = RuCu6
-#!date = 2023-05-05 18:35
+#!author=RuCu6
+#!date=2023-05-05 18:35
 
 [Rule]
 DOMAIN, afd.baidu.com, REJECT
@@ -32,10 +32,10 @@ DOMAIN, lc.map.baidu.com, REJECT
 
 [Script]
 # 组件包
-http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/imap\/dl\/s\/UpdateInfo\.php\? script-path = https://raw.githubusercontent.com/tutuh/script/master/JS/baidu/baidumap.js, tag = 组件包
+http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/imap\/dl\/s\/UpdateInfo\.php\? script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/baidu/baidumap.js, tag=组件包
 
 # 我的页面
-http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/usersystem\/mine\/page\? script-path = https://raw.githubusercontent.com/tutuh/script/master/JS/baidu/baidumap.js, tag = 我的页面
+http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/usersystem\/mine\/page\? script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/baidu/baidumap.js, tag=我的页面
 
 [MITM]
-hostname = newclient.map.baidu.com, yongche.baidu.com
+hostname=newclient.map.baidu.com, yongche.baidu.com
