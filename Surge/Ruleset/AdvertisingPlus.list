@@ -1,5 +1,6 @@
 # Advertising Plus
 
+# > General
 DOMAIN-KEYWORD,adservice
 DOMAIN-SUFFIX,17gouwuba.com
 DOMAIN-SUFFIX,186078.com
@@ -371,7 +372,7 @@ DOMAIN-SUFFIX,pubnative.info
 DOMAIN-SUFFIX,pubnative.net
 DOMAIN-SUFFIX,pushsar.com
 DOMAIN-SUFFIX,pxlad.io
-DOMAIN-SUFFIX,qchannel01.cn
+#DOMAIN-SUFFIX,qchannel01.cn
 DOMAIN-SUFFIX,qianchuanghr.com
 DOMAIN-SUFFIX,qichexin.com
 DOMAIN-SUFFIX,qinchugudao.com
