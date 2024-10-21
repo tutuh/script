@@ -1,8 +1,8 @@
 #!name=小红书去广告 
 #!desc=小红书APP 去广告；照片、视频去水印
 #!icon=https://raw.githubusercontent.com/tutuh/icon/main/iconSet/xiaohongshu.png
-#!author = RuCu6
-#!date = 2024-10-15 10:45
+#!author=RuCu6
+#!date=2024-10-15 10:45
 
 [Rule]
 AND, ((PROTOCOL, UDP), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
