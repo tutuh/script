@@ -114,12 +114,12 @@ DOMAIN,statics.woozooo.com
 
 # ======= (M) ======= #
 # > Microsoft
-DOMAIN,mobileads.msn.com
 DOMAIN-SUFFIX,ads.msn.com
 DOMAIN-SUFFIX,ads1.msn.com
 DOMAIN-SUFFIX,ads2.msn.com
 DOMAIN-SUFFIX,bingads.microsoft.com
 DOMAIN-SUFFIX,rads.msn.com
+DOMAIN,mobileads.msn.com
 # > 芒果TV
 DOMAIN-SUFFIX,da.mgtv.com
 DOMAIN,credits.bz.mgtv.com
@@ -153,14 +153,14 @@ DOMAIN-KEYWORD,c-hzgt2.getui.com
 
 # ======= (O) ======= #
 # > Oray 向日葵远程控制
+DOMAIN-KEYWORD,upload-cdn.orayimg.com
+DOMAIN-KEYWORD,upload-cdn.orayimg.com-upload-activity
+DOMAIN-SUFFIX,offline-adv.oray.com
 DOMAIN,dm.toutiao.com
 DOMAIN,ddns.oray.com
 DOMAIN,sl-tk.oray.com
 DOMAIN,client-api.oray.com
 DOMAIN,push.oray.com
-DOMAIN-SUFFIX,offline-adv.oray.com
-DOMAIN-KEYWORD,upload-cdn.orayimg.com
-DOMAIN-KEYWORD,upload-cdn.orayimg.com-upload-activity
 
 # ======= (P) ======= #
 # > 澎湃新闻
@@ -204,22 +204,22 @@ DOMAIN,tmeadcomm.y.qq.com
 DOMAIN,tpns.qq.com
 IP-CIDR,47.110.187.87/32,no-resolve
 # > 腾讯QQ音乐
-DOMAIN,adstats.tencentmusic.com
+DOMAIN-SUFFIX,imtmp.net
 DOMAIN,ad.tencentmusic.com
 DOMAIN,adcdn.tencentmusic.com
 DOMAIN,adcdn6.tencentmusic.com
-DOMAIN,adexpo.tencentmusic.com
 DOMAIN,adclick.tencentmusic.com
-DOMAIN,monitor.music.qq.com
-DOMAIN,stat.y.qq.com
-DOMAIN,tmeadquic.y.qq.com
-DOMAIN,oth.str.mdt.qq.com
+DOMAIN,adexpo.tencentmusic.com
+DOMAIN,adstats.tencentmusic.com
 DOMAIN,h.trace.qq.com
-DOMAIN,sdk.e.qq.com
+DOMAIN,monitor.music.qq.com
+DOMAIN,oth.str.mdt.qq.com
 DOMAIN,p.l.qq.com
-DOMAIN,us.l.qq.com
+DOMAIN,sdk.e.qq.com
+DOMAIN,stat.y.qq.com
 DOMAIN,tangram.e.qq.com
-DOMAIN-SUFFIX,imtmp.net
+DOMAIN,tmeadquic.y.qq.com
+DOMAIN,us.l.qq.com
 
 # ======= (W) ======= #
 # > 网上国网
