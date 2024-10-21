@@ -8,8 +8,8 @@
 [Rule]
 # > 百度贴吧去广告
 # 贴吧屏蔽域名dns查询
-DOMAIN,180.76.76.200,REJECT
-IP-CIDR,180.76.76.200/32,REJECT,no-resolve
+#DOMAIN,180.76.76.200,REJECT
+#IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 
 [Script]
 # > 百度贴吧去广告
