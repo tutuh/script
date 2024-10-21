@@ -3,6 +3,10 @@
 #!category=Ad Blocking
 #!author=kokoryh
 
+[Rule]
+# > 根据 UA 精准屏蔽高德、菜鸟 amdc
+AND,((OR,((USER-AGENT,AMap*), (USER-AGENT,Cainiao*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP
+
 [URL Rewrite]
 # > 高德通用广告请求
 ^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution - reject
