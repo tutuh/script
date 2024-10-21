@@ -20,6 +20,10 @@ DOMAIN,api.iqiyi.com
 # > 百度
 DOMAIN-SUFFIX,pos.baidu.com
 DOMAIN,mobads.baidu.com
+# > 百度地图
+DOMAIN,afd.baidu.com
+DOMAIN,afdconf.baidu.com
+DOMAIN,lc.map.baidu.com
 
 # ======= (F) ======= #
 # > 飞常准
