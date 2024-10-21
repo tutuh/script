@@ -5,7 +5,7 @@
 #!date=2024-10-19 22:45
 
 [Rule]
-# > 根据 UA 精准屏蔽高德、菜鸟 amdc
+# > 根据 UA 精准屏蔽高德 amdc
 AND,((OR,((USER-AGENT,AMap*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP
 
 [Script]
