@@ -3,11 +3,8 @@
 #!category=Ad Blocking
 
 [Rule]
-# > 根据 User-Agent 精准屏蔽 amdc
-AND,((OR,((USER-AGENT,AMap*), (USER-AGENT,Cainiao*))), (DOMAIN,amdc.m.taobao.com,extended-matching)),REJECT-DROP // 高德、菜鸟
-
 # > 屏蔽无效域名
-OR,((DOMAIN,waapdg.jd.com), (DOMAIN-SUFFIX,jddebug.com), (DOMAIN,metrics-picture.d.meituan.net), (DOMAIN,route-stats.d.meituan.net), (DOMAIN,maplocatesdksnapshot.d.meituan.net), (DOMAIN,al-log.d.meituan.net), (DOMAIN,babel-statistics-android.d.meituan.net)),REJECT-DROP
+OR,((DOMAIN,waapdg.jd.com), (DOMAIN-SUFFIX,jddebug.com), (DOMAIN,metrics-picture.d.meituan.net), (DOMAIN,route-stats.d.meituan.net), (DOMAIN,maplocatesdksnapshot.d.meituan.net), (DOMAIN,al-log.d.meituan.net), (DOMAIN,babel-statistics-android.d.meituan.net)),REJECT,pre-matching
 
 # > 广告联盟
 AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEYWORD,-misc-)),REJECT
