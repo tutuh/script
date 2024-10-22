@@ -157,14 +157,14 @@ DOMAIN-KEYWORD,c-hzgt2.getui.com
 
 # ======= (O) ======= #
 # > Oray 向日葵远程控制
-DOMAIN-KEYWORD,upload-cdn.orayimg.com
-DOMAIN-KEYWORD,upload-cdn.orayimg.com-upload-activity
-DOMAIN-SUFFIX,offline-adv.oray.com
-DOMAIN,dm.toutiao.com
-DOMAIN,ddns.oray.com
-DOMAIN,sl-tk.oray.com
-DOMAIN,client-api.oray.com
-DOMAIN,push.oray.com
+#DOMAIN-KEYWORD,upload-cdn.orayimg.com
+#DOMAIN-KEYWORD,upload-cdn.orayimg.com-upload-activity
+#DOMAIN-SUFFIX,offline-adv.oray.com
+#DOMAIN,dm.toutiao.com
+#DOMAIN,ddns.oray.com
+#DOMAIN,sl-tk.oray.com
+#DOMAIN,client-api.oray.com
+#DOMAIN,push.oray.com
 
 # ======= (P) ======= #
 # > 澎湃新闻
