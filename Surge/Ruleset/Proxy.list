@@ -253,6 +253,7 @@ DOMAIN-SUFFIX,ubuntu.com
 DOMAIN-SUFFIX,vercel.com
 DOMAIN-SUFFIX,yandex.com
 DOMAIN-SUFFIX,4shared.com
+DOMAIN-SUFFIX,adguard.com
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,apkpure.com
 DOMAIN-SUFFIX,appspot.com
@@ -285,6 +286,7 @@ DOMAIN-SUFFIX,scpwiki.com
 DOMAIN-SUFFIX,terabox.com
 DOMAIN-SUFFIX,termius.com
 DOMAIN-SUFFIX,thetvdb.com
+DOMAIN-SUFFIX,tinypng.com
 DOMAIN-SUFFIX,twitpic.com
 DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,vivaldi.com
@@ -639,3 +641,4 @@ DOMAIN-KEYWORD,dropbox
 DOMAIN-KEYWORD,jav
 DOMAIN-KEYWORD,pinterest
 DOMAIN-KEYWORD,porn
+USER-AGENT,Roam*
