@@ -101,7 +101,6 @@ DOMAIN,ws.ksmobile.net
 
 # ======= (K) ======= #
 # > 酷我音乐
-DOMAIN,ad.tencentmusic.com
 DOMAIN,g.koowo.com
 DOMAIN,mobilead.kuwo.cn
 DOMAIN,rich.kuwo.cn
@@ -200,6 +199,7 @@ DOMAIN,tpns.qq.com
 IP-CIDR,47.110.187.87/32,no-resolve
 # > 腾讯QQ音乐
 DOMAIN-SUFFIX,imtmp.net
+DOMAIN,ad.tencentmusic.com
 DOMAIN,adcdn.tencentmusic.com
 DOMAIN,adcdn6.tencentmusic.com
 DOMAIN,adclick.tencentmusic.com
