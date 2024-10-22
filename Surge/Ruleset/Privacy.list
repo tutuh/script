@@ -1,7 +1,6 @@
 # Privacy
 
-DOMAIN,analytics.slashdotmedia.com
-DOMAIN,zgsdk.zhugeio.com
+# Privacy
 DOMAIN-SUFFIX,adjust.com
 DOMAIN-SUFFIX,airpr.com
 DOMAIN-SUFFIX,cr-nielsen.com
@@ -50,6 +49,8 @@ DOMAIN-SUFFIX,woopra.com
 DOMAIN-SUFFIX,wootric.com
 DOMAIN-SUFFIX,wowanalytics.co.uk
 DOMAIN-SUFFIX,zoomanalytics.co
+DOMAIN,analytics.slashdotmedia.com
+DOMAIN,zgsdk.zhugeio.com
 
 # > 51.LA
 DOMAIN,js.users.51.la
@@ -62,7 +63,6 @@ DOMAIN,tracklog.58.com
 # > Antiy
 DOMAIN,miav-cse.avlyun.com
 DOMAIN,miui-fxcse.avlyun.com
-# > Apple
 DOMAIN,token.safebrowsing.apple
 # > Baidu
 DOMAIN,hm.baidu.com
@@ -83,6 +83,8 @@ DOMAIN-SUFFIX,gz-data.com
 # > GrowingIO
 DOMAIN-SUFFIX,giocdn.com
 DOMAIN-SUFFIX,growingio.com
+# > Huawei
+DOMAIN,browsercfg-drcn.cloud.dbankcloud.cn // 甚至想 DOMAIN-KEYWORD,drcn.cloud.dbankcloud.cn
 # > MI
 DOMAIN-SUFFIX,tracking.miui.com
 # DOMAIN,api.miwifi.com // 影响 Mi Wi-Fi(id859962702)，但建议注意 https://www.v2ex.com/t/746094
@@ -91,7 +93,6 @@ DOMAIN,flash.sec.miui.com
 DOMAIN,tracking.intl.miui.com
 DOMAIN,a0.app.xiaomi.com
 DOMAIN,api.installer.xiaomi.com
-# > Microsoft
 DOMAIN,c.bing.com
 DOMAIN,c.clarity.ms
 DOMAIN,o.clarity.ms
