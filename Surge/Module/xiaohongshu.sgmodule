@@ -4,9 +4,6 @@
 #!author=RuCu6
 #!date=2024-10-15 10:45
 
-[Rule]
-AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,xiaohongshu.com)),REJECT
-
 [Script]
 # > 小红书
 # 详情页小部件、关注页感兴趣的人
