@@ -10,6 +10,9 @@ OR,((DOMAIN,waapdg.jd.com), (DOMAIN-SUFFIX,jddebug.com), (DOMAIN,metrics-picture
 URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TINYGIF
 
 [URL Rewrite]
+# > 360智慧生活 - app.home.360.cn
+^https:\/\/app\.home\.360\.cn\/v1\/config\/custom_config reject-dict
+
 # > 美团 & 美团外卖 - flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
 ^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg reject-dict
@@ -180,4 +183,4 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) reject
 #^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ reject
 
 [MITM]
-hostname = flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, res.kfc.com.cn, manga.bilibili.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, mime.baidu.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, api.m.mi.com, shop-api.retail.mi.com, home.mi.com, capi.mwee.cn, api.mcd.cn, mapi.mafengwo.cn, v?-api.miaopai.com, slapi.oray.net, client-api-v?.oray.com, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, ccsp-egmas.sf-express.com, shopic.sf-express.com, m.tuniu.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, api.xiachufang.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
+hostname = app.home.360.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, res.kfc.com.cn, manga.bilibili.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, mime.baidu.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, api.m.mi.com, shop-api.retail.mi.com, home.mi.com, capi.mwee.cn, api.mcd.cn, mapi.mafengwo.cn, v?-api.miaopai.com, slapi.oray.net, client-api-v?.oray.com, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, ccsp-egmas.sf-express.com, shopic.sf-express.com, m.tuniu.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, api.xiachufang.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
