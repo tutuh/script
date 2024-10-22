@@ -1,8 +1,10 @@
 # Advertising
 
 # ======= (0) ======= #
-# > 360智慧生活
+# > 360
 DOMAIN,ad.iot.360.cn
+DOMAIN,ad.jia.360.cn
+DOMAIN,ad.life.360.cn
 
 # ======= (A) ======= #
 # > Apple
@@ -155,17 +157,6 @@ DOMAIN,sdkconfig.ad.xiaomi.com
 # > 买单吧
 DOMAIN-KEYWORD,c-hzgt2.getui.com
 
-# ======= (O) ======= #
-# > Oray 向日葵远程控制
-#DOMAIN-KEYWORD,upload-cdn.orayimg.com
-#DOMAIN-KEYWORD,upload-cdn.orayimg.com-upload-activity
-#DOMAIN-SUFFIX,offline-adv.oray.com
-#DOMAIN,dm.toutiao.com
-#DOMAIN,ddns.oray.com
-#DOMAIN,sl-tk.oray.com
-#DOMAIN,client-api.oray.com
-#DOMAIN,push.oray.com
-
 # ======= (P) ======= #
 # > 澎湃新闻
 DOMAIN,admonitor.thepaper.cn
@@ -209,7 +200,6 @@ DOMAIN,tpns.qq.com
 IP-CIDR,47.110.187.87/32,no-resolve
 # > 腾讯QQ音乐
 DOMAIN-SUFFIX,imtmp.net
-DOMAIN,ad.tencentmusic.com
 DOMAIN,adcdn.tencentmusic.com
 DOMAIN,adcdn6.tencentmusic.com
 DOMAIN,adclick.tencentmusic.com
@@ -219,9 +209,7 @@ DOMAIN,h.trace.qq.com
 DOMAIN,monitor.music.qq.com
 DOMAIN,oth.str.mdt.qq.com
 DOMAIN,p.l.qq.com
-DOMAIN,sdk.e.qq.com
 DOMAIN,stat.y.qq.com
-DOMAIN,tangram.e.qq.com
 DOMAIN,tmeadquic.y.qq.com
 DOMAIN,us.l.qq.com
 
