@@ -241,3 +241,16 @@ DOMAIN,sugar.zhihu.com
 IP-CIDR,118.89.204.198/32,no-resolve
 IP-CIDR,103.41.167.237/32,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
+
+# ======= 无效域名 ======= #
+# > 京东
+DOMAIN,waapdg.jd.com
+DOMAIN-SUFFIX,jddebug.com
+# > 美团
+DOMAIN,metrics-picture.d.meituan.net
+DOMAIN,route-stats.d.meituan.net
+DOMAIN,maplocatesdksnapshot.d.meituan.net
+DOMAIN,al-log.d.meituan.net
+DOMAIN,babel-statistics-android.d.meituan.net
+# > 随申办上海交警
+DOMAIN,appx
