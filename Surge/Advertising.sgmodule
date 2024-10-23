@@ -3,8 +3,16 @@
 #!category=Ad Blocking
 
 [Rule]
+# ======= 其他 ======= #
 # > 屏蔽无效域名
-OR,((DOMAIN,waapdg.jd.com), (DOMAIN-SUFFIX,jddebug.com), (DOMAIN,metrics-picture.d.meituan.net), (DOMAIN,route-stats.d.meituan.net), (DOMAIN,maplocatesdksnapshot.d.meituan.net), (DOMAIN,al-log.d.meituan.net), (DOMAIN,babel-statistics-android.d.meituan.net)),REJECT,pre-matching
+DOMAIN,waapdg.jd.com,REJECT // 京东
+DOMAIN-SUFFIX,jddebug.com,REJECT // 京东
+DOMAIN,metrics-picture.d.meituan.net,REJECT // 美团
+DOMAIN,route-stats.d.meituan.net,REJECT // 美团
+DOMAIN,maplocatesdksnapshot.d.meituan.net,REJECT // 美团
+DOMAIN,al-log.d.meituan.net,REJECT // 美团
+DOMAIN,babel-statistics-android.d.meituan.net,REJECT // 美团
+DOMAIN,appx,REJECT //上海交警
 
 # > 广告联盟
 AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEYWORD,-misc-)),REJECT
