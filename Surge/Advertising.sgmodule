@@ -5,14 +5,14 @@
 [Rule]
 # ======= 其他 ======= #
 # > 屏蔽无效域名
-DOMAIN,waapdg.jd.com,REJECT // 京东
-DOMAIN-SUFFIX,jddebug.com,REJECT // 京东
-DOMAIN,metrics-picture.d.meituan.net,REJECT // 美团
-DOMAIN,route-stats.d.meituan.net,REJECT // 美团
-DOMAIN,maplocatesdksnapshot.d.meituan.net,REJECT // 美团
-DOMAIN,al-log.d.meituan.net,REJECT // 美团
-DOMAIN,babel-statistics-android.d.meituan.net,REJECT // 美团
-DOMAIN,appx,REJECT //上海交警
+DOMAIN,waapdg.jd.com,REJECT,pre-matching // 京东
+DOMAIN-SUFFIX,jddebug.com,REJECT,pre-matching // 京东
+DOMAIN,metrics-picture.d.meituan.net,REJECT,pre-matching // 美团
+DOMAIN,route-stats.d.meituan.net,REJECT,pre-matching // 美团
+DOMAIN,maplocatesdksnapshot.d.meituan.net,REJECT,pre-matching // 美团
+DOMAIN,al-log.d.meituan.net,REJECT,pre-matching // 美团
+DOMAIN,babel-statistics-android.d.meituan.net,REJECT,pre-matching // 美团
+DOMAIN,appx,REJECT,pre-matching //上海交警
 
 # > 广告联盟
 AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEYWORD,-misc-)),REJECT
