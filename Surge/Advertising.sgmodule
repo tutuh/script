@@ -12,6 +12,10 @@ URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
 # > 360智慧生活商城入口 - app.home.360.cn
 ^https:\/\/app\.home\.360\.cn\/v1\/config\/custom_config data-type=text data="{}"
 
+# > 淘票票 - acs.m.taobao.com
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryloadingbanner\/ data-type=text data="{}"
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.popup\.get\/ data-type=text data="{}"
+
 # > 向日葵远程 - client-api-v?.oray.com
 # 开屏
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP data-type=text data="{}"
@@ -84,9 +88,6 @@ URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
 # > 一淘网 - acs.m.taobao.com
 ^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ - reject
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash - reject
-# > 淘票票 - acs.m.taobao.com
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryloadingbanner\/ - reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.popup\.get\/ - reject
 # > 闲鱼 - iyes.youku.com, acs.m.goofish.com
 ^https:\/\/iyes\.youku\.com\/uts\/v1\/start\/ - reject
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.get\/ - reject
