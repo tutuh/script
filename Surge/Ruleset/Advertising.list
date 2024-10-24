@@ -155,8 +155,11 @@ DOMAIN,adlaunch.moji.com
 DOMAIN,ads.mojicdn.com
 DOMAIN,v1.log.moji.com
 # > 美团
-DOMAIN,maplocatesdksnapshot.d.meituan.net
 DOMAIN,metrics-picture.d.meituan.net
+DOMAIN,route-stats.d.meituan.net
+DOMAIN,al-log.d.meituan.net
+DOMAIN,babel-statistics-android.d.meituan.net
+DOMAIN,maplocatesdksnapshot.d.meituan.net
 IP-CIDR,103.37.155.60/32,no-resolve
 # > 美颜相机
 DOMAIN,aaid.uyunad.com
@@ -250,13 +253,3 @@ DOMAIN,sugar.zhihu.com
 IP-CIDR,118.89.204.198/32,no-resolve
 IP-CIDR,103.41.167.237/32,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
-
-# ======= 无效域名 ======= #
-# > 美团
-DOMAIN,metrics-picture.d.meituan.net
-DOMAIN,route-stats.d.meituan.net
-DOMAIN,maplocatesdksnapshot.d.meituan.net
-DOMAIN,al-log.d.meituan.net
-DOMAIN,babel-statistics-android.d.meituan.net
-# > 随申办上海交警
-DOMAIN,appx
