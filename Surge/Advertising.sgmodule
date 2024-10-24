@@ -7,7 +7,7 @@
 AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEYWORD,-misc-)),REJECT
 
 [Map Local]
-# > 360智慧生活 - app.home.360.cn
+# > 360智慧生活商城入口 - app.home.360.cn
 ^https:\/\/app\.home\.360\.cn\/v1\/config\/custom_config data-type=text data="{}"
 
 # > 向日葵远程 - client-api-v?.oray.com
@@ -77,18 +77,17 @@ AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEY
 # (A)
 # > AcFun - api-new.app.acfun.cn
 ^https?:\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/ - reject
-# --- (Alibaba) ---
 # > 淘宝 - gw.alicdn.com, heic.alicdn.com
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/\w{2}\/.+\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q\d0\.jpg_\.(heic|webp)$ - reject
 # > 一淘网 - acs.m.taobao.com
 ^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ - reject
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash - reject
-# > 闲鱼 - gw.alicdn.com, acs.m.taobao.com
-^https:\/\/gw\.alicdn\.com\/mt\/ - reject
-^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} - reject
-^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} - reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
-# ------------
+# > 淘票票 - acs.m.taobao.com
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryloadingbanner\/ - reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.popup\.get\/ - reject
+# > 闲鱼 - iyes.youku.com, acs.m.goofish.com
+^https:\/\/iyes\.youku\.com\/uts\/v1\/start\/ - reject
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.get\/ - reject
 # > 爱回收 - gw.aihuishou.com
 ^https:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement - reject
 
@@ -158,11 +157,8 @@ AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEY
 ^https:\/\/openapi\.laiyifen\.com\/advert-app-api\/bootScreen\/v1\/startScreen - reject
 
 # (M)
-# > 小米商城 - api.m.mi.com, shop-api.retail.mi.com
-^https:\/\/api\.m\.mi\.com\/(?:v1\/(?:app\/popup_info|home\/page_feed|misearch\/search_input)|v2\/search\/search_default) - reject
-^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/(?:rec\/merge\/|skywheel\/mishop\/splash) - reject
 # > 米家 - home.mi.com
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(?:banner|carousel\/banners|myTab|openingBanner) - reject
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) - reject
 # > 美味不用等 - capi.mwee.cn
 ^https?:\/\/capi\.mwee\.cn\/app-api\/V\d+\/app\/(ad|getstartad) - reject
 # > 麦当劳 - api.mcd.cn
@@ -219,4 +215,4 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 #^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ - reject
 
 [MITM]
-hostname = %APPEND% app.home.360.cn, client-api-v?.oray.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, res.kfc.com.cn, manga.bilibili.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, mime.baidu.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, api.m.mi.com, shop-api.retail.mi.com, home.mi.com, capi.mwee.cn, api.mcd.cn, mapi.mafengwo.cn, v?-api.miaopai.com, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, ccsp-egmas.sf-express.com, shopic.sf-express.com, m.tuniu.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, api.xiachufang.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
+hostname = %APPEND% app.home.360.cn, client-api-v?.oray.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, res.kfc.com.cn, manga.bilibili.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, iyes.youku.com, acs.m.goofish.com, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, mime.baidu.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, home.mi.com, capi.mwee.cn, api.mcd.cn, mapi.mafengwo.cn, v?-api.miaopai.com, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, ccsp-egmas.sf-express.com, shopic.sf-express.com, m.tuniu.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, api.xiachufang.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
