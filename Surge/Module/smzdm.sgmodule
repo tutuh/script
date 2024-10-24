@@ -4,19 +4,21 @@
 #!author=ZenmoFeiShi
 
 [Rule]
-DOMAIN,aaid.uyunad.com,REJECT,extended-matching,pre-matching
-DOMAIN,acs4baichuan.m.taobao.com,REJECT,extended-matching,pre-matching
-DOMAIN,adashxgc.ut.taobao.com,REJECT,extended-matching,pre-matching
-DOMAIN,analytics-api.smzdm.com,REJECT,extended-matching,pre-matching
-DOMAIN,baichuan-sdk.alicdn.com,REJECT,extended-matching,pre-matching
-DOMAIN,dgstatic.jd.com,REJECT,extended-matching,pre-matching
-DOMAIN,msg.umengcloud.com,REJECT,extended-matching,pre-matching
-DOMAIN,sec.umeng.com,REJECT,extended-matching,pre-matching
-DOMAIN,ulogs.umeng.com,REJECT,extended-matching,pre-matching
-DOMAIN,ynuf.aliapp.org,REJECT,extended-matching,pre-matching
+DOMAIN,aaid.uyunad.com,REJECT,pre-matching,extended-matching
+DOMAIN,acs4baichuan.m.taobao.com,REJECT,pre-matching,extended-matching
+DOMAIN,adashxgc.ut.taobao.com,REJECT,pre-matching,extended-matching
+DOMAIN,analytics-api.smzdm.com,REJECT,pre-matching,extended-matching
+DOMAIN,baichuan-sdk.alicdn.com,REJECT,pre-matching,extended-matching
+DOMAIN,dgstatic.jd.com,REJECT,pre-matching,extended-matching
+DOMAIN,msg.umengcloud.com,REJECT,pre-matching,extended-matching
+DOMAIN,sec.umeng.com,REJECT,pre-matching,extended-matching
+DOMAIN,ulogs.umeng.com,REJECT,pre-matching,extended-matching
+DOMAIN,ynuf.aliapp.org,REJECT,pre-matching,extended-matching
 
 [Map Local]
-^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/(other_modul|wiki_related_modul)|^https:\/\/s3\.zdmimg\.com\/third\/index|^https:\/\/app-api\.smzdm\.com\/util\/loading data-type=text data="{}"
+^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/(other_modul|wiki_related_modul) data-type=text data="{}"
+^https:\/\/s3\.zdmimg\.com\/third\/index data-type=text data="{}"
+^https:\/\/app-api\.smzdm\.com\/util\/loading data-type=text data="{}"
 
 [Script]
 # > 什么值得买
