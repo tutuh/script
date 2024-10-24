@@ -298,7 +298,6 @@ DOMAIN-SUFFIX,chuimg.com
 DOMAIN-SUFFIX,cmbimg.com
 DOMAIN-SUFFIX,ctfile.com
 DOMAIN-SUFFIX,dnspod.com
-DOMAIN-SUFFIX,douban.com
 DOMAIN-SUFFIX,douyin.com
 DOMAIN-SUFFIX,dpfile.com
 DOMAIN-SUFFIX,duokan.com
@@ -730,5 +729,3 @@ DOMAIN-SUFFIX,dl.bscstorage.net
 DOMAIN,cn.download.nvidia.com
 DOMAIN,gstore.val.manlaxy.com
 DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
-USER-AGENT,%E4%BC%98%E9%85%B7*
-USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*
