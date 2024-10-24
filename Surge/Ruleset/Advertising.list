@@ -163,7 +163,6 @@ DOMAIN,route-stats.d.meituan.net
 DOMAIN,al-log.d.meituan.net
 DOMAIN,babel-statistics-android.d.meituan.net
 DOMAIN,maplocatesdksnapshot.d.meituan.net
-IP-CIDR,103.37.155.60/32,no-resolve
 # > 美颜相机
 DOMAIN,aaid.uyunad.com
 DOMAIN,adui.tg.meitu.com
