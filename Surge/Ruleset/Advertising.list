@@ -83,6 +83,9 @@ DOMAIN,www.googleadservices.com
 DOMAIN,adx.hupu.com
 DOMAIN,adx-api.hupu.com
 DOMAIN,goblin.hupu.com
+# > 虎牙直播
+DOMAIN,business.msstatic.com
+DOMAIN-SUFFIX,v1d.szbdyd.com
 
 # ======= (J) ======= #
 # > 驾校一点通
@@ -101,6 +104,10 @@ DOMAIN,minfo.wps.cn
 DOMAIN,mobad.ijinshan.com
 DOMAIN,ups.ksmobile.net
 DOMAIN,ws.ksmobile.net
+# > 京东
+DOMAIN,dns.jd.com
+IP-CIDR,101.124.19.122/32,no-resolve
+IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
 
 # ======= (K) ======= #
 # > 酷我音乐
@@ -232,6 +239,8 @@ DOMAIN,ad.21cn.com
 DOMAIN,ad.k.21cn.com
 DOMAIN,admarket.21cn.com
 DOMAIN,adshows.21cn.com
+IP-CIDR,122.229.8.47/32,no-resolve
+IP-CIDR,122.229.29.89/32,no-resolve
 # > 知乎
 DOMAIN,appcloud.zhihu.com
 DOMAIN,appcloud2.in.zhihu.com
@@ -243,9 +252,6 @@ IP-CIDR,103.41.167.237/32,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
 
 # ======= 无效域名 ======= #
-# > 京东
-DOMAIN,waapdg.jd.com
-DOMAIN-SUFFIX,jddebug.com
 # > 美团
 DOMAIN,metrics-picture.d.meituan.net
 DOMAIN,route-stats.d.meituan.net
