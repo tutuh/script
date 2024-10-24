@@ -11,11 +11,11 @@ AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEY
 ^https:\/\/app\.home\.360\.cn\/v1\/config\/custom_config data-type=text data="{}"
 
 # > 向日葵远程 - client-api-v?.oray.com
-# 开屏广告
+# 开屏
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP data-type=text data="{}"
-# 首页文字广告
+# 首页
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE data-type=text data="{}"
-# 发现页广告
+# 发现页
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION data-type=text data="{}"
 
 # > 美团 & 美团外卖 - flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
