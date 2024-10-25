@@ -57,7 +57,7 @@ URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
 (?i)\b\/ads\? - reject
 
 (?i)\badvertisement - reject
-(?i)\badvertising - reject // 如 MITM Github 会导致无法更新 advertising 文件
+(?i)\badvertising - reject
 (?i)\bsplash_screen - reject
 
 # (0~9)
