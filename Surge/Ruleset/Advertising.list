@@ -86,9 +86,6 @@ DOMAIN,free-aos-cdn-image.amap.com
 DOMAIN,adx.hupu.com
 DOMAIN,adx-api.hupu.com
 DOMAIN,goblin.hupu.com
-# > 虎牙直播
-DOMAIN,business.msstatic.com
-DOMAIN-SUFFIX,v1d.szbdyd.com
 
 # ======= (J) ======= #
 # > 驾校一点通
