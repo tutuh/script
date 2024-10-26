@@ -6,10 +6,7 @@
 # > 广告联盟
 AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEYWORD,-misc-)),REJECT
 # > 京东
-DOMAIN,dns.jd.com,REJECT,extended-matching,pre-matching
 URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
-IP-CIDR,101.124.19.122/32,REJECT,no-resolve,pre-matching
-IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve,pre-matching
 
 [Map Local]
 # > 360智慧生活商城入口 - app.home.360.cn
