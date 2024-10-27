@@ -34,7 +34,7 @@ DOMAIN,dns.weibo.cn,REJECT,extended-matching,pre-matching
 ^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? data-type=text data="{}"
 ^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? data-type=text data="{}"
 
-# 开屏广告 //*.uve.weibo.com
+# 开屏广告 - *.uve.weibo.com
 ^https:\/\/bootrealtime\.uve\.weibo\.com\/v[23]\/ad\/realtime data-type=text data="{}"
 
 # 微博长文章推广
