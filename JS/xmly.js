@@ -326,13 +326,17 @@ switch (path) {
 		break;
         case "/focus-mobile/focusPic/info": // 首页广告轮盘
     body.header = body.header.filter(header => {
-        header.item.list = header.item.list.filter(list => {
-            list.data = list.data.filter(data => !data.isAd);
-            return list.data.length > 0;
-        });
-        return header.item.list.length > 0;
+        if (header.item && header.item.list) {
+            header.item.list = header.item.list.filter(list => {
+        if (list.data) {
+                    list.data = list.data.filter(data => !data.isAd);
+                }
+        return list.data && list.data.length > 0;
+            });
+        }
+        return header.item && header.item.list && header.item.list.length > 0;
     });
-               break;
+                break;
 	case "/hub/guideWordV3": //搜索推荐
 	case "/hub/hotWordV3": //搜索热词
 		body.hotWordList = [];
