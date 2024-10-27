@@ -324,7 +324,7 @@ switch (path) {
 			return subElement;
 		});
 		break;
- case "/focus-mobile/focusPic/info": // 首页广告轮盘
+        case "/focus-mobile/focusPic/info": // 首页广告轮盘
     body.header = body.header.filter(header => {
         header.item.list = header.item.list.filter(list => {
             list.data = list.data.filter(data => !data.isAd);
@@ -332,7 +332,7 @@ switch (path) {
         });
         return header.item.list.length > 0;
     });
-    break;
+               break;
 	case "/hub/guideWordV3": //搜索推荐
 	case "/hub/hotWordV3": //搜索热词
 		body.hotWordList = [];
