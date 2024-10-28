@@ -60,10 +60,10 @@ DOMAIN,gslbtx.ximalaya.com,REJECT,pre-matching,extended-matching
 # 屏蔽首页动态
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
 
-# 屏蔽Tab页滚动
+# 屏蔽标签页滚动
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
 
-# 去除我的页面Ad_Tag
+# 去除我的页面广告标签
 喜马拉雅去广告 = type=http-response,pattern=^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage,requires-body=1,script-path=https://raw.githubusercontent.com/tutuh/script/master/JS/xmlyAd.js
 
 [MITM]
