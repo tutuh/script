@@ -43,6 +43,7 @@ DOMAIN-SUFFIX,66law.cn
 DOMAIN-SUFFIX,9game.cn
 DOMAIN-SUFFIX,acfun.cn
 DOMAIN-SUFFIX,alios.cn
+DOMAIN-SUFFIX,aqara.cn
 DOMAIN-SUFFIX,baidu.cn
 DOMAIN-SUFFIX,cnnic.cn
 DOMAIN-SUFFIX,flyme.cn
@@ -53,6 +54,7 @@ DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,m1905.cn
 DOMAIN-SUFFIX,meizu.cn
 DOMAIN-SUFFIX,nubia.cn
+DOMAIN-SUFFIX,qiyou.cn
 DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,uczzd.cn
 DOMAIN-SUFFIX,udesk.cn
@@ -120,6 +122,7 @@ DOMAIN-SUFFIX,douban.fm
 DOMAIN-SUFFIX,jd.hk
 DOMAIN-SUFFIX,juejin.im
 DOMAIN-SUFFIX,netease.im
+DOMAIN-SUFFIX,gitee.io
 DOMAIN-SUFFIX,jianshu.io
 DOMAIN-SUFFIX,air-matters.io
 DOMAIN-SUFFIX,openinstall.io
@@ -446,6 +449,7 @@ DOMAIN-SUFFIX,tencent.com
 DOMAIN-SUFFIX,tnkjmec.com
 DOMAIN-SUFFIX,toutiao.com
 DOMAIN-SUFFIX,udqqimg.com
+DOMAIN-SUFFIX,upaiyun.com
 DOMAIN-SUFFIX,volccdn.com
 DOMAIN-SUFFIX,weidian.com
 DOMAIN-SUFFIX,xoyocdn.com
@@ -652,6 +656,7 @@ DOMAIN-SUFFIX,263.net
 DOMAIN-SUFFIX,360.net
 DOMAIN-SUFFIX,3322.net
 DOMAIN-SUFFIX,csdn.net
+DOMAIN-SUFFIX,cz88.net
 DOMAIN-SUFFIX,duba.net
 DOMAIN-SUFFIX,ipip.net
 DOMAIN-SUFFIX,jb51.net
@@ -702,11 +707,11 @@ DOMAIN-SUFFIX,8866.org
 DOMAIN-SUFFIX,9966.org
 DOMAIN-SUFFIX,aliapp.org
 DOMAIN-SUFFIX,docschina.org
+DOMAIN-SUFFIX,miot-spec.org
 DOMAIN-SUFFIX,icourse163.org
-DOMAIN,dns.pub
 DOMAIN,doh.pub
-DOMAIN,dot.pub
 DOMAIN-SUFFIX,landian.vip
+DOMAIN-SUFFIX,gorouter.info
 DOMAIN-SUFFIX,126.link
 DOMAIN-SUFFIX,yqkk.link
 DOMAIN-SUFFIX,haowu.link
@@ -726,6 +731,7 @@ DOMAIN-SUFFIX,steam.ksyna.com
 DOMAIN-SUFFIX,steam.clngaa.com
 DOMAIN-SUFFIX,dl.eccdnx.com
 DOMAIN,www.layuicdn.com
+DOMAIN,cdnstatic.tencentcs.com
 DOMAIN-SUFFIX,dl.pinyuncloud.com
 DOMAIN-SUFFIX,dl.bscstorage.net
 DOMAIN,cn.download.nvidia.com
