@@ -26,6 +26,5 @@
 [@ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master)     
 [@SukkaW](https://github.com/SukkaW/Surge)  
 [@QingRex](https://surge.qingr.moe)    
-[@QingRex](https://surge.qingr.moe)    
 
 
