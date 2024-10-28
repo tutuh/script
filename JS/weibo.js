@@ -1,7 +1,4 @@
 // By RuCu6
-/*
-引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
-*/
 // 2024-10-28 01:35
 
 const url = $request.url;
