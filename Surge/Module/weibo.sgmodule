@@ -13,6 +13,9 @@ DOMAIN-SUFFIX,biz.weibo.com,REJECT,pre-matching,extended-matching
 # 拦截HTTPDNS
 DOMAIN,dns.weibo.cn,REJECT,extended-matching,pre-matching
 
+[URL Rewrite]
+^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) - reject
+
 [Map Local]
 # > 微博
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
