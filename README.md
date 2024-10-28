@@ -15,17 +15,17 @@
 [@NobyDa](https://github.com/NobyDa/Script)   
 [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script)   
 [@chavyleung](https://github.com/chavyleung)  
-[@DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)         
+[@DivineEngine](https://github.com/ConnersHua/RuleGo/tree/master)         
 [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)   
 [@app2smile](https://github.com/app2smile/rules)   
 [@Neurogram-R](https://github.com/Neurogram-R/Surge)  
 [@Rabbit-Spec](https://github.com/Rabbit-Spec/Surge)   
-[@Tartarus2014](https://github.com/Tartarus2014/Script)  
 [@dompling](https://github.com/dompling/Script)  
 [@kokoryh](https://github.com/kokoryh/Script)   
 [@RuCu6](https://github.com/RuCu6/QuanX)  
 [@ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master)     
 [@SukkaW](https://github.com/SukkaW/Surge)  
-
+[@QingRex](https://surge.qingr.moe)    
+[@QingRex](https://surge.qingr.moe)    
 
 
