@@ -98,6 +98,7 @@ DOMAIN-SUFFIX,nyaa.si
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,libgen.st
 DOMAIN-SUFFIX,ping.sx
+DOMAIN-SUFFIX,7mmtv.sx
 DOMAIN-SUFFIX,dev.to
 DOMAIN-SUFFIX,bgm.tv
 DOMAIN-SUFFIX,muku.tv
@@ -115,6 +116,7 @@ DOMAIN-SUFFIX,binance.us
 DOMAIN-SUFFIX,missav.ws
 DOMAIN-SUFFIX,run.app
 DOMAIN-SUFFIX,ajay.app
+DOMAIN-SUFFIX,grep.app
 DOMAIN-SUFFIX,vercel.app
 DOMAIN-SUFFIX,cyberghost.app
 DOMAIN-SUFFIX,istatmenus.app
@@ -157,6 +159,7 @@ DOMAIN-SUFFIX,gvt7.com
 DOMAIN-SUFFIX,gvt9.com
 DOMAIN-SUFFIX,imdb.com
 DOMAIN-SUFFIX,ixxx.com
+DOMAIN-SUFFIX,java.com
 DOMAIN-SUFFIX,kagi.com
 DOMAIN-SUFFIX,kobo.com
 DOMAIN-SUFFIX,kwai.com
@@ -248,6 +251,7 @@ DOMAIN-SUFFIX,replit.com
 DOMAIN-SUFFIX,scribd.com
 DOMAIN-SUFFIX,setapp.com
 DOMAIN-SUFFIX,sketch.com
+DOMAIN-SUFFIX,supjav.com
 DOMAIN-SUFFIX,thisav.com
 DOMAIN-SUFFIX,tineye.com
 DOMAIN-SUFFIX,tumblr.com
@@ -307,6 +311,7 @@ DOMAIN-SUFFIX,blogblog.com
 DOMAIN-SUFFIX,capitalg.com
 DOMAIN-SUFFIX,cbslocal.com
 DOMAIN-SUFFIX,coinbase.com
+DOMAIN-SUFFIX,coindesk.com
 DOMAIN-SUFFIX,dashlane.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,dribbble.com
@@ -549,6 +554,7 @@ DOMAIN-SUFFIX,signal.org
 DOMAIN-SUFFIX,webrtc.org
 DOMAIN-SUFFIX,archive.org
 DOMAIN-SUFFIX,astrill.org
+DOMAIN-SUFFIX,f-droid.org
 DOMAIN-SUFFIX,mozilla.org
 DOMAIN-SUFFIX,solidot.org
 DOMAIN-SUFFIX,chromium.org
@@ -643,6 +649,5 @@ DOMAIN-KEYWORD,whatsapp
 DOMAIN-KEYWORD,discord
 DOMAIN-KEYWORD,sci-hub
 DOMAIN-KEYWORD,dropbox
-DOMAIN-KEYWORD,jav
 DOMAIN-KEYWORD,pinterest
 DOMAIN-KEYWORD,porn
