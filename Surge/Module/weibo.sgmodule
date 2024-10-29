@@ -7,9 +7,9 @@
 [Rule]
 # > 微博
 # 请求放行
-DOMAIN-SUFFIX,uve.weibo.com,DIRECT,extended-matching
+DOMAIN,wbapp.uve.weibo.com,DIRECT,extended-matching
 # 微博开屏广告
-DOMAIN-SUFFIX,biz.weibo.com,REJECT,pre-matching,extended-matching
+DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching,pre-matching
 # 拦截HTTPDNS
 DOMAIN,dns.weibo.cn,REJECT,extended-matching,pre-matching
 
