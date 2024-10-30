@@ -1,5 +1,5 @@
 // By RuCu6
-// 2024-10-28 01:35
+// 2024-10-30 01:05
 
 const url = $request.url;
 if (!$response) $done({});
@@ -164,6 +164,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       let newItems = [];
       for (let item of obj.root_comments) {
         if (!isAd(item)) {
+          if (item?.comment_bubble) {
+            delete item.comment_bubble; // 评论气泡 新版本
+          }
           if (item?.data?.comment_bubble) {
             delete item.data.comment_bubble; // 评论气泡
           }
@@ -929,8 +932,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                       // 商品推广desc
                       continue;
                     }
+                    newII.push(ii);
                   }
-                  newII.push(ii);
                 }
               }
               item.items = newII;
@@ -1163,6 +1166,17 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj?.enable_comment_guide) {
       obj.enable_comment_guide = false; // 评论指引
     }
+  } else if (url.includes("/2/statuses/repost_timeline")) {
+    // 评论详情页 转发区
+    if (obj?.reposts?.length > 0) {
+      let newReposts = [];
+      for (let item of obj.reposts) {
+        if (!isAd(item)) {
+          newReposts.push(item);
+        }
+      }
+      obj.reposts = newReposts;
+    }
   } else if (url.includes("/2/statuses/show")) {
     removeFeedAd(obj); // 信息流推广
     // 循环引用中的商品橱窗
@@ -1236,6 +1250,9 @@ function isAd(data) {
     return true;
   }
   if (data?.mblogtypename === "热推") {
+    return true;
+  }
+  if (data?.promotion?.recommend === "广告") {
     return true;
   }
   if (data?.promotion?.recommend === "热推") {
