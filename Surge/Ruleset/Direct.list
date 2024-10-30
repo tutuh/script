@@ -31,6 +31,7 @@ DOMAIN-SUFFIX,didi.cn
 DOMAIN-SUFFIX,kuwo.cn
 DOMAIN-SUFFIX,migu.cn
 DOMAIN-SUFFIX,neea.cn
+DOMAIN-SUFFIX,news.cn
 DOMAIN-SUFFIX,oppo.cn
 DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,sina.cn
@@ -365,7 +366,6 @@ DOMAIN-SUFFIX,taobao.com
 DOMAIN-SUFFIX,udache.com
 DOMAIN-SUFFIX,volces.com
 DOMAIN-SUFFIX,wangsu.com
-DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,wegame.com
 DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,weiyun.com
@@ -547,6 +547,7 @@ DOMAIN-SUFFIX,feishupkg.com
 DOMAIN-SUFFIX,freshhema.com
 DOMAIN-SUFFIX,hellobike.com
 DOMAIN-SUFFIX,ibuscloud.com
+DOMAIN-SUFFIX,ibytedapm.com
 DOMAIN-SUFFIX,iesdouyin.com
 DOMAIN-SUFFIX,kaiyanapp.com
 DOMAIN-SUFFIX,livechina.com
@@ -612,6 +613,7 @@ DOMAIN-SUFFIX,jcloudcache.com
 DOMAIN-SUFFIX,laiqukankan.com
 DOMAIN-SUFFIX,landiannews.com
 DOMAIN-SUFFIX,leetcode-cn.com
+DOMAIN-SUFFIX,oceanengine.com
 DOMAIN-SUFFIX,taopiaopiao.com
 DOMAIN-SUFFIX,toutiaopage.com
 DOMAIN-SUFFIX,xiaoaisound.com
