@@ -2,8 +2,8 @@
  * Surge 网络详情
  * 由@Nebulosa-Cat编写
  * 由@Rabbit-Spec翻译
- * 更新日期：2023.04.22
- * 版本：3.5
+ * 更新日期：2024.09.09
+ * 版本：3.4
  */
 
 /**
@@ -83,11 +83,6 @@ function randomString(e = 6) {
 }
 
 function getFlagEmoji(countryCode) {
-
-if (countryCode.toUpperCase() == 'TW') {
-    countryCode = 'CN'
-  }
-
   const codePoints = countryCode
     .toUpperCase()
     .split('')
@@ -163,7 +158,7 @@ function getCellularInfo() {
     if ($network.wifi?.ssid == null && radio) {
       cellularInfo = carrierNames[carrierId] ?
         `${carrierNames[carrierId]} | ${radioGeneration[radio]} - ${radio} ` :
-        `蜂窝数据 | ${radioGeneration[radio]} - ${radio}`;
+        `蜂窝数据| ${radioGeneration[radio]} - ${radio}`;
     }
   }
   return cellularInfo;
