@@ -1,6 +1,9 @@
 /*
  * 由@githubdulong编写
  * 原脚本地址：https://raw.githubusercontent.com/githubdulong/Script/master/Stream-All.js
+ * 由@Rabbit-Spec修改
+ * 更新日期：2022.10.28
+ * 版本：1.0
  */
 
 let args = getArgs();
@@ -167,7 +170,7 @@ async function check_netflix() {
 
   let netflix_check_result = 'NF: '
 
-  await inner_check(81280792)
+  await inner_check(81215567)
     .then((code) => {
       if (code === 'Not Found') {
         return inner_check(80018499)
