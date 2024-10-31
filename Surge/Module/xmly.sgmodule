@@ -14,40 +14,44 @@ DOMAIN,gslbtx.ximalaya.com,REJECT,pre-matching,extended-matching
 [URL Rewrite]
 # > 喜马拉雅
 ^https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 - reject
-# 播放页Live
-^https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ - reject
+# 修复轮播Ad失效Bug
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF - reject
+# 播放页_Live
+^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ - reject
 # MyInfo红点提醒
-^https?:\/\/.*\.ximalaya\.com\/chaos-notice-web\/v1\/message\/preview\/list - reject
-# 大红包Tips
-^https?:\/\/.*\.ximalaya\.com\/social-web\/bottomTabs\/dynamicEntrance\/status - reject
+^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list - reject
+# 屏蔽大红包Tips
+^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status - reject
 # 屏蔽gif弹窗Ad
 ^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ - reject
+# gslb
+^https?:\/\/gslb.*\.xima.*\.com\/ - reject
 # 屏蔽Aged请求
-^https?:\/\/.*\.ximalaya\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) - reject
+^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) - reject
 # 部分Tab弹窗
-^https?:\/\/.*\.ximalaya\.com\/discovery-feed\/isShowUserGiftPendant - reject
-# 屏蔽消息红点提示
-^https?:\/\/.*\.ximalaya\.com\/mobile-user\/unread - reject
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant - reject
+# 屏蔽红点提示
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread - reject
 # 屏蔽minor请求
-^https?:\/\/.*\.ximalaya\.com\/mobile-user\/minorProtection\/pop - reject
+^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop - reject
 # 屏蔽隐私搜集
-^https?:\/\/.*\.ximalaya\.com\/collector\/xl\/v\d - reject
+^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d - reject
 # 屏蔽版本更新
-^https?:\/\/.*\.ximalaya\.com\/butler-portal\/versionCheck - reject
+^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck - reject
 # 屏蔽开屏广告
-^https?:\/\/(adse\.wsa|adse|adbehavior)\.ximalaya\.com\/.* - reject
+^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* - reject
 # 屏蔽位置请求
-^https?:\/\/.*\.ximalaya\.com\/mobile\/discovery\/v\d\/location - reject
+^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location - reject
+# 屏蔽热搜词
+^https?:\/\/.*\.xima.*\.com\/(hub\/)?hotWord - reject
+# 屏蔽热搜board
+^https?:\/\/.*\.xima.*\.com\/(hub\/)?hotWordBillboard - reject
+# 屏蔽搜索框定时_Ad
+^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord - reject
 # 屏蔽实时Ad请求
-^https?:\/\/.*\.ximalaya\.com\/api\/v\d\/adRealTime - reject
+^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime - reject
 # 屏蔽ting_Ad
-^https?:\/\/.*\.ximalaya\.com\/ting\/(loading|feed|home)? - reject
-# 修复轮播Ad失效Bug
-^https?:\/\/.*\.ximalaya\.com\/discovery-feed\/focus\/queryF - reject
-^https?:\/\.*linkeye-cloud\/checkIP - reject
-^https?:\/\/www\.taobao\.com\/help\/getip\.php - reject
-^https?:\/\.*audid-api\.taobao\.com - reject
-^https?:\/\/passport(ws)?\.ximalaya\.com\/user-http-app\/v1\/token\/refresh - reject
+^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? - reject
 
 [Script]
 # > 喜马拉雅
