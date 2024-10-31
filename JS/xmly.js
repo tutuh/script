@@ -28,7 +28,7 @@ switch (path) {
         body.data.vipStatus = 5;
         body.data.isEnglishVip = true;
         body.data.parentPaidStatus = "非临期会员";
-        body.data.serviceModule.entrances = body.data.serviceModule.entrances.filter(entrance => entranceId.includes(entrance.id)) //签到中心、钱包、全部服务
+        body.data.serviceModule.entrances = body.data.serviceModule.entrances?.filter(entrance => entranceId.includes(entrance?.id)) //签到中心、钱包、全部服务
         break;
     case "/mobile-user-grade/decorator/listAvatarFrame": //会员头像框
         body.data = body.data.map(data => {
