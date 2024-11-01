@@ -1,9 +1,0 @@
-#!name=微信去广告 
-#!desc=去除公众号文章底部广告
-#!category=Tutu
-
-[Script]
-微信去广告 = type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js,script-update-interval=0
-
-[MITM]
-hostname = %APPEND% mp.weixin.qq.com
