@@ -103,7 +103,6 @@ DOMAIN-SUFFIX,douyucdn.cn
 DOMAIN-SUFFIX,feelgood.cn
 DOMAIN-SUFFIX,iconfont.cn
 DOMAIN-SUFFIX,leetcode.cn
-DOMAIN-SUFFIX,linkedin.cn
 DOMAIN-SUFFIX,opposhop.cn
 DOMAIN-SUFFIX,bilivideo.cn
 DOMAIN-SUFFIX,blzstatic.cn
@@ -117,6 +116,7 @@ DOMAIN-SUFFIX,sharepoint.cn
 DOMAIN-SUFFIX,toutiaoimg.cn
 DOMAIN-SUFFIX,baishancdnx.cn
 DOMAIN-SUFFIX,chinaunicom.cn
+DOMAIN-SUFFIX,cnspeedtest.cn
 DOMAIN-SUFFIX,mobileservice.cn
 DOMAIN-SUFFIX,officewebapps.cn
 DOMAIN-SUFFIX,authing.co
@@ -247,6 +247,7 @@ DOMAIN-SUFFIX,ksord.com
 DOMAIN-SUFFIX,ksyun.com
 DOMAIN-SUFFIX,kugou.com
 DOMAIN-SUFFIX,lagou.com
+DOMAIN-SUFFIX,ljcdn.com
 DOMAIN-SUFFIX,m1905.com
 DOMAIN-SUFFIX,meitu.com
 DOMAIN-SUFFIX,meizu.com
@@ -431,6 +432,7 @@ DOMAIN-SUFFIX,keepcdn.com
 DOMAIN-SUFFIX,ksosoft.com
 DOMAIN-SUFFIX,kwaicdn.com
 DOMAIN-SUFFIX,leiniao.com
+DOMAIN-SUFFIX,lianjia.com
 DOMAIN-SUFFIX,ludashi.com
 DOMAIN-SUFFIX,meituan.com
 DOMAIN-SUFFIX,myzaker.com
@@ -473,6 +475,7 @@ DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,blizzard.com
 DOMAIN-SUFFIX,changyan.com
 DOMAIN-SUFFIX,chaoxing.com
+DOMAIN-SUFFIX,chiphell.com
 DOMAIN-SUFFIX,cmbchina.com
 DOMAIN-SUFFIX,cmfchina.com
 DOMAIN-SUFFIX,dangdang.com
@@ -728,6 +731,7 @@ DOMAIN,lv.queniujq.cn
 DOMAIN,assets1.xboxlive.cn
 DOMAIN,assets2.xboxlive.cn
 DOMAIN-SUFFIX,71.am.com
+DOMAIN-SUFFIX,bytedance.com.com
 DOMAIN,dl.ubnt.com
 DOMAIN,config.ubnt.com
 DOMAIN-SUFFIX,steam.ksyna.com
@@ -739,4 +743,5 @@ DOMAIN-SUFFIX,dl.pinyuncloud.com
 DOMAIN-SUFFIX,dl.bscstorage.net
 DOMAIN,cn.download.nvidia.com
 DOMAIN,gstore.val.manlaxy.com
+DOMAIN,media.cdn.queniuqe.com
 DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
