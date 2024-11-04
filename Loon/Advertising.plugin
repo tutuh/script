@@ -13,12 +13,13 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 # > 360智慧生活 - app.home.360.cn
 ^https:\/\/app\.home\.360\.cn\/v1\/config\/custom_config reject-dict
 
-# > 美团 & 美团外卖 - flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
-^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
-^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg reject-dict
-^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
-^https:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json reject-dict
-^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
+# > 向日葵远程 - client-api-v?.oray.com
+# 开屏
+^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP reject-dict
+# 首页
+^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE reject-dict
+# 发现页
+^https?:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION reject-dict
 
 # > 肯德基 - res.kfc.com.cn
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome reject-dict
@@ -36,18 +37,11 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 # (A)
 # > AcFun - api-new.app.acfun.cn
 ^https?:\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/ reject
-# --- (Alibaba) ---
 # > 淘宝 - gw.alicdn.com, heic.alicdn.com
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/\w{2}\/.+\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q\d0\.jpg_\.(heic|webp)$ reject
 # > 一淘网 - acs.m.taobao.com
 ^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ reject
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash reject
-# > 闲鱼 - gw.alicdn.com, acs.m.taobao.com
-^https:\/\/gw\.alicdn\.com\/mt\/ reject
-^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} reject
-^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome reject
-# ------------
 # > 爱回收 - gw.aihuishou.com
 ^https:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement reject
 
@@ -57,8 +51,8 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject
 ^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao reject
 # > 百度输入法 - mime.baidu.com
-#^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo$ reject
-#^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement reject
+^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo$ reject
+^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement reject
 # > 必胜客 - res.pizzahut.com.cn
 ^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/member\/app\/member reject
 ^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome reject
@@ -89,9 +83,9 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 
 # (F)
 # > 飞常准 - app.variflight.com, api.cdmcaac.com
-#^https?:\/\/app\.variflight\.com\/ad\/ reject
-#^https?:\/\/app\.variflight\.com\/v\d\/advert\/ reject
-#^https?:\/\/api\.cdmcaac\.com\/ad\/ reject
+^https?:\/\/app\.variflight\.com\/ad\/ reject
+^https?:\/\/app\.variflight\.com\/v\d\/advert\/ reject
+^https?:\/\/api\.cdmcaac\.com\/ad\/ reject
 
 # (H)
 # > 虎牙 - business.msstatic.com, cdnfile1.msstatic.com
@@ -117,24 +111,16 @@ URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start,REJECT-TI
 ^https:\/\/openapi\.laiyifen\.com\/advert-app-api\/bootScreen\/v1\/startScreen reject
 
 # (M)
-# > 小米商城 - api.m.mi.com, shop-api.retail.mi.com
-^https:\/\/api\.m\.mi\.com\/(?:v1\/(?:app\/popup_info|home\/page_feed|misearch\/search_input)|v2\/search\/search_default) reject
-^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/(?:rec\/merge\/|skywheel\/mishop\/splash) reject
 # > 米家 - home.mi.com
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(?:banner|carousel\/banners|myTab|openingBanner) reject
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject
 # > 美味不用等 - capi.mwee.cn
 ^https?:\/\/capi\.mwee\.cn\/app-api\/V\d+\/app\/(ad|getstartad) reject
 # > 麦当劳 - api.mcd.cn
 https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) reject
 # > 马蜂窝 - mapi.mafengwo.cn
-#^https:\/\/mapi\.mafengwo\.cn\/ad\/get_launch_ad_list\/v reject
+^https:\/\/mapi\.mafengwo\.cn\/ad\/get_launch_ad_list\/v reject
 # > 秒拍 - v?-api.miaopai.com
-#^https?:\/\/v\d-api\.miaopai\.com\/miaopai\/advertisement\/ reject
-
-# (O)
-# > Oray - slapi.oray.net, client-api-v?.oray.com
-^https?:\/\/slapi\.oray\.net\/\/adver reject
-^https?:\/\/client-api-v\d\.oray\.com\/materials\/SLCC_IOS_[A-Z]+_ADV reject
+^https?:\/\/v\d-api\.miaopai\.com\/miaopai\/advertisement\/ reject
 
 # (P)
 # > 票根 - pss.txffp.com
@@ -168,19 +154,19 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) reject
 
 # (X)
 # > 下厨房 - api.xiachufang.com
-#^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ reject
+^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ reject
 # > 小牛 - app-api.niu.com
-#^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\/ reject
+^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\/ reject
 
 # (Y)
 # > 萤石 - i.ys7.com
-#^https?:\/\/i\.ys7\.com\/api\/ads reject
+^https?:\/\/i\.ys7\.com\/api\/ads reject
 # > 猿辅导 - xyst.yuanfudao.com
 ^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV\d reject
 
 # (Z)
 # > 作业帮 - syh.zybang.com
-#^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ reject
+^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ reject
 
 [MITM]
-hostname = app.home.360.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, res.kfc.com.cn, manga.bilibili.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, mime.baidu.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, api.m.mi.com, shop-api.retail.mi.com, home.mi.com, capi.mwee.cn, api.mcd.cn, mapi.mafengwo.cn, v?-api.miaopai.com, slapi.oray.net, client-api-v?.oray.com, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, ccsp-egmas.sf-express.com, shopic.sf-express.com, m.tuniu.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, api.xiachufang.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
+hostname = app.home.360.cn, client-api-v?.oray.com, res.kfc.com.cn, manga.bilibili.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, mime.baidu.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, rtbapi.douyucdn.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, home.mi.com, capi.mwee.cn, api.mcd.cn, mapi.mafengwo.cn, v?-api.miaopai.com, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, iobs.pingan.com.cn, ccsp-egmas.sf-express.com, shopic.sf-express.com, m.tuniu.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, api.xiachufang.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
