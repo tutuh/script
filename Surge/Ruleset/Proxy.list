@@ -120,6 +120,7 @@ DOMAIN-SUFFIX,periscope.tv
 DOMAIN-SUFFIX,dcard.tw
 DOMAIN-SUFFIX,linetv.tw
 DOMAIN-SUFFIX,shopee.tw
+DOMAIN-SUFFIX,moegirl.tw
 DOMAIN-SUFFIX,moegirl.uk
 DOMAIN-SUFFIX,binance.us
 DOMAIN-SUFFIX,missav.ws
@@ -145,10 +146,12 @@ DOMAIN-SUFFIX,aex.com
 DOMAIN-SUFFIX,ask.com
 DOMAIN-SUFFIX,avg.com
 DOMAIN-SUFFIX,bbc.com
+DOMAIN-SUFFIX,cal.com
 DOMAIN-SUFFIX,cbs.com
 DOMAIN-SUFFIX,cnn.com
 DOMAIN-SUFFIX,fc2.com
 DOMAIN-SUFFIX,hbg.com
+DOMAIN-SUFFIX,ibm.com
 DOMAIN-SUFFIX,kik.com
 DOMAIN-SUFFIX,nyt.com
 DOMAIN-SUFFIX,okx.com
@@ -560,6 +563,7 @@ DOMAIN-SUFFIX,jkforum.net
 DOMAIN-SUFFIX,kisscos.net
 DOMAIN-SUFFIX,nhentai.net
 DOMAIN-SUFFIX,threads.net
+DOMAIN-SUFFIX,waifu2x.net
 DOMAIN-SUFFIX,windows.net
 DOMAIN-SUFFIX,akamaihd.net
 DOMAIN-SUFFIX,cachefly.net
@@ -625,6 +629,7 @@ DOMAIN-SUFFIX,wikibooks.org
 DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,wikipedia.org
 DOMAIN-SUFFIX,wikiquote.org
+DOMAIN-SUFFIX,wireshark.org
 DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,getoutline.org
 DOMAIN-SUFFIX,greasyfork.org
