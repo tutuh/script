@@ -58,6 +58,7 @@ DOMAIN-SUFFIX,bitbucket.io
 DOMAIN-SUFFIX,coveralls.io
 DOMAIN-SUFFIX,etherscan.io
 DOMAIN-SUFFIX,shattered.io
+DOMAIN-SUFFIX,globalping.io
 DOMAIN-SUFFIX,greenhouse.io
 DOMAIN-SUFFIX,codesandbox.io
 DOMAIN-SUFFIX,azurecontainer.io
@@ -90,15 +91,11 @@ DOMAIN-SUFFIX,mega.nz
 DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,archive.ph
 DOMAIN-SUFFIX,jav.pw
-DOMAIN-SUFFIX,singlelogin.re
 DOMAIN-SUFFIX,libgen.rs
 DOMAIN-SUFFIX,ok.ru
 DOMAIN-SUFFIX,tgstat.ru
 DOMAIN-SUFFIX,yandex.ru
-DOMAIN-SUFFIX,z-library.se
-DOMAIN-SUFFIX,singlelogin.se
 DOMAIN-SUFFIX,annas-archive.se
-DOMAIN-SUFFIX,zlibrary-global.se
 DOMAIN-SUFFIX,ouo.si
 DOMAIN-SUFFIX,nyaa.si
 DOMAIN-SUFFIX,notion.so
@@ -126,7 +123,9 @@ DOMAIN-SUFFIX,binance.us
 DOMAIN-SUFFIX,missav.ws
 DOMAIN-SUFFIX,run.app
 DOMAIN-SUFFIX,ajay.app
+DOMAIN-SUFFIX,bsky.app
 DOMAIN-SUFFIX,grep.app
+DOMAIN-SUFFIX,knock.app
 DOMAIN-SUFFIX,linear.app
 DOMAIN-SUFFIX,vercel.app
 DOMAIN-SUFFIX,cyberghost.app
@@ -465,6 +464,7 @@ DOMAIN-SUFFIX,redditmedia.com
 DOMAIN-SUFFIX,redditspace.com
 DOMAIN-SUFFIX,theguardian.com
 DOMAIN-SUFFIX,tradingview.com
+DOMAIN-SUFFIX,uptimerobot.com
 DOMAIN-SUFFIX,webpkgcache.com
 DOMAIN-SUFFIX,xvideos-cdn.com
 DOMAIN-SUFFIX,browserleaks.com
@@ -548,6 +548,7 @@ DOMAIN-SUFFIX,cdnst.net
 DOMAIN-SUFFIX,dmcdn.net
 DOMAIN-SUFFIX,fbcdn.net
 DOMAIN-SUFFIX,hinet.net
+DOMAIN-SUFFIX,naixi.net
 DOMAIN-SUFFIX,pixiv.net
 DOMAIN-SUFFIX,pximg.net
 DOMAIN-SUFFIX,tfbnw.net
@@ -613,6 +614,7 @@ DOMAIN-SUFFIX,matrix.org
 DOMAIN-SUFFIX,schema.org
 DOMAIN-SUFFIX,signal.org
 DOMAIN-SUFFIX,webrtc.org
+DOMAIN-SUFFIX,adguard.org
 DOMAIN-SUFFIX,archive.org
 DOMAIN-SUFFIX,astrill.org
 DOMAIN-SUFFIX,f-droid.org
@@ -634,6 +636,7 @@ DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,getoutline.org
 DOMAIN-SUFFIX,greasyfork.org
 DOMAIN-SUFFIX,gwtproject.org
+DOMAIN-SUFFIX,mayoclinic.org
 DOMAIN-SUFFIX,sleazyfork.org
 DOMAIN-SUFFIX,south-plus.org
 DOMAIN-SUFFIX,tensorflow.org
@@ -686,6 +689,7 @@ DOMAIN-SUFFIX,dnscheck.tools
 DOMAIN-SUFFIX,fb.watch
 DOMAIN-SUFFIX,mastodon.social
 DOMAIN-SUFFIX,x.company
+DOMAIN-SUFFIX,bsky.network
 DOMAIN-SUFFIX,github.community
 DOMAIN-SUFFIX,news.com.au
 DOMAIN-SUFFIX,abc.net.au
@@ -694,6 +698,7 @@ DOMAIN-SUFFIX,amazon.co.jp
 DOMAIN-SUFFIX,line.naver.jp
 DOMAIN-SUFFIX,mega.co.nz
 DOMAIN-SUFFIX,zaobao.com.sg
+DOMAIN-SUFFIX,ithome.com.tw
 DOMAIN-SUFFIX,linefriends.com.tw
 DOMAIN-SUFFIX,bbc.co.uk
 DOMAIN-SUFFIX,dailymail.co.uk
