@@ -34,6 +34,7 @@ DOMAIN-SUFFIX,imo.im
 DOMAIN-SUFFIX,npm.im
 DOMAIN-SUFFIX,lnkd.in
 DOMAIN-SUFFIX,gh.io
+DOMAIN-SUFFIX,cnn.io
 DOMAIN-SUFFIX,gcr.io
 DOMAIN-SUFFIX,git.io
 DOMAIN-SUFFIX,npm.io
@@ -48,6 +49,7 @@ DOMAIN-SUFFIX,getmdl.io
 DOMAIN-SUFFIX,github.io
 DOMAIN-SUFFIX,gitlab.io
 DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,apernet.io
 DOMAIN-SUFFIX,codecov.io
 DOMAIN-SUFFIX,codepen.io
 DOMAIN-SUFFIX,misskey.io
@@ -78,6 +80,7 @@ DOMAIN-SUFFIX,m.me
 DOMAIN-SUFFIX,fb.me
 DOMAIN-SUFFIX,wa.me
 DOMAIN-SUFFIX,line.me
+DOMAIN-SUFFIX,7mmtv.me
 DOMAIN-SUFFIX,pikpak.me
 DOMAIN-SUFFIX,proton.me
 DOMAIN-SUFFIX,binance.me
@@ -96,6 +99,7 @@ DOMAIN-SUFFIX,ok.ru
 DOMAIN-SUFFIX,tgstat.ru
 DOMAIN-SUFFIX,yandex.ru
 DOMAIN-SUFFIX,annas-archive.se
+DOMAIN-SUFFIX,crt.sh
 DOMAIN-SUFFIX,ouo.si
 DOMAIN-SUFFIX,nyaa.si
 DOMAIN-SUFFIX,notion.so
@@ -245,6 +249,7 @@ DOMAIN-SUFFIX,crypto.com
 DOMAIN-SUFFIX,deezer.com
 DOMAIN-SUFFIX,disqus.com
 DOMAIN-SUFFIX,dlsite.com
+DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,fandom.com
 DOMAIN-SUFFIX,feedly.com
 DOMAIN-SUFFIX,flickr.com
@@ -289,6 +294,7 @@ DOMAIN-SUFFIX,tumblr.com
 DOMAIN-SUFFIX,ubuntu.com
 DOMAIN-SUFFIX,vercel.com
 DOMAIN-SUFFIX,vikacg.com
+DOMAIN-SUFFIX,vmware.com
 DOMAIN-SUFFIX,yandex.com
 DOMAIN-SUFFIX,4shared.com
 DOMAIN-SUFFIX,adguard.com
@@ -310,6 +316,7 @@ DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,gumroad.com
 DOMAIN-SUFFIX,hetzner.com
 DOMAIN-SUFFIX,hostloc.com
+DOMAIN-SUFFIX,intodns.com
 DOMAIN-SUFFIX,javmost.com
 DOMAIN-SUFFIX,javwind.com
 DOMAIN-SUFFIX,jotform.com
@@ -464,6 +471,7 @@ DOMAIN-SUFFIX,redditmedia.com
 DOMAIN-SUFFIX,redditspace.com
 DOMAIN-SUFFIX,theguardian.com
 DOMAIN-SUFFIX,tradingview.com
+DOMAIN-SUFFIX,updownradar.com
 DOMAIN-SUFFIX,uptimerobot.com
 DOMAIN-SUFFIX,webpkgcache.com
 DOMAIN-SUFFIX,xvideos-cdn.com
@@ -541,6 +549,7 @@ DOMAIN-SUFFIX,wsj.net
 DOMAIN-SUFFIX,bwh1.net
 DOMAIN-SUFFIX,daum.net
 DOMAIN-SUFFIX,dynu.net
+DOMAIN-SUFFIX,ripe.net
 DOMAIN-SUFFIX,sony.net
 DOMAIN-SUFFIX,whrq.net
 DOMAIN-SUFFIX,1e100.net
@@ -681,12 +690,14 @@ DOMAIN-SUFFIX,privacytest.info
 DOMAIN-SUFFIX,dweb.link
 DOMAIN-SUFFIX,page.link
 DOMAIN-SUFFIX,sketch.cloud
+DOMAIN-SUFFIX,discourse.group
 DOMAIN-SUFFIX,spankbang.party
 DOMAIN-SUFFIX,javhd.today
 DOMAIN-SUFFIX,archive.today
 DOMAIN-SUFFIX,bgp.tools
 DOMAIN-SUFFIX,dnscheck.tools
 DOMAIN-SUFFIX,fb.watch
+DOMAIN-SUFFIX,ant.design
 DOMAIN-SUFFIX,mastodon.social
 DOMAIN-SUFFIX,x.company
 DOMAIN-SUFFIX,bsky.network
