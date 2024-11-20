@@ -11,6 +11,3 @@ http-response-jq ^https:\/\/api\.xiachufang\.com\/v2\/config\/get\.json$ 'del(.c
 # > 下厨房 - api.xiachufang.com
 ^https:\/\/api\.xiachufang\.com\/v2\/account\/feeds_v7\.json - reject // 作品推荐
 ^https:\/\/api\.xiachufang\.com\/v2\/mark_mission\/get_sticker_info\.json - reject // 横幅推广
-
-[MITM]
-hostname = %APPEND% api.xiachufang.com
