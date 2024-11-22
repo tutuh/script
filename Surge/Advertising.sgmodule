@@ -18,9 +18,9 @@ URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION data-type=text data="{}" // 发现页
 
 # > 有道翻译官 - gorgon.youdao.com
-^https:\/\/gorgon\.youdao\.com\/gorgon\/v2\/request\.s data-type=text data="{}" // 开屏广告
-^https:\/\/gorgon\.youdao\.com\/gorgon\/brand\/prefetch\.s data-type=text data="{}" // 开屏广告
-^https:\/\/gorgon\.youdao\.com\/gorgon\/request\.s data-type=text data="{}" // 首页横幅广
+^https:\/\/gorgon\.youdao\.com\/gorgon\/v2\/request\.s data-type=text data="{}" // 开屏
+^https:\/\/gorgon\.youdao\.com\/gorgon\/brand\/prefetch\.s data-type=text data="{}" // 开屏
+^https:\/\/gorgon\.youdao\.com\/gorgon\/request\.s data-type=text data="{}" // 首页横幅
 
 # > 肯德基 - res.kfc.com.cn
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data-type=text data="{}"
@@ -47,8 +47,8 @@ URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
 ^https:\/\/manga\.bilibili\.com\/twirp\/bookshelf\.v\d\.Bookshelf\/ListEmptyRecommend data-type=text data="{}" // 书架 - 漫画 - 你可能喜欢
 ^https:\/\/manga\.bilibili\.com\/twirp\/bookshelf\.v\d\.Bookshelf\/NovelRecommend data-type=text data="{}" // 书架 - 小说 - 你可能喜欢
 ^https:\/\/manga\.bilibili\.com\/twirp\/novel\.v\d\.Novel\/MoreRecommend data-type=text data="{}" // 小说 - 详情 - 更多推荐
-^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/AppInit data-type=text data="{}" // 首页 - 弹窗
-^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash data-type=text data="{}" // 开屏广告
+^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/AppInit data-type=text data="{}" // 首页弹窗
+^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash data-type=text data="{}" // 开屏
 
 [URL Rewrite]
 # > 通用广告关键词
