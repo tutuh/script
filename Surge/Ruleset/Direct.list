@@ -124,10 +124,10 @@ DOMAIN-SUFFIX,officewebapps.cn
 DOMAIN-SUFFIX,authing.co
 DOMAIN-SUFFIX,douban.fm
 DOMAIN-SUFFIX,jd.hk
-DOMAIN-SUFFIX,juejin.im
 DOMAIN-SUFFIX,netease.im
 DOMAIN-SUFFIX,gitee.io
 DOMAIN-SUFFIX,jianshu.io
+DOMAIN-SUFFIX,daocloud.io
 DOMAIN-SUFFIX,air-matters.io
 DOMAIN-SUFFIX,openinstall.io
 DOMAIN-SUFFIX,ele.me
@@ -747,6 +747,8 @@ DOMAIN-SUFFIX,steam.clngaa.com
 DOMAIN-SUFFIX,dl.eccdnx.com
 DOMAIN,www.layuicdn.com
 DOMAIN,cdnstatic.tencentcs.com
+DOMAIN,ocsp.globalsign.com
+DOMAIN,ocsp2.globalsign.com
 DOMAIN-SUFFIX,dl.pinyuncloud.com
 DOMAIN-SUFFIX,dl.bscstorage.net
 DOMAIN,cn.download.nvidia.com
