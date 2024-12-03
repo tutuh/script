@@ -52,6 +52,7 @@ DOMAIN-SUFFIX,moe
 DOMAIN-SUFFIX,rip
 DOMAIN-SUFFIX,xxx
 DOMAIN-SUFFIX,blog
+DOMAIN-SUFFIX,cafe
 DOMAIN-SUFFIX,goog
 DOMAIN-SUFFIX,party
 DOMAIN-SUFFIX,tools
@@ -165,6 +166,7 @@ DOMAIN-SUFFIX,cpuid.com
 DOMAIN-SUFFIX,debug.com
 DOMAIN-SUFFIX,deepl.com
 DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,figma.com
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,globo.com
 DOMAIN-SUFFIX,gmail.com
@@ -174,6 +176,7 @@ DOMAIN-SUFFIX,imgur.com
 DOMAIN-SUFFIX,intel.com
 DOMAIN-SUFFIX,issuu.com
 DOMAIN-SUFFIX,javhd.com
+DOMAIN-SUFFIX,jsbin.com
 DOMAIN-SUFFIX,kakao.com
 DOMAIN-SUFFIX,naver.com
 DOMAIN-SUFFIX,npmjs.com
@@ -221,6 +224,7 @@ DOMAIN-SUFFIX,grindr.com
 DOMAIN-SUFFIX,idrive.com
 DOMAIN-SUFFIX,ifixit.com
 DOMAIN-SUFFIX,iheart.com
+DOMAIN-SUFFIX,javbus.com
 DOMAIN-SUFFIX,kraken.com
 DOMAIN-SUFFIX,kucoin.com
 DOMAIN-SUFFIX,ledger.com
@@ -331,6 +335,7 @@ DOMAIN-SUFFIX,jsdelivr.com
 DOMAIN-SUFFIX,leetcode.com
 DOMAIN-SUFFIX,linecorp.com
 DOMAIN-SUFFIX,linkedin.com
+DOMAIN-SUFFIX,localazy.com
 DOMAIN-SUFFIX,mikrotik.com
 DOMAIN-SUFFIX,mixcloud.com
 DOMAIN-SUFFIX,mypikpak.com
@@ -556,6 +561,7 @@ DOMAIN-SUFFIX,azure-mobile.net
 DOMAIN-SUFFIX,azurewebsites.net
 DOMAIN-SUFFIX,cloudfunctions.net
 DOMAIN-SUFFIX,eu.org
+DOMAIN-SUFFIX,kde.org
 DOMAIN-SUFFIX,npr.org
 DOMAIN-SUFFIX,rfa.org
 DOMAIN-SUFFIX,4cdn.org
