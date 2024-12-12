@@ -85,6 +85,7 @@ DOMAIN-SUFFIX,binance.me
 DOMAIN-SUFFIX,hanime1.me
 DOMAIN-SUFFIX,textnow.me
 DOMAIN-SUFFIX,line-beta.me
+DOMAIN-SUFFIX,booth.pm
 DOMAIN-SUFFIX,jav.pw
 DOMAIN-SUFFIX,bgm.tv
 DOMAIN-SUFFIX,muku.tv
@@ -128,6 +129,7 @@ DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,dish.com
 DOMAIN-SUFFIX,dynu.com
 DOMAIN-SUFFIX,etsy.com
+DOMAIN-SUFFIX,fide.com
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt2.com
@@ -146,6 +148,7 @@ DOMAIN-SUFFIX,meta.com
 DOMAIN-SUFFIX,mexc.com
 DOMAIN-SUFFIX,nest.com
 DOMAIN-SUFFIX,noip.com
+DOMAIN-SUFFIX,note.com
 DOMAIN-SUFFIX,okex.com
 DOMAIN-SUFFIX,snap.com
 DOMAIN-SUFFIX,t66y.com
@@ -175,6 +178,7 @@ DOMAIN-SUFFIX,huobi.com
 DOMAIN-SUFFIX,imgur.com
 DOMAIN-SUFFIX,intel.com
 DOMAIN-SUFFIX,issuu.com
+DOMAIN-SUFFIX,javdb.com
 DOMAIN-SUFFIX,javhd.com
 DOMAIN-SUFFIX,jsbin.com
 DOMAIN-SUFFIX,kakao.com
@@ -242,6 +246,7 @@ DOMAIN-SUFFIX,oracle.com
 DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,pinimg.com
 DOMAIN-SUFFIX,probit.com
+DOMAIN-SUFFIX,pusher.com
 DOMAIN-SUFFIX,rawgit.com
 DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,render.com
@@ -251,6 +256,7 @@ DOMAIN-SUFFIX,setapp.com
 DOMAIN-SUFFIX,sketch.com
 DOMAIN-SUFFIX,sophos.com
 DOMAIN-SUFFIX,supjav.com
+DOMAIN-SUFFIX,talkcc.com
 DOMAIN-SUFFIX,thisav.com
 DOMAIN-SUFFIX,tineye.com
 DOMAIN-SUFFIX,tumblr.com
@@ -272,6 +278,7 @@ DOMAIN-SUFFIX,blogger.com
 DOMAIN-SUFFIX,cbsnews.com
 DOMAIN-SUFFIX,dnsleak.com
 DOMAIN-SUFFIX,doujins.com
+DOMAIN-SUFFIX,eporner.com
 DOMAIN-SUFFIX,firefox.com
 DOMAIN-SUFFIX,foxnews.com
 DOMAIN-SUFFIX,godaddy.com
@@ -291,6 +298,7 @@ DOMAIN-SUFFIX,nytimes.com
 DOMAIN-SUFFIX,patreon.com
 DOMAIN-SUFFIX,picacgp.com
 DOMAIN-SUFFIX,picacgy.com
+DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,redtube.com
 DOMAIN-SUFFIX,reuters.com
 DOMAIN-SUFFIX,scpwiki.com
@@ -324,7 +332,6 @@ DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,dribbble.com
 DOMAIN-SUFFIX,engadget.com
 DOMAIN-SUFFIX,euronews.com
-DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,flipkart.com
 DOMAIN-SUFFIX,gameloft.com
 DOMAIN-SUFFIX,ghostery.com
@@ -433,6 +440,7 @@ DOMAIN-SUFFIX,itasoftware.com
 DOMAIN-SUFFIX,javtrailers.com
 DOMAIN-SUFFIX,jumpdesktop.com
 DOMAIN-SUFFIX,linefriends.com
+DOMAIN-SUFFIX,list-manage.com
 DOMAIN-SUFFIX,raspberrypi.com
 DOMAIN-SUFFIX,redditmedia.com
 DOMAIN-SUFFIX,redditspace.com
@@ -441,6 +449,7 @@ DOMAIN-SUFFIX,theguardian.com
 DOMAIN-SUFFIX,tradingview.com
 DOMAIN-SUFFIX,updownradar.com
 DOMAIN-SUFFIX,uptimerobot.com
+DOMAIN-SUFFIX,usertesting.com
 DOMAIN-SUFFIX,webpkgcache.com
 DOMAIN-SUFFIX,xvideos-cdn.com
 DOMAIN-SUFFIX,browserleaks.com
@@ -479,6 +488,7 @@ DOMAIN-SUFFIX,redtubepremium.com
 DOMAIN-SUFFIX,steamcommunity.com
 DOMAIN-SUFFIX,washingtonpost.com
 DOMAIN-SUFFIX,businessinsider.com
+DOMAIN-SUFFIX,downdetectorapi.com
 DOMAIN-SUFFIX,perfect-privacy.com
 DOMAIN-SUFFIX,speedtestcustom.com
 DOMAIN-SUFFIX,strongleakstest.com
@@ -487,11 +497,11 @@ DOMAIN-SUFFIX,cloudflareaccess.com
 DOMAIN-SUFFIX,cloudflarestatus.com
 DOMAIN-SUFFIX,elasticbeanstalk.com
 DOMAIN-SUFFIX,fastly-analytics.com
+DOMAIN-SUFFIX,smashingmagazine.com
 DOMAIN-SUFFIX,surge-activation.com
 DOMAIN-SUFFIX,1passwordservices.com
 DOMAIN-SUFFIX,chromeexperiments.com
 DOMAIN-SUFFIX,cloudflareresolve.com
-DOMAIN-SUFFIX,facebook-hardware.com
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,lineshoppingseller.com
 DOMAIN-SUFFIX,returnyoutubedislike.com
@@ -592,12 +602,14 @@ DOMAIN-SUFFIX,exhentai.org
 DOMAIN-SUFFIX,sagernet.org
 DOMAIN-SUFFIX,wikidata.org
 DOMAIN-SUFFIX,wikinews.org
+DOMAIN-SUFFIX,toolforge.org
 DOMAIN-SUFFIX,travis-ci.org
 DOMAIN-SUFFIX,wikibooks.org
 DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,wikipedia.org
 DOMAIN-SUFFIX,wikiquote.org
 DOMAIN-SUFFIX,wireshark.org
+DOMAIN-SUFFIX,wordpress.org
 DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,getoutline.org
 DOMAIN-SUFFIX,greasyfork.org
@@ -643,13 +655,16 @@ DOMAIN-SUFFIX,vercel.live
 DOMAIN-SUFFIX,notion.site
 DOMAIN-SUFFIX,sketch.cloud
 DOMAIN-SUFFIX,discourse.group
+DOMAIN-SUFFIX,smashing.media
 DOMAIN-SUFFIX,javhd.today
 DOMAIN-SUFFIX,archive.today
 DOMAIN-SUFFIX,ant.design
+DOMAIN-SUFFIX,bsky.social
 DOMAIN-SUFFIX,mastodon.social
 DOMAIN-SUFFIX,x.company
 DOMAIN-SUFFIX,c.mi.com
 DOMAIN,wego.here.com
+DOMAIN,help.ubnt.com
 DOMAIN,ccmdl.adobe.com
 DOMAIN-SUFFIX,edns.ip-api.com
 DOMAIN,ees.elsevier.com
@@ -661,9 +676,9 @@ DOMAIN-SUFFIX,ip-scan.adspower.net
 DOMAIN,store.ui.com.cn
 DOMAIN-KEYWORD,google
 DOMAIN-KEYWORD,blogspot
+DOMAIN-KEYWORD,facebook
 DOMAIN-KEYWORD,whatsapp
 DOMAIN-KEYWORD,discord
 DOMAIN-KEYWORD,sci-hub
 DOMAIN-KEYWORD,dropbox
 DOMAIN-KEYWORD,pinterest
-DOMAIN-KEYWORD,porn
