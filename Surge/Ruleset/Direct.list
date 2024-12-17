@@ -1,24 +1,5 @@
 # Direct
 
-# MyList
-DOMAIN-SUFFIX,13th.tech
-DOMAIN-SUFFIX,423down.com
-DOMAIN-SUFFIX,bokecc.com
-DOMAIN-SUFFIX,chaipip.com
-DOMAIN-SUFFIX,chinaplay.store
-DOMAIN-SUFFIX,hrtsea.com
-DOMAIN-SUFFIX,kaikeba.com
-DOMAIN-SUFFIX,laomo.me
-DOMAIN-SUFFIX,mpyit.com
-DOMAIN-SUFFIX,msftconnecttest.com
-DOMAIN-SUFFIX,msftncsi.com
-DOMAIN-SUFFIX,qupu123.com
-DOMAIN-SUFFIX,pdfwifi.com
-DOMAIN-SUFFIX,zhenguanyu.biz
-DOMAIN-SUFFIX,zhenguanyu.com
-DOMAIN-SUFFIX,snapdrop.net
-DOMAIN-SUFFIX,tebex.io
-
 # CN域名直连(中国|公司|网络)
 DOMAIN-SUFFIX,cn
 DOMAIN-SUFFIX,xn--fiqs8s
@@ -380,7 +361,6 @@ DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,qqmail.com
 DOMAIN-SUFFIX,qqurl.com
 DOMAIN-SUFFIX,smtcdns.com
-DOMAIN-SUFFIX,smtcdns.net
 DOMAIN-SUFFIX,soso.com
 DOMAIN-SUFFIX,tencent-cloud.net
 DOMAIN-SUFFIX,tencent.com
