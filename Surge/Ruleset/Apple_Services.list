@@ -9,6 +9,10 @@ DOMAIN,books.itunes.apple.com // iBooks Store download
 DOMAIN,facetime.apple.com // FaceTime Links
 DOMAIN,lookup-api.apple.com // Look Up
 DOMAIN,radio.itunes.apple.com // Apple Music Radio
+DOMAIN,apple-relay.apple.com // Apple Intelligence
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,cp4.cloudflare.com
 
 # > Web Preview
 DOMAIN,apps.apple.com
@@ -28,4 +32,3 @@ DOMAIN,apple.comscoreresearch.com
 
 # > TestFlight
 DOMAIN,testflight.apple.com
-
