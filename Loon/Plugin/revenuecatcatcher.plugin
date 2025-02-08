@@ -7,7 +7,7 @@
 #!date = 2023-12-15 00:00:00
 
 [Script]
-http-response https:\/\/api\.revenuecat\.com\/v1\/(product_entitlement_mapping|subscribers\/.+\/(offerings|products)) script-path=https://raw.githubusercontent.com/leey668/pyer/main/revenuecatcatcher.js, requires-body=true, timeout=60, tag=revenuecatcatcher
+http-request https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/subscribers\/.+\/offerings script-path=https://raw.githubusercontent.com/leey668/pyer/main/get_product_entitlement_mapping.js, timeout=60, tag=get_product_entitlement_mapping
 
 [Mitm]
-hostname = api.revenuecat.com
+hostname = api.revenuecat.com, api.rc-backup.com
