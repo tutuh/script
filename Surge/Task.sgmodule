@@ -4,7 +4,7 @@
 #!category=签到模块
 
 [Script]
-哔哩哔哩_签到 = type=cron,cronexp=30 3 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/refs/heads/main/Script/Task/BiliBili.js
+哔哩哔哩_签到 = type=cron,cronexp=55 7 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/refs/heads/main/Script/Task/BiliBili.js
 
 哔哩哔哩漫画_签到 = type=cron,cronexp=25 0 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
 
