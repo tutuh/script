@@ -109,12 +109,10 @@ DOMAIN-SUFFIX,flickr.com
 DOMAIN-SUFFIX,flipboard.com
 DOMAIN-SUFFIX,gfx.ms
 DOMAIN-SUFFIX,gongm.in
-DOMAIN-SUFFIX,hulu.com
 DOMAIN-SUFFIX,id.heroku.com
 DOMAIN-SUFFIX,io.io
 DOMAIN-SUFFIX,issuu.com
 DOMAIN-SUFFIX,ixquick.com
-DOMAIN-SUFFIX,jtvnw.net
 DOMAIN-SUFFIX,kat.cr
 DOMAIN-SUFFIX,kik.com
 DOMAIN-SUFFIX,kobo.com
@@ -132,7 +130,6 @@ DOMAIN-SUFFIX,netdna-cdn.com
 DOMAIN-SUFFIX,nintendo.net
 DOMAIN-SUFFIX,nsstatic.net
 DOMAIN-SUFFIX,nytstyle.com
-DOMAIN-SUFFIX,overcast.fm
 DOMAIN-SUFFIX,openvpn.net
 DOMAIN-SUFFIX,periscope.tv
 DOMAIN-SUFFIX,pinimg.com
@@ -146,8 +143,6 @@ DOMAIN-SUFFIX,sfx.ms
 DOMAIN-SUFFIX,shadowsocks.org
 DOMAIN-SUFFIX,slack-edge.com
 DOMAIN-SUFFIX,smartdnsproxy.com
-DOMAIN-SUFFIX,sndcdn.com
-DOMAIN-SUFFIX,soundcloud.com
 DOMAIN-SUFFIX,startpage.com
 DOMAIN-SUFFIX,staticflickr.com
 DOMAIN-SUFFIX,symauth.com
@@ -161,7 +156,6 @@ DOMAIN-SUFFIX,torproject.org
 DOMAIN-SUFFIX,trustasiassl.com
 DOMAIN-SUFFIX,tumblr.co
 DOMAIN-SUFFIX,tumblr.com
-DOMAIN-SUFFIX,tvb.com
 DOMAIN-SUFFIX,txmblr.com
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,vimeo.com
@@ -189,7 +183,6 @@ IP-CIDR,54.226.0.0/15,no-resolve
 IP-CIDR,54.230.156.0/22,no-resolve
 
 # BBC
-DOMAIN-KEYWORD,uk-live
 DOMAIN-SUFFIX,bbc.co
 DOMAIN-SUFFIX,bbc.com
 
@@ -276,11 +269,6 @@ DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt2.com
 DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,youtube-nocookie.com
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,yt.be
-DOMAIN-SUFFIX,ytimg.com
 IP-CIDR,74.125.0.0/16,no-resolve
 IP-CIDR,173.194.0.0/16,no-resolve
 
@@ -366,10 +354,6 @@ DOMAIN-SUFFIX,bongacams.com
 DOMAIN-SUFFIX,chaturbate.com
 DOMAIN-SUFFIX,dditscdn.com
 DOMAIN-SUFFIX,livejasmin.com
-DOMAIN-SUFFIX,phncdn.com
-DOMAIN-SUFFIX,phprcdn.com
-DOMAIN-SUFFIX,pornhub.com
-DOMAIN-SUFFIX,pornhubpremium.com
 DOMAIN-SUFFIX,rdtcdn.com
 DOMAIN-SUFFIX,redtube.com
 DOMAIN-SUFFIX,sb-cd.com
@@ -416,11 +400,6 @@ DOMAIN,steampipe.akamaized.net
 # TapTap
 DOMAIN-SUFFIX,tap.io
 DOMAIN-SUFFIX,taptap.tw
-
-# Twitch
-DOMAIN-SUFFIX,twitch.tv
-DOMAIN-SUFFIX,ttvnw.net
-DOMAIN-KEYWORD,ttvnw
 
 # Twitter
 DOMAIN-SUFFIX,t.co
@@ -487,7 +466,6 @@ DOMAIN-SUFFIX,icntv.xyz
 DOMAIN-SUFFIX,flzbcdn.xyz
 
 #华文电视
-DOMAIN-SUFFIX,ocnttv.com
 
 # VikACG
 DOMAIN-SUFFIX,vikacg.com
