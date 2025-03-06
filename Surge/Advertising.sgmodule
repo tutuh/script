@@ -66,7 +66,7 @@ http-response-jq ^https:\/\/api\.xiachufang\.com\/v2\/config\/get\.json$ 'del(.c
 #(?i)\b\/ad\? - reject
 (?i)\b\/ads\? - reject
 
-(?i)\badvertisement - reject
+#(?i)\badvertisement - reject
 (?i)\badvertising - reject
 (?i)\bsplash_screen - reject
 
@@ -155,7 +155,7 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 # > 马蜂窝 - mapi.mafengwo.cn
 ^https:\/\/mapi\.mafengwo\.cn\/ad\/get_launch_ad_list\/v - reject
 # > 秒拍 - v?-api.miaopai.com
-#^https?:\/\/v\d-api\.miaopai\.com\/miaopai\/advertisement\/ - reject
+^https?:\/\/v\d-api\.miaopai\.com\/miaopai\/advertisement\/ - reject
 
 # (P)
 # > 票根 - pss.txffp.com
@@ -189,7 +189,7 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 ^https:\/\/api\.xiachufang\.com\/v2\/account\/feeds_v7\.json - reject // 作品推荐
 ^https:\/\/api\.xiachufang\.com\/v2\/mark_mission\/get_sticker_info\.json - reject // 横幅推广
 # > 小牛 - app-api.niu.com
-#^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\/ - reject
+^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\/ - reject
 
 # (Y)
 # > 萤石 - i.ys7.com
