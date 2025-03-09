@@ -10,9 +10,9 @@
 #!date = 2024-04-19 00:00:00
 
 [Script]
-http-response ^https?:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/leey668/pyer/main/revenuecat.js, requires-body=true, timeout=60, tag=revenuecat_1
+http-response ^https?:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/leey668/pyer/main/revenuecat.js, requires-body=true, timeout=60, tag=revenuecat_1
 
-http-request ^https?:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/leey668/pyer/main/revenuecat.js, timeout=60, tag=revenuecat_2
+http-request ^https?:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/leey668/pyer/main/revenuecat.js, timeout=60, tag=revenuecat_2
 
 
 [Mitm]
