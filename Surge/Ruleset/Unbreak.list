@@ -48,6 +48,7 @@ DOMAIN,vi.l.qq.com
 # > Umeng
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
+DOMAIN,ulogs.umeng.com //随申办
 
 # > Epicgames
 DOMAIN-SUFFIX,ol.epicgames.com
