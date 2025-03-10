@@ -259,6 +259,7 @@ DOMAIN-SUFFIX,miui.com
 DOMAIN-SUFFIX,xiaomi.com
 DOMAIN-SUFFIX,xiaomi.net
 DOMAIN-SUFFIX,xiaomicp.com
+DOMAIN-SUFFIX,mijia.tech
 
 # NetEase
 DOMAIN-SUFFIX,126.com
@@ -278,6 +279,8 @@ DOMAIN-SUFFIX,pptv.com
 # PDD 拼多多
 DOMAIN-SUFFIX,pinduoduo.com
 DOMAIN-SUFFIX,yangkeduo.com
+DOMAIN-SUFFIX,pddugc.com
+DOMAIN-SUFFIX,pddpic.co
 
 # Sina
 DOMAIN-SUFFIX,leju.com
