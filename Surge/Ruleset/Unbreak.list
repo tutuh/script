@@ -58,5 +58,5 @@ DOMAIN-SUFFIX,dizhensubao.getui.com
 # > Strava
 DOMAIN,analytics.strava.com
 
-# > Qardio
-DOMAIN,api.segment.io
+# > 随申办市民云
+DOMAIN-KEYWORD,eshimin
