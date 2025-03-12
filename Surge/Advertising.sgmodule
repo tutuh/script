@@ -4,7 +4,7 @@
 
 [Rule]
 # > 广告联盟
-AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEYWORD,-misc-)),REJECT
+#AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEYWORD,-misc-)),REJECT
 # > 京东
 URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
 
