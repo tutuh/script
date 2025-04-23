@@ -173,6 +173,7 @@ DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net
 DOMAIN-SUFFIX,www.apple.com.edgekey.net
 DOMAIN-SUFFIX,www.apple.com
 DOMAIN-SUFFIX,xp.apple.com
+DOMAIN-KEYWORD,smp-device
 
 # > Apple_CN
 DOMAIN,gs-loc-cn.apple.com
