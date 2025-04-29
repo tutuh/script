@@ -67,7 +67,7 @@ http-response-jq ^https:\/\/api\.xiachufang\.com\/v2\/config\/get\.json$ 'del(.c
 (?i)\b\/ads\? - reject
 
 (?i)\badvertisement - reject
-(?i)\badvertising - reject
+#(?i)\badvertising - reject
 (?i)\bsplash_screen - reject
 
 # (0~9)
