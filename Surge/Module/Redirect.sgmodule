@@ -1,5 +1,6 @@
 #!name=重定向优化
 #!desc=URL Redirect
+#!category=广告拦截
 
 [URL Rewrite]
 # Redirect Google Search Service
