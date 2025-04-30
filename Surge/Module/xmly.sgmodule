@@ -1,6 +1,6 @@
 #!name=喜马拉雅
 #!desc=喜马拉雅APP 去广告
-#!category=Tutu
+#!category=广告拦截
 
 [General]
 # > 喜马拉雅 - DNS劫持
