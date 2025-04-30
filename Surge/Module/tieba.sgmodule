@@ -1,6 +1,6 @@
 #!name=百度贴吧
 #!desc=百度贴吧APP 去广告
-#!category=Tutu
+#!category=广告拦截
 #!arguments=per_filter_video:0
 #!arguments-desc=per_filter_video:设置为1则推荐页不展示视频贴
 #!author=app2smile
