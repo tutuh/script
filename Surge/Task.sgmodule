@@ -8,8 +8,6 @@
 
 顺丰速运_签到 = type=cron,cronexp=55 1 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/sfsy.js
 
-蜜雪冰城_签到 = type=cron,cronexp=55 2 0 * * *,wake-system=1,timeout=60,script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js
-
 百度贴吧_签到 = type=cron,cronexp="40 3,4 0 * * *",wake-system=1,timeout=600,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
 
 Boxjs 数据备份 = type=cron,cronexp=10 8 1 */3 * *,wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
