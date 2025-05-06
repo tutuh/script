@@ -4,7 +4,7 @@
 #!category=签到模块
 
 [Script]
-途虎养车_签到 = type=cron,cronexp=15 1 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/tuhu.js
+途虎养车_签到 = type=cron,cronexp=15 1 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js
 
 顺丰速运_签到 = type=cron,cronexp=55 1 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/sfsy.js
 
