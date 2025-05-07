@@ -36,45 +36,20 @@ DOMAIN,app-ad.variflight.com
 
 # ======= (G) ======= #
 # > 广告联盟
+DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
-DOMAIN-KEYWORD,ads.g.doubleclick
+DOMAIN-KEYWORD,-tos.pstatp.com
 DOMAIN-KEYWORD,asiad.byteactivity
 DOMAIN-KEYWORD,pangolin-sdk-toutiao
-DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-KEYWORD,pglstatp-toutiao
+DOMAIN-KEYWORD,pangolin.snssdk.com
 DOMAIN-KEYWORD,video-cn.snssdk.com
-DOMAIN-SUFFIX,ads.linkedin.com
-DOMAIN-SUFFIX,ads.vungle.com
-DOMAIN-SUFFIX,adservice.google.com
-DOMAIN-SUFFIX,adukwai.com
-DOMAIN-SUFFIX,applovin.com
-DOMAIN-SUFFIX,applvn.com
-DOMAIN-SUFFIX,appsflyer.com
-DOMAIN-SUFFIX,appsflyersdk.com
-DOMAIN-SUFFIX,kuaishouzt.com
-DOMAIN-SUFFIX,miaozhen.com
-DOMAIN-SUFFIX,ubixioe.com
-DOMAIN-SUFFIX,v.smtcdns.com
-DOMAIN,ad.zijieapi.com
-DOMAIN,adapi.izuiyou.com
-DOMAIN,adtracker.adfunlink.com
-DOMAIN,dig.bdurl.net
-DOMAIN,dsp-x.jd.com
-DOMAIN,et.tanx.com
-DOMAIN,gdfp.gifshow.com
-DOMAIN,init.supersonicads.com
-DOMAIN,janapi.jd.com
-DOMAIN,lf-ad-ies.bytecdn.cn
-DOMAIN,mercury-gateway.ixiaochuan.cn
-DOMAIN,mon.toutiaocloud.com
-DOMAIN,open.e.kuaishou.com
-DOMAIN,open.kuaishou.com
-DOMAIN,pagead2.googlesyndication-cn.com
-DOMAIN,pagead2.googlesyndication.com
-DOMAIN,sdk.e.qq.com
-DOMAIN,tangram.e.qq.com
-DOMAIN,ws.tapjoyads.com
-DOMAIN,www.googleadservices.com
+DOMAIN-SUFFIX,getui.com
+DOMAIN-SUFFIX,getui.net
+DOMAIN-SUFFIX,gepush.com
+DOMAIN-SUFFIX,igexin.com
+DOMAIN-SUFFIX,log.aliyuncs.com
+DOMAIN-SUFFIX,zlsdk.1rtb.net
 # > 高德
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
