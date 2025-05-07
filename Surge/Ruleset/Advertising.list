@@ -81,6 +81,24 @@ DOMAIN,ws.ksmobile.net
 DOMAIN,dns.jd.com
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
+# > 今日头条
+DOMAIN,dm.toutiao.com
+DOMAIN-KEYWORD,ad.toutiao.com
+DOMAIN-KEYWORD,clk.gentags.net
+DOMAIN-KEYWORD,dm.toutiao.com
+DOMAIN-KEYWORD,dm.pstatp.com
+DOMAIN-KEYWORD,dm.bytedance.com
+DOMAIN-KEYWORD,uop.umeng.com
+DOMAIN-KEYWORD,m.suning.com
+DOMAIN-KEYWORD,adshare.toutiao.com
+DOMAIN-KEYWORD,tunion-api.m.taobao.com
+DOMAIN-KEYWORD,s1.pstatp.com
+DOMAIN-KEYWORD,s2.pstatp.com
+DOMAIN-KEYWORD,s3.pstatp.com
+DOMAIN-KEYWORD,a3.pstatp.com
+DOMAIN-KEYWORD,a3.bytecdn.cn
+DOMAIN,ad.toutiao.com
+DOMAIN,dsp.toutiao.com
 
 # ======= (K) ======= #
 # > 酷我音乐
