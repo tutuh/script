@@ -14,6 +14,10 @@ DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,cp4.cloudflare.com
 
+# > Mi
+DOMAIN,c.mi.com
+DOMAIN,new.c.mi.com
+
 # > Web Preview
 DOMAIN,apps.apple.com
 DOMAIN,books.apple.com
