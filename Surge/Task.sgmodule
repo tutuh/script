@@ -10,6 +10,8 @@
 
 百度贴吧_签到 = type=cron,cronexp="40 3,4 0 * * *",wake-system=1,timeout=600,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
 
+海信爱家_签到 = type=cron,cronexp=52 2 0 * * *,timeout=500,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js
+
 Boxjs 数据备份 = type=cron,cronexp=10 8 1 */3 * *,wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
 
 #Boxjs 数据恢复 = type=cron,cronexp=30 10 5 * * *,wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js
