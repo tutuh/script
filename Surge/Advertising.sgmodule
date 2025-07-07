@@ -14,21 +14,19 @@ http-response-jq ^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v1\.(?:Comic\/Ap
 
 [Map Local]
 # > 向日葵远程 - client-api-v?.oray.com
-^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP data-type=text data="{}" // 开屏
-^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE data-type=text data="{}" // 首页
-^https?:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION data-type=text data="{}" // 发现页
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_iOS_DEVICE_FREE\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # > 有道翻译官 - gorgon.youdao.com
-^https:\/\/gorgon\.youdao\.com\/gorgon\/v2\/request\.s data-type=text data="{}" // 开屏
-^https:\/\/gorgon\.youdao\.com\/gorgon\/brand\/prefetch\.s data-type=text data="{}" // 开屏
-^https:\/\/gorgon\.youdao\.com\/gorgon\/request\.s data-type=text data="{}" // 首页横幅
+^https:\/\/gorgon\.youdao\.com\/gorgon\/v2\/request\.s data-type=text data="{}" status-code=200 header="Content-Type:application/json" // 开屏
+^https:\/\/gorgon\.youdao\.com\/gorgon\/brand\/prefetch\.s data-type=text data="{}" status-code=200 header="Content-Type:application/json"  // 开屏
+^https:\/\/gorgon\.youdao\.com\/gorgon\/request\.s data-type=text data="{}" status-code=200 header="Content-Type:application/json" // 首页横幅
 
 # > 肯德基 - res.kfc.com.cn
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data-type=text data="{}"
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data-type=text data="{}"
 
 # > 斗鱼直播 - rtbapi.douyucdn.cn
-^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data-type=text data="{}"
+^https:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # > 顺丰速运 - ccsp-egmas.sf-express.com, shopic.sf-express.com
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade data-type=text data="{}"
