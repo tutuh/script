@@ -9,10 +9,6 @@
 URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
 
 [Body Rewrite]
-# > 下厨房 - api.xiachufang.com
-http-response-jq ^https:\/\/api\.xiachufang\.com\/v2\/homepage\/paged_waterfall_recommendations\.json$ 'del(.multiplex_cells[] | select(.recommendation_cell.impression_sensor_events[]?.properties.target_type? == "ad"))' // 信息流广告
-http-response-jq ^https:\/\/api\.xiachufang\.com\/v2\/config\/get\.json$ 'del(.content.tab_name[] | select(. == "减脂" or . == "商店" or . == "分类"))' // 精简
-
 # > 哔哩哔哩漫画 - manga.bilibili.com
 http-response-jq ^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v1\.(?:Comic\/AppInit|Home\/HomeFeed)\? '.data as $data | .data[("activity_tab", "flash", "operate") | select($data[.])] = null | if .data.feeds then .data.feeds |= map(select(.type | IN(15, 30) | not)) end'
 
@@ -171,10 +167,6 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ - reject
 
 # (X)
-# > 下厨房 - api.xiachufang.com
-^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject // 开屏
-^https:\/\/api\.xiachufang\.com\/v2\/account\/feeds_v7\.json - reject // 作品推荐
-^https:\/\/api\.xiachufang\.com\/v2\/mark_mission\/get_sticker_info\.json - reject // 横幅推广
 # > 小牛 - app-api.niu.com
 ^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\/ - reject
 
@@ -189,4 +181,4 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 ^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ - reject
 
 [MITM]
-hostname = %APPEND% api.xiachufang.com, manga.bilibili.com, client-api-v?.oray.com, gorgon.youdao.com, res.kfc.com.cn, rtbapi.douyucdn.cn, ccsp-egmas.sf-express.com, shopic.sf-express.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, home.mi.com, capi.mwee.cn, api.mcd.cn, mapi.mafengwo.cn, v?-api.miaopai.com, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, m.tuniu.com, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
+hostname = %APPEND% manga.bilibili.com, client-api-v?.oray.com, gorgon.youdao.com, res.kfc.com.cn, rtbapi.douyucdn.cn, ccsp-egmas.sf-express.com, shopic.sf-express.com, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, home.mi.com, capi.mwee.cn, api.mcd.cn, mapi.mafengwo.cn, v?-api.miaopai.com, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, m.tuniu.com, gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
