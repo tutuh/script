@@ -3,8 +3,6 @@
 #!category=广告拦截
 
 [Rule]
-# > 广告联盟
-# AND,((OR,((DOMAIN-SUFFIX,amemv.com), (DOMAIN-SUFFIX,zijieapi.com))), (DOMAIN-KEYWORD,-misc-)),REJECT
 # > 京东
 URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
 
@@ -14,27 +12,27 @@ http-response-jq ^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v1\.(?:Comic\/Ap
 
 [Map Local]
 # > 向日葵远程 - client-api-v?.oray.com
-^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_iOS_DEVICE_FREE\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_iOS_DEVICE_FREE\? data-type=text data="{}" status-code=200
 
 # > 有道翻译官 - gorgon.youdao.com
-^https:\/\/gorgon\.youdao\.com\/gorgon\/v2\/request\.s data-type=text data="{}" status-code=200 header="Content-Type:application/json" // 开屏
-^https:\/\/gorgon\.youdao\.com\/gorgon\/brand\/prefetch\.s data-type=text data="{}" status-code=200 header="Content-Type:application/json"  // 开屏
-^https:\/\/gorgon\.youdao\.com\/gorgon\/request\.s data-type=text data="{}" status-code=200 header="Content-Type:application/json" // 首页横幅
+^https:\/\/gorgon\.youdao\.com\/gorgon\/v2\/request\.s data-type=text data="{}" status-code=200 // 开屏
+^https:\/\/gorgon\.youdao\.com\/gorgon\/brand\/prefetch\.s data-type=text data="{}" status-code=200  // 开屏
+^https:\/\/gorgon\.youdao\.com\/gorgon\/request\.s data-type=text data="{}" status-code=200 // 首页横幅
 
 # > 肯德基 - res.kfc.com.cn
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data-type=text data="{}"
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data-type=text data="{}"
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data-type=text data="{}" status-code=200
+^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? data-type=text data="{}" status-code=200
 
 # > 斗鱼直播 - rtbapi.douyucdn.cn
-^https:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data-type=text data="{}" status-code=200
 
 # > 顺丰速运 - ccsp-egmas.sf-express.com, shopic.sf-express.com
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade data-type=text data="{}"
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ data-type=text data="{}"
-^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen data-type=text data="{}"
+^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade data-type=text data="{}" status-code=200
+^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ data-type=text data="{}" status-code=200
+^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen data-type=text data="{}" status-code=200
 
 # > 哔哩哔哩漫画
-^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v1\.Comic\/(?:Flash|ListFlash|GetActivityTab|GetBubbles)\? header="content-type: application/json" data-type=text data="{}"
+^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v1\.Comic\/(?:Flash|ListFlash|GetActivityTab|GetBubbles)\? data-type=text data="{}" status-code=200
 
 [URL Rewrite]
 # > 通用广告关键词
