@@ -5,9 +5,9 @@ DOMAIN-KEYWORD,adservice
 
 # ======= (0) ======= #
 # > 360
-DOMAIN,ad.iot.360.cn
 DOMAIN,ad.jia.360.cn
 DOMAIN,ad.life.360.cn
+DOMAIN,ad.iot.360.cn
 
 # ======= (A) ======= #
 # > Apple
@@ -50,9 +50,6 @@ DOMAIN-SUFFIX,gepush.com
 DOMAIN-SUFFIX,igexin.com
 DOMAIN-SUFFIX,log.aliyuncs.com
 DOMAIN-SUFFIX,zlsdk.1rtb.net
-# > 高德
-DOMAIN,amap-aos-info-nogw.amap.com
-DOMAIN,free-aos-cdn-image.amap.com
 
 # ======= (H) ======= #
 # > 虎扑
@@ -77,34 +74,14 @@ DOMAIN,minfo.wps.cn
 DOMAIN,mobad.ijinshan.com
 DOMAIN,ups.ksmobile.net
 DOMAIN,ws.ksmobile.net
-# > 京东
-DOMAIN,dns.jd.com
-IP-CIDR,101.124.19.122/32,no-resolve
-IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
 # > 今日头条
-DOMAIN,dm.toutiao.com
-DOMAIN-KEYWORD,ad.toutiao.com
-DOMAIN-KEYWORD,clk.gentags.net
-DOMAIN-KEYWORD,dm.toutiao.com
-DOMAIN-KEYWORD,dm.pstatp.com
-DOMAIN-KEYWORD,dm.bytedance.com
-DOMAIN-KEYWORD,uop.umeng.com
-DOMAIN-KEYWORD,m.suning.com
-DOMAIN-KEYWORD,adshare.toutiao.com
-DOMAIN-KEYWORD,tunion-api.m.taobao.com
-DOMAIN-KEYWORD,s1.pstatp.com
-DOMAIN-KEYWORD,s2.pstatp.com
-DOMAIN-KEYWORD,s3.pstatp.com
-DOMAIN-KEYWORD,a3.pstatp.com
-DOMAIN-KEYWORD,a3.bytecdn.cn
+DOMAIN-SUFFIX,pangolin-dsp-toutiao.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
 DOMAIN,ad.toutiao.com
 DOMAIN,dsp.toutiao.com
-
-# ======= (K) ======= #
-# > 酷我音乐
-DOMAIN,g.koowo.com
-DOMAIN,mobilead.kuwo.cn
-DOMAIN,rich.kuwo.cn
+DOMAIN,pangolin.snssdk.com
 
 # ======= (L) ======= #
 # > 蓝奏云
