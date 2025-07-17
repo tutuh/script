@@ -1,8 +1,5 @@
 # Proxy
 
-# > TestFlight
-DOMAIN,testflight.apple.com
-
 # 国外域名
 DOMAIN-SUFFIX,eu
 DOMAIN-SUFFIX,hk
