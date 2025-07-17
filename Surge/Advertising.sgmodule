@@ -2,10 +2,6 @@
 #!desc=Block Advertising
 #!category=广告拦截
 
-[Rule]
-# > 京东
-URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT,extended-matching
-
 [Body Rewrite]
 # > 哔哩哔哩漫画 - manga.bilibili.com
 http-response-jq ^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v1\.(?:Comic\/AppInit|Home\/HomeFeed)\? '.data as $data | .data[("activity_tab", "flash", "operate") | select($data[.])] = null | if .data.feeds then .data.feeds |= map(select(.type | IN(15, 30) | not)) end'
@@ -107,6 +103,8 @@ http-response-jq ^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v1\.(?:Comic\/Ap
 ^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/resource_\d+\.zip\?hyresrctype=splash - reject
 
 # (J)
+# > 京东
+^http:\/\/\w{32}\.jddebug\.com\/diagnose\? - reject
 # > Jump - switch.jumpvg.com
 ^https?:\/\/switch\.jumpvg\.com\/jump\/(getlaunchad|recommend\/ad_conf) - reject
 # > 金山 - *.kingsoft-office-service.com
