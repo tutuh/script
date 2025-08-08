@@ -1,5 +1,28 @@
 # Proxy
 
+# Other
+DOMAIN-SUFFIX,1password.com
+DOMAIN-SUFFIX,adguard.org
+DOMAIN-SUFFIX,bit.no.com
+DOMAIN-SUFFIX,btlibrary.me
+DOMAIN-SUFFIX,cloudcone.com
+DOMAIN-SUFFIX,dubox.com
+DOMAIN-SUFFIX,gameloft.com
+DOMAIN-SUFFIX,garena.com
+DOMAIN-SUFFIX,hoyolab.com
+DOMAIN-SUFFIX,inoreader.com
+DOMAIN-SUFFIX,ip138.com
+DOMAIN-SUFFIX,linkedin.com
+DOMAIN-SUFFIX,myteamspeak.com
+DOMAIN-SUFFIX,notion.so
+DOMAIN-SUFFIX,ping.pe
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,teddysun.com
+DOMAIN-SUFFIX,tumbex.com
+DOMAIN-SUFFIX,twdvd.com
+DOMAIN-SUFFIX,unsplash.com
+DOMAIN-SUFFIX,buzzsprout.com
+
 # 国外域名
 DOMAIN-SUFFIX,eu
 DOMAIN-SUFFIX,hk
