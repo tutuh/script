@@ -1,7 +1,8 @@
 # Proxy
 
-# My list
+# MyList
 DOMAIN-SUFFIX,nssurge.com
+DOMAIN-SUFFIX,filters.adtidy.org
 
 # Other
 DOMAIN-SUFFIX,1password.com
