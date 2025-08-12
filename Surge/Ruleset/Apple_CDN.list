@@ -173,6 +173,7 @@ DOMAIN-SUFFIX,xp.apple.com
 DOMAIN-SUFFIX,push.apple.com
 DOMAIN-SUFFIX,push.apple.com.akadns.net
 DOMAIN-SUFFIX,ls.apple.com
+DOMAIN-SUFFIX,mail.me.com
 DOMAIN-KEYWORD,smp-device
 
 # > Apple_CN
