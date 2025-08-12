@@ -86,12 +86,7 @@ DOMAIN-SUFFIX,images.apple.com.akadns.net
 DOMAIN-SUFFIX,images.apple.com.edgekey.net.globalredir.akadns.net
 DOMAIN-SUFFIX,images.apple.com
 DOMAIN-SUFFIX,init-kt.apple.com
-DOMAIN-SUFFIX,init-p01md-lb.push-apple.com.akadns.net
 DOMAIN-SUFFIX,init-p01md.apple.com
-DOMAIN-SUFFIX,init-p01st-lb.push-apple.com.akadns.net
-DOMAIN-SUFFIX,init-p01st.push.apple.com
-DOMAIN-SUFFIX,init-s01st-lb.push-apple.com.akadns.net
-DOMAIN-SUFFIX,init-s01st.push.apple.com
 DOMAIN-SUFFIX,init.ess.apple.com
 DOMAIN-SUFFIX,iosapps.itunes.g.aaplimg.com
 DOMAIN-SUFFIX,ipcdn.apple.com
@@ -174,6 +169,9 @@ DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net
 DOMAIN-SUFFIX,www.apple.com.edgekey.net
 DOMAIN-SUFFIX,www.apple.com
 DOMAIN-SUFFIX,xp.apple.com
+
+DOMAIN-SUFFIX,push.apple.com
+DOMAIN-SUFFIX,push.apple.com.akadns.net
 DOMAIN-KEYWORD,smp-device
 
 # > Apple_CN
