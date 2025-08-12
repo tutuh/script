@@ -3,6 +3,7 @@
 # MyList
 DOMAIN-SUFFIX,nssurge.com
 DOMAIN-SUFFIX,filters.adtidy.org
+DOMAIN,testflight.apple.com
 
 # Other
 DOMAIN-SUFFIX,1password.com
