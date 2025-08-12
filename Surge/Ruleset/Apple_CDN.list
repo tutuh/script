@@ -2,15 +2,17 @@
 # 苹果国内 CDN 节点、云上贵州和苹果地图国内版等服务的域名
 
 # > Apple_CDN
+DOMAIN,guzzoni.apple.com
+DOMAIN,xp.apple.com
 DOMAIN-SUFFIX,a1.mzstatic.com
 DOMAIN-SUFFIX,a2.mzstatic.com
 DOMAIN-SUFFIX,a3.mzstatic.com
 DOMAIN-SUFFIX,a4.mzstatic.com
 DOMAIN-SUFFIX,a5.mzstatic.com
-DOMAIN-SUFFIX,adcdownload.apple.com.akadns.net
 DOMAIN-SUFFIX,adcdownload.apple.com
-DOMAIN-SUFFIX,amp-api.media.apple.com
+DOMAIN-SUFFIX,adcdownload.apple.com.akadns.net
 DOMAIN-SUFFIX,amp-api-updates.apps.apple.com
+DOMAIN-SUFFIX,amp-api.media.apple.com
 DOMAIN-SUFFIX,api-p-ap-c.smoot.apple.com
 DOMAIN-SUFFIX,api-p-ap-d.smoot.apple.com
 DOMAIN-SUFFIX,api-p-ap-e.smoot.apple.com
@@ -31,8 +33,8 @@ DOMAIN-SUFFIX,cdn2.apple-mapkit.com
 DOMAIN-SUFFIX,cdn3.apple-mapkit.com
 DOMAIN-SUFFIX,cdn4.apple-mapkit.com
 DOMAIN-SUFFIX,cds-cdn.v.aaplimg.com
-DOMAIN-SUFFIX,cds.apple.com.akadns.net
 DOMAIN-SUFFIX,cds.apple.com
+DOMAIN-SUFFIX,cds.apple.com.akadns.net
 DOMAIN-SUFFIX,cdsassets.apple.com
 DOMAIN-SUFFIX,cl1-cdn.origin-apple.com.akadns.net
 DOMAIN-SUFFIX,cl1.apple.com
@@ -45,11 +47,11 @@ DOMAIN-SUFFIX,cl4-cn.apple.com
 DOMAIN-SUFFIX,cl4.apple.com
 DOMAIN-SUFFIX,cl5-cdn.origin-apple.com.akadns.net
 DOMAIN-SUFFIX,cl5.apple.com
-DOMAIN-SUFFIX,clientflow.apple.com.akadns.net
 DOMAIN-SUFFIX,clientflow.apple.com
+DOMAIN-SUFFIX,clientflow.apple.com.akadns.net
 DOMAIN-SUFFIX,cn-smp-paymentservices.apple.com
-DOMAIN-SUFFIX,configuration.apple.com.akadns.net
 DOMAIN-SUFFIX,configuration.apple.com
+DOMAIN-SUFFIX,configuration.apple.com.akadns.net
 DOMAIN-SUFFIX,crl.apple.com
 DOMAIN-SUFFIX,cstat.apple.com
 DOMAIN-SUFFIX,cstat.cdn-apple.com
@@ -59,32 +61,16 @@ DOMAIN-SUFFIX,download.developer.apple.com
 DOMAIN-SUFFIX,experiments.apple.com
 DOMAIN-SUFFIX,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,gs-loc.apple.com
-DOMAIN-SUFFIX,gsp10-ssl-cn.ls.apple.com
-DOMAIN-SUFFIX,gsp12-cn.ls.apple.com
-DOMAIN-SUFFIX,gsp13-cn.ls.apple.com
-DOMAIN-SUFFIX,gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
-DOMAIN-SUFFIX,gsp4-cn.ls.apple.com.edgekey.net
-DOMAIN-SUFFIX,gsp4-cn.ls.apple.com
-DOMAIN-SUFFIX,gsp5-cn.ls.apple.com
-DOMAIN-SUFFIX,gsp85-cn-ssl.ls.apple.com
-DOMAIN-SUFFIX,gspe19-2-cn-ssl.ls.apple.com
 DOMAIN-SUFFIX,gspe19-2-cn-ssl.ls-apple.com.akadns.net
-DOMAIN-SUFFIX,gspe19-cn-ssl.ls.apple.com
 DOMAIN-SUFFIX,gspe19-cn.ls-apple.com.akadns.net
-DOMAIN-SUFFIX,gspe19-cn.ls.apple.com
-DOMAIN-SUFFIX,gspe21-ssl.ls.apple.com
-DOMAIN-SUFFIX,gspe21.ls.apple.com
-DOMAIN-SUFFIX,gspe35-ssl.ls.apple.com
-DOMAIN-SUFFIX,gspe79-cn-ssl.ls.apple.com
 DOMAIN-SUFFIX,guzzoni-apple-com.v.aaplimg.com
-DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,guzzoni.smoot.apple.com
 DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,icloud-cdn.icloud.com.akadns.net
 DOMAIN-SUFFIX,icloud.cdn-apple.com
+DOMAIN-SUFFIX,images.apple.com
 DOMAIN-SUFFIX,images.apple.com.akadns.net
 DOMAIN-SUFFIX,images.apple.com.edgekey.net.globalredir.akadns.net
-DOMAIN-SUFFIX,images.apple.com
 DOMAIN-SUFFIX,init-kt.apple.com
 DOMAIN-SUFFIX,init-p01md.apple.com
 DOMAIN-SUFFIX,init.ess.apple.com
@@ -92,6 +78,7 @@ DOMAIN-SUFFIX,iosapps.itunes.g.aaplimg.com
 DOMAIN-SUFFIX,ipcdn.apple.com
 DOMAIN-SUFFIX,iphone-ld.apple.com
 DOMAIN-SUFFIX,iphone-ld.origin-apple.com.akadns.net
+DOMAIN-SUFFIX,is-ssl.mzstatic.com-cn-lb.itunes-apple.com.akadns.net
 DOMAIN-SUFFIX,is1-ssl.mzstatic.com
 DOMAIN-SUFFIX,is1.mzstatic.com
 DOMAIN-SUFFIX,is2-ssl.mzstatic.com
@@ -102,7 +89,6 @@ DOMAIN-SUFFIX,is4-ssl.mzstatic.com
 DOMAIN-SUFFIX,is4.mzstatic.com
 DOMAIN-SUFFIX,is5-ssl.mzstatic.com
 DOMAIN-SUFFIX,is5.mzstatic.com
-DOMAIN-SUFFIX,is-ssl.mzstatic.com-cn-lb.itunes-apple.com.akadns.net
 DOMAIN-SUFFIX,itunes-apple.com.akadns.net
 DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,itunesconnect.apple.com
@@ -112,8 +98,8 @@ DOMAIN-SUFFIX,mesu.apple.com
 DOMAIN-SUFFIX,ml.cdn-apple.com
 DOMAIN-SUFFIX,music.apple.com
 DOMAIN-SUFFIX,ocsp-lb.apple.com.akadns.net
-DOMAIN-SUFFIX,ocsp2-lb.apple.com.akadns.net
 DOMAIN-SUFFIX,ocsp.apple.com
+DOMAIN-SUFFIX,ocsp2-lb.apple.com.akadns.net
 DOMAIN-SUFFIX,ocsp2.apple.com
 DOMAIN-SUFFIX,oscdn.apple.com
 DOMAIN-SUFFIX,oscdn.origin-apple.com.akadns.net
@@ -134,8 +120,6 @@ DOMAIN-SUFFIX,shazam-insights.cdn-apple.com
 DOMAIN-SUFFIX,static.gc.apple.com
 DOMAIN-SUFFIX,stocks-sparkline-lb.apple.com.akadns.net
 DOMAIN-SUFFIX,stocks-sparkline.apple.com
-DOMAIN-SUFFIX,store.apple.com.edgekey.net.globalredir.akadns.net
-DOMAIN-SUFFIX,store.apple.com.edgekey.net
 DOMAIN-SUFFIX,store.apple.com
 DOMAIN-SUFFIX,store.storeimages.apple.com.akadns.net
 DOMAIN-SUFFIX,store.storeimages.cdn-apple.com
@@ -147,39 +131,34 @@ DOMAIN-SUFFIX,swcatalog-cdn.apple.com.akadns.net
 DOMAIN-SUFFIX,swcatalog.apple.com
 DOMAIN-SUFFIX,swcdn.apple.com
 DOMAIN-SUFFIX,swcdn.g.aaplimg.com
-DOMAIN-SUFFIX,swdist.apple.com.akadns.net
 DOMAIN-SUFFIX,swdist.apple.com
+DOMAIN-SUFFIX,swdist.apple.com.akadns.net
 DOMAIN-SUFFIX,swscan-cdn.apple.com.akadns.net
 DOMAIN-SUFFIX,swscan.apple.com
 DOMAIN-SUFFIX,sylvan.apple.com
-DOMAIN-SUFFIX,updates-http.cdn-apple.com.akadns.net
 DOMAIN-SUFFIX,updates-http.cdn-apple.com
+DOMAIN-SUFFIX,updates-http.cdn-apple.com.akadns.net
 DOMAIN-SUFFIX,updates.cdn-apple.com
 DOMAIN-SUFFIX,valid.apple.com
 DOMAIN-SUFFIX,valid.origin-apple.com.akadns.net
-DOMAIN-SUFFIX,weather-data.apple.com.akadns.net
 DOMAIN-SUFFIX,weather-data.apple.com
+DOMAIN-SUFFIX,weather-data.apple.com.akadns.net
 DOMAIN-SUFFIX,weather-map.apple.com
 DOMAIN-SUFFIX,weather-map2.apple.com
 DOMAIN-SUFFIX,weatherkit.apple.com
-DOMAIN-SUFFIX,www.apple.com.edgekey.net.globalredir.akadns.net
-DOMAIN-SUFFIX,www.apple.com.edgekey.net
 DOMAIN-SUFFIX,www.apple.com
-DOMAIN,xp.apple.com
 
 # > Apple_CN
-DOMAIN,gs-loc-cn.apple.com
-DOMAIN-SUFFIX,cn-ssl.ls.apple.com
-DOMAIN-SUFFIX,cn.ls.apple.com
-DOMAIN-SUFFIX,cn.apple.com
 DOMAIN,api.smoot.apple.cn
-DOMAIN-SUFFIX,icloud.com.cn
+DOMAIN,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,apple.com.cn
+DOMAIN-SUFFIX,cn.apple.com
+DOMAIN-SUFFIX,icloud.com.cn
 
 # > Other
-DOMAIN-SUFFIX,weather-analytics-events.apple.com
-DOMAIN-SUFFIX,push.apple.com
-DOMAIN-SUFFIX,push.apple.com.akadns.net
+DOMAIN-KEYWORD,smp-device
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN-SUFFIX,mail.me.com
-DOMAIN-KEYWORD,smp-device
+DOMAIN-SUFFIX,push-apple.com.akadns.net
+DOMAIN-SUFFIX,push.apple.com
+DOMAIN-SUFFIX,weather-analytics-events.apple.com
