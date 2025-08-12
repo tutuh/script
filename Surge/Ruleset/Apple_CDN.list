@@ -157,7 +157,7 @@ DOMAIN-SUFFIX,cn.apple.com
 DOMAIN-SUFFIX,icloud.com.cn
 
 # > Other
-DOMAIN-SUFFIX,smp-device
+DOMAIN-KEYWORD,smp-device
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN-SUFFIX,mail.me.com
 DOMAIN-SUFFIX,push-apple.com.akadns.net
