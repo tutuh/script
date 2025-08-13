@@ -150,7 +150,6 @@ DOMAIN-SUFFIX,www.apple.com
 
 # > Apple_CN
 DOMAIN,api.smoot.apple.cn
-DOMAIN,gsa.apple.com
 DOMAIN,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,apple.com.cn
 DOMAIN-SUFFIX,cn.apple.com
@@ -158,6 +157,8 @@ DOMAIN-SUFFIX,icloud.com.cn
 
 # > Other
 DOMAIN-KEYWORD,smp-device
+DOMAIN,gsa.apple.com
+DOMAIN,gsas.apple.com
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN-SUFFIX,mail.me.com
 DOMAIN-SUFFIX,push-apple.com.akadns.net
