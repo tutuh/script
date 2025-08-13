@@ -142,13 +142,6 @@ DOMAIN-SUFFIX,apple.com.cn
 DOMAIN-SUFFIX,cn.apple.com
 DOMAIN-SUFFIX,icloud.com.cn
 
-# > Find My
-DOMAIN,statici.icloud.com
-DOMAIN,p138-fmfmobile.icloud.com
-DOMAIN,p138-fmf.icloud.com
-DOMAIN,p138-fmip.icloud.com
-DOMAIN,p138-fmipmobile.icloud.com
-
 # > Other
 DOMAIN,gsa.apple.com
 DOMAIN,gsas.apple.com
