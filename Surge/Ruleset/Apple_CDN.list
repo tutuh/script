@@ -141,6 +141,7 @@ DOMAIN-SUFFIX,weather-map.apple.com
 DOMAIN-SUFFIX,weather-map2.apple.com
 DOMAIN-SUFFIX,weatherkit.apple.com
 DOMAIN-SUFFIX,www.apple.com
+DOMAIN-SUFFIX,smp-device-content.apple.com
 
 # > Apple_CN
 DOMAIN,api.smoot.apple.cn
@@ -150,12 +151,13 @@ DOMAIN-SUFFIX,cn.apple.com
 DOMAIN-SUFFIX,icloud.com.cn
 
 # > Other
-DOMAIN-KEYWORD,smp-device
-DOMAIN-SUFFIX,ssl.apple.com
 DOMAIN,gsa.apple.com
 DOMAIN,gsas.apple.com
+DOMAIN-KEYWORD,smp-device
+DOMAIN-SUFFIX,gdmf.apple.com
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN-SUFFIX,mail.me.com
 DOMAIN-SUFFIX,push-apple.com.akadns.net
 DOMAIN-SUFFIX,push.apple.com
+DOMAIN-SUFFIX,ssl.apple.com
 DOMAIN-SUFFIX,weather-analytics-events.apple.com
