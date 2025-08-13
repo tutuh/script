@@ -11,7 +11,6 @@ DOMAIN-SUFFIX,a4.mzstatic.com
 DOMAIN-SUFFIX,a5.mzstatic.com
 DOMAIN-SUFFIX,adcdownload.apple.com
 DOMAIN-SUFFIX,adcdownload.apple.com.akadns.net
-DOMAIN-SUFFIX,amp-api-updates.apps.apple.com
 DOMAIN-SUFFIX,amp-api.media.apple.com
 DOMAIN-SUFFIX,api-p-ap-c.smoot.apple.com
 DOMAIN-SUFFIX,api-p-ap-d.smoot.apple.com
@@ -20,7 +19,6 @@ DOMAIN-SUFFIX,app-site-association.cdn-apple.com
 DOMAIN-SUFFIX,appldnld.apple.com
 DOMAIN-SUFFIX,appldnld.g.aaplimg.com
 DOMAIN-SUFFIX,appleid.cdn-apple.com
-DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,apps.mzstatic.com
 DOMAIN-SUFFIX,bag-cdn.itunes-apple.com.akadns.net
 DOMAIN-SUFFIX,cdn-cn1.apple-mapkit.com
@@ -129,16 +127,12 @@ DOMAIN-SUFFIX,swallow-apple-com.v.aaplimg.com
 DOMAIN-SUFFIX,swallow.apple.com
 DOMAIN-SUFFIX,swcatalog-cdn.apple.com.akadns.net
 DOMAIN-SUFFIX,swcatalog.apple.com
-DOMAIN-SUFFIX,swcdn.apple.com
 DOMAIN-SUFFIX,swcdn.g.aaplimg.com
 DOMAIN-SUFFIX,swdist.apple.com
 DOMAIN-SUFFIX,swdist.apple.com.akadns.net
 DOMAIN-SUFFIX,swscan-cdn.apple.com.akadns.net
 DOMAIN-SUFFIX,swscan.apple.com
 DOMAIN-SUFFIX,sylvan.apple.com
-DOMAIN-SUFFIX,updates-http.cdn-apple.com
-DOMAIN-SUFFIX,updates-http.cdn-apple.com.akadns.net
-DOMAIN-SUFFIX,updates.cdn-apple.com
 DOMAIN-SUFFIX,valid.apple.com
 DOMAIN-SUFFIX,valid.origin-apple.com.akadns.net
 DOMAIN-SUFFIX,weather-data.apple.com
@@ -157,6 +151,7 @@ DOMAIN-SUFFIX,icloud.com.cn
 
 # > Other
 DOMAIN-KEYWORD,smp-device
+DOMAIN-SUFFIX,ssl.apple.com
 DOMAIN,gsa.apple.com
 DOMAIN,gsas.apple.com
 DOMAIN-SUFFIX,ls.apple.com
