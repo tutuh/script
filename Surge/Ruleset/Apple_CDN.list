@@ -143,10 +143,10 @@ DOMAIN-SUFFIX,cn.apple.com
 DOMAIN-SUFFIX,icloud.com.cn
 
 # > Find My
-DOMAIN,fmfmobile.icloud.com
-DOMAIN,fmipmobile.icloud.com
-DOMAIN,fmip.icloud.com
 DOMAIN,statici.icloud.com
+DOMAIN-SUFFIX,fmfmobile.icloud.com
+DOMAIN-SUFFIX,fmip.icloud.com
+DOMAIN-SUFFIX,fmipmobile.icloud.com
 
 # > Other
 DOMAIN,gsa.apple.com
@@ -160,5 +160,3 @@ DOMAIN-SUFFIX,push-apple.com.akadns.net
 DOMAIN-SUFFIX,push.apple.com
 DOMAIN-SUFFIX,ssl.apple.com
 DOMAIN-SUFFIX,weather-analytics-events.apple.com
-
-
