@@ -145,6 +145,7 @@ DOMAIN-SUFFIX,icloud.com.cn
 # > Find My
 DOMAIN,statici.icloud.com
 DOMAIN,p138-fmfmobile.icloud.com
+DOMAIN,p138-fmf.icloud.com
 DOMAIN,p138-fmip.icloud.com
 DOMAIN,p138-fmipmobile.icloud.com
 
