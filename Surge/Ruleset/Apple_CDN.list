@@ -133,7 +133,6 @@ DOMAIN-SUFFIX,weather-map.apple.com
 DOMAIN-SUFFIX,weather-map2.apple.com
 DOMAIN-SUFFIX,weatherkit.apple.com
 DOMAIN-SUFFIX,www.apple.com
-DOMAIN-SUFFIX,smp-device-content.apple.com
 
 # > Apple_CN
 DOMAIN,api.smoot.apple.cn
