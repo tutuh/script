@@ -38,8 +38,5 @@ DOMAIN-SUFFIX,ol.epicgames.com
 # > Getui
 DOMAIN-SUFFIX,dizhensubao.getui.com
 
-# > Strava
-DOMAIN,analytics.strava.com
-
 # > 随申办市民云
 DOMAIN-SUFFIX,eshimin.com
