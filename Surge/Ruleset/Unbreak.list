@@ -5,9 +5,6 @@ DOMAIN,app.adjust.com
 DOMAIN,app.appsflyer.com
 DOMAIN,bdtj.tagtic.cn
 
-# > Apple
-DOMAIN,ca.iadsdk.apple.com
-
 # > Alibaba
 DOMAIN,log.mmstat.com
 DOMAIN,sycm.mmstat.com
@@ -16,15 +13,13 @@ DOMAIN,sycm.mmstat.com
 DOMAIN-SUFFIX,blog.google
 DOMAIN,ci.android.com
 DOMAIN,clientservices.googleapis.com
-DOMAIN,update.googleapis.com
 DOMAIN,dl.google.com
 DOMAIN,dl.l.google.com
 DOMAIN,redirector.gvt1.com
+DOMAIN,update.googleapis.com
 # > Google Flights
 DOMAIN-SUFFIX,googletraveladservices.com
-
-# > Firebase Cloud Messaging
-DOMAIN-WILDCARD,*mtalk*.google.com
+DOMAIN-SUFFIX,googletraveladservices-cn.com
 
 # > Tencent
 DOMAIN,fairplay.l.qq.com
