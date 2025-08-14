@@ -34,23 +34,6 @@ DOMAIN,adv-adlog.variflight.com
 DOMAIN,adv-ads.variflight.com
 DOMAIN,app-ad.variflight.com
 
-# ======= (G) ======= #
-# > 广告联盟
-DOMAIN-KEYWORD,-ad-sign.byteimg.com
-DOMAIN-KEYWORD,-tos.pstatp.com
-DOMAIN-KEYWORD,asiad.byteactivity
-DOMAIN-KEYWORD,pangolin-sdk-toutiao
-DOMAIN-KEYWORD,pangolin.snssdk.com
-DOMAIN-KEYWORD,pglstatp-toutiao
-DOMAIN-KEYWORD,video-cn.snssdk.com
-DOMAIN-SUFFIX,gepush.com
-DOMAIN-SUFFIX,getui.com
-DOMAIN-SUFFIX,getui.net
-DOMAIN-SUFFIX,igexin.com
-DOMAIN-SUFFIX,log.aliyuncs.com
-DOMAIN-SUFFIX,miaozhen.com
-DOMAIN-SUFFIX,zlsdk.1rtb.net
-
 # ======= (H) ======= #
 # > 虎扑
 DOMAIN,adx.hupu.com
