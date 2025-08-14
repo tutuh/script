@@ -12,10 +12,6 @@ DOMAIN,ca.iadsdk.apple.com
 DOMAIN,log.mmstat.com
 DOMAIN,sycm.mmstat.com
 
-# > Taobao
-DOMAIN-SUFFIX,ifs.tanx.com
-DOMAIN,amdc.m.taobao.com
-
 # > Google
 DOMAIN-SUFFIX,blog.google
 DOMAIN,ci.android.com
