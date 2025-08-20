@@ -147,6 +147,7 @@ DOMAIN-SUFFIX,icloud.com.cn
 # > Other
 DOMAIN,gsa.apple.com
 DOMAIN,gsas.apple.com
+DOMAIN,weather-analytics-events.apple.com
 DOMAIN-KEYWORD,smp-device
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,gdmf.apple.com
