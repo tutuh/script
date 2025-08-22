@@ -146,6 +146,7 @@ DOMAIN-SUFFIX,icloud.com.cn
 
 # > Other
 DOMAIN-KEYWORD,smp-device
+DOMAIN,discussionschinese.apple.com
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,gdmf.apple.com
 DOMAIN-SUFFIX,ls.apple.com
