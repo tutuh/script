@@ -34,6 +34,11 @@ DOMAIN,adv-adlog.variflight.com
 DOMAIN,adv-ads.variflight.com
 DOMAIN,app-ad.variflight.com
 
+# ======= (G) ======= #
+# > 高德
+DOMAIN,optimus-ads.amap.com
+DOMAIN,optimus-ads.amap.com.w.alikunlun.com
+
 # ======= (H) ======= #
 # > 虎扑
 DOMAIN,adx.hupu.com
