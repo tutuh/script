@@ -100,7 +100,7 @@ DOMAIN,adui.tg.meitu.com
 # > 米家
 DOMAIN,sdkconfig.ad.xiaomi.com
 # > 买单吧
-DOMAIN-KEYWORD,c-hzgt2.getui.com
+DOMAIN,c-hzgt2.getui.com
 
 # ======= (P) ======= #
 # > 澎湃新闻
