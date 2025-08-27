@@ -146,18 +146,6 @@ DOMAIN,tmeadbak.y.qq.com
 DOMAIN,tmeadquic.y.qq.com
 DOMAIN,us.l.qq.com
 DOMAIN-SUFFIX,imtmp.net
-# > 腾讯
-DOMAIN,adsmind.gdtimg.com
-DOMAIN,info4.video.qq.com
-DOMAIN,info6.video.qq.com
-DOMAIN,ios.video.mpush.qq.com
-DOMAIN,pgdt.gtimg.cn
-DOMAIN,tpns.qq.com
-DOMAIN,vv6.video.qq.com
-DOMAIN-KEYWORD,trace.qq.com
-DOMAIN-KEYWORD,trace.video.qq.com
-DOMAIN-SUFFIX,gdt.qq.com
-DOMAIN-SUFFIX,l.qq.com
 
 # ======= (W) ======= #
 # > 网上国网
