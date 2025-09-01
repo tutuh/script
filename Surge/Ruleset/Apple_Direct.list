@@ -156,6 +156,8 @@ DOMAIN-SUFFIX,push.apple.com
 
 # > Other
 DOMAIN,discussionschinese.apple.com
+DOMAIN,time-ios.apple.com
+DOMAIN,time.apple.com
 DOMAIN-KEYWORD,smp-device
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,gdmf.apple.com
