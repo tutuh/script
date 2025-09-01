@@ -150,13 +150,16 @@ DOMAIN,appleid.cdn-apple.com
 DOMAIN,gsa.apple.com
 DOMAIN,idmsa.apple.com
 
+# > Apple_Push
+DOMAIN,identity.apple.com
+DOMAIN-SUFFIX,push.apple.com
+
 # > Other
-DOMAIN-KEYWORD,smp-device
 DOMAIN,discussionschinese.apple.com
+DOMAIN-KEYWORD,smp-device
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,gdmf.apple.com
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN-SUFFIX,mail.me.com
 DOMAIN-SUFFIX,push-apple.com.akadns.net
-DOMAIN-SUFFIX,push.apple.com
 DOMAIN-SUFFIX,ssl.apple.com
