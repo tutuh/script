@@ -1,7 +1,8 @@
 # 直连列表
 
 # MyList
-DOMAIN-SUFFIX,eudic.net
+DOMAIN-SUFFIX,eudic.net //欧路词典
+DOMAIN-SUFFIX,eshimin.com //市民云
 
 # CN域名直连(中国|公司|网络)
 DOMAIN-SUFFIX,cn
