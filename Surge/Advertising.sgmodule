@@ -124,8 +124,6 @@ http-response-jq ^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v1\.(?:Comic\/Ap
 https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 # > 马蜂窝 - mapi.mafengwo.cn
 ^https:\/\/mapi\.mafengwo\.cn\/ad\/get_launch_ad_list\/v - reject
-# > 秒拍 - v?-api.miaopai.com
-^https?:\/\/v\d-api\.miaopai\.com\/miaopai\/advertisement\/ - reject
 
 # (P)
 # > 票根 - pss.txffp.com
@@ -168,4 +166,4 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 ^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ - reject
 
 [MITM]
-hostname = %APPEND% manga.bilibili.com, client-api-v?.oray.com, gorgon.youdao.com, res.kfc.com.cn, rtbapi.douyucdn.cn, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, home.mi.com, capi.mwee.cn, api.mcd.cn, mapi.mafengwo.cn, v?-api.miaopai.com, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, m.tuniu.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
+hostname = %APPEND% manga.bilibili.com, client-api-v?.oray.com, gorgon.youdao.com, res.kfc.com.cn, rtbapi.douyucdn.cn, gab.122.gov.cn, m.client.10010.com, client.app.coc.10086.cn, api-new.app.acfun.cn, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, home.mi.com, capi.mwee.cn, api.mcd.cn, mapi.mafengwo.cn, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, m.tuniu.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
