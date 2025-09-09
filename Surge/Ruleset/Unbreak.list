@@ -1,15 +1,15 @@
 # Unbreak 白名单 规则修正
 
-# > General
+# General
 DOMAIN,app.adjust.com
 DOMAIN,app.appsflyer.com
 DOMAIN,bdtj.tagtic.cn
 
-# > Alibaba
+# Alibaba
 DOMAIN,log.mmstat.com
 DOMAIN,sycm.mmstat.com
 
-# > Google
+# Google
 DOMAIN-SUFFIX,blog.google
 DOMAIN,ci.android.com
 DOMAIN,clientservices.googleapis.com
@@ -18,20 +18,20 @@ DOMAIN,dl.l.google.com
 DOMAIN,redirector.gvt1.com
 DOMAIN,update.googleapis.com
 
-# > Google Flights
+# Google Flights
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,googletraveladservices-cn.com
 
-# > Tencent
+# Tencent
 DOMAIN,fairplay.l.qq.com
 DOMAIN,livew.l.qq.com
 DOMAIN,vd.l.qq.com
 DOMAIN,vi.l.qq.com
 
-# > Umeng
+# Umeng
 DOMAIN,errlog.umeng.com
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
 
-# > Getui
+# Getui
 DOMAIN-SUFFIX,dizhensubao.getui.com
