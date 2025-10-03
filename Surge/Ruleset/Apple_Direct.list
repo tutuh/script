@@ -152,8 +152,8 @@ DOMAIN,identity.apple.com
 DOMAIN-SUFFIX,push.apple.com
 
 # Other
-# DOMAIN,time-ios.apple.com
-# DOMAIN,time.apple.com
+DOMAIN,time-ios.apple.com
+DOMAIN,time.apple.com
 # DOMAIN,tj-pod3-smp-device.apple.com // 交通卡充值
 DOMAIN-KEYWORD,smp-device
 DOMAIN,discussionschinese.apple.com // Apple社区
