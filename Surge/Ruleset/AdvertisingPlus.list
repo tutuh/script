@@ -696,7 +696,7 @@ DOMAIN-SUFFIX,zwaar.org
 DOMAIN-SUFFIX,zxrtb.com
 DOMAIN-SUFFIX,zzd6.com
 
-# *************************************** #
+# ********************* #
 
 DOMAIN,lf-ad-ies.bytecdn.cn
 DOMAIN,dig.bdurl.net
@@ -706,10 +706,6 @@ DOMAIN-SUFFIX,bds.snssdk.com
 DOMAIN-SUFFIX,byteadverts.com
 DOMAIN-SUFFIX,ctobsnssdk.com
 DOMAIN-SUFFIX,pangolin-dsp-toutiao-b.com
-DOMAIN-SUFFIX,pangolin-dsp-toutiao.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
 DOMAIN-SUFFIX,pangolin.snssdk.com
 DOMAIN-SUFFIX,panplayable-toutiao-b.com
 DOMAIN-SUFFIX,panplayable-toutiao.com
@@ -741,7 +737,6 @@ DOMAIN-SUFFIX,mob.com
 DOMAIN-SUFFIX,jiguang.cn
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,jpush.io
-DOMAIN,afd.baidu.com
 DOMAIN,als.baidu.com
 DOMAIN,bgg.baidu.com
 DOMAIN,cpro.baidustatic.com
@@ -750,13 +745,11 @@ DOMAIN,click-bes.baidu.com
 DOMAIN,eclick.baidu.com
 DOMAIN,mobads-logs.baidu.com
 DOMAIN,mobads-pre-config.cdn.bcebos.com
-DOMAIN,mobads.baidu.com
 DOMAIN,nadvideo2.baidu.com
 DOMAIN,wn.pos.baidu.com
 DOMAIN,miniapp-ad.cdn.bcebos.com
 DOMAIN-SUFFIX,union.baidu.cn
 DOMAIN-SUFFIX,union.baidu.com
-DOMAIN,ad.tencentmusic.com
 DOMAIN,adsmind.gdtimg.com
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,mc.tencentmusic.com
@@ -768,19 +761,14 @@ DOMAIN,info6.video.qq.com
 DOMAIN,ios.bugly.qq.com
 DOMAIN,pro.bugly.qq.com
 DOMAIN,ios.video.mpush.qq.com
-DOMAIN,us.l.qq.com
 DOMAIN,mi.gdt.qq.com
-DOMAIN,otheve.beacon.qq.com
 DOMAIN,pgdt.gtimg.cn
 DOMAIN,pgdt.ugdtimg.com
 DOMAIN,qzs.gdtimg.com
 DOMAIN,qzs.qq.com
 DOMAIN,rmonitor.qq.com
-DOMAIN,sdk.e.qq.com
 DOMAIN,sdkconfig.video.qq.com
 DOMAIN,t.gdt.qq.com
-DOMAIN,tmead.y.qq.com
-DOMAIN,tmeadbak.y.qq.com
 DOMAIN,tmeadcomm.y.qq.com
 DOMAIN,tpns.qq.com
 DOMAIN,v.gdt.qq.com
@@ -809,11 +797,6 @@ DOMAIN,nex.163.com
 DOMAIN,iad.g.163.com
 DOMAIN,gorgon.youdao.com
 DOMAIN-SUFFIX,ad.xiaomi.com
-DOMAIN,al-log.d.meituan.net
-DOMAIN,babel-statistics-android.d.meituan.net
-DOMAIN,maplocatesdksnapshot.d.meituan.net
-DOMAIN,metrics-picture.d.meituan.net
-DOMAIN,route-stats.d.meituan.net
 DOMAIN,dsp-x.jd.com
 DOMAIN,im-x.jd.com
 DOMAIN,xlog.jd.com
