@@ -155,11 +155,11 @@ DOMAIN,identity.apple.com
 DOMAIN-SUFFIX,push.apple.com
 
 # Other
+DOMAIN-KEYWORD,smp-device
 DOMAIN,discussionschinese.apple.com // Apple社区
 DOMAIN,time-ios.apple.com
 DOMAIN,time.apple.com
 # DOMAIN,tj-pod3-smp-device.apple.com // 交通卡充值
-DOMAIN-KEYWORD,smp-device
 DOMAIN-SUFFIX,gdmf.apple.com // 系统更新
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN-SUFFIX,mail.me.com // 邮箱
