@@ -1,9 +1,8 @@
-#!name=白名单
-#!desc=Direct
+#!name=白名单直连
+#!desc=规则修正
 #!category=Tutu
 
 [Rule]
-# 规则修正
 # General
 DOMAIN,app.adjust.com,DIRECT,extended-matching
 DOMAIN,app.appsflyer.com,DIRECT,extended-matching
