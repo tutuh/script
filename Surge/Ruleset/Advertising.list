@@ -38,6 +38,8 @@ DOMAIN,app-ad.variflight.com
 # > 高德
 DOMAIN,optimus-ads.amap.com
 DOMAIN,optimus-ads.amap.com.w.alikunlun.com
+# > 广告
+DOMAIN-SUFFIX,gepush.com
 
 # ======= (H) ======= #
 # > 虎扑
