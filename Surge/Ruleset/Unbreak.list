@@ -9,6 +9,9 @@ DOMAIN,bdtj.tagtic.cn
 DOMAIN,log.mmstat.com
 DOMAIN,sycm.mmstat.com
 
+# Taobao
+DOMAIN,hudong.alicdn.com
+
 # Google
 DOMAIN-SUFFIX,blog.google
 DOMAIN,ci.android.com
