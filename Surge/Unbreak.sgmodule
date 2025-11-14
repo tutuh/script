@@ -17,15 +17,7 @@ DOMAIN,sycm.mmstat.com,DIRECT,extended-matching
 DOMAIN,hudong.alicdn.com,DIRECT,extended-matching
 
 # Google
-DOMAIN-SUFFIX,blog.google,DIRECT,extended-matching
-DOMAIN,ci.android.com,DIRECT,extended-matching
-DOMAIN,clientservices.googleapis.com,DIRECT,extended-matching
 DOMAIN,dl.google.com,DIRECT,extended-matching
-DOMAIN,dl.l.google.com,DIRECT,extended-matching
-DOMAIN,redirector.gvt1.com,DIRECT,extended-matching
-DOMAIN,update.googleapis.com,DIRECT,extended-matching
-
-# Google Flights
 DOMAIN-SUFFIX,googletraveladservices.com,DIRECT,extended-matching
 DOMAIN-SUFFIX,googletraveladservices-cn.com,DIRECT,extended-matching
 
