@@ -136,6 +136,7 @@ DOMAIN-SUFFIX,www.apple.com
 
 # Apple_CN
 DOMAIN,api.smoot.apple.cn
+DOMAIN,appleintelligencefeedback.care.apple.com
 DOMAIN,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,apple.com.cn
 DOMAIN-SUFFIX,cn-ssl.ls.apple.com
