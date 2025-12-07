@@ -1,25 +1,32 @@
 # Google
-DOMAIN-SUFFIX,gmail.com
+DOMAIN-KEYWORD,gmail
+DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,1e100.net
 DOMAIN-SUFFIX,2mdn.net
 DOMAIN-SUFFIX,app-measurement.net
+DOMAIN-SUFFIX,c.gle
 DOMAIN-SUFFIX,g.co
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,goo.gl
-DOMAIN-SUFFIX,google.com
 DOMAIN-SUFFIX,googleapis.cn
 DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,gstatic.cn
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt2.com
 DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-IP-CIDR,173.194.0.0/16,no-resolve
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,yt.be
+DOMAIN-SUFFIX,ytimg.com
 IP-CIDR,74.125.0.0/16,no-resolve
+IP-CIDR,173.194.0.0/16,no-resolve
 
 # YouTube
+DOMAIN-KEYWORD,youtube
 DOMAIN,youtubei.googleapis.com
 DOMAIN,yt3.ggpht.com
 DOMAIN-SUFFIX,googlevideo.com
@@ -33,6 +40,3 @@ DOMAIN-SUFFIX,youtubegaming.com
 DOMAIN-SUFFIX,youtubekids.com
 DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
-
-# YouTubeMusic
-DOMAIN,music.youtube.com
