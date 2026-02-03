@@ -11,29 +11,6 @@ DOMAIN-KEYWORD,netflav
 DOMAIN-KEYWORD,javmost
 DOMAIN-KEYWORD,jable
 
-# Other
-DOMAIN-SUFFIX,1password.com
-DOMAIN-SUFFIX,adguard.org
-DOMAIN-SUFFIX,bit.no.com
-DOMAIN-SUFFIX,btlibrary.me
-DOMAIN-SUFFIX,cloudcone.com
-DOMAIN-SUFFIX,dubox.com
-DOMAIN-SUFFIX,gameloft.com
-DOMAIN-SUFFIX,garena.com
-DOMAIN-SUFFIX,hoyolab.com
-DOMAIN-SUFFIX,inoreader.com
-DOMAIN-SUFFIX,ip138.com
-DOMAIN-SUFFIX,linkedin.com
-DOMAIN-SUFFIX,myteamspeak.com
-DOMAIN-SUFFIX,notion.so
-DOMAIN-SUFFIX,ping.pe
-DOMAIN-SUFFIX,reddit.com
-DOMAIN-SUFFIX,teddysun.com
-DOMAIN-SUFFIX,tumbex.com
-DOMAIN-SUFFIX,twdvd.com
-DOMAIN-SUFFIX,unsplash.com
-DOMAIN-SUFFIX,buzzsprout.com
-
 # 国外域名
 DOMAIN-SUFFIX,eu
 DOMAIN-SUFFIX,hk
@@ -42,6 +19,28 @@ DOMAIN-SUFFIX,kr
 DOMAIN-SUFFIX,sg
 DOMAIN-SUFFIX,tw
 DOMAIN-SUFFIX,uk
+
+# 国外域名关键字
+DOMAIN-KEYWORD,1e100
+DOMAIN-KEYWORD,abema
+DOMAIN-KEYWORD,appledaily
+DOMAIN-KEYWORD,avtb
+DOMAIN-KEYWORD,beetalk
+DOMAIN-KEYWORD,blogspot
+DOMAIN-KEYWORD,dropbox
+DOMAIN-KEYWORD,facebook
+DOMAIN-KEYWORD,fbcdn
+DOMAIN-KEYWORD,github
+DOMAIN-KEYWORD,gmail
+DOMAIN-KEYWORD,google
+DOMAIN-KEYWORD,instagram
+DOMAIN-KEYWORD,porn
+DOMAIN-KEYWORD,sci-hub
+DOMAIN-KEYWORD,spotify
+DOMAIN-KEYWORD,telegram
+DOMAIN-KEYWORD,twitter
+DOMAIN-KEYWORD,whatsapp
+DOMAIN-KEYWORD,youtube
 
 # Top Blocked Sites
 DOMAIN-SUFFIX,4sqi.net
@@ -196,6 +195,7 @@ DOMAIN-SUFFIX,jitpack.io
 DOMAIN-SUFFIX,maven.org
 DOMAIN-SUFFIX,mvnrepository.com
 DOMAIN-SUFFIX,quay.io
+DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,redhat.com
 DOMAIN-SUFFIX,sonatype.org
 DOMAIN-SUFFIX,sourcegraph.com
@@ -347,7 +347,6 @@ DOMAIN-SUFFIX,storage.msn.com
 DOMAIN-SUFFIX,microsoftpersonalcontent.com
 
 # Porn
-DOMAIN-KEYWORD,porn
 DOMAIN-SUFFIX,8teenxxx.com
 DOMAIN-SUFFIX,ahcdn.com
 DOMAIN-SUFFIX,bcvcdn.com
