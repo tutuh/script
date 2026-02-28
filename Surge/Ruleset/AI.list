@@ -1,6 +1,7 @@
 # Anthropic
 # > Claude
 DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,anthropic.com
 
 # OpenAI
@@ -18,6 +19,8 @@ DOMAIN,o33249.ingest.sentry.io
 DOMAIN,openaiapi-site.azureedge.net
 DOMAIN-KEYWORD,openaiapi
 DOMAIN-KEYWORD,openaicom
+# OpenRouter
+DOMAIN-SUFFIX,openrouter.ai
 
 # Cloudflare
 # > AI Gateway
@@ -36,6 +39,9 @@ DOMAIN-SUFFIX,makersuite.google.com
 DOMAIN,aistudio.google.com
 DOMAIN,alkalicore-pa.clients6.google.com
 DOMAIN,alkalimakersuite-pa.clients6.google.com
+# > Antigravity
+DOMAIN,antigravity.google
+DOMAIN,antigravity-unleash.goog
 # > DeepMind
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
