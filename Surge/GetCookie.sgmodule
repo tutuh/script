@@ -12,7 +12,7 @@
 百度贴吧_Cookie = type=http-request,pattern=^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
 
 # > 顺丰速运 - ccsp-egmas.sf-express.com
-# 打开：顺丰APP -> 我的 -> 获取 cookie
+# 打开：顺丰APP -> 我的 -> 积分 获取 cookie
 顺丰速运_Cookie = type=http-response,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
 
 # > 途虎养车小程序 - api.tuhu.cn
