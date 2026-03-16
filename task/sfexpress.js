@@ -1,174 +1,302 @@
+// 顺丰速运签到脚本 - Surge版
 const $ = new Env('顺丰速运')
 $.KEY_login = 'chavy_login_sfexpress'
 
 !(async () => {
-  await loginapp()
-  await $.wait('1000')
-  await loginweb()
-  await $.wait('1000')
-  await sign()
-  await $.wait('1000')
-  await signDailyTasks()
-  showmsg()
-})()
-  .catch((e) => $.logErr(e))
-  .finally(() => $.done())
-
-function loginapp() {
-  const loginOpts = $.getjson($.KEY_login)
-  delete loginOpts.headers.Cookie
-
-  return $.http
-    .post(loginOpts)
-    .then((resp) => {
-      $.login = JSON.parse(resp.body)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-}
-
-function loginweb() {
-  const sign = encodeURIComponent($.login.obj.sign)
-  const loginOpts = {
-    url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/share/app/shareRedirect?sign=${sign}&source=SFAPP&bizCode=647@RnlvejM1R3VTSVZ6d3BNaXJxRFpOUVVtQkp0ZnFpNDBKdytobm5TQWxMeHpVUXVrVzVGMHVmTU5BVFA1bXlwcw==`
-  }
-  return $.http.get(loginOpts)
-}
-
-function sign() {
-  const loginOpts = $.getjson($.KEY_login)
-  
-  const signOpts = {
-    url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskSignPlusService~automaticSignFetchPackage`,
-    body: `{"comeFrom": "vioin", "channelFrom": "SFAPP"}`,
-    headers: {
-      'Content-Type': 'application/json',
-      'Cookie': loginOpts?.headers?.Cookie || '',
-      'User-Agent': loginOpts?.headers?.['User-Agent'] || '',
-      // 从登录会话中复制其他必要的headers
-    }
-  }
-  return $.http.post(signOpts).then((resp) => {
-    $.sign = JSON.parse(resp.body)
-  })
-}
-
-function queryDailyTask() {
-  // 获取之前保存的登录信息中的headers
-  const loginOpts = $.getjson($.KEY_login)
-  
-  return $.http
-    .post({
-      url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~queryPointTaskAndSignFromES`,
-      body: `{"channelType":"1"}`,
-      headers: {
-        'Content-Type': 'application/json',
-        'Cookie': loginOpts?.headers?.Cookie || '',  // 添加Cookie
-        'User-Agent': loginOpts?.headers?.['User-Agent'] || '', // 添加User-Agent
-        // 可能还需要其他header，如 token、sign 等
-      }
-    })
-    .then((resp) => {
-      console.log('queryDailyTask 返回:', resp.body) // 添加调试
-      const data = JSON.parse(resp.body)
-      
-      // 检查是否登录失效
-      if (data.code === '401' || data.errorCode === 'INVALID_SESSION') {
-        console.log('登录已失效，需要重新获取登录会话')
-        $.tasks = []
-        return
-      }
-      
-      if (data.obj && data.obj.taskTitleLevels) {
-        $.tasks = data.obj.taskTitleLevels
-      } else {
-        console.log('返回数据格式:', data) // 打印实际返回的数据
-        $.tasks = []
-      }
-    })
-    .catch((err) => {
-      console.log('queryDailyTask 错误:', err)
-      $.tasks = []
-    })
-}
-
-async function signDailyTasks() {
-  await queryDailyTask()
-  
-  // 如果没有任务数据，直接返回
-  if (!$.tasks || $.tasks.length === 0) {
-    console.log('没有获取到任务列表')
+  // 检查是否有保存的登录会话
+  const loginSession = $.getjson($.KEY_login)
+  if (!loginSession) {
+    $.msg($.name, '❌ 错误', '请先获取登录会话\n1. 打开顺丰速运APP\n2. 确保已登录账号\n3. 返回Surge查看捕获结果')
     return
   }
 
-  for (let i = 0; i < $.tasks.length; i++) {
-    const task = $.tasks[i]
-    if (task.status === 1) {
-      await getPoint(task)
-    } else if (task.status === 2) {
-      await doTask(task)
-      await getPoint(task)
-    } else if (task.status === 3) {
-      task.result = '积分已领取！'
-    } else {
-      task.result = '未知'
-    }
+  console.log('开始执行顺丰签到...')
+  
+  // 从登录会话中提取Cookie和必要信息
+  const headers = loginSession.headers || {}
+  const cookie = headers.Cookie || headers.cookie || ''
+  
+  if (!cookie) {
+    $.msg($.name, '❌ 错误', '未获取到Cookie信息，请重新获取登录会话')
+    return
   }
-}
 
-function doTask(task) {
-  return $.http.post({
-    url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/commonRoutePost/memberEs/taskRecord/finishTask`,
-    body: `{"taskCode":"${task.taskCode}"}`,
-    headers: {}
+  console.log('Cookie:', cookie.substring(0, 100) + '...')
+
+  // 执行签到
+  await sign(cookie)
+  await $.wait('1000')
+  
+  // 查询并完成任务
+  await queryAndDoTasks(cookie)
+  
+  // 显示结果
+  showmsg()
+})()
+  .catch((e) => {
+    console.log('脚本执行错误:', e)
+    $.logErr(e)
   })
-}
+  .finally(() => $.done())
 
-
-
-
-function getPoint(task) {
+// 签到函数
+function sign(cookie) {
   return $.http
     .post({
-      url: 'https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~fetchIntegral',
-      body: `{"strategyId":${task.strategyId},"taskId":"${task.taskId}","taskCode":"${task.taskCode}","channelType":"1"}`,
+      url: 'https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskSignPlusService~automaticSignFetchPackage',
+      body: JSON.stringify({
+        comeFrom: 'vioin',
+        channelFrom: 'SFAPP'
+      }),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Cookie': cookie,
+        'User-Agent': 'SF-Express/5.0 (iPhone; iOS 15.0; Scale/3.0)',
+        'Accept': 'application/json, text/plain, */*',
+        'Accept-Language': 'zh-CN,zh;q=0.9',
+        'Origin': 'https://mcs-mimp-web.sf-express.com',
+        'Referer': 'https://mcs-mimp-web.sf-express.com/mcs-mimp/index.html'
       }
     })
     .then((resp) => {
-      const data = JSON.parse(resp.body)
-      task.result = data.success ? '成功' : data.errorMessage
+      try {
+        $.sign = JSON.parse(resp.body)
+        console.log('签到结果:', $.sign)
+      } catch (e) {
+        console.log('解析签到结果失败:', resp.body)
+        $.sign = { success: false, errorMessage: '解析失败' }
+      }
+    })
+    .catch((err) => {
+      console.log('签到请求失败:', err)
+      $.sign = { success: false, errorMessage: '网络错误' }
     })
 }
 
+// 查询任务列表
+function queryTasks(cookie) {
+  return $.http
+    .post({
+      url: 'https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~queryPointTaskAndSignFromES',
+      body: JSON.stringify({
+        channelType: '1'
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Cookie': cookie,
+        'User-Agent': 'SF-Express/5.0 (iPhone; iOS 15.0; Scale/3.0)',
+        'Accept': 'application/json, text/plain, */*',
+        'Accept-Language': 'zh-CN,zh;q=0.9',
+        'Origin': 'https://mcs-mimp-web.sf-express.com',
+        'Referer': 'https://mcs-mimp-web.sf-express.com/mcs-mimp/index.html'
+      }
+    })
+    .then((resp) => {
+      try {
+        const data = JSON.parse(resp.body)
+        console.log('查询任务返回:', data)
+        
+        if (!data.success) {
+          console.log('查询任务失败:', data.errorMessage)
+          return []
+        }
+        
+        // 尝试多种可能的任务列表字段
+        const tasks = data.obj?.taskTitleLevels || 
+                     data.obj?.taskList || 
+                     data.obj?.tasks || 
+                     []
+        
+        if (tasks.length === 0) {
+          console.log('未找到任务列表，完整数据:', JSON.stringify(data))
+        }
+        
+        return tasks
+      } catch (e) {
+        console.log('解析任务列表失败:', resp.body)
+        return []
+      }
+    })
+    .catch((err) => {
+      console.log('查询任务请求失败:', err)
+      return []
+    })
+}
+
+// 完成任务
+function finishTask(taskCode, cookie) {
+  return $.http
+    .post({
+      url: 'https://mcs-mimp-web.sf-express.com/mcs-mimp/commonRoutePost/memberEs/taskRecord/finishTask',
+      body: JSON.stringify({
+        taskCode: taskCode
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Cookie': cookie,
+        'User-Agent': 'SF-Express/5.0 (iPhone; iOS 15.0; Scale/3.0)'
+      }
+    })
+    .then((resp) => {
+      try {
+        return JSON.parse(resp.body)
+      } catch (e) {
+        return { success: false }
+      }
+    })
+}
+
+// 领取积分
+function fetchPoint(strategyId, taskId, taskCode, cookie) {
+  return $.http
+    .post({
+      url: 'https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~fetchIntegral',
+      body: JSON.stringify({
+        strategyId: strategyId,
+        taskId: taskId,
+        taskCode: taskCode,
+        channelType: '1'
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Cookie': cookie,
+        'User-Agent': 'SF-Express/5.0 (iPhone; iOS 15.0; Scale/3.0)'
+      }
+    })
+    .then((resp) => {
+      try {
+        return JSON.parse(resp.body)
+      } catch (e) {
+        return { success: false, errorMessage: '解析失败' }
+      }
+    })
+}
+
+// 查询并完成任务
+async function queryAndDoTasks(cookie) {
+  console.log('开始查询任务列表...')
+  $.tasks = await queryTasks(cookie)
+  
+  if (!$.tasks || $.tasks.length === 0) {
+    console.log('没有获取到任务列表')
+    $.tasks = []
+    return
+  }
+  
+  console.log(`获取到 ${$.tasks.length} 个任务`)
+  
+  for (let i = 0; i < $.tasks.length; i++) {
+    const task = $.tasks[i]
+    console.log(`处理任务 ${i+1}/${$.tasks.length}:`, task.title || task.taskName)
+    
+    try {
+      if (task.status === 1) {
+        // 可以直接领取
+        const result = await fetchPoint(task.strategyId, task.taskId, task.taskCode, cookie)
+        task.result = result.success ? '✅ 积分领取成功' : `❌ ${result.errorMessage || '领取失败'}`
+        console.log('领取结果:', task.result)
+        
+      } else if (task.status === 2) {
+        // 需要先完成再领取
+        console.log('完成任务:', task.taskCode)
+        await finishTask(task.taskCode, cookie)
+        await $.wait('500')
+        
+        const result = await fetchPoint(task.strategyId, task.taskId, task.taskCode, cookie)
+        task.result = result.success ? '✅ 完成并领取成功' : `❌ ${result.errorMessage || '领取失败'}`
+        console.log('完成并领取结果:', task.result)
+        
+      } else if (task.status === 3) {
+        task.result = '✅ 积分已领取'
+      } else {
+        task.result = '⏸️ 未完成'
+      }
+    } catch (e) {
+      console.log('处理任务出错:', e)
+      task.result = '❌ 处理异常'
+    }
+    
+    await $.wait('500') // 任务间延时，避免请求过快
+  }
+}
+
+// 显示结果
 function showmsg() {
-  const success = $.sign && $.sign.success
-  $.subt = `签到: `
-  $.desc = []
-  if (success) {
-    if ($.sign.obj.hasFinishSign){
-      $.subt += `重复`
-      $.desc.push(`说明: 连续签到${$.sign.obj.countDay}天`)
+  const subtasks = []
+  
+  // 签到结果
+  if ($.sign) {
+    if ($.sign.success) {
+      if ($.sign.obj?.hasFinishSign) {
+        subtasks.push(`📅 签到: 今日已签 (连续${$.sign.obj.countDay || 0}天)`)
+      } else {
+        subtasks.push(`📅 签到: 成功 (连续${$.sign.obj.countDay || 0}天)`)
+      }
     } else {
-      $.subt += `成功`
-      $.desc.push(`说明: 连续签到${$.sign.obj.countDay}天`)
+      subtasks.push(`📅 签到: 失败 (${$.sign.errorMessage || '未知错误'})`)
     }
   } else {
-    const errmsg = $.sign.errorMessage
-    $.subt += `失败`
-    $.desc.push(`说明: ${errmsg}`)
+    subtasks.push('📅 签到: 未执行')
   }
-
-  $.desc.push('', `每日任务: `)
-  for (let i = 0; i < $.tasks.length; i++) {
-    const name = $.tasks[i].title
-    const result = $.tasks[i].result
-    $.desc.push(`${name}: ${result}`)
+  
+  subtasks.push('') // 空行
+  subtasks.push('📋 每日任务:')
+  
+  // 任务结果
+  if ($.tasks && $.tasks.length > 0) {
+    for (let i = 0; i < $.tasks.length; i++) {
+      const task = $.tasks[i]
+      const name = task.title || task.taskName || `任务${i+1}`
+      const result = task.result || '⏸️ 未处理'
+      subtasks.push(`${i+1}. ${name}: ${result}`)
+    }
+  } else {
+    subtasks.push('暂无任务或获取失败')
   }
+  
+  // 发送通知
+  $.msg($.name, '顺丰签到结果', subtasks.join('\n'))
+}
 
-  $.msg($.name, $.subt, $.desc.join('\n'))
+// Env类定义
+function Env(name) {
+  this.name = name
+  this.log = console.log
+  this.logErr = console.error
+  
+  this.getjson = function(key) {
+    try {
+      const val = $persistentStore.read(key)
+      return val ? JSON.parse(val) : null
+    } catch (e) {
+      return null
+    }
+  }
+  
+  this.setdata = function(val, key) {
+    try {
+      $persistentStore.write(val, key)
+      return true
+    } catch (e) {
+      return false
+    }
+  }
+  
+  this.msg = function(title, subt, desc) {
+    try {
+      $notification.post(title, subt, desc)
+    } catch (e) {
+      this.log('通知发送失败:', e)
+    }
+  }
+  
+  this.wait = function(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
+  
+  this.done = function() {
+    $done({})
+  }
 }
 
 // prettier-ignore
