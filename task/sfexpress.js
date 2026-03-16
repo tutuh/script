@@ -31,7 +31,7 @@ function loginapp() {
 function loginweb() {
   const sign = encodeURIComponent($.login.obj.sign)
   const loginOpts = {
-    url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/share/app/shareRedirect?sign=${sign}&source=SFAPP&bizCode=692@dnFiR1NzZFZzeTZsSlBNbDFJSnF6cnFxdXVJZTNqMU5IdytodE5QcjBmTT0=`
+    url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/share/app/shareRedirect?sign=${sign}&source=SFAPP&bizCode=647@RnlvejM1R3VTSVZ6d3BNaXJxRFpOUVVtQkp0ZnFpNDBKdytobm5TQWxMeHpVUXVrVzVGMHVmTU5BVFA1bXlwcw==`
   }
   return $.http.get(loginOpts)
 }
