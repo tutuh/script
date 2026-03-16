@@ -59,12 +59,37 @@ function queryDailyTask() {
       }
     })
     .then((resp) => {
-      $.tasks = JSON.parse(resp.body).obj.taskTitleLevels
+      const data = JSON.parse(resp.body)
+      
+      // 添加错误检查
+      if (!data.success) {
+        console.log('查询任务失败:', data.errorMessage)
+        $.tasks = [] // 设置为空数组避免后续错误
+        return
+      }
+      
+      // 检查 obj 和 taskTitleLevels 是否存在
+      if (data.obj && data.obj.taskTitleLevels) {
+        $.tasks = data.obj.taskTitleLevels
+      } else {
+        console.log('返回数据格式异常:', data)
+        $.tasks = []
+      }
+    })
+    .catch((err) => {
+      console.log('查询任务请求失败:', err)
+      $.tasks = []
     })
 }
 
 async function signDailyTasks() {
   await queryDailyTask()
+  
+  // 如果没有任务数据，直接返回
+  if (!$.tasks || $.tasks.length === 0) {
+    console.log('没有获取到任务列表')
+    return
+  }
 
   for (let i = 0; i < $.tasks.length; i++) {
     const task = $.tasks[i]
