@@ -37,11 +37,16 @@ function loginweb() {
 }
 
 function sign() {
+  const loginOpts = $.getjson($.KEY_login)
+  
   const signOpts = {
     url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskSignPlusService~automaticSignFetchPackage`,
     body: `{"comeFrom": "vioin", "channelFrom": "SFAPP"}`,
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Cookie': loginOpts?.headers?.Cookie || '',
+      'User-Agent': loginOpts?.headers?.['User-Agent'] || '',
+      // 从登录会话中复制其他必要的headers
     }
   }
   return $.http.post(signOpts).then((resp) => {
@@ -50,34 +55,40 @@ function sign() {
 }
 
 function queryDailyTask() {
+  // 获取之前保存的登录信息中的headers
+  const loginOpts = $.getjson($.KEY_login)
+  
   return $.http
     .post({
       url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~queryPointTaskAndSignFromES`,
       body: `{"channelType":"1"}`,
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Cookie': loginOpts?.headers?.Cookie || '',  // 添加Cookie
+        'User-Agent': loginOpts?.headers?.['User-Agent'] || '', // 添加User-Agent
+        // 可能还需要其他header，如 token、sign 等
       }
     })
     .then((resp) => {
+      console.log('queryDailyTask 返回:', resp.body) // 添加调试
       const data = JSON.parse(resp.body)
       
-      // 添加错误检查
-      if (!data.success) {
-        console.log('查询任务失败:', data.errorMessage)
-        $.tasks = [] // 设置为空数组避免后续错误
+      // 检查是否登录失效
+      if (data.code === '401' || data.errorCode === 'INVALID_SESSION') {
+        console.log('登录已失效，需要重新获取登录会话')
+        $.tasks = []
         return
       }
       
-      // 检查 obj 和 taskTitleLevels 是否存在
       if (data.obj && data.obj.taskTitleLevels) {
         $.tasks = data.obj.taskTitleLevels
       } else {
-        console.log('返回数据格式异常:', data)
+        console.log('返回数据格式:', data) // 打印实际返回的数据
         $.tasks = []
       }
     })
     .catch((err) => {
-      console.log('查询任务请求失败:', err)
+      console.log('queryDailyTask 错误:', err)
       $.tasks = []
     })
 }
