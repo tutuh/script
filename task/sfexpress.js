@@ -2,12 +2,12 @@ const $ = new Env('顺丰速运')
 $.KEY_login = 'chavy_login_sfexpress'
 
 !(async () => {
-  // 检查运行环境
+  // 判断是捕获模式还是定时任务模式
   if (typeof $request !== 'undefined') {
-    // 捕获模式 - 当有HTTP请求时执行
+    // 捕获模式：保存登录会话
     await captureSession()
   } else {
-    // 签到模式 - 定时任务执行
+    // 签到模式：执行签到和每日任务
     await signMain()
   }
 })()
@@ -16,36 +16,22 @@ $.KEY_login = 'chavy_login_sfexpress'
 
 // ==================== 捕获会话部分 ====================
 async function captureSession() {
-  const session = {}
-  session.url = $request.url
-  session.body = $request.body
-  session.headers = $request.headers
-  
-  console.log('=== 捕获到请求 ===')
-  console.log('URL:', session.url)
-  console.log('Headers:', JSON.stringify(session.headers, null, 2))
+  const session = {
+    url: $request.url,
+    body: $request.body,
+    headers: $request.headers
+  }
+  console.log(JSON.stringify(session))
   
   if ($.setdata(JSON.stringify(session), $.KEY_login)) {
-    $.subt = `获取会话: 成功!`
-    console.log('✅ 会话保存成功')
-    
-    // 验证保存的数据
-    const saved = $.getjson($.KEY_login)
-    if (saved?.headers?.Cookie) {
-      console.log('Cookie保存成功:', saved.headers.Cookie.substring(0, 100) + '...')
-    }
+    $.msg($.name, '获取会话: 成功!', '已保存顺丰登录信息')
   } else {
-    $.subt = `获取会话: 失败!`
-    console.log('❌ 会话保存失败')
+    $.msg($.name, '获取会话: 失败!', '请检查脚本权限')
   }
-  
-  $.msg($.name, $.subt, '已捕获顺丰登录信息')
 }
 
 // ==================== 签到主逻辑 ====================
 async function signMain() {
-  console.log('开始执行顺丰签到...')
-  
   // 获取保存的登录会话
   const loginSession = $.getjson($.KEY_login)
   if (!loginSession) {
@@ -53,79 +39,53 @@ async function signMain() {
     return
   }
 
-  // 提取Cookie
+  // 提取Cookie（用于后续请求）
   const headers = loginSession.headers || {}
-  let cookie = headers.Cookie || headers.cookie || ''
-  
+  const cookie = headers.Cookie || headers.cookie || ''
   if (!cookie) {
     $.msg($.name, '❌ 错误', '未获取到Cookie信息，请重新获取登录会话')
     return
   }
 
-  console.log('使用Cookie:', cookie.substring(0, 100) + '...')
-
-  // 执行登录流程
+  // 执行登录流程（获取sign参数）
   await loginapp(loginSession)
   if (!$.login?.obj?.sign) {
     $.msg($.name, '❌ 登录失败', '无法获取sign参数')
     return
   }
   
-  await $.wait('1000')
+  await $.wait(1000)
   await loginweb()
-  await $.wait('1000')
+  await $.wait(1000)
   await sign(cookie)
-  await $.wait('1000')
+  await $.wait(1000)
   await signDailyTasks(cookie)
   showmsg()
 }
 
 function loginapp(loginOpts) {
-  // 深拷贝避免修改原对象
+  // 深拷贝，避免修改原对象
   const opts = JSON.parse(JSON.stringify(loginOpts))
   delete opts.headers.Cookie
 
-  console.log('loginapp 请求URL:', opts.url)
-  
   return $.http
     .post(opts)
-    .then((resp) => {
-      try {
-        $.login = JSON.parse(resp.body)
-        console.log('loginapp 成功:', $.login.success)
-      } catch (e) {
-        console.log('解析loginapp响应失败:', resp.body)
-      }
+    .then(resp => {
+      $.login = JSON.parse(resp.body)
     })
-    .catch((err) => {
-      console.log('loginapp错误:', err)
-    })
+    .catch(err => console.log(err))
 }
 
 function loginweb() {
-  if (!$.login?.obj?.sign) {
-    console.log('loginweb: 没有sign参数')
-    return Promise.resolve()
-  }
-  
   const sign = encodeURIComponent($.login.obj.sign)
-  const loginOpts = {
-    url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/share/app/shareRedirect?sign=${sign}&source=SFAPP&bizCode=647@RnlvejM1R3VTSVZ6d3BNaXJxRFpOUVVtQkp0ZnFpNDBKdytobm5TQWxMeHpVUXVrVzVGMHVmTU5BVFA1bXlwcw==`
-  }
-  
-  console.log('loginweb URL:', loginOpts.url)
-  return $.http.get(loginOpts).then((resp) => {
-    console.log('loginweb 状态码:', resp.status)
-  })
+  const url = `https://mcs-mimp-web.sf-express.com/mcs-mimp/share/app/shareRedirect?sign=${sign}&source=SFAPP&bizCode=647@RnlvejM1R3VTSVZ6d3BNaXJxRFpOUVVtQkp0ZnFpNDBKdytobm5TQWxMeHpVUXVrVzVGMHVmTU5BVFA1bXlwcw==`
+  return $.http.get({ url })
 }
 
 function sign(cookie) {
   const signOpts = {
     url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskSignPlusService~automaticSignFetchPackage`,
-    body: JSON.stringify({
-      comeFrom: "vioin",
-      channelFrom: "SFAPP"
-    }),
+    body: JSON.stringify({ comeFrom: "vioin", channelFrom: "SFAPP" }),
     headers: {
       'Content-Type': 'application/json',
       'Cookie': cookie,
@@ -136,15 +96,8 @@ function sign(cookie) {
       'Referer': 'https://mcs-mimp-web.sf-express.com/mcs-mimp/index.html'
     }
   }
-  
-  return $.http.post(signOpts).then((resp) => {
-    try {
-      $.sign = JSON.parse(resp.body)
-      console.log('签到结果:', $.sign)
-    } catch (e) {
-      console.log('解析签到结果失败:', resp.body)
-      $.sign = { success: false, errorMessage: '解析失败' }
-    }
+  return $.http.post(signOpts).then(resp => {
+    $.sign = JSON.parse(resp.body)
   })
 }
 
@@ -152,9 +105,7 @@ function queryDailyTask(cookie) {
   return $.http
     .post({
       url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~queryPointTaskAndSignFromES`,
-      body: JSON.stringify({
-        channelType: "1"
-      }),
+      body: JSON.stringify({ channelType: "1" }),
       headers: {
         'Content-Type': 'application/json',
         'Cookie': cookie,
@@ -165,84 +116,49 @@ function queryDailyTask(cookie) {
         'Referer': 'https://mcs-mimp-web.sf-express.com/mcs-mimp/index.html'
       }
     })
-    .then((resp) => {
-      try {
-        const data = JSON.parse(resp.body)
-        console.log('查询任务返回:', data)
-        
-        if (!data.success) {
-          console.log('查询任务失败:', data.errorMessage)
-          $.tasks = []
-          return
-        }
-        
-        // 安全获取任务列表
-        if (data.obj && data.obj.taskTitleLevels) {
-          $.tasks = data.obj.taskTitleLevels
-        } else {
-          console.log('未找到taskTitleLevels，完整数据:', JSON.stringify(data))
-          $.tasks = []
-        }
-      } catch (e) {
-        console.log('解析任务列表失败:', resp.body)
+    .then(resp => {
+      const data = JSON.parse(resp.body)
+      if (data.obj && data.obj.taskTitleLevels) {
+        $.tasks = data.obj.taskTitleLevels
+      } else {
+        console.log('未找到任务列表，返回数据：', JSON.stringify(data))
         $.tasks = []
       }
     })
-    .catch((err) => {
-      console.log('查询任务请求失败:', err)
+    .catch(err => {
+      console.log('查询任务失败：', err)
       $.tasks = []
     })
 }
 
 async function signDailyTasks(cookie) {
   await queryDailyTask(cookie)
-  
-  if (!$.tasks || $.tasks.length === 0) {
-    console.log('没有获取到任务列表')
-    $.tasks = []
-    return
-  }
+  if (!$.tasks || $.tasks.length === 0) return
 
-  console.log(`获取到 ${$.tasks.length} 个任务`)
-  
-  for (let i = 0; i < $.tasks.length; i++) {
-    const task = $.tasks[i]
-    console.log(`处理任务 ${i+1}:`, task.title)
-    
-    try {
-      if (task.status === 1) {
-        await getPoint(task, cookie)
-      } else if (task.status === 2) {
-        await doTask(task, cookie)
-        await $.wait('500')
-        await getPoint(task, cookie)
-      } else if (task.status === 3) {
-        task.result = '积分已领取！'
-      } else {
-        task.result = '未知状态'
-      }
-    } catch (e) {
-      console.log('处理任务出错:', e)
-      task.result = '处理异常'
+  for (const task of $.tasks) {
+    if (task.status === 1) {
+      await getPoint(task, cookie)
+    } else if (task.status === 2) {
+      await doTask(task, cookie)
+      await $.wait(500)
+      await getPoint(task, cookie)
+    } else if (task.status === 3) {
+      task.result = '积分已领取！'
+    } else {
+      task.result = '未知'
     }
-    
-    await $.wait('500')
   }
 }
 
 function doTask(task, cookie) {
   return $.http.post({
     url: `https://mcs-mimp-web.sf-express.com/mcs-mimp/commonRoutePost/memberEs/taskRecord/finishTask`,
-    body: JSON.stringify({
-      taskCode: task.taskCode
-    }),
+    body: JSON.stringify({ taskCode: task.taskCode }),
     headers: {
       'Content-Type': 'application/json',
       'Cookie': cookie,
       'User-Agent': 'SF-Express/5.0 (iPhone; iOS 15.0; Scale/3.0)'
     }
-  }).then((resp) => {
-    console.log(`完成任务 ${task.taskCode}:`, resp.body)
   })
 }
 
@@ -262,52 +178,38 @@ function getPoint(task, cookie) {
         'User-Agent': 'SF-Express/5.0 (iPhone; iOS 15.0; Scale/3.0)'
       }
     })
-    .then((resp) => {
-      try {
-        const data = JSON.parse(resp.body)
-        task.result = data.success ? '✅ 成功' : `❌ ${data.errorMessage || '失败'}`
-        console.log('领取积分结果:', task.result)
-      } catch (e) {
-        task.result = '❌ 解析失败'
-      }
+    .then(resp => {
+      const data = JSON.parse(resp.body)
+      task.result = data.success ? '成功' : (data.errorMessage || '失败')
     })
 }
 
 function showmsg() {
-  const subtasks = []
+  let subt = '签到: '
+  const desc = []
   
-  // 签到结果
-  if ($.sign) {
-    if ($.sign.success) {
-      if ($.sign.obj?.hasFinishSign) {
-        subtasks.push(`📅 签到: 今日已签 (连续${$.sign.obj.countDay || 0}天)`)
-      } else {
-        subtasks.push(`📅 签到: 成功 (连续${$.sign.obj.countDay || 0}天)`)
-      }
+  if ($.sign?.success) {
+    if ($.sign.obj.hasFinishSign) {
+      subt += '重复'
     } else {
-      subtasks.push(`📅 签到: 失败 (${$.sign.errorMessage || '未知错误'})`)
+      subt += '成功'
     }
+    desc.push(`说明: 连续签到${$.sign.obj.countDay}天`)
   } else {
-    subtasks.push('📅 签到: 未执行')
+    subt += '失败'
+    desc.push(`说明: ${$.sign?.errorMessage || '未知错误'}`)
   }
-  
-  subtasks.push('') // 空行
-  subtasks.push('📋 每日任务:')
-  
-  // 任务结果
-  if ($.tasks && $.tasks.length > 0) {
-    for (let i = 0; i < $.tasks.length; i++) {
-      const task = $.tasks[i]
-      const name = task.title || `任务${i+1}`
-      const result = task.result || '⏸️ 未处理'
-      subtasks.push(`${i+1}. ${name}: ${result}`)
-    }
+
+  desc.push('', '每日任务:')
+  if ($.tasks && $.tasks.length) {
+    $.tasks.forEach(t => {
+      desc.push(`${t.title}: ${t.result || '未处理'}`)
+    })
   } else {
-    subtasks.push('暂无任务或获取失败')
+    desc.push('无任务或获取失败')
   }
-  
-  // 发送通知
-  $.msg($.name, '顺丰签到结果', subtasks.join('\n'))
+
+  $.msg($.name, subt, desc.join('\n'))
 }
 
 // ==================== Env类定义 ====================
