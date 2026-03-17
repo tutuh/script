@@ -33,6 +33,3 @@ DOMAIN,msg.umengcloud.com,DIRECT,extended-matching
 
 # Getui
 DOMAIN-SUFFIX,dizhensubao.getui.com,DIRECT,extended-matching
-
-# Other
-AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,capcutapi.com,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-SUFFIX,isnssdk.com,extended-matching),(DOMAIN-SUFFIX,toutiaoapi.com,extended-matching),(DOMAIN-SUFFIX,bytedance.com,extended-matching),(DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)))),DIRECT
