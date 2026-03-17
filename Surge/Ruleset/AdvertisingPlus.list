@@ -667,7 +667,7 @@ DOMAIN-SUFFIX,zwaar.org
 DOMAIN-SUFFIX,zxrtb.com
 DOMAIN-SUFFIX,zzd6.com
 
-#**********************
+# =======  广告平台by可莉  ======= #
 
 DOMAIN-KEYWORD,adstrategy
 DOMAIN,lf-ad-ies.bytecdn.cn
@@ -700,7 +700,6 @@ DOMAIN-SUFFIX,appsad.cn
 DOMAIN-SUFFIX,beizi.biz
 DOMAIN-SUFFIX,ad-scope.com.cn
 DOMAIN-SUFFIX,adn-plus.com.cn
-DOMAIN-SUFFIX,beizi.biz
 DOMAIN-SUFFIX,adhub.com.cn
 DOMAIN-SUFFIX,adnplus.com.cn
 DOMAIN-SUFFIX,adscope.com.cn
@@ -734,7 +733,6 @@ DOMAIN,mobads.baidu.com
 DOMAIN,nadvideo2.baidu.com
 DOMAIN,wn.pos.baidu.com
 DOMAIN,miniapp-ad.cdn.bcebos.com
-DOMAIN,mobads-pre-config.cdn.bcebos.com
 DOMAIN-SUFFIX,union.baidu.cn
 DOMAIN-SUFFIX,union.baidu.com
 DOMAIN,adsmind.gdtimg.com
@@ -759,7 +757,6 @@ DOMAIN,tmeadcomm.y.qq.com
 DOMAIN,tpns.qq.com
 DOMAIN,wup.imtt.qq.com
 DOMAIN,tpstelemetry.tencent.com
-DOMAIN,otheve.beacon.qq.com
 DOMAIN,stat.y.qq.com
 DOMAIN,stat6.y.qq.com
 DOMAIN,oth.str.mdt.qq.com
@@ -808,7 +805,6 @@ DOMAIN-SUFFIX,rhinokeen.com
 DOMAIN-SUFFIX,lydaas.com
 DOMAIN-SUFFIX,xixikf.com
 DOMAIN-SUFFIX,wrating.com
-DOMAIN-SUFFIX,puata.info
 DOMAIN-SUFFIX,mobmore.com
 DOMAIN-SUFFIX,um0.cn
 DOMAIN-SUFFIX,umv0.com
@@ -817,14 +813,10 @@ DOMAIN-SUFFIX,eshiqi.com
 DOMAIN-SUFFIX,umv5.com
 DOMAIN-SUFFIX,dratio.com
 DOMAIN-SUFFIX,umtrack0.com
-DOMAIN-SUFFIX,uyunad.com
 DOMAIN-SUFFIX,whalecloud.com
 DOMAIN-SUFFIX,umtrack2.com
-DOMAIN-SUFFIX,umtrack.com
 DOMAIN-SUFFIX,um1.cn
-DOMAIN-SUFFIX,umsns.com
 DOMAIN-SUFFIX,adfunlink.com
-DOMAIN-SUFFIX,tianmu.mobi
 DOMAIN-SUFFIX,ubixioe.com
 DOMAIN,ems.youku.com
 DOMAIN,et.tanx.com
@@ -843,7 +835,6 @@ DOMAIN,cpc-service-square.aiclk.com
 DOMAIN,logrcv.aiclk.com
 DOMAIN,huichuan.sm.cn
 DOMAIN,huichuan-mc.sm.cn
-DOMAIN,api.sm.cn
 DOMAIN,nex.163.com
 DOMAIN,iad.g.163.com
 DOMAIN,gorgon.youdao.com
@@ -877,10 +868,7 @@ DOMAIN-SUFFIX,lnk0.com
 DOMAIN-SUFFIX,bridgeoos.com
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,birdgesdk.com
-DOMAIN-SUFFIX,toponadss.com
-DOMAIN-SUFFIX,bridgeoos.com
 DOMAIN-SUFFIX,anyrtb.com
-DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,combocn.com
 DOMAIN-SUFFIX,beanxin.com
 DOMAIN-SUFFIX,letway.cn
@@ -906,11 +894,9 @@ DOMAIN-SUFFIX,doubleclick.net
 DOMAIN-SUFFIX,doubleclick-cn.net
 DOMAIN-SUFFIX,googlesyndication-cn.com
 DOMAIN-SUFFIX,xinduoad.com
-DOMAIN-SUFFIX,kuaiyiad.com
 DOMAIN,statis.miwuad.com
 DOMAIN-SUFFIX,sigmob.cn
 DOMAIN-SUFFIX,richmob.cn
-DOMAIN-SUFFIX,66mobi.com
 DOMAIN,ad.shunchangzhixing.com
 DOMAIN,redirect.shunchangzhixing.com
 DOMAIN,api.touch-moblie.com
@@ -921,7 +907,6 @@ DOMAIN-SUFFIX,domob.cn
 DOMAIN-SUFFIX,adwangmai.com
 DOMAIN-SUFFIX,bxsnews.com
 DOMAIN-SUFFIX,ranfenghd.com
-DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-SUFFIX,qchannel01.cn
 DOMAIN-SUFFIX,ad.xelements.cn
 DOMAIN-SUFFIX,adsrvr.cn
@@ -954,4 +939,3 @@ DOMAIN-SUFFIX,applvn.com
 DOMAIN-SUFFIX,moloco.com
 DOMAIN-SUFFIX,rayjump.com
 DOMAIN-SUFFIX,rixengine.com
-DOMAIN-SUFFIX,amazon-adsystem.com
