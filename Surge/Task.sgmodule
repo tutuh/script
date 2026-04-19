@@ -1,6 +1,6 @@
 #!name=每日签到
 #!desc=自动签到脚本
-#!arguments=顺丰签到:20 10 0 * * *,贴吧签到:20 15,10 0 * * *,途虎签到:30 30 0 * * *,Boxjs备份:10 8 1 */3 * *,Boxjs恢复:30 10 5 * * *,Boxjs会话切换:30 10 5 * * *,禁用Boxjs备份脚本:Boxjs数据备份,禁用Boxjs恢复脚本:Boxjs数据恢复,禁用Boxjs会话切换脚本:Boxjs会话切换
+#!arguments=顺丰签到:20 10 0 * * *,贴吧签到:20 15 0 * * *,途虎签到:30 30 0 * * *,Boxjs备份:10 8 1 */3 * *,Boxjs恢复:30 10 5 * * *,Boxjs会话切换:30 10 5 * * *,禁用Boxjs备份脚本:Boxjs数据备份,禁用Boxjs恢复脚本:Boxjs数据恢复,禁用Boxjs会话切换脚本:Boxjs会话切换
 #!arguments-desc=定时签到：Cron表达式，秒 分 时 * * *。\n\n禁用脚本：输入 # 表示禁用。
 #!category=签到模块
 
