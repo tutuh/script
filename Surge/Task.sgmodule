@@ -1,6 +1,6 @@
 #!name=每日签到
 #!desc=自动签到脚本
-#!arguments=顺丰签到:20 10 0 * * *, 贴吧签到: 20 15,10 0 * * *, 途虎签到:30 30 0 * * * , Boxjs 备份: 10 8 1 */3 * * , Boxjs 恢复: 30 10 5 * * *, Boxjs 会话切换: 30 10 5 * * *,禁用备份脚本:Boxjs 数据备份,禁用恢复脚本:Boxjs 数据恢复,禁用切换脚本:Boxjs 会话切换
+#!arguments=顺丰签到:20 10 0 * * *, 贴吧签到: 20 15,10 0 * * *, 途虎签到:30 30 0 * * * , Boxjs 备份: 10 8 1 */3 * * , Boxjs 恢复: 30 10 5 * * *, Boxjs 会话切换: 30 10 5 * * *, 禁用 Boxjs 备份脚本:Boxjs 数据备份, 禁用 Boxjs 恢复脚本:Boxjs 数据恢复, 禁用 Boxjs 会话切换脚本:Boxjs 会话切换
 #!arguments-desc=定时签到：Cron表达式，秒 分 时 * * *。\n\n禁用脚本：输入 # 表示禁用。
 #!category=签到模块
 
@@ -11,8 +11,8 @@
 
 途虎_签到 = type=cron,cronexp="{{{途虎签到}}}",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/tuhu.js
 
-{{{禁用备份脚本}}}  = type=cron,cronexp="{{{Boxjs 备份}}}",wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
+{{{禁用 Boxjs 备份脚本}}}  = type=cron,cronexp="{{{Boxjs 备份}}}",wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
 
-{{{禁用恢复脚本}}} = type=cron,cronexp="{{{Boxjs 恢复}}}",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js
+{{{禁用 Boxjs 恢复脚本}}} = type=cron,cronexp="{{{Boxjs 恢复}}}",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js
 
-{{{禁用切换脚本}}} = type=cron,cronexp="{{{Boxjs 会话切换}}}",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js
+{{{禁用 Boxjs 会话切换脚本}}} = type=cron,cronexp="{{{Boxjs 会话切换}}}",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js
