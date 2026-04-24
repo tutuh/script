@@ -2,20 +2,9 @@
 #!desc=Block Advertising
 #!category=广告拦截
 
-[Rule]
-# Other
-AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,capcutapi.com,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-SUFFIX,isnssdk.com,extended-matching),(DOMAIN-SUFFIX,toutiaoapi.com,extended-matching),(DOMAIN-SUFFIX,bytedance.com,extended-matching),(DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)))),DIRECT
-
-AND,((DOMAIN-KEYWORD,adash,extended-matching),(DOMAIN-SUFFIX,ut.taobao.com,extended-matching)),REJECT,pre-matching
-
 [Map Local]
 # > 向日葵远程 - client-api-v?.oray.com
 ^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_iOS_DEVICE_FREE\? data-type=text data="{}" status-code=200
-
-# > 有道翻译官 - gorgon.youdao.com
-^https:\/\/gorgon\.youdao\.com\/gorgon\/v2\/request\.s data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/gorgon\.youdao\.com\/gorgon\/brand\/prefetch\.s data-type=text data="{}" status-code=200 header="Content-Type:application/json"  
-^https:\/\/gorgon\.youdao\.com\/gorgon\/request\.s data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # > 肯德基 - res.kfc.com.cn
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome data-type=text data="{}" status-code=200
@@ -85,11 +74,6 @@ AND,((DOMAIN-KEYWORD,adash,extended-matching),(DOMAIN-SUFFIX,ut.taobao.com,exten
 ^https?:\/\/app\.variflight\.com\/v\d\/advert\/ - reject
 ^https?:\/\/api\.cdmcaac\.com\/ad\/ - reject
 
-# (H)
-# > 虎牙 - business.msstatic.com, cdnfile1.msstatic.com
-^https?:\/\/business\.msstatic\.com\/advertiser\/ - reject
-^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/resource_\d+\.zip\?hyresrctype=splash - reject
-
 # (J)
 # > 京东
 ^http:\/\/\w{32}\.jddebug\.com\/diagnose\? - reject
@@ -117,8 +101,6 @@ AND,((DOMAIN-KEYWORD,adash,extended-matching),(DOMAIN-SUFFIX,ut.taobao.com,exten
 ^https?:\/\/capi\.mwee\.cn\/app-api\/V\d+\/app\/(ad|getstartad) - reject
 # > 麦当劳 - api.mcd.cn
 https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
-# > 马蜂窝 - mapi.mafengwo.cn
-^https:\/\/mapi\.mafengwo\.cn\/ad\/get_launch_ad_list\/v - reject
 
 # (P)
 # > 票根 - pss.txffp.com
@@ -136,19 +118,10 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 # > 一淘网 - acs.m.taobao.com
 #^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ - reject
 #^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash - reject
-# > 途牛 - m.tuniu.com
-^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ - reject
-# > 天翼云盘 - cloud.189.cn, api.cloud.189.cn
-^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
-^https?:\/\/api\.cloud\.189\.cn\/guns\/img\/recommendedPosition\/ - reject
 
 # (U)
 # > Umeng - msg.umengcloud.com
 ^https:\/\/msg\.umengcloud\.com\/admsg\/ - reject
-
-# (W)
-# > 网易邮箱 - appconf.mail.163.com
-^https?:\/\/appconf\.mail\.163\.com\/mmad\/ - reject
 
 # (X)
 # > 小牛 - app-api.niu.com
@@ -165,4 +138,4 @@ https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) - reject
 ^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ - reject
 
 [MITM]
-hostname = %APPEND% client-api-v?.oray.com, gorgon.youdao.com, res.kfc.com.cn, app.chengfenmiao.com, m.client.10010.com, client.app.coc.10086.cn, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, business.msstatic.com, cdnfile1.msstatic.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, home.mi.com, capi.mwee.cn, api.mcd.cn, mapi.mafengwo.cn, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, m.tuniu.com, cloud.189.cn, api.cloud.189.cn, msg.umengcloud.com, appconf.mail.163.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
+hostname = %APPEND% client-api-v?.oray.com, res.kfc.com.cn, app.chengfenmiao.com, m.client.10010.com, client.app.coc.10086.cn, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, res.pizzahut.com.cn, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, switch.jumpvg.com, *.kingsoft-office-service.com, *.kakamobi.cn, imeclient.openspeech.cn, api.club.lenovo.cn, home.mi.com, capi.mwee.cn, api.mcd.cn, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, msg.umengcloud.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
