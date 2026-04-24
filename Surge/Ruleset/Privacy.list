@@ -59,6 +59,7 @@ DOMAIN,tracklog.58.com
 # > Antiy
 DOMAIN,miav-cse.avlyun.com
 DOMAIN,miui-fxcse.avlyun.com
+# > Apple
 DOMAIN,token.safebrowsing.apple
 # > Baidu
 DOMAIN,hm.baidu.com
