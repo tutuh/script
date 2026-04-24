@@ -36,12 +36,6 @@ DOMAIN,app-ad.variflight.com
 DOMAIN,optimus-ads.amap.com
 DOMAIN,optimus-ads.amap.com.w.alikunlun.com
 
-# ======= (H) ======= #
-# > 虎扑
-DOMAIN,adx.hupu.com
-DOMAIN,adx-api.hupu.com
-DOMAIN,goblin.hupu.com
-
 # ======= (J) ======= #
 # > 驾校一点通
 DOMAIN,richmanapi.jxedt.com
@@ -59,45 +53,16 @@ DOMAIN,minfo.wps.cn
 DOMAIN,mobad.ijinshan.com
 DOMAIN,ups.ksmobile.net
 DOMAIN,ws.ksmobile.net
-# > 今日头条
-DOMAIN,ad.toutiao.com
-DOMAIN,dsp.toutiao.com
-DOMAIN,pangolin.snssdk.com
-DOMAIN-SUFFIX,pangolin-dsp-toutiao.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
-DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
 
 # ======= (L) ======= #
 # > 蓝奏云
 DOMAIN,statics.woozooo.com
 
 # ======= (M) ======= #
-# > Microsoft
-DOMAIN,mobileads.msn.com
-DOMAIN-SUFFIX,ads.msn.com
-DOMAIN-SUFFIX,ads1.msn.com
-DOMAIN-SUFFIX,ads2.msn.com
-DOMAIN-SUFFIX,bingads.microsoft.com
-DOMAIN-SUFFIX,rads.msn.com
-# > 墨迹天气
-DOMAIN,ad.api.moji.com
-DOMAIN,adlaunch.moji.com
-DOMAIN,ads.mojicdn.com
-DOMAIN,v1.log.moji.com
-# > 美颜相机
-DOMAIN,aaid.uyunad.com
-DOMAIN,adui.tg.meitu.com
 # > 米家
 DOMAIN,sdkconfig.ad.xiaomi.com
 # > 买单吧
 DOMAIN,c-hzgt2.getui.com
-
-# ======= (P) ======= #
-# > 澎湃新闻
-DOMAIN,admonitor.thepaper.cn
-DOMAIN,adpai.thepaper.cn
-DOMAIN,imgadpai.thepaper.cn
 
 # ======= (Q) ======= #
 # > 汽车之家
@@ -117,10 +82,6 @@ DOMAIN-SUFFIX,shuzilm.cn
 # ======= (T) ======= #
 # > 太平洋保险
 DOMAIN,a.cpic.com.cn
-
-# ======= (W) ======= #
-# > 网上国网
-DOMAIN,h5-api.feiersmart.com
 
 # ======= (Y) ======= #
 # > 云闪付
