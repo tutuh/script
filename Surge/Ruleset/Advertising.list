@@ -64,6 +64,12 @@ DOMAIN,sdkconfig.ad.xiaomi.com
 # > 买单吧
 DOMAIN,c-hzgt2.getui.com
 
+# ======= (P) ======= #
+# > 澎湃新闻
+DOMAIN,admonitor.thepaper.cn
+DOMAIN,adpai.thepaper.cn
+DOMAIN,imgadpai.thepaper.cn
+
 # ======= (Q) ======= #
 # > 汽车之家
 DOMAIN,adm0.autoimg.cn
