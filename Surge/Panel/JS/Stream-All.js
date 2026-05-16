@@ -15,14 +15,15 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
 ;(async () => {
   let panel_result = {
-    title: '流媒体解锁',
+    title: '网络解锁检测',
     content: '',
     icon: 'play.tv.fill',
     'icon-color': '#DC3131',
   }
   
-  // 并发获取各个流媒体的检测结果，大幅提高检测速度
-  const [netflix_result, disney_raw, youtube_result] = await Promise.all([
+  // 并发获取所有检测结果（ChatGPT + 3大流媒体）
+  const [chatgpt_result, netflix_result, disney_raw, youtube_result] = await Promise.all([
+    check_chatgpt(),
     check_netflix(),
     testDisneyPlus(),
     check_youtube_premium()
@@ -48,12 +49,43 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
       break;
   }
 
-  // 将检测结果按照 Netflix, Disney, YouTube 的顺序组装
-  panel_result['content'] = [netflix_result, disney_result, youtube_result].join('\n');
+  // 将检测结果按照 ChatGPT, Netflix, Disney, YouTube 的顺序组装
+  panel_result['content'] = [chatgpt_result, netflix_result, disney_result, youtube_result].join('\n');
   
-  // 输出结果
+  // 输出结果给 Panel 面板
   $done(panel_result);
 })()
+
+// ====== ChatGPT 检测函数 ======
+async function check_chatgpt() {
+  const tf = ["T1","XX","AL","DZ","AD","AO","AG","AR","AM","AU","AT","AZ","BS","BD","BB","BE","BZ","BJ","BT","BA","BW","BR","BG","BF","CV","CA","CL","CO","KM","CR","HR","CY","DK","DJ","DM","DO","EC","SV","EE","FJ","FI","FR","GA","GM","GE","DE","GH","GR","GD","GT","GN","GW","GY","HT","HN","HU","IS","IN","ID","IQ","IE","IL","IT","JM","JP","JO","KZ","KE","KI","KW","KG","LV","LB","LS","LR","LI","LT","LU","MG","MW","MY","MV","ML","MT","MH","MR","MU","MX","MC","MN","ME","MA","MZ","MM","NA","NR","NP","NL","NZ","NI","NE","NG","MK","NO","OM","PK","PW","PA","PG","PE","PH","PL","PT","QA","RO","RW","KN","LC","VC","WS","SM","ST","SN","RS","SC","SL","SG","SK","SI","SB","ZA","ES","LK","SR","SE","CH","TH","TG","TO","TT","TN","TR","TV","UG","AE","US","UY","VU","ZM","BO","BN","CG","CZ","VA","FM","MD","PS","KR","TW","TZ","TL","GB"];
+  
+  return new Promise((resolve) => {
+    let option = {
+      url: "https://chat.openai.com/cdn-cgi/trace",
+      headers: REQUEST_HEADERS,
+    }
+    $httpClient.get(option, function(error, response, data) {
+      if (error || !data) {
+        resolve("ChatGPT: 检测失败 ❌");
+        return;
+      }
+      
+      let lines = data.split("\n"); 
+      let cf = lines.reduce((acc, line) => {
+        let [key, value] = line.split("=");
+        if(key && value) acc[key] = value.trim();
+        return acc;
+      }, {});
+      
+      let loc = cf.loc || '';
+      let l = tf.indexOf(loc);
+      let gptStatus = (l !== -1) ? "已解锁 ➟ " + loc.toUpperCase() : "未支持 🚫";
+      
+      resolve("ChatGPT: " + gptStatus);
+    });
+  });
+}
 
 // ====== YouTube Premium 检测函数 ======
 async function check_youtube_premium() {
