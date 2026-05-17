@@ -15,10 +15,10 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
 ;(async () => {
   let panel_result = {
-    title: '',
+    title: '网络解锁检测',
     content: '',
-    icon: '',
-    'icon-color': '',
+    icon: 'play.tv.fill',
+    'icon-color': '#D22F20',
   }
   
   // 并发获取所有检测结果（ChatGPT + 3大流媒体）
