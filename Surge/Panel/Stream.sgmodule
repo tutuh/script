@@ -1,11 +1,11 @@
 #!name=网络解锁检测
 #!desc=ChatGPT, Netflix, Disney+, YouTube 解锁检测
 #!category=Panel
-#!arguments=更新频率:-1, 请求超时:30, 图标:play.tv.fill, 图标颜色:#D22F20
+#!arguments=更新频率:-1, 请求超时:30
 #!arguments-desc=[参数说明]\n\n更新频率：面板刷新频率，默认手动刷新。\n\n请求超时：默认30秒，单位：秒。
 
 [Panel]
 网络解锁检测 = script-name=解锁检测,update-interval={{{更新频率}}}
 
 [Script]
-解锁检测 = type=generic,timeout={{{请求超时}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Stream-All.js,argument=title={{{面板名称}}}&icon={{{图标}}}&color={{{图标颜色}}}
+解锁检测 = type=generic,timeout={{{请求超时}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Stream-All.js
