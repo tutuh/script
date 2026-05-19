@@ -1,7 +1,7 @@
 #!name=网速测试
 #!desc=快速测试下行速率与延迟
 #!category=Panel
-#!arguments=更新频率:-1, 请求超时:60, 面板名称:网速测试, iconslow:tortoise.fill, iconslow:tortoise.fill, iconmid:bolt.horizontal.fill, iconfast:bolt.fill, colorlow:#FF3B30, colormid:#FFCC00, colorhigh:#34C759, 下载流量:1
+#!arguments=更新频率:-1, 请求超时:60, 面板名称:网速测试, iconslow:tortoise.fill, iconmid:bolt.horizontal.fill, iconfast:bolt.fill, colorlow:#FF3B30, colormid:#FFCC00, colorhigh:#34C759, 下载流量:1
 #!arguments-desc=[参数说明]\n\n更新频率: 面板刷新频率（默认手动刷新）。\n\n请求超时: 单位：秒，默认 60 秒。\n\n面板名称: 自定义面板标题。\n\n下载流量: 默认1MB，最大3MB。
 
 [Panel]
