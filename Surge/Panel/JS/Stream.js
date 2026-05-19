@@ -43,7 +43,6 @@ const GPT_SUPPORTED_REGIONS = {
     'icon-color': '#D22F20'
   };
 
-  // 增加核心 try-catch，防止某处未知错误导致整个面板断流崩溃
   try {
     const results = await Promise.all([
       checkChatGPT(),
@@ -56,14 +55,14 @@ const GPT_SUPPORTED_REGIONS = {
     panel.content = results.map(r => r.text).join('\n');
     panel['icon-color'] = pickIconColor(results);
   } catch (e) {
-    panel.content = '检测失败 ❌';
+    panel.content = '检测过程发生异常 ❌';
     panel['icon-color'] = '#FF453A';
   }
 
   $done(panel);
 })();
 
-// 基础请求封装
+// 基础请求封装（修复 POST body 绑定）
 function request(method, url, headers = REQUEST_HEADERS, body = null) {
   return new Promise((resolve) => {
     const opts = { url, headers, timeout: REQUEST_TIMEOUT };
@@ -73,7 +72,11 @@ function request(method, url, headers = REQUEST_HEADERS, body = null) {
       resolve({ error, response: response || {}, data: data || '' });
     };
 
-    method === 'POST' ? $httpClient.post(opts, callback) : $httpClient.get(opts, callback);
+    if (method.toUpperCase() === 'POST') {
+      $httpClient.post(opts, callback);
+    } else {
+      $httpClient.get(opts, callback);
+    }
   });
 }
 
@@ -97,14 +100,14 @@ function pickIconColor(results) {
 
 // === 各平台检测逻辑 ===
 
-// ChatGPT (精简为单次请求，移除多余的循环等待)
+// ChatGPT
 async function checkChatGPT() {
   try {
     const r = await request('GET', 'https://chatgpt.com/cdn-cgi/trace');
-    if (r.error || !r.data) return makeResult('ChatGPT', STATUS_ERROR, 'ChatGPT: 检测失败 ❌');
+    if (r.error || !r.data) return makeResult('ChatGPT', STATUS_ERROR, 'ChatGPT: 检测超时或失败 ❌');
 
     const locMatch = r.data.match(/loc=([A-Z]{2})/i);
-    if (!locMatch) return makeResult('ChatGPT', STATUS_ERROR, 'ChatGPT: 检测失败 ❌');
+    if (!locMatch) return makeResult('ChatGPT', STATUS_ERROR, 'ChatGPT: 状态未知 ❌');
 
     const region = locMatch[1].toUpperCase();
     if (GPT_SUPPORTED_REGIONS[region]) {
@@ -120,7 +123,7 @@ async function checkChatGPT() {
 async function checkGemini() {
   try {
     const r = await request('GET', 'https://gemini.google.com/app');
-    if (r.error || !r.response) return makeResult('Gemini', STATUS_ERROR, 'Gemini: 检测失败 ❌');
+    if (r.error || !r.response) return makeResult('Gemini', STATUS_ERROR, 'Gemini: 检测超时或失败 ❌');
 
     const status = r.response.status || 0;
     const data = r.data || '';
@@ -130,7 +133,7 @@ async function checkGemini() {
         return makeResult('Gemini', STATUS_NOT_AVAILABLE, 'Gemini: 未支持 🚫');
       }
       const m = data.match(/,2,1,200,"([A-Z]{2,3})"/);
-      const region = m && m[1] ? m[1].slice(0, 2).toUpperCase() : 'YES';
+      const region = m && m[1] ? m[1].slice(0, 2).toUpperCase() : 'US';
       return makeResult('Gemini', STATUS_AVAILABLE, `Gemini: 已解锁 ➟ ${region}`, region);
     }
 
@@ -143,33 +146,31 @@ async function checkGemini() {
   }
 }
 
-// Netflix (精简掉串行循环，只检查单ID，兼顾地区识别)
+// Netflix (修复重定向与自制剧识别逻辑)
 async function checkNetflix() {
   try {
+    // 80062035 是一部非自制剧 (绝命毒师)，以此来区分仅自制剧与全解锁
     const r = await request('GET', 'https://www.netflix.com/title/80062035');
-    if (r.error || !r.response) return makeResult('Netflix', STATUS_ERROR, 'Netflix: 检测失败 ❌');
+    if (r.error || !r.response) return makeResult('Netflix', STATUS_ERROR, 'Netflix: 检测超时或失败 ❌');
 
     const status = r.response.status || 0;
-    const headers = r.response.headers || {};
     const data = r.data || '';
 
     if (status === 403) return makeResult('Netflix', STATUS_NOT_AVAILABLE, 'Netflix: 未支持 🚫');
     
     if (status === 200 || status === 404) {
-      // 404 说明能访问自制剧页面但该特定ID不存在，通常也算自制剧解锁
-      const url = headers['x-originating-url'] || headers['location'] || headers['Location'] || '';
-      let region = '';
-      
-      if (url) {
-        const parts = url.split('/');
-        if (parts.length >= 4 && parts[3] && parts[3] !== 'title') {
-          region = parts[3].split('-')[0].toUpperCase();
-        }
+      let region = 'US';
+      // 更加精准地从 HTML 内联 JSON 数据中提取国家代码
+      const match = data.match(/"(?:requestCountryCode|countryCode)":"([A-Z]{2})"/i);
+      if (match && match[1]) {
+        region = match[1].toUpperCase();
       }
-      if (!region && data.includes('www.netflix.com/title/')) region = 'US';
-      
-      region = region || 'KV'; // 自制剧解锁/未知地区
-      return makeResult('Netflix', STATUS_AVAILABLE, `Netflix: 已解锁 ➟ ${region}`, region);
+
+      // 404 说明能访问 Netflix 但该特定版权剧不存在，通常属于仅解锁自制剧
+      if (status === 404) {
+         return makeResult('Netflix', STATUS_COMING, `Netflix: 仅自制剧 ➟ ${region}`, region);
+      }
+      return makeResult('Netflix', STATUS_AVAILABLE, `Netflix: 完整解锁 ➟ ${region}`, region);
     }
     return makeResult('Netflix', STATUS_ERROR, 'Netflix: 检测失败 ❌');
   } catch (e) {
@@ -177,96 +178,88 @@ async function checkNetflix() {
   }
 }
 
-// Disney+ (移除多余的本地 Timeout，靠统一的 REQUEST_TIMEOUT 控制)
+// Disney+ (修复请求 API 方式和缺失的 Bearer Token)
 async function checkDisneyPlus() {
   try {
     const [home, loc] = await Promise.all([
-      testDisneyHomePage().catch(() => null),
-      getDisneyLocationInfo().catch(() => null)
+      testDisneyHomePage(),
+      getDisneyLocationInfo()
     ]);
 
     let region = loc?.countryCode ? loc.countryCode.toUpperCase() : '';
     if (!region && home?.region) region = home.region.toUpperCase();
 
     if (loc?.inSupportedLocation === false || loc?.inSupportedLocation === 'false') {
-      return makeResult('Disney+', STATUS_COMING, `Disney+: 未登陆 ➟ ${region || 'UN'} ⏳`, region || 'UN');
+      return makeResult('Disney+', STATUS_COMING, `Disney+: 即将登陆 ➟ ${region || 'UN'} ⏳`, region || 'UN');
     }
 
     if (region) return makeResult('Disney+', STATUS_AVAILABLE, `Disney+: 已解锁 ➟ ${region}`, region);
     if (home && home.available === false) return makeResult('Disney+', STATUS_NOT_AVAILABLE, 'Disney+: 未支持 🚫');
 
-    return makeResult('Disney+', STATUS_ERROR, 'Disney+: 检测失败 ❌');
+    return makeResult('Disney+', STATUS_ERROR, 'Disney+: 检测超时或失败 ❌');
   } catch (e) {
     return makeResult('Disney+', STATUS_ERROR, 'Disney+: 检测失败 ❌');
   }
 }
 
-function getDisneyLocationInfo() {
-  return new Promise((resolve, reject) => {
-    const opts = {
-      url: 'https://disney.api.edge.bamgrid.com/graph/v1/device/graphql',
-      headers: {
-        'Accept-Language': 'en',
-        'Authorization': 'ZGlzbmV5JmJyb3dzZXImMS4wLjA.Cu56AgSfBTDag5NiRA81oLHkDZfu5L3CKadnefEAY84',
-        'Content-Type': 'application/json',
-        'User-Agent': REQUEST_HEADERS['User-Agent']
-      },
-      body: JSON.stringify({
-        query: 'mutation registerDevice($input: RegisterDeviceInput!) { registerDevice(registerDevice: $input) { grant { grantType assertion } } }',
-        variables: { input: { applicationRuntime: 'chrome', attributes: { browserName: 'chrome', browserVersion: '124.0.0.0', manufacturer: 'apple', model: null, operatingSystem: 'macintosh', operatingSystemVersion: '10.15.7', osDeviceIds: [] }, deviceFamily: 'browser', deviceLanguage: 'en', deviceProfile: 'macosx' } }
-      }),
-      timeout: REQUEST_TIMEOUT
+async function getDisneyLocationInfo() {
+  const headers = {
+    ...REQUEST_HEADERS,
+    // Fix: 原生缺少 Bearer 前缀会导致 403
+    'Authorization': 'Bearer ZGlzbmV5JmJyb3dzZXImMS4wLjA.Cu56AgSfBTDag5NiRA81oLHkDZfu5L3CKadnefEAY84',
+    'Content-Type': 'application/json'
+  };
+  const body = JSON.stringify({
+    query: 'mutation registerDevice($input: RegisterDeviceInput!) { registerDevice(registerDevice: $input) { grant { grantType assertion } } }',
+    variables: { input: { applicationRuntime: 'chrome', attributes: { browserName: 'chrome', browserVersion: '124.0.0.0', manufacturer: 'apple', model: null, operatingSystem: 'macintosh', operatingSystemVersion: '10.15.7', osDeviceIds: [] }, deviceFamily: 'browser', deviceLanguage: 'en', deviceProfile: 'macosx' } }
+  });
+
+  const r = await request('POST', 'https://disney.api.edge.bamgrid.com/graph/v1/device/graphql', headers, body);
+  if (r.error || !r.response || r.response.status !== 200) return null;
+  
+  try {
+    const obj = JSON.parse(r.data);
+    const session = obj?.extensions?.sdk?.session;
+    return {
+      inSupportedLocation: session?.inSupportedLocation,
+      countryCode: session?.location?.countryCode || ''
     };
-
-    $httpClient.post(opts, (error, response, data) => {
-      if (error || !response || response.status !== 200) return reject();
-      try {
-        const obj = JSON.parse(data);
-        if (obj?.errors) return reject();
-        const session = obj?.extensions?.sdk?.session;
-        resolve({
-          inSupportedLocation: session ? session.inSupportedLocation : null,
-          countryCode: session?.location ? session.location.countryCode : ''
-        });
-      } catch (e) { reject(); }
-    });
-  });
+  } catch (e) { 
+    return null; 
+  }
 }
 
-function testDisneyHomePage() {
-  return new Promise((resolve, reject) => {
-    const opts = { url: 'https://www.disneyplus.com/', headers: REQUEST_HEADERS, timeout: REQUEST_TIMEOUT };
-    $httpClient.get(opts, (error, response, data) => {
-      if (error) return reject();
-      if (!response || response.status !== 200) return resolve({ available: false });
-      if (data && data.includes('Sorry, Disney+ is not available in your region.')) {
-        return resolve({ available: false });
-      }
-      const match = data.match(/Region: ([A-Za-z]{2})/);
-      resolve({ available: true, region: match ? match[1] : '' });
-    });
-  });
+async function testDisneyHomePage() {
+  const r = await request('GET', 'https://www.disneyplus.com/');
+  if (r.error || !r.response) return null;
+  if (r.response.status !== 200) return { available: false };
+  if (r.data && r.data.includes('Sorry, Disney+ is not available in your region.')) {
+    return { available: false };
+  }
+  const match = (r.data || '').match(/Region: ([A-Za-z]{2})/i);
+  return { available: true, region: match ? match[1].toUpperCase() : '' };
 }
 
-// YouTube Premium (精简并修复重叠的逻辑)
+// YouTube Premium (修复安全获取策略)
 async function checkYouTubePremium() {
   try {
     const r = await request('GET', 'https://www.youtube.com/premium');
-    if (r.error || !r.response) return makeResult('YouTube', STATUS_ERROR, 'YouTube: 检测失败 ❌');
+    if (r.error || !r.response) return makeResult('YouTube', STATUS_ERROR, 'YouTube: 检测超时或失败 ❌');
 
     const data = r.data || '';
     
-    // 无论是 200 还是其他状态，只要包含不可用文本即判定为不支持
     if (data.includes('Premium is not available in your country') || data.includes('is not available in your country')) {
       return makeResult('YouTube', STATUS_NOT_AVAILABLE, 'YouTube: 未支持 🚫');
     }
 
     if (r.response.status === 200) {
       let region = 'US';
-      const m = data.match(/"countryCode":"(.*?)"/);
-      if (m && m[1]) region = m[1].toUpperCase();
-      else if (data.includes('www.google.cn')) region = 'CN';
-      
+      const m = data.match(/"countryCode":"([A-Za-z]{2})"/i);
+      if (m && m[1]) {
+        region = m[1].toUpperCase();
+      } else if (data.includes('www.google.cn')) {
+        region = 'CN';
+      }
       return makeResult('YouTube', STATUS_AVAILABLE, `YouTube: 已解锁 ➟ ${region}`, region);
     }
 
