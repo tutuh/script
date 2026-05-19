@@ -57,11 +57,11 @@ var CHATGPT_TRACE_URLS = [
   ])
 
   panel.content = [
-    formatLine(results[0]),
-    formatLine(results[1]),
-    formatLine(results[2]),
-    formatLine(results[3]),
-    formatLine(results[4])
+    results[0].text,
+    results[1].text,
+    results[2].text,
+    results[3].text,
+    results[4].text
   ].join('\n')
 
   panel['icon-color'] = pickIconColor(results)
@@ -145,42 +145,6 @@ function timeout(ms) {
       reject('Timeout')
     }, ms)
   })
-}
-
-function padRight(str, len) {
-  str = str || ''
-  while (str.length < len) {
-    str += ' '
-  }
-  return str
-}
-
-function formatLine(item) {
-  var nameMap = {
-    'ChatGPT': 'GPT',
-    'Gemini': 'Gemini',
-    'Netflix': 'Netflix',
-    'Disney+': 'Disney',
-    'YouTube': 'YouTube'
-  }
-
-  var name = nameMap[item.name] || item.name || ''
-  name = padRight(name, 8)
-
-  var region = item.region ? upper(item.region) : ''
-
-  switch (item.status) {
-    case STATUS_AVAILABLE:
-      return name + '✓ ' + (region || '')
-    case STATUS_COMING:
-      return name + '… ' + (region || '')
-    case STATUS_NOT_AVAILABLE:
-      return name + '✗'
-    case STATUS_TIMEOUT:
-      return name + '⚠'
-    default:
-      return name + '?'
-  }
 }
 
 // ChatGPT
