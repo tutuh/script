@@ -1,241 +1,359 @@
-// 全局配置：统一 Headers 并强制禁用缓存
-const REQUEST_HEADERS = {
-  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36',
-  'Accept-Language': 'en',
+// 基础配置
+var REQUEST_HEADERS = {
+  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  'Accept-Language': 'en-US,en;q=0.9',
   'Cache-Control': 'no-cache',
   'Pragma': 'no-cache'
 }
 
-// 状态常量定义
-const STATUS_COMING = 2
-const STATUS_AVAILABLE = 1
-const STATUS_NOT_AVAILABLE = 0
-const STATUS_TIMEOUT = -1
-const STATUS_ERROR = -2
+var REQUEST_TIMEOUT = 5
 
-// ChatGPT 支持的国家/地区列表（外移至全局，优化内存）
-const GPT_SUPPORTED_REGIONS = ["T1","XX","AL","DZ","AD","AO","AG","AR","AM","AU","AT","AZ","BS","BD","BB","BE","BZ","BJ","BT","BA","BW","BR","BG","BF","CV","CA","CL","CO","KM","CR","HR","CY","DK","DJ","DM","DO","EC","SV","EE","FJ","FI","FR","GA","GM","GE","DE","GH","GR","GD","GT","GN","GW","GY","HT","HN","HU","IS","IN","ID","IQ","IE","IL","IT","JM","JP","JO","KZ","KE","KI","KW","KG","LV","LB","LS","LR","LI","LT","LU","MG","MW","MY","MV","ML","MT","MH","MR","MU","MX","MC","MN","ME","MA","MZ","MM","NA","NR","NP","NL","NZ","NI","NE","NG","MK","NO","OM","PK","PW","PA","PG","PE","PH","PL","PT","QA","RO","RW","KN","LC","VC","WS","SM","ST","SN","RS","SC","SL","SG","SK","SI","SB","ZA","ES","LK","SR","SE","CH","TH","TG","TO","TT","TN","TR","TV","UG","AE","US","UY","VU","ZM","BO","BN","CG","CZ","VA","FM","MD","PS","KR","TW","TZ","TL","GB"];
+var STATUS_COMING = 2
+var STATUS_AVAILABLE = 1
+var STATUS_NOT_AVAILABLE = 0
+var STATUS_TIMEOUT = -1
+var STATUS_ERROR = -2
 
-;(async () => {
-  let panel_result = {
+var GPT_SUPPORTED_REGIONS = {
+  "T1": 1, "XX": 1, "AL": 1, "DZ": 1, "AD": 1, "AO": 1, "AG": 1, "AR": 1, "AM": 1, "AU": 1,
+  "AT": 1, "AZ": 1, "BS": 1, "BD": 1, "BB": 1, "BE": 1, "BZ": 1, "BJ": 1, "BT": 1, "BA": 1,
+  "BW": 1, "BR": 1, "BG": 1, "BF": 1, "CV": 1, "CA": 1, "CL": 1, "CO": 1, "KM": 1, "CR": 1,
+  "HR": 1, "CY": 1, "DK": 1, "DJ": 1, "DM": 1, "DO": 1, "EC": 1, "SV": 1, "EE": 1, "FJ": 1,
+  "FI": 1, "FR": 1, "GA": 1, "GM": 1, "GE": 1, "DE": 1, "GH": 1, "GR": 1, "GD": 1, "GT": 1,
+  "GN": 1, "GW": 1, "GY": 1, "HT": 1, "HN": 1, "HU": 1, "IS": 1, "IN": 1, "ID": 1, "IQ": 1,
+  "IE": 1, "IL": 1, "IT": 1, "JM": 1, "JP": 1, "JO": 1, "KZ": 1, "KE": 1, "KI": 1, "KW": 1,
+  "KG": 1, "LV": 1, "LB": 1, "LS": 1, "LR": 1, "LI": 1, "LT": 1, "LU": 1, "MG": 1, "MW": 1,
+  "MY": 1, "MV": 1, "ML": 1, "MT": 1, "MH": 1, "MR": 1, "MU": 1, "MX": 1, "MC": 1, "MN": 1,
+  "ME": 1, "MA": 1, "MZ": 1, "MM": 1, "NA": 1, "NR": 1, "NP": 1, "NL": 1, "NZ": 1, "NI": 1,
+  "NE": 1, "NG": 1, "MK": 1, "NO": 1, "OM": 1, "PK": 1, "PW": 1, "PA": 1, "PG": 1, "PE": 1,
+  "PH": 1, "PL": 1, "PT": 1, "QA": 1, "RO": 1, "RW": 1, "KN": 1, "LC": 1, "VC": 1, "WS": 1,
+  "SM": 1, "ST": 1, "SN": 1, "RS": 1, "SC": 1, "SL": 1, "SG": 1, "SK": 1, "SI": 1, "SB": 1,
+  "ZA": 1, "ES": 1, "LK": 1, "SR": 1, "SE": 1, "CH": 1, "TH": 1, "TG": 1, "TO": 1, "TT": 1,
+  "TN": 1, "TR": 1, "TV": 1, "UG": 1, "AE": 1, "US": 1, "UY": 1, "VU": 1, "ZM": 1, "BO": 1,
+  "BN": 1, "CG": 1, "CZ": 1, "VA": 1, "FM": 1, "MD": 1, "PS": 1, "KR": 1, "TW": 1, "TZ": 1,
+  "TL": 1, "GB": 1
+}
+
+var CHATGPT_TRACE_URLS = [
+  'https://chatgpt.com/cdn-cgi/trace',
+  'https://chat.openai.com/cdn-cgi/trace'
+]
+
+// 主入口
+;(async function () {
+  var panel = {
     title: '网络解锁检测',
     content: '',
     icon: 'play.tv.fill',
-    'icon-color': '#D22F20',
-  }
-  
-  // 并发获取所有检测结果
-  const [chatgpt_result, gemini_result, netflix_result, disney_raw, youtube_result] = await Promise.all([
-    check_chatgpt(),
-    check_gemini(),
-    check_netflix(),
-    testDisneyPlus(),
-    check_youtube_premium()
-  ]);
-  
-  // 根据 Disney 状态组装输出文本
-  let disney_result = "Disney+: ";
-  switch(disney_raw.status) {
-    case STATUS_AVAILABLE:
-      disney_result += "已解锁 ➟ " + disney_raw.region.toUpperCase();
-      break;
-    case STATUS_COMING:
-      disney_result += "未登陆 ➟ " + disney_raw.region.toUpperCase() + " ⏳";
-      break;
-    case STATUS_NOT_AVAILABLE:
-      disney_result += "未支持 🚫";
-      break;
-    case STATUS_TIMEOUT:
-      disney_result += "检测超时 🚦";
-      break;
-    default:
-      disney_result += "检测失败 ❌";
-      break;
+    'icon-color': '#D22F20'
   }
 
-  // 完美排版输出
-  panel_result['content'] = [
-    chatgpt_result, 
-    gemini_result, 
-    netflix_result, 
-    disney_result, 
-    youtube_result
-  ].join('\n');
-  
-  $done(panel_result);
-})()
+  var results = await Promise.all([
+    checkChatGPT(),
+    checkGemini(),
+    checkNetflix(),
+    checkDisneyPlus(),
+    checkYouTubePremium()
+  ])
 
-// ====== ChatGPT 检测函数 ======
-async function check_chatgpt() {
-  return new Promise((resolve) => {
-    let option = {
-      url: "https://chat.openai.com/cdn-cgi/trace",
-      headers: REQUEST_HEADERS,
-      timeout: 5000
+  panel.content = [
+    formatLine(results[0]),
+    formatLine(results[1]),
+    formatLine(results[2]),
+    formatLine(results[3]),
+    formatLine(results[4])
+  ].join('\n')
+
+  panel['icon-color'] = pickIconColor(results)
+
+  $done(panel)
+})().catch(function () {
+  $done({
+    title: '网络解锁检测',
+    content: '检测失败 ❌',
+    icon: 'play.tv.fill',
+    'icon-color': '#FF453A'
+  })
+})
+
+// 请求
+function request(method, url, headers, body, timeoutMs) {
+  return new Promise(function (resolve) {
+    var opts = {
+      url: url,
+      headers: headers || REQUEST_HEADERS,
+      timeout: timeoutMs || REQUEST_TIMEOUT
     }
-    $httpClient.get(option, function(error, response, data) {
-      if (error || !data) {
-        resolve("ChatGPT: 检测失败 ❌");
-        return;
-      }
-      
-      let lines = data.split("\n"); 
-      let cf = lines.reduce((acc, line) => {
-        let [key, value] = line.split("=");
-        if(key && value) acc[key] = value.trim();
-        return acc;
-      }, {});
-      
-      let loc = cf.loc || '';
-      let isSupported = GPT_SUPPORTED_REGIONS.includes(loc.toUpperCase());
-      let gptStatus = isSupported ? "已解锁 ➟ " + loc.toUpperCase() : "未支持 🚫";
-      
-      resolve("ChatGPT: " + gptStatus);
-    });
-  });
-}
 
-// ====== Gemini 检测函数 ======
-async function check_gemini() {
-  return new Promise((resolve) => {
-    let option = {
-      url: "https://gemini.google.com",
-      headers: REQUEST_HEADERS,
-      timeout: 5000
+    if (body !== undefined && body !== null) {
+      opts.body = body
     }
-    $httpClient.get(option, function(error, response, data) {
-      if (error || !data) {
-        resolve("Gemini: 检测失败 ❌");
-        return;
-      }
-      
-      if (data.includes("45631641,null,true")) {
-        const m = data.match(/,2,1,200,"([A-Z]{2,3})"/);
-        if (m) {
-          const region = m[1].substring(0, 2);
-          resolve("Gemini: 已解锁 ➟ " + region.toUpperCase());
-        } else {
-          resolve("Gemini: 已解锁 ➟ YES");
-        }
-      } else {
-        resolve("Gemini: 未支持 🚫");
-      }
-    });
-  });
-}
 
-// ====== YouTube Premium 检测函数 ======
-async function check_youtube_premium() {
-  return new Promise((resolve) => {
-    let option = {
-      url: 'https://www.youtube.com/premium',
-      headers: REQUEST_HEADERS,
-      timeout: 5000
+    var callback = function (error, response, data) {
+      resolve({
+        error: error,
+        response: response || {},
+        data: data || ''
+      })
     }
-    $httpClient.get(option, function (error, response, data) {
-      if (error || !data || response.status !== 200) {
-        resolve('YouTube: 检测失败 ❌')
-        return
-      }
 
-      if (data.indexOf('Premium is not available in your country') !== -1) {
-        resolve('YouTube: 未支持 🚫')
-        return
-      }
-
-      let region = 'US'
-      let re = new RegExp('"countryCode":"(.*?)"', 'gm')
-      let result = re.exec(data)
-      if (result && result.length === 2) {
-        region = result[1]
-      } else if (data.indexOf('www.google.cn') !== -1) {
-        region = 'CN'
-      }
-      resolve('YouTube: 已解锁 ➟ ' + region.toUpperCase())
-    })
+    if (method === 'POST') {
+      $httpClient.post(opts, callback)
+    } else {
+      $httpClient.get(opts, callback)
+    }
   })
 }
 
-// ====== Netflix 检测函数 ======
-async function check_netflix() {
-  let inner_check = (filmId) => {
-    return new Promise((resolve, reject) => {
-      let option = {
-        url: 'https://www.netflix.com/title/' + filmId,
-        headers: REQUEST_HEADERS,
-        timeout: 5000
-      }
-      $httpClient.get(option, function (error, response, data) {
-        if (error != null) return reject('Error')
-        if (response.status === 403) return reject('Not Available')
-        if (response.status === 404) return resolve('Not Found')
+function upper(s) {
+  return (s || '').toString().toUpperCase()
+}
 
-        if (response.status === 200) {
-          let url = response.headers['x-originating-url'] || response.headers['Location'] || ''
-          if (!url || url.includes('/title/')) return resolve('US')
-          let region = url.split('/')[3]
-          if (region) {
-            region = region.split('-')[0]
-            if (region == 'title') region = 'US'
-            resolve(region)
-          } else {
-            resolve('US')
-          }
-          return
-        }
-        reject('Error')
-      })
-    })
+function isSupportedGPTRegion(loc) {
+  return !!GPT_SUPPORTED_REGIONS[upper(loc)]
+}
+
+function makeResult(name, status, text, region) {
+  return {
+    name: name,
+    status: status,
+    text: text,
+    region: region || ''
+  }
+}
+
+function pickIconColor(results) {
+  var hasAvailable = false
+  var hasWarning = false
+
+  for (var i = 0; i < results.length; i++) {
+    if (results[i].status === STATUS_AVAILABLE) {
+      hasAvailable = true
+    } else {
+      hasWarning = true
+    }
   }
 
-  let netflix_check_result = 'Netflix: '
-
-  await inner_check(80062035)
-    .then((code) => {
-      if (code === 'Not Found') return inner_check(80018499)
-      netflix_check_result += '已解锁 ➟ ' + code.toUpperCase()
-      return Promise.reject('BreakSignal')
-    })
-    .then((code) => {
-      if (code === 'Not Found') return Promise.reject('Not Available')
-      netflix_check_result += '自制剧 ➟ ' + code.toUpperCase()
-      return Promise.reject('BreakSignal')
-    })
-    .catch((error) => {
-      if (error === 'BreakSignal') return
-      if (error === 'Not Available') {
-        netflix_check_result += '未支持 🚫'
-        return
-      }
-      netflix_check_result += '检测失败 ❌'
-    })
-
-  return netflix_check_result
+  if (hasAvailable && !hasWarning) return '#32D74B'
+  if (hasAvailable && hasWarning) return '#FFD60A'
+  return '#FF453A'
 }
 
-// ====== DisneyPlus 检测函数 ======
-async function testDisneyPlus() {
-  try {
-    let { region } = await Promise.race([testHomePage(), timeout(7000)])
-    let { countryCode, inSupportedLocation } = await Promise.race([getLocationInfo(), timeout(7000)])
-    
-    region = countryCode ?? region
-    
-    if (inSupportedLocation === false || inSupportedLocation === 'false') {
-      return { region, status: STATUS_COMING }
-    } else {
-      return { region, status: STATUS_AVAILABLE }
+function timeout(ms) {
+  return new Promise(function (_, reject) {
+    setTimeout(function () {
+      reject('Timeout')
+    }, ms)
+  })
+}
+
+function padRight(str, len) {
+  str = str || ''
+  while (str.length < len) {
+    str += ' '
+  }
+  return str
+}
+
+function formatLine(item) {
+  var nameMap = {
+    'ChatGPT': 'GPT',
+    'Gemini': 'Gemini',
+    'Netflix': 'Netflix',
+    'Disney+': 'Disney',
+    'YouTube': 'YouTube'
+  }
+
+  var name = nameMap[item.name] || item.name || ''
+  name = padRight(name, 8)
+
+  var region = item.region ? upper(item.region) : ''
+
+  switch (item.status) {
+    case STATUS_AVAILABLE:
+      return name + '✓ ' + (region || '')
+    case STATUS_COMING:
+      return name + '… ' + (region || '')
+    case STATUS_NOT_AVAILABLE:
+      return name + '✗'
+    case STATUS_TIMEOUT:
+      return name + '⚠'
+    default:
+      return name + '?'
+  }
+}
+
+// ChatGPT
+async function checkChatGPT() {
+  for (var i = 0; i < CHATGPT_TRACE_URLS.length; i++) {
+    var r = await request('GET', CHATGPT_TRACE_URLS[i], REQUEST_HEADERS, null, REQUEST_TIMEOUT)
+    if (r.error || !r.data) continue
+
+    var loc = parseCloudflareTraceLoc(r.data)
+    if (!loc) continue
+
+    var region = upper(loc)
+    if (isSupportedGPTRegion(region)) {
+      return makeResult('ChatGPT', STATUS_AVAILABLE, 'ChatGPT: 已解锁 ➟ ' + region, region)
     }
-  } catch (error) {
-    if (error === 'Not Available') return { status: STATUS_NOT_AVAILABLE }
-    if (error === 'Timeout') return { status: STATUS_TIMEOUT }
-    return { status: STATUS_ERROR }
-  } 
+
+    return makeResult('ChatGPT', STATUS_NOT_AVAILABLE, 'ChatGPT: 未支持 🚫', region)
+  }
+
+  return makeResult('ChatGPT', STATUS_ERROR, 'ChatGPT: 检测失败 ❌')
 }
-  
-function getLocationInfo() {
-  return new Promise((resolve, reject) => {
-    let opts = {
+
+function parseCloudflareTraceLoc(text) {
+  var lines = text.split('\n')
+  for (var i = 0; i < lines.length; i++) {
+    if (lines[i].indexOf('loc=') === 0) {
+      return lines[i].slice(4).trim()
+    }
+  }
+  return ''
+}
+
+// Gemini
+async function checkGemini() {
+  var urls = [
+    'https://gemini.google.com/',
+    'https://gemini.google.com/app'
+  ]
+
+  for (var i = 0; i < urls.length; i++) {
+    var r = await request('GET', urls[i], REQUEST_HEADERS, null, REQUEST_TIMEOUT)
+    if (r.error || !r.response) continue
+
+    var status = r.response.status || 0
+    var data = r.data || ''
+
+    if (status === 200) {
+      if (data.indexOf('not available') !== -1 || data.indexOf('unavailable in your country') !== -1) {
+        return makeResult('Gemini', STATUS_NOT_AVAILABLE, 'Gemini: 未支持 🚫')
+      }
+
+      var m = data.match(/,2,1,200,"([A-Z]{2,3})"/)
+      if (m && m[1]) {
+        var region = upper(m[1].slice(0, 2))
+        return makeResult('Gemini', STATUS_AVAILABLE, 'Gemini: 已解锁 ➟ ' + region, region)
+      }
+
+      return makeResult('Gemini', STATUS_AVAILABLE, 'Gemini: 已解锁 ➟ YES')
+    }
+
+    if (status === 403 || status === 404) {
+      return makeResult('Gemini', STATUS_NOT_AVAILABLE, 'Gemini: 未支持 🚫')
+    }
+  }
+
+  return makeResult('Gemini', STATUS_ERROR, 'Gemini: 检测失败 ❌')
+}
+
+// Netflix
+async function checkNetflix() {
+  var ids = [80062035, 80018499]
+
+  for (var i = 0; i < ids.length; i++) {
+    var r = await request('GET', 'https://www.netflix.com/title/' + ids[i], REQUEST_HEADERS, null, REQUEST_TIMEOUT)
+    if (r.error || !r.response) continue
+
+    var status = r.response.status || 0
+    var headers = r.response.headers || {}
+    var data = r.data || ''
+
+    if (status === 403) {
+      return makeResult('Netflix', STATUS_NOT_AVAILABLE, 'Netflix: 未支持 🚫')
+    }
+
+    if (status === 404) {
+      continue
+    }
+
+    if (status === 200) {
+      var url = headers['x-originating-url'] || headers['location'] || headers['Location'] || ''
+      var region = parseNetflixRegion(url, data)
+
+      if (region) {
+        return makeResult('Netflix', STATUS_AVAILABLE, 'Netflix: 已解锁 ➟ ' + region, region)
+      }
+
+      return makeResult('Netflix', STATUS_AVAILABLE, 'Netflix: 已解锁 ➟ US', 'US')
+    }
+  }
+
+  return makeResult('Netflix', STATUS_ERROR, 'Netflix: 检测失败 ❌')
+}
+
+function parseNetflixRegion(url, data) {
+  if (url) {
+    var parts = url.split('/')
+    if (parts.length >= 4) {
+      var region = parts[3]
+      if (region) {
+        region = region.split('-')[0]
+        if (region === 'title') return 'US'
+        return upper(region)
+      }
+    }
+  }
+
+  if (data && data.indexOf('www.netflix.com/title/') !== -1) {
+    return 'US'
+  }
+
+  return ''
+}
+
+// Disney+
+async function checkDisneyPlus() {
+  try {
+    var home = null
+    var loc = null
+
+    try {
+      home = await Promise.race([testDisneyHomePage(), timeout(7000)])
+    } catch (e1) {}
+
+    try {
+      loc = await Promise.race([getDisneyLocationInfo(), timeout(7000)])
+    } catch (e2) {}
+
+    var region = ''
+    var inSupportedLocation = null
+
+    if (loc) {
+      if (loc.countryCode) region = upper(loc.countryCode)
+      if (typeof loc.inSupportedLocation !== 'undefined') {
+        inSupportedLocation = loc.inSupportedLocation
+      }
+    }
+
+    if (!region && home && home.region) {
+      region = upper(home.region)
+    }
+
+    if (inSupportedLocation === false || inSupportedLocation === 'false') {
+      return makeResult('Disney+', STATUS_COMING, 'Disney+: 未登陆 ➟ ' + (region || 'UN') + ' ⏳', region || 'UN')
+    }
+
+    if (region) {
+      return makeResult('Disney+', STATUS_AVAILABLE, 'Disney+: 已解锁 ➟ ' + region, region)
+    }
+
+    if (home && home.available === false) {
+      return makeResult('Disney+', STATUS_NOT_AVAILABLE, 'Disney+: 未支持 🚫')
+    }
+
+    return makeResult('Disney+', STATUS_ERROR, 'Disney+: 检测失败 ❌')
+  } catch (e) {
+    if (e === 'Timeout') return makeResult('Disney+', STATUS_TIMEOUT, 'Disney+: 检测超时 🚦')
+    return makeResult('Disney+', STATUS_ERROR, 'Disney+: 检测失败 ❌')
+  }
+}
+
+function getDisneyLocationInfo() {
+  return new Promise(function (resolve, reject) {
+    var opts = {
       url: 'https://disney.api.edge.bamgrid.com/graph/v1/device/graphql',
       headers: {
         'Accept-Language': 'en',
@@ -250,36 +368,38 @@ function getLocationInfo() {
             applicationRuntime: 'chrome',
             attributes: {
               browserName: 'chrome',
-              browserVersion: '94.0.4606',
+              browserVersion: '124.0.0.0',
               manufacturer: 'apple',
               model: null,
               operatingSystem: 'macintosh',
               operatingSystemVersion: '10.15.7',
-              osDeviceIds: [],
+              osDeviceIds: []
             },
             deviceFamily: 'browser',
             deviceLanguage: 'en',
-            deviceProfile: 'macosx',
-          },
-        },
+            deviceProfile: 'macosx'
+          }
+        }
       }),
+      timeout: REQUEST_TIMEOUT
     }
 
     $httpClient.post(opts, function (error, response, data) {
       if (error) return reject('Error')
-      if (response.status !== 200) return reject('Not Available')
+      if (!response || response.status !== 200) return reject('Not Available')
 
       try {
-        data = JSON.parse(data)
-        if (data?.errors) return reject('Not Available')
+        var obj = JSON.parse(data)
+        if (obj && obj.errors) return reject('Not Available')
 
-        let {
-          session: {
-            inSupportedLocation,
-            location: { countryCode },
-          },
-        } = data?.extensions?.sdk
-        resolve({ inSupportedLocation, countryCode })
+        var sdk = obj && obj.extensions && obj.extensions.sdk
+        var session = sdk && sdk.session
+        var location = session && session.location
+
+        resolve({
+          inSupportedLocation: session ? session.inSupportedLocation : null,
+          countryCode: location ? location.countryCode : ''
+        })
       } catch (e) {
         reject('Error')
       }
@@ -287,29 +407,67 @@ function getLocationInfo() {
   })
 }
 
-function testHomePage() {
-  return new Promise((resolve, reject) => {
-    let opts = {
+function testDisneyHomePage() {
+  return new Promise(function (resolve, reject) {
+    var opts = {
       url: 'https://www.disneyplus.com/',
       headers: REQUEST_HEADERS,
+      timeout: REQUEST_TIMEOUT
     }
 
     $httpClient.get(opts, function (error, response, data) {
       if (error) return reject('Error')
-      if (response.status !== 200 || data.indexOf('Sorry, Disney+ is not available in your region.') !== -1) {
-        return reject('Not Available')
+      if (!response || response.status !== 200) return resolve({ available: false })
+
+      if (data && data.indexOf('Sorry, Disney+ is not available in your region.') !== -1) {
+        return resolve({ available: false })
       }
 
-      let match = data.match(/Region: ([A-Za-z]{2})[\s\S]*?CNBL: ([12])/)
-      if (!match) return resolve({ region: '', cnbl: '' })
+      var match = data.match(/Region: ([A-Za-z]{2})[\s\S]*?CNBL: ([12])/)
+      if (!match) return resolve({ available: true, region: '' })
 
-      resolve({ region: match[1], cnbl: match[2] })
+      resolve({
+        available: true,
+        region: match[1]
+      })
     })
   })
 }
 
-function timeout(delay = 5000) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => reject('Timeout'), delay)
-  })
+// YouTube Premium
+async function checkYouTubePremium() {
+  var r = await request('GET', 'https://www.youtube.com/premium', REQUEST_HEADERS, null, REQUEST_TIMEOUT)
+  if (r.error || !r.response) {
+    return makeResult('YouTube', STATUS_ERROR, 'YouTube: 检测失败 ❌')
+  }
+
+  var status = r.response.status || 0
+  var data = r.data || ''
+
+  if (status !== 200) {
+    if (data.indexOf('Premium is not available in your country') !== -1 ||
+        data.indexOf('is not available in your country') !== -1) {
+      return makeResult('YouTube', STATUS_NOT_AVAILABLE, 'YouTube: 未支持 🚫')
+    }
+    return makeResult('YouTube', STATUS_ERROR, 'YouTube: 检测失败 ❌')
+  }
+
+  if (data.indexOf('Premium is not available in your country') !== -1 ||
+      data.indexOf('is not available in your country') !== -1) {
+    return makeResult('YouTube', STATUS_NOT_AVAILABLE, 'YouTube: 未支持 🚫')
+  }
+
+  var region = parseYouTubeRegion(data)
+  return makeResult('YouTube', STATUS_AVAILABLE, 'YouTube: 已解锁 ➟ ' + region, region)
+}
+
+function parseYouTubeRegion(data) {
+  var region = 'US'
+  var m = data.match(/"countryCode":"(.*?)"/)
+  if (m && m[1]) {
+    region = upper(m[1])
+  } else if (data.indexOf('www.google.cn') !== -1) {
+    region = 'CN'
+  }
+  return region
 }
