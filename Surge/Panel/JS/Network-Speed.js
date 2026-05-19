@@ -36,7 +36,7 @@ const round = (num, precision = 2) => Number(`${Math.round(`${num}e${precision}`
   const speedMbps = speed * 8
   
   // ======= 🎛️ 动态图标与颜色核心判断逻辑 =======
-  if (speedMbps < 10) {
+  if (speedMbps < 30) {
     dynamicIcon = 'tortoise.fill'    // 乌龟
     dynamicColor = '#5F6F81'         // 灰色
   } else if (speedMbps >= 30 && speedMbps < 100) {
