@@ -38,10 +38,10 @@ const round = (num, precision = 2) => Number(`${Math.round(`${num}e${precision}`
   // ======= 🎛️ 动态图标与颜色核心判断逻辑 =======
   if (speedMbps < 10) {
     dynamicIcon = 'tortoise.fill'    // 乌龟
-    dynamicColor = '#7f8c8d'         // 灰色
+    dynamicColor = '#6B7280'         // 灰色
   } else if (speedMbps >= 10 && speedMbps < 100) {
     dynamicIcon = 'hare.fill'        // 兔子
-    dynamicColor = '#3498db'         // 蓝色
+    dynamicColor = '#22C55E'         // 蓝色
   } else {
     dynamicIcon = 'bolt.fill'        // 闪电
     dynamicColor = '#f1c40f'         // 金色
