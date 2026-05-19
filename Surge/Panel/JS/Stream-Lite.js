@@ -4,70 +4,56 @@ const REQUEST_HEADERS = {
   'Accept-Language': 'en',
 }
 
-// 状态常量
+// 状态常量定义
 const STATUS_COMING = 2
 const STATUS_AVAILABLE = 1
 const STATUS_NOT_AVAILABLE = 0
 const STATUS_TIMEOUT = -1
 const STATUS_ERROR = -2
 
-// 解析 Panel 传入的参数（图标、颜色等）
-let iconUrl = '';
-let iconColor = '';
-let args = {};
-
-if (typeof $argument !== 'undefined') {
-  $argument.split('&').forEach(item => {
-    const [key, value] = item.split('=');
-    args[key] = value;
-  });
-}
-
-// 优先使用传入的参数，否则使用默认流媒体图标
-iconUrl = args.icon ? args.icon : 'play.tv.fill';
-iconColor = args['icon-color'] ? args['icon-color'] : '#FF2D55';
+const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36'
 
 ;(async () => {
   let panel_result = {
-    title: '流媒体 & ChatGPT 检测',
+    title: '网络解锁检测',
     content: '',
-    icon: iconUrl,
-    'icon-color': iconColor,
+    icon: 'play.tv.fill',
+    'icon-color': '#D22F20',
+  }
+  
+  // 并发获取所有检测结果（ChatGPT + 3大流媒体）
+  const [chatgpt_result, netflix_result, disney_raw, youtube_result] = await Promise.all([
+    check_chatgpt(),
+    check_netflix(),
+    testDisneyPlus(),
+    check_youtube_premium()
+  ]);
+  
+  // 根据 Disney 状态组装输出文本
+  let disney_result = "Disney+: ";
+  switch(disney_raw.status) {
+    case STATUS_AVAILABLE:
+      disney_result += "已解锁 ➟ " + disney_raw.region.toUpperCase();
+      break;
+    case STATUS_COMING:
+      disney_result += "未登陆 ➟ " + disney_raw.region.toUpperCase() + " ⏳";
+      break;
+    case STATUS_NOT_AVAILABLE:
+      disney_result += "未支持 🚫";
+      break;
+    case STATUS_TIMEOUT:
+      disney_result += "检测超时 🚦";
+      break;
+    default:
+      disney_result += "检测失败 ❌";
+      break;
   }
 
-  // 并发执行所有检测函数
-  try {
-    const [chatgptResult, youtubeResult, netflixResult, disneyRaw] = await Promise.all([
-      check_chatgpt(),
-      check_youtube_premium(),
-      check_netflix(),
-      testDisneyPlus()
-    ]);
-
-    // 处理 Disney+ 的结果文本
-    let disneyResult = "Disney+: ";
-    if (disneyRaw.status == STATUS_COMING) {
-      disneyResult += "即将登陆 ~ " + disneyRaw.region.toUpperCase();
-    } else if (disneyRaw.status == STATUS_AVAILABLE) {
-      disneyResult += "已解锁 ➟ " + disneyRaw.region.toUpperCase();
-    } else if (disneyRaw.status == STATUS_NOT_AVAILABLE) {
-      disneyResult += "未支持 🚫";
-    } else if (disneyRaw.status == STATUS_TIMEOUT) {
-      disneyResult += "检测超时 🚦";
-    } else {
-      disneyResult += "检测失败 ❌";
-    }
-
-    // 组合所有结果并用换行符连接
-    let contentList = [chatgptResult, youtubeResult, netflixResult, disneyResult];
-    panel_result['content'] = contentList.join('\n');
-
-  } catch (err) {
-    panel_result['content'] = '检测程序异常，请刷新面板';
-    console.log(err);
-  } finally {
-    $done(panel_result);
-  }
+  // 将检测结果按照 ChatGPT, Netflix, Disney, YouTube 的顺序组装
+  panel_result['content'] = [chatgpt_result, netflix_result, disney_result, youtube_result].join('\n');
+  
+  // 输出结果给 Panel 面板
+  $done(panel_result);
 })()
 
 // ====== ChatGPT 检测函数 ======
@@ -140,7 +126,7 @@ async function check_youtube_premium() {
   await inner_check()
     .then((code) => {
       if (code === 'Not Available') {
-        youtube_check_result += '不支持解锁 🚫'
+        youtube_check_result += '未支持 🚫'
       } else {
         youtube_check_result += '已解锁 ➟ ' + code.toUpperCase()
       }
@@ -178,19 +164,17 @@ async function check_netflix() {
 
         if (response.status === 200) {
           let url = response.headers['x-originating-url'] || response.headers['Location'] || ''
-          if (url.includes('/title/')) {
-            resolve('us')
+          if (!url || url.includes('/title/')) {
+            resolve('US')
             return
           }
           let region = url.split('/')[3]
           if (region) {
             region = region.split('-')[0]
-            if (region == 'title') {
-              region = 'us'
-            }
+            if (region == 'title') region = 'US'
             resolve(region)
           } else {
-            resolve('us')
+            resolve('US')
           }
           return
         }
@@ -202,12 +186,12 @@ async function check_netflix() {
 
   let netflix_check_result = 'Netflix: '
 
-  await inner_check(81280792)
+  await inner_check(80062035)
     .then((code) => {
       if (code === 'Not Found') {
         return inner_check(80018499)
       }
-      netflix_check_result += '已完整解锁 ➟ ' + code.toUpperCase()
+      netflix_check_result += '已解锁 ➟ ' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
@@ -215,7 +199,7 @@ async function check_netflix() {
         return Promise.reject('Not Available')
       }
 
-      netflix_check_result += '仅解锁自制剧 ➟ ' + code.toUpperCase()
+      netflix_check_result += '自制剧 ➟ ' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
@@ -223,7 +207,7 @@ async function check_netflix() {
         return
       }
       if (error === 'Not Available') {
-        netflix_check_result += '不支持解锁 🚫'
+        netflix_check_result += '未支持 🚫'
         return
       }
       netflix_check_result += '检测失败 ❌'
@@ -233,44 +217,139 @@ async function check_netflix() {
 }
 
 // ====== DisneyPlus 检测函数 ======
-function testDisneyPlus() {
-  return new Promise((resolve) => {
-    let option = {
-      url: 'https://www.disneyplus.com/en-gb',
-      headers: REQUEST_HEADERS,
-      timeout: 5000
+async function testDisneyPlus() {
+  try {
+    let { region, cnbl } = await Promise.race([testHomePage(), timeout(7000)])
+    console.log(`homepage: region=${region}, cnbl=${cnbl}`)
+    
+    let { countryCode, inSupportedLocation } = await Promise.race([getLocationInfo(), timeout(7000)])
+    console.log(`getLocationInfo: countryCode=${countryCode}, inSupportedLocation=${inSupportedLocation}`)
+    
+    region = countryCode ?? region
+    console.log("region:" + region)
+    
+    if (inSupportedLocation === false || inSupportedLocation === 'false') {
+      return { region, status: STATUS_COMING }
+    } else {
+      return { region, status: STATUS_AVAILABLE }
     }
     
-    $httpClient.get(option, function (error, response, data) {
+  } catch (error) {
+    console.log("error:" + error)
+    if (error === 'Not Available') {
+      return { status: STATUS_NOT_AVAILABLE }
+    }
+    if (error === 'Timeout') {
+      return { status: STATUS_TIMEOUT }
+    }
+    return { status: STATUS_ERROR }
+  } 
+}
+  
+function getLocationInfo() {
+  return new Promise((resolve, reject) => {
+    let opts = {
+      url: 'https://disney.api.edge.bamgrid.com/graph/v1/device/graphql',
+      headers: {
+        'Accept-Language': 'en',
+        Authorization: 'ZGlzbmV5JmJyb3dzZXImMS4wLjA.Cu56AgSfBTDag5NiRA81oLHkDZfu5L3CKadnefEAY84',
+        'Content-Type': 'application/json',
+        'User-Agent': UA,
+      },
+      body: JSON.stringify({
+        query: 'mutation registerDevice($input: RegisterDeviceInput!) { registerDevice(registerDevice: $input) { grant { grantType assertion } } }',
+        variables: {
+          input: {
+            applicationRuntime: 'chrome',
+            attributes: {
+              browserName: 'chrome',
+              browserVersion: '94.0.4606',
+              manufacturer: 'apple',
+              model: null,
+              operatingSystem: 'macintosh',
+              operatingSystemVersion: '10.15.7',
+              osDeviceIds: [],
+            },
+            deviceFamily: 'browser',
+            deviceLanguage: 'en',
+            deviceProfile: 'macosx',
+          },
+        },
+      }),
+    }
+
+    $httpClient.post(opts, function (error, response, data) {
       if (error) {
-        if (error.indexOf('timeout') !== -1) {
-          resolve({ region: '', status: STATUS_TIMEOUT })
-        } else {
-          resolve({ region: '', status: STATUS_ERROR })
-        }
+        reject('Error')
         return
       }
-      
+
       if (response.status !== 200) {
-        resolve({ region: '', status: STATUS_NOT_AVAILABLE })
+        console.log('getLocationInfo: ' + data)
+        reject('Not Available')
         return
       }
 
-      if (data.indexOf('Disney+ is not available in your region') !== -1) {
-        resolve({ region: '', status: STATUS_NOT_AVAILABLE })
-        return
-      }
+      try {
+        data = JSON.parse(data)
+        if (data?.errors) {
+          console.log('getLocationInfo: ' + JSON.stringify(data.errors))
+          reject('Not Available')
+          return
+        }
 
-      if (data.indexOf('disneyplus.com/welcome') !== -1 || data.indexOf('home') !== -1) {
-        let region = 'us'
-        let match = data.match(/"region":"(.*?)"/)
-        if (match && match[1]) region = match[1]
-        resolve({ region: region, status: STATUS_AVAILABLE })
-      } else if (data.indexOf('coming-soon') !== -1) {
-        resolve({ region: 'preview', status: STATUS_COMING })
-      } else {
-        resolve({ region: 'us', status: STATUS_AVAILABLE })
+        let {
+          token: { accessToken },
+          session: {
+            inSupportedLocation,
+            location: { countryCode },
+          },
+        } = data?.extensions?.sdk
+        resolve({ inSupportedLocation, countryCode, accessToken })
+      } catch (e) {
+        reject('Error')
       }
     })
+  })
+}
+
+function testHomePage() {
+  return new Promise((resolve, reject) => {
+    let opts = {
+      url: 'https://www.disneyplus.com/',
+      headers: {
+        'Accept-Language': 'en',
+        'User-Agent': UA,
+      },
+    }
+
+    $httpClient.get(opts, function (error, response, data) {
+      if (error) {
+        reject('Error')
+        return
+      }
+      if (response.status !== 200 || data.indexOf('Sorry, Disney+ is not available in your region.') !== -1) {
+        reject('Not Available')
+        return
+      }
+
+      let match = data.match(/Region: ([A-Za-z]{2})[\s\S]*?CNBL: ([12])/)
+      if (!match) {
+        resolve({ region: '', cnbl: '' })
+        return
+      }
+
+      let region = match[1]
+      let cnbl = match[2]
+      resolve({ region, cnbl })
+    })
+  })
+}
+
+function timeout(delay = 5000) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject('Timeout')
+    }, delay)
   })
 }
