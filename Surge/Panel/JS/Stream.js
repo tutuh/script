@@ -1,4 +1,3 @@
-// --- 基础配置 ---
 const REQUEST_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
   'Accept-Language': 'en-US,en;q=0.9',
@@ -28,14 +27,12 @@ const GPT_SUPPORTED_REGIONS = new Set([
   "TL", "GB"
 ]);
 
-const CHATGPT_TRACE_URLS = [
-  'https://chatgpt.com/cdn-cgi/trace',
-  'https://chat.openai.com/cdn-cgi/trace'
-];
-
-// --- 主入口 ---
+// =========================================
+// 主程序入口
+// =========================================
 ;(async () => {
   try {
+    // 并发执行所有检测任务
     const results = await Promise.all([
       checkChatGPT(),
       checkGemini(),
@@ -44,6 +41,7 @@ const CHATGPT_TRACE_URLS = [
       checkYouTubePremium()
     ]);
 
+    // 渲染面板
     $done({
       title: '网络解锁检测',
       content: results.map(r => r.text).join('\n'),
@@ -51,16 +49,19 @@ const CHATGPT_TRACE_URLS = [
       'icon-color': pickIconColor(results)
     });
   } catch (error) {
+    // 全局异常兜底
     $done({
       title: '网络解锁检测',
-      content: '检测失败 ❌',
-      icon: 'play.tv.fill',
-      'icon-color': '#D22F20'
+      content: '检测组件发生严重错误 ❌',
+      icon: 'exclamationmark.triangle.fill',
+      'icon-color': '#FF453A'
     });
   }
 })();
 
-// --- 工具函数 ---
+// =========================================
+// 工具函数
+// =========================================
 const request = (method, url, headers = REQUEST_HEADERS, body = null, timeoutMs = REQUEST_TIMEOUT) => {
   return new Promise(resolve => {
     const opts = { url, headers, timeout: timeoutMs };
@@ -76,18 +77,28 @@ const isSupportedGPTRegion = loc => GPT_SUPPORTED_REGIONS.has(upper(loc));
 const makeResult = (name, status, text, region = '') => ({ name, status, text, region });
 const timeout = ms => new Promise((_, reject) => setTimeout(() => reject('Timeout'), ms));
 
+// 根据解锁状态决定面板图标颜色 (全解锁绿灯，部分黄灯，全死红灯)
 const pickIconColor = results => {
   const hasAvailable = results.some(r => r.status === STATUS.AVAILABLE);
   const hasWarning = results.some(r => r.status !== STATUS.AVAILABLE);
 
-  if (hasAvailable && !hasWarning) return '#32D74B';
-  if (hasAvailable && hasWarning) return '#FFD60A';
-  return '#FF453A';
+  if (hasAvailable && !hasWarning) return '#32D74B'; // 纯绿
+  if (hasAvailable && hasWarning) return '#FFD60A';  // 警告黄
+  return '#FF453A';                                  // 报错红
 };
 
-// --- ChatGPT 检测 ---
+// =========================================
+// 核心检测逻辑
+// =========================================
+
+// --- 1. ChatGPT 检测 ---
 async function checkChatGPT() {
-  for (const url of CHATGPT_TRACE_URLS) {
+  const urls = [
+    'https://chatgpt.com/cdn-cgi/trace',
+    'https://chat.openai.com/cdn-cgi/trace'
+  ];
+
+  for (const url of urls) {
     const { error, data } = await request('GET', url);
     if (error || !data) continue;
 
@@ -102,7 +113,7 @@ async function checkChatGPT() {
   return makeResult('ChatGPT', STATUS.ERROR, 'ChatGPT: 检测失败 ❌');
 }
 
-// --- Gemini 检测 ---
+// --- 2. Gemini 检测 ---
 async function checkGemini() {
   const urls = ['https://gemini.google.com/', 'https://gemini.google.com/app'];
 
@@ -116,8 +127,8 @@ async function checkGemini() {
       if (data.includes('not available') || data.includes('unavailable in your country')) {
         return makeResult('Gemini', STATUS.NOT_AVAILABLE, 'Gemini: 未支持 🚫');
       }
-      const m = data.match(/,2,1,200,"([A-Z]{2,3})"/);
-      const region = m && m[1] ? upper(m[1].substring(0, 2)) : 'YES';
+      const match = data.match(/,2,1,200,"([A-Z]{2,3})"/);
+      const region = match && match[1] ? upper(match[1].substring(0, 2)) : 'YES';
       return makeResult('Gemini', STATUS.AVAILABLE, `Gemini: 已解锁 ➟ ${region}`, region);
     }
 
@@ -128,7 +139,7 @@ async function checkGemini() {
   return makeResult('Gemini', STATUS.ERROR, 'Gemini: 检测失败 ❌');
 }
 
-// --- Netflix 检测 ---
+// --- 3. Netflix 检测 ---
 async function checkNetflix() {
   const ids = [80062035, 80018499];
 
@@ -143,7 +154,7 @@ async function checkNetflix() {
     if (status === 200) {
       const headers = response.headers || {};
       const url = headers['x-originating-url'] || headers['location'] || headers['Location'] || '';
-      let region = 'US'; // 默认 fallback
+      let region = 'US'; // 默认兜底美区
       
       if (url) {
         const parts = url.split('/');
@@ -161,9 +172,10 @@ async function checkNetflix() {
   return makeResult('Netflix', STATUS.ERROR, 'Netflix: 检测失败 ❌');
 }
 
-// --- Disney+ 检测 ---
+// --- 4. Disney+ 检测 ---
 async function checkDisneyPlus() {
   try {
+    // 并发执行网页版和 API 测试，加入 7 秒强制超时防止死锁
     const [homeRes, locRes] = await Promise.allSettled([
       Promise.race([testDisneyHomePage(), timeout(7000)]),
       Promise.race([getDisneyLocationInfo(), timeout(7000)])
@@ -176,7 +188,7 @@ async function checkDisneyPlus() {
     const inSupportedLocation = locData?.inSupportedLocation;
 
     if (inSupportedLocation === false || String(inSupportedLocation) === 'false') {
-      return makeResult('Disney+', STATUS.COMING, `Disney+: 未登陆 ➟ ${region || 'UN'} ⏳`, region || 'UN');
+      return makeResult('Disney+', STATUS.COMING, `Disney+: 即将登陆 ➟ ${region || 'UN'} ⏳`, region || 'UN');
     }
 
     if (region) {
@@ -245,7 +257,7 @@ function testDisneyHomePage() {
   });
 }
 
-// --- YouTube Premium 检测 ---
+// --- 5. YouTube Premium 检测 ---
 async function checkYouTubePremium() {
   const { error, response, data } = await request('GET', 'https://www.youtube.com/premium');
   if (error || !response) return makeResult('YouTube', STATUS.ERROR, 'YouTube: 检测失败 ❌');
@@ -253,13 +265,17 @@ async function checkYouTubePremium() {
   const isUnavailable = data.includes('Premium is not available in your country') || data.includes('is not available in your country');
   
   if (response.status !== 200 || isUnavailable) {
-    return makeResult('YouTube', isUnavailable ? STATUS.NOT_AVAILABLE : STATUS.ERROR, isUnavailable ? 'YouTube: 未支持 🚫' : 'YouTube: 检测失败 ❌');
+    return makeResult(
+      'YouTube', 
+      isUnavailable ? STATUS.NOT_AVAILABLE : STATUS.ERROR, 
+      isUnavailable ? 'YouTube: 未支持 🚫' : 'YouTube: 检测失败 ❌'
+    );
   }
 
   let region = 'US';
-  const m = data.match(/"countryCode":"(.*?)"/);
-  if (m && m[1]) {
-    region = upper(m[1]);
+  const match = data.match(/"countryCode":"(.*?)"/);
+  if (match && match[1]) {
+    region = upper(match[1]);
   } else if (data.includes('www.google.cn')) {
     region = 'CN';
   }
