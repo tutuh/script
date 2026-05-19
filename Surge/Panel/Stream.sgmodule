@@ -1,5 +1,5 @@
 #!name=网络解锁检测
-#!desc=ChatGPT, Netflix, Disney+, YouTube 解锁检测
+#!desc=ChatGPT, Gemini, Netflix, Disney+, YouTube 解锁检测
 #!category=Panel
 #!arguments=更新频率:-1, 请求超时:30
 #!arguments-desc=[参数说明]\n\n更新频率：面板刷新频率，默认手动刷新。\n\n请求超时：默认30秒，单位：秒。
