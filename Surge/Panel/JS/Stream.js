@@ -1,3 +1,14 @@
+// === UI 视觉对齐配置 ===
+// 由于 SF Pro 是非等宽字体，这里基于截图的视觉偏移量进行了精确补偿。
+// 如果在你的具体设备上仍有一点点没对齐，请直接在这里增减空格微调。
+const ALIGN_MAP = {
+  'ChatGPT': 'ChatGPT ',       // 基准：1个空格
+  'YouTube': 'YouTube   ',     // 补偿：3个空格
+  'Disney+': 'Disney+   ',     // 补偿：3个空格
+  'Netflix': 'Netflix     ',   // 补偿：5个空格
+  'Gemini':  'Gemini       '   // 补偿：7个空格
+};
+
 // 基础配置
 const REQUEST_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -104,10 +115,10 @@ function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries
   });
 }
 
-// 统一结果格式化函数（处理对齐逻辑与状态文案）
+// 统一结果格式化函数（处理中文状态与对齐）
 function makeResult(name, status, region = '') {
-  // 使用 \t (制表符) 触发 iOS 原生排版的列对齐，完美解决非等宽字体不对齐问题
-  const paddedName = name + '\t';
+  // 读取顶部的对齐配置，如果没有匹配项则默认加一个空格
+  const paddedName = ALIGN_MAP[name] || name + ' ';
 
   let text = '';
   switch (status) {
@@ -115,13 +126,13 @@ function makeResult(name, status, region = '') {
       text = `${paddedName}› ${region}`;
       break;
     case STATUS_NOT_AVAILABLE:
-      text = `${paddedName}› ×`; // 未解锁用 ×
+      text = `${paddedName}› 未解锁`;
       break;
     case STATUS_TIMEOUT:
-      text = `${paddedName}› timeout`; // 超时用 timeout
+      text = `${paddedName}› 超时`;
       break;
     case STATUS_ERROR:
-      text = `${paddedName}› error`;
+      text = `${paddedName}› 检测失败`;
       break;
     case STATUS_COMING:
       const tag = name === 'Netflix' ? '自制' : '即将';
