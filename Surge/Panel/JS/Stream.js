@@ -3,8 +3,8 @@ const ALIGN_MAP = {
   'ChatGPT': 'ChatGPT ',    // 基准
   'YouTube': 'YouTube   ',
   'Disney+': 'Disney+   ',
-  'Netflix': 'Netflix     ',
-  'Gemini':  'Gemini       '
+  'Netflix': 'Netflix      ',
+  'Gemini':  'Gemini     '
 };
 
 // 基础配置
