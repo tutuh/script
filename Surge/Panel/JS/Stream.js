@@ -6,7 +6,6 @@ const REQUEST_HEADERS = {
   'Pragma': 'no-cache'
 };
 
-const REQUEST_TIMEOUT = 20; 
 const STATUS_COMING = 2;
 const STATUS_AVAILABLE = 1;
 const STATUS_NOT_AVAILABLE = 0;
@@ -64,7 +63,7 @@ const GPT_SUPPORTED_REGIONS = {
 // 基础请求封装
 function request(method, url, headers = REQUEST_HEADERS, body = null) {
   return new Promise((resolve) => {
-    const opts = { url, headers, timeout: REQUEST_TIMEOUT };
+    const opts = { url, headers };
     if (body) opts.body = body;
 
     const callback = (error, response, data) => {
@@ -103,7 +102,7 @@ function pickIconColor(results) {
 async function checkChatGPT() {
   try {
     const r = await request('GET', 'https://chatgpt.com/cdn-cgi/trace');
-    if (r.error || !r.data) return makeResult('ChatGPT', STATUS_TIMEOUT, 'ChatGPT: 检测超时 ❌');
+    if (r.error || !r.data) return makeResult('ChatGPT', STATUS_TIMEOUT, 'ChatGPT: 检测超时或失败 ❌');
 
     const locMatch = r.data.match(/loc=([A-Z]{2})/i);
     if (!locMatch) return makeResult('ChatGPT', STATUS_ERROR, 'ChatGPT: 状态未知 ❌');
@@ -122,7 +121,7 @@ async function checkChatGPT() {
 async function checkGemini() {
   try {
     const r = await request('GET', 'https://gemini.google.com/app');
-    if (r.error || !r.response) return makeResult('Gemini', STATUS_TIMEOUT, 'Gemini: 检测超时 ❌');
+    if (r.error || !r.response) return makeResult('Gemini', STATUS_TIMEOUT, 'Gemini: 检测超时或失败 ❌');
 
     const status = r.response.status || 0;
     const data = r.data || '';
@@ -148,9 +147,8 @@ async function checkGemini() {
 // Netflix
 async function checkNetflix() {
   try {
-    // 80062035 是一部非自制剧 (绝命毒师)，以此来区分仅自制剧与全解锁
     const r = await request('GET', 'https://www.netflix.com/title/80062035');
-    if (r.error || !r.response) return makeResult('Netflix', STATUS_TIMEOUT, 'Netflix: 检测超时 ❌');
+    if (r.error || !r.response) return makeResult('Netflix', STATUS_TIMEOUT, 'Netflix: 检测超时或失败 ❌');
 
     const status = r.response.status || 0;
     const data = r.data || '';
@@ -192,11 +190,10 @@ async function checkDisneyPlus() {
 
     if (region) return makeResult('Disney+', STATUS_AVAILABLE, `Disney+: 已解锁 ➟ ${region}`, region);
     
-    // 如果 GraphQL API 超时/失效，使用主页测试作为备用判定
     if (home && home.available === false) return makeResult('Disney+', STATUS_NOT_AVAILABLE, 'Disney+: 未支持 🚫');
     if (home && home.available === true) return makeResult('Disney+', STATUS_AVAILABLE, `Disney+: 已解锁 ➟ ${home.region || 'US'}`);
 
-    return makeResult('Disney+', STATUS_TIMEOUT, 'Disney+: 检测超时 ❌');
+    return makeResult('Disney+', STATUS_TIMEOUT, 'Disney+: 检测超时或失败 ❌');
   } catch (e) {
     return makeResult('Disney+', STATUS_ERROR, 'Disney+: 检测失败 ❌');
   }
@@ -243,7 +240,7 @@ async function testDisneyHomePage() {
 async function checkYouTubePremium() {
   try {
     const r = await request('GET', 'https://www.youtube.com/premium');
-    if (r.error || !r.response) return makeResult('YouTube', STATUS_TIMEOUT, 'YouTube: 检测超时 ❌');
+    if (r.error || !r.response) return makeResult('YouTube', STATUS_TIMEOUT, 'YouTube: 检测超时或失败 ❌');
 
     const data = r.data || '';
     
