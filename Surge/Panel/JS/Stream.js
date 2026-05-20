@@ -60,21 +60,35 @@ const GPT_SUPPORTED_REGIONS = {
   $done(panel);
 })();
 
-// 基础请求封装
-function request(method, url, headers = REQUEST_HEADERS, body = null) {
+// === 加入自动重试机制以应对 EOF ===
+function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries = 1) {
   return new Promise((resolve) => {
     const opts = { url, headers };
     if (body) opts.body = body;
 
-    const callback = (error, response, data) => {
-      resolve({ error, response: response || {}, data: data || '' });
+    const attempt = (currentTry) => {
+      const callback = (error, response, data) => {
+        // 如果发生错误（如 EOF），并且还没有用完重试次数
+        if (error && currentTry < maxRetries) {
+          // 延迟 200 毫秒后进行重试，避开冷启动并发高峰
+          setTimeout(() => {
+            attempt(currentTry + 1);
+          }, 200);
+        } else {
+          // 成功，或者重试次数用光，返回结果
+          resolve({ error, response: response || {}, data: data || '' });
+        }
+      };
+
+      if (method.toUpperCase() === 'POST') {
+        $httpClient.post(opts, callback);
+      } else {
+        $httpClient.get(opts, callback);
+      }
     };
 
-    if (method.toUpperCase() === 'POST') {
-      $httpClient.post(opts, callback);
-    } else {
-      $httpClient.get(opts, callback);
-    }
+    // 发起第一次尝试
+    attempt(0);
   });
 }
 
