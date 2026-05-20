@@ -52,9 +52,9 @@ if (typeof $argument !== 'undefined' && $argument) {
 
   // 4. 图标与颜色映射 (即使未配置 arg 也有默认友好 UI)
   const icons = {
-    1: arg?.iconslow || 'tortoise.fill',          // 低速：乌龟
-    2: arg?.iconmid || 'hare.fill',               // 中速：兔子
-    3: arg?.iconfast || 'bolt.horizontal.circle.fill' // 高速：闪电
+    1: arg?.iconslow || 'tortoise',
+    2: arg?.iconmid || 'hare',
+    3: arg?.iconfast || 'bolt'
   };
   
   const colors = {
