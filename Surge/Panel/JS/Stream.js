@@ -2,8 +2,8 @@
 // 由于 SF Pro 是非等宽字体，这里基于截图的视觉偏移量进行了精确补偿。
 // 如果在你的具体设备上仍有一点点没对齐，请直接在这里增减空格微调。
 const ALIGN_MAP = {
-  'ChatGPT': 'ChatGPT ',       // 基准：1个空格
-  'YouTube': 'YouTube   ',
+  'ChatGPT': 'ChatGPT  ',
+  'YouTube': 'YouTube  ',
   'Disney+': 'Disney+   ',
   'Netflix': 'Netflix      ',
   'Gemini':  'Gemini     '
