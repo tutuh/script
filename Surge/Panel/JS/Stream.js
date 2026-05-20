@@ -3,10 +3,10 @@
 // 如果在你的具体设备上仍有一点点没对齐，请直接在这里增减空格微调。
 const ALIGN_MAP = {
   'ChatGPT': 'ChatGPT ',       // 基准：1个空格
-  'YouTube': 'YouTube   ',     // 补偿：3个空格
-  'Disney+': 'Disney+   ',     // 补偿：3个空格
-  'Netflix': 'Netflix     ',   // 补偿：5个空格
-  'Gemini':  'Gemini       '   // 补偿：7个空格
+  'YouTube': 'YouTube   ',
+  'Disney+': 'Disney+   ',
+  'Netflix': 'Netflix      ',
+  'Gemini':  'Gemini     '
 };
 
 // 基础配置
