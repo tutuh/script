@@ -1,7 +1,7 @@
 // === UI 视觉对齐配置 ===
 // 如果在你的具体设备上仍有一点点没对齐，请直接在这里增减空格微调。
 const ALIGN_MAP = {
-  'ChatGPT': 'ChatGPT  ',
+  'ChatGPT': 'ChatGPT ',
   'YouTube': 'YouTube  ',
   'Disney+': 'Disney+   ',
   'Netflix': 'Netflix      ',
