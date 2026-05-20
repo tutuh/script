@@ -6,8 +6,7 @@ const REQUEST_HEADERS = {
   'Pragma': 'no-cache'
 };
 
-const REQUEST_TIMEOUT = 5; // 重新加回代码内置超时时间
-
+const REQUEST_TIMEOUT = 10;
 const STATUS_COMING = 2;
 const STATUS_AVAILABLE = 1;
 const STATUS_NOT_AVAILABLE = 0;
