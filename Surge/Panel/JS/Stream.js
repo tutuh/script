@@ -1,10 +1,10 @@
 // === UI 视觉对齐配置 ===
 const ALIGN_MAP = {
-  'ChatGPT': 'ChatGPT ', // 基准
-  'YouTube': 'YouTube  ',
-  'Disney+': 'Disney+   ',
-  'Netflix': 'Netflix      ',
-  'Gemini':  'Gemini     '
+  'ChatGPT': 'ChatGPT  ', // 基准
+  'YouTube': 'YouTube   ',
+  'Disney+': 'Disney+    ',
+  'Netflix': 'Netflix       ',
+  'Gemini':  'Gemini      '
 };
 
 // 基础配置
@@ -121,20 +121,20 @@ function makeResult(name, status, region = '') {
   let text = '';
   switch (status) {
     case STATUS_AVAILABLE:
-      text = `${paddedName}➟ ${region}`;
+      text = `${paddedName}➟  ${region}`;
       break;
     case STATUS_NOT_AVAILABLE:
-      text = `${paddedName}➟ 未解锁`;
+      text = `${paddedName}➟  未解锁`;
       break;
     case STATUS_TIMEOUT:
-      text = `${paddedName}➟ 超时`;
+      text = `${paddedName}➟  超时`;
       break;
     case STATUS_ERROR:
-      text = `${paddedName}➟ 检测失败`;
+      text = `${paddedName}➟  检测失败`;
       break;
     case STATUS_COMING:
       const tag = name === 'Netflix' ? '自制' : '即将';
-      text = `${paddedName}➟ ${tag} ${region}`;
+      text = `${paddedName}➟  ${tag} ${region}`;
       break;
   }
 
