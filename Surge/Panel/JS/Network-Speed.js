@@ -58,9 +58,9 @@ if (typeof $argument !== 'undefined' && $argument) {
   };
   
   const colors = {
-    1: arg?.colorlow || '#FF3B30',  // 红色
-    2: arg?.colormid || '#FF9500',  // 橙色
-    3: arg?.colorhigh || '#34C759'  // 绿色
+    1: arg?.colorlow || '#30D158',
+    2: arg?.colormid || '#FF9F0A',
+    3: arg?.colorhigh || '#FF453A'
   };
 
   const icon = icons[speedLevel];
