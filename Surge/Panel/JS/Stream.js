@@ -6,8 +6,7 @@ const REQUEST_HEADERS = {
   'Pragma': 'no-cache'
 };
 
-const REQUEST_TIMEOUT = 3; // 面板追求快，超时降为 3 秒
-
+const REQUEST_TIMEOUT = 5;
 const STATUS_COMING = 2;
 const STATUS_AVAILABLE = 1;
 const STATUS_NOT_AVAILABLE = 0;
