@@ -106,33 +106,26 @@ function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries
 
 // 统一结果格式化函数（处理对齐逻辑与状态文案）
 function makeResult(name, status, region = '') {
-  // 针对 iOS 非等宽字体手动进行宽度补偿，让 › 尽量对齐
-  const names = {
-    'ChatGPT': 'ChatGPT  ',  // 补偿 2 个空格
-    'Gemini':  'Gemini    ', // 补偿 4 个空格（包含多个细瘦字母）
-    'Netflix': 'Netflix   ', // 补偿 3 个空格
-    'Disney+': 'Disney+  ',  // 补偿 2 个空格
-    'YouTube': 'YouTube  '   // 补偿 2 个空格（字母本身较宽）
-  };
-  const paddedName = names[name] || name;
+  // 使用 \t (制表符) 触发 iOS 原生排版的列对齐，完美解决非等宽字体不对齐问题
+  const paddedName = name + '\t';
 
   let text = '';
   switch (status) {
     case STATUS_AVAILABLE:
-      text = `${paddedName} › ${region}`;
+      text = `${paddedName}› ${region}`;
       break;
     case STATUS_NOT_AVAILABLE:
-      text = `${paddedName} › ×`;
+      text = `${paddedName}› ×`; // 未解锁用 ×
       break;
     case STATUS_TIMEOUT:
-      text = `${paddedName} › timeout`;
+      text = `${paddedName}› timeout`; // 超时用 timeout
       break;
     case STATUS_ERROR:
-      text = `${paddedName} › error`;
+      text = `${paddedName}› error`;
       break;
     case STATUS_COMING:
       const tag = name === 'Netflix' ? '自制' : '即将';
-      text = `${paddedName} › ${tag} ${region}`;
+      text = `${paddedName}› ${tag} ${region}`;
       break;
   }
 
