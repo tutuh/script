@@ -7,7 +7,6 @@ const REQUEST_HEADERS = {
 };
 
 const REQUEST_TIMEOUT = 5;
-
 const STATUS_COMING = 2;
 const STATUS_AVAILABLE = 1;
 const STATUS_NOT_AVAILABLE = 0;
@@ -34,13 +33,31 @@ const GPT_SUPPORTED_REGIONS = {
   "TL": 1, "GB": 1
 };
 
+// 解析 Surge 参数 ($argument)
+function getArgs() {
+  const args = {};
+  if (typeof $argument !== 'undefined' && $argument) {
+    const params = $argument.split('&');
+    for (const param of params) {
+      const [key, value] = param.split('=');
+      if (key && value) {
+        args[key.trim()] = value.trim();
+      }
+    }
+  }
+  return args;
+}
+
 // 主入口
 (async function () {
+  const args = getArgs();
+  
+  // 使用参数或默认值
   const panel = {
-    title: '网络解锁检测',
+    title: args.title || '网络解锁检测',
     content: '',
-    icon: 'play.tv.fill',
-    'icon-color': '#D22F20'
+    icon: args.icon || 'play.tv.fill',
+    'icon-color': args.color || '#D22F20'
   };
 
   try {
@@ -53,10 +70,8 @@ const GPT_SUPPORTED_REGIONS = {
     ]);
 
     panel.content = results.map(r => r.text).join('\n');
-    panel['icon-color'] = pickIconColor(results);
   } catch (e) {
     panel.content = '🟠 检测过程发生异常';
-    panel['icon-color'] = '#FF9F0A';
   }
 
   $done(panel);
@@ -92,20 +107,6 @@ function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries
 
 function makeResult(name, status, text, region = '') {
   return { name, status, text, region };
-}
-
-function pickIconColor(results) {
-  let hasAvailable = false;
-  let hasWarning = false;
-
-  for (const res of results) {
-    if (res.status === STATUS_AVAILABLE) hasAvailable = true;
-    else hasWarning = true;
-  }
-
-  if (hasAvailable && !hasWarning) return '#32D74B'; // 全绿
-  if (hasAvailable && hasWarning) return '#FFD60A';   // 部分解锁（黄）
-  return '#FF453A';                                   // 全挂（红）
 }
 
 // === 各平台检测逻辑 ===
