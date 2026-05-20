@@ -52,7 +52,6 @@ function getArgs() {
 (async function () {
   const args = getArgs();
   
-  // 使用参数或默认值
   const panel = {
     title: args.title || '网络解锁检测',
     content: '',
@@ -105,7 +104,38 @@ function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries
   });
 }
 
-function makeResult(name, status, text, region = '') {
+// 统一结果格式化函数（处理对齐逻辑与状态文案）
+function makeResult(name, status, region = '') {
+  // 针对 iOS 非等宽字体手动进行宽度补偿，让 › 尽量对齐
+  const names = {
+    'ChatGPT': 'ChatGPT  ',  // 补偿 2 个空格
+    'Gemini':  'Gemini    ', // 补偿 4 个空格（包含多个细瘦字母）
+    'Netflix': 'Netflix   ', // 补偿 3 个空格
+    'Disney+': 'Disney+  ',  // 补偿 2 个空格
+    'YouTube': 'YouTube  '   // 补偿 2 个空格（字母本身较宽）
+  };
+  const paddedName = names[name] || name;
+
+  let text = '';
+  switch (status) {
+    case STATUS_AVAILABLE:
+      text = `${paddedName} › ${region}`;
+      break;
+    case STATUS_NOT_AVAILABLE:
+      text = `${paddedName} › ×`;
+      break;
+    case STATUS_TIMEOUT:
+      text = `${paddedName} › timeout`;
+      break;
+    case STATUS_ERROR:
+      text = `${paddedName} › error`;
+      break;
+    case STATUS_COMING:
+      const tag = name === 'Netflix' ? '自制' : '即将';
+      text = `${paddedName} › ${tag} ${region}`;
+      break;
+  }
+
   return { name, status, text, region };
 }
 
@@ -115,18 +145,18 @@ function makeResult(name, status, text, region = '') {
 async function checkChatGPT() {
   try {
     const r = await request('GET', 'https://chatgpt.com/cdn-cgi/trace');
-    if (r.error || !r.data) return makeResult('ChatGPT', STATUS_TIMEOUT, 'ChatGPT ➟ 超时');
+    if (r.error || !r.data) return makeResult('ChatGPT', STATUS_TIMEOUT);
 
     const locMatch = r.data.match(/loc=([A-Z]{2})/i);
-    if (!locMatch) return makeResult('ChatGPT', STATUS_ERROR, 'ChatGPT ➟ 状态未知');
+    if (!locMatch) return makeResult('ChatGPT', STATUS_ERROR);
 
     const region = locMatch[1].toUpperCase();
     if (GPT_SUPPORTED_REGIONS[region]) {
-      return makeResult('ChatGPT', STATUS_AVAILABLE, `ChatGPT ➟ 已解锁 ${region}`, region);
+      return makeResult('ChatGPT', STATUS_AVAILABLE, region);
     }
-    return makeResult('ChatGPT', STATUS_NOT_AVAILABLE, 'ChatGPT ➟ 未解锁', region);
+    return makeResult('ChatGPT', STATUS_NOT_AVAILABLE);
   } catch (e) {
-    return makeResult('ChatGPT', STATUS_ERROR, 'ChatGPT ➟ 检测失败');
+    return makeResult('ChatGPT', STATUS_ERROR);
   }
 }
 
@@ -134,26 +164,26 @@ async function checkChatGPT() {
 async function checkGemini() {
   try {
     const r = await request('GET', 'https://gemini.google.com/app');
-    if (r.error || !r.response) return makeResult('Gemini', STATUS_TIMEOUT, 'Gemini ➟ 超时');
+    if (r.error || !r.response) return makeResult('Gemini', STATUS_TIMEOUT);
 
     const status = r.response.status || 0;
     const data = r.data || '';
 
     if (status === 200) {
       if (data.includes('not available') || data.includes('unavailable in your country')) {
-        return makeResult('Gemini', STATUS_NOT_AVAILABLE, 'Gemini ➟ 未解锁');
+        return makeResult('Gemini', STATUS_NOT_AVAILABLE);
       }
       const m = data.match(/,2,1,200,"([A-Z]{2,3})"/);
       const region = m && m[1] ? m[1].slice(0, 2).toUpperCase() : 'US';
-      return makeResult('Gemini', STATUS_AVAILABLE, `Gemini ➟ 已解锁 ${region}`, region);
+      return makeResult('Gemini', STATUS_AVAILABLE, region);
     }
 
     if (status === 403 || status === 404 || status === 302) {
-      return makeResult('Gemini', STATUS_NOT_AVAILABLE, 'Gemini ➟ 未解锁');
+      return makeResult('Gemini', STATUS_NOT_AVAILABLE);
     }
-    return makeResult('Gemini', STATUS_ERROR, 'Gemini ➟ 检测失败');
+    return makeResult('Gemini', STATUS_ERROR);
   } catch (e) {
-    return makeResult('Gemini', STATUS_ERROR, 'Gemini ➟ 检测失败');
+    return makeResult('Gemini', STATUS_ERROR);
   }
 }
 
@@ -161,12 +191,12 @@ async function checkGemini() {
 async function checkNetflix() {
   try {
     const r = await request('GET', 'https://www.netflix.com/title/80062035');
-    if (r.error || !r.response) return makeResult('Netflix', STATUS_TIMEOUT, 'Netflix ➟ 超时');
+    if (r.error || !r.response) return makeResult('Netflix', STATUS_TIMEOUT);
 
     const status = r.response.status || 0;
     const data = r.data || '';
 
-    if (status === 403) return makeResult('Netflix', STATUS_NOT_AVAILABLE, 'Netflix ➟ 未解锁');
+    if (status === 403) return makeResult('Netflix', STATUS_NOT_AVAILABLE);
     
     if (status === 200 || status === 404) {
       let region = 'US';
@@ -176,13 +206,13 @@ async function checkNetflix() {
       }
 
       if (status === 404) {
-         return makeResult('Netflix', STATUS_COMING, `Netflix ➟ 仅自制剧 ${region}`, region);
+         return makeResult('Netflix', STATUS_COMING, region);
       }
-      return makeResult('Netflix', STATUS_AVAILABLE, `Netflix ➟ 已解锁 ${region}`, region);
+      return makeResult('Netflix', STATUS_AVAILABLE, region);
     }
-    return makeResult('Netflix', STATUS_ERROR, 'Netflix ➟ 检测失败');
+    return makeResult('Netflix', STATUS_ERROR);
   } catch (e) {
-    return makeResult('Netflix', STATUS_ERROR, 'Netflix ➟ 检测失败');
+    return makeResult('Netflix', STATUS_ERROR);
   }
 }
 
@@ -198,17 +228,17 @@ async function checkDisneyPlus() {
     if (!region && home?.region) region = home.region.toUpperCase();
 
     if (loc?.inSupportedLocation === false || loc?.inSupportedLocation === 'false') {
-      return makeResult('Disney+', STATUS_COMING, `Disney+ ➟ 即将登陆 ${region || 'UN'}`, region || 'UN');
+      return makeResult('Disney+', STATUS_COMING, region || 'UN');
     }
 
-    if (region) return makeResult('Disney+', STATUS_AVAILABLE, `Disney+ ➟ 已解锁 ${region}`, region);
+    if (region) return makeResult('Disney+', STATUS_AVAILABLE, region);
     
-    if (home && home.available === false) return makeResult('Disney+', STATUS_NOT_AVAILABLE, 'Disney+ ➟ 未解锁');
-    if (home && home.available === true) return makeResult('Disney+', STATUS_AVAILABLE, `Disney+ ➟ 已解锁 ${home.region || 'US'}`);
+    if (home && home.available === false) return makeResult('Disney+', STATUS_NOT_AVAILABLE);
+    if (home && home.available === true) return makeResult('Disney+', STATUS_AVAILABLE, home.region || 'US');
 
-    return makeResult('Disney+', STATUS_TIMEOUT, 'Disney+ ➟ 超时');
+    return makeResult('Disney+', STATUS_TIMEOUT);
   } catch (e) {
-    return makeResult('Disney+', STATUS_ERROR, 'Disney+ ➟ 检测失败');
+    return makeResult('Disney+', STATUS_ERROR);
   }
 }
 
@@ -253,12 +283,12 @@ async function testDisneyHomePage() {
 async function checkYouTubePremium() {
   try {
     const r = await request('GET', 'https://www.youtube.com/premium');
-    if (r.error || !r.response) return makeResult('YouTube', STATUS_TIMEOUT, 'YouTube ➟ 超时');
+    if (r.error || !r.response) return makeResult('YouTube', STATUS_TIMEOUT);
 
     const data = r.data || '';
     
     if (data.includes('Premium is not available in your country') || data.includes('is not available in your country')) {
-      return makeResult('YouTube', STATUS_NOT_AVAILABLE, 'YouTube ➟ 未解锁');
+      return makeResult('YouTube', STATUS_NOT_AVAILABLE);
     }
 
     if (r.response.status === 200) {
@@ -269,11 +299,11 @@ async function checkYouTubePremium() {
       } else if (data.includes('www.google.cn')) {
         region = 'CN';
       }
-      return makeResult('YouTube', STATUS_AVAILABLE, `YouTube ➟ 已解锁 ${region}`, region);
+      return makeResult('YouTube', STATUS_AVAILABLE, region);
     }
 
-    return makeResult('YouTube', STATUS_ERROR, 'YouTube ➟ 检测失败');
+    return makeResult('YouTube', STATUS_ERROR);
   } catch (e) {
-    return makeResult('YouTube', STATUS_ERROR, 'YouTube ➟ 检测失败');
+    return makeResult('YouTube', STATUS_ERROR);
   }
 }
