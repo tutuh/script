@@ -1,11 +1,10 @@
 // === UI 视觉对齐配置 ===
-// 如果在你的具体设备上仍有一点点没对齐，请直接在这里增减空格微调。
 const ALIGN_MAP = {
-  'ChatGPT': 'ChatGPT ',
-  'YouTube': 'YouTube  ',
+  'ChatGPT': 'ChatGPT ',    // 基准
+  'YouTube': 'YouTube   ',
   'Disney+': 'Disney+   ',
-  'Netflix': 'Netflix      ',
-  'Gemini':  'Gemini     '
+  'Netflix': 'Netflix     ',
+  'Gemini':  'Gemini       '
 };
 
 // 基础配置
@@ -114,28 +113,28 @@ function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries
   });
 }
 
-// 统一结果格式化函数（处理中文状态与对齐）
+// 统一结果格式化函数（处理中文状态与 ➟ 符号）
 function makeResult(name, status, region = '') {
-  // 读取顶部的对齐配置，如果没有匹配项则默认加一个空格
+  // 读取顶部的对齐配置
   const paddedName = ALIGN_MAP[name] || name + ' ';
 
   let text = '';
   switch (status) {
     case STATUS_AVAILABLE:
-      text = `${paddedName}› ${region}`;
+      text = `${paddedName}➟ ${region}`;
       break;
     case STATUS_NOT_AVAILABLE:
-      text = `${paddedName}› 未解锁`;
+      text = `${paddedName}➟ 未解锁`;
       break;
     case STATUS_TIMEOUT:
-      text = `${paddedName}› 超时`;
+      text = `${paddedName}➟ 超时`;
       break;
     case STATUS_ERROR:
-      text = `${paddedName}› 检测失败`;
+      text = `${paddedName}➟ 检测失败`;
       break;
     case STATUS_COMING:
       const tag = name === 'Netflix' ? '自制' : '即将';
-      text = `${paddedName}› ${tag} ${region}`;
+      text = `${paddedName}➟ ${tag} ${region}`;
       break;
   }
 
