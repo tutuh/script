@@ -1,6 +1,6 @@
 // === UI 视觉对齐配置 ===
 const ALIGN_MAP = {
-  'ChatGPT': 'ChatGPT ',    // 基准
+  'ChatGPT': 'ChatGPT ', // 基准
   'YouTube': 'YouTube   ',
   'Disney+': 'Disney+   ',
   'Netflix': 'Netflix      ',
