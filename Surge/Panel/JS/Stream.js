@@ -6,7 +6,7 @@ const REQUEST_HEADERS = {
   'Pragma': 'no-cache'
 };
 
-const REQUEST_TIMEOUT = 10; 
+const REQUEST_TIMEOUT = 20; 
 const STATUS_COMING = 2;
 const STATUS_AVAILABLE = 1;
 const STATUS_NOT_AVAILABLE = 0;
