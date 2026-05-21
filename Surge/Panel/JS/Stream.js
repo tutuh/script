@@ -74,7 +74,7 @@ function getCurrentTime() {
   const timeStr = getCurrentTime();
   
   const panel = {
-    title: `${baseTitle}    <${timeStr}>`, // 在这里拼接时间显示
+    title: `${baseTitle}　　<${timeStr}>`, // 这里用了两个全角空格
     content: '',
     icon: args.icon || 'play.tv.fill',
     'icon-color': args.color || '#D22F20'
