@@ -57,12 +57,24 @@ function getArgs() {
   return args;
 }
 
+// 获取格式化的当前时间 (HH:MM:SS)
+function getCurrentTime() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  return `${hours}:${minutes}:${seconds}`;
+}
+
 // 主入口
 (async function () {
   const args = getArgs();
   
+  const baseTitle = args.title || '网络解锁检测';
+  const timeStr = getCurrentTime();
+  
   const panel = {
-    title: args.title || '网络解锁检测',
+    title: `${baseTitle} ⏱ ${timeStr}`, // 在这里拼接时间显示
     content: '',
     icon: args.icon || 'play.tv.fill',
     'icon-color': args.color || '#D22F20'
