@@ -58,8 +58,8 @@
 # (J)
 # > Jump - switch.jumpvg.com
 ^https?:\/\/switch\.jumpvg\.com\/jump\/(getlaunchad|recommend\/ad_conf) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-# > 金山 - *.kingsoft-office-service.com
-^https?:\/\/service\.iciba\.com\/popo\/open\/screens\/v\d\?adjson data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# > 京东 - api.m.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 驾考宝典 - *.kakamobi.cn
 ^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
@@ -123,4 +123,4 @@
 ^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ data-type=text data="" status-code=200
 
 [MITM]
-hostname = %APPEND% m.client.10010.com, client.app.coc.10086.cn, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, res.pizzahut.com.cn, app.chengfenmiao.com, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, pic.edaijia.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, switch.jumpvg.com, service.iciba.com, *.kakamobi.cn, res.kfc.com.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, home.mi.com, capi.mwee.cn, api.mcd.cn, pss.txffp.com, api.pinduoduo.com, api.yangkeduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, gw.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, acs.m.taobao.com, msg.umengcloud.com, client-api-v2.oray.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
+hostname = %APPEND% m.client.10010.com, client.app.coc.10086.cn, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, res.pizzahut.com.cn, app.chengfenmiao.com, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, pic.edaijia.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, switch.jumpvg.com, api.m.jd.com, *.kakamobi.cn, res.kfc.com.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, home.mi.com, capi.mwee.cn, api.mcd.cn, pss.txffp.com, api.pinduoduo.com, api.yangkeduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, gw.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, acs.m.taobao.com, msg.umengcloud.com, client-api-v2.oray.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
