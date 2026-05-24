@@ -2,10 +2,6 @@
 #!desc=Block Advertising
 #!category=广告拦截
 
-[URL Rewrite]
-# > 京东
-^http:\/\/\w{32}\.jddebug\.com\/diagnose\? - reject
-
 [Map Local]
 # (0~9)
 # > 10010 - m.client.10010.com
@@ -60,6 +56,8 @@
 ^https?:\/\/switch\.jumpvg\.com\/jump\/(getlaunchad|recommend\/ad_conf) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 京东 - api.m.jd.com
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# > 京东诊断
+^http:\/\/\w{32}\.jddebug\.com\/diagnose\? data-type=text data="" status-code=200
 # > 驾考宝典 - *.kakamobi.cn
 ^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
