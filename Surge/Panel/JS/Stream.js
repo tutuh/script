@@ -1,4 +1,4 @@
-// === UI 视觉对齐配置 ===
+// UI 对齐配置
 const ALIGN_MAP = {
   'ChatGPT': 'ChatGPT  ', // 基准
   'YouTube': 'YouTube   ',
@@ -97,7 +97,7 @@ function getCurrentTime() {
   $done(panel);
 })();
 
-// === 基础请求封装（结合了 Timeout 限制 与 EOF 重试机制） ===
+// 基础请求封装（结合了 Timeout 限制 与 EOF 重试机制）
 function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries = 1) {
   return new Promise((resolve) => {
     const opts = { url, headers, timeout: REQUEST_TIMEOUT };
