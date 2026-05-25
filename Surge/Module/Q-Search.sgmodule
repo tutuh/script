@@ -33,38 +33,8 @@
 # gh xxx (GitHub)
 ^https:\/\/duckduckgo\.com\/\?q=gh(?:%20|\+)([^&]+).* https://github.com/search?q=$1 302
 
-# tf xxx (Google 搜索 TestFlight)
-^https:\/\/duckduckgo\.com\/\?q=tf(?:%20|\+)([^&]+).* https://www.google.com/search?as_q=$1&as_sitesearch=testflight.apple.com 302
-
-# yd xxx (有道词典)
-^https:\/\/duckduckgo\.com\/\?q=yd(?:%20|\+)([^&]+).* https://dict.youdao.com/search?q=$1 302
-
-# trc xxx (Google 译至中)
-^https:\/\/duckduckgo\.com\/\?q=trc(?:%20|\+)([^&]+).* https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$1 302
-
-# tre xxx (Google 译至英)
-^https:\/\/duckduckgo\.com\/\?q=tre(?:%20|\+)([^&]+).* https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1 302
-
-# trj xxx (Google 译至日)
-^https:\/\/duckduckgo\.com\/\?q=trj(?:%20|\+)([^&]+).* https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
-
 # csdn xxx (CSDN)
 ^https:\/\/duckduckgo\.com\/\?q=csdn(?:%20|\+)([^&]+).* https://so.csdn.net/so/search/s.do?q=$1 302
-
-# ssp xxx (少数派)
-^https:\/\/duckduckgo\.com\/\?q=ssp(?:%20|\+)([^&]+).* https://www.google.com/search?as_q=$1&as_sitesearch=sspai.com 302
-
-# tw xxx (Twitter / X)
-^https:\/\/duckduckgo\.com\/\?q=tw(?:%20|\+)([^&]+).* https://x.com/search?q=$1 302
-
-# ytb xxx (YouTube)
-^https:\/\/duckduckgo\.com\/\?q=ytb(?:%20|\+)([^&]+).* https://www.youtube.com/results?search_query=$1 302
-
-# bli xxx (哔哩哔哩)
-^https:\/\/duckduckgo\.com\/\?q=bli(?:%20|\+)([^&]+).* https://search.bilibili.com/all?keyword=$1 302
-
-# ph xxx (PornHub)
-^https:\/\/duckduckgo\.com\/\?q=ph(?:%20|\+)([^&]+).* https://cn.pornhub.com/video/search?search=$1 302
 
 # by xxx (必应)
 ^https:\/\/duckduckgo\.com\/\?q=by(?:%20|\+)([^&]+).* https://cn.bing.com/search?q=$1 302
