@@ -10,10 +10,6 @@
 # > 10086 - client.app.coc.10086.cn
 ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# (A)
-# > 爱回收 - gw.aihuishou.com
-^https:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 # (B)
 # > 百度网盘 - pan.baidu.com, issuecdn.baidupcs.com
 ^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/ad(x|v) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -38,12 +34,6 @@
 # (E)
 # > e代驾
 ^https?:\/\/pic\.edaijia\.cn\/adsplash\/ data-type=text data="" status-code=200
-# > 饿了么 - elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com
-^https:\/\/elemecdn.com\/.+\/sitemap data-type=text data="" status-code=200
-^https:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} data-type=text data="" status-code=200
-^https:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} data-type=text data="" status-code=200
-^https:\/\/fuss10.elemecdn.com\/.+\.mp4 data-type=text data="" status-code=200
-^https:\/\/www1.elecfans.com\/www\/delivery data-type=text data="" status-code=200
 
 # (F)
 # > 飞常准 - app.variflight.com, api.cdmcaac.com
@@ -121,4 +111,4 @@
 ^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ data-type=text data="" status-code=200
 
 [MITM]
-hostname = %APPEND% m.client.10010.com, client.app.coc.10086.cn, gw.aihuishou.com, pan.baidu.com, issuecdn.baidupcs.com, res.pizzahut.com.cn, app.chengfenmiao.com, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, pic.edaijia.cn, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, app.variflight.com, api.cdmcaac.com, switch.jumpvg.com, api.m.jd.com, *.kakamobi.cn, res.kfc.com.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, home.mi.com, capi.mwee.cn, api.mcd.cn, pss.txffp.com, api.pinduoduo.com, api.yangkeduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, gw.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, acs.m.taobao.com, msg.umengcloud.com, client-api-v2.oray.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
+hostname = %APPEND% m.client.10010.com, client.app.coc.10086.cn, pan.baidu.com, issuecdn.baidupcs.com, res.pizzahut.com.cn, app.chengfenmiao.com, api.chelaile.net.cn, web.chelaile.net.cn, api.dangdang.com, e.dangdang.com, pic.edaijia.cn, app.variflight.com, api.cdmcaac.com, switch.jumpvg.com, api.m.jd.com, *.kakamobi.cn, res.kfc.com.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, home.mi.com, capi.mwee.cn, api.mcd.cn, pss.txffp.com, api.pinduoduo.com, api.yangkeduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, gw.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, acs.m.taobao.com, msg.umengcloud.com, client-api-v2.oray.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
