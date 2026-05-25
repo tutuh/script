@@ -12,7 +12,6 @@
 
 # (B)
 # > 百度网盘 - pan.baidu.com
-[Map Local]
 ^https:\/\/pan\.baidu\.com\/api\/getconfig\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/pan\.baidu\.com\/api\/getsyscfg\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
