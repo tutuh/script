@@ -5,12 +5,6 @@ DOMAIN-SUFFIX,nssurge.com
 DOMAIN-SUFFIX,filters.adtidy.org
 DOMAIN,testflight.apple.com
 
-# 涩涩
-DOMAIN-KEYWORD,missav
-DOMAIN-KEYWORD,netflav
-DOMAIN-KEYWORD,javmost
-DOMAIN-KEYWORD,jable
-
 # Telegram
 DOMAIN-SUFFIX,cdn-telegram.org
 DOMAIN-SUFFIX,comments.app
@@ -454,3 +448,9 @@ DOMAIN-SUFFIX,zoomgov.com
 # VikACG
 DOMAIN-SUFFIX,vikacg.com
 DOMAIN-SUFFIX,picjs.xyz
+
+# 涩涩
+DOMAIN-KEYWORD,missav
+DOMAIN-KEYWORD,netflav
+DOMAIN-KEYWORD,javmost
+DOMAIN-KEYWORD,jable
