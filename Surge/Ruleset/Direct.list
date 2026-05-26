@@ -322,17 +322,6 @@ DOMAIN-SUFFIX,weiyun.com
 DOMAIN-SUFFIX,ximalaya.com
 DOMAIN-SUFFIX,xmcdn.com
 
-# Public Direct CDN 公共直连
-#DOMAIN-SUFFIX,ajax.aspnetcdn.com
-#DOMAIN-SUFFIX,ajax.cloudflare.com
-#DOMAIN-SUFFIX,cdnjs.cloudflare.com
-#DOMAIN-SUFFIX,code.jquery.com
-DOMAIN-SUFFIX,baomitu.com
-DOMAIN-SUFFIX,bootcss.com
-DOMAIN-SUFFIX,jiasule.com
-DOMAIN-SUFFIX,staticfile.org
-DOMAIN-SUFFIX,upaiyun.com
-
 # China DNS
 DOMAIN-SUFFIX,doh.pub
 DOMAIN-SUFFIX,dns.alidns.com
