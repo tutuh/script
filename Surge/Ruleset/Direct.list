@@ -68,8 +68,6 @@ DOMAIN-SUFFIX,tbcdn.com
 DOMAIN-SUFFIX,tmall.com
 DOMAIN-SUFFIX,tmall.hk
 DOMAIN-SUFFIX,ucweb.com
-DOMAIN-SUFFIX,xiami.com
-DOMAIN-SUFFIX,xiami.net
 DOMAIN-SUFFIX,ykimg.com
 DOMAIN-SUFFIX,youku.com
 DOMAIN-SUFFIX,qwen.ai
@@ -127,7 +125,6 @@ DOMAIN-SUFFIX,douyinpic.com
 DOMAIN-SUFFIX,douyinstatic.com
 DOMAIN-SUFFIX,douyinvod.com
 DOMAIN-SUFFIX,feelgood.cn
-DOMAIN-SUFFIX,feiliao.com
 DOMAIN-SUFFIX,gifshow.com
 DOMAIN-SUFFIX,huoshan.com
 DOMAIN-SUFFIX,huoshanzhibo.com
@@ -192,13 +189,6 @@ DOMAIN-SUFFIX,douyu.tv
 DOMAIN-SUFFIX,douyucdn.cn
 DOMAIN-SUFFIX,douyuscdn.com
 DOMAIN-SUFFIX,douyutv.com
-
-# Epic
-DOMAIN-SUFFIX,epicgames.com
-DOMAIN-SUFFIX,epicgames.dev
-DOMAIN-SUFFIX,helpshift.com
-DOMAIN-SUFFIX,paragon.com
-DOMAIN-SUFFIX,unrealengine.com
 
 # HuaWei
 DOMAIN-SUFFIX,dbankcdn.com
@@ -272,8 +262,6 @@ DOMAIN-SUFFIX,lecloud.com
 DOMAIN-SUFFIX,letv.com
 DOMAIN-SUFFIX,letvcloud.com
 DOMAIN-SUFFIX,letvimg.com
-DOMAIN-SUFFIX,letvlive.com
-DOMAIN-SUFFIX,letvstore.com
 
 # MGTV 芒果TV
 DOMAIN-SUFFIX,hitv.com
@@ -310,7 +298,6 @@ DOMAIN-SUFFIX,yangkeduo.com
 
 # Sina
 DOMAIN-SUFFIX,leju.com
-DOMAIN-SUFFIX,miaopai.com
 DOMAIN-SUFFIX,sina.com
 DOMAIN-SUFFIX,sina.com.cn
 DOMAIN-SUFFIX,sina.cn
@@ -322,7 +309,6 @@ DOMAIN-SUFFIX,weibo.com
 DOMAIN-SUFFIX,weibo.cn
 DOMAIN-SUFFIX,weibocdn.com
 DOMAIN-SUFFIX,weibocdn.cn
-DOMAIN-SUFFIX,xiaoka.tv
 
 # Sohu Sogo
 DOMAIN-SUFFIX,go2map.com
@@ -335,13 +321,6 @@ DOMAIN-SUFFIX,sohucs.com
 DOMAIN-SUFFIX,sohuno.com
 DOMAIN-SUFFIX,sohurdc.com
 DOMAIN-SUFFIX,v-56.com
-
-# Sony
-DOMAIN-SUFFIX,playstation.com
-DOMAIN-SUFFIX,playstation.net
-DOMAIN-SUFFIX,playstationnetwork.com
-DOMAIN-SUFFIX,sony.com
-DOMAIN-SUFFIX,sonyentertainmentnetwork.com
 
 # SteamCN
 DOMAIN-SUFFIX,cm.steampowered.com
@@ -400,23 +379,6 @@ DOMAIN-SUFFIX,p2cdn.com
 DOMAIN-SUFFIX,sandai.net
 DOMAIN-SUFFIX,thundercdn.com
 DOMAIN-SUFFIX,xunlei.com
-
-# YYeTs 人人影视
-DOMAIN-SUFFIX,got001.com
-DOMAIN-SUFFIX,p4pfile.com
-DOMAIN-SUFFIX,rrys.tv
-DOMAIN-SUFFIX,rrys2020.com
-DOMAIN-SUFFIX,yyets.com
-DOMAIN-SUFFIX,zimuzu.io
-DOMAIN-SUFFIX,zimuzu.tv
-DOMAIN-SUFFIX,zmz001.com
-DOMAIN-SUFFIX,zmz002.com
-DOMAIN-SUFFIX,zmz003.com
-DOMAIN-SUFFIX,zmz004.com
-DOMAIN-SUFFIX,zmz2019.com
-DOMAIN-SUFFIX,zmzapi.com
-DOMAIN-SUFFIX,zmzapi.net
-DOMAIN-SUFFIX,zmzfile.com
 
 # TeamViewer
 DOMAIN-SUFFIX,teamviewer.com
@@ -595,7 +557,6 @@ DOMAIN-SUFFIX,nuomi.com
 DOMAIN-SUFFIX,onedns.net
 DOMAIN-SUFFIX,oneplus.com
 DOMAIN-SUFFIX,onlinedown.net
-DOMAIN-SUFFIX,oracle.com
 DOMAIN-SUFFIX,oschina.net
 DOMAIN-SUFFIX,ourdvs.com
 DOMAIN-SUFFIX,polyv.net
@@ -615,7 +576,6 @@ DOMAIN-SUFFIX,qiniudn.com
 DOMAIN-SUFFIX,qiushibaike.com
 DOMAIN-SUFFIX,quanmin.tv
 DOMAIN-SUFFIX,qunar.com
-DOMAIN-SUFFIX,qunarzz.com
 DOMAIN-SUFFIX,realme.com
 DOMAIN-SUFFIX,repaik.com
 DOMAIN-SUFFIX,ruguoapp.com
