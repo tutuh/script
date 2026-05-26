@@ -52,28 +52,16 @@ DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,twitpic.com
 DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,twitter.jp
-DOMAIN-SUFFIX,vine.co
 DOMAIN-SUFFIX,x.com
-
-# 国外域名
-DOMAIN-SUFFIX,eu
-DOMAIN-SUFFIX,hk
-DOMAIN-SUFFIX,jp
-DOMAIN-SUFFIX,kr
-DOMAIN-SUFFIX,sg
-DOMAIN-SUFFIX,tw
-DOMAIN-SUFFIX,uk
 
 # Top Blocked Sites
 DOMAIN-SUFFIX,4sqi.net
-DOMAIN-SUFFIX,a248.e.akamai.net
 DOMAIN-SUFFIX,adobedtm.com
 DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,aolcdn.com
 DOMAIN-SUFFIX,apkmirror.com
 DOMAIN-SUFFIX,apkpure.com
-DOMAIN-SUFFIX,app-measurement.com
 DOMAIN-SUFFIX,appspot.com
 DOMAIN-SUFFIX,archive.org
 DOMAIN-SUFFIX,armorgames.com
@@ -109,7 +97,6 @@ DOMAIN-SUFFIX,duckduckgo.com
 DOMAIN-SUFFIX,edgecastcdn.net
 DOMAIN-SUFFIX,edgekey.net
 DOMAIN-SUFFIX,edgesuite.net
-DOMAIN-SUFFIX,eurekavpt.com
 DOMAIN-SUFFIX,fastmail.com
 DOMAIN-SUFFIX,firebaseio.com
 DOMAIN-SUFFIX,flickr.com
@@ -122,7 +109,6 @@ DOMAIN-SUFFIX,io.io
 DOMAIN-SUFFIX,issuu.com
 DOMAIN-SUFFIX,ixquick.com
 DOMAIN-SUFFIX,jtvnw.net
-DOMAIN-SUFFIX,kat.cr
 DOMAIN-SUFFIX,kik.com
 DOMAIN-SUFFIX,kobo.com
 DOMAIN-SUFFIX,kobobooks.com
@@ -133,7 +119,6 @@ DOMAIN-SUFFIX,llnwd.net
 DOMAIN-SUFFIX,macrumors.com
 DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,mega.nz
-DOMAIN-SUFFIX,megaupload.com
 DOMAIN-SUFFIX,messenger.com
 DOMAIN-SUFFIX,netdna-cdn.com
 DOMAIN-SUFFIX,nintendo.net
@@ -143,7 +128,6 @@ DOMAIN-SUFFIX,overcast.fm
 DOMAIN-SUFFIX,openvpn.net
 DOMAIN-SUFFIX,pinimg.com
 DOMAIN-SUFFIX,pinterest.com
-DOMAIN-SUFFIX,potato.im
 DOMAIN-SUFFIX,prfct.co
 DOMAIN-SUFFIX,quora.com
 DOMAIN-SUFFIX,resilio.com
@@ -466,14 +450,6 @@ DOMAIN-SUFFIX,wiktionary.org
 # Zoom
 DOMAIN-SUFFIX,zoom.us
 DOMAIN-SUFFIX,zoomgov.com
-
-#飞流直播
-DOMAIN-SUFFIX,neulion.com
-DOMAIN-SUFFIX,icntv.xyz
-DOMAIN-SUFFIX,flzbcdn.xyz
-
-#华文电视
-DOMAIN-SUFFIX,ocnttv.com
 
 # VikACG
 DOMAIN-SUFFIX,vikacg.com
