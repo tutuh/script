@@ -23,7 +23,6 @@ DOMAIN,tunion-api.m.taobao.com
 DOMAIN-SUFFIX,pos.baidu.com
 # > 百度地图
 DOMAIN,afdconf.baidu.com
-DOMAIN,lc.map.baidu.com
 
 # ======= (F) ======= #
 # > 飞常准
@@ -49,7 +48,6 @@ DOMAIN,ad-stat.ksosoft.com
 DOMAIN,counter.kingsoft.com
 DOMAIN,counter.ksosoft.com
 DOMAIN,img.auction-ads.wpscdn.cn
-DOMAIN,minfo.wps.cn
 DOMAIN,mobad.ijinshan.com
 DOMAIN,ups.ksmobile.net
 DOMAIN,ws.ksmobile.net
@@ -61,10 +59,6 @@ DOMAIN-SUFFIX,pangolin-dsp-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
-
-# ======= (L) ======= #
-# > 蓝奏云
-DOMAIN,statics.woozooo.com
 
 # ======= (M) ======= #
 # > 米家
