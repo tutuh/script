@@ -2,6 +2,7 @@
 # > Claude
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,anthropic.com
 
 # OpenAI
@@ -17,8 +18,7 @@ DOMAIN,api.statsig.com
 DOMAIN,api-iam.intercom.io
 DOMAIN,o33249.ingest.sentry.io
 DOMAIN,openaiapi-site.azureedge.net
-DOMAIN-KEYWORD,openaiapi
-DOMAIN-KEYWORD,openaicom
+
 # OpenRouter
 DOMAIN-SUFFIX,openrouter.ai
 
@@ -35,27 +35,28 @@ DOMAIN-SUFFIX,cursorapi.com
 # Google
 # > AI Studio
 DOMAIN-SUFFIX,generativeai.google
-DOMAIN-SUFFIX,makersuite.google.com
 DOMAIN,aistudio.google.com
 DOMAIN,alkalicore-pa.clients6.google.com
 DOMAIN,alkalimakersuite-pa.clients6.google.com
+
 # > Antigravity
 DOMAIN,antigravity.google
 DOMAIN,antigravity-unleash.goog
+
 # > DeepMind
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
+
 # > Gemini
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-DOMAIN-SUFFIX,geller-pa.googleapis.com
-DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN,ai.google.dev
-DOMAIN,bard.google.com
 DOMAIN,gemini.google.com
-# > NotebookLM
-DOMAIN-KEYWORD,notebooklm.google
-# > Search Labs
-DOMAIN-KEYWORD,labs.google
+DOMAIN,geller-pa.googleapis.com
+DOMAIN,generativelanguage.googleapis.com
+DOMAIN,proactivebackend-pa.googleapis.com
+
+# > NotebookLM & Search Labs
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,labs.google.com
 
 # Groq
 DOMAIN-SUFFIX,groq.com
@@ -72,14 +73,34 @@ DOMAIN,imagine.meta.com
 DOMAIN,copilot.microsoft.com
 DOMAIN,sydney.bing.com
 DOMAIN,www.bing.com
+
 # > GitHub Copilot
 DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN,api.githubcopilot.com
+DOMAIN,copilot-proxy.githubusercontent.com
 
 # Perplexity
 DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,pplx.ai
+DOMAIN-SUFFIX,perplexityusercontent.com
 DOMAIN,pplx-res.cloudinary.com
 
 # xAI
 DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,x.ai
+
+# Poe
+DOMAIN-SUFFIX,poe.com
+
+# Midjourney
+DOMAIN-SUFFIX,midjourney.com
+
+# Mistral
+DOMAIN-SUFFIX,mistral.ai
+
+# Hugging Face
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,hf.co
+
+# Notion AI
+DOMAIN-SUFFIX,notion.so
