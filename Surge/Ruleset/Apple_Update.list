@@ -1,11 +1,14 @@
 # AppStore & Update
 
-# AppStore
-DOMAIN,iosapps.itunes.apple.com // iOS Store
-DOMAIN,osxapps.itunes.apple.com // Mac Store
+# App Store
+DOMAIN,iosapps.itunes.apple.com
+DOMAIN,osxapps.itunes.apple.com
 DOMAIN-SUFFIX,apps.apple.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,cdn-apple.com
 
-# Update
+# System Update
 DOMAIN,swcdn.apple.com
+DOMAIN,updates.cdn-apple.com
 DOMAIN,updates-http.cdn-apple.com
-DOMAIN,updates.cdn-apple.com //system update
+DOMAIN,mesu.apple.com
