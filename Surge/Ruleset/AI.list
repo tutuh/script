@@ -14,6 +14,7 @@ DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,sora.com
+
 DOMAIN,api.statsig.com
 DOMAIN,api-iam.intercom.io
 DOMAIN,o33249.ingest.sentry.io
@@ -36,6 +37,7 @@ DOMAIN-SUFFIX,cursorapi.com
 # > AI Studio
 DOMAIN-SUFFIX,generativeai.google
 DOMAIN,aistudio.google.com
+DOMAIN,makersuite.google.com
 DOMAIN,alkalicore-pa.clients6.google.com
 DOMAIN,alkalimakersuite-pa.clients6.google.com
 
@@ -49,14 +51,18 @@ DOMAIN-SUFFIX,deepmind.google
 
 # > Gemini
 DOMAIN,ai.google.dev
+DOMAIN,bard.google.com
 DOMAIN,gemini.google.com
+
 DOMAIN,geller-pa.googleapis.com
 DOMAIN,generativelanguage.googleapis.com
 DOMAIN,proactivebackend-pa.googleapis.com
 
-# > NotebookLM & Search Labs
-DOMAIN-SUFFIX,notebooklm.google.com
-DOMAIN-SUFFIX,labs.google.com
+# > NotebookLM
+DOMAIN-KEYWORD,notebooklm.google
+
+# > Search Labs
+DOMAIN-KEYWORD,labs.google
 
 # Groq
 DOMAIN-SUFFIX,groq.com
@@ -76,8 +82,6 @@ DOMAIN,www.bing.com
 
 # > GitHub Copilot
 DOMAIN-SUFFIX,githubcopilot.com
-DOMAIN,api.githubcopilot.com
-DOMAIN,copilot-proxy.githubusercontent.com
 
 # Perplexity
 DOMAIN-SUFFIX,perplexity.ai
@@ -88,19 +92,3 @@ DOMAIN,pplx-res.cloudinary.com
 # xAI
 DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,x.ai
-
-# Poe
-DOMAIN-SUFFIX,poe.com
-
-# Midjourney
-DOMAIN-SUFFIX,midjourney.com
-
-# Mistral
-DOMAIN-SUFFIX,mistral.ai
-
-# Hugging Face
-DOMAIN-SUFFIX,huggingface.co
-DOMAIN-SUFFIX,hf.co
-
-# Notion AI
-DOMAIN-SUFFIX,notion.so
