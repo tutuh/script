@@ -21,6 +21,8 @@ DOMAIN-SUFFIX,googlemail.com
 # Google
 DOMAIN-SUFFIX,google.com
 DOMAIN-SUFFIX,google.com.hk
+DOMAIN-SUFFIX,googlevoice.com
+DOMAIN-SUFFIX,telephony.goog
 DOMAIN-SUFFIX,1e100.net
 DOMAIN-SUFFIX,2mdn.net
 DOMAIN-SUFFIX,app-measurement.net
