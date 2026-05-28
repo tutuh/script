@@ -190,6 +190,12 @@ DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,fb.com
 DOMAIN-SUFFIX,fb.me
 DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,threads.net
+
+# Instagram
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,instagr.am
 
 # GitHub
 DOMAIN-SUFFIX,github.com
@@ -198,27 +204,23 @@ DOMAIN-SUFFIX,githubassets.com
 DOMAIN-SUFFIX,github.io
 DOMAIN-SUFFIX,github.dev
 
-# Instagram
-DOMAIN-SUFFIX,instagram.com
-DOMAIN-SUFFIX,cdninstagram.com
-DOMAIN-SUFFIX,instagr.am
-
 # Iwara
 DOMAIN-SUFFIX,iwara.tv
 
-# Kakao Talk
+# Kakao
 DOMAIN-SUFFIX,kakao.com
 DOMAIN-SUFFIX,kakao.co.kr
 DOMAIN-SUFFIX,kakaocdn.net
+DOMAIN-SUFFIX,daum.net
 
-# Line
+# LINE
 DOMAIN-SUFFIX,line.me
 DOMAIN-SUFFIX,lin.ee
 DOMAIN-SUFFIX,line-apps.com
 DOMAIN-SUFFIX,line-cdn.net
 DOMAIN-SUFFIX,line-scdn.net
 DOMAIN-SUFFIX,line.naver.jp
-DOMAIN-SUFFIX,nhncorp.jp
+DOMAIN-SUFFIX,linecorp.com
 
 # OpenAI
 DOMAIN-SUFFIX,openai.com
