@@ -71,7 +71,6 @@ DOMAIN-SUFFIX,blogspot.jp
 DOMAIN-SUFFIX,bloomberg.cn
 DOMAIN-SUFFIX,bloomberg.com
 DOMAIN-SUFFIX,box.com
-DOMAIN-SUFFIX,cachefly.net
 DOMAIN-SUFFIX,cdnst.net
 DOMAIN-SUFFIX,comodoca.com
 DOMAIN-SUFFIX,daum.net
@@ -84,8 +83,6 @@ DOMAIN-SUFFIX,dropboxstatic.com
 DOMAIN-SUFFIX,dropboxusercontent.com
 DOMAIN-SUFFIX,duckduckgo.com
 DOMAIN-SUFFIX,edgecastcdn.net
-DOMAIN-SUFFIX,edgekey.net
-DOMAIN-SUFFIX,edgesuite.net
 DOMAIN-SUFFIX,fastmail.com
 DOMAIN-SUFFIX,firebaseio.com
 DOMAIN-SUFFIX,flickr.com
@@ -173,13 +170,13 @@ DOMAIN-SUFFIX,jitpack.io
 DOMAIN-SUFFIX,maven.org
 DOMAIN-SUFFIX,mvnrepository.com
 DOMAIN-SUFFIX,quay.io
-DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,redhat.com
 DOMAIN-SUFFIX,sonatype.org
 DOMAIN-SUFFIX,sourcegraph.com
 DOMAIN-SUFFIX,spring.io
 DOMAIN-SUFFIX,spring.net
 DOMAIN-SUFFIX,stackoverflow.com
+DOMAIN-SUFFIX,reddit.com
 
 # Docker
 DOMAIN,d1q6f0aelx0por.cloudfront.net
@@ -204,10 +201,10 @@ DOMAIN-SUFFIX,fbcdn.net
 
 # Github
 DOMAIN-SUFFIX,github.com
-DOMAIN-SUFFIX,github.io
-DOMAIN-SUFFIX,githubapp.com
-DOMAIN-SUFFIX,githubassets.com
 DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,githubapp.com
+DOMAIN-SUFFIX,github.io
 
 # Instagram
 DOMAIN-SUFFIX,cdninstagram.com
@@ -241,14 +238,14 @@ DOMAIN-SUFFIX,sora.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
 
 # OneDrive
-DOMAIN-SUFFIX,1drv.ms
+DOMAIN-SUFFIX,storage.live.com
 DOMAIN-SUFFIX,onedrive.com
+DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,1drv.ms
 DOMAIN,onedrive.live.com
 DOMAIN,photos.live.com
 DOMAIN-SUFFIX,oneclient.sfx.ms
-DOMAIN-SUFFIX,storage.live.com
 DOMAIN-SUFFIX,microsoftpersonalcontent.com
-DOMAIN-SUFFIX,sharepoint.com
 
 # Pixiv
 DOMAIN-SUFFIX,pixiv.net
@@ -262,17 +259,17 @@ DOMAIN-SUFFIX,readdle.com
 DOMAIN-SUFFIX,smartmailcloud.com
 
 # Steam
+DOMAIN-SUFFIX,steampowered.com
+DOMAIN-SUFFIX,steamcommunity.com
+DOMAIN-SUFFIX,steamstatic.com
+DOMAIN-SUFFIX,steam-chat.com
 DOMAIN-SUFFIX,fanatical.com
 DOMAIN-SUFFIX,humblebundle.com
 DOMAIN-SUFFIX,underlords.com
 DOMAIN-SUFFIX,valvesoftware.com
 DOMAIN-SUFFIX,playartifact.com
-DOMAIN-SUFFIX,steam-chat.com
-DOMAIN-SUFFIX,steamcommunity.com
 DOMAIN-SUFFIX,steamgames.com
-DOMAIN-SUFFIX,steampowered.com
 DOMAIN-SUFFIX,steamserver.net
-DOMAIN-SUFFIX,steamstatic.com
 DOMAIN-SUFFIX,steamstat.us
 DOMAIN,steambroadcast.akamaized.net
 DOMAIN,steamcommunity-a.akamaihd.net
