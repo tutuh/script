@@ -153,25 +153,14 @@ DOMAIN-SUFFIX,douyutv.com
 
 # HuaWei
 DOMAIN-SUFFIX,dbankcdn.com
-DOMAIN-SUFFIX,hc-cdn.com
 DOMAIN-SUFFIX,hicloud.com
 DOMAIN-SUFFIX,hihonor.com
 DOMAIN-SUFFIX,huawei.com
 DOMAIN-SUFFIX,huaweicloud.com
-DOMAIN-SUFFIX,huaweishop.net
-DOMAIN-SUFFIX,hwccpc.com
-DOMAIN-SUFFIX,vmall.com
-DOMAIN-SUFFIX,vmallres.com
 
 # OPPO
-DOMAIN-SUFFIX,allawnfs.com
-DOMAIN-SUFFIX,allawno.com
-DOMAIN-SUFFIX,allawntech.com
 DOMAIN-SUFFIX,coloros.com
 DOMAIN-SUFFIX,heytap.com
-DOMAIN-SUFFIX,heytapcs.com
-DOMAIN-SUFFIX,heytapdownload.com
-DOMAIN-SUFFIX,heytapimage.com
 DOMAIN-SUFFIX,heytapmobi.com
 DOMAIN-SUFFIX,oppo.com
 DOMAIN-SUFFIX,oppomobile.com
@@ -210,12 +199,12 @@ DOMAIN-SUFFIX,meitudata.com
 DOMAIN-SUFFIX,meitustat.com
 DOMAIN-SUFFIX,meipai.com
 
-# MGTV 芒果TV
+# 芒果TV
 DOMAIN-SUFFIX,hitv.com
 DOMAIN-SUFFIX,hunantv.com
 DOMAIN-SUFFIX,mgtv.com
 
-# MI (小米)
+# MI
 DOMAIN-SUFFIX,duokan.com
 DOMAIN-SUFFIX,mi-img.com
 DOMAIN-SUFFIX,mi.com
@@ -234,7 +223,7 @@ DOMAIN-SUFFIX,netease.com
 DOMAIN-SUFFIX,ydstatic.com
 DOMAIN-SUFFIX,youdao.com
 
-# PDD 拼多多
+# 拼多多
 DOMAIN-SUFFIX,pinduoduo.com
 DOMAIN-SUFFIX,yangkeduo.com
 
@@ -277,7 +266,7 @@ DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,weiyun.com
 
-# Ximalaya 喜马拉雅
+# Ximalaya
 DOMAIN-SUFFIX,ximalaya.com
 DOMAIN-SUFFIX,xmcdn.com
 
@@ -314,15 +303,15 @@ DOMAIN-SUFFIX,sankuai.com
 DOMAIN-SUFFIX,dianping.com
 
 # 电商
-DOMAIN-SUFFIX,kaola.com //考拉海购
-DOMAIN-SUFFIX,suning.com //苏宁易购
+DOMAIN-SUFFIX,kaola.com
+DOMAIN-SUFFIX,suning.com
 DOMAIN-SUFFIX,weidian.com //微店
 DOMAIN-SUFFIX,womai.com //中粮我买
 
 # 下厨房
 DOMAIN-SUFFIX,xiachufang.com
 
-# 出行旅游
+# 出行
 DOMAIN-SUFFIX,12306.com
 DOMAIN-SUFFIX,ctrip.com
 DOMAIN-SUFFIX,c-ctrip.com
@@ -397,7 +386,6 @@ DOMAIN-SUFFIX,115.com
 DOMAIN-SUFFIX,jianguoyun.com
 DOMAIN-SUFFIX,yinxiang.com
 DOMAIN-SUFFIX,lanzou.com
-DOMAIN-SUFFIX,mubu.com
 DOMAIN-SUFFIX,synology.com
 DOMAIN-SUFFIX,qiniu.com
 DOMAIN-SUFFIX,wscdns.com
