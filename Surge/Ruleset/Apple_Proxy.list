@@ -26,7 +26,7 @@ DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,tv.apple.com 
 
 # > News
-# DOMAIN,gateway.icloud.com // 代理此域名极易触发 Apple ID 风控，若非重度 News 依赖建议直连
+DOMAIN,gateway.icloud.com // 代理此域名极易触发 Apple ID 风控
 DOMAIN-SUFFIX,apple.news
 DOMAIN,news-assets.apple.com
 DOMAIN,news-client.apple.com
