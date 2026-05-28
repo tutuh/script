@@ -12,8 +12,8 @@ DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN-SUFFIX,push.apple.com
 
 # Other
-DOMAIN-KEYWORD,smp-device
 DOMAIN,time-ios.apple.com
 DOMAIN,time.apple.com
+DOMAIN-KEYWORD,smp-device
 #DOMAIN,tj-pod3-smp-device.apple.com // 交通卡充值
 #DOMAIN-SUFFIX,mail.me.com // 邮箱
