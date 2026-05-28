@@ -259,26 +259,19 @@ DOMAIN-SUFFIX,steampowered.com
 DOMAIN-SUFFIX,steamcommunity.com
 DOMAIN-SUFFIX,steamstatic.com
 DOMAIN-SUFFIX,steam-chat.com
-DOMAIN,steampipe.akamaized.net
-DOMAIN,steambroadcast.akamaized.net
-DOMAIN,steamstore-a.akamaihd.net
-DOMAIN,steamusercontent-a.akamaihd.net
-DOMAIN,steamuserimages-a.akamaihd.net
-DOMAIN,steamcommunity-a.akamaihd.net
 DOMAIN-SUFFIX,steamgames.com
 DOMAIN-SUFFIX,steamserver.net
 DOMAIN-SUFFIX,steamstat.us
 DOMAIN-SUFFIX,valvesoftware.com
-DOMAIN-SUFFIX,underlords.com
-DOMAIN-SUFFIX,playartifact.com
 
 # Store
 DOMAIN-SUFFIX,fanatical.com
 DOMAIN-SUFFIX,humblebundle.com
 
 # TapTap
-DOMAIN-SUFFIX,tap.io
+DOMAIN-SUFFIX,taptap.io
 DOMAIN-SUFFIX,taptap.tw
+DOMAIN-SUFFIX,tap.io
 
 # Twitch
 DOMAIN-SUFFIX,twitch.tv
@@ -309,6 +302,7 @@ DOMAIN-SUFFIX,wikileaks.org
 # Zoom
 DOMAIN-SUFFIX,zoom.us
 DOMAIN-SUFFIX,zoomgov.com
+DOMAIN-SUFFIX,zoom.com
 
 # VikACG
 DOMAIN-SUFFIX,vikacg.com
