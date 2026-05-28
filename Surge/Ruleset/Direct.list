@@ -5,8 +5,6 @@ DOMAIN-SUFFIX,eudic.net //欧路词典
 DOMAIN-SUFFIX,eshimin.com //市民云
 DOMAIN-SUFFIX,eshiyun.info
 DOMAIN-SUFFIX,sptcc.com //交通卡
-DOMAIN-SUFFIX,unionpay.com //中国银联
-DOMAIN-SUFFIX,cloudpnr.com //汇付天下
 DOMAIN-SUFFIX,10010.com //中国联通
 
 # CN域名
@@ -364,47 +362,51 @@ DOMAIN-SUFFIX,tuniucdn.com
 DOMAIN-SUFFIX,sf-express.com
 DOMAIN-SUFFIX,kuaidi100.com
 
-# 金融与招聘
+# 银行与支付
 DOMAIN-SUFFIX,95516.com //银联云闪付
+DOMAIN-SUFFIX,unionpay.com //中国银联
+DOMAIN-SUFFIX,cloudpnr.com //汇付天下
 DOMAIN-SUFFIX,cmbchina.com //招商银行
 DOMAIN-SUFFIX,abchina.com //农业银行
 DOMAIN-SUFFIX,ecitic.com //中信银行
+DOMAIN-SUFFIX,yeepay.com //易宝支付
+# 股票投资
 DOMAIN-SUFFIX,dfcfw.com //东方财富
-DOMAIN-SUFFIX,eastmoney.com
-DOMAIN-SUFFIX,xueqiu.com
-DOMAIN-SUFFIX,yeepay.com
-DOMAIN-SUFFIX,tianyancha.com
+DOMAIN-SUFFIX,eastmoney.com //东方财富网
+DOMAIN-SUFFIX,xueqiu.com //雪球
+DOMAIN-SUFFIX,tianyancha.com //天眼查
+# 招聘
 DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,51job.com
 DOMAIN-SUFFIX,51jobcdn.com
 DOMAIN-SUFFIX,zhaopin.com
 
-# 影音、直播与游戏娱乐
-DOMAIN-SUFFIX,miguvideo.com
-DOMAIN-SUFFIX,migucloud.com
-DOMAIN-SUFFIX,cibntv.net
+
+# 网络视频
+DOMAIN-SUFFIX,miguvideo.com //咪咕视频
+DOMAIN-SUFFIX,migucloud.com //咪咕云
+DOMAIN-SUFFIX,cibntv.net //CIBN互联网电视
+
+# 直播
 DOMAIN-SUFFIX,huya.com
-DOMAIN-SUFFIX,huajiao.com
-DOMAIN-SUFFIX,yy.com
-DOMAIN-SUFFIX,yystatic.com
-DOMAIN-SUFFIX,msstatic.com
-DOMAIN-SUFFIX,acfun.tv
-DOMAIN-SUFFIX,aixifan.com
-DOMAIN-SUFFIX,kugou.com
-DOMAIN-SUFFIX,lizhi.fm
-DOMAIN-SUFFIX,lizhi.io
-DOMAIN-SUFFIX,lizhifm.com
-DOMAIN-SUFFIX,gzlzfm.com
+DOMAIN-SUFFIX,huajiao.com //花椒
+DOMAIN-SUFFIX,yy.com //YY
+DOMAIN-SUFFIX,yystatic.com //YY静态资源
+DOMAIN-SUFFIX,msstatic.com //YY
+
+# 音乐与电台
+DOMAIN-SUFFIX,kugou.com //酷狗音乐
+DOMAIN-SUFFIX,lizhi.fm //荔枝FM音频
+DOMAIN-SUFFIX,lizhi.io //荔枝
+DOMAIN-SUFFIX,gzlzfm.com //荔枝网络
+
+# 猫眼电影
 DOMAIN-SUFFIX,maoyan.com
-DOMAIN-SUFFIX,17173.com
-DOMAIN-SUFFIX,178.com
-DOMAIN-SUFFIX,3dmgame.com
-DOMAIN-SUFFIX,videocc.net
-DOMAIN-SUFFIX,polyv.net
-DOMAIN-SUFFIX,taihe.com
-DOMAIN-SUFFIX,lemicp.com
-DOMAIN-SUFFIX,xslb.net
+
+# 游戏媒体
+DOMAIN-SUFFIX,17173.com //17173
+DOMAIN-SUFFIX,3dmgame.com //3DM
 
 # 网络文学、教育与医疗
 DOMAIN-SUFFIX,qidian.com
