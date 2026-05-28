@@ -281,23 +281,6 @@ DOMAIN-SUFFIX,weiyun.com
 DOMAIN-SUFFIX,ximalaya.com
 DOMAIN-SUFFIX,xmcdn.com
 
-# 手机厂商
-DOMAIN-SUFFIX,vivo.com
-DOMAIN-SUFFIX,meizu.com
-DOMAIN-SUFFIX,oneplus.com
-DOMAIN-SUFFIX,realme.com
-
-# 技术社区
-DOMAIN-SUFFIX,csdn.net
-DOMAIN-SUFFIX,cnblogs.com
-DOMAIN-SUFFIX,oschina.net
-DOMAIN-SUFFIX,segmentfault.com
-DOMAIN-SUFFIX,51cto.com
-DOMAIN-SUFFIX,runoob.com
-DOMAIN-SUFFIX,ipip.net
-DOMAIN-SUFFIX,chinaz.com
-DOMAIN-SUFFIX,chinaz.net
-
 # 社交平台
 DOMAIN-SUFFIX,xiaohongshu.com
 DOMAIN-SUFFIX,xhscdn.com
@@ -318,15 +301,11 @@ DOMAIN-SUFFIX,jianshuapi.com
 DOMAIN-SUFFIX,letitfly.me
 
 # 新闻媒体
-DOMAIN-SUFFIX,36kr.com
 DOMAIN-SUFFIX,ithome.com
 DOMAIN-SUFFIX,huxiucdn.com
 DOMAIN-SUFFIX,ifeng.com
 DOMAIN-SUFFIX,ifengimg.com
-DOMAIN-SUFFIX,infzm.com
-DOMAIN-SUFFIX,landiannews.com
 DOMAIN-SUFFIX,xinhuanet.com
-DOMAIN-SUFFIX,eastday.com
 
 # 美团
 DOMAIN-SUFFIX,meituan.com
@@ -343,11 +322,6 @@ DOMAIN-SUFFIX,womai.com //中粮我买
 
 # 下厨房
 DOMAIN-SUFFIX,xiachufang.com
-
-# 母婴
-DOMAIN-SUFFIX,babytree.com
-DOMAIN-SUFFIX,babytreeimg.com
-DOMAIN-SUFFIX,cdnmama.com
 
 # 出行旅游
 DOMAIN-SUFFIX,12306.com
@@ -405,10 +379,6 @@ DOMAIN-SUFFIX,gzlzfm.com //荔枝网络
 
 # 猫眼电影
 DOMAIN-SUFFIX,maoyan.com
-
-# 游戏媒体
-DOMAIN-SUFFIX,17173.com //17173
-DOMAIN-SUFFIX,3dmgame.com //3DM
 
 # 网络文学
 DOMAIN-SUFFIX,qidian.com
