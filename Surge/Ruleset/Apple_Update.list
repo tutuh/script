@@ -4,11 +4,11 @@
 DOMAIN,iosapps.itunes.apple.com
 DOMAIN,osxapps.itunes.apple.com
 DOMAIN-SUFFIX,apps.apple.com
-DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,mzstatic.com
 
 # System Update
-DOMAIN,swcdn.apple.com
-DOMAIN,updates.cdn-apple.com
-DOMAIN,updates-http.cdn-apple.com
 DOMAIN,mesu.apple.com
+DOMAIN,swcdn.apple.com
+DOMAIN,updates-http.cdn-apple.com
+DOMAIN,updates.cdn-apple.com
