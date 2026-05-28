@@ -11,13 +11,12 @@ DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,sora.com
-DOMAIN,api.openai.com
-DOMAIN,api.statsig.com
-DOMAIN,api-iam.intercom.io
-DOMAIN-SUFFIX,livekit.cloud
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,livekit.cloud
+DOMAIN,api.statsig.com
+DOMAIN,api-iam.intercom.io
 DOMAIN,o33249.ingest.sentry.io
 
 # OpenRouter
