@@ -313,11 +313,10 @@ DOMAIN-SUFFIX,meituan.net
 DOMAIN-SUFFIX,sankuai.com
 DOMAIN-SUFFIX,dianping.com
 
-#电商
+# 电商
 DOMAIN-SUFFIX,kaola.com //考拉海购
 DOMAIN-SUFFIX,suning.com //苏宁易购
 DOMAIN-SUFFIX,weidian.com //微店
-DOMAIN-SUFFIX,geilicdn.com //微店给力CDN
 DOMAIN-SUFFIX,womai.com //中粮我买
 
 # 下厨房
@@ -360,12 +359,10 @@ DOMAIN-SUFFIX,51job.com
 DOMAIN-SUFFIX,51jobcdn.com
 DOMAIN-SUFFIX,zhaopin.com
 
-# 网络视频
+# 网络视频与直播
 DOMAIN-SUFFIX,miguvideo.com //咪咕视频
 DOMAIN-SUFFIX,migucloud.com //咪咕云
 DOMAIN-SUFFIX,cibntv.net //CIBN互联网电视
-
-# 直播
 DOMAIN-SUFFIX,huya.com
 DOMAIN-SUFFIX,yy.com
 DOMAIN-SUFFIX,yystatic.com
@@ -395,9 +392,7 @@ DOMAIN-SUFFIX,baicizhan.com
 DOMAIN-SUFFIX,qcloud.com //腾讯云
 DOMAIN-SUFFIX,qcloudcdn.com
 DOMAIN-SUFFIX,umengcloud.com //阿里友盟
-DOMAIN-SUFFIX,wandoujia.com //阿里豌豆荚
 DOMAIN-SUFFIX,mubu.com //字节幕布
-DOMAIN-SUFFIX,qhimg.com //360图床
 DOMAIN-SUFFIX,115.com
 DOMAIN-SUFFIX,jianguoyun.com
 DOMAIN-SUFFIX,yinxiang.com
@@ -407,9 +402,6 @@ DOMAIN-SUFFIX,synology.com
 DOMAIN-SUFFIX,qiniu.com
 DOMAIN-SUFFIX,wscdns.com
 DOMAIN-SUFFIX,xiumi.us //秀米排版
-DOMAIN-SUFFIX,ghpym.com //果核剥壳
-DOMAIN-SUFFIX,yach.me
-DOMAIN-SUFFIX,myunlu.com
 
 # 天气服务
 DOMAIN-SUFFIX,moji.com
