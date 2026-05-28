@@ -8,11 +8,8 @@ DOMAIN-SUFFIX,sptcc.com //交通卡
 DOMAIN-SUFFIX,unionpay.com //中国银联
 DOMAIN-SUFFIX,cloudpnr.com //汇付天下
 
-# CN域名直连(中国|公司|网络)
+# CN域名
 DOMAIN-SUFFIX,cn
-DOMAIN-SUFFIX,xn--fiqs8s
-DOMAIN-SUFFIX,xn--55qx5d
-DOMAIN-SUFFIX,xn--io0a7i
 
 # 360
 DOMAIN-SUFFIX,360.com
