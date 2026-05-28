@@ -298,7 +298,7 @@ DOMAIN-SUFFIX,ipip.net
 DOMAIN-SUFFIX,chinaz.com
 DOMAIN-SUFFIX,chinaz.net
 
-# 社交社区
+# 社交平台
 DOMAIN-SUFFIX,xiaohongshu.com
 DOMAIN-SUFFIX,xhscdn.com
 DOMAIN-SUFFIX,zhihu.com
@@ -311,7 +311,7 @@ DOMAIN-SUFFIX,coolapkmarket.com
 DOMAIN-SUFFIX,sspai.com
 DOMAIN-SUFFIX,smzdm.com
 DOMAIN-SUFFIX,ruguoapp.com //即刻
-DOMAIN-SUFFIX,feng.com //威锋网
+DOMAIN-SUFFIX,feng.com
 DOMAIN-SUFFIX,jianshu.com
 DOMAIN-SUFFIX,jianshu.io
 DOMAIN-SUFFIX,jianshuapi.com
@@ -328,26 +328,26 @@ DOMAIN-SUFFIX,landiannews.com
 DOMAIN-SUFFIX,xinhuanet.com
 DOMAIN-SUFFIX,eastday.com
 
-# 生活、购物
+# 美团
 DOMAIN-SUFFIX,meituan.com
 DOMAIN-SUFFIX,meituan.net
 DOMAIN-SUFFIX,sankuai.com
 DOMAIN-SUFFIX,dianping.com
-DOMAIN-SUFFIX,dpfile.com
-DOMAIN-SUFFIX,kaola.com
-DOMAIN-SUFFIX,mogu.com
-DOMAIN-SUFFIX,mogucdn.com
-DOMAIN-SUFFIX,mogujie.com
-DOMAIN-SUFFIX,suning.com
-DOMAIN-SUFFIX,weidian.com
-DOMAIN-SUFFIX,geilicdn.com //微店CDN
+
+#电商
+DOMAIN-SUFFIX,kaola.com //考拉海购
+DOMAIN-SUFFIX,suning.com //苏宁易购
+DOMAIN-SUFFIX,weidian.com //微店
+DOMAIN-SUFFIX,geilicdn.com //微店给力CDN
+DOMAIN-SUFFIX,womai.com //中粮我买
+
+# 下厨房
 DOMAIN-SUFFIX,xiachufang.com
+
+# 母婴
 DOMAIN-SUFFIX,babytree.com
 DOMAIN-SUFFIX,babytreeimg.com
 DOMAIN-SUFFIX,cdnmama.com
-DOMAIN-SUFFIX,ganji.com
-DOMAIN-SUFFIX,ganjistatic1.com
-DOMAIN-SUFFIX,womai.com
 
 # 出行旅游
 DOMAIN-SUFFIX,12306.com
@@ -370,18 +370,21 @@ DOMAIN-SUFFIX,cmbchina.com //招商银行
 DOMAIN-SUFFIX,abchina.com //农业银行
 DOMAIN-SUFFIX,ecitic.com //中信银行
 DOMAIN-SUFFIX,yeepay.com //易宝支付
+
 # 股票投资
 DOMAIN-SUFFIX,dfcfw.com //东方财富
 DOMAIN-SUFFIX,eastmoney.com //东方财富网
 DOMAIN-SUFFIX,xueqiu.com //雪球
-DOMAIN-SUFFIX,tianyancha.com //天眼查
+
+# 天眼查
+DOMAIN-SUFFIX,tianyancha.com
+
 # 招聘
 DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,51job.com
 DOMAIN-SUFFIX,51jobcdn.com
 DOMAIN-SUFFIX,zhaopin.com
-
 
 # 网络视频
 DOMAIN-SUFFIX,miguvideo.com //咪咕视频
@@ -390,10 +393,9 @@ DOMAIN-SUFFIX,cibntv.net //CIBN互联网电视
 
 # 直播
 DOMAIN-SUFFIX,huya.com
-DOMAIN-SUFFIX,huajiao.com //花椒
-DOMAIN-SUFFIX,yy.com //YY
-DOMAIN-SUFFIX,yystatic.com //YY静态资源
-DOMAIN-SUFFIX,msstatic.com //YY
+DOMAIN-SUFFIX,yy.com
+DOMAIN-SUFFIX,yystatic.com
+DOMAIN-SUFFIX,msstatic.com
 
 # 音乐与电台
 DOMAIN-SUFFIX,kugou.com //酷狗音乐
@@ -408,17 +410,18 @@ DOMAIN-SUFFIX,maoyan.com
 DOMAIN-SUFFIX,17173.com //17173
 DOMAIN-SUFFIX,3dmgame.com //3DM
 
-# 网络文学、教育与医疗
+# 网络文学
 DOMAIN-SUFFIX,qidian.com
 DOMAIN-SUFFIX,qdmm.com
 DOMAIN-SUFFIX,yuewen.com
 DOMAIN-SUFFIX,hongxiu.com
+
+#教育
 DOMAIN-SUFFIX,chaoxing.com
 DOMAIN-SUFFIX,cnki.net
 DOMAIN-SUFFIX,baicizhan.com
-DOMAIN-SUFFIX,dxycdn.com //丁香医生
 
-# 办公、工具、云服务与大厂公共 CDN
+# 工具、云服务
 DOMAIN-SUFFIX,qcloud.com //腾讯云
 DOMAIN-SUFFIX,qcloudcdn.com
 DOMAIN-SUFFIX,umengcloud.com //阿里友盟
@@ -437,8 +440,6 @@ DOMAIN-SUFFIX,xiumi.us //秀米排版
 DOMAIN-SUFFIX,ghpym.com //果核剥壳
 DOMAIN-SUFFIX,yach.me
 DOMAIN-SUFFIX,myunlu.com
-DOMAIN-SUFFIX,xdrig.com
-DOMAIN-SUFFIX,uxengine.net
 
 # 天气服务
 DOMAIN-SUFFIX,moji.com
