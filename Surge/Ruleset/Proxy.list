@@ -229,17 +229,17 @@ DOMAIN-SUFFIX,line.naver.jp
 DOMAIN-SUFFIX,nhncorp.jp
 
 # OpenAI
-DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,sora.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,sora.com
+DOMAIN,openaiapi-site.azureedge.net
 DOMAIN-SUFFIX,livekit.cloud
 DOMAIN,api.statsig.com
 DOMAIN,api-iam.intercom.io
 DOMAIN,o33249.ingest.sentry.io
-DOMAIN,openaiapi-site.azureedge.net
 
 # OneDrive
 DOMAIN-SUFFIX,storage.live.com
