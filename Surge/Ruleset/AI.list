@@ -7,17 +7,18 @@ DOMAIN-SUFFIX,claudeusercontent.com
 
 # OpenAI
 # > ChatGPT
-DOMAIN-SUFFIX,chat.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,sora.com
-DOMAIN-SUFFIX,livekit.cloud
+DOMAIN,api.openai.com
 DOMAIN,api.statsig.com
 DOMAIN,api-iam.intercom.io
-DOMAIN,o33249.ingest.sentry.io
+DOMAIN-SUFFIX,livekit.cloud
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN,openaiapi-site.azureedge.net
+DOMAIN,o33249.ingest.sentry.io
 
 # OpenRouter
 DOMAIN-SUFFIX,openrouter.ai
