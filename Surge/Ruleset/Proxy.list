@@ -5,22 +5,22 @@ DOMAIN-SUFFIX,filters.adtidy.org
 DOMAIN,testflight.apple.com
 
 # Telegram
+DOMAIN-SUFFIX,t.me
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,telegram.me
+DOMAIN-SUFFIX,tx.me
+DOMAIN-SUFFIX,telegram-cdn.org
 DOMAIN-SUFFIX,cdn-telegram.org
-DOMAIN-SUFFIX,comments.app
+DOMAIN-SUFFIX,telegra.ph
 DOMAIN-SUFFIX,graph.org
 DOMAIN-SUFFIX,legra.ph
-DOMAIN-SUFFIX,quiz.directory
-DOMAIN-SUFFIX,t.me
-DOMAIN-SUFFIX,tdesktop.com
-DOMAIN-SUFFIX,telegra.ph
 DOMAIN-SUFFIX,telegram.dog
-DOMAIN-SUFFIX,telegram.me
-DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,telegram.space
-DOMAIN-SUFFIX,telegram-cdn.org
+DOMAIN-SUFFIX,tdesktop.com
 DOMAIN-SUFFIX,telesco.pe
 DOMAIN-SUFFIX,tg.dev
-DOMAIN-SUFFIX,tx.me
+DOMAIN-SUFFIX,comments.app
+DOMAIN-SUFFIX,quiz.directory
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.8.0/22,no-resolve
 IP-CIDR,91.108.12.0/22,no-resolve
@@ -37,31 +37,28 @@ IP-CIDR6,2001:b28:f23f::/48,no-resolve
 IP-CIDR6,2a0a:f280::/32,no-resolve
 
 # Twitter / X
-DOMAIN-SUFFIX,periscope.tv
-DOMAIN-SUFFIX,pscp.tv
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,t.co
 DOMAIN-SUFFIX,twimg.com
-DOMAIN-SUFFIX,twitpic.com
-DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,twitter.jp
-DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,twitpic.com
+DOMAIN-SUFFIX,periscope.tv
+DOMAIN-SUFFIX,pscp.tv
 
 # Top Blocked Sites
-DOMAIN-SUFFIX,4sqi.net
-DOMAIN-SUFFIX,adobedtm.com
-DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,android.com
-DOMAIN-SUFFIX,aolcdn.com
-DOMAIN-SUFFIX,apkmirror.com
-DOMAIN-SUFFIX,apkpure.com
+DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,appspot.com
-DOMAIN-SUFFIX,archive.org
-DOMAIN-SUFFIX,armorgames.com
+DOMAIN-SUFFIX,firebaseio.com
+DOMAIN-SUFFIX,aolcdn.com
 DOMAIN-SUFFIX,aspnetcdn.com
 DOMAIN-SUFFIX,awsstatic.com
-DOMAIN-SUFFIX,azurewebsites.net
-DOMAIN-SUFFIX,bandwagonhost.com
-DOMAIN-SUFFIX,bkrtx.com
+DOMAIN-SUFFIX,cdnst.net
+DOMAIN-SUFFIX,edgecastcdn.net
+DOMAIN-SUFFIX,llnwd.net
+DOMAIN-SUFFIX,netdna-cdn.com
+DOMAIN-SUFFIX,vox-cdn.com
 DOMAIN-SUFFIX,blogcdn.com
 DOMAIN-SUFFIX,blogger.com
 DOMAIN-SUFFIX,blogsmithmedia.com
@@ -70,109 +67,112 @@ DOMAIN-SUFFIX,blogspot.hk
 DOMAIN-SUFFIX,blogspot.jp
 DOMAIN-SUFFIX,bloomberg.cn
 DOMAIN-SUFFIX,bloomberg.com
+DOMAIN-SUFFIX,medium.com
+DOMAIN-SUFFIX,nytstyle.com
 DOMAIN-SUFFIX,box.com
-DOMAIN-SUFFIX,cdnst.net
-DOMAIN-SUFFIX,comodoca.com
-DOMAIN-SUFFIX,daum.net
-DOMAIN-SUFFIX,deskconnect.com
-DOMAIN-SUFFIX,disqus.com
-DOMAIN-SUFFIX,disquscdn.com
 DOMAIN-SUFFIX,dropbox.com
 DOMAIN-SUFFIX,dropboxapi.com
 DOMAIN-SUFFIX,dropboxstatic.com
 DOMAIN-SUFFIX,dropboxusercontent.com
-DOMAIN-SUFFIX,duckduckgo.com
-DOMAIN-SUFFIX,edgecastcdn.net
-DOMAIN-SUFFIX,fastmail.com
-DOMAIN-SUFFIX,firebaseio.com
-DOMAIN-SUFFIX,flickr.com
-DOMAIN-SUFFIX,flipboard.com
-DOMAIN-SUFFIX,gfx.ms
-DOMAIN-SUFFIX,gongm.in
-DOMAIN-SUFFIX,hulu.com
-DOMAIN-SUFFIX,id.heroku.com
-DOMAIN-SUFFIX,issuu.com
-DOMAIN-SUFFIX,ixquick.com
-DOMAIN-SUFFIX,jtvnw.net
-DOMAIN-SUFFIX,kik.com
-DOMAIN-SUFFIX,kobo.com
-DOMAIN-SUFFIX,kobobooks.com
-DOMAIN-SUFFIX,licdn.com
-DOMAIN-SUFFIX,live.net
-DOMAIN-SUFFIX,livefilestore.com
-DOMAIN-SUFFIX,llnwd.net
-DOMAIN-SUFFIX,macrumors.com
-DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,mega.nz
-DOMAIN-SUFFIX,messenger.com
-DOMAIN-SUFFIX,netdna-cdn.com
-DOMAIN-SUFFIX,nintendo.net
-DOMAIN-SUFFIX,nsstatic.net
-DOMAIN-SUFFIX,nytstyle.com
-DOMAIN-SUFFIX,overcast.fm
-DOMAIN-SUFFIX,openvpn.net
-DOMAIN-SUFFIX,pinimg.com
-DOMAIN-SUFFIX,pinterest.com
-DOMAIN-SUFFIX,prfct.co
-DOMAIN-SUFFIX,quora.com
 DOMAIN-SUFFIX,resilio.com
-DOMAIN-SUFFIX,sfx.ms
-DOMAIN-SUFFIX,shadowsocks.org
-DOMAIN-SUFFIX,slack-edge.com
-DOMAIN-SUFFIX,smartdnsproxy.com
-DOMAIN-SUFFIX,sndcdn.com
-DOMAIN-SUFFIX,soundcloud.com
-DOMAIN-SUFFIX,startpage.com
-DOMAIN-SUFFIX,staticflickr.com
-DOMAIN-SUFFIX,symauth.com
-DOMAIN-SUFFIX,symcb.com
-DOMAIN-SUFFIX,symcd.com
+DOMAIN-SUFFIX,disqus.com
+DOMAIN-SUFFIX,disquscdn.com
+DOMAIN-SUFFIX,flipboard.com
+DOMAIN-SUFFIX,kik.com
+DOMAIN-SUFFIX,messenger.com
+DOMAIN-SUFFIX,pinterest.com
+DOMAIN-SUFFIX,pinimg.com
+DOMAIN-SUFFIX,quora.com
 DOMAIN-SUFFIX,textnow.com
 DOMAIN-SUFFIX,textnow.me
 DOMAIN-SUFFIX,thefacebook.com
-DOMAIN-SUFFIX,thepiratebay.org
-DOMAIN-SUFFIX,torproject.org
-DOMAIN-SUFFIX,trustasiassl.com
 DOMAIN-SUFFIX,tumblr.com
-DOMAIN-SUFFIX,tvb.com
 DOMAIN-SUFFIX,txmblr.com
 DOMAIN-SUFFIX,v2ex.com
+DOMAIN-SUFFIX,flickr.com
+DOMAIN-SUFFIX,staticflickr.com
+DOMAIN-SUFFIX,hulu.com
+DOMAIN-SUFFIX,issuu.com
+DOMAIN-SUFFIX,jtvnw.net
+DOMAIN-SUFFIX,overcast.fm
+DOMAIN-SUFFIX,sndcdn.com
+DOMAIN-SUFFIX,soundcloud.com
 DOMAIN-SUFFIX,vimeo.com
-DOMAIN-SUFFIX,vox-cdn.com
+DOMAIN-SUFFIX,duckduckgo.com
+DOMAIN-SUFFIX,ixquick.com
+DOMAIN-SUFFIX,startpage.com
+DOMAIN-SUFFIX,openvpn.net
+DOMAIN-SUFFIX,shadowsocks.org
+DOMAIN-SUFFIX,smartdnsproxy.com
+DOMAIN-SUFFIX,torproject.org
+DOMAIN-SUFFIX,apkmirror.com
+DOMAIN-SUFFIX,apkpure.com
+DOMAIN-SUFFIX,armorgames.com
+DOMAIN-SUFFIX,nintendo.net
+DOMAIN-SUFFIX,tvb.com
+DOMAIN-SUFFIX,gfx.ms
+DOMAIN-SUFFIX,live.net
+DOMAIN-SUFFIX,livefilestore.com
+DOMAIN-SUFFIX,sfx.ms
+DOMAIN-SUFFIX,4sqi.net
+DOMAIN-SUFFIX,adobedtm.com
+DOMAIN-SUFFIX,azurewebsites.net
+DOMAIN-SUFFIX,bandwagonhost.com
+DOMAIN-SUFFIX,bkrtx.com
+DOMAIN-SUFFIX,cachefly.net
+DOMAIN-SUFFIX,comodoca.com
+DOMAIN-SUFFIX,daum.net
+DOMAIN-SUFFIX,deskconnect.com
+DOMAIN-SUFFIX,fastmail.com
+DOMAIN-SUFFIX,gongm.in
+DOMAIN-SUFFIX,id.heroku.com
+DOMAIN-SUFFIX,kobo.com
+DOMAIN-SUFFIX,kobobooks.com
+DOMAIN-SUFFIX,licdn.com
+DOMAIN-SUFFIX,macrumors.com
+DOMAIN-SUFFIX,nsstatic.net
+DOMAIN-SUFFIX,prfct.co
+DOMAIN-SUFFIX,slack-edge.com
+DOMAIN-SUFFIX,symauth.com
+DOMAIN-SUFFIX,symcb.com
+DOMAIN-SUFFIX,symcd.com
+DOMAIN-SUFFIX,thepiratebay.org
+DOMAIN-SUFFIX,trustasiassl.com
 
 # Amazon
-DOMAIN-SUFFIX,amazon.co.jp
 DOMAIN-SUFFIX,amazon.com
+DOMAIN-SUFFIX,amazon.co.jp
 DOMAIN-SUFFIX,amazonaws.com
 
 # BBC
-DOMAIN-SUFFIX,bbc.co.uk
 DOMAIN-SUFFIX,bbc.com
+DOMAIN-SUFFIX,bbc.co.uk
 DOMAIN-SUFFIX,bbci.co.uk
 DOMAIN-SUFFIX,bbcmedia.co.uk
 
 # Claude
+DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,claudeusercontent.com
-DOMAIN-SUFFIX,anthropic.com
 
 # Developer 开发者常用国外网站、镜像和论坛
-DOMAIN-SUFFIX,apache.org
 DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,docker.io
-DOMAIN-SUFFIX,elastic.co
-DOMAIN-SUFFIX,elastic.com
 DOMAIN-SUFFIX,gcr.io
-DOMAIN-SUFFIX,gitlab.com
-DOMAIN-SUFFIX,gitlab.io
+DOMAIN-SUFFIX,quay.io
 DOMAIN-SUFFIX,jitpack.io
 DOMAIN-SUFFIX,maven.org
 DOMAIN-SUFFIX,mvnrepository.com
-DOMAIN-SUFFIX,quay.io
-DOMAIN-SUFFIX,redhat.com
 DOMAIN-SUFFIX,sonatype.org
+DOMAIN-SUFFIX,gitlab.com
+DOMAIN-SUFFIX,gitlab.io
 DOMAIN-SUFFIX,sourcegraph.com
+DOMAIN-SUFFIX,apache.org
+DOMAIN-SUFFIX,elastic.co
+DOMAIN-SUFFIX,elastic.com
+DOMAIN-SUFFIX,redhat.com
 DOMAIN-SUFFIX,spring.io
 DOMAIN-SUFFIX,spring.net
 DOMAIN-SUFFIX,stackoverflow.com
@@ -188,16 +188,16 @@ DOMAIN-SUFFIX,dockerhub.com
 # Discord
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discord.gg
-DOMAIN-SUFFIX,discord.media
 DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,discordapp.net
+DOMAIN-SUFFIX,discord.media
 
 # Facebook
 DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbcdn.com
 DOMAIN-SUFFIX,fb.com
 DOMAIN-SUFFIX,fb.me
-DOMAIN-SUFFIX,fbcdn.com
-DOMAIN-SUFFIX,fbcdn.net
 
 # Github
 DOMAIN-SUFFIX,github.com
@@ -207,8 +207,8 @@ DOMAIN-SUFFIX,githubapp.com
 DOMAIN-SUFFIX,github.io
 
 # Instagram
-DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,instagr.am
 
 # Iwara
@@ -220,27 +220,27 @@ DOMAIN-SUFFIX,kakao.co.kr
 DOMAIN-SUFFIX,kakaocdn.net
 
 # Line
+DOMAIN-SUFFIX,line.me
 DOMAIN-SUFFIX,lin.ee
 DOMAIN-SUFFIX,line-apps.com
 DOMAIN-SUFFIX,line-cdn.net
 DOMAIN-SUFFIX,line-scdn.net
-DOMAIN-SUFFIX,line.me
 DOMAIN-SUFFIX,line.naver.jp
 DOMAIN-SUFFIX,nhncorp.jp
 
 # OpenAI
-DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,sora.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
 
 # OneDrive
 DOMAIN-SUFFIX,storage.live.com
-DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,1drv.ms
 DOMAIN,onedrive.live.com
 DOMAIN,photos.live.com
@@ -253,30 +253,32 @@ DOMAIN-SUFFIX,pximg.net
 DOMAIN-SUFFIX,fanbox.cc
 
 # Spark
-DOMAIN-SUFFIX,amplitude.com
-DOMAIN-SUFFIX,hockeyapp.net
 DOMAIN-SUFFIX,readdle.com
 DOMAIN-SUFFIX,smartmailcloud.com
+DOMAIN-SUFFIX,amplitude.com
+DOMAIN-SUFFIX,hockeyapp.net
 
 # Steam
 DOMAIN-SUFFIX,steampowered.com
 DOMAIN-SUFFIX,steamcommunity.com
 DOMAIN-SUFFIX,steamstatic.com
 DOMAIN-SUFFIX,steam-chat.com
-DOMAIN-SUFFIX,fanatical.com
-DOMAIN-SUFFIX,humblebundle.com
-DOMAIN-SUFFIX,underlords.com
-DOMAIN-SUFFIX,valvesoftware.com
-DOMAIN-SUFFIX,playartifact.com
-DOMAIN-SUFFIX,steamgames.com
-DOMAIN-SUFFIX,steamserver.net
-DOMAIN-SUFFIX,steamstat.us
+DOMAIN,steampipe.akamaized.net
 DOMAIN,steambroadcast.akamaized.net
-DOMAIN,steamcommunity-a.akamaihd.net
 DOMAIN,steamstore-a.akamaihd.net
 DOMAIN,steamusercontent-a.akamaihd.net
 DOMAIN,steamuserimages-a.akamaihd.net
-DOMAIN,steampipe.akamaized.net
+DOMAIN,steamcommunity-a.akamaihd.net
+DOMAIN-SUFFIX,steamgames.com
+DOMAIN-SUFFIX,steamserver.net
+DOMAIN-SUFFIX,steamstat.us
+DOMAIN-SUFFIX,valvesoftware.com
+DOMAIN-SUFFIX,underlords.com
+DOMAIN-SUFFIX,playartifact.com
+
+# Store
+DOMAIN-SUFFIX,fanatical.com
+DOMAIN-SUFFIX,humblebundle.com
 
 # TapTap
 DOMAIN-SUFFIX,tap.io
@@ -295,18 +297,18 @@ DOMAIN-SUFFIX,whatsapp.com
 DOMAIN-SUFFIX,whatsapp.net
 
 # Wikipedia 维基相关域名
+DOMAIN-SUFFIX,wikipedia.org
+DOMAIN-SUFFIX,wikimedia.org
+DOMAIN-SUFFIX,wikidata.org
 DOMAIN-SUFFIX,mediawiki.org
 DOMAIN-SUFFIX,wikibooks.org
-DOMAIN-SUFFIX,wikidata.org
-DOMAIN-SUFFIX,wikileaks.org
-DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,wikinews.org
-DOMAIN-SUFFIX,wikipedia.org
 DOMAIN-SUFFIX,wikiquote.org
 DOMAIN-SUFFIX,wikisource.org
 DOMAIN-SUFFIX,wikiversity.org
 DOMAIN-SUFFIX,wikivoyage.org
 DOMAIN-SUFFIX,wiktionary.org
+DOMAIN-SUFFIX,wikileaks.org
 
 # Zoom
 DOMAIN-SUFFIX,zoom.us
