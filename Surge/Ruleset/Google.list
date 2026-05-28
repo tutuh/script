@@ -2,16 +2,16 @@
 DOMAIN,youtubei.googleapis.com
 DOMAIN,yt3.ggpht.com
 DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,ytimg.l.google.com
 DOMAIN-SUFFIX,withyoutube.com
 DOMAIN-SUFFIX,youtubeeducation.com
 DOMAIN-SUFFIX,youtubekids.com
 DOMAIN-SUFFIX,youtube-nocookie.com
 DOMAIN-SUFFIX,youtube-ui.l.google.com
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,yt.be
-DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,ytimg.l.google.com
 
 # Gmail
 DOMAIN-SUFFIX,gmail.com
@@ -21,23 +21,22 @@ DOMAIN-SUFFIX,googlemail.com
 DOMAIN-SUFFIX,google.com
 DOMAIN-SUFFIX,googlevoice.com
 DOMAIN-SUFFIX,telephony.goog
-DOMAIN-SUFFIX,1e100.net
-DOMAIN-SUFFIX,2mdn.net
-DOMAIN-SUFFIX,app-measurement.net
-DOMAIN-SUFFIX,c.gle
-DOMAIN-SUFFIX,firebaseio.com
-DOMAIN-SUFFIX,g.co
-DOMAIN-SUFFIX,ggpht.com
-DOMAIN-SUFFIX,goo.gl
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,googleapis.cn
+DOMAIN-SUFFIX,firebaseio.com
 DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,gstatic.cn
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt2.com
 DOMAIN-SUFFIX,gvt3.com
+DOMAIN-SUFFIX,1e100.net
+DOMAIN-SUFFIX,g.co
+DOMAIN-SUFFIX,c.gle
+DOMAIN-SUFFIX,goo.gl
+DOMAIN-SUFFIX,2mdn.net
+DOMAIN-SUFFIX,app-measurement.net
 
 DOMAIN-KEYWORD,google
-
