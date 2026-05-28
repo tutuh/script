@@ -1,27 +1,32 @@
 # Apple_Proxy
 
-# ---(Apple)---
+# > Apple Core & Services
 DOMAIN-SUFFIX,appsto.re // Apple URL Shortener
 DOMAIN-SUFFIX,smoot.apple.com // Spotlight
-DOMAIN,amp-api.podcasts.apple.com // Podcasts
-DOMAIN,beta.music.apple.com // Apple Music Web
-DOMAIN,books.itunes.apple.com // iBooks Store download
 DOMAIN,facetime.apple.com // FaceTime Links
 DOMAIN,lookup-api.apple.com // Look Up
-DOMAIN,radio.itunes.apple.com // Apple Music Radio
-DOMAIN,apple-relay.apple.com // Apple Intelligence
+
+# > Apple Music & Podcasts
+DOMAIN,amp-api.podcasts.apple.com
+DOMAIN,beta.music.apple.com
+DOMAIN,radio.itunes.apple.com
+
+# > Apple Intelligence & Private Relay
+DOMAIN,apple-relay.apple.com 
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,cp4.cloudflare.com
+DOMAIN-SUFFIX,mask.icloud.com // Private Relay 核心
+DOMAIN,mask-api.icloud.com // Private Relay API
 
-# > Web Preview
-DOMAIN,apps.apple.com
-DOMAIN,books.apple.com
-DOMAIN,itunes.apple.com
-DOMAIN,tv.apple.com
+# > Web Preview & Stores
+DOMAIN-SUFFIX,apps.apple.com
+DOMAIN-SUFFIX,books.apple.com
+DOMAIN-SUFFIX,itunes.apple.com
+DOMAIN-SUFFIX,tv.apple.com 
 
 # > News
-DOMAIN,gateway.icloud.com
+# DOMAIN,gateway.icloud.com // 代理此域名极易触发 Apple ID 风控，若非重度 News 依赖建议直连
 DOMAIN-SUFFIX,apple.news
 DOMAIN,news-assets.apple.com
 DOMAIN,news-client.apple.com
@@ -30,5 +35,6 @@ DOMAIN,news-edge.apple.com
 DOMAIN,news-events.apple.com
 DOMAIN,apple.comscoreresearch.com
 
-# > TestFlight
+# > Developer & TestFlight
 DOMAIN,testflight.apple.com
+DOMAIN-SUFFIX,developer.apple.com
