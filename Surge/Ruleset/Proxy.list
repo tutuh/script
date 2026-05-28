@@ -178,13 +178,6 @@ DOMAIN-SUFFIX,spring.net
 DOMAIN-SUFFIX,stackoverflow.com
 DOMAIN-SUFFIX,reddit.com
 
-# Docker
-DOMAIN,d1q6f0aelx0por.cloudfront.net
-DOMAIN,d2wy8f7a9ursnm.cloudfront.net
-DOMAIN,d36jcksde1wxzq.cloudfront.net
-DOMAIN-SUFFIX,compose-spec.io
-DOMAIN-SUFFIX,dockerhub.com
-
 # Discord
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discord.gg
@@ -194,17 +187,16 @@ DOMAIN-SUFFIX,discord.media
 
 # Facebook
 DOMAIN-SUFFIX,facebook.com
-DOMAIN-SUFFIX,fbcdn.net
-DOMAIN-SUFFIX,fbcdn.com
 DOMAIN-SUFFIX,fb.com
 DOMAIN-SUFFIX,fb.me
+DOMAIN-SUFFIX,fbcdn.net
 
-# Github
+# GitHub
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,githubassets.com
-DOMAIN-SUFFIX,githubapp.com
 DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,github.dev
 
 # Instagram
 DOMAIN-SUFFIX,instagram.com
