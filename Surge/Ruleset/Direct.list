@@ -53,13 +53,10 @@ DOMAIN-SUFFIX,aliapp.org
 DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,dingtalk.com
 DOMAIN-SUFFIX,qwen.ai
-# > 高德
 DOMAIN-SUFFIX,amap.com
 DOMAIN-SUFFIX,autonavi.com
-# > 饿了么
 DOMAIN-SUFFIX,ele.me
 DOMAIN-SUFFIX,elemecdn.com
-# > Youku & UC
 DOMAIN-SUFFIX,youku.com
 DOMAIN-SUFFIX,ykimg.com
 DOMAIN-SUFFIX,ucweb.com
@@ -90,7 +87,6 @@ DOMAIN-SUFFIX,bilivideo.cn
 DOMAIN-SUFFIX,hdslb.com
 
 # ByteDance
-# > 抖音
 DOMAIN-SUFFIX,amemv.com
 DOMAIN-SUFFIX,douyin.com
 DOMAIN-SUFFIX,douyincdn.com
@@ -98,7 +94,6 @@ DOMAIN-SUFFIX,douyinpic.com
 DOMAIN-SUFFIX,douyinstatic.com
 DOMAIN-SUFFIX,douyinvod.com
 DOMAIN-SUFFIX,iesdouyin.com
-# > 今日头条
 DOMAIN-SUFFIX,toutiao.com
 DOMAIN-SUFFIX,toutiaoapi.com
 DOMAIN-SUFFIX,toutiaocdn.com
@@ -107,13 +102,11 @@ DOMAIN-SUFFIX,toutiaocloud.com
 DOMAIN-SUFFIX,toutiaohao.com
 DOMAIN-SUFFIX,toutiaoimg.com
 DOMAIN-SUFFIX,toutiaopage.com
-# > 西瓜视频与火山直播
 DOMAIN-SUFFIX,ixigua.com
 DOMAIN-SUFFIX,bdxiguaimg.com
 DOMAIN-SUFFIX,bdxiguastatic.com
 DOMAIN-SUFFIX,huoshan.com
 DOMAIN-SUFFIX,huoshanzhibo.com
-# > 字节
 DOMAIN-SUFFIX,bytedance.com
 DOMAIN-SUFFIX,bytedance.net
 DOMAIN-SUFFIX,snssdk.com
