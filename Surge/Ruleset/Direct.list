@@ -6,7 +6,22 @@ DOMAIN-SUFFIX,frdic.com //欧路
 DOMAIN-SUFFIX,eshimin.com //市民云
 DOMAIN-SUFFIX,eshiyun.info
 DOMAIN-SUFFIX,sptcc.com //上海交通卡
-DOMAIN-SUFFIX,10010.com //中国联通
+
+# 10010
+DOMAIN-SUFFIX,10010.com
+DOMAIN-SUFFIX,wostore.cn
+DOMAIN-SUFFIX,wo.cn
+DOMAIN-SUFFIX,unicompayment.com
+
+# 10000
+DOMAIN-SUFFIX,189.cn
+DOMAIN-SUFFIX,21cn.com
+DOMAIN-SUFFIX,id6.me
+
+# 10086
+DOMAIN-SUFFIX,cmpassport.com
+
+DOMAIN-SUFFIX,mob.com
 
 # 360
 DOMAIN-SUFFIX,360.com
@@ -125,18 +140,6 @@ DOMAIN-SUFFIX,zjcdn.com
 DOMAIN-SUFFIX,cctv.com
 DOMAIN-SUFFIX,cctvpic.com
 DOMAIN-SUFFIX,livechina.com
-
-# ChinaOneKeyLogin 一键登录
-DOMAIN-SUFFIX,wostore.cn
-DOMAIN-SUFFIX,cmpassport.com
-DOMAIN-SUFFIX,id6.me
-DOMAIN-SUFFIX,mob.com
-DOMAIN-SUFFIX,189.cn
-DOMAIN-SUFFIX,wo.cn
-DOMAIN-SUFFIX,wosms.cn
-
-# ChinaNet
-DOMAIN-SUFFIX,21cn.com
 
 # DiDi
 DOMAIN-SUFFIX,didialift.com
