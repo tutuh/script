@@ -217,6 +217,7 @@ DOMAIN-SUFFIX,miui.com
 DOMAIN-SUFFIX,xiaomi.com
 DOMAIN-SUFFIX,xiaomi.net
 DOMAIN-SUFFIX,xiaomicp.com
+DOMAIN-SUFFIX,mijia.tech
 
 # NetEase
 DOMAIN-SUFFIX,126.com
@@ -227,13 +228,6 @@ DOMAIN-SUFFIX,lofter.com
 DOMAIN-SUFFIX,netease.com
 DOMAIN-SUFFIX,ydstatic.com
 DOMAIN-SUFFIX,youdao.com
-
-# OPPO
-DOMAIN-SUFFIX,coloros.com
-DOMAIN-SUFFIX,heytap.com
-DOMAIN-SUFFIX,heytapmobi.com
-DOMAIN-SUFFIX,oppo.com
-DOMAIN-SUFFIX,oppomobile.com
 
 # PDD
 DOMAIN-SUFFIX,pinduoduo.com
