@@ -119,8 +119,6 @@ DOMAIN-SUFFIX,byteimg.com
 DOMAIN-SUFFIX,zijieimg.com
 DOMAIN-SUFFIX,byted-static.com
 DOMAIN-SUFFIX,bytedns.net
-DOMAIN-SUFFIX,bytednsdoc.com
-DOMAIN-SUFFIX,bytegoofy.com
 DOMAIN-SUFFIX,bytescm.com
 DOMAIN-SUFFIX,bytetos.com
 DOMAIN-SUFFIX,zjcdn.com
@@ -157,12 +155,8 @@ DOMAIN-SUFFIX,douyutv.com
 # HuaWei
 DOMAIN-SUFFIX,dbankcdn.com
 DOMAIN-SUFFIX,hicloud.com
-DOMAIN-SUFFIX,hihonor.com
 DOMAIN-SUFFIX,huawei.com
 DOMAIN-SUFFIX,huaweicloud.com
-
-
-
 
 # iflytek 科大讯飞
 DOMAIN-SUFFIX,iflyink.com
@@ -272,6 +266,7 @@ DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,foxmail.com
 DOMAIN-SUFFIX,qqmail.com
 DOMAIN-SUFFIX,tenpay.com
+DOMAIN-SUFFIX,tenpay.cn
 DOMAIN-SUFFIX,servicewechat.com
 DOMAIN-SUFFIX,myapp.com
 DOMAIN-SUFFIX,qcloud.com
@@ -279,11 +274,13 @@ DOMAIN-SUFFIX,myqcloud.com
 DOMAIN-SUFFIX,qcloudcdn.com
 DOMAIN-SUFFIX,tencent-cloud.net
 DOMAIN-SUFFIX,gtimg.com
+DOMAIN-SUFFIX,gtimg.cn
 DOMAIN-SUFFIX,idqqimg.com
 DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,soso.com
 DOMAIN-SUFFIX,qqurl.com
+DOMAIN-SUFFIX,url.cn
 DOMAIN-SUFFIX,weiyun.com
 
 # Ximalaya
@@ -336,7 +333,6 @@ DOMAIN-SUFFIX,yeepay.com //易宝支付
 DOMAIN-SUFFIX,12306.cn
 DOMAIN-SUFFIX,ctrip.com
 DOMAIN-SUFFIX,c-ctrip.com
-DOMAIN-SUFFIX,trip.com
 DOMAIN-SUFFIX,qunar.com
 DOMAIN-SUFFIX,tuniu.com
 DOMAIN-SUFFIX,tuniucdn.com
