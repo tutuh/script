@@ -12,7 +12,7 @@ DOMAIN,beta.music.apple.com
 DOMAIN,radio.itunes.apple.com
 
 # > Apple Intelligence & Private Relay
-DOMAIN,apple-relay.apple.com 
+DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,cp4.cloudflare.com
@@ -23,7 +23,7 @@ DOMAIN,mask-api.icloud.com // Private Relay API
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,books.apple.com
 DOMAIN-SUFFIX,itunes.apple.com
-DOMAIN-SUFFIX,tv.apple.com 
+DOMAIN-SUFFIX,tv.apple.com
 
 # > News
 DOMAIN,gateway.icloud.com // 代理此域名极易触发 Apple ID 风控
