@@ -265,23 +265,25 @@ DOMAIN-SUFFIX,sohuno.com
 DOMAIN-SUFFIX,sohurdc.com
 
 # Tencent
-DOMAIN-SUFFIX,foxmail.com
-DOMAIN-SUFFIX,gtimg.com
-DOMAIN-SUFFIX,idqqimg.com
-DOMAIN-SUFFIX,myapp.com
-DOMAIN-SUFFIX,myqcloud.com
-DOMAIN-SUFFIX,qlogo.cn
-DOMAIN-SUFFIX,qpic.cn
-DOMAIN-SUFFIX,qq.com
-DOMAIN-SUFFIX,qqmail.com
-DOMAIN-SUFFIX,qqurl.com
-DOMAIN-SUFFIX,servicewechat.com
-DOMAIN-SUFFIX,soso.com
-DOMAIN-SUFFIX,tencent-cloud.net
 DOMAIN-SUFFIX,tencent.com
-DOMAIN-SUFFIX,tenpay.com
+DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,weixin.com
+DOMAIN-SUFFIX,foxmail.com
+DOMAIN-SUFFIX,qqmail.com
+DOMAIN-SUFFIX,tenpay.com
+DOMAIN-SUFFIX,servicewechat.com
+DOMAIN-SUFFIX,myapp.com
+DOMAIN-SUFFIX,qcloud.com
+DOMAIN-SUFFIX,myqcloud.com
+DOMAIN-SUFFIX,qcloudcdn.com
+DOMAIN-SUFFIX,tencent-cloud.net
+DOMAIN-SUFFIX,gtimg.com
+DOMAIN-SUFFIX,idqqimg.com
+DOMAIN-SUFFIX,qlogo.cn
+DOMAIN-SUFFIX,qpic.cn
+DOMAIN-SUFFIX,soso.com
+DOMAIN-SUFFIX,qqurl.com
 DOMAIN-SUFFIX,weiyun.com
 
 # Ximalaya
@@ -329,6 +331,7 @@ DOMAIN-SUFFIX,cmbchina.com //招商银行
 DOMAIN-SUFFIX,abchina.com //农业银行
 DOMAIN-SUFFIX,ecitic.com //中信银行
 DOMAIN-SUFFIX,yeepay.com //易宝支付
+
 # 出行
 DOMAIN-SUFFIX,12306.cn
 DOMAIN-SUFFIX,ctrip.com
@@ -337,6 +340,7 @@ DOMAIN-SUFFIX,trip.com
 DOMAIN-SUFFIX,qunar.com
 DOMAIN-SUFFIX,tuniu.com
 DOMAIN-SUFFIX,tuniucdn.com
+
 # 快递
 DOMAIN-SUFFIX,sf-express.com
 DOMAIN-SUFFIX,kuaidi100.com
@@ -354,7 +358,7 @@ DOMAIN-SUFFIX,51job.com
 DOMAIN-SUFFIX,51jobcdn.com
 DOMAIN-SUFFIX,zhaopin.com
 
-# 视频直播
+# 视频直播电台
 DOMAIN-SUFFIX,miguvideo.com //咪咕视频
 DOMAIN-SUFFIX,migucloud.com //咪咕云
 DOMAIN-SUFFIX,cibntv.net //CIBN互联网电视
@@ -376,18 +380,15 @@ DOMAIN-SUFFIX,chaoxing.com
 DOMAIN-SUFFIX,cnki.net
 DOMAIN-SUFFIX,baicizhan.com
 
-# 工具
-DOMAIN-SUFFIX,qcloud.com
-DOMAIN-SUFFIX,qcloudcdn.com
-DOMAIN-SUFFIX,umengcloud.com
-DOMAIN-SUFFIX,mubu.com
+# 网络服务类
 DOMAIN-SUFFIX,115.com
 DOMAIN-SUFFIX,jianguoyun.com
+DOMAIN-SUFFIX,mubu.com
 DOMAIN-SUFFIX,yinxiang.com
-DOMAIN-SUFFIX,synology.com
 DOMAIN-SUFFIX,qiniu.com
 DOMAIN-SUFFIX,wscdns.com
-DOMAIN-SUFFIX,xiumi.us //秀米排版
+DOMAIN-SUFFIX,umengcloud.com
+DOMAIN-SUFFIX,xiumi.us
 
 # 天气服务
 DOMAIN-SUFFIX,moji.com
