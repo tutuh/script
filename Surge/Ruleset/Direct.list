@@ -53,10 +53,13 @@ DOMAIN-SUFFIX,aliapp.org
 DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,dingtalk.com
 DOMAIN-SUFFIX,qwen.ai
+# > 高德
 DOMAIN-SUFFIX,amap.com
 DOMAIN-SUFFIX,autonavi.com
+# > 饿了么
 DOMAIN-SUFFIX,ele.me
 DOMAIN-SUFFIX,elemecdn.com
+# > Youku & UC
 DOMAIN-SUFFIX,youku.com
 DOMAIN-SUFFIX,ykimg.com
 DOMAIN-SUFFIX,ucweb.com
@@ -87,33 +90,15 @@ DOMAIN-SUFFIX,bilivideo.cn
 DOMAIN-SUFFIX,hdslb.com
 
 # ByteDance
+# > 抖音
 DOMAIN-SUFFIX,amemv.com
-DOMAIN-SUFFIX,bdxiguaimg.com
-DOMAIN-SUFFIX,bdxiguastatic.com
-DOMAIN-SUFFIX,byted-static.com
-DOMAIN-SUFFIX,bytedance.com
-DOMAIN-SUFFIX,bytedance.net
-DOMAIN-SUFFIX,bytedns.net
-DOMAIN-SUFFIX,bytednsdoc.com
-DOMAIN-SUFFIX,bytegoofy.com
-DOMAIN-SUFFIX,byteimg.com
-DOMAIN-SUFFIX,bytescm.com
-DOMAIN-SUFFIX,bytetos.com
-DOMAIN-SUFFIX,bytexservice.com
 DOMAIN-SUFFIX,douyin.com
 DOMAIN-SUFFIX,douyincdn.com
 DOMAIN-SUFFIX,douyinpic.com
 DOMAIN-SUFFIX,douyinstatic.com
 DOMAIN-SUFFIX,douyinvod.com
-DOMAIN-SUFFIX,feishu.cn
-DOMAIN-SUFFIX,feishu.net
-DOMAIN-SUFFIX,huoshan.com
-DOMAIN-SUFFIX,huoshanzhibo.com
-DOMAIN-SUFFIX,ibytedapm.com
 DOMAIN-SUFFIX,iesdouyin.com
-DOMAIN-SUFFIX,ixigua.com
-DOMAIN-SUFFIX,pstatp.com
-DOMAIN-SUFFIX,snssdk.com
+# > 今日头条
 DOMAIN-SUFFIX,toutiao.com
 DOMAIN-SUFFIX,toutiaoapi.com
 DOMAIN-SUFFIX,toutiaocdn.com
@@ -122,9 +107,29 @@ DOMAIN-SUFFIX,toutiaocloud.com
 DOMAIN-SUFFIX,toutiaohao.com
 DOMAIN-SUFFIX,toutiaoimg.com
 DOMAIN-SUFFIX,toutiaopage.com
+# > 西瓜视频与火山直播
+DOMAIN-SUFFIX,ixigua.com
+DOMAIN-SUFFIX,bdxiguaimg.com
+DOMAIN-SUFFIX,bdxiguastatic.com
+DOMAIN-SUFFIX,huoshan.com
+DOMAIN-SUFFIX,huoshanzhibo.com
+# > 字节
+DOMAIN-SUFFIX,bytedance.com
+DOMAIN-SUFFIX,bytedance.net
+DOMAIN-SUFFIX,snssdk.com
 DOMAIN-SUFFIX,zijieapi.com
-DOMAIN-SUFFIX,zijieimg.com
 DOMAIN-SUFFIX,zjbyte.com
+DOMAIN-SUFFIX,bytexservice.com
+DOMAIN-SUFFIX,ibytedapm.com
+DOMAIN-SUFFIX,pstatp.com
+DOMAIN-SUFFIX,byteimg.com
+DOMAIN-SUFFIX,zijieimg.com
+DOMAIN-SUFFIX,byted-static.com
+DOMAIN-SUFFIX,bytedns.net
+DOMAIN-SUFFIX,bytednsdoc.com
+DOMAIN-SUFFIX,bytegoofy.com
+DOMAIN-SUFFIX,bytescm.com
+DOMAIN-SUFFIX,bytetos.com
 DOMAIN-SUFFIX,zjcdn.com
 
 # CCTV
@@ -265,7 +270,7 @@ DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,qqmail.com
 DOMAIN-SUFFIX,qqurl.com
-DOMAIN-SUFFIX,servicewechat.com //微信小程序
+DOMAIN-SUFFIX,servicewechat.com
 DOMAIN-SUFFIX,soso.com
 DOMAIN-SUFFIX,tencent-cloud.net
 DOMAIN-SUFFIX,tencent.com
