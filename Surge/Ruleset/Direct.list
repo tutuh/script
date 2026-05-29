@@ -5,6 +5,7 @@ DOMAIN-SUFFIX,eudic.net //欧路词典
 DOMAIN-SUFFIX,eshimin.com //市民云
 DOMAIN-SUFFIX,eshiyun.info
 DOMAIN-SUFFIX,sptcc.com //交通卡
+DOMAIN-SUFFIX,sh.gov.cn //上海政务/随申办
 DOMAIN-SUFFIX,10010.com //中国联通
 
 # CN域名
@@ -32,6 +33,7 @@ DOMAIN-SUFFIX,alibabausercontent.com
 DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,alicloudccp.com
 DOMAIN-SUFFIX,aliimg.com
+DOMAIN-SUFFIX,alipan.com //阿里云盘新域名
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,aliyun.com
@@ -77,6 +79,7 @@ DOMAIN-SUFFIX,b23.tv
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,bilibili.cn
 DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,biligame.net
 DOMAIN-SUFFIX,bilivideo.com
@@ -102,6 +105,8 @@ DOMAIN-SUFFIX,douyincdn.com
 DOMAIN-SUFFIX,douyinpic.com
 DOMAIN-SUFFIX,douyinstatic.com
 DOMAIN-SUFFIX,douyinvod.com
+DOMAIN-SUFFIX,feishu.cn
+DOMAIN-SUFFIX,feishu.net
 DOMAIN-SUFFIX,huoshan.com
 DOMAIN-SUFFIX,huoshanzhibo.com
 DOMAIN-SUFFIX,ibytedapm.com
@@ -128,11 +133,11 @@ DOMAIN-SUFFIX,cctvpic.com
 DOMAIN-SUFFIX,livechina.com
 
 # ChinaOneKeyLogin 一键登录
-DOMAIN,opencloud.wostore.cn
+DOMAIN-SUFFIX,wostore.cn
 DOMAIN-SUFFIX,cmpassport.com
 DOMAIN-SUFFIX,id6.me
 DOMAIN-SUFFIX,mob.com
-DOMAIN-SUFFIX,open.e.189.cn
+DOMAIN-SUFFIX,189.cn
 DOMAIN-SUFFIX,wo.cn
 DOMAIN-SUFFIX,wosms.cn
 
@@ -255,9 +260,12 @@ DOMAIN-SUFFIX,gtimg.com
 DOMAIN-SUFFIX,idqqimg.com
 DOMAIN-SUFFIX,myapp.com
 DOMAIN-SUFFIX,myqcloud.com
+DOMAIN-SUFFIX,qlogo.cn
+DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,qqmail.com
 DOMAIN-SUFFIX,qqurl.com
+DOMAIN-SUFFIX,servicewechat.com //微信小程序
 DOMAIN-SUFFIX,soso.com
 DOMAIN-SUFFIX,tencent-cloud.net
 DOMAIN-SUFFIX,tencent.com
@@ -312,7 +320,7 @@ DOMAIN-SUFFIX,womai.com //中粮我买
 DOMAIN-SUFFIX,xiachufang.com
 
 # 出行
-DOMAIN-SUFFIX,12306.cn
+DOMAIN-SUFFIX,12306.cn //中国铁路官方
 DOMAIN-SUFFIX,ctrip.com
 DOMAIN-SUFFIX,c-ctrip.com
 DOMAIN-SUFFIX,trip.com
@@ -372,7 +380,7 @@ DOMAIN-SUFFIX,qdmm.com
 DOMAIN-SUFFIX,yuewen.com
 DOMAIN-SUFFIX,hongxiu.com
 
-#教育
+# 教育
 DOMAIN-SUFFIX,chaoxing.com
 DOMAIN-SUFFIX,cnki.net
 DOMAIN-SUFFIX,baicizhan.com
@@ -385,7 +393,6 @@ DOMAIN-SUFFIX,mubu.com //字节幕布
 DOMAIN-SUFFIX,115.com
 DOMAIN-SUFFIX,jianguoyun.com
 DOMAIN-SUFFIX,yinxiang.com
-DOMAIN-SUFFIX,lanzou.com
 DOMAIN-SUFFIX,synology.com
 DOMAIN-SUFFIX,qiniu.com
 DOMAIN-SUFFIX,wscdns.com
