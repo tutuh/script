@@ -4,6 +4,149 @@
 DOMAIN-SUFFIX,filters.adtidy.org
 DOMAIN,testflight.apple.com
 
+# Amazon
+DOMAIN-SUFFIX,amazon.com
+DOMAIN-SUFFIX,amazon.co.jp
+DOMAIN-SUFFIX,amazonaws.com
+
+# BBC
+DOMAIN-SUFFIX,bbc.com
+DOMAIN-SUFFIX,bbc.co.uk
+DOMAIN-SUFFIX,bbci.co.uk
+DOMAIN-SUFFIX,bbcmedia.co.uk
+
+# Claude
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claudeusercontent.com
+
+# Developer
+DOMAIN-SUFFIX,stackoverflow.com
+DOMAIN-SUFFIX,stackexchange.com
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redd.it
+DOMAIN-SUFFIX,apache.org
+DOMAIN-SUFFIX,elastic.co
+DOMAIN-SUFFIX,elastic.com
+DOMAIN-SUFFIX,redhat.com
+DOMAIN-SUFFIX,spring.io
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,dockerhub.com
+DOMAIN-SUFFIX,dockerusercontent.com
+DOMAIN-SUFFIX,gcr.io
+DOMAIN-SUFFIX,pkg.dev
+DOMAIN-SUFFIX,quay.io
+DOMAIN-SUFFIX,ghcr.io
+
+# Discord
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
+DOMAIN-SUFFIX,discord.media
+
+# Facebook
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fb.me
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,threads.net
+
+# GitHub
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,github.dev
+
+# Gitlab
+DOMAIN-SUFFIX,gitlab.com
+DOMAIN-SUFFIX,gitlab.io
+DOMAIN-SUFFIX,sourcegraph.com
+
+# Instagram
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,instagr.am
+
+# Iwara
+DOMAIN-SUFFIX,iwara.tv
+
+# Kakao
+DOMAIN-SUFFIX,kakao.com
+DOMAIN-SUFFIX,kakao.co.kr
+DOMAIN-SUFFIX,kakaocdn.net
+
+# LINE
+DOMAIN-SUFFIX,line.me
+DOMAIN-SUFFIX,lin.ee
+DOMAIN-SUFFIX,line-apps.com
+DOMAIN-SUFFIX,line-cdn.net
+DOMAIN-SUFFIX,line-scdn.net
+DOMAIN-SUFFIX,line.naver.jp
+DOMAIN-SUFFIX,linecorp.com
+
+# OneDrive
+DOMAIN-SUFFIX,storage.live.com
+DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,onedrive.com
+DOMAIN-SUFFIX,1drv.ms
+DOMAIN,onedrive.live.com
+DOMAIN,photos.live.com
+DOMAIN-SUFFIX,oneclient.sfx.ms
+DOMAIN-SUFFIX,microsoftpersonalcontent.com
+
+# OpenAI
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,livekit.cloud
+DOMAIN,api.statsig.com
+DOMAIN,api-iam.intercom.io
+DOMAIN,o33249.ingest.sentry.io
+
+# Pixiv
+DOMAIN-SUFFIX,pixiv.net
+DOMAIN-SUFFIX,pximg.net
+DOMAIN-SUFFIX,fanbox.cc
+
+# Porn
+DOMAIN-SUFFIX,xvideos.com
+DOMAIN-SUFFIX,xnxx.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-KEYWORD,missav
+DOMAIN-KEYWORD,netflav
+DOMAIN-KEYWORD,javmost
+
+# Spark
+DOMAIN-SUFFIX,readdle.com
+DOMAIN-SUFFIX,smartmailcloud.com
+
+# Steam
+DOMAIN-SUFFIX,steampowered.com
+DOMAIN-SUFFIX,steamcommunity.com
+DOMAIN-SUFFIX,steamstatic.com
+DOMAIN-SUFFIX,steam-chat.com
+DOMAIN-SUFFIX,steamgames.com
+DOMAIN-SUFFIX,steamserver.net
+DOMAIN-SUFFIX,steamstat.us
+DOMAIN-SUFFIX,valvesoftware.com
+
+# Store
+DOMAIN-SUFFIX,fanatical.com
+DOMAIN-SUFFIX,humblebundle.com
+
+# TapTap
+DOMAIN-SUFFIX,taptap.io
+DOMAIN-SUFFIX,taptap.tw
+DOMAIN-SUFFIX,tap.io
+
 # Telegram
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,telegram.org
@@ -36,6 +179,14 @@ IP-CIDR6,2001:b28:f23d::/48,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
 IP-CIDR6,2a0a:f280::/32,no-resolve
 
+# TeraBox
+DOMAIN-SUFFIX,terabox.com
+DOMAIN-SUFFIX,teraboxcdn.com
+
+# Twitch
+DOMAIN-SUFFIX,twitch.tv
+DOMAIN-SUFFIX,ttvnw.net
+
 # Twitter / X
 DOMAIN-SUFFIX,x.com
 DOMAIN-SUFFIX,twitter.com
@@ -45,6 +196,33 @@ DOMAIN-SUFFIX,twitter.jp
 DOMAIN-SUFFIX,twitpic.com
 DOMAIN-SUFFIX,periscope.tv
 DOMAIN-SUFFIX,pscp.tv
+
+# VikACG
+DOMAIN-SUFFIX,vikacg.com
+DOMAIN-SUFFIX,picjs.xyz
+
+# WhatsApp
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
+
+# Wikipedia 维基相关域名
+DOMAIN-SUFFIX,wikipedia.org
+DOMAIN-SUFFIX,wikimedia.org
+DOMAIN-SUFFIX,wikidata.org
+DOMAIN-SUFFIX,mediawiki.org
+DOMAIN-SUFFIX,wikibooks.org
+DOMAIN-SUFFIX,wikinews.org
+DOMAIN-SUFFIX,wikiquote.org
+DOMAIN-SUFFIX,wikisource.org
+DOMAIN-SUFFIX,wikiversity.org
+DOMAIN-SUFFIX,wikivoyage.org
+DOMAIN-SUFFIX,wiktionary.org
+DOMAIN-SUFFIX,wikileaks.org
+
+# Zoom
+DOMAIN-SUFFIX,zoom.us
+DOMAIN-SUFFIX,zoomgov.com
+DOMAIN-SUFFIX,zoom.com
 
 # Top Blocked Sites
 DOMAIN-SUFFIX,android.com
@@ -136,180 +314,3 @@ DOMAIN-SUFFIX,bkrtx.com
 DOMAIN-SUFFIX,nsstatic.net
 DOMAIN-SUFFIX,prfct.co
 
-# Amazon
-DOMAIN-SUFFIX,amazon.com
-DOMAIN-SUFFIX,amazon.co.jp
-DOMAIN-SUFFIX,amazonaws.com
-
-# BBC
-DOMAIN-SUFFIX,bbc.com
-DOMAIN-SUFFIX,bbc.co.uk
-DOMAIN-SUFFIX,bbci.co.uk
-DOMAIN-SUFFIX,bbcmedia.co.uk
-
-# Claude
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,claude.com
-DOMAIN-SUFFIX,claudeusercontent.com
-
-# Discord
-DOMAIN-SUFFIX,discord.com
-DOMAIN-SUFFIX,discord.gg
-DOMAIN-SUFFIX,discordapp.com
-DOMAIN-SUFFIX,discordapp.net
-DOMAIN-SUFFIX,discord.media
-
-# Facebook
-DOMAIN-SUFFIX,facebook.com
-DOMAIN-SUFFIX,fb.com
-DOMAIN-SUFFIX,fb.me
-DOMAIN-SUFFIX,fbcdn.net
-DOMAIN-SUFFIX,threads.net
-
-# Instagram
-DOMAIN-SUFFIX,instagram.com
-DOMAIN-SUFFIX,cdninstagram.com
-DOMAIN-SUFFIX,instagr.am
-
-# GitHub
-DOMAIN-SUFFIX,github.com
-DOMAIN-SUFFIX,githubusercontent.com
-DOMAIN-SUFFIX,githubassets.com
-DOMAIN-SUFFIX,github.io
-DOMAIN-SUFFIX,github.dev
-
-# Gitlab
-DOMAIN-SUFFIX,gitlab.com
-DOMAIN-SUFFIX,gitlab.io
-DOMAIN-SUFFIX,sourcegraph.com
-
-# Iwara
-DOMAIN-SUFFIX,iwara.tv
-
-# Kakao
-DOMAIN-SUFFIX,kakao.com
-DOMAIN-SUFFIX,kakao.co.kr
-DOMAIN-SUFFIX,kakaocdn.net
-
-# LINE
-DOMAIN-SUFFIX,line.me
-DOMAIN-SUFFIX,lin.ee
-DOMAIN-SUFFIX,line-apps.com
-DOMAIN-SUFFIX,line-cdn.net
-DOMAIN-SUFFIX,line-scdn.net
-DOMAIN-SUFFIX,line.naver.jp
-DOMAIN-SUFFIX,linecorp.com
-
-# OpenAI
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,chat.com
-DOMAIN-SUFFIX,sora.com
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN,openaiapi-site.azureedge.net
-DOMAIN-SUFFIX,livekit.cloud
-DOMAIN,api.statsig.com
-DOMAIN,api-iam.intercom.io
-DOMAIN,o33249.ingest.sentry.io
-
-# OneDrive
-DOMAIN-SUFFIX,storage.live.com
-DOMAIN-SUFFIX,sharepoint.com
-DOMAIN-SUFFIX,onedrive.com
-DOMAIN-SUFFIX,1drv.ms
-DOMAIN,onedrive.live.com
-DOMAIN,photos.live.com
-DOMAIN-SUFFIX,oneclient.sfx.ms
-DOMAIN-SUFFIX,microsoftpersonalcontent.com
-
-# Pixiv
-DOMAIN-SUFFIX,pixiv.net
-DOMAIN-SUFFIX,pximg.net
-DOMAIN-SUFFIX,fanbox.cc
-
-# Spark
-DOMAIN-SUFFIX,readdle.com
-DOMAIN-SUFFIX,smartmailcloud.com
-
-# Steam
-DOMAIN-SUFFIX,steampowered.com
-DOMAIN-SUFFIX,steamcommunity.com
-DOMAIN-SUFFIX,steamstatic.com
-DOMAIN-SUFFIX,steam-chat.com
-DOMAIN-SUFFIX,steamgames.com
-DOMAIN-SUFFIX,steamserver.net
-DOMAIN-SUFFIX,steamstat.us
-DOMAIN-SUFFIX,valvesoftware.com
-
-# Store
-DOMAIN-SUFFIX,fanatical.com
-DOMAIN-SUFFIX,humblebundle.com
-
-# TapTap
-DOMAIN-SUFFIX,taptap.io
-DOMAIN-SUFFIX,taptap.tw
-DOMAIN-SUFFIX,tap.io
-
-# Twitch
-DOMAIN-SUFFIX,twitch.tv
-DOMAIN-SUFFIX,ttvnw.net
-
-# TeraBox
-DOMAIN-SUFFIX,terabox.com
-DOMAIN-SUFFIX,teraboxcdn.com
-
-# WhatsApp
-DOMAIN-SUFFIX,whatsapp.com
-DOMAIN-SUFFIX,whatsapp.net
-
-# Wikipedia 维基相关域名
-DOMAIN-SUFFIX,wikipedia.org
-DOMAIN-SUFFIX,wikimedia.org
-DOMAIN-SUFFIX,wikidata.org
-DOMAIN-SUFFIX,mediawiki.org
-DOMAIN-SUFFIX,wikibooks.org
-DOMAIN-SUFFIX,wikinews.org
-DOMAIN-SUFFIX,wikiquote.org
-DOMAIN-SUFFIX,wikisource.org
-DOMAIN-SUFFIX,wikiversity.org
-DOMAIN-SUFFIX,wikivoyage.org
-DOMAIN-SUFFIX,wiktionary.org
-DOMAIN-SUFFIX,wikileaks.org
-
-# Zoom
-DOMAIN-SUFFIX,zoom.us
-DOMAIN-SUFFIX,zoomgov.com
-DOMAIN-SUFFIX,zoom.com
-
-# VikACG
-DOMAIN-SUFFIX,vikacg.com
-DOMAIN-SUFFIX,picjs.xyz
-
-# Developer
-DOMAIN-SUFFIX,stackoverflow.com
-DOMAIN-SUFFIX,stackexchange.com
-DOMAIN-SUFFIX,reddit.com
-DOMAIN-SUFFIX,redd.it
-DOMAIN-SUFFIX,apache.org
-DOMAIN-SUFFIX,elastic.co
-DOMAIN-SUFFIX,elastic.com
-DOMAIN-SUFFIX,redhat.com
-DOMAIN-SUFFIX,spring.io
-DOMAIN-SUFFIX,docker.com
-DOMAIN-SUFFIX,docker.io
-DOMAIN-SUFFIX,dockerhub.com
-DOMAIN-SUFFIX,dockerusercontent.com
-DOMAIN-SUFFIX,gcr.io
-DOMAIN-SUFFIX,pkg.dev
-DOMAIN-SUFFIX,quay.io
-DOMAIN-SUFFIX,ghcr.io
-
-# Porn
-DOMAIN-SUFFIX,xvideos.com
-DOMAIN-SUFFIX,xnxx.com
-DOMAIN-SUFFIX,pornhub.com
-DOMAIN-KEYWORD,missav
-DOMAIN-KEYWORD,netflav
-DOMAIN-KEYWORD,javmost
