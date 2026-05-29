@@ -7,22 +7,6 @@ DOMAIN-SUFFIX,eshimin.com //市民云
 DOMAIN-SUFFIX,eshiyun.info
 DOMAIN-SUFFIX,sptcc.com //上海交通卡
 
-# 10010
-DOMAIN-SUFFIX,10010.com
-DOMAIN-SUFFIX,wostore.cn
-DOMAIN-SUFFIX,wo.cn
-DOMAIN-SUFFIX,unicompayment.com
-
-# 10000
-DOMAIN-SUFFIX,189.cn
-DOMAIN-SUFFIX,21cn.com
-DOMAIN-SUFFIX,id6.me
-
-# 10086
-DOMAIN-SUFFIX,cmpassport.com
-
-DOMAIN-SUFFIX,mob.com
-
 # 360
 DOMAIN-SUFFIX,360.com
 DOMAIN-SUFFIX,360kuai.com
@@ -140,6 +124,17 @@ DOMAIN-SUFFIX,zjcdn.com
 DOMAIN-SUFFIX,cctv.com
 DOMAIN-SUFFIX,cctvpic.com
 DOMAIN-SUFFIX,livechina.com
+
+# China OneKeyLogin
+DOMAIN-SUFFIX,10010.com
+DOMAIN-SUFFIX,wostore.cn
+DOMAIN-SUFFIX,wo.cn
+DOMAIN-SUFFIX,unicompayment.com
+DOMAIN-SUFFIX,189.cn
+DOMAIN-SUFFIX,21cn.com
+DOMAIN-SUFFIX,id6.me
+DOMAIN-SUFFIX,cmpassport.com
+DOMAIN-SUFFIX,mob.com
 
 # DiDi
 DOMAIN-SUFFIX,didialift.com
