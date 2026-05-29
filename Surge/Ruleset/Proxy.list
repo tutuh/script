@@ -182,7 +182,6 @@ DOMAIN-SUFFIX,github.dev
 # Gitlab
 DOMAIN-SUFFIX,gitlab.com
 DOMAIN-SUFFIX,gitlab.io
-
 DOMAIN-SUFFIX,sourcegraph.com
 
 # Iwara
