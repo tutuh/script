@@ -8,9 +8,6 @@ DOMAIN-SUFFIX,sptcc.com //上海交通卡
 DOMAIN-SUFFIX,sh.gov.cn
 DOMAIN-SUFFIX,10010.com //中国联通
 
-# CN 域名
-DOMAIN-SUFFIX,cn
-
 # 360
 DOMAIN-SUFFIX,360.com
 DOMAIN-SUFFIX,360kuai.com
@@ -386,3 +383,6 @@ DOMAIN-SUFFIX,tianqi.com
 DOMAIN-SUFFIX,tianqistatic.com
 DOMAIN-SUFFIX,air-matters.com
 DOMAIN-SUFFIX,air-matters.io
+
+# CN
+DOMAIN-SUFFIX,cn
