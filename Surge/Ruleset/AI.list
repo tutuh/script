@@ -17,7 +17,7 @@ DOMAIN,openaiapi-site.azureedge.net
 DOMAIN-SUFFIX,livekit.cloud
 DOMAIN,api.statsig.com
 DOMAIN,api-iam.intercom.io
-DOMAIN,o33249.ingest.sentry.io
+DOMAIN,o33249.ingest.us.sentry.io
 
 # OpenRouter
 DOMAIN-SUFFIX,openrouter.ai
