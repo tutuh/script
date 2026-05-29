@@ -161,12 +161,8 @@ DOMAIN-SUFFIX,hihonor.com
 DOMAIN-SUFFIX,huawei.com
 DOMAIN-SUFFIX,huaweicloud.com
 
-# OPPO
-DOMAIN-SUFFIX,coloros.com
-DOMAIN-SUFFIX,heytap.com
-DOMAIN-SUFFIX,heytapmobi.com
-DOMAIN-SUFFIX,oppo.com
-DOMAIN-SUFFIX,oppomobile.com
+
+
 
 # iflytek 科大讯飞
 DOMAIN-SUFFIX,iflyink.com
@@ -196,13 +192,22 @@ DOMAIN-SUFFIX,ksyun.com
 DOMAIN-SUFFIX,kuaishou.com
 DOMAIN-SUFFIX,yximgs.com
 
+# Maoyan 猫眼
+DOMAIN-SUFFIX,maoyan.com
+
+# Meituan 美团
+DOMAIN-SUFFIX,meituan.com
+DOMAIN-SUFFIX,meituan.net
+DOMAIN-SUFFIX,sankuai.com
+DOMAIN-SUFFIX,dianping.com
+
 # Meitu
 DOMAIN-SUFFIX,meitu.com
 DOMAIN-SUFFIX,meitudata.com
 DOMAIN-SUFFIX,meitustat.com
 DOMAIN-SUFFIX,meipai.com
 
-# 芒果TV
+# MgTV 芒果TV
 DOMAIN-SUFFIX,hitv.com
 DOMAIN-SUFFIX,hunantv.com
 DOMAIN-SUFFIX,mgtv.com
@@ -226,7 +231,14 @@ DOMAIN-SUFFIX,netease.com
 DOMAIN-SUFFIX,ydstatic.com
 DOMAIN-SUFFIX,youdao.com
 
-# 拼多多
+# OPPO
+DOMAIN-SUFFIX,coloros.com
+DOMAIN-SUFFIX,heytap.com
+DOMAIN-SUFFIX,heytapmobi.com
+DOMAIN-SUFFIX,oppo.com
+DOMAIN-SUFFIX,oppomobile.com
+
+# PDD 拼多多
 DOMAIN-SUFFIX,pinduoduo.com
 DOMAIN-SUFFIX,yangkeduo.com
 
@@ -276,7 +288,10 @@ DOMAIN-SUFFIX,weiyun.com
 DOMAIN-SUFFIX,ximalaya.com
 DOMAIN-SUFFIX,xmcdn.com
 
-# 社交平台
+# Xiachifang 下厨房
+DOMAIN-SUFFIX,xiachufang.com
+
+# 社交 & 新闻
 DOMAIN-SUFFIX,xiaohongshu.com
 DOMAIN-SUFFIX,xhscdn.com
 DOMAIN-SUFFIX,zhihu.com
@@ -294,19 +309,11 @@ DOMAIN-SUFFIX,jianshu.com
 DOMAIN-SUFFIX,jianshu.io
 DOMAIN-SUFFIX,jianshuapi.com
 DOMAIN-SUFFIX,letitfly.me
-
-# 新闻媒体
 DOMAIN-SUFFIX,ithome.com
 DOMAIN-SUFFIX,huxiucdn.com
 DOMAIN-SUFFIX,ifeng.com
 DOMAIN-SUFFIX,ifengimg.com
 DOMAIN-SUFFIX,xinhuanet.com
-
-# 美团
-DOMAIN-SUFFIX,meituan.com
-DOMAIN-SUFFIX,meituan.net
-DOMAIN-SUFFIX,sankuai.com
-DOMAIN-SUFFIX,dianping.com
 
 # 电商
 DOMAIN-SUFFIX,kaola.com
@@ -314,23 +321,7 @@ DOMAIN-SUFFIX,suning.com
 DOMAIN-SUFFIX,weidian.com //微店
 DOMAIN-SUFFIX,womai.com //中粮我买
 
-# 下厨房
-DOMAIN-SUFFIX,xiachufang.com
-
-# 出行
-DOMAIN-SUFFIX,12306.cn //中国铁路官方
-DOMAIN-SUFFIX,ctrip.com
-DOMAIN-SUFFIX,c-ctrip.com
-DOMAIN-SUFFIX,trip.com
-DOMAIN-SUFFIX,qunar.com
-DOMAIN-SUFFIX,tuniu.com
-DOMAIN-SUFFIX,tuniucdn.com
-
-# 快递
-DOMAIN-SUFFIX,sf-express.com
-DOMAIN-SUFFIX,kuaidi100.com
-
-# 银行与支付
+# 银行 & 支付
 DOMAIN-SUFFIX,95516.com //银联云闪付
 DOMAIN-SUFFIX,unionpay.com //中国银联
 DOMAIN-SUFFIX,cloudpnr.com //汇付天下
@@ -338,23 +329,32 @@ DOMAIN-SUFFIX,cmbchina.com //招商银行
 DOMAIN-SUFFIX,abchina.com //农业银行
 DOMAIN-SUFFIX,ecitic.com //中信银行
 DOMAIN-SUFFIX,yeepay.com //易宝支付
+# 出行
+DOMAIN-SUFFIX,12306.cn
+DOMAIN-SUFFIX,ctrip.com
+DOMAIN-SUFFIX,c-ctrip.com
+DOMAIN-SUFFIX,trip.com
+DOMAIN-SUFFIX,qunar.com
+DOMAIN-SUFFIX,tuniu.com
+DOMAIN-SUFFIX,tuniucdn.com
+# 快递
+DOMAIN-SUFFIX,sf-express.com
+DOMAIN-SUFFIX,kuaidi100.com
 
 # 股票投资
 DOMAIN-SUFFIX,dfcfw.com //东方财富
 DOMAIN-SUFFIX,eastmoney.com //东方财富网
 DOMAIN-SUFFIX,xueqiu.com //雪球
 
-# 天眼查
+# 天眼查 & 招聘
 DOMAIN-SUFFIX,tianyancha.com
-
-# 招聘
 DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,51job.com
 DOMAIN-SUFFIX,51jobcdn.com
 DOMAIN-SUFFIX,zhaopin.com
 
-# 网络视频与直播
+# 视频直播
 DOMAIN-SUFFIX,miguvideo.com //咪咕视频
 DOMAIN-SUFFIX,migucloud.com //咪咕云
 DOMAIN-SUFFIX,cibntv.net //CIBN互联网电视
@@ -362,32 +362,25 @@ DOMAIN-SUFFIX,huya.com
 DOMAIN-SUFFIX,yy.com
 DOMAIN-SUFFIX,yystatic.com
 DOMAIN-SUFFIX,msstatic.com
+DOMAIN-SUFFIX,kugou.com
+DOMAIN-SUFFIX,lizhi.fm
+DOMAIN-SUFFIX,lizhi.io
+DOMAIN-SUFFIX,gzlzfm.com
 
-# 音乐与电台
-DOMAIN-SUFFIX,kugou.com //酷狗音乐
-DOMAIN-SUFFIX,lizhi.fm //荔枝FM音频
-DOMAIN-SUFFIX,lizhi.io //荔枝
-DOMAIN-SUFFIX,gzlzfm.com //荔枝网络
-
-# 猫眼电影
-DOMAIN-SUFFIX,maoyan.com
-
-# 网络文学
+# 网络文学 & 教育
 DOMAIN-SUFFIX,qidian.com
 DOMAIN-SUFFIX,qdmm.com
 DOMAIN-SUFFIX,yuewen.com
 DOMAIN-SUFFIX,hongxiu.com
-
-# 教育
 DOMAIN-SUFFIX,chaoxing.com
 DOMAIN-SUFFIX,cnki.net
 DOMAIN-SUFFIX,baicizhan.com
 
-# 工具、云服务
-DOMAIN-SUFFIX,qcloud.com //腾讯云
+# 工具
+DOMAIN-SUFFIX,qcloud.com
 DOMAIN-SUFFIX,qcloudcdn.com
-DOMAIN-SUFFIX,umengcloud.com //阿里友盟
-DOMAIN-SUFFIX,mubu.com //字节幕布
+DOMAIN-SUFFIX,umengcloud.com
+DOMAIN-SUFFIX,mubu.com
 DOMAIN-SUFFIX,115.com
 DOMAIN-SUFFIX,jianguoyun.com
 DOMAIN-SUFFIX,yinxiang.com
