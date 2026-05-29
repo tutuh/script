@@ -1,10 +1,10 @@
 # Direct
 
 # MyList
-DOMAIN-SUFFIX,eudic.net // 欧路词典
-DOMAIN-SUFFIX,frdic.com // 欧路
-DOMAIN-SUFFIX,eshimin.com // 市民云
-DOMAIN-SUFFIX,eshiyun.info
+DOMAIN-SUFFIX,eudic.net
+DOMAIN-SUFFIX,frdic.com // 欧路词典
+DOMAIN-SUFFIX,eshimin.com
+DOMAIN-SUFFIX,eshiyun.info // 市民云
 DOMAIN-SUFFIX,sptcc.com // 上海交通卡
 
 # 360
@@ -299,7 +299,7 @@ DOMAIN-SUFFIX,coolapk.com
 DOMAIN-SUFFIX,coolapkmarket.com
 DOMAIN-SUFFIX,sspai.com
 DOMAIN-SUFFIX,smzdm.com
-DOMAIN-SUFFIX,ruguoapp.com // 即刻
+DOMAIN-SUFFIX,ruguoapp.com
 DOMAIN-SUFFIX,feng.com
 DOMAIN-SUFFIX,jianshu.com
 DOMAIN-SUFFIX,jianshu.io
@@ -314,22 +314,22 @@ DOMAIN-SUFFIX,xinhuanet.com
 # 电商 & 快递
 DOMAIN-SUFFIX,kaola.com
 DOMAIN-SUFFIX,suning.com
-DOMAIN-SUFFIX,weidian.com // 微店
-DOMAIN-SUFFIX,womai.com // 中粮我买
+DOMAIN-SUFFIX,weidian.com
+DOMAIN-SUFFIX,womai.com
 DOMAIN-SUFFIX,sf-express.com
 DOMAIN-SUFFIX,kuaidi100.com
 
 # 金融支付 & 投资
-DOMAIN-SUFFIX,95516.com // 银联云闪付
-DOMAIN-SUFFIX,unionpay.com // 中国银联
+DOMAIN-SUFFIX,95516.com // 云闪付
+DOMAIN-SUFFIX,unionpay.com // 银联
 DOMAIN-SUFFIX,cloudpnr.com // 汇付天下
-DOMAIN-SUFFIX,cmbchina.com // 招商银行
-DOMAIN-SUFFIX,abchina.com // 农业银行
-DOMAIN-SUFFIX,ecitic.com // 中信银行
+DOMAIN-SUFFIX,cmbchina.com // 招商
+DOMAIN-SUFFIX,abchina.com // 农业
+DOMAIN-SUFFIX,ecitic.com // 中信
 DOMAIN-SUFFIX,yeepay.com // 易宝支付
 DOMAIN-SUFFIX,dfcfw.com // 东方财富
 DOMAIN-SUFFIX,eastmoney.com // 东方财富网
-DOMAIN-SUFFIX,xueqiu.com // 雪球
+DOMAIN-SUFFIX,xueqiu.com
 
 # 旅行类
 DOMAIN-SUFFIX,12306.cn
@@ -348,9 +348,9 @@ DOMAIN-SUFFIX,51jobcdn.com
 DOMAIN-SUFFIX,zhaopin.com
 
 # 文娱
-DOMAIN-SUFFIX,miguvideo.com // 咪咕视频
-DOMAIN-SUFFIX,migucloud.com // 咪咕云
-DOMAIN-SUFFIX,cibntv.net // CIBN互联网电视
+DOMAIN-SUFFIX,miguvideo.com
+DOMAIN-SUFFIX,migucloud.com
+DOMAIN-SUFFIX,cibntv.net
 DOMAIN-SUFFIX,huya.com
 DOMAIN-SUFFIX,yy.com
 DOMAIN-SUFFIX,yystatic.com
