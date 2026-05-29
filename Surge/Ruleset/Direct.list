@@ -19,7 +19,6 @@ DOMAIN-SUFFIX,dhrest.com
 DOMAIN-SUFFIX,qhres.com
 DOMAIN-SUFFIX,qhstatic.com
 DOMAIN-SUFFIX,qhupdate.com
-DOMAIN-SUFFIX,so.com
 
 # 58
 DOMAIN-SUFFIX,58.com
@@ -158,6 +157,9 @@ DOMAIN-SUFFIX,dbankcdn.com
 DOMAIN-SUFFIX,hicloud.com
 DOMAIN-SUFFIX,huawei.com
 DOMAIN-SUFFIX,huaweicloud.com
+DOMAIN-SUFFIX,huaweishop.net
+DOMAIN-SUFFIX,vmall.com
+DOMAIN-SUFFIX,vmallres.com
 
 # iflytek 科大讯飞
 DOMAIN-SUFFIX,iflyink.com
