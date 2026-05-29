@@ -133,8 +133,8 @@ DOMAIN-SUFFIX,cmpassport.com
 DOMAIN-SUFFIX,id6.me
 DOMAIN-SUFFIX,mob.com
 DOMAIN-SUFFIX,open.e.189.cn
-DOMAIN-SUFFIX,wo.cn⁠
-DOMAIN-SUFFIX,wosms.cn⁠
+DOMAIN-SUFFIX,wo.cn
+DOMAIN-SUFFIX,wosms.cn
 
 # ChinaNet
 DOMAIN-SUFFIX,21cn.com
@@ -312,7 +312,7 @@ DOMAIN-SUFFIX,womai.com //中粮我买
 DOMAIN-SUFFIX,xiachufang.com
 
 # 出行
-DOMAIN-SUFFIX,12306.com
+DOMAIN-SUFFIX,12306.cn
 DOMAIN-SUFFIX,ctrip.com
 DOMAIN-SUFFIX,c-ctrip.com
 DOMAIN-SUFFIX,trip.com
