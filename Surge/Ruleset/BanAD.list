@@ -1,6 +1,5 @@
-# By ACL4SSR  (https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/BanAD.list)
-
-# 本碎片只包含常见广告关键字、广告联盟。无副作用，放心使用
+# By ACL4SSR
+# 删除了推送、游戏激励视频、基础统计分析域名，最大程度保留日常 App 正常功能
 
 # 广告关键词
 DOMAIN-KEYWORD,admarvel
@@ -12,8 +11,6 @@ DOMAIN-KEYWORD,adsrvmedia
 DOMAIN-KEYWORD,adsserving
 DOMAIN-KEYWORD,adsystem
 DOMAIN-KEYWORD,adwords
-DOMAIN-KEYWORD,applovin
-DOMAIN-KEYWORD,appsflyer
 DOMAIN-KEYWORD,domob
 DOMAIN-KEYWORD,duomeng
 DOMAIN-KEYWORD,dwtrack
@@ -70,7 +67,6 @@ DOMAIN-SUFFIX,adfuture.cn
 DOMAIN-SUFFIX,adhouyi.com
 DOMAIN-SUFFIX,adinfuse.com
 DOMAIN-SUFFIX,adirects.com
-DOMAIN-SUFFIX,adjust.io
 DOMAIN-SUFFIX,adkmob.com
 DOMAIN-SUFFIX,adlive.cn
 DOMAIN-SUFFIX,adlocus.com
@@ -117,8 +113,6 @@ DOMAIN-SUFFIX,appads.com
 DOMAIN-SUFFIX,appboy.com
 DOMAIN-SUFFIX,appdriver.cn
 DOMAIN-SUFFIX,appjiagu.com
-DOMAIN-SUFFIX,applifier.com
-DOMAIN-SUFFIX,appsflyer.com
 DOMAIN-SUFFIX,atdmt.com
 DOMAIN-SUFFIX,baifendian.com
 DOMAIN-SUFFIX,banmamedia.com
@@ -134,7 +128,6 @@ DOMAIN-SUFFIX,bjxiaohua.com
 DOMAIN-SUFFIX,bloggerads.net
 DOMAIN-SUFFIX,branch.io
 DOMAIN-SUFFIX,bsdev.cn
-DOMAIN-SUFFIX,bshare.cn
 DOMAIN-SUFFIX,btyou.com
 DOMAIN-SUFFIX,bugtags.com
 DOMAIN-SUFFIX,buysellads.com
@@ -145,7 +138,6 @@ DOMAIN-SUFFIX,cdnmaster.com
 DOMAIN-SUFFIX,chance-ad.com
 DOMAIN-SUFFIX,chanet.com.cn
 DOMAIN-SUFFIX,chartbeat.com
-DOMAIN-SUFFIX,chartboost.com
 DOMAIN-SUFFIX,chengadx.com
 DOMAIN-SUFFIX,chmae.com
 DOMAIN-SUFFIX,clickadu.com
@@ -197,7 +189,6 @@ DOMAIN-SUFFIX,fraudmetrix.cn
 DOMAIN-SUFFIX,g1.tagtic.cn
 DOMAIN-SUFFIX,gentags.net
 DOMAIN-SUFFIX,gepush.com
-DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,glispa.com
 DOMAIN-SUFFIX,go-mpulse
 DOMAIN-SUFFIX,go-mpulse.net
@@ -212,7 +203,6 @@ DOMAIN-SUFFIX,haoghost.com
 DOMAIN-SUFFIX,hivecn.cn
 DOMAIN-SUFFIX,hypers.com
 DOMAIN-SUFFIX,icast.cn
-DOMAIN-SUFFIX,igexin.com
 DOMAIN-SUFFIX,il8r.com
 DOMAIN-SUFFIX,imageter.com
 DOMAIN-SUFFIX,immob.cn
@@ -232,11 +222,9 @@ DOMAIN-SUFFIX,irs09.com
 DOMAIN-SUFFIX,istreamsche.com
 DOMAIN-SUFFIX,jesgoo.com
 DOMAIN-SUFFIX,jiaeasy.net
-DOMAIN-SUFFIX,jiguang.cn
 DOMAIN-SUFFIX,jimdo.com
 DOMAIN-SUFFIX,jisucn.com
 DOMAIN-SUFFIX,jmgehn.cn
-DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,jusha.com
 DOMAIN-SUFFIX,juzi.cn
 DOMAIN-SUFFIX,juzilm.com
@@ -336,12 +324,9 @@ DOMAIN-SUFFIX,switchadhub.com
 DOMAIN-SUFFIX,sycbbs.com
 DOMAIN-SUFFIX,synacast.com
 DOMAIN-SUFFIX,sysdig.com
-DOMAIN-SUFFIX,talkingdata.com
-DOMAIN-SUFFIX,talkingdata.net
 DOMAIN-SUFFIX,tansuotv.com
 DOMAIN-SUFFIX,tanv.com
 DOMAIN-SUFFIX,tanx.com
-DOMAIN-SUFFIX,tapjoy.cn
 DOMAIN-SUFFIX,th7.cn
 DOMAIN-SUFFIX,thoughtleadr.com
 DOMAIN-SUFFIX,tianmidian.com
@@ -356,8 +341,6 @@ DOMAIN-SUFFIX,ugdtimg.com
 DOMAIN-SUFFIX,ugvip.com
 DOMAIN-SUFFIX,ujian.cc
 DOMAIN-SUFFIX,ukeiae.com
-DOMAIN-SUFFIX,umeng.co
-DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umtrack.com
 DOMAIN-SUFFIX,unimhk.com
 DOMAIN-SUFFIX,union-wifi.com
@@ -374,8 +357,6 @@ DOMAIN-SUFFIX,vlion.cn
 DOMAIN-SUFFIX,voiceads.cn
 DOMAIN-SUFFIX,voiceads.com
 DOMAIN-SUFFIX,vpon.com
-DOMAIN-SUFFIX,vungle.cn
-DOMAIN-SUFFIX,vungle.com
 DOMAIN-SUFFIX,waps.cn
 DOMAIN-SUFFIX,wapx.cn
 DOMAIN-SUFFIX,webterren.com
@@ -428,7 +409,6 @@ DOMAIN-SUFFIX,ad-stir.com
 DOMAIN-SUFFIX,ad-survey.com
 DOMAIN-SUFFIX,ad4game.com
 DOMAIN-SUFFIX,adcloud.jp
-DOMAIN-SUFFIX,adcolony.com
 DOMAIN-SUFFIX,addthis.com
 DOMAIN-SUFFIX,adfurikun.jp
 DOMAIN-SUFFIX,adhigh.net
@@ -502,7 +482,6 @@ DOMAIN-SUFFIX,inner-active.mobi
 DOMAIN-SUFFIX,intentiq.com
 DOMAIN-SUFFIX,inter1ads.com
 DOMAIN-SUFFIX,ipredictive.com
-DOMAIN-SUFFIX,ironsrc.com
 DOMAIN-SUFFIX,iskyworker.com
 DOMAIN-SUFFIX,jizzads.com
 DOMAIN-SUFFIX,juicyads.com
@@ -560,8 +539,6 @@ DOMAIN-SUFFIX,steelhousemedia.com
 DOMAIN-SUFFIX,stickyadstv.com
 DOMAIN-SUFFIX,supersonic.com
 DOMAIN-SUFFIX,taboola.com
-DOMAIN-SUFFIX,tapjoy.com
-DOMAIN-SUFFIX,tapjoyads.com
 DOMAIN-SUFFIX,trafficjunky.com
 DOMAIN-SUFFIX,trafficjunky.net
 DOMAIN-SUFFIX,tribalfusion.com
@@ -592,7 +569,6 @@ DOMAIN-SUFFIX,wanfeng1.com
 DOMAIN-SUFFIX,wep016.top
 DOMAIN-SUFFIX,win-stock.com.cn
 DOMAIN-SUFFIX,zantainet.com
-
 DOMAIN-SUFFIX,dh54wf.xyz
 DOMAIN-SUFFIX,g2q3e.cn
 
