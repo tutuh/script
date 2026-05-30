@@ -388,4 +388,4 @@ DOMAIN-SUFFIX,air-matters.com
 DOMAIN-SUFFIX,air-matters.io
 
 # CN
-DOMAIN-SUFFIX,cn
+#DOMAIN-SUFFIX,cn
