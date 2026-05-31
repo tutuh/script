@@ -126,31 +126,34 @@ DOMAIN-SUFFIX,cctvpic.com
 DOMAIN-SUFFIX,livechina.com
 
 # China Unicom - 中国联通
-DOMAIN-SUFFIX,10010.com
 DOMAIN-SUFFIX,10010.cn
+DOMAIN-SUFFIX,10010.com
+DOMAIN-SUFFIX,chinaunicom.cn
 DOMAIN-SUFFIX,chinaunicom.com
 DOMAIN-SUFFIX,chinaunicom.com.cn
+DOMAIN-SUFFIX,unicompayment.com
 DOMAIN-SUFFIX,wo.cn
 DOMAIN-SUFFIX,wo.com.cn
 DOMAIN-SUFFIX,wostore.cn
-DOMAIN-SUFFIX,unicompayment.com
-DOMAIN-SUFFIX,mob.com // 第三方一键登录
 
 # China Telecom - 中国电信
 DOMAIN-SUFFIX,189.cn
 DOMAIN-SUFFIX,189.com
-DOMAIN-SUFFIX,chinatelecom.com.cn
-DOMAIN-SUFFIX,chinatelecom.cn
-DOMAIN-SUFFIX,ctyun.cn
-DOMAIN-SUFFIX,vnet.cn
 DOMAIN-SUFFIX,21cn.com
+DOMAIN-SUFFIX,chinatelecom.cn
+DOMAIN-SUFFIX,chinatelecom.com.cn
+DOMAIN-SUFFIX,ctyun.cn
 DOMAIN-SUFFIX,id6.me
+DOMAIN-SUFFIX,vnet.cn
 
 # China Mobile - 中国移动
 DOMAIN-SUFFIX,10086.cn
+DOMAIN-SUFFIX,139.com
 DOMAIN-SUFFIX,chinamobile.com
 DOMAIN-SUFFIX,cmpassport.com
-DOMAIN-SUFFIX,139.com
+
+# 第三方一键登录服务
+DOMAIN-SUFFIX,mob.com
 
 # DiDi
 DOMAIN-SUFFIX,didialift.com
