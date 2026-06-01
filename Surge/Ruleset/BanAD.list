@@ -92,11 +92,6 @@ DOMAIN-SUFFIX,allyes.cn
 DOMAIN-SUFFIX,allyes.com
 DOMAIN-SUFFIX,analysys.cn
 DOMAIN-SUFFIX,angsrvr.com
-DOMAIN-SUFFIX,anquan.org
-DOMAIN-SUFFIX,anysdk.com
-DOMAIN-SUFFIX,appadhoc.com
-DOMAIN-SUFFIX,appdriver.cn
-DOMAIN-SUFFIX,appjiagu.com
 DOMAIN-SUFFIX,atdmt.com
 DOMAIN-SUFFIX,baifendian.com
 DOMAIN-SUFFIX,banmamedia.com
@@ -130,7 +125,6 @@ DOMAIN-SUFFIX,cnxad.com
 DOMAIN-SUFFIX,cnzz.com
 DOMAIN-SUFFIX,cnzzlink.com
 DOMAIN-SUFFIX,cocounion.com
-DOMAIN-SUFFIX,coocaatv.com
 DOMAIN-SUFFIX,cooguo.com
 DOMAIN-SUFFIX,coolguang.com
 DOMAIN-SUFFIX,coremetrics.com
@@ -150,8 +144,6 @@ DOMAIN-SUFFIX,dotmore.com.tw
 DOMAIN-SUFFIX,doudouguo.com
 DOMAIN-SUFFIX,doumob.com
 DOMAIN-SUFFIX,duanat.com
-DOMAIN-SUFFIX,duiba.com.cn
-DOMAIN-SUFFIX,duomeng.cn
 DOMAIN-SUFFIX,dxpmedia.com
 DOMAIN-SUFFIX,edigitalsurvey.com
 DOMAIN-SUFFIX,eduancm.com
@@ -159,7 +151,6 @@ DOMAIN-SUFFIX,emarbox.com
 DOMAIN-SUFFIX,feitian001.com
 DOMAIN-SUFFIX,feixin2.com
 DOMAIN-SUFFIX,flashtalking.com
-DOMAIN-SUFFIX,fraudmetrix.cn
 DOMAIN-SUFFIX,g1.tagtic.cn
 DOMAIN-SUFFIX,gentags.net
 DOMAIN-SUFFIX,gepush.com
@@ -204,7 +195,6 @@ DOMAIN-SUFFIX,lnk8.cn
 DOMAIN-SUFFIX,lomark.cn
 DOMAIN-SUFFIX,lotuseed.com
 DOMAIN-SUFFIX,lrswl.com
-DOMAIN-SUFFIX,lufax.com
 DOMAIN-SUFFIX,madhouse.cn
 DOMAIN-SUFFIX,madmini.com
 DOMAIN-SUFFIX,madserving.com
@@ -227,7 +217,6 @@ DOMAIN-SUFFIX,mobclix.com
 DOMAIN-SUFFIX,mobgi.com
 DOMAIN-SUFFIX,mobisage.cn
 DOMAIN-SUFFIX,moogos.com
-DOMAIN-SUFFIX,mopub.com
 DOMAIN-SUFFIX,moquanad.com
 DOMAIN-SUFFIX,mpush.cn
 DOMAIN-SUFFIX,mxpnl.com
@@ -293,7 +282,6 @@ DOMAIN-SUFFIX,union001.com
 DOMAIN-SUFFIX,unionsy.com
 DOMAIN-SUFFIX,unlitui.com
 DOMAIN-SUFFIX,uri6.com
-DOMAIN-SUFFIX,ushaqi.com
 DOMAIN-SUFFIX,usingde.com
 DOMAIN-SUFFIX,uuzu.com
 DOMAIN-SUFFIX,vlion.cn
@@ -331,7 +319,6 @@ DOMAIN-SUFFIX,yoyi.com.cn
 DOMAIN-SUFFIX,yoyi.tv
 DOMAIN-SUFFIX,yrxmr.com
 DOMAIN-SUFFIX,ysjwj.com
-DOMAIN-SUFFIX,yunjiasu.com
 DOMAIN-SUFFIX,yunpifu.cn
 DOMAIN-SUFFIX,zampdsp.com
 DOMAIN-SUFFIX,zamplus.com
@@ -344,7 +331,6 @@ DOMAIN-SUFFIX,zzsx8.com
 # 广告联盟-国外****************
 DOMAIN-SUFFIX,acuityplatform.com
 DOMAIN-SUFFIX,ad-survey.com
-DOMAIN-SUFFIX,addthis.com
 DOMAIN-SUFFIX,adfurikun.jp
 DOMAIN-SUFFIX,adhigh.net
 DOMAIN-SUFFIX,adhood.com
@@ -448,18 +434,16 @@ DOMAIN-SUFFIX,626uc.com
 DOMAIN-SUFFIX,915.com
 DOMAIN-SUFFIX,appget.cn
 DOMAIN-SUFFIX,appuu.cn
-DOMAIN-SUFFIX,coinhive.com
+DOMAIN-SUFFIX,dh54wf.xyz
+DOMAIN-SUFFIX,g2q3e.cn
 DOMAIN-SUFFIX,huodonghezi.cn
 DOMAIN-SUFFIX,vcbn65.xyz
 DOMAIN-SUFFIX,wanfeng1.com
 DOMAIN-SUFFIX,wep016.top
 DOMAIN-SUFFIX,win-stock.com.cn
 DOMAIN-SUFFIX,zantainet.com
-DOMAIN-SUFFIX,dh54wf.xyz
-DOMAIN-SUFFIX,g2q3e.cn
 
 # 运营商广告****************
 DOMAIN-SUFFIX,114so.cn
-DOMAIN-SUFFIX,go.10086.cn
 DOMAIN-SUFFIX,hivedata.cc
 DOMAIN-SUFFIX,navi.gd.chinamobile.com
