@@ -118,6 +118,8 @@ DOMAIN-SUFFIX,byted-static.com
 DOMAIN-SUFFIX,bytedns.net
 DOMAIN-SUFFIX,bytescm.com
 DOMAIN-SUFFIX,bytetos.com
+DOMAIN-SUFFIX,bytegecko.com
+DOMAIN-SUFFIX,volces.com
 DOMAIN-SUFFIX,zjcdn.com
 
 # CCTV
@@ -330,6 +332,7 @@ DOMAIN-SUFFIX,huxiucdn.com
 DOMAIN-SUFFIX,ifeng.com
 DOMAIN-SUFFIX,ifengimg.com
 DOMAIN-SUFFIX,xinhuanet.com
+DOMAIN-SUFFIX,36kr.com
 
 # 电商 & 快递
 DOMAIN-SUFFIX,kaola.com
@@ -405,6 +408,3 @@ DOMAIN-SUFFIX,tianqi.com
 DOMAIN-SUFFIX,tianqistatic.com
 DOMAIN-SUFFIX,air-matters.com
 DOMAIN-SUFFIX,air-matters.io
-
-# CN
-#DOMAIN-SUFFIX,cn
