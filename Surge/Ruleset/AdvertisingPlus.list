@@ -50,7 +50,6 @@ DOMAIN,toots-a.akamaihd.net
 DOMAIN,videoads-cloud.rovio.com
 DOMAIN-SUFFIX,17gouwuba.com
 DOMAIN-SUFFIX,1phads.com
-DOMAIN-SUFFIX,1xl.co.uk
 DOMAIN-SUFFIX,206ads.com
 DOMAIN-SUFFIX,3cinteractive.com
 DOMAIN-SUFFIX,4mads.com
@@ -85,10 +84,7 @@ DOMAIN-SUFFIX,ad2games.com
 DOMAIN-SUFFIX,ad2iction.com
 DOMAIN-SUFFIX,ad4.com.cn
 DOMAIN-SUFFIX,ad4game.com
-DOMAIN-SUFFIX,ad6media.co.uk
 DOMAIN-SUFFIX,ad6media.com
-DOMAIN-SUFFIX,ad6media.es
-DOMAIN-SUFFIX,ad6media.fr
 DOMAIN-SUFFIX,adacado.com
 DOMAIN-SUFFIX,adadapted.com
 DOMAIN-SUFFIX,adap.tv
@@ -97,7 +93,6 @@ DOMAIN-SUFFIX,adatrix.com
 DOMAIN-SUFFIX,adblade.com
 DOMAIN-SUFFIX,adblox.net
 DOMAIN-SUFFIX,adbooth.com
-DOMAIN-SUFFIX,adcamp.ru
 DOMAIN-SUFFIX,adcdnx.com
 DOMAIN-SUFFIX,adcel.co
 DOMAIN-SUFFIX,adcenter.io
@@ -123,7 +118,6 @@ DOMAIN-SUFFIX,adexprt.com
 DOMAIN-SUFFIX,adextent.com
 DOMAIN-SUFFIX,adfactor.nl
 DOMAIN-SUFFIX,adfalcon.com
-DOMAIN-SUFFIX,adflow.ru
 DOMAIN-SUFFIX,adform.net
 DOMAIN-SUFFIX,adfunlink.com
 DOMAIN-SUFFIX,adintl.cn
@@ -178,8 +172,6 @@ DOMAIN-SUFFIX,bizible.com
 DOMAIN-SUFFIX,brightcom.com
 DOMAIN-SUFFIX,bulldogcpi.com
 DOMAIN-SUFFIX,carbonads.net
-DOMAIN-SUFFIX,clotfun.mobi
-DOMAIN-SUFFIX,clotfun.online
 DOMAIN-SUFFIX,cloudmobi.net
 DOMAIN-SUFFIX,cmgadx.com
 DOMAIN-SUFFIX,comscore.com
@@ -216,7 +208,6 @@ DOMAIN-SUFFIX,inpagepush.com
 DOMAIN-SUFFIX,insurads.com
 DOMAIN-SUFFIX,ironsrc.com
 DOMAIN-SUFFIX,irs01.com
-DOMAIN-SUFFIX,jads.co
 DOMAIN-SUFFIX,juicyads.com
 DOMAIN-SUFFIX,leadboltmobile.net
 DOMAIN-SUFFIX,liveadvert.com
@@ -235,7 +226,6 @@ DOMAIN-SUFFIX,mpnrs.com
 DOMAIN-SUFFIX,msads.net
 DOMAIN-SUFFIX,mxmcdn.net
 DOMAIN-SUFFIX,mxtads.com
-DOMAIN-SUFFIX,mydas.mobi
 DOMAIN-SUFFIX,narrativ.com
 DOMAIN-SUFFIX,native123.com
 DOMAIN-SUFFIX,nativeads.com
@@ -247,11 +237,8 @@ DOMAIN-SUFFIX,netseer.com
 DOMAIN-SUFFIX,networkad.net
 DOMAIN-SUFFIX,nex8.net
 DOMAIN-SUFFIX,nexage.com
-DOMAIN-SUFFIX,nextclick.pl
 DOMAIN-SUFFIX,ntv.io
 DOMAIN-SUFFIX,ogury.io
-DOMAIN-SUFFIX,ojooo.com
-DOMAIN-SUFFIX,okanjo.com
 DOMAIN-SUFFIX,omgpl.com
 DOMAIN-SUFFIX,omguk.com
 DOMAIN-SUFFIX,omnilocal.ai
@@ -287,7 +274,6 @@ DOMAIN-SUFFIX,popin.cc
 DOMAIN-SUFFIX,postrelease.com
 DOMAIN-SUFFIX,powerad.ai
 DOMAIN-SUFFIX,prebid.org
-DOMAIN-SUFFIX,premiumads.com.br
 DOMAIN-SUFFIX,presage.io
 DOMAIN-SUFFIX,pro-market.net
 DOMAIN-SUFFIX,programattik.com
@@ -321,21 +307,19 @@ DOMAIN-SUFFIX,revmob.com
 DOMAIN-SUFFIX,revrtb.com
 DOMAIN-SUFFIX,rfihub.com
 DOMAIN-SUFFIX,rlcdn.com
-DOMAIN-SUFFIX,rotaban.ru
 DOMAIN-SUFFIX,rqmob.com
 DOMAIN-SUFFIX,rtbsrv.com
 DOMAIN-SUFFIX,rtk.io
 DOMAIN-SUFFIX,rtmark.net
 DOMAIN-SUFFIX,rubiconproject.com
 DOMAIN-SUFFIX,runative-syndicate.com
-DOMAIN-SUFFIX,rutarget.ru
+DOMAIN-SUFFIX,yandexadexchange.net
 DOMAIN-SUFFIX,salmonads.com
 DOMAIN-SUFFIX,samba.tv
 DOMAIN-SUFFIX,samsungads.com
 DOMAIN-SUFFIX,saymedia.com
 DOMAIN-SUFFIX,sdkclick.com
 DOMAIN-SUFFIX,sekindo.com
-DOMAIN-SUFFIX,servebom.com
 DOMAIN-SUFFIX,servedby-buysellads.com
 DOMAIN-SUFFIX,servedbyopenx.com
 DOMAIN-SUFFIX,serving-sys.cn
@@ -368,7 +352,6 @@ DOMAIN-SUFFIX,sonobi.com
 DOMAIN-SUFFIX,speedshiftmedia.com
 DOMAIN-SUFFIX,splicky.com
 DOMAIN-SUFFIX,sponsorpay.com
-DOMAIN-SUFFIX,spotscenered.info
 DOMAIN-SUFFIX,spotxcdn.com
 DOMAIN-SUFFIX,spotxchange.com
 DOMAIN-SUFFIX,springserve.com
@@ -412,7 +395,6 @@ DOMAIN-SUFFIX,theoremreach.com
 DOMAIN-SUFFIX,thetrafficstat.net
 DOMAIN-SUFFIX,tidaltv.com
 DOMAIN-SUFFIX,tnkfactory.com
-DOMAIN-SUFFIX,tns-counter.ru
 DOMAIN-SUFFIX,topitme.com
 DOMAIN-SUFFIX,traffichunt.com
 DOMAIN-SUFFIX,trafficjunky.net
@@ -442,13 +424,9 @@ DOMAIN-SUFFIX,uprivaladserver.net
 DOMAIN-SUFFIX,upsight-api.com
 DOMAIN-SUFFIX,upsnap.com
 DOMAIN-SUFFIX,usekahuna.com
-DOMAIN-SUFFIX,utarget.ru
-DOMAIN-SUFFIX,vads.net.vn
-DOMAIN-SUFFIX,vads.vn
 DOMAIN-SUFFIX,vamaker.com
 DOMAIN-SUFFIX,vdopia.com
 DOMAIN-SUFFIX,veinteractive.com
-DOMAIN-SUFFIX,vendimob.pl
 DOMAIN-SUFFIX,vertamedia.com
 DOMAIN-SUFFIX,verticalscope.com
 DOMAIN-SUFFIX,vervemobile.com
@@ -465,9 +443,7 @@ DOMAIN-SUFFIX,voodoo-ads.io
 DOMAIN-SUFFIX,vrtcal.com
 DOMAIN-SUFFIX,vrtzads.com
 DOMAIN-SUFFIX,vrvm.com
-DOMAIN-SUFFIX,vserv.mobi
 DOMAIN-SUFFIX,w55c.net
-DOMAIN-SUFFIX,wapstart.ru
 DOMAIN-SUFFIX,watchingthat.net
 DOMAIN-SUFFIX,webads.eu
 DOMAIN-SUFFIX,widespace.com
@@ -481,7 +457,6 @@ DOMAIN-SUFFIX,xlviirdr.com
 DOMAIN-SUFFIX,xmlwizard.com
 DOMAIN-SUFFIX,xpanama.net
 DOMAIN-SUFFIX,xy7elite.com
-DOMAIN-SUFFIX,yandexadexchange.net
 DOMAIN-SUFFIX,ybrantdigital.com
 DOMAIN-SUFFIX,ydmob.com
 DOMAIN-SUFFIX,yeahmobi.com
@@ -505,7 +480,6 @@ DOMAIN-SUFFIX,zeustechnology.com
 DOMAIN-SUFFIX,zhiziyun.com
 DOMAIN-SUFFIX,zucks.net
 DOMAIN-SUFFIX,zumobi.com
-DOMAIN-SUFFIX,zwaar.org
 DOMAIN-SUFFIX,zxrtb.com
 
 # =======  广告平台by可莉  ======= #
