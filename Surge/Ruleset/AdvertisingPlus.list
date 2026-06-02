@@ -15,7 +15,6 @@ DOMAIN,ad.xy2013.cn
 DOMAIN,ads-cloud.rovio.com
 DOMAIN,ads.chinadaily.com.cn
 DOMAIN,ads.daydaycook.com.cn
-DOMAIN,ads.flurry.com
 DOMAIN,ads.pinger.com
 DOMAIN,ads.pinterest.com
 DOMAIN,ads.play.cbsi.video
@@ -48,7 +47,6 @@ DOMAIN,mopnativeadv.037201.com
 DOMAIN,nativeadv.dftoutiao.com
 DOMAIN,saad.ms.zhangyue.net
 DOMAIN,toots-a.akamaihd.net
-DOMAIN,video-ads-module.ad-tech.nbcuni.com
 DOMAIN,videoads-cloud.rovio.com
 DOMAIN-SUFFIX,17gouwuba.com
 DOMAIN-SUFFIX,1phads.com
@@ -574,7 +572,6 @@ DOMAIN,miniapp-ad.cdn.bcebos.com
 DOMAIN-SUFFIX,union.baidu.cn
 DOMAIN-SUFFIX,union.baidu.com
 DOMAIN,adsmind.gdtimg.com
-DOMAIN,adsmind.ugdtimg.com
 DOMAIN,ads.privacy.qq.com
 DOMAIN,huatuocode.huatuo.qq.com
 DOMAIN,info4.video.qq.com
@@ -582,7 +579,6 @@ DOMAIN,info6.video.qq.com
 DOMAIN,ios.video.mpush.qq.com
 DOMAIN,otheve.beacon.qq.com
 DOMAIN,pgdt.gtimg.cn
-DOMAIN,pgdt.ugdtimg.com
 DOMAIN,qzs.gdtimg.com
 DOMAIN,rmonitor.qq.com
 DOMAIN,sdkconfig.video.qq.com
@@ -623,7 +619,6 @@ DOMAIN-SUFFIX,lydass.net
 DOMAIN-SUFFIX,lydass.com.cn
 DOMAIN-SUFFIX,lydaas.net
 DOMAIN-SUFFIX,lydass.cn
-DOMAIN-SUFFIX,lydaas.cn
 DOMAIN-SUFFIX,lydaas.com.cn
 DOMAIN-SUFFIX,fwosapp.com
 DOMAIN-SUFFIX,rhinokeen.com
