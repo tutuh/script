@@ -77,8 +77,8 @@ DOMAIN-SUFFIX,ad-score.com
 DOMAIN-SUFFIX,ad-srv.co
 DOMAIN-SUFFIX,ad-stir.com
 DOMAIN-SUFFIX,ad-sys.com
-DOMAIN,ad.daum.net
-DOMAIN,ad.g.daum.net
+DOMAIN-SUFFIX,ad.daum.net
+DOMAIN-SUFFIX,ad.g.daum.net
 DOMAIN-SUFFIX,ad1.ru
 DOMAIN-SUFFIX,ad1data.com
 DOMAIN-SUFFIX,ad2games.com
@@ -139,7 +139,7 @@ DOMAIN-SUFFIX,adroll.com
 DOMAIN-SUFFIX,adrta.com
 DOMAIN-SUFFIX,ads-pixiv.net
 DOMAIN-SUFFIX,ads-twitter.com
-DOMAIN,ads.roku.com
+DOMAIN-SUFFIX,ads.roku.com
 DOMAIN-SUFFIX,adsafeprotected.com
 DOMAIN-SUFFIX,adsage.cn
 DOMAIN-SUFFIX,adsage.com
