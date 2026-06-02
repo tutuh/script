@@ -35,8 +35,6 @@ DOMAIN,adx.sogaha.cn
 DOMAIN,api-ad.kajicam.com
 DOMAIN,api.ad.xiaomi.com
 DOMAIN,api.adnet.mob.com
-DOMAIN,appnext-a.akamaihd.net
-DOMAIN,appnext.hs.llnwd.net
 DOMAIN,business-cdn.shouji.sogou.com
 DOMAIN,cf-ads.pinger.com
 DOMAIN,dsp.fcbox.com
@@ -158,8 +156,6 @@ DOMAIN-SUFFIX,adtdp.com
 DOMAIN-SUFFIX,adthor.com
 DOMAIN-SUFFIX,adtrace.org
 DOMAIN-SUFFIX,advertising.com
-DOMAIN-SUFFIX,adwhirl.com
-DOMAIN-SUFFIX,adwo.com
 DOMAIN-SUFFIX,adxadserv.com
 DOMAIN-SUFFIX,adzerk.net
 DOMAIN-SUFFIX,airpush.com
@@ -217,7 +213,6 @@ DOMAIN-SUFFIX,hypers.com
 DOMAIN-SUFFIX,idealads.net
 DOMAIN-SUFFIX,inmobi.net
 DOMAIN-SUFFIX,inmobicdn.cn
-DOMAIN-SUFFIX,inner-active.mobi
 DOMAIN-SUFFIX,innovid.com
 DOMAIN-SUFFIX,inpagepush.com
 DOMAIN-SUFFIX,insurads.com
@@ -243,7 +238,6 @@ DOMAIN-SUFFIX,msads.net
 DOMAIN-SUFFIX,mxmcdn.net
 DOMAIN-SUFFIX,mxtads.com
 DOMAIN-SUFFIX,mydas.mobi
-DOMAIN-SUFFIX,nanigans.com
 DOMAIN-SUFFIX,narrativ.com
 DOMAIN-SUFFIX,native123.com
 DOMAIN-SUFFIX,nativeads.com
@@ -432,7 +426,6 @@ DOMAIN-SUFFIX,tremorvideo.com
 DOMAIN-SUFFIX,tresensa.com
 DOMAIN-SUFFIX,trfmxt.com
 DOMAIN-SUFFIX,trvdp.com
-DOMAIN-SUFFIX,tubemogul.com
 DOMAIN-SUFFIX,tuifish.com
 DOMAIN-SUFFIX,tuipenguin.com
 DOMAIN-SUFFIX,tuitiger.com
@@ -586,8 +579,6 @@ DOMAIN,ads.privacy.qq.com
 DOMAIN,huatuocode.huatuo.qq.com
 DOMAIN,info4.video.qq.com
 DOMAIN,info6.video.qq.com
-DOMAIN,ios.bugly.qq.com
-DOMAIN,pro.bugly.qq.com
 DOMAIN,ios.video.mpush.qq.com
 DOMAIN,otheve.beacon.qq.com
 DOMAIN,pgdt.gtimg.cn
