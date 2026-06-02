@@ -3,17 +3,10 @@
 
 # 广告关键词
 DOMAIN-KEYWORD,admarvel
-DOMAIN-KEYWORD,admaster
-DOMAIN-KEYWORD,adsage
-DOMAIN-KEYWORD,adsensor
 DOMAIN-KEYWORD,adsmogo
 DOMAIN-KEYWORD,adsrvmedia
-DOMAIN-KEYWORD,domob
 DOMAIN-KEYWORD,duomeng
 DOMAIN-KEYWORD,omgmta
-DOMAIN-KEYWORD,openx
-DOMAIN-KEYWORD,socdm
-DOMAIN-KEYWORD,supersonicads
 DOMAIN-KEYWORD,zjtoolbar
 
 # 广告联盟-国内****************
@@ -244,7 +237,6 @@ DOMAIN-SUFFIX,switchadhub.com
 DOMAIN-SUFFIX,sycbbs.com
 DOMAIN-SUFFIX,synacast.com
 DOMAIN-SUFFIX,tansuotv.com
-DOMAIN-SUFFIX,tanx.com
 DOMAIN-SUFFIX,th7.cn
 DOMAIN-SUFFIX,thoughtleadr.com
 DOMAIN-SUFFIX,tianmidian.com
