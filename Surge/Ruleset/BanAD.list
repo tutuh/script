@@ -1,6 +1,5 @@
 # By ACL4SSR
 # 删除了推送、游戏激励视频，最大程度保留日常 App 正常功能
-
 # 广告关键词
 DOMAIN-KEYWORD,admarvel
 DOMAIN-KEYWORD,admaster
@@ -15,7 +14,6 @@ DOMAIN-KEYWORD,openx
 DOMAIN-KEYWORD,socdm
 DOMAIN-KEYWORD,supersonicads
 DOMAIN-KEYWORD,zjtoolbar
-
 # 广告联盟-国内****************
 DOMAIN-SUFFIX,09mk.cn
 DOMAIN-SUFFIX,100peng.com
@@ -226,13 +224,11 @@ DOMAIN-SUFFIX,publicidad.tv
 DOMAIN-SUFFIX,qcl777.com
 DOMAIN-SUFFIX,qiyou.com
 DOMAIN-SUFFIX,qtmojo.com
-DOMAIN-SUFFIX,quantcount.com
 DOMAIN-SUFFIX,qucaigg.com
 DOMAIN-SUFFIX,qumi.com
 DOMAIN-SUFFIX,qxxys.com
 DOMAIN-SUFFIX,responsys.net
 DOMAIN-SUFFIX,revsci.net
-DOMAIN-SUFFIX,rtbasia.com
 DOMAIN-SUFFIX,sanya1.com
 DOMAIN-SUFFIX,scupio.com
 DOMAIN-SUFFIX,shuiguo.com
@@ -308,7 +304,6 @@ DOMAIN-SUFFIX,zhidian3g.cn
 DOMAIN-SUFFIX,zhjfad.com
 DOMAIN-SUFFIX,zqzxz.com
 DOMAIN-SUFFIX,zzsx8.com
-
 # 广告联盟-国外****************
 DOMAIN-SUFFIX,acuityplatform.com
 DOMAIN-SUFFIX,ad-survey.com
@@ -368,7 +363,6 @@ DOMAIN-SUFFIX,inter1ads.com
 DOMAIN-SUFFIX,ipredictive.com
 DOMAIN-SUFFIX,iskyworker.com
 DOMAIN-SUFFIX,jizzads.com
-DOMAIN-SUFFIX,kochava.com
 DOMAIN-SUFFIX,leadbolt.com
 DOMAIN-SUFFIX,leadbolt.net
 DOMAIN-SUFFIX,leadboltads.net
@@ -389,7 +383,6 @@ DOMAIN-SUFFIX,plista.com
 DOMAIN-SUFFIX,powerlinks.com
 DOMAIN-SUFFIX,revdepo.com
 DOMAIN-SUFFIX,sape.ru
-DOMAIN-SUFFIX,scorecardresearch.com
 DOMAIN-SUFFIX,startapp.com
 DOMAIN-SUFFIX,startappexchange.com
 DOMAIN-SUFFIX,statcounter.com
@@ -401,7 +394,6 @@ DOMAIN-SUFFIX,wedolook.com
 DOMAIN-SUFFIX,yadro.ru
 DOMAIN-SUFFIX,yengo.com
 DOMAIN-SUFFIX,zedo.com
-
 # 垃圾站点****************
 DOMAIN-SUFFIX,11h5.com
 DOMAIN-SUFFIX,1kxun.mobi
@@ -419,7 +411,6 @@ DOMAIN-SUFFIX,wanfeng1.com
 DOMAIN-SUFFIX,wep016.top
 DOMAIN-SUFFIX,win-stock.com.cn
 DOMAIN-SUFFIX,zantainet.com
-
 # 运营商广告****************
 DOMAIN-SUFFIX,114so.cn
 DOMAIN-SUFFIX,hivedata.cc
