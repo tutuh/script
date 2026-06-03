@@ -306,7 +306,8 @@ DOMAIN-SUFFIX,xmcdn.com
 # Xiachufang - 下厨房
 DOMAIN-SUFFIX,xiachufang.com
 
-# 社区资讯
+# Top Direct Sites
+# > Community
 DOMAIN-SUFFIX,36kr.com
 DOMAIN-SUFFIX,58.com
 DOMAIN-SUFFIX,coolapk.com
@@ -333,7 +334,7 @@ DOMAIN-SUFFIX,xinhuanet.com
 DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
 
-# 电商快递
+# > E-Commerce
 DOMAIN-SUFFIX,kaola.com
 DOMAIN-SUFFIX,suning.com
 DOMAIN-SUFFIX,weidian.com
@@ -341,19 +342,19 @@ DOMAIN-SUFFIX,womai.com
 DOMAIN-SUFFIX,sf-express.com
 DOMAIN-SUFFIX,kuaidi100.com
 
-# 金融投资
-DOMAIN-SUFFIX,95516.com // 云闪付
-DOMAIN-SUFFIX,unionpay.com // 银联
-DOMAIN-SUFFIX,cloudpnr.com // 汇付天下
-DOMAIN-SUFFIX,cmbchina.com // 招商
-DOMAIN-SUFFIX,abchina.com // 农业
-DOMAIN-SUFFIX,ecitic.com // 中信
-DOMAIN-SUFFIX,yeepay.com // 易宝支付
-DOMAIN-SUFFIX,dfcfw.com // 东方财富
-DOMAIN-SUFFIX,eastmoney.com // 东方财富网
+# > Finance
+DOMAIN-SUFFIX,95516.com
+DOMAIN-SUFFIX,unionpay.com
+DOMAIN-SUFFIX,cloudpnr.com
+DOMAIN-SUFFIX,cmbchina.com
+DOMAIN-SUFFIX,abchina.com
+DOMAIN-SUFFIX,ecitic.com
+DOMAIN-SUFFIX,yeepay.com
+DOMAIN-SUFFIX,dfcfw.com
+DOMAIN-SUFFIX,eastmoney.com
 DOMAIN-SUFFIX,xueqiu.com
 
-# 旅行类
+# > Travel
 DOMAIN-SUFFIX,12306.cn
 DOMAIN-SUFFIX,ctrip.com
 DOMAIN-SUFFIX,c-ctrip.com
@@ -361,7 +362,7 @@ DOMAIN-SUFFIX,qunar.com
 DOMAIN-SUFFIX,tuniu.com
 DOMAIN-SUFFIX,tuniucdn.com
 
-# 天眼查 & 招聘
+# > Recruitment
 DOMAIN-SUFFIX,tianyancha.com
 DOMAIN-SUFFIX,51job.com
 DOMAIN-SUFFIX,51jobcdn.com
@@ -369,7 +370,7 @@ DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,zhaopin.com
 DOMAIN-SUFFIX,zhipin.com
 
-# 文娱
+# > Entertainment
 DOMAIN-SUFFIX,migu.cn
 DOMAIN-SUFFIX,migucloud.com
 DOMAIN-SUFFIX,miguvideo.com
@@ -387,12 +388,12 @@ DOMAIN-SUFFIX,gzlzfm.com
 DOMAIN-SUFFIX,kugou.com
 DOMAIN-SUFFIX,cibntv.net
 
-# 教育
+# > Education
 DOMAIN-SUFFIX,baicizhan.com
 DOMAIN-SUFFIX,chaoxing.com
 DOMAIN-SUFFIX,cnki.net
 
-# 网络服务类
+# > Web Services
 DOMAIN-SUFFIX,115.com
 DOMAIN-SUFFIX,jianguoyun.com
 DOMAIN-SUFFIX,mubu.com
@@ -402,7 +403,7 @@ DOMAIN-SUFFIX,wscdns.com
 DOMAIN-SUFFIX,xiumi.us
 DOMAIN-SUFFIX,yinxiang.com
 
-# 天气服务
+# > Weather Services
 DOMAIN-SUFFIX,air-matters.com
 DOMAIN-SUFFIX,air-matters.io
 DOMAIN-SUFFIX,moji.com
