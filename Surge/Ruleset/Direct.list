@@ -1,8 +1,7 @@
 # Direct
 
 # MyList
-DOMAIN-SUFFIX,eudic.net
-DOMAIN-SUFFIX,frdic.com // 欧路词典
+
 DOMAIN-SUFFIX,eshimin.com
 DOMAIN-SUFFIX,eshiyun.info // 市民云
 
@@ -350,8 +349,6 @@ DOMAIN-SUFFIX,cmbchina.com
 DOMAIN-SUFFIX,abchina.com
 DOMAIN-SUFFIX,ecitic.com
 DOMAIN-SUFFIX,yeepay.com
-DOMAIN-SUFFIX,dfcfw.com
-DOMAIN-SUFFIX,eastmoney.com
 DOMAIN-SUFFIX,xueqiu.com
 
 # > Travel
@@ -392,9 +389,13 @@ DOMAIN-SUFFIX,cibntv.net
 DOMAIN-SUFFIX,baicizhan.com
 DOMAIN-SUFFIX,chaoxing.com
 DOMAIN-SUFFIX,cnki.net
+DOMAIN-SUFFIX,eudic.net
+DOMAIN-SUFFIX,frdic.com
 
 # > Web Services
 DOMAIN-SUFFIX,115.com
+DOMAIN-SUFFIX,eshimin.com
+DOMAIN-SUFFIX,eshiyun.info
 DOMAIN-SUFFIX,jianguoyun.com
 DOMAIN-SUFFIX,mubu.com
 DOMAIN-SUFFIX,qiniu.com
