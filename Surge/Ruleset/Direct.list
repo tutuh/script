@@ -15,9 +15,6 @@ DOMAIN-SUFFIX,qhres.com
 DOMAIN-SUFFIX,qhstatic.com
 DOMAIN-SUFFIX,qhupdate.com
 
-# 58
-DOMAIN-SUFFIX,58.com
-
 # Alibaba
 DOMAIN-SUFFIX,1688.com
 DOMAIN-SUFFIX,aliapp.org
@@ -311,6 +308,7 @@ DOMAIN-SUFFIX,xiachufang.com
 
 # 社区资讯
 DOMAIN-SUFFIX,36kr.com
+DOMAIN-SUFFIX,58.com
 DOMAIN-SUFFIX,coolapk.com
 DOMAIN-SUFFIX,coolapkmarket.com
 DOMAIN-SUFFIX,csdn.net
@@ -335,7 +333,7 @@ DOMAIN-SUFFIX,xinhuanet.com
 DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
 
-# 电商 & 快递
+# 电商快递
 DOMAIN-SUFFIX,kaola.com
 DOMAIN-SUFFIX,suning.com
 DOMAIN-SUFFIX,weidian.com
@@ -343,7 +341,7 @@ DOMAIN-SUFFIX,womai.com
 DOMAIN-SUFFIX,sf-express.com
 DOMAIN-SUFFIX,kuaidi100.com
 
-# 金融支付 & 投资
+# 金融投资
 DOMAIN-SUFFIX,95516.com // 云闪付
 DOMAIN-SUFFIX,unionpay.com // 银联
 DOMAIN-SUFFIX,cloudpnr.com // 汇付天下
