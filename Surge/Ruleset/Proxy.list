@@ -47,12 +47,25 @@ DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,discordapp.net
 DOMAIN-SUFFIX,discord.media
 
-# Facebook
+# Meta
 DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,facebook.net
 DOMAIN-SUFFIX,fb.com
 DOMAIN-SUFFIX,fb.me
 DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,messenger.com
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,instagr.am
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
 DOMAIN-SUFFIX,threads.net
+DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,oculus.com
+DOMAIN-SUFFIX,oculuscdn.com
+DOMAIN-SUFFIX,metaquest.com
 
 # GitHub
 DOMAIN-SUFFIX,github.com
@@ -65,11 +78,6 @@ DOMAIN-SUFFIX,github.dev
 DOMAIN-SUFFIX,gitlab.com
 DOMAIN-SUFFIX,gitlab.io
 DOMAIN-SUFFIX,sourcegraph.com
-
-# Instagram
-DOMAIN-SUFFIX,instagram.com
-DOMAIN-SUFFIX,cdninstagram.com
-DOMAIN-SUFFIX,instagr.am
 
 # Iwara
 DOMAIN-SUFFIX,iwara.tv
@@ -202,10 +210,6 @@ DOMAIN-SUFFIX,pscp.tv
 DOMAIN-SUFFIX,vikacg.com
 DOMAIN-SUFFIX,picjs.xyz
 
-# WhatsApp
-DOMAIN-SUFFIX,whatsapp.com
-DOMAIN-SUFFIX,whatsapp.net
-
 # Wikipedia 维基相关域名
 DOMAIN-SUFFIX,wikipedia.org
 DOMAIN-SUFFIX,wikimedia.org
@@ -256,7 +260,6 @@ DOMAIN-SUFFIX,dropboxusercontent.com
 DOMAIN-SUFFIX,mega.nz
 DOMAIN-SUFFIX,resilio.com
 DOMAIN-SUFFIX,thefacebook.com
-DOMAIN-SUFFIX,messenger.com
 DOMAIN-SUFFIX,pinterest.com
 DOMAIN-SUFFIX,pinimg.com
 DOMAIN-SUFFIX,tumblr.com
