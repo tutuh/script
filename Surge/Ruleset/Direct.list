@@ -118,16 +118,11 @@ DOMAIN-SUFFIX,cctv.com
 DOMAIN-SUFFIX,cctvpic.com
 DOMAIN-SUFFIX,livechina.com
 
-# China Unicom - 中国联通
-DOMAIN-SUFFIX,10010.cn
-DOMAIN-SUFFIX,10010.com
-DOMAIN-SUFFIX,chinaunicom.cn
-DOMAIN-SUFFIX,chinaunicom.com
-DOMAIN-SUFFIX,chinaunicom.com.cn
-DOMAIN-SUFFIX,unicompayment.com
-DOMAIN-SUFFIX,wo.cn
-DOMAIN-SUFFIX,wo.com.cn
-DOMAIN-SUFFIX,wostore.cn
+# China Mobile - 中国移动
+DOMAIN-SUFFIX,10086.cn
+DOMAIN-SUFFIX,139.com
+DOMAIN-SUFFIX,chinamobile.com
+DOMAIN-SUFFIX,cmpassport.com
 
 # China Telecom - 中国电信
 DOMAIN-SUFFIX,189.cn
@@ -139,11 +134,16 @@ DOMAIN-SUFFIX,ctyun.cn
 DOMAIN-SUFFIX,id6.me
 DOMAIN-SUFFIX,vnet.cn
 
-# China Mobile - 中国移动
-DOMAIN-SUFFIX,10086.cn
-DOMAIN-SUFFIX,139.com
-DOMAIN-SUFFIX,chinamobile.com
-DOMAIN-SUFFIX,cmpassport.com
+# China Unicom - 中国联通
+DOMAIN-SUFFIX,10010.cn
+DOMAIN-SUFFIX,10010.com
+DOMAIN-SUFFIX,chinaunicom.cn
+DOMAIN-SUFFIX,chinaunicom.com
+DOMAIN-SUFFIX,chinaunicom.com.cn
+DOMAIN-SUFFIX,unicompayment.com
+DOMAIN-SUFFIX,wo.cn
+DOMAIN-SUFFIX,wo.com.cn
+DOMAIN-SUFFIX,wostore.cn
 
 # 第三方一键登录服务
 DOMAIN-SUFFIX,mob.com
@@ -204,24 +204,24 @@ DOMAIN-SUFFIX,yximgs.com
 # Maoyan - 猫眼
 DOMAIN-SUFFIX,maoyan.com
 
-# Meituan - 美团
-DOMAIN-SUFFIX,dianping.com
-DOMAIN-SUFFIX,meituan.com
-DOMAIN-SUFFIX,meituan.net
-DOMAIN-SUFFIX,sankuai.com
-
 # Meitu - 美图
 DOMAIN-SUFFIX,meipai.com
 DOMAIN-SUFFIX,meitu.com
 DOMAIN-SUFFIX,meitudata.com
 DOMAIN-SUFFIX,meitustat.com
 
+# Meituan - 美团
+DOMAIN-SUFFIX,dianping.com
+DOMAIN-SUFFIX,meituan.com
+DOMAIN-SUFFIX,meituan.net
+DOMAIN-SUFFIX,sankuai.com
+
 # MgTV - 芒果TV
 DOMAIN-SUFFIX,hitv.com
 DOMAIN-SUFFIX,hunantv.com
 DOMAIN-SUFFIX,mgtv.com
 
-# MI - 小米
+# Mi - 小米
 DOMAIN-SUFFIX,duokan.com
 DOMAIN-SUFFIX,mi-img.com
 DOMAIN-SUFFIX,mi.com
