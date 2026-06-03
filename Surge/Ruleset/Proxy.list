@@ -93,6 +93,7 @@ DOMAIN-SUFFIX,line.naver.jp
 DOMAIN-SUFFIX,linecorp.com
 
 # Meta
+# > Facebook
 DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,facebook.net
 DOMAIN-SUFFIX,fb.com
@@ -100,17 +101,22 @@ DOMAIN-SUFFIX,fb.me
 DOMAIN-SUFFIX,fbcdn.net
 DOMAIN-SUFFIX,fbsbx.com
 DOMAIN-SUFFIX,messenger.com
+# > Instagram
 DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,instagr.am
+# > Whatsapp
 DOMAIN-SUFFIX,whatsapp.com
 DOMAIN-SUFFIX,whatsapp.net
+# > Threads
 DOMAIN-SUFFIX,threads.net
+# > Meta AI
 DOMAIN-SUFFIX,meta.com
 DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,metaquest.com
+# > Oculus VR
 DOMAIN-SUFFIX,oculus.com
 DOMAIN-SUFFIX,oculuscdn.com
-DOMAIN-SUFFIX,metaquest.com
 
 # Microsoft
 DOMAIN-SUFFIX,gfx.ms
@@ -120,8 +126,7 @@ DOMAIN-SUFFIX,livefilestore.com
 DOMAIN-SUFFIX,azurewebsites.net
 DOMAIN-SUFFIX,aspnetcdn.com
 DOMAIN-SUFFIX,licdn.com
-
-# OneDrive
+# > OneDrive
 DOMAIN-SUFFIX,storage.live.com
 DOMAIN-SUFFIX,sharepoint.com
 DOMAIN-SUFFIX,sharepointonline.com
