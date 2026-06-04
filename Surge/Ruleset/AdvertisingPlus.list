@@ -451,10 +451,10 @@ DOMAIN,dig.bdurl.net
 DOMAIN-SUFFIX,pangle.io
 DOMAIN-KEYWORD,pglstatp
 DOMAIN-KEYWORD,panplayable-toutiao
-DOMAIN-KEYWORD,-ad-sign.byteimg.com
-DOMAIN-KEYWORD,-ad.byteoversea.com
-DOMAIN-KEYWORD,iflyad.bj.openstorage.cn
-DOMAIN-KEYWORD,bjimp.voiceads.cn
+DOMAIN-SUFFIX,-ad-sign.byteimg.com
+DOMAIN-SUFFIX,-ad.byteoversea.com
+DOMAIN-SUFFIX,iflyad.bj.openstorage.cn
+DOMAIN-SUFFIX,bjimp.voiceads.cn
 DOMAIN-SUFFIX,1rtb.net
 DOMAIN-SUFFIX,1rtb.com
 DOMAIN-SUFFIX,halomobi.com
@@ -528,9 +528,9 @@ DOMAIN,oth.str.mdt.qq.com
 DOMAIN,h.trace.qq.com
 DOMAIN,sdk.e.qq.com
 DOMAIN,tangram.e.qq.com
-DOMAIN,trace.qq.com
-DOMAIN,trace.video.qq.com
-DOMAIN-KEYWORD,ad.hunyuan.tencent.com
+DOMAIN-SUFFIX,trace.qq.com
+DOMAIN-SUFFIX,trace.video.qq.com
+DOMAIN-SUFFIX,ad.hunyuan.tencent.com
 DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN-SUFFIX,imtmp.net
