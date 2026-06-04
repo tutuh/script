@@ -39,7 +39,6 @@ DOMAIN-SUFFIX,cmcore.com
 DOMAIN-SUFFIX,cnzz.com
 DOMAIN-SUFFIX,cnzzlink.com
 DOMAIN-SUFFIX,coremetrics.com
-DOMAIN-SUFFIX,crosschannel.com
 DOMAIN-SUFFIX,daoyoudao.com
 DOMAIN-SUFFIX,dianjoy.com
 DOMAIN-SUFFIX,dianru.com
@@ -55,12 +54,6 @@ DOMAIN-SUFFIX,immob.cn
 DOMAIN-SUFFIX,inad.com
 DOMAIN-SUFFIX,intely.cn
 DOMAIN-SUFFIX,ipinyou.com
-DOMAIN-SUFFIX,irs01.net
-DOMAIN-SUFFIX,irs09.com
-DOMAIN-SUFFIX,jesgoo.com
-DOMAIN-SUFFIX,jusha.com
-DOMAIN-SUFFIX,kejet.com
-DOMAIN-SUFFIX,kejet.net
 DOMAIN-SUFFIX,madhouse.cn
 DOMAIN-SUFFIX,magicwindow.cn
 DOMAIN-SUFFIX,maysunmedia.com
@@ -122,11 +115,3 @@ DOMAIN-SUFFIX,trafficjunky.com
 DOMAIN-SUFFIX,tribalfusion.com
 DOMAIN-SUFFIX,voicefive.com
 DOMAIN-SUFFIX,zedo.com
-
-# 垃圾站点****************
-DOMAIN-SUFFIX,11h5.com
-DOMAIN-SUFFIX,1kxun.mobi
-DOMAIN-SUFFIX,appget.cn
-DOMAIN-SUFFIX,appuu.cn
-DOMAIN-SUFFIX,huodonghezi.cn
-DOMAIN-SUFFIX,win-stock.com.cn
