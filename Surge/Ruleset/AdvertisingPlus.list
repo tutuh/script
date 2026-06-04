@@ -421,8 +421,7 @@ DOMAIN-SUFFIX,zeustechnology.com
 DOMAIN-SUFFIX,zucks.net
 DOMAIN-SUFFIX,zumobi.com
 
-# =======  广告平台by可莉  ======= #
-
+# ==== 广告平台 (By 可莉) ==== #
 DOMAIN,lf-ad-ies.bytecdn.cn
 DOMAIN,dig.bdurl.net
 DOMAIN-SUFFIX,pangle.io
@@ -479,6 +478,7 @@ DOMAIN,mobads-logs.baidu.com
 DOMAIN,mobads.baidu.com
 DOMAIN,nadvideo2.baidu.com
 DOMAIN,wn.pos.baidu.com
+DOMAIN,miniapp-ad.cdn.bcebos.com
 DOMAIN-SUFFIX,union.baidu.cn
 DOMAIN-SUFFIX,union.baidu.com
 DOMAIN,adsmind.gdtimg.com
