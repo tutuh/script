@@ -2,8 +2,6 @@
 # 删除了推送、游戏激励视频，最大程度保留日常 App 正常功能
 
 # 广告关键词
-DOMAIN-KEYWORD,admarvel
-DOMAIN-KEYWORD,adsmogo
 DOMAIN-KEYWORD,adsrvmedia
 DOMAIN-KEYWORD,duomeng
 DOMAIN-KEYWORD,omgmta
@@ -45,8 +43,6 @@ DOMAIN-SUFFIX,crosschannel.com
 DOMAIN-SUFFIX,daoyoudao.com
 DOMAIN-SUFFIX,dianjoy.com
 DOMAIN-SUFFIX,dianru.com
-DOMAIN-SUFFIX,domob.com.cn
-DOMAIN-SUFFIX,domob.org
 DOMAIN-SUFFIX,dxpmedia.com
 DOMAIN-SUFFIX,flashtalking.com
 DOMAIN-SUFFIX,gridsum.com
@@ -70,10 +66,7 @@ DOMAIN-SUFFIX,magicwindow.cn
 DOMAIN-SUFFIX,maysunmedia.com
 DOMAIN-SUFFIX,microad-cn.com
 DOMAIN-SUFFIX,miidi.net
-DOMAIN-SUFFIX,mixpanel.com
-DOMAIN-SUFFIX,mobclix.com
 DOMAIN-SUFFIX,mobgi.com
-DOMAIN-SUFFIX,mxpnl.com
 DOMAIN-SUFFIX,o2omobi.com
 DOMAIN-SUFFIX,oneapm.com
 DOMAIN-SUFFIX,optimix.cn
@@ -82,7 +75,6 @@ DOMAIN-SUFFIX,sitemeter.com
 DOMAIN-SUFFIX,social-touch.com
 DOMAIN-SUFFIX,touclick.com
 DOMAIN-SUFFIX,trafficmp.com
-DOMAIN-SUFFIX,union-wifi.com
 DOMAIN-SUFFIX,voiceads.com
 DOMAIN-SUFFIX,vpon.com
 DOMAIN-SUFFIX,wwads.cn
@@ -111,14 +103,11 @@ DOMAIN-SUFFIX,adtechus.com
 DOMAIN-SUFFIX,beintoo.com
 DOMAIN-SUFFIX,bidtheatre.com
 DOMAIN-SUFFIX,bidvertiser.com
-DOMAIN-SUFFIX,casalemedia.com
 DOMAIN-SUFFIX,celtra.com
 DOMAIN-SUFFIX,directrev.com
 DOMAIN-SUFFIX,effectivemeasure.com
 DOMAIN-SUFFIX,effectivemeasure.net
 DOMAIN-SUFFIX,extend.tv
-DOMAIN-SUFFIX,fastclick.com
-DOMAIN-SUFFIX,fastclick.net
 DOMAIN-SUFFIX,gosquared.com
 DOMAIN-SUFFIX,heyzap.com
 DOMAIN-SUFFIX,histats.com
@@ -127,14 +116,10 @@ DOMAIN-SUFFIX,hot-mob.com
 DOMAIN-SUFFIX,i-mobile.co.jp
 DOMAIN-SUFFIX,imrworldwide.com
 DOMAIN-SUFFIX,intentiq.com
-DOMAIN-SUFFIX,leadbolt.com
-DOMAIN-SUFFIX,leadbolt.net
 DOMAIN-SUFFIX,leadboltads.net
 DOMAIN-SUFFIX,marketgid.com
 DOMAIN-SUFFIX,mgid.com
-DOMAIN-SUFFIX,millennialmedia.com
 DOMAIN-SUFFIX,mobfox.com
-DOMAIN-SUFFIX,mojiva.com
 DOMAIN-SUFFIX,plista.com
 DOMAIN-SUFFIX,revdepo.com
 DOMAIN-SUFFIX,startapp.com
