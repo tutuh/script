@@ -55,7 +55,6 @@ DOMAIN-SUFFIX,a9.com
 DOMAIN-SUFFIX,aarki.com
 DOMAIN-SUFFIX,aarki.net
 DOMAIN-SUFFIX,abtasty.com
-DOMAIN-SUFFIX,actionpay.ru
 DOMAIN-SUFFIX,ad-balancer.at
 DOMAIN-SUFFIX,ad-brix.com
 DOMAIN-SUFFIX,ad-center.com
@@ -70,9 +69,7 @@ DOMAIN-SUFFIX,ad-srv.co
 DOMAIN-SUFFIX,ad-sys.com
 DOMAIN-SUFFIX,ad.daum.net
 DOMAIN-SUFFIX,ad.g.daum.net
-DOMAIN-SUFFIX,ad1.ru
 DOMAIN-SUFFIX,ad1data.com
-DOMAIN-SUFFIX,ad4.com.cn
 DOMAIN-SUFFIX,adacado.com
 DOMAIN-SUFFIX,adadapted.com
 DOMAIN-SUFFIX,adasiaholdings.com
@@ -82,8 +79,6 @@ DOMAIN-SUFFIX,adcdnx.com
 DOMAIN-SUFFIX,adcel.co
 DOMAIN-SUFFIX,adchina.com
 DOMAIN-SUFFIX,adcloud.jp
-DOMAIN-SUFFIX,adcocktail.com
-DOMAIN-SUFFIX,adcomplete.ru
 DOMAIN-SUFFIX,addapptr.com
 DOMAIN-SUFFIX,addict-mobile.net
 DOMAIN-SUFFIX,addragon.com
@@ -122,7 +117,6 @@ DOMAIN-SUFFIX,adtrace.org
 DOMAIN-SUFFIX,advertising.com
 DOMAIN-SUFFIX,adxadserv.com
 DOMAIN-SUFFIX,adzerk.net
-DOMAIN-SUFFIX,airpush.com
 DOMAIN-SUFFIX,algovid.com
 DOMAIN-SUFFIX,amazon-adsystem.com
 DOMAIN-SUFFIX,amobee.com
@@ -131,7 +125,6 @@ DOMAIN-SUFFIX,appier.net
 DOMAIN-SUFFIX,appliedq.com
 DOMAIN-SUFFIX,apxadtracking.net
 DOMAIN-SUFFIX,aralego.com
-DOMAIN-SUFFIX,atomhike.com
 DOMAIN-SUFFIX,atplay.cn
 DOMAIN-SUFFIX,axonix.com
 DOMAIN-SUFFIX,bizible.com
@@ -147,7 +140,6 @@ DOMAIN-SUFFIX,criteo.com
 DOMAIN-SUFFIX,criteo.net
 DOMAIN-SUFFIX,crwdcntrl.net
 DOMAIN-SUFFIX,ctrmi.com
-DOMAIN-SUFFIX,dafapromo.com
 DOMAIN-SUFFIX,digitalpimpnetwork.com
 DOMAIN-SUFFIX,doubleverify.com
 DOMAIN-SUFFIX,dtscout.com
@@ -158,7 +150,6 @@ DOMAIN-SUFFIX,exoclick.com
 DOMAIN-SUFFIX,exosrv.com
 DOMAIN-SUFFIX,go2cloud.org
 DOMAIN-SUFFIX,growingio.com
-DOMAIN-SUFFIX,haloapps.com
 DOMAIN-SUFFIX,hypers.com
 DOMAIN-SUFFIX,idealads.net
 DOMAIN-SUFFIX,inmobi.net
@@ -166,10 +157,8 @@ DOMAIN-SUFFIX,inmobicdn.cn
 DOMAIN-SUFFIX,innovid.com
 DOMAIN-SUFFIX,inpagepush.com
 DOMAIN-SUFFIX,insurads.com
-DOMAIN-SUFFIX,irs01.com
 DOMAIN-SUFFIX,juicyads.com
 DOMAIN-SUFFIX,liveadvert.com
-DOMAIN-SUFFIX,localytics.com
 DOMAIN-SUFFIX,measurementapi.com
 DOMAIN-SUFFIX,medialytics.com
 DOMAIN-SUFFIX,mediav.com
@@ -186,7 +175,6 @@ DOMAIN-SUFFIX,narrativ.com
 DOMAIN-SUFFIX,nativeads.com
 DOMAIN-SUFFIX,nbcuni.com
 DOMAIN-SUFFIX,ncaudienceexchange.com
-DOMAIN-SUFFIX,netizen.co
 DOMAIN-SUFFIX,networkad.net
 DOMAIN-SUFFIX,ntv.io
 DOMAIN-SUFFIX,ogury.io
@@ -216,7 +204,6 @@ DOMAIN-SUFFIX,polyad.net
 DOMAIN-SUFFIX,popads.media
 DOMAIN-SUFFIX,popads.net
 DOMAIN-SUFFIX,popin.cc
-DOMAIN-SUFFIX,postrelease.com
 DOMAIN-SUFFIX,powerad.ai
 DOMAIN-SUFFIX,prebid.org
 DOMAIN-SUFFIX,presage.io
@@ -278,7 +265,6 @@ DOMAIN-SUFFIX,smaato.net
 DOMAIN-SUFFIX,smac-ad.com
 DOMAIN-SUFFIX,smartadserver.com
 DOMAIN-SUFFIX,smartclip.net
-DOMAIN-SUFFIX,smartnews-ads.com
 DOMAIN-SUFFIX,smgru.net
 DOMAIN-SUFFIX,snapads.com
 DOMAIN-SUFFIX,sojern.com
@@ -318,8 +304,6 @@ DOMAIN-SUFFIX,thetrafficstat.net
 DOMAIN-SUFFIX,traffichunt.com
 DOMAIN-SUFFIX,trafficjunky.net
 DOMAIN-SUFFIX,trafmag.com
-DOMAIN-SUFFIX,traktum.com
-DOMAIN-SUFFIX,tremorhub.com
 DOMAIN-SUFFIX,tresensa.com
 DOMAIN-SUFFIX,trfmxt.com
 DOMAIN-SUFFIX,trvdp.com
@@ -332,7 +316,6 @@ DOMAIN-SUFFIX,unimhk.com
 DOMAIN-SUFFIX,unrulymedia.com
 DOMAIN-SUFFIX,upltv.com
 DOMAIN-SUFFIX,uprivaladserver.net
-DOMAIN-SUFFIX,upsight-api.com
 DOMAIN-SUFFIX,upsnap.com
 DOMAIN-SUFFIX,usekahuna.com
 DOMAIN-SUFFIX,vamaker.com
@@ -361,11 +344,9 @@ DOMAIN-SUFFIX,wordstream.com
 DOMAIN-SUFFIX,wrinkads.com
 DOMAIN-SUFFIX,wsod.com
 DOMAIN-SUFFIX,xapads.com
-DOMAIN-SUFFIX,xdrig.com
 DOMAIN-SUFFIX,xlviirdr.com
 DOMAIN-SUFFIX,xmlwizard.com
 DOMAIN-SUFFIX,xpanama.net
-DOMAIN-SUFFIX,xy7elite.com
 DOMAIN-SUFFIX,ybrantdigital.com
 DOMAIN-SUFFIX,yeahmobi.com
 DOMAIN-SUFFIX,yieldlove-ad-serving.net
@@ -376,7 +357,6 @@ DOMAIN-SUFFIX,ymtracking.com
 DOMAIN-SUFFIX,yoc-performance.com
 DOMAIN-SUFFIX,yoc.com
 DOMAIN-SUFFIX,yomedia.vn
-DOMAIN-SUFFIX,yottos.com
 DOMAIN-SUFFIX,youappi.com
 DOMAIN-SUFFIX,zapr.in
 DOMAIN-SUFFIX,zemanta.com
