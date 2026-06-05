@@ -11,7 +11,6 @@ DOMAIN,toots-a.akamaihd.net
 DOMAIN-SUFFIX,ad.g.daum.net
 DOMAIN-SUFFIX,ads-twitter.com
 DOMAIN-SUFFIX,cacafly.com
-DOMAIN-SUFFIX,nbcuni.com
 DOMAIN-SUFFIX,serving-sys.cn
 DOMAIN-SUFFIX,serving-sys.com
 DOMAIN-SUFFIX,shoofle.tv
@@ -74,6 +73,7 @@ DOMAIN-SUFFIX,dianjoy.com
 DOMAIN-SUFFIX,dianru.com
 DOMAIN-SUFFIX,dxpmedia.com
 DOMAIN-SUFFIX,guomob.com
+DOMAIN-SUFFIX,hypers.com
 DOMAIN-SUFFIX,immob.cn
 DOMAIN-SUFFIX,inad.com
 DOMAIN-SUFFIX,ipinyou.com
@@ -81,6 +81,7 @@ DOMAIN-SUFFIX,madhouse.cn
 DOMAIN-SUFFIX,medialytics.com
 DOMAIN-SUFFIX,microad-cn.com
 DOMAIN-SUFFIX,mobgi.com
+DOMAIN-SUFFIX,optaim.com
 DOMAIN-SUFFIX,optimix.cn
 DOMAIN-SUFFIX,polyad.net
 DOMAIN-SUFFIX,rekmob.com
@@ -113,7 +114,6 @@ DOMAIN-SUFFIX,unimhk.com
 DOMAIN-SUFFIX,videozhishi.com
 DOMAIN-SUFFIX,yeahmobi.com
 DOMAIN-SUFFIX,ymtracking.com
-DOMAIN-SUFFIX,yomedia.vn
 
 # > Ad-Global
 DOMAIN,abema-adx.ameba.jp
@@ -193,7 +193,6 @@ DOMAIN-SUFFIX,dtscout.com
 DOMAIN-SUFFIX,ero-advertising.com
 DOMAIN-SUFFIX,eroadvertising.com
 DOMAIN-SUFFIX,exdynsrv.com
-DOMAIN-SUFFIX,hypers.com
 DOMAIN-SUFFIX,i-mobile.co.jp
 DOMAIN-SUFFIX,inpagepush.com
 DOMAIN-SUFFIX,insurads.com
@@ -215,7 +214,6 @@ DOMAIN-SUFFIX,omgpl.com
 DOMAIN-SUFFIX,omguk.com
 DOMAIN-SUFFIX,omnilocal.ai
 DOMAIN-SUFFIX,open-adx.com
-DOMAIN-SUFFIX,optaim.com
 DOMAIN-SUFFIX,outbrainimg.com
 DOMAIN-SUFFIX,ownlocal.com
 DOMAIN-SUFFIX,performancehorizon.com
@@ -335,6 +333,7 @@ DOMAIN-SUFFIX,yieldoptimizer.com
 DOMAIN-SUFFIX,yllix.com
 DOMAIN-SUFFIX,yoc-performance.com
 DOMAIN-SUFFIX,yoc.com
+DOMAIN-SUFFIX,yomedia.vn
 DOMAIN-SUFFIX,zapr.in
 DOMAIN-SUFFIX,zedo.com
 DOMAIN-SUFFIX,zemanta.com
