@@ -4,6 +4,8 @@
 DOMAIN-KEYWORD,adservice
 
 # ======= (0) ======= #
+# > 12306
+DOMAIN,ad.12306.cn
 # > 360
 DOMAIN,ad.jia.360.cn
 DOMAIN,ad.life.360.cn
@@ -18,6 +20,7 @@ DOMAIN,et.tanx.com
 DOMAIN,df.tanx.com
 DOMAIN,opehs.tanx.com
 DOMAIN,ems.youku.com
+DOMAIN,partner.uc.cn
 
 # ======= (B) ======= #
 # > 百度
@@ -34,8 +37,14 @@ DOMAIN,feed-image.baidu.com
 DOMAIN,cpro.baidustatic.com
 DOMAIN-SUFFIX,union.baidu.cn
 DOMAIN-SUFFIX,union.baidu.com
+DOMAIN,dig.bdurl.net
+DOMAIN,miniapp-ad.cdn.bcebos.com
 # > 百度地图
 DOMAIN,afdconf.baidu.com
+
+# ======= (C) ======= #
+# > 彩云天气
+DOMAIN,ad.caiyunapp.com
 
 # ======= (F) ======= #
 # > 飞常准
@@ -68,7 +77,7 @@ DOMAIN,img.auction-ads.wpscdn.cn
 DOMAIN,mobad.ijinshan.com
 DOMAIN,ups.ksmobile.net
 DOMAIN,ws.ksmobile.net
-# > 今日头条
+# > 今日头条 / 字节
 DOMAIN,ad.toutiao.com
 DOMAIN,dsp.toutiao.com
 DOMAIN,pangolin.snssdk.com
@@ -79,6 +88,8 @@ DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
 DOMAIN-SUFFIX,pangle.io
 DOMAIN,lf-ad-ies.bytecdn.cn
 DOMAIN,nativeadv.dftoutiao.com
+DOMAIN-SUFFIX,-ad-sign.byteimg.com
+DOMAIN-SUFFIX,-ad.byteoversea.com
 DOMAIN-KEYWORD,pglstatp
 DOMAIN-KEYWORD,panplayable-toutiao
 
@@ -118,8 +129,10 @@ DOMAIN,applogapi.autohome.com.cn
 DOMAIN,rd.autohome.com.cn
 
 # ======= (S) ======= #
-# 数字联盟
+# > 数字联盟
 DOMAIN-SUFFIX,shuzilm.cn
+# > 苏宁
+DOMAIN,mads.suning.com
 
 # ======= (T) ======= #
 # > 太平洋保险
@@ -148,6 +161,10 @@ DOMAIN-SUFFIX,ad.hunyuan.tencent.com
 DOMAIN,nex.163.com
 DOMAIN,iad.g.163.com
 DOMAIN,gorgon.youdao.com
+
+# ======= (X) ======= #
+# > 携程
+DOMAIN,ma-adx.ctrip.com
 
 # ======= (Y) ======= #
 # > 云闪付
