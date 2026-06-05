@@ -1,5 +1,12 @@
 # Advertising Plus
 
+# > General
+DOMAIN-KEYWORD,adsrvmedia
+DOMAIN-KEYWORD,duomeng
+DOMAIN-KEYWORD,omgmta
+DOMAIN-KEYWORD,zjtoolbar
+
+# > Ads
 DOMAIN,ads.linkedin.com
 DOMAIN,abema-adx.ameba.jp
 DOMAIN,ad-cn.jovcloud.com
@@ -334,7 +341,83 @@ DOMAIN-SUFFIX,zeustechnology.com
 DOMAIN-SUFFIX,zucks.net
 DOMAIN-SUFFIX,zumobi.com
 
+# > Ad-China
+DOMAIN-SUFFIX,99youmeng.com
+DOMAIN-SUFFIX,acxiom-online.com
+DOMAIN-SUFFIX,adcome.cn
+DOMAIN-SUFFIX,adinfuse.com
+DOMAIN-SUFFIX,adpolestar.net
+DOMAIN-SUFFIX,adquan.com
+DOMAIN-SUFFIX,adsunflower.com
+DOMAIN-SUFFIX,adsunion.com
+DOMAIN-SUFFIX,adview.cn
+DOMAIN-SUFFIX,adwetec.com
+DOMAIN-SUFFIX,adxmi.com
+DOMAIN-SUFFIX,allyes.cn
+DOMAIN-SUFFIX,allyes.com
+DOMAIN-SUFFIX,baifendian.com
+DOMAIN-SUFFIX,biddingos.com
+DOMAIN-SUFFIX,biddingx.com
+DOMAIN-SUFFIX,buysellads.com
+DOMAIN-SUFFIX,cacafly.com
+DOMAIN-SUFFIX,chance-ad.com
+DOMAIN-SUFFIX,chengadx.com
+DOMAIN-SUFFIX,clickadu.com
+DOMAIN-SUFFIX,clickzs.com
+DOMAIN-SUFFIX,daoyoudao.com
+DOMAIN-SUFFIX,dianjoy.com
+DOMAIN-SUFFIX,dianru.com
+DOMAIN-SUFFIX,dxpmedia.com
+DOMAIN-SUFFIX,guomob.com
+DOMAIN-SUFFIX,immob.cn
+DOMAIN-SUFFIX,inad.com
+DOMAIN-SUFFIX,ipinyou.com
+DOMAIN-SUFFIX,madhouse.cn
+DOMAIN-SUFFIX,microad-cn.com
+DOMAIN-SUFFIX,mobgi.com
+DOMAIN-SUFFIX,optimix.cn
+DOMAIN-SUFFIX,plugrush.com
+DOMAIN-SUFFIX,social-touch.com
+DOMAIN-SUFFIX,touclick.com
+DOMAIN-SUFFIX,trafficmp.com
+DOMAIN-SUFFIX,voiceads.com
+DOMAIN-SUFFIX,vpon.com
+DOMAIN-SUFFIX,wwads.cn
+DOMAIN-SUFFIX,youxiaoad.com
+DOMAIN-SUFFIX,yoyi.com.cn
+DOMAIN-SUFFIX,yoyi.tv
+DOMAIN-SUFFIX,zcdsp.com
 
+# > Ad-Global
+DOMAIN-SUFFIX,acuityplatform.com
+DOMAIN-SUFFIX,ad-survey.com
+DOMAIN-SUFFIX,adfurikun.jp
+DOMAIN-SUFFIX,adition.com
+DOMAIN-SUFFIX,admedia.com
+DOMAIN-SUFFIX,adriver.ru
+DOMAIN-SUFFIX,adservice.com
+DOMAIN-SUFFIX,adtaily.com
+DOMAIN-SUFFIX,adtech.de
+DOMAIN-SUFFIX,adtechjp.com
+DOMAIN-SUFFIX,adtechus.com
+DOMAIN-SUFFIX,beintoo.com
+DOMAIN-SUFFIX,bidtheatre.com
+DOMAIN-SUFFIX,bidvertiser.com
+DOMAIN-SUFFIX,celtra.com
+DOMAIN-SUFFIX,directrev.com
+DOMAIN-SUFFIX,i-mobile.co.jp
+DOMAIN-SUFFIX,intentiq.com
+DOMAIN-SUFFIX,marketgid.com
+DOMAIN-SUFFIX,mgid.com
+DOMAIN-SUFFIX,mobfox.com
+DOMAIN-SUFFIX,plista.com
+DOMAIN-SUFFIX,startapp.com
+DOMAIN-SUFFIX,startappexchange.com
+DOMAIN-SUFFIX,trafficjunky.com
+DOMAIN-SUFFIX,tribalfusion.com
+DOMAIN-SUFFIX,zedo.com
+
+# > Ad-Extras
 DOMAIN-SUFFIX,iflyad.bj.openstorage.cn
 DOMAIN-SUFFIX,bjimp.voiceads.cn
 DOMAIN-SUFFIX,1rtb.net
