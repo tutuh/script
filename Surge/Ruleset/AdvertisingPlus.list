@@ -8,16 +8,14 @@ DOMAIN-KEYWORD,zjtoolbar
 
 # > Ads
 DOMAIN,toots-a.akamaihd.net
-DOMAIN-SUFFIX,ad.g.daum.net
+DOMAIN-SUFFIX,adasiaholdings.com
 DOMAIN-SUFFIX,ads-twitter.com
 DOMAIN-SUFFIX,cacafly.com
 DOMAIN-SUFFIX,serving-sys.cn
 DOMAIN-SUFFIX,serving-sys.com
 DOMAIN-SUFFIX,shoofle.tv
 DOMAIN-SUFFIX,silvermob.com
-DOMAIN-SUFFIX,sunnyworks.co.kr
 DOMAIN-SUFFIX,tamedia.com.tw
-DOMAIN-SUFFIX,tapjoyads.com
 DOMAIN-SUFFIX,upltv.com
 DOMAIN-SUFFIX,vpon.com
 
@@ -43,7 +41,6 @@ DOMAIN,kad.gotokeep.com
 DOMAIN,saad.ms.zhangyue.net
 DOMAIN-SUFFIX,99youmeng.com
 DOMAIN-SUFFIX,ad1data.com
-DOMAIN-SUFFIX,adasiaholdings.com
 DOMAIN-SUFFIX,adcome.cn
 DOMAIN-SUFFIX,adfunlink.com
 DOMAIN-SUFFIX,adinall.com
@@ -150,6 +147,7 @@ DOMAIN-SUFFIX,ad-score.com
 DOMAIN-SUFFIX,ad-srv.co
 DOMAIN-SUFFIX,ad-survey.com
 DOMAIN-SUFFIX,ad-sys.com
+DOMAIN-SUFFIX,ad.g.daum.net
 DOMAIN-SUFFIX,adacado.com
 DOMAIN-SUFFIX,adadapted.com
 DOMAIN-SUFFIX,adblox.net
@@ -275,10 +273,12 @@ DOMAIN-SUFFIX,startappservice.com
 DOMAIN-SUFFIX,steepto.com
 DOMAIN-SUFFIX,stickyadstv.com
 DOMAIN-SUFFIX,sumome.com
+DOMAIN-SUFFIX,sunnyworks.co.kr
 DOMAIN-SUFFIX,superad2.com.sg
 DOMAIN-SUFFIX,superadbox.com
 DOMAIN-SUFFIX,synergy-e.com
 DOMAIN-SUFFIX,tabmo.io
+DOMAIN-SUFFIX,tapjoyads.com
 DOMAIN-SUFFIX,tappx.com
 DOMAIN-SUFFIX,tapresearch.com
 DOMAIN-SUFFIX,taptapnetworks.com
