@@ -1,5 +1,14 @@
 # Privacy
-# By ConnersHua
+
+
+DOMAIN,logrcv.aiclk.com
+DOMAIN,sdklog.zhangyuyidong.cn
+
+DOMAIN,app-analytics-services.com
+DOMAIN-SUFFIX,thetrafficstat.net
+
+DOMAIN-SUFFIX,adlooxtracking.com
+DOMAIN-SUFFIX,adtrace.org
 
 DOMAIN,applog.uc.cn
 DOMAIN,maplocatesdksnapshot.d.meituan.net
