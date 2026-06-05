@@ -7,6 +7,8 @@ DOMAIN-KEYWORD,omgmta
 DOMAIN-KEYWORD,zjtoolbar
 
 # > Ads
+DOMAIN,adv.ettoday.net
+DOMAIN,itad.linetv.tw
 DOMAIN,toots-a.akamaihd.net
 DOMAIN-SUFFIX,adasiaholdings.com
 DOMAIN-SUFFIX,ads-twitter.com
@@ -128,10 +130,8 @@ DOMAIN,ads.superawesome.tv
 DOMAIN,adserver.pandora.com
 DOMAIN,adservice.tohsoft.com
 DOMAIN,adv.bandi.so
-DOMAIN,adv.ettoday.net
 DOMAIN,api-ad.kajicam.com
 DOMAIN,cf-ads.pinger.com
-DOMAIN,itad.linetv.tw
 DOMAIN,videoads-cloud.rovio.com
 DOMAIN-SUFFIX,3cinteractive.com
 DOMAIN-SUFFIX,a-ads.com
