@@ -8,7 +8,6 @@ DOMAIN-KEYWORD,omgmta
 DOMAIN-KEYWORD,zjtoolbar
 
 # 广告联盟-国内****************
-DOMAIN-SUFFIX,99click.com
 DOMAIN-SUFFIX,99youmeng.com
 DOMAIN-SUFFIX,acxiom-online.com
 DOMAIN-SUFFIX,adcome.cn
@@ -22,42 +21,28 @@ DOMAIN-SUFFIX,adwetec.com
 DOMAIN-SUFFIX,adxmi.com
 DOMAIN-SUFFIX,allyes.cn
 DOMAIN-SUFFIX,allyes.com
-DOMAIN-SUFFIX,analysys.cn
 DOMAIN-SUFFIX,baifendian.com
 DOMAIN-SUFFIX,biddingos.com
 DOMAIN-SUFFIX,biddingx.com
 DOMAIN-SUFFIX,buysellads.com
 DOMAIN-SUFFIX,cacafly.com
 DOMAIN-SUFFIX,chance-ad.com
-DOMAIN-SUFFIX,chartbeat.com
 DOMAIN-SUFFIX,chengadx.com
 DOMAIN-SUFFIX,clickadu.com
-DOMAIN-SUFFIX,clicktracks.com
 DOMAIN-SUFFIX,clickzs.com
-DOMAIN-SUFFIX,cmcore.com
-DOMAIN-SUFFIX,cnzz.com
-DOMAIN-SUFFIX,cnzzlink.com
-DOMAIN-SUFFIX,coremetrics.com
 DOMAIN-SUFFIX,daoyoudao.com
 DOMAIN-SUFFIX,dianjoy.com
 DOMAIN-SUFFIX,dianru.com
 DOMAIN-SUFFIX,dxpmedia.com
-DOMAIN-SUFFIX,flashtalking.com
-DOMAIN-SUFFIX,gridsum.com
-DOMAIN-SUFFIX,gridsumdissector.cn
-DOMAIN-SUFFIX,gridsumdissector.com
 DOMAIN-SUFFIX,guomob.com
 DOMAIN-SUFFIX,immob.cn
 DOMAIN-SUFFIX,inad.com
 DOMAIN-SUFFIX,ipinyou.com
 DOMAIN-SUFFIX,madhouse.cn
-DOMAIN-SUFFIX,magicwindow.cn
 DOMAIN-SUFFIX,microad-cn.com
 DOMAIN-SUFFIX,mobgi.com
-DOMAIN-SUFFIX,oneapm.com
 DOMAIN-SUFFIX,optimix.cn
 DOMAIN-SUFFIX,plugrush.com
-DOMAIN-SUFFIX,sitemeter.com
 DOMAIN-SUFFIX,social-touch.com
 DOMAIN-SUFFIX,touclick.com
 DOMAIN-SUFFIX,trafficmp.com
@@ -68,6 +53,22 @@ DOMAIN-SUFFIX,youxiaoad.com
 DOMAIN-SUFFIX,yoyi.com.cn
 DOMAIN-SUFFIX,yoyi.tv
 DOMAIN-SUFFIX,zcdsp.com
+# 隐私联盟-国内****************
+DOMAIN-SUFFIX,99click.com
+DOMAIN-SUFFIX,analysys.cn
+DOMAIN-SUFFIX,chartbeat.com
+DOMAIN-SUFFIX,clicktracks.com
+DOMAIN-SUFFIX,cmcore.com
+DOMAIN-SUFFIX,cnzz.com
+DOMAIN-SUFFIX,cnzzlink.com
+DOMAIN-SUFFIX,coremetrics.com
+DOMAIN-SUFFIX,flashtalking.com
+DOMAIN-SUFFIX,gridsum.com
+DOMAIN-SUFFIX,gridsumdissector.cn
+DOMAIN-SUFFIX,gridsumdissector.com
+DOMAIN-SUFFIX,magicwindow.cn
+DOMAIN-SUFFIX,oneapm.com
+DOMAIN-SUFFIX,sitemeter.com
 
 # 广告联盟-国外****************
 DOMAIN-SUFFIX,acuityplatform.com
@@ -86,13 +87,7 @@ DOMAIN-SUFFIX,bidtheatre.com
 DOMAIN-SUFFIX,bidvertiser.com
 DOMAIN-SUFFIX,celtra.com
 DOMAIN-SUFFIX,directrev.com
-DOMAIN-SUFFIX,effectivemeasure.com
-DOMAIN-SUFFIX,effectivemeasure.net
-DOMAIN-SUFFIX,gosquared.com
-DOMAIN-SUFFIX,histats.com
-DOMAIN-SUFFIX,hitslink.com
 DOMAIN-SUFFIX,i-mobile.co.jp
-DOMAIN-SUFFIX,imrworldwide.com
 DOMAIN-SUFFIX,intentiq.com
 DOMAIN-SUFFIX,marketgid.com
 DOMAIN-SUFFIX,mgid.com
@@ -100,7 +95,15 @@ DOMAIN-SUFFIX,mobfox.com
 DOMAIN-SUFFIX,plista.com
 DOMAIN-SUFFIX,startapp.com
 DOMAIN-SUFFIX,startappexchange.com
-DOMAIN-SUFFIX,statcounter.com
 DOMAIN-SUFFIX,trafficjunky.com
 DOMAIN-SUFFIX,tribalfusion.com
 DOMAIN-SUFFIX,zedo.com
+# 隐私联盟-国外****************
+DOMAIN-SUFFIX,effectivemeasure.com
+DOMAIN-SUFFIX,effectivemeasure.net
+DOMAIN-SUFFIX,gosquared.com
+DOMAIN-SUFFIX,histats.com
+DOMAIN-SUFFIX,hitslink.com
+DOMAIN-SUFFIX,imrworldwide.com
+DOMAIN-SUFFIX,statcounter.com
+
