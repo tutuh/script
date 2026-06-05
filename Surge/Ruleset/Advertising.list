@@ -14,10 +14,26 @@ DOMAIN,ad.iot.360.cn
 DOMAIN-SUFFIX,unityads.unity3d.com
 # > Alibaba
 DOMAIN,tunion-api.m.taobao.com
+DOMAIN,et.tanx.com
+DOMAIN,df.tanx.com
+DOMAIN,opehs.tanx.com
+DOMAIN,ems.youku.com
 
 # ======= (B) ======= #
 # > 百度
 DOMAIN-SUFFIX,pos.baidu.com
+DOMAIN,afd.baidu.com
+DOMAIN,als.baidu.com
+DOMAIN,bgg.baidu.com
+DOMAIN,click-bes.baidu.com
+DOMAIN,eclick.baidu.com
+DOMAIN,mobads.baidu.com
+DOMAIN,nadvideo2.baidu.com
+DOMAIN,wn.pos.baidu.com
+DOMAIN,feed-image.baidu.com
+DOMAIN,cpro.baidustatic.com
+DOMAIN-SUFFIX,union.baidu.cn
+DOMAIN-SUFFIX,union.baidu.com
 # > 百度地图
 DOMAIN,afdconf.baidu.com
 
@@ -33,6 +49,10 @@ DOMAIN,optimus-ads.amap.com
 DOMAIN,optimus-ads.amap.com.w.alikunlun.com
 
 # ======= (J) ======= #
+# > 京东
+DOMAIN,dsp-x.jd.com
+DOMAIN,im-x.jd.com
+DOMAIN,janapi.jd.com
 # > 驾校一点通
 DOMAIN,richmanapi.jxedt.com
 DOMAIN,richmanapi.ksedt.com
@@ -56,10 +76,27 @@ DOMAIN-SUFFIX,pangolin-dsp-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
+DOMAIN-SUFFIX,pangle.io
+DOMAIN,lf-ad-ies.bytecdn.cn
+DOMAIN,nativeadv.dftoutiao.com
+DOMAIN-KEYWORD,pglstatp
+DOMAIN-KEYWORD,panplayable-toutiao
+
+# ======= (K) ======= #
+# > 快手
+DOMAIN,gdfp.gifshow.com
+DOMAIN,open.e.kuaishou.com
+DOMAIN,open.e.kuaishou.cn
+DOMAIN,adtrack.e.kuaishou.com
+DOMAIN-SUFFIX,partner.gifshow.com
+DOMAIN-SUFFIX,adukwai.com
+DOMAIN-SUFFIX,adkwai.com
 
 # ======= (M) ======= #
 # > 米家
 DOMAIN,sdkconfig.ad.xiaomi.com
+DOMAIN,api.ad.xiaomi.com
+DOMAIN,ad.xiaomi.com
 # > 买单吧
 DOMAIN,c-hzgt2.getui.com
 
@@ -87,6 +124,30 @@ DOMAIN-SUFFIX,shuzilm.cn
 # ======= (T) ======= #
 # > 太平洋保险
 DOMAIN,a.cpic.com.cn
+# > 腾讯
+DOMAIN,adsmind.gdtimg.com
+DOMAIN,ads.privacy.qq.com
+DOMAIN,huatuocode.huatuo.qq.com
+DOMAIN,info4.video.qq.com
+DOMAIN,info6.video.qq.com
+DOMAIN,ios.video.mpush.qq.com
+DOMAIN,pgdt.gtimg.cn
+DOMAIN,qzs.gdtimg.com
+DOMAIN,tmead.y.qq.com
+DOMAIN,tmeadbak.y.qq.com
+DOMAIN,tmeadcomm.y.qq.com
+DOMAIN,sdk.e.qq.com
+DOMAIN,tangram.e.qq.com
+DOMAIN-SUFFIX,gdt.qq.com
+DOMAIN-SUFFIX,l.qq.com
+DOMAIN-SUFFIX,ugdtimg.com
+DOMAIN-SUFFIX,ad.hunyuan.tencent.com
+
+# ======= (W) ======= #
+# > 网易
+DOMAIN,nex.163.com
+DOMAIN,iad.g.163.com
+DOMAIN,gorgon.youdao.com
 
 # ======= (Y) ======= #
 # > 云闪付
