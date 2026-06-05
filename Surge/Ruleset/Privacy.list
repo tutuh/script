@@ -83,6 +83,28 @@ DOMAIN-SUFFIX,umv5.com
 DOMAIN-SUFFIX,woopra.com
 DOMAIN-SUFFIX,wootric.com
 DOMAIN-SUFFIX,wrating.com
+DOMAIN-SUFFIX,99click.com
+DOMAIN-SUFFIX,analysys.cn
+DOMAIN-SUFFIX,chartbeat.com
+DOMAIN-SUFFIX,clicktracks.com
+DOMAIN-SUFFIX,cmcore.com
+DOMAIN-SUFFIX,cnzz.com
+DOMAIN-SUFFIX,cnzzlink.com
+DOMAIN-SUFFIX,coremetrics.com
+DOMAIN-SUFFIX,flashtalking.com
+DOMAIN-SUFFIX,gridsum.com
+DOMAIN-SUFFIX,gridsumdissector.cn
+DOMAIN-SUFFIX,gridsumdissector.com
+DOMAIN-SUFFIX,magicwindow.cn
+DOMAIN-SUFFIX,oneapm.com
+DOMAIN-SUFFIX,sitemeter.com
+DOMAIN-SUFFIX,effectivemeasure.com
+DOMAIN-SUFFIX,effectivemeasure.net
+DOMAIN-SUFFIX,gosquared.com
+DOMAIN-SUFFIX,histats.com
+DOMAIN-SUFFIX,hitslink.com
+DOMAIN-SUFFIX,imrworldwide.com
+DOMAIN-SUFFIX,statcounter.com
 
 # > 51.LA
 DOMAIN,js.users.51.la
