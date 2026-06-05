@@ -22,10 +22,8 @@ DOMAIN-SUFFIX,segment.com
 DOMAIN-SUFFIX,segment.io
 DOMAIN-SUFFIX,segmentify.com
 DOMAIN-SUFFIX,sentiance.com
-DOMAIN-SUFFIX,serverbid.com
 DOMAIN-SUFFIX,smartlook.com
 DOMAIN-SUFFIX,socialannex.com
-DOMAIN-SUFFIX,stathat.com
 DOMAIN-SUFFIX,stats-locations.com
 DOMAIN-SUFFIX,tagcommander.com
 DOMAIN-SUFFIX,tailtarget.com
@@ -39,6 +37,20 @@ DOMAIN-SUFFIX,wootric.com
 DOMAIN,ads.linkedin.com
 DOMAIN,analytics.slashdotmedia.com
 DOMAIN,zgsdk.zhugeio.com
+DOMAIN-SUFFIX,appsflyer.com
+DOMAIN-SUFFIX,adjust.com
+DOMAIN-SUFFIX,adj.st
+DOMAIN-SUFFIX,branch.io
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,amplitude.com
+DOMAIN-SUFFIX,mixpanel.com
+DOMAIN-SUFFIX,sensorsdata.cn
+DOMAIN-SUFFIX,sensorsdata.com
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,bugsnag.com
+DOMAIN-SUFFIX,newrelic.com
+DOMAIN-SUFFIX,dynatrace.com
+DOMAIN-SUFFIX,crashlytics.com
 
 # > 51.LA
 DOMAIN,js.users.51.la
