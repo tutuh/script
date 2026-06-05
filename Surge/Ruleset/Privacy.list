@@ -1,6 +1,40 @@
 # Privacy
 # By ConnersHua
 
+DOMAIN,applog.uc.cn
+DOMAIN,maplocatesdksnapshot.d.meituan.net
+DOMAIN,mobads-logs.baidu.com
+DOMAIN,otheve.beacon.qq.com
+DOMAIN,oth.str.mdt.qq.com
+DOMAIN-SUFFIX,umtrack.com
+DOMAIN-SUFFIX,umtrack0.com
+DOMAIN-SUFFIX,umtrack1.com
+DOMAIN-SUFFIX,umtrack2.com
+DOMAIN-SUFFIX,um0.cn
+DOMAIN-SUFFIX,um1.cn
+DOMAIN-SUFFIX,umv0.com
+DOMAIN-SUFFIX,umv5.com
+DOMAIN-SUFFIX,miaozhen.com
+DOMAIN-SUFFIX,admaster.com.cn
+DOMAIN-SUFFIX,crwdcntrl.net
+DOMAIN-SUFFIX,app-analytics-services.com
+DOMAIN-SUFFIX,samba.tv
+DOMAIN-SUFFIX,installtongji.top
+DOMAIN-SUFFIX,installtongji.online
+DOMAIN-SUFFIX,statsinstall.xyz
+DOMAIN-SUFFIX,statchannel.store
+DOMAIN-SUFFIX,statchannel.top
+DOMAIN-SUFFIX,statschannel.xyz
+DOMAIN-SUFFIX,staevent.work
+DOMAIN-SUFFIX,staevent.xyz
+DOMAIN-SUFFIX,opstatistics.com
+DOMAIN-SUFFIX,opstatistics.cn
+DOMAIN-SUFFIX,wrating.com
+DOMAIN-SUFFIX,dratio.com
+DOMAIN,statis.miwuad.com
+
+DOMAIN-SUFFIX,readgps.com
+DOMAIN-SUFFIX,shareaholic.com
 DOMAIN,ads.linkedin.com
 DOMAIN,analytics.slashdotmedia.com
 DOMAIN,zgsdk.zhugeio.com
