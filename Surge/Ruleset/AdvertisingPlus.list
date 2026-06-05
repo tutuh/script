@@ -4,8 +4,6 @@ DOMAIN,ads.linkedin.com
 DOMAIN,abema-adx.ameba.jp
 DOMAIN,ad-cn.jovcloud.com
 DOMAIN,ad-mediation.tuanguwen.com
-DOMAIN,ad.12306.cn
-DOMAIN,ad.caiyunapp.com
 DOMAIN,ad.flurry.com
 DOMAIN,ad.huajiao.com
 DOMAIN,ad.jiemian.com
@@ -39,8 +37,6 @@ DOMAIN,g.ousns.net
 DOMAIN,ggs.myzaker.com
 DOMAIN,itad.linetv.tw
 DOMAIN,kad.gotokeep.com
-DOMAIN,ma-adx.ctrip.com
-DOMAIN,mads.suning.com
 DOMAIN,saad.ms.zhangyue.net
 DOMAIN,toots-a.akamaihd.net
 DOMAIN,videoads-cloud.rovio.com
@@ -340,9 +336,6 @@ DOMAIN-SUFFIX,zucks.net
 DOMAIN-SUFFIX,zumobi.com
 
 # By 可莉
-DOMAIN,dig.bdurl.net
-DOMAIN-SUFFIX,-ad-sign.byteimg.com
-DOMAIN-SUFFIX,-ad.byteoversea.com
 DOMAIN-SUFFIX,iflyad.bj.openstorage.cn
 DOMAIN-SUFFIX,bjimp.voiceads.cn
 DOMAIN-SUFFIX,1rtb.net
@@ -371,7 +364,6 @@ DOMAIN-SUFFIX,popadshop.com
 DOMAIN-SUFFIX,admobile.vip
 DOMAIN-SUFFIX,yksdks.com
 DOMAIN-SUFFIX,dutils.com
-DOMAIN,miniapp-ad.cdn.bcebos.com
 DOMAIN-SUFFIX,imtmp.net
 DOMAIN-SUFFIX,opadlink.com
 DOMAIN-SUFFIX,oplinking.com
@@ -387,7 +379,6 @@ DOMAIN-SUFFIX,xixikf.com
 DOMAIN-SUFFIX,mobmore.com
 DOMAIN-SUFFIX,eshiqi.com
 DOMAIN-SUFFIX,ubixioe.com
-DOMAIN,partner.uc.cn
 DOMAIN,cpc-service-square.aiclk.com
 DOMAIN-SUFFIX,toponadss.com
 DOMAIN-SUFFIX,motowoo.com
