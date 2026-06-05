@@ -22,6 +22,8 @@ DOMAIN-SUFFIX,upltv.com
 DOMAIN-SUFFIX,vpon.com
 
 # > Ad-China
+DOMAIN-SUFFIX,salmonads.com
+DOMAIN-SUFFIX,popin.cc
 DOMAIN,ad-cn.jovcloud.com
 DOMAIN,ad-mediation.tuanguwen.com
 DOMAIN,ad.huajiao.com
@@ -225,7 +227,6 @@ DOMAIN-SUFFIX,plugrush.com
 DOMAIN-SUFFIX,polarmobile.com
 DOMAIN-SUFFIX,popads.media
 DOMAIN-SUFFIX,popads.net
-DOMAIN-SUFFIX,popin.cc
 DOMAIN-SUFFIX,prebid.org
 DOMAIN-SUFFIX,presage.io
 DOMAIN-SUFFIX,pro-market.net
@@ -253,7 +254,6 @@ DOMAIN-SUFFIX,rtbsrv.com
 DOMAIN-SUFFIX,rtk.io
 DOMAIN-SUFFIX,rtmark.net
 DOMAIN-SUFFIX,runative-syndicate.com
-DOMAIN-SUFFIX,salmonads.com
 DOMAIN-SUFFIX,sekindo.com
 DOMAIN-SUFFIX,servedby-buysellads.com
 DOMAIN-SUFFIX,servedbyopenx.com
