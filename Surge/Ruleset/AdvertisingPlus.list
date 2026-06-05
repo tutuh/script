@@ -227,7 +227,6 @@ DOMAIN-SUFFIX,serving-sys.com
 DOMAIN-SUFFIX,sgdmobile.com
 DOMAIN-SUFFIX,sharethrough.com
 DOMAIN-SUFFIX,shoofle.tv
-DOMAIN-SUFFIX,sift.co
 DOMAIN-SUFFIX,silvermob.com
 DOMAIN-SUFFIX,simpli.fi
 DOMAIN-SUFFIX,skimresources.com
@@ -335,7 +334,7 @@ DOMAIN-SUFFIX,zeustechnology.com
 DOMAIN-SUFFIX,zucks.net
 DOMAIN-SUFFIX,zumobi.com
 
-# By 可莉
+
 DOMAIN-SUFFIX,iflyad.bj.openstorage.cn
 DOMAIN-SUFFIX,bjimp.voiceads.cn
 DOMAIN-SUFFIX,1rtb.net
@@ -433,7 +432,6 @@ DOMAIN-SUFFIX,adsrvr.cn
 DOMAIN-SUFFIX,adsrvr.org
 DOMAIN-SUFFIX,fancydsp.com
 DOMAIN-SUFFIX,xcultur.com
-DOMAIN-SUFFIX,bayescom.com
 DOMAIN-SUFFIX,etoolads.cn
 DOMAIN,ad.aggrxinc.com
 DOMAIN-SUFFIX,mentamob.com
