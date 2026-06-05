@@ -1,13 +1,77 @@
 # Privacy
 
-DOMAIN,analytics.slashdotmedia.com
-DOMAIN,app-analytics-services.com
-DOMAIN,applog.uc.cn
-DOMAIN,logrcv.aiclk.com
-DOMAIN,maplocatesdksnapshot.d.meituan.net
+# > 百度系
+DOMAIN,hm.baidu.com
+DOMAIN,hmma.baidu.com
 DOMAIN,mobads-logs.baidu.com
+
+# > 阿里系
+DOMAIN,applog.uc.cn
+DOMAIN,maplocatesdksnapshot.d.meituan.net
+
+# > 腾讯系
 DOMAIN,oth.str.mdt.qq.com
 DOMAIN,otheve.beacon.qq.com
+
+# > 小米/MIUI系
+DOMAIN-SUFFIX,tracking.miui.com
+DOMAIN,data.mistat.xiaomi.com
+DOMAIN,flash.sec.miui.com
+DOMAIN,tracking.intl.miui.com
+
+# > 微软系
+DOMAIN,c.bing.com
+DOMAIN,c.clarity.ms
+DOMAIN,o.clarity.ms
+DOMAIN,www.clarity.ms
+
+# > 51.LA
+DOMAIN,js.users.51.la
+DOMAIN,mc.51.la
+DOMAIN,sdk.51.la
+DOMAIN,wc.51.la
+
+# > 58同城
+DOMAIN,track.58.com
+DOMAIN,tracklog.58.com
+
+# > Antiy (安天)
+DOMAIN,miav-cse.avlyun.com
+DOMAIN,miui-fxcse.avlyun.com
+
+# > Daum/Kakao
+DOMAIN,track.tiara.daum.net
+DOMAIN,track.tiara.kakao.com
+
+# > Google
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,google-analytics.com
+
+# > GozenData (勾正数据)
+DOMAIN-SUFFIX,gozendata.com
+DOMAIN-SUFFIX,gzads.com
+DOMAIN-SUFFIX,gz-data.com
+
+# > GrowingIO
+DOMAIN-SUFFIX,giocdn.com
+
+# > Huawei
+DOMAIN,browsercfg-drcn.cloud.dbankcloud.cn
+
+# > TalkingData
+DOMAIN-SUFFIX,cpatrk.net
+DOMAIN-SUFFIX,talkingdata.com
+DOMAIN-SUFFIX,talkingdata.net
+DOMAIN-SUFFIX,udrig.com
+
+# > Tenjin
+DOMAIN,track.tenjin.com
+DOMAIN,track.tenjin.io
+
+
+DOMAIN,analytics.slashdotmedia.com
+DOMAIN,app-analytics-services.com
+DOMAIN,logrcv.aiclk.com
 DOMAIN,sdklog.zhangyuyidong.cn
 DOMAIN,statis.miwuad.com
 DOMAIN,zgsdk.zhugeio.com
@@ -86,62 +150,3 @@ DOMAIN-SUFFIX,umv5.com
 DOMAIN-SUFFIX,woopra.com
 DOMAIN-SUFFIX,wootric.com
 DOMAIN-SUFFIX,wrating.com
-
-# > 51.LA
-DOMAIN,js.users.51.la
-DOMAIN,mc.51.la
-DOMAIN,sdk.51.la
-DOMAIN,wc.51.la
-
-# > 58
-DOMAIN,track.58.com
-DOMAIN,tracklog.58.com
-
-# > Antiy
-DOMAIN,miav-cse.avlyun.com
-DOMAIN,miui-fxcse.avlyun.com
-
-# > Baidu
-DOMAIN,hm.baidu.com
-DOMAIN,hmma.baidu.com
-
-# > Daum
-DOMAIN,track.tiara.daum.net
-DOMAIN,track.tiara.kakao.com
-
-# > Google
-DOMAIN-SUFFIX,googletagmanager.com
-DOMAIN-SUFFIX,google-analytics.com
-
-# > GozenData 勾正数据
-DOMAIN-SUFFIX,gozendata.com
-DOMAIN-SUFFIX,gzads.com
-DOMAIN-SUFFIX,gz-data.com
-
-# > GrowingIO
-DOMAIN-SUFFIX,giocdn.com
-
-# > Huawei
-DOMAIN,browsercfg-drcn.cloud.dbankcloud.cn
-
-# > MI
-DOMAIN-SUFFIX,tracking.miui.com
-DOMAIN,data.mistat.xiaomi.com
-DOMAIN,flash.sec.miui.com
-DOMAIN,tracking.intl.miui.com
-
-# > Microsoft
-DOMAIN,c.bing.com
-DOMAIN,c.clarity.ms
-DOMAIN,o.clarity.ms
-DOMAIN,www.clarity.ms
-
-# > TalkingData
-DOMAIN-SUFFIX,cpatrk.net
-DOMAIN-SUFFIX,talkingdata.com
-DOMAIN-SUFFIX,talkingdata.net
-DOMAIN-SUFFIX,udrig.com
-
-# > Tenjin
-DOMAIN,track.tenjin.com
-DOMAIN,track.tenjin.io
