@@ -22,8 +22,6 @@ DOMAIN-SUFFIX,upltv.com
 DOMAIN-SUFFIX,vpon.com
 
 # > Ad-China
-DOMAIN-SUFFIX,salmonads.com
-DOMAIN-SUFFIX,popin.cc
 DOMAIN,ad-cn.jovcloud.com
 DOMAIN,ad-mediation.tuanguwen.com
 DOMAIN,ad.huajiao.com
@@ -85,7 +83,9 @@ DOMAIN-SUFFIX,mobgi.com
 DOMAIN-SUFFIX,optaim.com
 DOMAIN-SUFFIX,optimix.cn
 DOMAIN-SUFFIX,polyad.net
+DOMAIN-SUFFIX,popin.cc
 DOMAIN-SUFFIX,rekmob.com
+DOMAIN-SUFFIX,salmonads.com
 DOMAIN-SUFFIX,sgdmobile.com
 DOMAIN-SUFFIX,social-touch.com
 DOMAIN-SUFFIX,touclick.com
