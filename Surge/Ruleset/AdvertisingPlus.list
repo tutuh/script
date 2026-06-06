@@ -20,6 +20,7 @@ DOMAIN-SUFFIX,silvermob.com
 DOMAIN-SUFFIX,tamedia.com.tw
 DOMAIN-SUFFIX,upltv.com
 DOMAIN-SUFFIX,vpon.com
+DOMAIN-SUFFIX,vm5apis.com
 
 # > Ad-China
 DOMAIN,ad-cn.jovcloud.com
@@ -46,7 +47,6 @@ DOMAIN-SUFFIX,ad1data.com
 DOMAIN-SUFFIX,adcome.cn
 DOMAIN-SUFFIX,adfunlink.com
 DOMAIN-SUFFIX,adinall.com
-DOMAIN-SUFFIX,adinfuse.com
 DOMAIN-SUFFIX,adpolestar.net
 DOMAIN-SUFFIX,adquan.com
 DOMAIN-SUFFIX,adsage.com
@@ -77,7 +77,6 @@ DOMAIN-SUFFIX,immob.cn
 DOMAIN-SUFFIX,inad.com
 DOMAIN-SUFFIX,ipinyou.com
 DOMAIN-SUFFIX,madhouse.cn
-DOMAIN-SUFFIX,medialytics.com
 DOMAIN-SUFFIX,microad-cn.com
 DOMAIN-SUFFIX,mobgi.com
 DOMAIN-SUFFIX,optaim.com
@@ -86,12 +85,9 @@ DOMAIN-SUFFIX,polyad.net
 DOMAIN-SUFFIX,popin.cc
 DOMAIN-SUFFIX,rekmob.com
 DOMAIN-SUFFIX,salmonads.com
-DOMAIN-SUFFIX,sgdmobile.com
 DOMAIN-SUFFIX,social-touch.com
 DOMAIN-SUFFIX,touclick.com
-DOMAIN-SUFFIX,trafficmp.com
 DOMAIN-SUFFIX,vamaker.com
-DOMAIN-SUFFIX,vm5apis.com
 DOMAIN-SUFFIX,wwads.cn
 DOMAIN-SUFFIX,youxiaoad.com
 DOMAIN-SUFFIX,yoyi.com.cn
@@ -162,6 +158,7 @@ DOMAIN-SUFFIX,adecorp.co.kr
 DOMAIN-SUFFIX,adecosystems.net
 DOMAIN-SUFFIX,adfalcon.com
 DOMAIN-SUFFIX,adfurikun.jp
+DOMAIN-SUFFIX,adinfuse.com
 DOMAIN-SUFFIX,adition.com
 DOMAIN-SUFFIX,admedia.com
 DOMAIN-SUFFIX,adpushup.com
@@ -200,6 +197,7 @@ DOMAIN-SUFFIX,intentiq.com
 DOMAIN-SUFFIX,juicyads.com
 DOMAIN-SUFFIX,liveadvert.com
 DOMAIN-SUFFIX,marketgid.com
+DOMAIN-SUFFIX,medialytics.com
 DOMAIN-SUFFIX,mgid.com
 DOMAIN-SUFFIX,mobfox.com
 DOMAIN-SUFFIX,mplxtms.com
@@ -257,6 +255,7 @@ DOMAIN-SUFFIX,runative-syndicate.com
 DOMAIN-SUFFIX,sekindo.com
 DOMAIN-SUFFIX,servedby-buysellads.com
 DOMAIN-SUFFIX,servedbyopenx.com
+DOMAIN-SUFFIX,sgdmobile.com
 DOMAIN-SUFFIX,simpli.fi
 DOMAIN-SUFFIX,skimresources.com
 DOMAIN-SUFFIX,slicktext.com
@@ -291,6 +290,7 @@ DOMAIN-SUFFIX,theoremreach.com
 DOMAIN-SUFFIX,traffichunt.com
 DOMAIN-SUFFIX,trafficjunky.com
 DOMAIN-SUFFIX,trafficjunky.net
+DOMAIN-SUFFIX,trafficmp.com
 DOMAIN-SUFFIX,trafmag.com
 DOMAIN-SUFFIX,tresensa.com
 DOMAIN-SUFFIX,trfmxt.com
