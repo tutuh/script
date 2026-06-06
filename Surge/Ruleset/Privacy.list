@@ -20,8 +20,6 @@ DOMAIN-SUFFIX,cr-nielsen.com
 DOMAIN-SUFFIX,crwdcntrl.net
 DOMAIN-SUFFIX,dratio.com
 DOMAIN-SUFFIX,dynatrace.com
-DOMAIN-SUFFIX,hotjar.com
-DOMAIN-SUFFIX,hotjar.io
 DOMAIN-SUFFIX,hs-analytics.net
 DOMAIN-SUFFIX,installtongji.online
 DOMAIN-SUFFIX,installtongji.top
@@ -30,7 +28,6 @@ DOMAIN-SUFFIX,kochava.com
 DOMAIN-SUFFIX,liadm.com
 DOMAIN-SUFFIX,marketo.com
 DOMAIN-SUFFIX,miaozhen.com
-DOMAIN-SUFFIX,mixpanel.com
 DOMAIN-SUFFIX,mparticle.com
 DOMAIN-SUFFIX,newrelic.com
 DOMAIN-SUFFIX,nexac.com
@@ -48,7 +45,6 @@ DOMAIN-SUFFIX,segmentify.com
 DOMAIN-SUFFIX,sensorsdata.cn
 DOMAIN-SUFFIX,sensorsdata.com
 DOMAIN-SUFFIX,sentiance.com
-DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,shareaholic.com
 DOMAIN-SUFFIX,sift.co
 DOMAIN-SUFFIX,smartlook.com
@@ -105,6 +101,12 @@ DOMAIN-SUFFIX,statcounter.com
 # > 应用崩溃日志上报
 DOMAIN-SUFFIX,bugsnag.com
 DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,sentry.io
+
+# > 用户行为与点击追踪
+DOMAIN-SUFFIX,hotjar.com
+DOMAIN-SUFFIX,hotjar.io
+DOMAIN-SUFFIX,mixpanel.com
 DOMAIN-SUFFIX,segment.com
 DOMAIN-SUFFIX,segment.io
 
