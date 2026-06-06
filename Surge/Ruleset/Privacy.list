@@ -1,5 +1,9 @@
 # Privacy
 
+DOMAIN-SUFFIX,bugsnag.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,segment.com
+DOMAIN-SUFFIX,segment.io
 DOMAIN,analytics.slashdotmedia.com
 DOMAIN,app-analytics-services.com
 DOMAIN,logrcv.aiclk.com
@@ -16,9 +20,7 @@ DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,app-analytics-services.com
 DOMAIN-SUFFIX,app-measurement.com
 DOMAIN-SUFFIX,bayescom.com
-DOMAIN-SUFFIX,bugsnag.com
 DOMAIN-SUFFIX,cr-nielsen.com
-DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,crwdcntrl.net
 DOMAIN-SUFFIX,dratio.com
 DOMAIN-SUFFIX,dynatrace.com
@@ -46,8 +48,6 @@ DOMAIN-SUFFIX,readgps.com
 DOMAIN-SUFFIX,rtbasia.com
 DOMAIN-SUFFIX,samba.tv
 DOMAIN-SUFFIX,scorecardresearch.com
-DOMAIN-SUFFIX,segment.com
-DOMAIN-SUFFIX,segment.io
 DOMAIN-SUFFIX,segmentify.com
 DOMAIN-SUFFIX,sensorsdata.cn
 DOMAIN-SUFFIX,sensorsdata.com
@@ -118,7 +118,6 @@ DOMAIN,tracklog.58.com
 
 # > Alibaba
 DOMAIN,applog.uc.cn
-DOMAIN,maplocatesdksnapshot.d.meituan.net
 
 # > Antiy (安天)
 DOMAIN,miav-cse.avlyun.com
@@ -134,7 +133,6 @@ DOMAIN,track.tiara.daum.net
 DOMAIN,track.tiara.kakao.com
 
 # > Google
-DOMAIN-SUFFIX,googletagmanager.com
 DOMAIN-SUFFIX,google-analytics.com
 
 # > GozenData (勾正数据)
