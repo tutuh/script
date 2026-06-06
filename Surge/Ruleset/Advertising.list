@@ -3,7 +3,7 @@
 # > General
 DOMAIN-KEYWORD,adservice
 
-# ======= (0) ======= #
+# ======= (0～9) ======= #
 # > 12306
 DOMAIN,ad.12306.cn
 # > 360
@@ -12,8 +12,6 @@ DOMAIN,ad.life.360.cn
 DOMAIN,ad.iot.360.cn
 
 # ======= (A) ======= #
-# > Apple
-DOMAIN-SUFFIX,unityads.unity3d.com
 # > Alibaba
 DOMAIN,tunion-api.m.taobao.com
 DOMAIN,et.tanx.com
@@ -155,6 +153,12 @@ DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN-SUFFIX,ugdtimg.com
 DOMAIN-SUFFIX,ad.hunyuan.tencent.com
+
+# ======= (U) ======= #
+# > Unity / 手游广告
+DOMAIN-SUFFIX,ads.internal.unity3d.com
+DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
+DOMAIN-SUFFIX,unityads.unity3d.com
 
 # ======= (W) ======= #
 # > 网易
