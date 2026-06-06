@@ -1,9 +1,5 @@
 # Privacy
 
-DOMAIN-SUFFIX,bugsnag.com
-DOMAIN-SUFFIX,crashlytics.com
-DOMAIN-SUFFIX,segment.com
-DOMAIN-SUFFIX,segment.io
 DOMAIN,analytics.slashdotmedia.com
 DOMAIN,app-analytics-services.com
 DOMAIN,logrcv.aiclk.com
@@ -105,6 +101,12 @@ DOMAIN-SUFFIX,histats.com
 DOMAIN-SUFFIX,hitslink.com
 DOMAIN-SUFFIX,imrworldwide.com
 DOMAIN-SUFFIX,statcounter.com
+
+# > 应用崩溃日志上报
+DOMAIN-SUFFIX,bugsnag.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,segment.com
+DOMAIN-SUFFIX,segment.io
 
 # > 51.LA
 DOMAIN,js.users.51.la
