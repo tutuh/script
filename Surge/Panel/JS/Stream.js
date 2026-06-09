@@ -44,7 +44,7 @@ function getCurrentTime() {
 (async function () {
   const args = getArgs();
   const baseTitle = args.title || '网络解锁检测';
-  const timeoutLimit = parseInt(args.timeout) || 3000; // 默认 3 秒超时，更适合 Panel 快速展示
+  const timeoutLimit = parseInt(args.timeout) || 3000; // 默认 3 秒超时
   
   const panel = {
     title: `${baseTitle} | ${getCurrentTime()}`,
@@ -63,12 +63,12 @@ function getCurrentTime() {
       checkYouTubePremium(timeoutLimit)
     ]);
 
-    // 1. 动态计算 UI 补齐长度 (实现完美对齐)
+    // 1. 动态计算 UI 补齐长度
     const maxLen = Math.max(...results.map(r => r.name.length));
     
     // 2. 格式化输出
     panel.content = results.map(r => {
-      // 动态补充空格 (Surge 英文等宽效果较好，中文可能略有偏移，但能保证最大对齐程度)
+      // 动态补充空格
       const paddedName = r.name.padEnd(maxLen + 2, ' ');
       let statusText = '';
       
