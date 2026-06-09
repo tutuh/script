@@ -8,4 +8,4 @@
 网络解锁检测 = script-name=解锁检测,update-interval={{{更新频率}}}
 
 [Script]
-解锁检测 = type=generic,timeout={{{请求超时}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Stream.js,argument=title={{{面板名称}}}&icon={{{Icon}}}&color=#{{{Color}}}&MODE=#{{{ALIGN_MODE}}} 
+解锁检测 = type=generic,timeout={{{请求超时}}},script-path=https://raw.githubusercontent.com/tutuh/script/master/Surge/Panel/JS/Stream.js,argument=title={{{面板名称}}}&icon={{{Icon}}}&color=#{{{Color}}}&ALIGN_MODE=#{{{ALIGN_MODE}}} 
