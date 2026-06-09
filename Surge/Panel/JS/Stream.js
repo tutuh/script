@@ -1,6 +1,4 @@
-
-
-// [ 用户个性化配置 ]
+// [个性化配置]
 // 模式选择: 'monospace' (推荐)，'native' （原生系统字体)
 const ALIGN_MODE = 'native'; 
 
