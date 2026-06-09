@@ -93,14 +93,11 @@ function getCurrentTime() {
   } catch (e) {
     panel.content = '检测过程发生异常';
   }
-
   $done(panel);
 })();
 
-// 【修改点】：增加 extraOpts 参数，支持自定义请求行为（如关闭重定向）
 function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries = 1, extraOpts = {}) {
   return new Promise((resolve) => {
-    // 将 extraOpts 合并到 Surge 的请求配置中
     const opts = { url, headers, timeout: REQUEST_TIMEOUT, ...extraOpts };
     if (body) opts.body = body;
 
@@ -174,21 +171,57 @@ async function checkChatGPT() {
 // Gemini
 async function checkGemini() {
   try {
-    // 将 User-Agent 伪装成手机 App 环境
-    const appHeaders = {
-      ...REQUEST_HEADERS,
-      'User-Agent': 'Gemini/1.0.12345 (iPhone; iOS 16.0; Scale/3.00)',
-      'x-goog-api-client': 'gl-ios/16.0 grpc/1.0.0'
-    };
-    const r = await request('GET', 'https://gemini.google.com/app', appHeaders, null, 1, { 'auto-redirect': false });
-    if (r.response.status === 200 && r.data.includes('SNlM0e')) {
-        const m = r.data.match(/,2,1,200,"([A-Z]{2,3})"/);
-        const region = m && m[1] ? m[1].slice(0, 2).toUpperCase() : 'US';
-        return makeResult('Gemini', STATUS_AVAILABLE, region);
+    const r = await request(
+      'GET',
+      'https://gemini.google.com',
+      REQUEST_HEADERS,
+      null,
+      1,
+      {
+        'auto-redirect': false
+      }
+    );
+
+    const status = r.response.status || 0;
+
+    const location =
+      r.response.headers?.Location ||
+      r.response.headers?.location ||
+      '';
+
+    if (
+      status === 301 ||
+      status === 302
+    ) {
+      if (location.includes('/app')) {
+        return makeResult(
+          'Gemini',
+          STATUS_AVAILABLE,
+          'OK'
+        );
+      }
     }
-    return makeResult('Gemini', STATUS_NOT_AVAILABLE);
+
+    if (
+      status === 403 ||
+      location.includes('unavailable')
+    ) {
+      return makeResult(
+        'Gemini',
+        STATUS_NOT_AVAILABLE
+      );
+    }
+
+    return makeResult(
+      'Gemini',
+      STATUS_NOT_AVAILABLE
+    );
+
   } catch (e) {
-    return makeResult('Gemini', STATUS_ERROR);
+    return makeResult(
+      'Gemini',
+      STATUS_ERROR
+    );
   }
 }
 
