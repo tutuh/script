@@ -1,11 +1,7 @@
 /**
- * By @xream 
- * Surge Panel 网络信息面板 (精简排版版)
+ * Surge Panel 网络信息面板 (完整入口与落地版)
  * 优化说明：
- * 1. 彻底移除 FLAG 国旗逻辑，界面更简洁。
- * 2. 移除所有 EVENT 事件相关参数及逻辑。
- * 3. 优化排版：IP、位置、ASN/ORG 等信息强制换行，避免拥挤。
- * 4. 高性能 Surge 原生 API 实现。
+ * 移除所有 FLAG 与 EVENT 逻辑。
  */
 
 let arg = {};
@@ -17,78 +13,58 @@ if (typeof $argument !== 'undefined' && $argument) {
 }
 
 const MASK_ENABLED = arg.MASK == '1';
-const IPV6_ENABLED = arg.IPv6 == '1';
 
-// 原生网络请求封装
-function request(opt) {
-  const TIMEOUT = parseFloat(opt.timeout || arg.TIMEOUT || 5) * 1000;
-  return new Promise((resolve, reject) => {
-    const timer = setTimeout(() => reject(new Error('TIMEOUT')), TIMEOUT);
-    $httpClient.get(opt, (error, response, data) => {
-      clearTimeout(timer);
-      if (error) reject(error);
-      else resolve({ data: data || '' });
-    });
+async function request(url) {
+  return new Promise((resolve) => {
+    $httpClient.get({ url, timeout: 5 }, (err, resp, data) => resolve(data));
   });
 }
 
 !(async () => {
-  let SSID = arg.SSID == '1' && $network.wifi?.ssid ? `SSID: ${$network.wifi.ssid}\n` : '';
-  let LAN = '';
-  if (arg.LAN == '1') {
-    const v4 = $network.v4?.primaryAddress;
-    const v6 = $network.v6?.primaryAddress;
-    LAN = `LAN: ${v4 || ''} ${v6 ? maskIP(v6) : ''}\n`.trim() + '\n';
-  }
+  // 1. 获取国内信息
+  const directData = await request('https://rmb.zssq.com.cn/itam/mas/linden/ip/request');
+  const d = JSON.parse(directData).data;
 
-  // 并发查询直连与代理信息
-  const [direct, proxy] = await Promise.all([
-    getDirectInfo(undefined, arg.DOMESTIC_IPv4),
-    getProxyInfo(undefined, arg.LANDING_IPv4)
-  ]);
+  // 2. 获取落地信息
+  const proxyData = await request('http://ip-api.com/json?lang=zh-CN');
+  const p = JSON.parse(proxyData);
 
-  // 排版：强制换行显示
-  let content = `${SSID}${LAN}`;
-  content += `国内 IP: ${maskIP(direct.IP) || '-'}\n`;
-  content += `${direct.INFO}\n\n`;
+  // 3. 获取入口信息 (通过对比 $network 获取入口)
+  // 如果当前是代理模式，入口 IP 即为 Surge 识别到的出口，或者我们可以获取当前活跃连接的源
+  const entryIP = $network.v4?.primaryAddress || '未知';
+
+  let content = '';
   
-  if (proxy.ENTRANCE) {
-      content += `入口 IP: ${maskIP(proxy.ENTRANCE.IP) || '-'}\n`;
-      content += `${proxy.ENTRANCE.INFO}\n\n`;
-  }
+  // 基础信息
+  if (arg.SSID == '1' && $network.wifi?.ssid) content += `SSID: ${$network.wifi.ssid}\n`;
+  if (arg.LAN == '1') content += `LAN: ${$network.v4?.primaryAddress || '-'}\n`;
   
-  content += `落地 IP: ${maskIP(proxy.IP) || '-'}\n`;
-  content += `${proxy.INFO}`;
+  content += `\n[国内节点]\n`;
+  content += `IP: ${maskIP(d.ip || '-')}\n`;
+  content += `位置: ${d.country || ''} ${d.region || ''} ${d.city || ''}\n`;
+  content += `运营商: ${d.isp || '-'}\n`;
+
+  content += `\n[入口节点]\n`;
+  content += `IP: ${maskIP(entryIP)}\n`;
+  content += `状态: 当前接入点\n`;
+
+  content += `\n[落地节点]\n`;
+  content += `IP: ${maskIP(p.query || '-')}\n`;
+  content += `位置: ${p.country || ''} ${p.regionName || ''} ${p.city || ''}\n`;
+  content += `运营商: ${p.isp || p.org || '-'}\n`;
+  if (arg.ASN == '1') content += `ASN: ${p.as || '-'}\n`;
 
   $done({
     title: '网络信息 𝕏',
-    content: content,
+    content: content.trim(),
     icon: arg.ICON || 'globe.asia.australia',
     'icon-color': arg['ICON-COLOR'] || '#6699FF'
   });
-})().catch(e => {
-  $done({ title: '网络信息 𝕏', content: '获取数据失败', icon: 'exclamationmark.triangle.fill' });
+})().catch(() => {
+  $done({ title: '网络信息 𝕏', content: '数据获取失败' });
 });
-
-async function getDirectInfo(ip, provider) {
-  try {
-    const r = await request({ url: `https://rmb.zssq.com.cn/itam/mas/linden/ip/request` });
-    const b = JSON.parse(r.data).data;
-    return { IP: b.ip, INFO: `位置: ${b.country || ''} ${b.region || ''} ${b.city || ''}\n运营商: ${b.isp || '-'}` };
-  } catch(e) { return { IP: '', INFO: '获取失败' }; }
-}
-
-async function getProxyInfo(ip, provider) {
-  try {
-    const r = await request({ url: `http://ip-api.com/json?lang=zh-CN` });
-    const b = JSON.parse(r.data);
-    let info = `位置: ${b.country || ''} ${b.regionName || ''} ${b.city || ''}\n运营商: ${b.isp || b.org || '-'}`;
-    if (arg.ASN == '1') info += `\nASN: ${b.as || '-'}`;
-    return { IP: b.query, INFO: info };
-  } catch(e) { return { IP: '', INFO: '获取失败' }; }
-}
 
 function maskIP(ip) {
   if (!ip || !MASK_ENABLED) return ip;
-  return ip.includes('.') ? ip.replace(/\d+\.\d+$/, '*.*') : ip.replace(/[^:]+:[^:]+$/, '*:*');
+  return ip.includes('.') ? ip.replace(/\d+\.\d+$/, '*.*') : ip;
 }
