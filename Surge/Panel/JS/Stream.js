@@ -180,7 +180,7 @@ async function checkGemini() {
 
     const r = await request(
       'GET',
-      'https://alkalimakersuite-pa.clients6.google.com'
+      'https://generativelanguage.googleapis.com'
     );
 
     return {
