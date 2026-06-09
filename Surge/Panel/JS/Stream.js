@@ -74,7 +74,7 @@ function getCurrentTime() {
   const timeStr = getCurrentTime();
   
   const panel = {
-    title: `${baseTitle} | ${timeStr}`, 
+    title: `${baseTitle} | ${timeStr}`, // 拼接时间显示
     content: '',
     icon: args.icon || 'play.tv.fill',
     'icon-color': args.color || '#D22F20'
@@ -93,12 +93,14 @@ function getCurrentTime() {
   } catch (e) {
     panel.content = '检测过程发生异常';
   }
+
   $done(panel);
 })();
 
-function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries = 1, extraOpts = {}) {
+// 基础请求封装（结合了 Timeout 限制 与 EOF 重试机制）
+function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries = 1) {
   return new Promise((resolve) => {
-    const opts = { url, headers, timeout: REQUEST_TIMEOUT, ...extraOpts };
+    const opts = { url, headers, timeout: REQUEST_TIMEOUT };
     if (body) opts.body = body;
 
     const attempt = (currentTry) => {
@@ -123,9 +125,11 @@ function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries
   });
 }
 
-// 统一结果格式化函数
+// 统一结果格式化函数（处理中文状态与 ➟ 符号）
 function makeResult(name, status, region = '') {
+  // 读取顶部的对齐配置
   const paddedName = ALIGN_MAP[name] || name + ' ';
+
   let text = '';
   switch (status) {
     case STATUS_AVAILABLE:
@@ -141,9 +145,11 @@ function makeResult(name, status, region = '') {
       text = `${paddedName}➟  检测失败`;
       break;
     case STATUS_COMING:
-      text = `${paddedName}➟  ${name === 'Netflix' ? '自制' : '即将'} ${region}`;
+      const tag = name === 'Netflix' ? '自制' : '即将';
+      text = `${paddedName}➟  ${tag} ${region}`;
       break;
   }
+
   return { name, status, text, region };
 }
 
@@ -171,57 +177,27 @@ async function checkChatGPT() {
 // Gemini
 async function checkGemini() {
   try {
-    const r = await request(
-      'GET',
-      'https://gemini.google.com',
-      REQUEST_HEADERS,
-      null,
-      1,
-      {
-        'auto-redirect': false
-      }
-    );
+    const r = await request('GET', 'https://gemini.google.com/app');
+    if (r.error || !r.response) return makeResult('Gemini', STATUS_TIMEOUT);
 
     const status = r.response.status || 0;
+    const data = r.data || '';
 
-    const location =
-      r.response.headers?.Location ||
-      r.response.headers?.location ||
-      '';
-
-    if (
-      status === 301 ||
-      status === 302
-    ) {
-      if (location.includes('/app')) {
-        return makeResult(
-          'Gemini',
-          STATUS_AVAILABLE,
-          'OK'
-        );
+    if (status === 200) {
+      if (data.includes('not available') || data.includes('unavailable in your country')) {
+        return makeResult('Gemini', STATUS_NOT_AVAILABLE);
       }
+      const m = data.match(/,2,1,200,"([A-Z]{2,3})"/);
+      const region = m && m[1] ? m[1].slice(0, 2).toUpperCase() : 'US';
+      return makeResult('Gemini', STATUS_AVAILABLE, region);
     }
 
-    if (
-      status === 403 ||
-      location.includes('unavailable')
-    ) {
-      return makeResult(
-        'Gemini',
-        STATUS_NOT_AVAILABLE
-      );
+    if (status === 403 || status === 404 || status === 302) {
+      return makeResult('Gemini', STATUS_NOT_AVAILABLE);
     }
-
-    return makeResult(
-      'Gemini',
-      STATUS_NOT_AVAILABLE
-    );
-
+    return makeResult('Gemini', STATUS_ERROR);
   } catch (e) {
-    return makeResult(
-      'Gemini',
-      STATUS_ERROR
-    );
+    return makeResult('Gemini', STATUS_ERROR);
   }
 }
 
