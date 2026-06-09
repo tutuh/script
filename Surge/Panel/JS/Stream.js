@@ -177,24 +177,27 @@ async function checkChatGPT() {
 // Gemini
 async function checkGemini() {
   try {
+    const r = await request('GET', 'https://gemini.google.com/app');
+    if (r.error || !r.response) return makeResult('Gemini', STATUS_TIMEOUT);
 
-    const r = await request(
-      'GET',
-      'https://generativelanguage.googleapis.com'
-    );
+    const status = r.response.status || 0;
+    const data = r.data || '';
 
-    return {
-      name: 'Gemini',
-      status: 1,
-      text: `${r.response.status || 0}`
-    };
+    if (status === 200) {
+      if (data.includes('not available') || data.includes('unavailable in your country')) {
+        return makeResult('Gemini', STATUS_NOT_AVAILABLE);
+      }
+      const m = data.match(/,2,1,200,"([A-Z]{2,3})"/);
+      const region = m && m[1] ? m[1].slice(0, 2).toUpperCase() : 'US';
+      return makeResult('Gemini', STATUS_AVAILABLE, region);
+    }
 
+    if (status === 403 || status === 404 || status === 302) {
+      return makeResult('Gemini', STATUS_NOT_AVAILABLE);
+    }
+    return makeResult('Gemini', STATUS_ERROR);
   } catch (e) {
-    return {
-      name: 'Gemini',
-      status: 0,
-      text: 'ERR'
-    };
+    return makeResult('Gemini', STATUS_ERROR);
   }
 }
 
