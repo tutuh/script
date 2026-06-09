@@ -177,68 +177,19 @@ async function checkChatGPT() {
 // Gemini
 async function checkGemini() {
   try {
-    const headers = {
-      ...REQUEST_HEADERS,
-      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
-    };
-
     const r = await request(
       'GET',
-      'https://gemini.google.com/app',
-      headers
+      'https://gemini.google.com/app'
     );
-
-    if (r.error || !r.response) {
-      return makeResult('Gemini', STATUS_TIMEOUT);
-    }
 
     const status = r.response.status || 0;
     const data = r.data || '';
 
-    // 常见限制页面
-    const blockedKeywords = [
-      'not available',
-      'unavailable',
-      'isn\'t available',
-      'is not available',
-      'unsupported country',
-      'unsupported region',
-      'Gemini is unavailable',
-      'Google AI isn\'t available'
-    ];
-
-    for (const keyword of blockedKeywords) {
-      if (data.toLowerCase().includes(keyword.toLowerCase())) {
-        return makeResult('Gemini', STATUS_NOT_AVAILABLE);
-      }
-    }
-
-    if (status !== 200) {
-      return makeResult('Gemini', STATUS_NOT_AVAILABLE);
-    }
-
-    let region = '';
-
-    const matchers = [
-      /,2,1,200,"([A-Z]{2,3})"/,
-      /"countryCode":"([A-Z]{2})"/i,
-      /"country":"([A-Z]{2})"/i,
-      /"region":"([A-Z]{2})"/i
-    ];
-
-    for (const reg of matchers) {
-      const m = data.match(reg);
-      if (m && m[1]) {
-        region = m[1].substring(0, 2).toUpperCase();
-        break;
-      }
-    }
-
-    if (!region) {
-      return makeResult('Gemini', STATUS_NOT_AVAILABLE);
-    }
-
-    return makeResult('Gemini', STATUS_AVAILABLE, region);
+    return {
+      name: 'Gemini',
+      status: STATUS_AVAILABLE,
+      text: `Gemini ➟ ${status} | ${data.length}`
+    };
 
   } catch (e) {
     return makeResult('Gemini', STATUS_ERROR);
