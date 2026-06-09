@@ -74,7 +74,7 @@ function getCurrentTime() {
   const timeStr = getCurrentTime();
   
   const panel = {
-    title: `${baseTitle} | ${timeStr}`, // 拼接时间显示
+    title: `${baseTitle} | ${timeStr}`, 
     content: '',
     icon: args.icon || 'play.tv.fill',
     'icon-color': args.color || '#D22F20'
@@ -97,10 +97,11 @@ function getCurrentTime() {
   $done(panel);
 })();
 
-// 基础请求封装（结合了 Timeout 限制 与 EOF 重试机制）
-function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries = 1) {
+// 【修改点】：增加 extraOpts 参数，支持自定义请求行为（如关闭重定向）
+function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries = 1, extraOpts = {}) {
   return new Promise((resolve) => {
-    const opts = { url, headers, timeout: REQUEST_TIMEOUT };
+    // 将 extraOpts 合并到 Surge 的请求配置中
+    const opts = { url, headers, timeout: REQUEST_TIMEOUT, ...extraOpts };
     if (body) opts.body = body;
 
     const attempt = (currentTry) => {
@@ -125,11 +126,9 @@ function request(method, url, headers = REQUEST_HEADERS, body = null, maxRetries
   });
 }
 
-// 统一结果格式化函数（处理中文状态与 ➟ 符号）
+// 统一结果格式化函数
 function makeResult(name, status, region = '') {
-  // 读取顶部的对齐配置
   const paddedName = ALIGN_MAP[name] || name + ' ';
-
   let text = '';
   switch (status) {
     case STATUS_AVAILABLE:
@@ -149,7 +148,6 @@ function makeResult(name, status, region = '') {
       text = `${paddedName}➟  ${tag} ${region}`;
       break;
   }
-
   return { name, status, text, region };
 }
 
@@ -174,27 +172,53 @@ async function checkChatGPT() {
   }
 }
 
-// Gemini
+// Gemini (【修改点】：完全重构检测逻辑)
 async function checkGemini() {
   try {
-    const r = await request('GET', 'https://gemini.google.com/app');
+    // 强制关闭 Surge 的自动重定向 ('auto-redirect': false)
+    const r = await request('GET', 'https://gemini.google.com/app', REQUEST_HEADERS, null, 1, { 'auto-redirect': false });
     if (r.error || !r.response) return makeResult('Gemini', STATUS_TIMEOUT);
 
     const status = r.response.status || 0;
+    const headers = r.response.headers || {};
+    // Surge 的 headers 大小写可能不一致，兼容处理
+    const location = headers['Location'] || headers['location'] || ''; 
     const data = r.data || '';
 
+    // 1. 精准捕获 302 重定向
+    if (status === 302 || status === 301 || status === 307) {
+      if (location.includes('faq') || location.includes('restricted')) {
+        // 重定向到了不可用说明页 -> 未解锁
+        return makeResult('Gemini', STATUS_NOT_AVAILABLE);
+      }
+      if (location.includes('accounts.google.com')) {
+        // 重定向到了谷歌登录页 -> 节点IP已被放行，处于已解锁状态
+        return makeResult('Gemini', STATUS_AVAILABLE, 'US'); 
+      }
+    }
+
+    // 2. 处理极少数情况下的 200 响应
     if (status === 200) {
       if (data.includes('not available') || data.includes('unavailable in your country')) {
         return makeResult('Gemini', STATUS_NOT_AVAILABLE);
       }
+      
       const m = data.match(/,2,1,200,"([A-Z]{2,3})"/);
-      const region = m && m[1] ? m[1].slice(0, 2).toUpperCase() : 'US';
-      return makeResult('Gemini', STATUS_AVAILABLE, region);
-    }
-
-    if (status === 403 || status === 404 || status === 302) {
+      if (m && m[1]) {
+        return makeResult('Gemini', STATUS_AVAILABLE, m[1].slice(0, 2).toUpperCase());
+      }
+      
+      // 双重验证：如果没有查到地区信息，必须页面内含有 Google JS 引擎特征，才算作有效 200
+      if (data.includes('SNlM0e') || data.includes('gemini')) {
+         return makeResult('Gemini', STATUS_AVAILABLE, 'US');
+      }
       return makeResult('Gemini', STATUS_NOT_AVAILABLE);
     }
+
+    if (status === 403 || status === 404) {
+      return makeResult('Gemini', STATUS_NOT_AVAILABLE);
+    }
+    
     return makeResult('Gemini', STATUS_ERROR);
   } catch (e) {
     return makeResult('Gemini', STATUS_ERROR);
