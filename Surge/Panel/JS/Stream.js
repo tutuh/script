@@ -1,7 +1,3 @@
-// [个性化配置]
-// 模式选择: 'monospace' (推荐)，'native' （原生系统字体)
-const ALIGN_MODE = 'native'; 
-
 // 基础配置
 const REQUEST_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -20,18 +16,11 @@ const STATUS_ERROR = -2;
 // ChatGPT 不支持的地区黑名单
 const GPT_BLOCKED_REGIONS = ['CN', 'HK', 'MO', 'RU', 'IR', 'KP', 'SY', 'CU', 'BY'];
 
-
-function getAlignedName(name) {
-  if (ALIGN_MODE === 'monospace') {
-    const monoMap = {
-      'ChatGPT': '𝙲𝚑𝚊𝚝𝙶𝙿𝚃\u2007',
-      'Gemini':  '𝙶𝚎𝚖𝚒𝚗𝚒\u2007\u2007',
-      'Netflix': '𝙽𝚎𝚝𝚏𝚕𝚒𝚡\u2007',
-      'Disney+': '𝙳𝚒𝚜𝚗𝚎𝚢+\u2007',
-      'YouTube': '𝚈𝚘𝚞𝚃𝚞𝚋𝚎\u2007'
-    };
-    return monoMap[name] || name.padEnd(8, '\u2007');
-  } else {
+/**
+ * 核心对齐引擎：根据动态传入的 mode 决定使用哪种对齐策略
+ */
+function getAlignedName(name, mode) {
+  if (mode === 'native') {
     // 备用：原生系统字体像素对齐
     switch (name) {
       case 'ChatGPT': return 'ChatGPT' + '     ';
@@ -41,6 +30,16 @@ function getAlignedName(name) {
       case 'YouTube': return 'YouTube' + '      ';
       default:        return name.padEnd(10, ' ');
     }
+  } else {
+    // 默认：等宽极客风，100%完美对齐 (\u2007 是等宽数字空格)
+    const monoMap = {
+      'ChatGPT': '𝙲𝚑𝚊𝚝𝙶𝙿𝚃\u2007',
+      'Gemini':  '𝙶𝚎𝚖𝚒𝚗𝚒\u2007\u2007',
+      'Netflix': '𝙽𝚎𝚝𝚏𝚕𝚒𝚡\u2007',
+      'Disney+': '𝙳𝚒𝚜𝚗𝚎𝚢+\u2007',  
+      'YouTube': '𝚈𝚘𝚞𝚃𝚞𝚋𝚎\u2007'
+    };
+    return monoMap[name] || name.padEnd(8, '\u2007');
   }
 }
 
@@ -52,7 +51,8 @@ function getArgs() {
     for (const param of params) {
       const [key, value] = param.split('=');
       if (key && value) {
-        args[key.trim()] = value.trim();
+        // 将键名转换为小写方便后续兼容读取，但保留原始值的大小写
+        args[key.trim().toLowerCase()] = value.trim();
       }
     }
   }
@@ -70,9 +70,13 @@ function getCurrentTime() {
 
 // 主入口
 (async function () {
+  // 1. 解析参数
   const args = getArgs();
   const baseTitle = args.title || '网络解锁检测';
   const timeoutLimit = parseInt(args.timeout) || 3000;
+  
+  // 动态读取对齐模式，默认使用 monospace
+  const alignMode = args.align_mode || args.mode || 'monospace';
   
   const panel = {
     title: `${baseTitle} | ${getCurrentTime()}`,
@@ -91,7 +95,8 @@ function getCurrentTime() {
     ]);
 
     panel.content = results.map(r => {
-      const paddedName = getAlignedName(r.name);
+      // 传入动态对齐模式
+      const paddedName = getAlignedName(r.name, alignMode);
       let statusText = '';
       
       switch (r.status) {
