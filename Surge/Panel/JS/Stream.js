@@ -177,18 +177,25 @@ async function checkChatGPT() {
 // Gemini
 async function checkGemini() {
   try {
+
     const r = await request(
       'GET',
       'https://gemini.google.com/app'
     );
 
-    const status = r.response.status || 0;
-    const data = r.data || '';
+    const h = r.response.headers || {};
+
+    const info = [
+      `S:${r.response.status || 0}`,
+      `L:${(h.location || h.Location || '-').substring(0,30)}`,
+      `C:${h['set-cookie'] ? 'Y' : 'N'}`,
+      `SV:${h.server || '-'}`
+    ];
 
     return {
       name: 'Gemini',
-      status: STATUS_AVAILABLE,
-      text: `Gemini ➟ ${status} | ${data.length}`
+      status: 1,
+      text: info.join(' ')
     };
 
   } catch (e) {
