@@ -1,3 +1,5 @@
+const ALIGN_MODE = 'monospace'; 
+
 // 基础配置
 const REQUEST_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -13,8 +15,64 @@ const STATUS_NOT_AVAILABLE = 0;  // 未解锁
 const STATUS_TIMEOUT = -1;       // 检测超时
 const STATUS_ERROR = -2;         // 检测失败
 
-// ChatGPT 不支持的地区黑名单
+// ChatGPT 地区黑名单
 const GPT_BLOCKED_REGIONS = ['CN', 'HK', 'MO', 'RU', 'IR', 'KP', 'SY', 'CU', 'BY'];
+
+// 等宽字形映射转换器
+ 
+function toMonospace(str) {
+  return Array.from(str).map(char => {
+    const code = char.codePointAt(0);
+    // A-Z 映射到数学等宽字符
+    if (code >= 65 && code <= 90) {
+      return String.fromCodePoint(code - 65 + 0x1D670);
+    }
+    // a-z 映射到数学等宽字符
+    if (code >= 97 && code <= 122) {
+      return String.fromCodePoint(code - 97 + 0x1D68A);
+    }
+    // 0-9 映射到数学等宽字符
+    if (code >= 48 && code <= 57) {
+      return String.fromCodePoint(code - 48 + 0x1D7F6);
+    }
+    // 特殊字符处理
+    if (char === '+') return '＋'; // 使用全角加号保持等宽
+    return char;
+  }).join('');
+}
+
+/**
+ * 核心对齐引擎 (支持等宽与原生两种精密计算模式)
+ */
+function getAlignedName(name) {
+  if (ALIGN_MODE === 'monospace') {
+    // 转换为等宽字形
+    const monoName = toMonospace(name);
+    // 统一补齐到相同长度，使用 Figure Space (数字/等宽占位符 \u2007)
+    // 目标长度为 8 个字符宽度
+    const targetLen = 8;
+    const currentLen = name.length;
+    const padCount = Math.max(0, targetLen - currentLen);
+    return monoName + '\u2007'.repeat(padCount);
+  } else {
+    // 原生系统字体 (SF Pro) 像素级精密测距补齐
+    // \u2006 为 1/6 宽极窄空格，" " 为普通半角空格
+    switch (name) {
+      case 'ChatGPT':
+        return 'ChatGPT' + '     ';          // 4个空格 + 1个微型空格
+      case 'Gemini':
+        return 'Gemini' + '         ';        // 8个空格 + 1个微型空格
+      case 'Netflix':
+        return 'Netflix' + '          ';       // 9个空格 + 1个微型空格
+      case 'Disney+':
+        return 'Disney+' + '       ';         // 5个空格 + 2个微型空格
+      case 'YouTube':
+        return 'YouTube' + '      ';          // 4个空格 + 2个微型空格
+      default:
+        return name.padEnd(10, ' ');
+    }
+  }
+}
 
 // 解析 Surge 参数 ($argument)
 function getArgs() {
@@ -63,13 +121,9 @@ function getCurrentTime() {
       checkYouTubePremium(timeoutLimit)
     ]);
 
-    // 1. 动态计算 UI 补齐长度
-    const maxLen = Math.max(...results.map(r => r.name.length));
-    
-    // 2. 格式化输出
+    // 格式化输出
     panel.content = results.map(r => {
-      // 动态补充空格
-      const paddedName = r.name.padEnd(maxLen + 2, ' ');
+      const paddedName = getAlignedName(r.name);
       let statusText = '';
       
       switch (r.status) {
