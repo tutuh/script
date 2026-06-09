@@ -177,51 +177,27 @@ async function checkChatGPT() {
 // Gemini
 async function checkGemini() {
   try {
-    const opts = {
-      url: 'https://gemini.google.com/',
-      headers: REQUEST_HEADERS,
-      timeout: REQUEST_TIMEOUT,
-      'auto-redirect': false
-    };
-
-    const r = await new Promise(resolve => {
-      $httpClient.get(opts, (err, resp, data) => {
-        resolve({
-          error: err,
-          response: resp || {},
-          data: data || ''
-        });
-      });
-    });
+    const r = await request('GET', 'https://gemini.google.com/app');
+    if (r.error || !r.response) return makeResult('Gemini', STATUS_TIMEOUT);
 
     const status = r.response.status || 0;
+    const data = r.data || '';
 
-    const location =
-      r.response.headers?.location ||
-      r.response.headers?.Location ||
-      '';
-
-    if (
-      (status === 301 || status === 302) &&
-      location.includes('/app')
-    ) {
-      return makeResult(
-        'Gemini',
-        STATUS_AVAILABLE,
-        'OK'
-      );
+    if (status === 200) {
+      if (data.includes('not available') || data.includes('unavailable in your country')) {
+        return makeResult('Gemini', STATUS_NOT_AVAILABLE);
+      }
+      const m = data.match(/,2,1,200,"([A-Z]{2,3})"/);
+      const region = m && m[1] ? m[1].slice(0, 2).toUpperCase() : 'US';
+      return makeResult('Gemini', STATUS_AVAILABLE, region);
     }
 
-    return makeResult(
-      'Gemini',
-      STATUS_NOT_AVAILABLE
-    );
-
-  } catch {
-    return makeResult(
-      'Gemini',
-      STATUS_ERROR
-    );
+    if (status === 403 || status === 404 || status === 302) {
+      return makeResult('Gemini', STATUS_NOT_AVAILABLE);
+    }
+    return makeResult('Gemini', STATUS_ERROR);
+  } catch (e) {
+    return makeResult('Gemini', STATUS_ERROR);
   }
 }
 
