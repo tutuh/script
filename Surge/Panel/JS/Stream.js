@@ -180,27 +180,21 @@ async function checkGemini() {
 
     const r = await request(
       'GET',
-      'https://gemini.google.com/app'
+      'https://alkalimakersuite-pa.clients6.google.com'
     );
-
-    const data = r.data || '';
-
-    const checks = {
-      SNlM0e: data.includes('SNlM0e'),
-      countryCode: data.includes('countryCode'),
-      region: data.includes('region'),
-      unavailable: data.includes('unavailable'),
-      notAvailable: data.includes('not available')
-    };
 
     return {
       name: 'Gemini',
       status: 1,
-      text: JSON.stringify(checks)
+      text: `${r.response.status || 0}`
     };
 
   } catch (e) {
-    return makeResult('Gemini', STATUS_ERROR);
+    return {
+      name: 'Gemini',
+      status: 0,
+      text: 'ERR'
+    };
   }
 }
 
