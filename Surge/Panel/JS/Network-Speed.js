@@ -1,4 +1,4 @@
-// 安全地解析参数 (统一转换为小写键名，方便无视大小写读取)
+// 安全地解析参数
 const arg = {};
 if (typeof $argument !== 'undefined' && $argument) {
   $argument.split('&').forEach(item => {
@@ -21,13 +21,14 @@ function request(url, timeout) {
 }
 
 !(async () => {
-  // 从参数获取下载流量，默认 1MB
+  // 从 arguments 参数获取下载流量，默认 1MB
   const rawMb = Number(arg.mb) || 1;
-  // 严格锁死上限为 5MB，在代码中强行限制，安全稳妥
-  const mb = Math.min(rawMb, 5); 
+  
+  // 强行限制最大不得超过 3MB
+  const mb = Math.min(rawMb, 3); 
   const bytes = mb * 1024 * 1024;
   
-  // 生成随机时间戳，防止当地运营商或节点缓存导致测速虚高
+  // 生成随机时间戳，强制节点不走缓存，获取真实测速数据
   const timestamp = Date.now();
 
   // 1. 测试网络延迟 (Ping)
@@ -45,14 +46,14 @@ function request(url, timeout) {
   const speed = mb / duration;
   const speedMbps = Math.round(speed * 8 * 100) / 100; // 转 Mbps 并保留两位小数
 
-  console.log(`测速完成 -> 耗时: ${duration.toFixed(3)}s | 延迟: ${pingt}ms | 速率: ${speedMbps}Mbps (文件大小: ${mb}MB)`);
+  console.log(`测速完成 -> 耗时: ${duration.toFixed(3)}s | 延迟: ${pingt}ms | 速率: ${speedMbps}Mbps (实际文件: ${mb}MB)`);
 
   // 网速区间判断逻辑：1 (<30Mbps), 2 (30Mbps~100Mbps), 3 (>=100Mbps)
   let speedLevel = 1;
   if (speedMbps >= 100) speedLevel = 3;
   else if (speedMbps >= 30) speedLevel = 2;
 
-  // 映射对应的图标与颜色 (100% 动态读取 argument，若未传参则使用原版默认值)
+  // 图标与颜色动态映射
   const icon = (speedLevel === 1 ? arg.iconslow : speedLevel === 2 ? arg.iconmid : arg.iconfast) 
     || (speedLevel === 1 ? 'tortoise' : speedLevel === 2 ? 'hare' : 'bolt');
   
@@ -62,7 +63,6 @@ function request(url, timeout) {
   const title = arg.title || `节点测速`;
   const content = `下行速率: ${speedMbps} Mbps\n网络延迟: ${pingt} ms\n测试耗时: ${duration.toFixed(2)}s`;
   
-  // 返回 Panel 渲染数据
   $done({ 
     title, 
     content, 
@@ -71,7 +71,7 @@ function request(url, timeout) {
   });
 
 })().catch(e => {
-  // 异常处理：网络超时或中断
+  // 异常处理
   console.log('❌ 测速失败: ' + (e.message || String(e)));
   
   $done({ 
