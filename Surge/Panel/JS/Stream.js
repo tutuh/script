@@ -183,19 +183,20 @@ async function checkGemini() {
       'https://gemini.google.com/app'
     );
 
-    const h = r.response.headers || {};
+    const data = r.data || '';
 
-    const info = [
-      `S:${r.response.status || 0}`,
-      `L:${(h.location || h.Location || '-').substring(0,30)}`,
-      `C:${h['set-cookie'] ? 'Y' : 'N'}`,
-      `SV:${h.server || '-'}`
-    ];
+    const checks = {
+      SNlM0e: data.includes('SNlM0e'),
+      countryCode: data.includes('countryCode'),
+      region: data.includes('region'),
+      unavailable: data.includes('unavailable'),
+      notAvailable: data.includes('not available')
+    };
 
     return {
       name: 'Gemini',
       status: 1,
-      text: info.join(' ')
+      text: JSON.stringify(checks)
     };
 
   } catch (e) {
