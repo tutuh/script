@@ -1,14 +1,13 @@
 
 /**
- * Surge Panel 网络信息面板 (原版经典排版 1:1 复刻版)
- * 优化特性：
- * 1. 100% 复刻原版排版：无多余修饰，严格按照截图中的换行结构展示。
- * 2. 彻底移除 FLAG 国旗及 EVENT 事件逻辑代码，极致纯净。
- * 3. 完美保留入口 IP 双重解析（位置¹/运营商¹，位置²/运营商²）的原版逻辑。
- * 4. 彻底重构底层架构：移除 1000+ 行跨平台 Env 代码，全面采用原生 Surge API，零延迟、防闪退。
+ * Surge Panel 网络信息面板 (原汁原味排版 + 纯净高性能版)
+ * 修复说明：
+ * 1. 修复国内 IP 接口（Speedtest.cn），完美显示本地 IP、位置、运营商。
+ * 2. 完美重构入口双重解析正则，1:1 还原 `入口¹`, `位置¹`, `位置²` 的紧凑排版。
+ * 3. 彻底去除 FLAG 旗帜与 EVENT 事件代码。
+ * 4. 全面弃用 Env 兼容库，采用轻量化 Surge 原生请求。
  */
 
-// --- 参数解析 ---
 let arg = {};
 if (typeof $argument !== 'undefined' && $argument) {
   $argument.split('&').forEach(item => {
@@ -19,13 +18,17 @@ if (typeof $argument !== 'undefined' && $argument) {
 
 const MASK_ENABLED = arg.MASK == '1';
 
-// --- 原生网络请求封装 ---
-function request(url, timeoutSec = 5) {
+// 原生网络请求封装（携带通用 UA 防止被墙/拦截）
+function request(url) {
   return new Promise((resolve) => {
-    const timer = setTimeout(() => resolve(null), timeoutSec * 1000);
-    $httpClient.get({ url, timeout: timeoutSec }, (error, response, data) => {
-      clearTimeout(timer);
-      if (error || !data) {
+    $httpClient.get({
+      url,
+      timeout: 5,
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1'
+      }
+    }, (err, resp, data) => {
+      if (err || !data) {
         resolve(null);
       } else {
         try {
@@ -38,6 +41,7 @@ function request(url, timeoutSec = 5) {
   });
 }
 
+// Surge 原生 API 获取近期请求
 function getSurgeAPI(path) {
   return new Promise((resolve) => {
     if (typeof $httpAPI === 'undefined') return resolve(null);
@@ -45,38 +49,34 @@ function getSurgeAPI(path) {
   });
 }
 
-// --- 主程序 ---
 !(async () => {
-  // 1. 并发获取国内直连、国外落地、近期请求（用于分析入口和策略）
-  const [directData, proxyData, recentReqs] = await Promise.all([
-    request('https://rmb.zssq.com.cn/itam/mas/linden/ip/request'),
-    request('http://ip-api.com/json?lang=zh-CN'),
-    getSurgeAPI('/v1/requests/recent')
-  ]);
-
   let content = '';
 
-  // 2. 本地网络信息 (若开启)
+  // --- 1. 本地网络配置展示 ---
   if (arg.SSID == '1' && $network?.wifi?.ssid) content += `SSID: ${$network.wifi.ssid}\n`;
   if (arg.LAN == '1' && $network?.v4?.primaryAddress) content += `LAN: ${$network.v4.primaryAddress}\n`;
   if (content !== '') content += '\n';
 
-  // 3. 国内节点区块
-  let CN_IP = directData?.data?.ip || '-';
-  let CN_LOC = `${directData?.data?.country || ''} ${directData?.data?.region || ''} ${directData?.data?.city || ''}`.trim().replace(/中国\s*/, '');
-  let CN_ISP = directData?.data?.isp || '-';
+  // --- 2. 并发查询主干信息 ---
+  const [direct, proxy, recentReqs] = await Promise.all([
+    getDirectInfo(),
+    getProxyInfo(),
+    getSurgeAPI('/v1/requests/recent')
+  ]);
 
+  let CN_IP = direct.IP || '-';
+  let PROXY_IP = proxy.IP || '-';
+
+  // 国内 IP 模块
   content += `IP: ${maskIP(CN_IP)}\n`;
-  content += `位置: ${CN_LOC || '-'}\n`;
-  content += `运营商: ${CN_ISP}`;
+  content += direct.INFO + '\n';
 
-  // 4. 分析入口 IP 与代理策略
-  let PROXY_IP = proxyData?.query || '-';
+  // --- 3. 分析代理策略与入口 IP ---
   let PROXY_POLICY = '';
   let ENTRANCE_IP = '';
 
   if (recentReqs && recentReqs.requests) {
-    // 查找检测国外 IP 的请求，提取策略名和真实入口 IP
+    // 根据国外 API 请求锁定策略及入口
     const req = recentReqs.requests.find(i => /ip-api\.com|ipinfo\.io|ip\.sb/.test(i.URL));
     if (req) {
       PROXY_POLICY = req.policyName || '';
@@ -86,53 +86,52 @@ function getSurgeAPI(path) {
     }
   }
 
-  // 5. 入口节点区块 (如果入口 IP 存在且不等于落地 IP)
+  // --- 4. 入口 IP 模块 (双重解析逻辑) ---
+  let ENTRANCE = '';
   if (ENTRANCE_IP && ENTRANCE_IP !== PROXY_IP) {
     const entranceDelay = parseFloat(arg.ENTRANCE_DELAY || 0);
     if (entranceDelay > 0) await new Promise(r => setTimeout(r, entranceDelay * 1000));
 
-    // 并发双路查询入口 IP 信息
+    // 并发查询入口 IP 的国内、国外解析结果
     const [entDirect, entProxy] = await Promise.all([
-      request(`https://rmb.zssq.com.cn/itam/mas/linden/ip/request?ip=${ENTRANCE_IP}`),
-      request(`http://ip-api.com/json/${ENTRANCE_IP}?lang=zh-CN`)
+      getDirectInfo(ENTRANCE_IP),
+      getProxyInfo(ENTRANCE_IP)
     ]);
 
-    content += `\n\n入口¹: ${maskIP(ENTRANCE_IP)}\n`;
-    
-    let hasInfo1 = false;
-    // 位置¹ & 运营商¹ (国内接口解析，仅当 IP 归属国内时展示，过滤离谱解析)
-    if (entDirect?.data?.country?.includes('中国')) {
-      hasInfo1 = true;
-      const loc1 = `${entDirect.data.country || ''} ${entDirect.data.region || ''} ${entDirect.data.city || ''}`.trim().replace(/中国\s*/, '');
-      content += `位置¹: ${loc1 || '-'}\n`;
-      content += `运营商¹: ${entDirect.data.isp || '-'}\n`;
+    let entStr1 = '';
+    // 如果入口 IP 被判断为国内，则生成 [信息1]
+    if (entDirect.INFO && entDirect.isCN) {
+      entStr1 = `入口: ${maskIP(ENTRANCE_IP)}\n${entDirect.INFO}`;
     }
+    
+    let entStr2 = entProxy.INFO || '';
 
-    // 位置² & 运营商² (国外接口解析)
-    if (entProxy?.status === 'success') {
-      const suffix = hasInfo1 ? '²' : '¹'; // 如果没有位置1，这里就变成位置1
-      const loc2 = `${entProxy.country || ''} ${entProxy.regionName || ''} ${entProxy.city || ''}`.trim().replace(/中国\s*/, '');
-      content += `位置${suffix}: ${loc2 || '-'}\n`;
-      content += `运营商${suffix}: ${entProxy.isp || entProxy.org || '-'}`;
+    // 完美复刻的正则替换逻辑，实现: 入口¹ / 位置¹ / 运营商¹ / 位置² / 运营商²
+    if (entStr2) {
+      if (entStr1) {
+        ENTRANCE = entStr1.replace(/^(.*?):/gim, '$1¹:') + '\n' + entStr2.replace(/^(.*?):/gim, '$1²:');
+      } else {
+        ENTRANCE = `入口: ${maskIP(ENTRANCE_IP)}\n${entStr2}`;
+      }
+    } else if (entStr1) {
+      ENTRANCE = entStr1;
     }
   }
 
-  // 6. 落地节点区块
-  let PROXY_LOC = `${proxyData?.country || ''} ${proxyData?.regionName || ''} ${proxyData?.city || ''}`.trim().replace(/中国\s*/, '');
-  let PROXY_ISP = proxyData?.isp || proxyData?.org || '-';
+  if (ENTRANCE) {
+    content += `\n${ENTRANCE}\n`;
+  }
 
-  content += `\n\n落地 IP: ${maskIP(PROXY_IP)}\n`;
-  content += `位置: ${PROXY_LOC || '-'}\n`;
-  content += `运营商: ${PROXY_ISP}`;
-  if (arg.ASN == '1' && proxyData?.as) content += `\nASN: ${proxyData.as}`;
-  if (arg.ORG == '1' && proxyData?.org) content += `\n组织: ${proxyData.org}`;
+  // --- 5. 落地 IP 模块 ---
+  content += `\n落地 IP: ${maskIP(PROXY_IP)}\n`;
+  content += proxy.INFO + '\n';
 
-  // 7. 尾部执行时间
+  // --- 6. 执行时间 ---
   const timeStr = new Date().toTimeString().split(' ')[0];
-  content += `\n执行时间: ${timeStr}`;
+  content += `执行时间: ${timeStr}`;
 
-  // 8. 渲染 Panel
-  const title = PROXY_POLICY && PROXY_POLICY !== 'DIRECT' ? `代理策略: ${PROXY_POLICY}` : (arg.PANEL_NAME || '网络信息 𝕏');
+  // --- 7. 输出面板 ---
+  const title = PROXY_POLICY && PROXY_POLICY !== 'DIRECT' ? `代理策略: ${maskAddr(PROXY_POLICY)}` : (arg.PANEL_NAME || '网络信息 𝕏');
 
   $done({
     title: title,
@@ -150,7 +149,52 @@ function getSurgeAPI(path) {
   });
 });
 
-// --- 辅助函数 ---
+// === 核心数据获取逻辑 ===
+
+// 国内信息解析 (使用 spcn: api-v3.speedtest.cn)
+async function getDirectInfo(ip) {
+  const url = `https://api-v3.spe` + `edtest.cn/ip${ip ? '?ip=' + ip : ''}`;
+  try {
+    const res = await request(url);
+    if (res && res.data) {
+      const d = res.data;
+      const loc = [d.country, d.province, d.city, d.district].filter(Boolean).join(' ').replace(/中国\s*/g, '');
+      const isp = d.operator || d.isp || '-';
+      return {
+        IP: ip || d.ip,
+        INFO: `位置: ${loc}\n运营商: ${isp}`,
+        isCN: d.countryCode === 'CN'
+      };
+    }
+  } catch(e) {}
+  return { IP: '', INFO: '', isCN: false };
+}
+
+// 代理信息解析 (使用 ip-api.com)
+async function getProxyInfo(ip) {
+  const url = `http://ip-api.com/json${ip ? '/' + ip : ''}?lang=zh-CN`;
+  try {
+    const data = await request(url);
+    if (data && data.status === 'success') {
+      const loc = [data.country, data.regionName ? data.regionName.split(/ or /)[0] : '', data.city].filter(Boolean).join(' ').replace(/中国\s*/g, '');
+      const isp = data.isp || data.org || data.as || '-';
+      let info = `位置: ${loc}\n运营商: ${isp}`;
+      
+      // 完美兼容你 argument 里的 ASN / ORG 开关
+      if (arg.ASN == '1' && data.as) info += `\nASN: ${data.as}`;
+      if (arg.ORG == '1' && data.org) info += `\n组织: ${data.org}`;
+      
+      return {
+        IP: ip || data.query,
+        INFO: info
+      };
+    }
+  } catch (e) {}
+  return { IP: '', INFO: '' };
+}
+
+// === 辅助工具函数 ===
+
 function maskIP(ip) {
   if (!ip || !MASK_ENABLED) return ip;
   if (ip.includes('.')) {
@@ -158,6 +202,15 @@ function maskIP(ip) {
     return [...parts.slice(0, 2), '*', '*'].join('.');
   } else {
     const parts = ip.split(':');
-    return [...parts.slice(0, 3), '*', '*', '*', '*'].join(':');
+    return [...parts.slice(0, 4), '*', '*', '*', '*'].join(':');
   }
+}
+
+function maskAddr(addr) {
+  if (!addr || !MASK_ENABLED) return addr;
+  const third = Math.floor(addr.length / 3);
+  if (third > 0) {
+    return addr.substring(0, third) + '*'.repeat(third) + addr.substring(2 * third);
+  }
+  return addr;
 }
