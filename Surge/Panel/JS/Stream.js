@@ -177,25 +177,69 @@ async function checkChatGPT() {
 // Gemini
 async function checkGemini() {
   try {
-    const r = await request('GET', 'https://gemini.google.com/app');
-    if (r.error || !r.response) return makeResult('Gemini', STATUS_TIMEOUT);
+    const headers = {
+      ...REQUEST_HEADERS,
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+    };
+
+    const r = await request(
+      'GET',
+      'https://gemini.google.com/app',
+      headers
+    );
+
+    if (r.error || !r.response) {
+      return makeResult('Gemini', STATUS_TIMEOUT);
+    }
 
     const status = r.response.status || 0;
     const data = r.data || '';
 
-    if (status === 200) {
-      if (data.includes('not available') || data.includes('unavailable in your country')) {
+    // 常见限制页面
+    const blockedKeywords = [
+      'not available',
+      'unavailable',
+      'isn\'t available',
+      'is not available',
+      'unsupported country',
+      'unsupported region',
+      'Gemini is unavailable',
+      'Google AI isn\'t available'
+    ];
+
+    for (const keyword of blockedKeywords) {
+      if (data.toLowerCase().includes(keyword.toLowerCase())) {
         return makeResult('Gemini', STATUS_NOT_AVAILABLE);
       }
-      const m = data.match(/,2,1,200,"([A-Z]{2,3})"/);
-      const region = m && m[1] ? m[1].slice(0, 2).toUpperCase() : 'US';
-      return makeResult('Gemini', STATUS_AVAILABLE, region);
     }
 
-    if (status === 403 || status === 404 || status === 302) {
+    if (status !== 200) {
       return makeResult('Gemini', STATUS_NOT_AVAILABLE);
     }
-    return makeResult('Gemini', STATUS_ERROR);
+
+    let region = '';
+
+    const matchers = [
+      /,2,1,200,"([A-Z]{2,3})"/,
+      /"countryCode":"([A-Z]{2})"/i,
+      /"country":"([A-Z]{2})"/i,
+      /"region":"([A-Z]{2})"/i
+    ];
+
+    for (const reg of matchers) {
+      const m = data.match(reg);
+      if (m && m[1]) {
+        region = m[1].substring(0, 2).toUpperCase();
+        break;
+      }
+    }
+
+    if (!region) {
+      return makeResult('Gemini', STATUS_NOT_AVAILABLE);
+    }
+
+    return makeResult('Gemini', STATUS_AVAILABLE, region);
+
   } catch (e) {
     return makeResult('Gemini', STATUS_ERROR);
   }
