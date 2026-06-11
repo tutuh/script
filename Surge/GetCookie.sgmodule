@@ -1,5 +1,5 @@
 #!name=Cookie 获取
-#!desc=获取 Cookie，完成后请关闭以减少 MITM
+#!desc=抓取凭证，获取完成后请及时关闭，避免不必要的 MITM
 #!category=签到模块
 
 [Script]
