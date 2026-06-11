@@ -6,19 +6,15 @@
 # General
 DOMAIN,app.adjust.com,DIRECT,extended-matching
 DOMAIN,app.appsflyer.com,DIRECT,extended-matching
-DOMAIN,bdtj.tagtic.cn,DIRECT,extended-matching
 
 # Alibaba
 DOMAIN,log.mmstat.com,DIRECT,extended-matching
 DOMAIN,sycm.mmstat.com,DIRECT,extended-matching
 
-# Taobao
-DOMAIN,hudong.alicdn.com,DIRECT,extended-matching
-
 # Google
 DOMAIN,dl.google.com,DIRECT,extended-matching
-DOMAIN-SUFFIX,googletraveladservices.com,DIRECT,extended-matching
-DOMAIN-SUFFIX,googletraveladservices-cn.com,DIRECT,extended-matching
+DOMAIN,dl.l.google.com,DIRECT,extended-matching
+DOMAIN,update.googleapis.com,DIRECT,extended-matching
 
 # Tencent
 DOMAIN,fairplay.l.qq.com,DIRECT,extended-matching
@@ -27,7 +23,6 @@ DOMAIN,vd.l.qq.com,DIRECT,extended-matching
 DOMAIN,vi.l.qq.com,DIRECT,extended-matching
 
 # Umeng
-DOMAIN,errlog.umeng.com,DIRECT,extended-matching
 DOMAIN,msg.umeng.com,DIRECT,extended-matching
 DOMAIN,msg.umengcloud.com,DIRECT,extended-matching
 
