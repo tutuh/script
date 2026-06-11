@@ -1,5 +1,5 @@
 #!name=Safari快捷搜索
-#!desc=【命令+空格】含: bd百度，zh知乎，ghGitHub，默认Google
+#!desc=【命令+空格】含: bd百度、zh知乎、ghGitHub、默认Google
 #!category=Tutu
 
 # Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
