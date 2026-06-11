@@ -1,5 +1,5 @@
 #!name=白名单
-#!desc=规则修正
+#!desc=不应被拦截的域名
 #!category=Tutu
 
 [Rule]
