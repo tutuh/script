@@ -1,4 +1,4 @@
-#!name=Cookie 获取
+#!name=Cookie获取
 #!desc=抓取凭证，获取完成后请及时关闭，避免不必要的 MITM
 #!category=签到模块
 
