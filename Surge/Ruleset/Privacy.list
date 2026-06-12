@@ -99,7 +99,6 @@ DOMAIN-SUFFIX,imrworldwide.com
 DOMAIN-SUFFIX,statcounter.com
 
 # > 应用崩溃日志上报
-DOMAIN-SUFFIX,bugsnag.com
 DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,sentry.io
 
