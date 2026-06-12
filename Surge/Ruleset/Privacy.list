@@ -15,7 +15,6 @@ DOMAIN-SUFFIX,airpr.com
 DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,app-analytics-services.com
 DOMAIN-SUFFIX,app-measurement.com
-DOMAIN-SUFFIX,bayescom.com
 DOMAIN-SUFFIX,cr-nielsen.com
 DOMAIN-SUFFIX,crwdcntrl.net
 DOMAIN-SUFFIX,dratio.com
@@ -30,15 +29,11 @@ DOMAIN-SUFFIX,marketo.com
 DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-SUFFIX,mparticle.com
 DOMAIN-SUFFIX,newrelic.com
-DOMAIN-SUFFIX,nexac.com
 DOMAIN-SUFFIX,nr-data.net
 DOMAIN-SUFFIX,opstatistics.cn
 DOMAIN-SUFFIX,opstatistics.com
 DOMAIN-SUFFIX,pardot.com
-DOMAIN-SUFFIX,parrable.com
 DOMAIN-SUFFIX,quantcount.com
-DOMAIN-SUFFIX,readgps.com
-DOMAIN-SUFFIX,rtbasia.com
 DOMAIN-SUFFIX,samba.tv
 DOMAIN-SUFFIX,scorecardresearch.com
 DOMAIN-SUFFIX,segmentify.com
@@ -59,9 +54,7 @@ DOMAIN-SUFFIX,statsinstall.xyz
 DOMAIN-SUFFIX,tagcommander.com
 DOMAIN-SUFFIX,tailtarget.com
 DOMAIN-SUFFIX,tapfiliate.com
-DOMAIN-SUFFIX,tapinfluence.com
 DOMAIN-SUFFIX,tapstream.com
-DOMAIN-SUFFIX,tend.io
 DOMAIN-SUFFIX,thetrafficstat.net
 DOMAIN-SUFFIX,trackingio.com
 DOMAIN-SUFFIX,um0.cn
@@ -78,7 +71,6 @@ DOMAIN-SUFFIX,wrating.com
 DOMAIN-SUFFIX,99click.com
 DOMAIN-SUFFIX,analysys.cn
 DOMAIN-SUFFIX,chartbeat.com
-DOMAIN-SUFFIX,clicktracks.com
 DOMAIN-SUFFIX,cmcore.com
 DOMAIN-SUFFIX,cnzz.com
 DOMAIN-SUFFIX,cnzzlink.com
@@ -89,12 +81,10 @@ DOMAIN-SUFFIX,gridsumdissector.cn
 DOMAIN-SUFFIX,gridsumdissector.com
 DOMAIN-SUFFIX,magicwindow.cn
 DOMAIN-SUFFIX,oneapm.com
-DOMAIN-SUFFIX,sitemeter.com
 DOMAIN-SUFFIX,effectivemeasure.com
 DOMAIN-SUFFIX,effectivemeasure.net
 DOMAIN-SUFFIX,gosquared.com
 DOMAIN-SUFFIX,histats.com
-DOMAIN-SUFFIX,hitslink.com
 DOMAIN-SUFFIX,imrworldwide.com
 DOMAIN-SUFFIX,statcounter.com
 
@@ -149,7 +139,7 @@ DOMAIN-SUFFIX,giocdn.com
 # > Huawei
 DOMAIN,browsercfg-drcn.cloud.dbankcloud.cn
 
-# > Microsoft 
+# > Microsoft
 DOMAIN,c.bing.com
 DOMAIN,c.clarity.ms
 DOMAIN,o.clarity.ms
