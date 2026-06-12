@@ -1,5 +1,5 @@
 #!name=Safari 聚合搜索
-#!desc=搜索：bd 百度 | zh 知乎 | wb 微博 | gh GitHub | csdn CSDN | by 必应 | wiki 维基 | db 豆瓣 | bk 百科 | gp 谷图 | ddg DuckDuckGo (默认 Google)
+#!desc=搜索：bd 百度 | bk 百科 | db 豆瓣 | zh 知乎 | wb 微博 | gp 谷图 | wiki 维基 | wk 维基中 | gh GitHub | csdn | by 必应 | ddg DuckDuckGo (默认 Google)
 #!category=Tutu
 
 # Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
