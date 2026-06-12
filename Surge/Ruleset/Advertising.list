@@ -13,7 +13,6 @@ DOMAIN,ad.iot.360.cn
 
 # ======= (A) ======= #
 # > Alibaba
-DOMAIN,tunion-api.m.taobao.com
 DOMAIN,et.tanx.com
 DOMAIN,df.tanx.com
 DOMAIN,opehs.tanx.com
@@ -25,12 +24,8 @@ DOMAIN,partner.uc.cn
 DOMAIN-SUFFIX,pos.baidu.com
 DOMAIN,afd.baidu.com
 DOMAIN,als.baidu.com
-DOMAIN,bgg.baidu.com
-DOMAIN,click-bes.baidu.com
 DOMAIN,eclick.baidu.com
 DOMAIN,mobads.baidu.com
-DOMAIN,nadvideo2.baidu.com
-DOMAIN,wn.pos.baidu.com
 DOMAIN,feed-image.baidu.com
 DOMAIN,cpro.baidustatic.com
 DOMAIN-SUFFIX,union.baidu.cn
@@ -62,12 +57,8 @@ DOMAIN,im-x.jd.com
 DOMAIN,janapi.jd.com
 # > 金山
 DOMAIN,ad-stat.ksosoft.com
-DOMAIN,counter.kingsoft.com
-DOMAIN,counter.ksosoft.com
 DOMAIN,img.auction-ads.wpscdn.cn
 DOMAIN,mobad.ijinshan.com
-DOMAIN,ups.ksmobile.net
-DOMAIN,ws.ksmobile.net
 # > 今日头条 / 字节
 DOMAIN,ad.toutiao.com
 DOMAIN,dsp.toutiao.com
@@ -157,7 +148,6 @@ DOMAIN-SUFFIX,unityads.unity3d.com
 # > 网易
 DOMAIN,nex.163.com
 DOMAIN,iad.g.163.com
-DOMAIN,gorgon.youdao.com
 
 # ======= (X) ======= #
 # > 携程
