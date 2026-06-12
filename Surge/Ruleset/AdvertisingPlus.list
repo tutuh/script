@@ -51,12 +51,9 @@ DOMAIN-SUFFIX,adpolestar.net
 DOMAIN-SUFFIX,adquan.com
 DOMAIN-SUFFIX,adsage.com
 DOMAIN-SUFFIX,adsame.com
-DOMAIN-SUFFIX,adsunflower.com
 DOMAIN-SUFFIX,adsunion.com
 DOMAIN-SUFFIX,adtarget.me
-DOMAIN-SUFFIX,adtdp.com
 DOMAIN-SUFFIX,adview.cn
-DOMAIN-SUFFIX,adwetec.com
 DOMAIN-SUFFIX,adxmi.com
 DOMAIN-SUFFIX,allyes.cn
 DOMAIN-SUFFIX,allyes.com
@@ -64,17 +61,13 @@ DOMAIN-SUFFIX,aralego.com
 DOMAIN-SUFFIX,baifendian.com
 DOMAIN-SUFFIX,biddingos.com
 DOMAIN-SUFFIX,biddingx.com
-DOMAIN-SUFFIX,chance-ad.com
 DOMAIN-SUFFIX,chengadx.com
 DOMAIN-SUFFIX,clickzs.com
 DOMAIN-SUFFIX,daoyoudao.com
 DOMAIN-SUFFIX,dianjoy.com
 DOMAIN-SUFFIX,dianru.com
-DOMAIN-SUFFIX,dxpmedia.com
-DOMAIN-SUFFIX,guomob.com
 DOMAIN-SUFFIX,hypers.com
 DOMAIN-SUFFIX,immob.cn
-DOMAIN-SUFFIX,inad.com
 DOMAIN-SUFFIX,ipinyou.com
 DOMAIN-SUFFIX,madhouse.cn
 DOMAIN-SUFFIX,microad-cn.com
@@ -83,16 +76,13 @@ DOMAIN-SUFFIX,optaim.com
 DOMAIN-SUFFIX,optimix.cn
 DOMAIN-SUFFIX,polyad.net
 DOMAIN-SUFFIX,popin.cc
-DOMAIN-SUFFIX,rekmob.com
 DOMAIN-SUFFIX,salmonads.com
 DOMAIN-SUFFIX,social-touch.com
 DOMAIN-SUFFIX,touclick.com
-DOMAIN-SUFFIX,vamaker.com
 DOMAIN-SUFFIX,wwads.cn
 DOMAIN-SUFFIX,youxiaoad.com
 DOMAIN-SUFFIX,yoyi.com.cn
 DOMAIN-SUFFIX,yoyi.tv
-DOMAIN-SUFFIX,zcdsp.com
 
 # > Ad-China-Extras
 DOMAIN-SUFFIX,ad-plus.cn
@@ -158,7 +148,6 @@ DOMAIN-SUFFIX,adecorp.co.kr
 DOMAIN-SUFFIX,adecosystems.net
 DOMAIN-SUFFIX,adfalcon.com
 DOMAIN-SUFFIX,adfurikun.jp
-DOMAIN-SUFFIX,adinfuse.com
 DOMAIN-SUFFIX,adition.com
 DOMAIN-SUFFIX,admedia.com
 DOMAIN-SUFFIX,adpushup.com
@@ -172,20 +161,15 @@ DOMAIN-SUFFIX,adtarget.io
 DOMAIN-SUFFIX,adtech.de
 DOMAIN-SUFFIX,adtechjp.com
 DOMAIN-SUFFIX,adtechus.com
-DOMAIN-SUFFIX,adthor.com
 DOMAIN-SUFFIX,adxadserv.com
 DOMAIN-SUFFIX,appliedq.com
 DOMAIN-SUFFIX,apxadtracking.net
-DOMAIN-SUFFIX,beintoo.com
-DOMAIN-SUFFIX,bidtheatre.com
 DOMAIN-SUFFIX,bidvertiser.com
-DOMAIN-SUFFIX,brightcom.com
 DOMAIN-SUFFIX,buysellads.com
 DOMAIN-SUFFIX,celtra.com
 DOMAIN-SUFFIX,clickadu.com
 DOMAIN-SUFFIX,cpx.to
 DOMAIN-SUFFIX,crispadvertising.com
-DOMAIN-SUFFIX,directrev.com
 DOMAIN-SUFFIX,dtscout.com
 DOMAIN-SUFFIX,ero-advertising.com
 DOMAIN-SUFFIX,eroadvertising.com
@@ -195,7 +179,6 @@ DOMAIN-SUFFIX,inpagepush.com
 DOMAIN-SUFFIX,insurads.com
 DOMAIN-SUFFIX,intentiq.com
 DOMAIN-SUFFIX,juicyads.com
-DOMAIN-SUFFIX,liveadvert.com
 DOMAIN-SUFFIX,marketgid.com
 DOMAIN-SUFFIX,medialytics.com
 DOMAIN-SUFFIX,mgid.com
@@ -207,7 +190,6 @@ DOMAIN-SUFFIX,mxmcdn.net
 DOMAIN-SUFFIX,narrativ.com
 DOMAIN-SUFFIX,ncaudienceexchange.com
 DOMAIN-SUFFIX,networkad.net
-DOMAIN-SUFFIX,ntv.io
 DOMAIN-SUFFIX,omgpl.com
 DOMAIN-SUFFIX,omguk.com
 DOMAIN-SUFFIX,omnilocal.ai
@@ -220,7 +202,6 @@ DOMAIN-SUFFIX,permutive.com
 DOMAIN-SUFFIX,pixfuture.com
 DOMAIN-SUFFIX,pixfuture.net
 DOMAIN-SUFFIX,placelocal.com
-DOMAIN-SUFFIX,plista.com
 DOMAIN-SUFFIX,plugrush.com
 DOMAIN-SUFFIX,polarmobile.com
 DOMAIN-SUFFIX,popads.media
@@ -234,7 +215,6 @@ DOMAIN-SUFFIX,propellerads.com
 DOMAIN-SUFFIX,proper.io
 DOMAIN-SUFFIX,proxistore.com
 DOMAIN-SUFFIX,pub2srv.com
-DOMAIN-SUFFIX,publicidees.com
 DOMAIN-SUFFIX,pubmine.com
 DOMAIN-SUFFIX,pubnative.info
 DOMAIN-SUFFIX,pushsar.com
@@ -305,7 +285,6 @@ DOMAIN-SUFFIX,upsnap.com
 DOMAIN-SUFFIX,usekahuna.com
 DOMAIN-SUFFIX,veinteractive.com
 DOMAIN-SUFFIX,vertamedia.com
-DOMAIN-SUFFIX,verticalscope.com
 DOMAIN-SUFFIX,vi-serve.com
 DOMAIN-SUFFIX,vidazoo.com
 DOMAIN-SUFFIX,videoadex.com
@@ -339,7 +318,6 @@ DOMAIN-SUFFIX,zedo.com
 DOMAIN-SUFFIX,zemanta.com
 DOMAIN-SUFFIX,zestads.com
 DOMAIN-SUFFIX,zeustechnology.com
-DOMAIN-SUFFIX,zumobi.com
 
 # > Ad-Global-Extras
 DOMAIN-SUFFIX,a8.net
