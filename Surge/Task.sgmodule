@@ -1,7 +1,7 @@
 #!name=每日签到
 #!desc=自动执行签到任务
 #!arguments=顺丰签到:20 10 0 * * *,贴吧签到:20 15 0 * * *,途虎签到:30 30 0 * * *,Boxjs备份定时:10 8 1 */3 * *,Boxjs恢复定时:30 10 5 * * *,Boxjs会话切换定时:30 10 5 * * *,Boxjs备份:Boxjs数据备份,Boxjs恢复:Boxjs数据恢复,Boxjs会话切换:Boxjs会话切换
-#!arguments-desc=Cron表达式：秒 分 时 * * * \n\nBoxjs备份：输入 # 表示禁用\nBoxjs恢复：输入 # 表示禁用\nBoxjs会话切换：输入 # 表示禁用
+#!arguments-desc=[参数说明]\n\nCron表达式：秒 分 时 * * *\n\nBoxjs备份、Boxjs恢复、Boxjs会话切换：\n输入 # 表示禁用
 #!category=签到模块
 
 [Script]
