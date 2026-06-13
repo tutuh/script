@@ -2,7 +2,7 @@
 #!desc=支持：ChatGPT · Gemini · Netflix · Disney+ · YouTube
 #!category=Panel
 #!arguments=更新频率:-1, 请求超时:30, 面板名称:网络解锁检测, Icon:play.tv.fill, Color:E83A5C, ALIGN_MODE:monospace
-#!arguments-desc=[参数说明]\n\n更新频率: 面板刷新频率（默认手动刷新）\n\n请求超时: 单位：秒，默认 30 秒\n\n面板名称: 自定义面板标题\n\nALIGN_MODE: 字体格式，默认 monospace，可选 native
+#!arguments-desc=[参数说明]\n\n更新频率: 面板刷新频率（默认手动刷新）\n\n请求超时: 单位：秒，默认 30\n\n面板名称: 自定义面板标题\n\nALIGN_MODE: 字体格式，默认 monospace，可选 native
 
 [Panel]
 网络解锁检测 = script-name=解锁检测,update-interval={{{更新频率}}}
