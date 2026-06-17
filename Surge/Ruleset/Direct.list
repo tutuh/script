@@ -249,6 +249,13 @@ DOMAIN-SUFFIX,hotmail.com
 DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,microsoftonline.com
 
+# Office CDN
+DOMAIN,res-1.cdn.office.net
+DOMAIN,res-2.cdn.office.net
+DOMAIN,res-h3.public.cdn.office.net
+DOMAIN,res.cdn.office.net
+DOMAIN,statics.teams.cdn.office.net
+
 # PDD - 拼多多
 DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pinduoduo.com
