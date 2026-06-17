@@ -120,24 +120,14 @@ DOMAIN-SUFFIX,metaquest.com
 DOMAIN-SUFFIX,oculus.com
 DOMAIN-SUFFIX,oculuscdn.com
 
-# Microsoft
-DOMAIN-SUFFIX,gfx.ms
-DOMAIN-SUFFIX,sfx.ms
-DOMAIN-SUFFIX,live.net
-DOMAIN-SUFFIX,livefilestore.com
-DOMAIN-SUFFIX,azurewebsites.net
-DOMAIN-SUFFIX,aspnetcdn.com
-DOMAIN-SUFFIX,licdn.com
-# > OneDrive
-DOMAIN-SUFFIX,storage.live.com
+# OneDrive
+DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,sharepoint.com
 DOMAIN-SUFFIX,sharepointonline.com
-DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,1drv.ms
-DOMAIN-SUFFIX,oneclient.sfx.ms
 DOMAIN-SUFFIX,microsoftpersonalcontent.com
+DOMAIN-SUFFIX,storage.live.com
 DOMAIN,onedrive.live.com
-DOMAIN,photos.live.com
 
 # OpenAI
 DOMAIN-SUFFIX,openai.com
