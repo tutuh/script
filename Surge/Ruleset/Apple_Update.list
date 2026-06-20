@@ -1,6 +1,4 @@
-# Update
-
-# App Store
+# App Store Update
 DOMAIN,iosapps.itunes.apple.com
 DOMAIN,osxapps.itunes.apple.com
 DOMAIN-SUFFIX,apps.apple.com
