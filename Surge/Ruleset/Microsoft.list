@@ -1,3 +1,10 @@
+# Microsoft
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,microsoftonline.com
+DOMAIN-SUFFIX,microsoft365.com
+DOMAIN-SUFFIX,microsoftusercontent.com
+DOMAIN-SUFFIX,microsoftpersonalcontent.com
+
 # Outlook
 DOMAIN-SUFFIX,outlook.com
 DOMAIN-SUFFIX,outlookmobile.com
@@ -7,7 +14,6 @@ DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,sharepoint.com
 DOMAIN-SUFFIX,sharepointonline.com
 DOMAIN-SUFFIX,1drv.ms
-DOMAIN-SUFFIX,microsoftpersonalcontent.com
 DOMAIN-SUFFIX,storage.live.com
 DOMAIN,onedrive.live.com
 
@@ -36,6 +42,5 @@ DOMAIN-SUFFIX,trafficmanager.net
 DOMAIN-SUFFIX,cloudapp.net
 DOMAIN-SUFFIX,aspnetcdn.com
 
-# Keyword
-DOMAIN-KEYWORD,microsoft
+# Legacy
 DOMAIN-KEYWORD,hotmail
