@@ -1,26 +1,26 @@
 # Microsoft
 DOMAIN-SUFFIX,microsoft.com
-DOMAIN-SUFFIX,microsoftonline.com
 DOMAIN-SUFFIX,microsoft365.com
-DOMAIN-SUFFIX,microsoftusercontent.com
+DOMAIN-SUFFIX,microsoftonline.com
 DOMAIN-SUFFIX,microsoftpersonalcontent.com
+DOMAIN-SUFFIX,microsoftusercontent.com
 
 # Outlook
 DOMAIN-SUFFIX,outlook.com
 DOMAIN-SUFFIX,outlookmobile.com
 
 # OneDrive
+DOMAIN,onedrive.live.com
+DOMAIN-SUFFIX,1drv.ms
 DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,sharepoint.com
 DOMAIN-SUFFIX,sharepointonline.com
-DOMAIN-SUFFIX,1drv.ms
 DOMAIN-SUFFIX,storage.live.com
-DOMAIN,onedrive.live.com
 
 # Office
 DOMAIN-SUFFIX,office.com
-DOMAIN-SUFFIX,office365.com
 DOMAIN-SUFFIX,office.net
+DOMAIN-SUFFIX,office365.com
 
 # Microsoft Account
 DOMAIN-SUFFIX,live.com
@@ -31,16 +31,16 @@ DOMAIN-SUFFIX,msauth.net
 DOMAIN-SUFFIX,msauthimages.net
 DOMAIN-SUFFIX,msftauth.net
 DOMAIN-SUFFIX,msftauthimages.net
-DOMAIN-SUFFIX,msidentity.com
 DOMAIN-SUFFIX,msftidentity.com
+DOMAIN-SUFFIX,msidentity.com
 
 # Azure / CDN
-DOMAIN-SUFFIX,azureedge.net
-DOMAIN-SUFFIX,msecnd.net
-DOMAIN-SUFFIX,windows.net
-DOMAIN-SUFFIX,trafficmanager.net
-DOMAIN-SUFFIX,cloudapp.net
 DOMAIN-SUFFIX,aspnetcdn.com
+DOMAIN-SUFFIX,azureedge.net
+DOMAIN-SUFFIX,cloudapp.net
+DOMAIN-SUFFIX,msecnd.net
+DOMAIN-SUFFIX,trafficmanager.net
+DOMAIN-SUFFIX,windows.net
 
-# Legacy
+# Keyword
 DOMAIN-KEYWORD,hotmail
