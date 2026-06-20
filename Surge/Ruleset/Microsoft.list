@@ -7,6 +7,9 @@ DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,sharepoint.com
 DOMAIN-SUFFIX,sharepointonline.com
 DOMAIN-SUFFIX,1drv.ms
+DOMAIN-SUFFIX,microsoftpersonalcontent.com
+DOMAIN-SUFFIX,storage.live.com
+DOMAIN,onedrive.live.com
 
 # Office
 DOMAIN-SUFFIX,office.com
