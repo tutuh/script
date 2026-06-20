@@ -243,7 +243,6 @@ DOMAIN-SUFFIX,netease.com
 DOMAIN-SUFFIX,ydstatic.com
 DOMAIN-SUFFIX,youdao.com
 
-# > Microsoft
 # Office CDN
 DOMAIN,res-1.cdn.office.net
 DOMAIN,res-2.cdn.office.net
