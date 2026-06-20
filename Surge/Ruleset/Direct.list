@@ -244,11 +244,6 @@ DOMAIN-SUFFIX,ydstatic.com
 DOMAIN-SUFFIX,youdao.com
 
 # > Microsoft
-# Mail
-DOMAIN-SUFFIX,outlook.com
-DOMAIN-SUFFIX,hotmail.com
-DOMAIN-SUFFIX,live.com
-DOMAIN-SUFFIX,microsoftonline.com
 # Office CDN
 DOMAIN,res-1.cdn.office.net
 DOMAIN,res-2.cdn.office.net
