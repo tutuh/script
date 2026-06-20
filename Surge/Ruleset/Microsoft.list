@@ -1,0 +1,38 @@
+# Outlook
+DOMAIN-SUFFIX,outlook.com
+DOMAIN-SUFFIX,outlookmobile.com
+
+# OneDrive
+DOMAIN-SUFFIX,onedrive.com
+DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,sharepointonline.com
+DOMAIN-SUFFIX,1drv.ms
+
+# Office
+DOMAIN-SUFFIX,office.com
+DOMAIN-SUFFIX,office365.com
+DOMAIN-SUFFIX,office.net
+
+# Microsoft Account
+DOMAIN-SUFFIX,live.com
+DOMAIN-SUFFIX,live.net
+
+# Authentication
+DOMAIN-SUFFIX,msauth.net
+DOMAIN-SUFFIX,msauthimages.net
+DOMAIN-SUFFIX,msftauth.net
+DOMAIN-SUFFIX,msftauthimages.net
+DOMAIN-SUFFIX,msidentity.com
+DOMAIN-SUFFIX,msftidentity.com
+
+# Azure / CDN
+DOMAIN-SUFFIX,azureedge.net
+DOMAIN-SUFFIX,msecnd.net
+DOMAIN-SUFFIX,windows.net
+DOMAIN-SUFFIX,trafficmanager.net
+DOMAIN-SUFFIX,cloudapp.net
+DOMAIN-SUFFIX,aspnetcdn.com
+
+# Keyword
+DOMAIN-KEYWORD,microsoft
+DOMAIN-KEYWORD,hotmail
