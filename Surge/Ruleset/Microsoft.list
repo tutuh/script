@@ -21,10 +21,12 @@ DOMAIN-SUFFIX,storage.live.com
 DOMAIN-SUFFIX,office.com
 DOMAIN-SUFFIX,office.net
 DOMAIN-SUFFIX,office365.com
+DOMAIN-SUFFIX,officeapps.live.com
 
 # Microsoft Account
 DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,live.net
+DOMAIN-SUFFIX,hotmail.com
 
 # Authentication
 DOMAIN-SUFFIX,msauth.net
@@ -41,6 +43,3 @@ DOMAIN-SUFFIX,cloudapp.net
 DOMAIN-SUFFIX,msecnd.net
 DOMAIN-SUFFIX,trafficmanager.net
 DOMAIN-SUFFIX,windows.net
-
-# Keyword
-DOMAIN-KEYWORD,hotmail
