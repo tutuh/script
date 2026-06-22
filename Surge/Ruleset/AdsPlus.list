@@ -382,8 +382,6 @@ DOMAIN-SUFFIX,youappi.com
 DOMAIN-SUFFIX,zucks.net
 
 # > Ad-Extras
-DOMAIN-SUFFIX,iflyad.bj.openstorage.cn
-DOMAIN-SUFFIX,bjimp.voiceads.cn
 DOMAIN-SUFFIX,1rtb.net
 DOMAIN-SUFFIX,1rtb.com
 DOMAIN-SUFFIX,halomobi.com
@@ -474,10 +472,6 @@ DOMAIN-SUFFIX,adwangmai.com
 DOMAIN-SUFFIX,bxsnews.com
 DOMAIN-SUFFIX,ranfenghd.com
 DOMAIN-SUFFIX,qchannel01.cn
-DOMAIN-SUFFIX,qchannel02.cn
-DOMAIN-SUFFIX,qchannel03.cn
-DOMAIN-SUFFIX,qchannel04.cn
-DOMAIN,ad.xelements.cn
 DOMAIN-SUFFIX,adsrvr.cn
 DOMAIN-SUFFIX,adsrvr.org
 DOMAIN-SUFFIX,fancydsp.com
@@ -492,10 +486,8 @@ DOMAIN-SUFFIX,tradplusad.com
 DOMAIN-SUFFIX,fancyapi.com
 DOMAIN-SUFFIX,medproad.com
 DOMAIN-SUFFIX,applovin.com
-DOMAIN,iads.unity3d.com
 DOMAIN-SUFFIX,unityads.unitychina.cn
 DOMAIN-SUFFIX,tapjoy.com
-DOMAIN,ads.vungle.com
 DOMAIN-SUFFIX,adsmoloco.com
 DOMAIN-SUFFIX,smadex.com
 DOMAIN-SUFFIX,tapad.com
