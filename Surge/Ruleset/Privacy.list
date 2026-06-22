@@ -41,7 +41,6 @@ DOMAIN-SUFFIX,sensorsdata.com
 DOMAIN-SUFFIX,sentiance.com
 DOMAIN-SUFFIX,shareaholic.com
 DOMAIN-SUFFIX,sift.co
-DOMAIN-SUFFIX,smartlook.com
 DOMAIN-SUFFIX,socialannex.com
 DOMAIN-SUFFIX,staevent.work
 DOMAIN-SUFFIX,staevent.xyz
@@ -56,15 +55,6 @@ DOMAIN-SUFFIX,tapfiliate.com
 DOMAIN-SUFFIX,tapstream.com
 DOMAIN-SUFFIX,thetrafficstat.net
 DOMAIN-SUFFIX,trackingio.com
-DOMAIN-SUFFIX,um0.cn
-DOMAIN-SUFFIX,um1.cn
-DOMAIN-SUFFIX,umengcloud.com
-DOMAIN-SUFFIX,umtrack.com
-DOMAIN-SUFFIX,umtrack0.com
-DOMAIN-SUFFIX,umtrack1.com
-DOMAIN-SUFFIX,umtrack2.com
-DOMAIN-SUFFIX,umv0.com
-DOMAIN-SUFFIX,umv5.com
 DOMAIN-SUFFIX,woopra.com
 DOMAIN-SUFFIX,wootric.com
 DOMAIN-SUFFIX,wrating.com
@@ -98,6 +88,7 @@ DOMAIN-SUFFIX,hotjar.io
 DOMAIN-SUFFIX,mixpanel.com
 DOMAIN-SUFFIX,segment.com
 DOMAIN-SUFFIX,segment.io
+DOMAIN-SUFFIX,smartlook.com
 
 # > 51.LA
 DOMAIN,js.users.51.la
@@ -158,6 +149,17 @@ DOMAIN,track.tenjin.io
 # > Tencent
 DOMAIN,oth.str.mdt.qq.com
 DOMAIN,otheve.beacon.qq.com
+
+# > Umeng
+DOMAIN-SUFFIX,um0.cn
+DOMAIN-SUFFIX,um1.cn
+DOMAIN-SUFFIX,umengcloud.com
+DOMAIN-SUFFIX,umtrack.com
+DOMAIN-SUFFIX,umtrack0.com
+DOMAIN-SUFFIX,umtrack1.com
+DOMAIN-SUFFIX,umtrack2.com
+DOMAIN-SUFFIX,umv0.com
+DOMAIN-SUFFIX,umv5.com
 
 # > XiaoMi
 DOMAIN-SUFFIX,tracking.miui.com
