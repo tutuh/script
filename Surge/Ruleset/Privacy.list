@@ -1,7 +1,6 @@
 # Privacy
 
 DOMAIN,analytics.slashdotmedia.com
-DOMAIN,app-analytics-services.com
 DOMAIN,logrcv.aiclk.com
 DOMAIN,sdklog.zhangyuyidong.cn
 DOMAIN,statis.miwuad.com
@@ -59,6 +58,7 @@ DOMAIN-SUFFIX,thetrafficstat.net
 DOMAIN-SUFFIX,trackingio.com
 DOMAIN-SUFFIX,um0.cn
 DOMAIN-SUFFIX,um1.cn
+DOMAIN-SUFFIX,umengcloud.com
 DOMAIN-SUFFIX,umtrack.com
 DOMAIN-SUFFIX,umtrack0.com
 DOMAIN-SUFFIX,umtrack1.com
