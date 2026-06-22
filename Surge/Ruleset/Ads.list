@@ -67,9 +67,8 @@ DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
 DOMAIN-SUFFIX,pangle.io
 DOMAIN,lf-ad-ies.bytecdn.cn
-DOMAIN,nativeadv.dftoutiao.com
-DOMAIN-SUFFIX,-ad-sign.byteimg.com
-DOMAIN-SUFFIX,-ad.byteoversea.com
+DOMAIN-KEYWORD,-ad-sign.byteimg.com
+DOMAIN-KEYWORD,-ad.byteoversea.com
 DOMAIN-KEYWORD,pglstatp
 DOMAIN-KEYWORD,panplayable-toutiao
 
