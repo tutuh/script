@@ -253,6 +253,7 @@ DOMAIN,statics.teams.cdn.office.net
 # PDD - 拼多多
 DOMAIN-SUFFIX,pddpic.com
 DOMAIN-SUFFIX,pinduoduo.com
+DOMAIN-SUFFIX,pinduoduo.net
 DOMAIN-SUFFIX,yangkeduo.com
 
 # Sina - 新浪
