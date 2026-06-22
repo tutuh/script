@@ -343,6 +343,8 @@ DOMAIN-SUFFIX,kaola.com
 DOMAIN-SUFFIX,suning.com
 DOMAIN-SUFFIX,weidian.com
 DOMAIN-SUFFIX,womai.com
+
+# > Express
 DOMAIN-SUFFIX,sf-express.com
 DOMAIN-SUFFIX,kuaidi100.com
 
@@ -365,7 +367,6 @@ DOMAIN-SUFFIX,tuniu.com
 DOMAIN-SUFFIX,tuniucdn.com
 
 # > Recruitment
-DOMAIN-SUFFIX,tianyancha.com
 DOMAIN-SUFFIX,51job.com
 DOMAIN-SUFFIX,51jobcdn.com
 DOMAIN-SUFFIX,bosszhipin.com
@@ -397,13 +398,14 @@ DOMAIN-SUFFIX,cnki.net
 DOMAIN-SUFFIX,eudic.net
 DOMAIN-SUFFIX,frdic.com
 
-# > Web Services
+# > Tools
 DOMAIN-SUFFIX,115.com
 DOMAIN-SUFFIX,eshimin.com
 DOMAIN-SUFFIX,eshiyun.info
 DOMAIN-SUFFIX,jianguoyun.com
 DOMAIN-SUFFIX,mubu.com
 DOMAIN-SUFFIX,qiniu.com
+DOMAIN-SUFFIX,tianyancha.com
 DOMAIN-SUFFIX,umengcloud.com
 DOMAIN-SUFFIX,wscdns.com
 DOMAIN-SUFFIX,xiumi.us
