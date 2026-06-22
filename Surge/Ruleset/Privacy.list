@@ -1,10 +1,12 @@
 # Privacy
 
+# > Analytics
 DOMAIN,analytics.slashdotmedia.com
 DOMAIN,logrcv.aiclk.com
 DOMAIN,sdklog.zhangyuyidong.cn
 DOMAIN,statis.miwuad.com
 DOMAIN,zgsdk.zhugeio.com
+DOMAIN-SUFFIX,99click.com
 DOMAIN-SUFFIX,adj.st
 DOMAIN-SUFFIX,adjust.com
 DOMAIN-SUFFIX,adlooxtracking.com
@@ -12,23 +14,33 @@ DOMAIN-SUFFIX,admaster.com.cn
 DOMAIN-SUFFIX,adtrace.org
 DOMAIN-SUFFIX,airpr.com
 DOMAIN-SUFFIX,amplitude.com
+DOMAIN-SUFFIX,analysys.cn
 DOMAIN-SUFFIX,app-analytics-services.com
-DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,chartbeat.com
+DOMAIN-SUFFIX,cmcore.com
+DOMAIN-SUFFIX,coremetrics.com
 DOMAIN-SUFFIX,cr-nielsen.com
 DOMAIN-SUFFIX,crwdcntrl.net
 DOMAIN-SUFFIX,dratio.com
-DOMAIN-SUFFIX,dynatrace.com
+DOMAIN-SUFFIX,effectivemeasure.com
+DOMAIN-SUFFIX,effectivemeasure.net
+DOMAIN-SUFFIX,flashtalking.com
+DOMAIN-SUFFIX,gosquared.com
+DOMAIN-SUFFIX,gridsum.com
+DOMAIN-SUFFIX,gridsumdissector.cn
+DOMAIN-SUFFIX,gridsumdissector.com
+DOMAIN-SUFFIX,histats.com
 DOMAIN-SUFFIX,hs-analytics.net
+DOMAIN-SUFFIX,imrworldwide.com
 DOMAIN-SUFFIX,installtongji.online
 DOMAIN-SUFFIX,installtongji.top
 DOMAIN-SUFFIX,kissmetrics.com
 DOMAIN-SUFFIX,kochava.com
 DOMAIN-SUFFIX,liadm.com
+DOMAIN-SUFFIX,magicwindow.cn
 DOMAIN-SUFFIX,marketo.com
 DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-SUFFIX,mparticle.com
-DOMAIN-SUFFIX,newrelic.com
-DOMAIN-SUFFIX,nr-data.net
 DOMAIN-SUFFIX,opstatistics.cn
 DOMAIN-SUFFIX,opstatistics.com
 DOMAIN-SUFFIX,pardot.com
@@ -36,12 +48,11 @@ DOMAIN-SUFFIX,quantcount.com
 DOMAIN-SUFFIX,samba.tv
 DOMAIN-SUFFIX,scorecardresearch.com
 DOMAIN-SUFFIX,segmentify.com
-DOMAIN-SUFFIX,sensorsdata.cn
-DOMAIN-SUFFIX,sensorsdata.com
 DOMAIN-SUFFIX,sentiance.com
 DOMAIN-SUFFIX,shareaholic.com
 DOMAIN-SUFFIX,sift.co
 DOMAIN-SUFFIX,socialannex.com
+DOMAIN-SUFFIX,statcounter.com
 DOMAIN-SUFFIX,staevent.work
 DOMAIN-SUFFIX,staevent.xyz
 DOMAIN-SUFFIX,statchannel.store
@@ -58,28 +69,13 @@ DOMAIN-SUFFIX,trackingio.com
 DOMAIN-SUFFIX,woopra.com
 DOMAIN-SUFFIX,wootric.com
 DOMAIN-SUFFIX,wrating.com
-DOMAIN-SUFFIX,99click.com
-DOMAIN-SUFFIX,analysys.cn
-DOMAIN-SUFFIX,chartbeat.com
-DOMAIN-SUFFIX,cmcore.com
-DOMAIN-SUFFIX,cnzz.com
-DOMAIN-SUFFIX,cnzzlink.com
-DOMAIN-SUFFIX,coremetrics.com
-DOMAIN-SUFFIX,flashtalking.com
-DOMAIN-SUFFIX,gridsum.com
-DOMAIN-SUFFIX,gridsumdissector.cn
-DOMAIN-SUFFIX,gridsumdissector.com
-DOMAIN-SUFFIX,magicwindow.cn
-DOMAIN-SUFFIX,oneapm.com
-DOMAIN-SUFFIX,effectivemeasure.com
-DOMAIN-SUFFIX,effectivemeasure.net
-DOMAIN-SUFFIX,gosquared.com
-DOMAIN-SUFFIX,histats.com
-DOMAIN-SUFFIX,imrworldwide.com
-DOMAIN-SUFFIX,statcounter.com
 
-# > 应用崩溃日志上报
+# > 性能监控与崩溃日志上报
 DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,dynatrace.com
+DOMAIN-SUFFIX,newrelic.com
+DOMAIN-SUFFIX,nr-data.net
+DOMAIN-SUFFIX,oneapm.com
 DOMAIN-SUFFIX,sentry.io
 
 # > 用户行为与点击追踪
@@ -112,11 +108,16 @@ DOMAIN,hm.baidu.com
 DOMAIN,hmma.baidu.com
 DOMAIN,mobads-logs.baidu.com
 
+# > CNZZ (站长统计)
+DOMAIN-SUFFIX,cnzz.com
+DOMAIN-SUFFIX,cnzzlink.com
+
 # > Daum/Kakao
 DOMAIN,track.tiara.daum.net
 DOMAIN,track.tiara.kakao.com
 
 # > Google
+DOMAIN-SUFFIX,app-measurement.com
 DOMAIN-SUFFIX,google-analytics.com
 
 # > GozenData (勾正数据)
@@ -135,6 +136,10 @@ DOMAIN,c.bing.com
 DOMAIN,c.clarity.ms
 DOMAIN,o.clarity.ms
 DOMAIN,www.clarity.ms
+
+# > Sensors (神策数据)
+DOMAIN-SUFFIX,sensorsdata.cn
+DOMAIN-SUFFIX,sensorsdata.com
 
 # > TalkingData
 DOMAIN-SUFFIX,cpatrk.net
@@ -162,7 +167,7 @@ DOMAIN-SUFFIX,umv0.com
 DOMAIN-SUFFIX,umv5.com
 
 # > XiaoMi
-DOMAIN-SUFFIX,tracking.miui.com
 DOMAIN,data.mistat.xiaomi.com
 DOMAIN,flash.sec.miui.com
 DOMAIN,tracking.intl.miui.com
+DOMAIN-SUFFIX,tracking.miui.com
