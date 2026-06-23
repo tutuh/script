@@ -16,6 +16,7 @@ DOMAIN,df.tanx.com
 DOMAIN,opehs.tanx.com
 DOMAIN,ems.youku.com
 DOMAIN,partner.uc.cn
+DOMAIN-SUFFIX,uc.cmd
 
 # ======= (B) ======= #
 # > 百度
