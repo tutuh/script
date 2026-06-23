@@ -2,10 +2,6 @@
 #!desc=广告过滤规则合集
 #!category=广告拦截
 
-[URL Rewrite]
-# > 京东诊断
-^http:\/\/\w{32}\.jddebug\.com\/diagnose\? - reject
-
 [Map Local]
 # (0~9)
 # > 10010 - m.client.10010.com
