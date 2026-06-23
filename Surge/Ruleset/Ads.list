@@ -53,7 +53,7 @@ DOMAIN,optimus-ads.amap.com.w.alikunlun.com
 DOMAIN,dsp-x.jd.com
 DOMAIN,im-x.jd.com
 DOMAIN,janapi.jd.com
-DOMAIN,jddebug.com
+DOMAIN-SUFFIX,jddebug.com
 # > 金山
 DOMAIN,ad-stat.ksosoft.com
 DOMAIN,img.auction-ads.wpscdn.cn
