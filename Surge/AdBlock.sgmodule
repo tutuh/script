@@ -73,7 +73,6 @@
 # > 票根 - pss.txffp.com
 ^https:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ data-type=text data="" status-code=200
 # > 拼多多 - api.yangkeduo.com, api.pinduoduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
-# > 拼多多 - pinduoduo.com, yangkeduo.com
 ^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/.* data-type=text data="" status-code=200
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_.* data-type=text data="" status-code=200
@@ -109,4 +108,4 @@
 ^https:\/\/syh\.zybang\.com\/com\/adx\/impress$ data-type=text data="" status-code=200
 
 [MITM]
-hostname = %APPEND% m.client.10010.com, client.app.coc.10086.cn, pan.baidu.com, res.pizzahut.com.cn, app.chengfenmiao.com, api.chelaile.net.cn, web.chelaile.net.cn, pic.edaijia.cn, app.variflight.com, api.cdmcaac.com, switch.jumpvg.com, api.m.jd.com, *.kakamobi.cn, res.kfc.com.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, home.mi.com, capi.mwee.cn, api.mcd.cn, pss.txffp.com, api.pinduoduo.com, api.yangkeduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, gw.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, acs.m.taobao.com, msg.umengcloud.com, client-api-v2.oray.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
+hostname = %APPEND% m.client.10010.com, client.app.coc.10086.cn, pan.baidu.com, res.pizzahut.com.cn, app.chengfenmiao.com, api.chelaile.net.cn, web.chelaile.net.cn, pic.edaijia.cn, app.variflight.com, api.cdmcaac.com, switch.jumpvg.com, api.m.jd.com, *.kakamobi.cn, res.kfc.com.cn, imeclient.openspeech.cn, api.club.lenovo.cn, openapi.laiyifen.com, home.mi.com, capi.mwee.cn, api.mcd.cn, pss.txffp.com, api.yangkeduo.com, api.pinduoduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, gw.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, acs.m.taobao.com, msg.umengcloud.com, client-api-v2.oray.com, app-api.niu.com, i.ys7.com, xyst.yuanfudao.com, syh.zybang.com
