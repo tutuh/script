@@ -5,14 +5,14 @@
 #!category=签到模块
 
 [Script]
-顺丰速运_签到 = type=cron,cronexp="{{{顺丰签到}}}",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
+顺丰速运_签到 = type=cron,cronexp="{{{顺丰签到}}}",timeout=120,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
 
-百度贴吧_签到 = type=cron,cronexp="{{{贴吧签到}}}",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
+百度贴吧_签到 = type=cron,cronexp="{{{贴吧签到}}}",timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
 
-途虎_签到 = type=cron,cronexp="{{{途虎签到}}}",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/tuhu.js
+途虎_签到 = type=cron,cronexp="{{{途虎签到}}}",timeout=60,script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/tuhu.js
 
-{{{Boxjs备份}}}  = type=cron,cronexp="{{{Boxjs备份定时}}}",wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
+{{{Boxjs备份}}}  = type=cron,cronexp="{{{Boxjs备份定时}}}",timeout=180,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
 
-{{{Boxjs恢复}}} = type=cron,cronexp="{{{Boxjs恢复定时}}}",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js
+{{{Boxjs恢复}}} = type=cron,cronexp="{{{Boxjs恢复定时}}}",timeout=120,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js
 
-{{{Boxjs会话切换}}} = type=cron,cronexp="{{{Boxjs会话切换定时}}}",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js
+{{{Boxjs会话切换}}} = type=cron,cronexp="{{{Boxjs会话切换定时}}}",timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js
