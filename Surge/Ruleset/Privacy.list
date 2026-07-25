@@ -18,22 +18,16 @@ DOMAIN-SUFFIX,analysys.cn
 DOMAIN-SUFFIX,app-analytics-services.com
 DOMAIN-SUFFIX,chartbeat.com
 DOMAIN-SUFFIX,cmcore.com
-DOMAIN-SUFFIX,coremetrics.com
 DOMAIN-SUFFIX,cr-nielsen.com
 DOMAIN-SUFFIX,crwdcntrl.net
-DOMAIN-SUFFIX,dratio.com
 DOMAIN-SUFFIX,effectivemeasure.com
 DOMAIN-SUFFIX,effectivemeasure.net
 DOMAIN-SUFFIX,flashtalking.com
-DOMAIN-SUFFIX,gosquared.com
 DOMAIN-SUFFIX,gridsum.com
 DOMAIN-SUFFIX,gridsumdissector.cn
 DOMAIN-SUFFIX,gridsumdissector.com
-DOMAIN-SUFFIX,histats.com
 DOMAIN-SUFFIX,hs-analytics.net
 DOMAIN-SUFFIX,imrworldwide.com
-DOMAIN-SUFFIX,installtongji.online
-DOMAIN-SUFFIX,installtongji.top
 DOMAIN-SUFFIX,kissmetrics.com
 DOMAIN-SUFFIX,kochava.com
 DOMAIN-SUFFIX,liadm.com
@@ -49,34 +43,13 @@ DOMAIN-SUFFIX,samba.tv
 DOMAIN-SUFFIX,scorecardresearch.com
 DOMAIN-SUFFIX,segmentify.com
 DOMAIN-SUFFIX,sentiance.com
-DOMAIN-SUFFIX,shareaholic.com
 DOMAIN-SUFFIX,sift.co
-DOMAIN-SUFFIX,socialannex.com
 DOMAIN-SUFFIX,statcounter.com
-DOMAIN-SUFFIX,staevent.work
-DOMAIN-SUFFIX,staevent.xyz
-DOMAIN-SUFFIX,statchannel.store
-DOMAIN-SUFFIX,statchannel.top
-DOMAIN-SUFFIX,stats-locations.com
-DOMAIN-SUFFIX,statschannel.xyz
-DOMAIN-SUFFIX,statsinstall.xyz
 DOMAIN-SUFFIX,tagcommander.com
-DOMAIN-SUFFIX,tailtarget.com
 DOMAIN-SUFFIX,tapfiliate.com
 DOMAIN-SUFFIX,tapstream.com
-DOMAIN-SUFFIX,thetrafficstat.net
 DOMAIN-SUFFIX,trackingio.com
 DOMAIN-SUFFIX,woopra.com
-DOMAIN-SUFFIX,wootric.com
-DOMAIN-SUFFIX,wrating.com
-
-# > 性能监控与崩溃日志上报
-DOMAIN-SUFFIX,crashlytics.com
-DOMAIN-SUFFIX,dynatrace.com
-DOMAIN-SUFFIX,newrelic.com
-DOMAIN-SUFFIX,nr-data.net
-DOMAIN-SUFFIX,oneapm.com
-DOMAIN-SUFFIX,sentry.io
 
 # > 用户行为与点击追踪
 DOMAIN,api.mixpanel.com
@@ -128,11 +101,7 @@ DOMAIN-SUFFIX,gz-data.com
 # > GrowingIO
 DOMAIN-SUFFIX,giocdn.com
 
-# > Huawei
-DOMAIN,browsercfg-drcn.cloud.dbankcloud.cn
-
 # > Microsoft
-DOMAIN,c.bing.com
 DOMAIN,c.clarity.ms
 DOMAIN,o.clarity.ms
 DOMAIN,www.clarity.ms
