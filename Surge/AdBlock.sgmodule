@@ -63,7 +63,7 @@
 
 # (M)
 # > 米家 - home.mi.com
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|openingBanner) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 美味不用等 - capi.mwee.cn
 ^https:\/\/capi\.mwee\.cn\/app-api\/V\d+\/app\/(ad|getstartad) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 麦当劳 - api.mcd.cn
