@@ -45,6 +45,11 @@ async function main() {
   console.log("开始获取贴吧列表");
   const data = await getForumRetry();
 
+  if (data?.cookieExpired) {
+    notify(NAME, "失败", "Cookie失效，请重新获取Cookie");
+    return;
+  }
+
   if (!data || !data.like_forum) {
     notify(NAME, "失败", "未获取关注贴吧");
     return;
@@ -59,7 +64,7 @@ async function main() {
 
   for (const bar of bars) {
     // 已签到直接跳过
-    if (bar.is_sign == 1) {
+    if (bar.is_sign == 1 || bar.is_sign == "1") {
       already++;
       result.push(`【${bar.forum_name}】已经签到，等级${bar.user_level}，经验${bar.user_exp}`);
       continue;
@@ -95,6 +100,7 @@ async function main() {
 async function getForumRetry() {
   for (let i = 1; i <= CONFIG.retry; i++) {
     const data = await getForum();
+    if (data?.cookieExpired) return data;
     if (data && data.like_forum) return data;
     
     console.log(`获取贴吧列表失败，第${i}/${CONFIG.retry}次`);
@@ -127,6 +133,11 @@ function getForum() {
       }
       try {
         const obj = JSON.parse(body);
+        if (obj.error || obj.error_code == 1 || obj.error_code == 3 || JSON.stringify(obj).includes("BDUSS")) {
+          console.log("Cookie失效");
+          resolve({ cookieExpired: true });
+          return;
+        }
         resolve(obj.data);
       } catch (e) {
         console.log("贴吧列表解析失败");
@@ -175,7 +186,7 @@ function signOnce(kw, tbs) {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": cookie,
-        "User-Agent": "Mozilla/5.0 (iPhone)"
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)"
       },
       body: `tbs=${tbs}&kw=${encodeURIComponent(kw)}&ie=utf-8`
     }, (err, resp, body) => {
@@ -193,7 +204,9 @@ function signOnce(kw, tbs) {
         }
 
         if (obj.no == 0) {
-          resolve({ success: true, msg: `连续签到${obj.data.uinfo.cont_sign_num}天，排名${obj.data.uinfo.user_sign_rank}` });
+          const day = obj.data?.uinfo?.cont_sign_num ?? "?";
+          const rank = obj.data?.uinfo?.user_sign_rank ?? "?";
+          resolve({ success: true, msg: `连续签到${day}天，排名${rank}` });
         } else {
           resolve({ success: false, msg: obj.error || `错误码:${obj.no}` });
         }
