@@ -14,24 +14,28 @@
 const NAME = "贴吧签到";
 const COOKIE_KEY = "TieBa_Cookie";
 
+const CONFIG = {
+  timeout: 15000,
+  retry: 3,
+  minDelay: 2000,
+  maxDelay: 5000,
+  retryDelay: 5000,
+  notifyLimit: 2500
+};
+
 let cookie = $persistentStore.read(COOKIE_KEY) || "";
 let result = [];
 
-const CONFIG = {
-  retry: 3,
-  retryDelayMin: 3000,
-  retryDelayMax: 8000,
-  minDelay: 1000,
-  maxDelay: 5000,
-  timeout: 10000,
-  notifyLimit: 2000
-};
-
 (async () => {
-  if (typeof $request !== "undefined") {
-    getCookie();
-  } else {
-    await main();
+  try {
+    if (typeof $request !== "undefined") {
+      getCookie();
+    } else {
+      await main();
+    }
+  } catch (e) {
+    console.log("运行异常：" + e);
+    notify(NAME, "运行异常", String(e));
   }
   $done();
 })();
@@ -42,13 +46,9 @@ async function main() {
     return;
   }
 
-  console.log("开始获取贴吧列表");
-  const data = await getForumRetry();
+  console.log("开始获取贴吧列表...");
 
-  if (data?.cookieExpired) {
-    notify(NAME, "失败", "Cookie失效，请重新获取Cookie");
-    return;
-  }
+  const data = await getForumRetry();
 
   if (!data || !data.like_forum) {
     notify(NAME, "失败", "未获取关注贴吧");
@@ -57,200 +57,276 @@ async function main() {
 
   const bars = data.like_forum;
   const tbs = data.tbs;
+
   console.log(`共发现 ${bars.length} 个贴吧`);
 
   let success = 0;
   let already = 0;
+  let failed = 0;
 
   for (const bar of bars) {
-    // 已签到直接跳过
+
     if (bar.is_sign == 1 || bar.is_sign == "1") {
       already++;
-      result.push(`【${bar.forum_name}】已经签到，等级${bar.user_level}，经验${bar.user_exp}`);
+      result.push(`【${bar.forum_name}】已签到 Lv.${bar.user_level}`);
       continue;
     }
 
-    // 随机等待
     const wait = random(CONFIG.minDelay, CONFIG.maxDelay);
+
+    console.log(
+      `${bar.forum_name} 等待 ${(wait / 1000).toFixed(1)} 秒`
+    );
+
     await sleep(wait);
 
-    const r = await sign(bar.forum_name, tbs);
+    const r = await signRetry(bar.forum_name, tbs);
 
-    // Cookie失效直接停止
-    if (r.msg.includes("Cookie失效")) {
-      notify(NAME, "失败", "Cookie失效，请重新获取Cookie");
+    if (r.cookieExpired) {
+      notify(NAME, "Cookie失效", "请重新抓取Cookie");
       return;
     }
 
     if (r.success) {
       success++;
-      result.push(`【${bar.forum_name}】签到成功，${r.msg}`);
+      result.push(`【${bar.forum_name}】✅ ${r.msg}`);
     } else {
-      result.push(`【${bar.forum_name}】签到失败：${r.msg}`);
+      failed++;
+      result.push(`【${bar.forum_name}】❌ ${r.msg}`);
     }
-    console.log(`${bar.forum_name}: ${r.msg}，等待 ${(wait / 1000).toFixed(2)} 秒`);
   }
 
-  notify(NAME, `✅ 签到完成 | 新增:${success} | 已签:${already} | 共:${bars.length}`, result.join("\n").slice(0, CONFIG.notifyLimit));
+  notify(
+    NAME,
+    `新增:${success} 已签:${already} 失败:${failed} 共:${bars.length}`,
+    result.join("\n").slice(0, CONFIG.notifyLimit)
+  );
 }
 
-/**
- * 获取贴吧列表失败重试
- */
 async function getForumRetry() {
   for (let i = 1; i <= CONFIG.retry; i++) {
+
     const data = await getForum();
-    if (data?.cookieExpired) return data;
-    if (data && data.like_forum) return data;
-    
-    console.log(`获取贴吧列表失败，第${i}/${CONFIG.retry}次`);
+
+    if (data) {
+      return data;
+    }
+
+    console.log(`获取贴吧失败 ${i}/${CONFIG.retry}`);
+
     if (i < CONFIG.retry) {
-      await sleep(random(CONFIG.retryDelayMin, CONFIG.retryDelayMax));
+      await sleep(CONFIG.retryDelay);
     }
   }
+
   return null;
 }
 
-/**
- * 获取贴吧列表
- */
 function getForum() {
   return new Promise((resolve) => {
-    $httpClient.get({
-      url: "https://tieba.baidu.com/mo/q/newmoindex",
-      timeout: CONFIG.timeout,
-      headers: {
-        "Content-Type": "application/octet-stream",
-        "Referer": "https://tieba.baidu.com/index/tbwise/forum",
-        "Cookie": cookie,
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)"
-      }
-    }, (err, resp, body) => {
-      if (err) {
-        console.log(err);
-        resolve(null);
-        return;
-      }
-      try {
-        const obj = JSON.parse(body);
-        if (obj.error || obj.error_code == 1 || obj.error_code == 3 || JSON.stringify(obj).includes("BDUSS")) {
-          console.log("Cookie失效");
-          resolve({ cookieExpired: true });
+
+    $httpClient.get(
+      {
+        url: "https://tieba.baidu.com/mo/q/newmoindex",
+        timeout: CONFIG.timeout,
+        headers: {
+          Referer:
+            "https://tieba.baidu.com/index/tbwise/forum",
+          Cookie: cookie,
+          "User-Agent":
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)"
+        }
+      },
+      (err, resp, body) => {
+
+        if (err) {
+          console.log(err);
+          resolve(null);
           return;
         }
-        resolve(obj.data);
-      } catch (e) {
-        console.log("贴吧列表解析失败");
-        resolve(null);
+
+        try {
+          const obj = JSON.parse(body);
+
+          if (!obj.data) {
+            resolve(null);
+            return;
+          }
+
+          resolve(obj.data);
+
+        } catch (e) {
+          console.log("贴吧列表解析失败");
+          resolve(null);
+        }
       }
-    });
+    );
   });
 }
 
-/**
- * 签到（带重试）
- */
-async function sign(kw, tbs) {
-  let lastMsg = "未知错误";
+async function signRetry(kw, tbs) {
 
-  for (let attempt = 1; attempt <= CONFIG.retry; attempt++) {
-    const signResult = await signOnce(kw, tbs);
-    if (signResult.success) return signResult;
+  let lastMsg = "";
 
-    lastMsg = signResult.msg;
-    console.log(`${kw} 第${attempt}/${CONFIG.retry}次签到失败：${lastMsg}`);
+  for (let i = 1; i <= CONFIG.retry; i++) {
 
-    // Cookie失效直接退出
-    if (lastMsg.includes("Cookie失效")) {
-      return { success: false, msg: lastMsg };
-    }
+    const r = await sign(kw, tbs);
 
-    if (attempt < CONFIG.retry) {
-      const delay = random(CONFIG.retryDelayMin, CONFIG.retryDelayMax);
-      console.log(`${kw} 等待 ${(delay / 1000).toFixed(1)} 秒后重试`);
-      await sleep(delay);
+    if (r.success) return r;
+
+    if (r.cookieExpired) return r;
+
+    lastMsg = r.msg;
+
+    console.log(`${kw} 重试 ${i}/${CONFIG.retry}`);
+
+    if (i < CONFIG.retry) {
+      await sleep(CONFIG.retryDelay);
     }
   }
 
-  return { success: false, msg: `重试${CONFIG.retry}次失败：${lastMsg}` };
+  return {
+    success: false,
+    msg: lastMsg || "重试失败"
+  };
 }
 
-/**
- * 单次签到
- */
-function signOnce(kw, tbs) {
+function sign(kw, tbs) {
+
   return new Promise((resolve) => {
-    $httpClient.post({
-      url: "https://tieba.baidu.com/sign/add",
-      timeout: CONFIG.timeout,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Cookie": cookie,
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)"
+
+    $httpClient.post(
+      {
+        url: "https://tieba.baidu.com/sign/add",
+        timeout: CONFIG.timeout,
+        headers: {
+          "Content-Type":
+            "application/x-www-form-urlencoded",
+          Cookie: cookie,
+          "User-Agent": "Mozilla/5.0 (iPhone)"
+        },
+        body: `kw=${encodeURIComponent(kw)}&ie=utf-8&tbs=${tbs}`
       },
-      body: `tbs=${tbs}&kw=${encodeURIComponent(kw)}&ie=utf-8`
-    }, (err, resp, body) => {
-      if (err) {
-        resolve({ success: false, msg: "网络错误" });
-        return;
-      }
-      try {
-        const obj = JSON.parse(body);
-        
-        // Cookie失效
-        if (obj.error && (obj.error.includes("登录") || obj.error.includes("BDUSS"))) {
-          resolve({ success: false, msg: "Cookie失效，请重新获取" });
+      (err, resp, body) => {
+
+        if (err) {
+          resolve({
+            success: false,
+            msg: "网络错误"
+          });
           return;
         }
 
-        if (obj.no == 0) {
-          const day = obj.data?.uinfo?.cont_sign_num ?? "?";
-          const rank = obj.data?.uinfo?.user_sign_rank ?? "?";
-          resolve({ success: true, msg: `连续签到${day}天，排名${rank}` });
-        } else {
-          resolve({ success: false, msg: obj.error || `错误码:${obj.no}` });
+        try {
+
+          const obj = JSON.parse(body);
+
+          if (
+            obj.error &&
+            (
+              obj.error.includes("登录") ||
+              obj.error.includes("BDUSS")
+            )
+          ) {
+            resolve({
+              success: false,
+              cookieExpired: true,
+              msg: "Cookie失效"
+            });
+            return;
+          }
+
+          if (obj.no == 0) {
+
+            const day =
+              obj.data?.uinfo?.cont_sign_num || "?";
+
+            const rank =
+              obj.data?.uinfo?.user_sign_rank || "?";
+
+            resolve({
+              success: true,
+              msg: `连续${day}天 排名${rank}`
+            });
+
+          } else {
+
+            resolve({
+              success: false,
+              msg:
+                obj.error ||
+                ("错误码:" + obj.no)
+            });
+          }
+
+        } catch (e) {
+
+          resolve({
+            success: false,
+            msg: "返回解析失败"
+          });
         }
-      } catch (e) {
-        resolve({ success: false, msg: "返回解析失败" });
       }
-    });
+    );
   });
 }
 
-function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-/**
- * 获取Cookie
- */
 function getCookie() {
-  const ck = $request.headers["Cookie"] || $request.headers["cookie"];
+
+  const ck =
+    $request.headers["Cookie"] ||
+    $request.headers["cookie"];
 
   if (!ck || !ck.includes("BDUSS=")) {
-    console.log("Cookie获取失败");
+    console.log("未发现BDUSS");
     return;
   }
 
-  const old = $persistentStore.read(COOKIE_KEY) || "";
+  const old =
+    $persistentStore.read(COOKIE_KEY) || "";
 
-  if (ck !== old) {
-    $persistentStore.write(ck, COOKIE_KEY);
+  if (old !== ck) {
+
+    $persistentStore.write(
+      ck,
+      COOKIE_KEY
+    );
+
     console.log("Cookie更新成功");
-    notify(NAME, "", "Cookie获取成功 🎉");
+
+    notify(
+      NAME,
+      "",
+      "Cookie获取成功 🎉"
+    );
+
   } else {
+
     console.log("Cookie未变化");
   }
 }
 
-/**
- * 通知
- */
-function notify(title, subtitle, body) {
-  $notification.post(title, subtitle, body);
-  console.log(`\n${title}\n${subtitle}\n${body}`);
+function sleep(ms) {
+  return new Promise(
+    resolve => setTimeout(resolve, ms)
+  );
 }
+
+function random(min, max) {
+  return Math.floor(
+    Math.random() * (max - min + 1)
+  ) + min;
+}
+
+function notify(title, subtitle, body) {
+
+  $notification.post(
+    title,
+    subtitle,
+    body
+  );
+
+  console.log(
+    `\n${title}\n${subtitle}\n${body}`
+  );
+}}
