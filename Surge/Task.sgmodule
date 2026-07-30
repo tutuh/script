@@ -5,9 +5,9 @@
 #!category=签到模块
 
 [Script]
-顺丰速运_签到 = type=cron,cronexp="{{{顺丰签到}}}",wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/sfexpress.js
+顺丰_签到 = type=cron,cronexp="{{{顺丰签到}}}",wake-system=1,timeout=180,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/sfexpress.js
 
-百度贴吧_签到 = type=cron,cronexp="{{{贴吧签到}}}",wake-system=1,timeout=300,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/tieba.js
+贴吧_签到 = type=cron,cronexp="{{{贴吧签到}}}",wake-system=1,timeout=300,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/tieba.js
 
 途虎_签到 = type=cron,cronexp="{{{途虎签到}}}",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/tutuh/script/master/task/tuhu.js
 
