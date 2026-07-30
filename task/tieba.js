@@ -1,34 +1,37 @@
-/*********************************
+/****************----------------*
  百度贴吧签到 Surge版
 
  功能:
- 1. 自动获取Cookie
+ 1. 自动精准获取 BDUSS Cookie
  2. 自动签到关注贴吧
  3. 已签到自动跳过
  4. 未签到随机延迟
- 5. 签到失败自动重试 (新增)
+ 5. 签到失败自动重试
 *********************************/
 
-const NAME = "贴吧签到";
-const COOKIE_KEY = "TieBa_Cookie";
-const MAX_RETRY = 3;
+var NAME = "贴吧签到";
+var COOKIE_KEY = "TieBa_Cookie";
+var MAX_RETRY = 3;
 
-const UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1";
+var UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1";
 
-let cookie = $persistentStore.read(COOKIE_KEY) || "";
-let result = [];
+var cookie = $persistentStore.read(COOKIE_KEY) || "";
+var result = [];
 
-(async () => {
+(async function() {
   try {
     if (typeof $request !== "undefined") {
       getCookie();
+      // 在 Surge 中，针对网络请求脚本，必须返回空对象放行
+      $done({});
     } else {
       await main();
+      // 针对 Cron 定时任务，直接结束
+      $done(); 
     }
   } catch (e) {
-    console.log(`脚本运行发生未捕获异常: ${e.message || e}`);
-    notify(NAME, "❌ 脚本异常", `发生错误: ${e.message || e}`);
-  } finally {
+    console.log("脚本主进程异常: " + e);
+    $notification.post(NAME, "❌ 脚本崩溃", "请查看 Surge 日志");
     $done();
   }
 })();
@@ -40,48 +43,53 @@ async function main() {
   }
 
   console.log("开始获取贴吧列表...");
-  let data = await getForum();
+  var data = await getForum();
 
   if (!data || !data.like_forum) {
     notify(NAME, "❌ 失败", "未获取到贴吧列表，可能是 Cookie/BDUSS 已失效");
     return;
   }
 
-  let bars = data.like_forum;
-  let tbs = data.tbs;
+  var bars = data.like_forum;
+  var tbs = data.tbs;
 
   if (!Array.isArray(bars)) {
     notify(NAME, "❌ 失败", "贴吧列表数据格式异常");
     return;
   }
 
-  console.log(`共发现 ${bars.length} 个贴吧`);
+  console.log("共发现 " + bars.length + " 个贴吧");
 
-  let success = 0;
-  let already = 0;
+  var success = 0;
+  var already = 0;
 
-  for (let bar of bars) {
+  for (var i = 0; i < bars.length; i++) {
+    var bar = bars[i];
     if (!bar || !bar.forum_name) continue;
 
     if (bar.is_sign == 1) {
       already++;
-      result.push(`【${bar.forum_name}】已经签到，等级${bar.user_level ?? "?"}，经验${bar.user_exp ?? "?"}`);
+      var level = bar.user_level !== undefined ? bar.user_level : "?";
+      var exp = bar.user_exp !== undefined ? bar.user_exp : "?";
+      result.push("【" + bar.forum_name + "】已经签到，等级" + level + "，经验" + exp);
       continue;
     }
 
-    let wait = random(5000, 10000);
+    var wait = random(5000, 10000);
     await sleep(wait);
 
-    let r = await sign(bar.forum_name, tbs);
+    var r = await sign(bar.forum_name, tbs);
 
     if (r && r.success) {
       success++;
-      result.push(`【${bar.forum_name}】签到成功，${r.msg}`);
+      result.push("【" + bar.forum_name + "】签到成功，" + r.msg);
     } else {
-      result.push(`【${bar.forum_name}】签到失败: ${r?.msg || "未知错误"}`);
+      var failMsg = (r && r.msg) ? r.msg : "未知错误";
+      result.push("【" + bar.forum_name + "】签到失败: " + failMsg);
     }
 
-    console.log(`${bar.forum_name}: ${r?.msg || "无返回"}，等待 ${(wait / 1000).toFixed(2)} 秒`);
+    var logMsg = (r && r.msg) ? r.msg : "无返回";
+    console.log(bar.forum_name + ": " + logMsg + "，等待 " + (wait / 1000).toFixed(2) + " 秒");
   }
 
   console.log("\n========== 签到详情 ==========\n" + result.join("\n") + "\n==============================");
@@ -89,12 +97,12 @@ async function main() {
   notify(
     NAME,
     "✅ 签到完成",
-    `新增: ${success} 吧\n已签: ${already} 吧\n共计: ${bars.length} 吧`
+    "新增: " + success + " 吧\n已签: " + already + " 吧\n共计: " + bars.length + " 吧"
   );
 }
 
 function getForum() {
-  return new Promise((resolve) => {
+  return new Promise(function(resolve) {
     $httpClient.get(
       {
         url: "https://tieba.baidu.com/mo/q/newmoindex",
@@ -105,9 +113,9 @@ function getForum() {
           "User-Agent": UA
         }
       },
-      (err, resp, body) => {
+      function(err, resp, body) {
         if (err) {
-          console.log("获取列表网络错误:", err);
+          console.log("获取列表网络错误: " + err);
           resolve(null);
           return;
         }
@@ -118,15 +126,15 @@ function getForum() {
             resolve(null);
             return;
           }
-          let obj = JSON.parse(body);
+          var obj = JSON.parse(body);
           if (obj && obj.no == 0 && obj.data) {
             resolve(obj.data);
           } else {
-            console.log(`获取列表接口返回异常: ${body}`);
+            console.log("获取列表接口返回异常: " + body);
             resolve(null);
           }
         } catch (e) {
-          console.log(`解析贴吧列表失败: ${e.message}, 返回内容: ${body}`);
+          console.log("解析贴吧列表失败: " + e + ", 返回内容: " + body);
           resolve(null);
         }
       }
@@ -135,30 +143,33 @@ function getForum() {
 }
 
 async function sign(kw, tbs) {
-  let lastResult = { success: false, msg: "未知错误" };
+  var lastResult = { success: false, msg: "未知错误" };
 
-  for (let attempt = 1; attempt <= MAX_RETRY; attempt++) {
-    let r = await signOnce(kw, tbs);
+  for (var attempt = 1; attempt <= MAX_RETRY; attempt++) {
+    var r = await signOnce(kw, tbs);
     
     if (r && r.success) {
       return r;
     }
 
     lastResult = r || lastResult;
-    console.log(`[重试提示] ${kw} 第 ${attempt} 次尝试失败: ${lastResult.msg}`);
+    console.log("[重试提示] " + kw + " 第 " + attempt + " 次尝试失败: " + lastResult.msg);
 
     if (attempt < MAX_RETRY) {
-      let retryWait = random(2000, 5000); 
-      console.log(`[重试提示] ${kw} 将在 ${(retryWait / 1000).toFixed(1)} 秒后重试...`);
+      var retryWait = random(2000, 5000); 
+      console.log("[重试提示] " + kw + " 将在 " + (retryWait / 1000).toFixed(1) + " 秒后重试...");
       await sleep(retryWait);
     }
   }
 
-  return { success: false, msg: `重试${MAX_RETRY}次后放弃 (${lastResult.msg})` };
+  return { success: false, msg: "重试" + MAX_RETRY + "次后放弃 (" + lastResult.msg + ")" };
 }
 
 function signOnce(kw, tbs) {
-  return new Promise((resolve) => {
+  return new Promise(function(resolve) {
+    var safeTbs = tbs ? tbs : "";
+    var safeKw = kw ? kw : "";
+    
     $httpClient.post(
       {
         url: "https://tieba.baidu.com/sign/add",
@@ -166,12 +177,12 @@ function signOnce(kw, tbs) {
           "Content-Type": "application/x-www-form-urlencoded",
           "Cookie": cookie,
           "User-Agent": UA,
-          "Referer": `https://tieba.baidu.com/f?kw=${encodeURIComponent(kw || "")}`,
+          "Referer": "https://tieba.baidu.com/f?kw=" + encodeURIComponent(safeKw),
           "Origin": "https://tieba.baidu.com"
         },
-        body: `tbs=${tbs || ""}&kw=${encodeURIComponent(kw || "")}&ie=utf-8`
+        body: "tbs=" + safeTbs + "&kw=" + encodeURIComponent(safeKw) + "&ie=utf-8"
       },
-      (err, resp, body) => {
+      function(err, resp, body) {
         if (err) {
           resolve({ success: false, msg: "网络请求失败" });
           return;
@@ -182,19 +193,20 @@ function signOnce(kw, tbs) {
             resolve({ success: false, msg: "接口返回空内容" });
             return;
           }
-          let obj = JSON.parse(body);
+          var obj = JSON.parse(body);
           if (obj && obj.no == 0) {
-            let cont = obj.data?.uinfo?.cont_sign_num ?? "?";
-            let rank = obj.data?.uinfo?.user_sign_rank ?? "?";
+            var cont = (obj.data && obj.data.uinfo && obj.data.uinfo.cont_sign_num) ? obj.data.uinfo.cont_sign_num : "?";
+            var rank = (obj.data && obj.data.uinfo && obj.data.uinfo.user_sign_rank) ? obj.data.uinfo.user_sign_rank : "?";
             resolve({
               success: true,
-              msg: `连续签到 ${cont} 天，第 ${rank} 个签到`
+              msg: "连续签到 " + cont + " 天，第 " + rank + " 个签到"
             });
           } else {
-            resolve({ success: false, msg: obj?.error || `错误码:${obj?.no}` });
+            var errorMsg = (obj && obj.error) ? obj.error : ("错误码:" + (obj ? obj.no : "未知"));
+            resolve({ success: false, msg: errorMsg });
           }
         } catch (e) {
-          console.log(`【${kw}】签到接口返回异常:\n${body}`);
+          console.log("【" + kw + "】签到接口返回异常:\n" + body);
           resolve({ success: false, msg: "接口返回非JSON数据" });
         }
       }
@@ -207,20 +219,20 @@ function random(min, max) {
 }
 
 function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+  return new Promise(function(resolve) { setTimeout(resolve, ms); });
 }
 
 function getCookie() {
-  if (!$request || !$request.headers) return;
+  if (typeof $request === "undefined" || !$request.headers) return;
 
-  let ck = $request.headers["Cookie"] || $request.headers["cookie"] || $request.headers["COOKIE"];
+  var ck = $request.headers["Cookie"] || $request.headers["cookie"] || $request.headers["COOKIE"];
 
   if (ck) {
-    let bdussMatch = ck.match(/BDUSS=([^;]+)/);
+    var bdussMatch = ck.match(/BDUSS=([^;]+)/);
     
     if (bdussMatch && bdussMatch[1]) {
-      let cleanCookie = `BDUSS=${bdussMatch[1]}`;
-      let old = $persistentStore.read(COOKIE_KEY) || "";
+      var cleanCookie = "BDUSS=" + bdussMatch[1];
+      var old = $persistentStore.read(COOKIE_KEY) || "";
 
       if (cleanCookie !== old) {
         $persistentStore.write(cleanCookie, COOKIE_KEY);
@@ -238,6 +250,5 @@ function getCookie() {
 
 function notify(title, subtitle, body) {
   $notification.post(title, subtitle, body);
-  console.log(`\n[通知] ${title}\n${subtitle}\n${body}\n`);
-}
+  console.log("\n[通知] " + title + "\n" + subtitle + "\n" + body + "\n");
 }
