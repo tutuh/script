@@ -55,8 +55,8 @@ async function main() {
       continue;
     }
 
-    // 随机等待 5 到 10 秒，防止请求过快被限制
-    let wait = random(5000, 10000);
+    // 随机等待 2 到 4 秒，防止请求过快被限制
+    let wait = random(2000, 4000);
     await sleep(wait);
 
     // 调用带重试机制的签到方法
@@ -127,7 +127,7 @@ async function sign(kw, tbs) {
 
     // 如果未达到最大重试次数，则等待一段时间后重试
     if (attempt < MAX_RETRY) {
-      let retryWait = random(2000, 5000); // 重试前等待 2 到 5 秒
+      let retryWait = random(2000, 4000); // 重试前等待 2 到 4 秒
       console.log(`[重试提示] ${kw} 将在 ${(retryWait / 1000).toFixed(2)} 秒后进行第 ${attempt + 1} 次尝试...`);
       await sleep(retryWait);
     }
