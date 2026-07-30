@@ -27,7 +27,7 @@ let result = [];
 
 async function main() {
   if (!cookie) {
-    notify(NAME, "", "未获取Cookie");
+    notify(NAME, "❌ 失败", "未获取Cookie，请先获取");
     return;
   }
 
@@ -35,7 +35,7 @@ async function main() {
   let data = await getForum();
 
   if (!data || !data.like_forum) {
-    notify(NAME, "失败", "未获取关注贴吧");
+    notify(NAME, "❌ 失败", "未获取关注贴吧列表，可能是Cookie失效");
     return;
   }
 
@@ -55,8 +55,8 @@ async function main() {
       continue;
     }
 
-    // 随机等待 2 到 4 秒，防止请求过快被限制
-    let wait = random(2000, 4000);
+    // 随机等待 5 到 10 秒，防止请求过快被限制
+    let wait = random(5000, 10000);
     await sleep(wait);
 
     // 调用带重试机制的签到方法
@@ -72,10 +72,14 @@ async function main() {
     console.log(`${bar.forum_name}: ${r.msg}，前置等待 ${(wait / 1000).toFixed(2)} 秒`);
   }
 
+  // 1. 详细结果仅打印到日志
+  console.log("\n========== 签到详情 ==========\n" + result.join("\n") + "\n==============================");
+
+  // 2. 弹窗通知分行显示统计，不再显示明细
   notify(
     NAME,
-    `✅ 签到完成 | 新增: ${success} | 已签: ${already} | 共: ${bars.length}`,
-    result.join("\n")
+    "✅ 签到完成",
+    `新增: ${success} 吧\n已签: ${already} 吧\n共计: ${bars.length} 吧`
   );
 }
 
@@ -117,7 +121,6 @@ async function sign(kw, tbs) {
   for (let attempt = 1; attempt <= MAX_RETRY; attempt++) {
     let r = await signOnce(kw, tbs);
     
-    // 如果签到成功，直接返回结果
     if (r.success) {
       return r;
     }
@@ -125,15 +128,13 @@ async function sign(kw, tbs) {
     lastResult = r;
     console.log(`[重试提示] ${kw} 第 ${attempt} 次尝试失败: ${r.msg}`);
 
-    // 如果未达到最大重试次数，则等待一段时间后重试
     if (attempt < MAX_RETRY) {
-      let retryWait = random(2000, 4000); // 重试前等待 2 到 4 秒
+      let retryWait = random(2000, 5000); 
       console.log(`[重试提示] ${kw} 将在 ${(retryWait / 1000).toFixed(2)} 秒后进行第 ${attempt + 1} 次尝试...`);
       await sleep(retryWait);
     }
   }
 
-  // 达到最大重试次数依然失败
   return { success: false, msg: `重试${MAX_RETRY}次后放弃 (${lastResult.msg})` };
 }
 
@@ -189,7 +190,6 @@ function getCookie() {
   if (ck && ck.includes("BDUSS=")) {
     let old = $persistentStore.read(COOKIE_KEY) || "";
 
-    // 判断Cookie是否变化
     if (ck !== old) {
       $persistentStore.write(ck, COOKIE_KEY);
       console.log("Cookie更新成功");
@@ -205,5 +205,6 @@ function getCookie() {
 // Surge通知
 function notify(title, subtitle, body) {
   $notification.post(title, subtitle, body);
-  console.log("\n" + title + "\n" + body);
+  console.log(`\n[通知] ${title}\n${subtitle}\n${body}\n`);
+}
 }
