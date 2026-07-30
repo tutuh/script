@@ -1,108 +1,91 @@
-/****************----------------*
+/*********************************
  百度贴吧签到 Surge版
 
  功能:
- 1. 自动精准获取 BDUSS Cookie
+ 1. 自动获取Cookie
  2. 自动签到关注贴吧
  3. 已签到自动跳过
  4. 未签到随机延迟
- 5. 签到失败自动重试
+ 5. 签到失败自动重试 (新增)
 *********************************/
 
-var NAME = "贴吧签到";
-var COOKIE_KEY = "TieBa_Cookie";
-var MAX_RETRY = 3;
+const NAME = "贴吧签到";
+const COOKIE_KEY = "TieBa_Cookie";
+const MAX_RETRY = 3; // 签到失败最大重试次数
 
-var UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1";
+let cookie = $persistentStore.read(COOKIE_KEY) || "";
+let result = [];
 
-var cookie = $persistentStore.read(COOKIE_KEY) || "";
-var result = [];
-
-(async function() {
-  try {
-    if (typeof $request !== "undefined") {
-      getCookie();
-      // 在 Surge 中，针对网络请求脚本，必须返回空对象放行
-      $done({});
-    } else {
-      await main();
-      // 针对 Cron 定时任务，直接结束
-      $done(); 
-    }
-  } catch (e) {
-    console.log("脚本主进程异常: " + e);
-    $notification.post(NAME, "❌ 脚本崩溃", "请查看 Surge 日志");
-    $done();
+(async () => {
+  if (typeof $request !== "undefined") {
+    getCookie();
+  } else {
+    await main();
   }
+  $done();
 })();
 
 async function main() {
   if (!cookie) {
-    notify(NAME, "❌ 失败", "未获取Cookie，请先用浏览器登录贴吧获取");
+    notify(NAME, "", "未获取Cookie");
     return;
   }
 
-  console.log("开始获取贴吧列表...");
-  var data = await getForum();
+  console.log("开始获取贴吧列表");
+  let data = await getForum();
 
   if (!data || !data.like_forum) {
-    notify(NAME, "❌ 失败", "未获取到贴吧列表，可能是 Cookie/BDUSS 已失效");
+    notify(NAME, "失败", "未获取关注贴吧");
     return;
   }
 
-  var bars = data.like_forum;
-  var tbs = data.tbs;
+  let bars = data.like_forum;
+  let tbs = data.tbs;
 
-  if (!Array.isArray(bars)) {
-    notify(NAME, "❌ 失败", "贴吧列表数据格式异常");
-    return;
-  }
+  console.log(`共发现 ${bars.length} 个贴吧`);
 
-  console.log("共发现 " + bars.length + " 个贴吧");
+  let success = 0;
+  let already = 0;
 
-  var success = 0;
-  var already = 0;
-
-  for (var i = 0; i < bars.length; i++) {
-    var bar = bars[i];
-    if (!bar || !bar.forum_name) continue;
-
+  for (let bar of bars) {
+    /* 已签到直接跳过 */
     if (bar.is_sign == 1) {
       already++;
-      var level = bar.user_level !== undefined ? bar.user_level : "?";
-      var exp = bar.user_exp !== undefined ? bar.user_exp : "?";
-      result.push("【" + bar.forum_name + "】已经签到，等级" + level + "，经验" + exp);
+      result.push(`【${bar.forum_name}】已经签到，等级${bar.user_level}，经验${bar.user_exp}`);
       continue;
     }
 
-    var wait = random(5000, 10000);
+    // 随机等待 5 到 10 秒，防止请求过快被限制
+    let wait = random(5000, 10000);
     await sleep(wait);
 
-    var r = await sign(bar.forum_name, tbs);
+    // 调用带重试机制的签到方法
+    let r = await sign(bar.forum_name, tbs);
 
-    if (r && r.success) {
+    if (r.success) {
       success++;
-      result.push("【" + bar.forum_name + "】签到成功，" + r.msg);
+      result.push(`【${bar.forum_name}】签到成功，${r.msg}`);
     } else {
-      var failMsg = (r && r.msg) ? r.msg : "未知错误";
-      result.push("【" + bar.forum_name + "】签到失败: " + failMsg);
+      result.push(`【${bar.forum_name}】签到失败: ${r.msg}`);
     }
 
-    var logMsg = (r && r.msg) ? r.msg : "无返回";
-    console.log(bar.forum_name + ": " + logMsg + "，等待 " + (wait / 1000).toFixed(2) + " 秒");
+    console.log(`${bar.forum_name}: ${r.msg}，前置等待 ${(wait / 1000).toFixed(2)} 秒`);
   }
 
+  // 👇【仅修改了这里】把详细结果输出到日志
   console.log("\n========== 签到详情 ==========\n" + result.join("\n") + "\n==============================");
 
+  // 👇【仅修改了这里】通知弹窗只显示精简的数据汇总
   notify(
     NAME,
     "✅ 签到完成",
-    "新增: " + success + " 吧\n已签: " + already + " 吧\n共计: " + bars.length + " 吧"
+    `新增: ${success} 吧 | 已签: ${already} 吧 | 共计: ${bars.length} 吧`
   );
 }
 
+// 获取贴吧列表
 function getForum() {
-  return new Promise(function(resolve) {
+  return new Promise((resolve) => {
     $httpClient.get(
       {
         url: "https://tieba.baidu.com/mo/q/newmoindex",
@@ -110,31 +93,20 @@ function getForum() {
           "Content-Type": "application/octet-stream",
           "Referer": "https://tieba.baidu.com/index/tbwise/forum",
           "Cookie": cookie,
-          "User-Agent": UA
+          "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)"
         }
       },
-      function(err, resp, body) {
+      (err, resp, body) => {
         if (err) {
-          console.log("获取列表网络错误: " + err);
+          console.log(err);
           resolve(null);
           return;
         }
 
         try {
-          if (!body) {
-            console.log("获取列表返回空内容");
-            resolve(null);
-            return;
-          }
-          var obj = JSON.parse(body);
-          if (obj && obj.no == 0 && obj.data) {
-            resolve(obj.data);
-          } else {
-            console.log("获取列表接口返回异常: " + body);
-            resolve(null);
-          }
+          let obj = JSON.parse(body);
+          resolve(obj.data);
         } catch (e) {
-          console.log("解析贴吧列表失败: " + e + ", 返回内容: " + body);
           resolve(null);
         }
       }
@@ -142,72 +114,64 @@ function getForum() {
   });
 }
 
+// 签到控制器（包含重试机制）
 async function sign(kw, tbs) {
-  var lastResult = { success: false, msg: "未知错误" };
+  let lastResult = { success: false, msg: "未知错误" };
 
-  for (var attempt = 1; attempt <= MAX_RETRY; attempt++) {
-    var r = await signOnce(kw, tbs);
+  for (let attempt = 1; attempt <= MAX_RETRY; attempt++) {
+    let r = await signOnce(kw, tbs);
     
-    if (r && r.success) {
+    // 如果签到成功，直接返回结果
+    if (r.success) {
       return r;
     }
 
-    lastResult = r || lastResult;
-    console.log("[重试提示] " + kw + " 第 " + attempt + " 次尝试失败: " + lastResult.msg);
+    lastResult = r;
+    console.log(`[重试提示] ${kw} 第 ${attempt} 次尝试失败: ${r.msg}`);
 
+    // 如果未达到最大重试次数，则等待一段时间后重试
     if (attempt < MAX_RETRY) {
-      var retryWait = random(2000, 5000); 
-      console.log("[重试提示] " + kw + " 将在 " + (retryWait / 1000).toFixed(1) + " 秒后重试...");
+      let retryWait = random(2000, 5000); // 重试前等待 2 到 5 秒
+      console.log(`[重试提示] ${kw} 将在 ${(retryWait / 1000).toFixed(2)} 秒后进行第 ${attempt + 1} 次尝试...`);
       await sleep(retryWait);
     }
   }
 
-  return { success: false, msg: "重试" + MAX_RETRY + "次后放弃 (" + lastResult.msg + ")" };
+  // 达到最大重试次数依然失败
+  return { success: false, msg: `重试${MAX_RETRY}次后放弃 (${lastResult.msg})` };
 }
 
+// 单次签到接口请求
 function signOnce(kw, tbs) {
-  return new Promise(function(resolve) {
-    var safeTbs = tbs ? tbs : "";
-    var safeKw = kw ? kw : "";
-    
+  return new Promise((resolve) => {
     $httpClient.post(
       {
         url: "https://tieba.baidu.com/sign/add",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
           "Cookie": cookie,
-          "User-Agent": UA,
-          "Referer": "https://tieba.baidu.com/f?kw=" + encodeURIComponent(safeKw),
-          "Origin": "https://tieba.baidu.com"
+          "User-Agent": "Mozilla/5.0 (iPhone)"
         },
-        body: "tbs=" + safeTbs + "&kw=" + encodeURIComponent(safeKw) + "&ie=utf-8"
+        body: `tbs=${tbs}&kw=${encodeURIComponent(kw)}&ie=utf-8`
       },
-      function(err, resp, body) {
+      (err, resp, body) => {
         if (err) {
-          resolve({ success: false, msg: "网络请求失败" });
+          resolve({ success: false, msg: "接口错误" });
           return;
         }
 
         try {
-          if (!body) {
-            resolve({ success: false, msg: "接口返回空内容" });
-            return;
-          }
-          var obj = JSON.parse(body);
-          if (obj && obj.no == 0) {
-            var cont = (obj.data && obj.data.uinfo && obj.data.uinfo.cont_sign_num) ? obj.data.uinfo.cont_sign_num : "?";
-            var rank = (obj.data && obj.data.uinfo && obj.data.uinfo.user_sign_rank) ? obj.data.uinfo.user_sign_rank : "?";
+          let obj = JSON.parse(body);
+          if (obj.no == 0) {
             resolve({
               success: true,
-              msg: "连续签到 " + cont + " 天，第 " + rank + " 个签到"
+              msg: `获得 ${obj.data.uinfo.cont_sign_num} 积分，第 ${obj.data.uinfo.user_sign_rank} 个签到`
             });
           } else {
-            var errorMsg = (obj && obj.error) ? obj.error : ("错误码:" + (obj ? obj.no : "未知"));
-            resolve({ success: false, msg: errorMsg });
+            resolve({ success: false, msg: obj.error });
           }
         } catch (e) {
-          console.log("【" + kw + "】签到接口返回异常:\n" + body);
-          resolve({ success: false, msg: "接口返回非JSON数据" });
+          resolve({ success: false, msg: "解析失败" });
         }
       }
     );
@@ -219,36 +183,31 @@ function random(min, max) {
 }
 
 function sleep(ms) {
-  return new Promise(function(resolve) { setTimeout(resolve, ms); });
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+// 获取Cookie
 function getCookie() {
-  if (typeof $request === "undefined" || !$request.headers) return;
+  let ck = $request.headers["Cookie"] || $request.headers["cookie"];
 
-  var ck = $request.headers["Cookie"] || $request.headers["cookie"] || $request.headers["COOKIE"];
+  if (ck && ck.includes("BDUSS=")) {
+    let old = $persistentStore.read(COOKIE_KEY) || "";
 
-  if (ck) {
-    var bdussMatch = ck.match(/BDUSS=([^;]+)/);
-    
-    if (bdussMatch && bdussMatch[1]) {
-      var cleanCookie = "BDUSS=" + bdussMatch[1];
-      var old = $persistentStore.read(COOKIE_KEY) || "";
-
-      if (cleanCookie !== old) {
-        $persistentStore.write(cleanCookie, COOKIE_KEY);
-        console.log("BDUSS Cookie 更新成功!");
-        notify(NAME, "🎉 获取 Cookie 成功", "已成功保存 BDUSS 凭证");
-      } else {
-        console.log("BDUSS Cookie 无变化，跳过保存");
-      }
-      return;
+    // 判断Cookie是否变化
+    if (ck !== old) {
+      $persistentStore.write(ck, COOKIE_KEY);
+      console.log("Cookie更新成功");
+      notify(NAME, "", "Cookie获取成功 🎉");
+    } else {
+      console.log("Cookie未变化，跳过");
     }
+  } else {
+    console.log("Cookie获取失败，缺少BDUSS");
   }
-  
-  console.log("获取 Cookie 失败：当前请求头中未找到 BDUSS 字段");
 }
 
+// Surge通知
 function notify(title, subtitle, body) {
   $notification.post(title, subtitle, body);
-  console.log("\n[通知] " + title + "\n" + subtitle + "\n" + body + "\n");
+  console.log("\n" + title + "\n" + body);
 }
