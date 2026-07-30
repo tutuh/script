@@ -79,7 +79,7 @@ async function main() {
   notify(
     NAME,
     "✅ 签到完成",
-    `新增: ${success} 吧 | 已签: ${already} 吧 | 共计: ${bars.length} 吧`
+    `新增: ${success} | 已签: ${already} | 共计: ${bars.length}`
   );
 }
 
