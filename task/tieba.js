@@ -272,37 +272,20 @@ function sign(kw, tbs) {
 }
 
 function getCookie() {
+  let ck = $request.headers["Cookie"] || $request.headers["cookie"];
 
-  const ck =
-    $request.headers["Cookie"] ||
-    $request.headers["cookie"];
+  if (ck && ck.includes("BDUSS=")) {
+    let old = $persistentStore.read(COOKIE_KEY) || "";
 
-  if (!ck || !ck.includes("BDUSS=")) {
-    console.log("未发现BDUSS");
-    return;
-  }
-
-  const old =
-    $persistentStore.read(COOKIE_KEY) || "";
-
-  if (old !== ck) {
-
-    $persistentStore.write(
-      ck,
-      COOKIE_KEY
-    );
-
-    console.log("Cookie更新成功");
-
-    notify(
-      NAME,
-      "",
-      "Cookie获取成功 🎉"
-    );
-
+    if (ck !== old) {
+      $persistentStore.write(ck, COOKIE_KEY);
+      console.log("Cookie更新成功");
+      notify(NAME, "", "Cookie获取成功 🎉");
+    } else {
+      console.log("Cookie未变化，跳过");
+    }
   } else {
-
-    console.log("Cookie未变化");
+    console.log("Cookie获取失败，缺少BDUSS");
   }
 }
 
