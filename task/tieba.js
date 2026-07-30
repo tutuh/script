@@ -6,7 +6,7 @@
  2. 自动签到关注贴吧
  3. 已签到自动跳过
  4. 未签到随机延迟
- 5. 签到失败自动重试 (新增)
+ 5. 签到失败自动重试
 *********************************/
 
 const NAME = "贴吧签到";
@@ -89,6 +89,7 @@ function getForum() {
     $httpClient.get(
       {
         url: "https://tieba.baidu.com/mo/q/newmoindex",
+        timeout: 5, // 👈 增加 5 秒超时设置
         headers: {
           "Content-Type": "application/octet-stream",
           "Referer": "https://tieba.baidu.com/index/tbwise/forum",
@@ -98,7 +99,7 @@ function getForum() {
       },
       (err, resp, body) => {
         if (err) {
-          console.log(err);
+          console.log("获取列表超时或网络错误: " + err);
           resolve(null);
           return;
         }
@@ -131,7 +132,7 @@ async function sign(kw, tbs) {
 
     // 如果未达到最大重试次数，则等待一段时间后重试
     if (attempt < MAX_RETRY) {
-      let retryWait = random(2000, 4000); // 重试前等待 2 到 4 秒
+      let retryWait = random(3000, 5000); // 重试前等待 3 到 5 秒
       console.log(`[重试提示] ${kw} 将在 ${(retryWait / 1000).toFixed(2)} 秒后进行第 ${attempt + 1} 次尝试...`);
       await sleep(retryWait);
     }
@@ -147,6 +148,7 @@ function signOnce(kw, tbs) {
     $httpClient.post(
       {
         url: "https://tieba.baidu.com/sign/add",
+        timeout: 5, // 👈 增加 5 秒超时设置
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
           "Cookie": cookie,
@@ -156,7 +158,7 @@ function signOnce(kw, tbs) {
       },
       (err, resp, body) => {
         if (err) {
-          resolve({ success: false, msg: "接口错误" });
+          resolve({ success: false, msg: "接口超时或网络错误" });
           return;
         }
 
