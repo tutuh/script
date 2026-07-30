@@ -271,29 +271,69 @@ async function retryRequest(fn, name) {
 
 // Cookie获取
 function getCookie() {
-  let ck = $request.headers["Cookie"] || $request.headers["cookie"];
-  if (ck && (ck.includes("BDUSS=") || ck.includes("BDUSS_BFESS=")) && $request.url.includes("tieba.baidu.com")) {
-    let old = $persistentStore.read(COOKIE_KEY) || "";
-    if (ck !== old) {
-      $persistentStore.write(ck, COOKIE_KEY);
-      notify(NAME, "", "Cookie获取成功 🎉");
-      console.log("Cookie更新成功");
+
+  let headers = $request.headers || {};
+
+  let ck =
+    headers["Cookie"] ||
+    headers["cookie"] ||
+    headers["COOKIE"];
+
+  if (
+    ck &&
+    ck.length > 20
+  ) {
+
+    let old =
+      $persistentStore.read(
+        COOKIE_KEY
+      ) || "";
+
+    if (
+      ck !== old
+    ) {
+
+      $persistentStore.write(
+        ck,
+        COOKIE_KEY
+      );
+
+      notify(
+        NAME,
+        "",
+        "Cookie获取成功 🎉"
+      );
+
+      console.log(
+        "Cookie更新成功"
+      );
+
     } else {
-      notify(NAME, "", "Cookie未变化");
-      console.log("Cookie未变化");
+
+      console.log(
+        "Cookie未变化"
+      );
+
     }
+
   } else {
-    notify(NAME, "", "Cookie获取失败，缺少BDUSS");
-    console.log("Cookie获取失败");
+
+    console.log(
+      "无Cookie，跳过"
+    );
+
   }
+
 }
 
 // 检查Cookie有效格式
 function checkCookie() {
-  let match = cookie.match(/BDUSS(?:_BFESS)?=([^;]+)/);
-  if (!match) return false;
-  if (!match[1] || match[1].length < 20) return false;
-  return true;
+
+  return (
+    cookie &&
+    cookie.length > 20
+  );
+
 }
 
 // 随机延迟
