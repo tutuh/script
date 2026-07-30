@@ -55,8 +55,8 @@ async function main() {
       continue;
     }
 
-    // 随机等待 5 到 10 秒，防止请求过快被限制
-    let wait = random(5000, 10000);
+    // 随机等待 2 到 4 秒，防止请求过快被限制
+    let wait = random(2000, 4000);
     await sleep(wait);
 
     // 调用带重试机制的签到方法
@@ -72,10 +72,10 @@ async function main() {
     console.log(`${bar.forum_name}: ${r.msg}，前置等待 ${(wait / 1000).toFixed(2)} 秒`);
   }
 
-  // 👇【仅修改了这里】把详细结果输出到日志
+  // 详细结果输出到日志
   console.log("\n========== 签到详情 ==========\n" + result.join("\n") + "\n==============================");
 
-  // 👇【仅修改了这里】通知弹窗只显示精简的数据汇总
+  // 通知弹窗
   notify(
     NAME,
     "✅ 签到完成",
@@ -114,7 +114,7 @@ function getForum() {
   });
 }
 
-// 签到控制器（包含重试机制）
+// 签到（包含重试机制）
 async function sign(kw, tbs) {
   let lastResult = { success: false, msg: "未知错误" };
 
@@ -131,7 +131,7 @@ async function sign(kw, tbs) {
 
     // 如果未达到最大重试次数，则等待一段时间后重试
     if (attempt < MAX_RETRY) {
-      let retryWait = random(2000, 5000); // 重试前等待 2 到 5 秒
+      let retryWait = random(2000, 4000); // 重试前等待 2 到 4 秒
       console.log(`[重试提示] ${kw} 将在 ${(retryWait / 1000).toFixed(2)} 秒后进行第 ${attempt + 1} 次尝试...`);
       await sleep(retryWait);
     }
