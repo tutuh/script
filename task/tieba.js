@@ -6,10 +6,13 @@
  2. 自动签到关注贴吧
  3. 已签到自动跳过
  4. 未签到随机延迟
+ 5. 签到失败自动重试 (新增)
 *********************************/
 
 const NAME = "贴吧签到";
 const COOKIE_KEY = "TieBa_Cookie";
+const MAX_RETRY = 3; // 签到失败最大重试次数
+
 let cookie = $persistentStore.read(COOKIE_KEY) || "";
 let result = [];
 
@@ -56,6 +59,7 @@ async function main() {
     let wait = random(5000, 10000);
     await sleep(wait);
 
+    // 调用带重试机制的签到方法
     let r = await sign(bar.forum_name, tbs);
 
     if (r.success) {
@@ -65,7 +69,7 @@ async function main() {
       result.push(`【${bar.forum_name}】签到失败: ${r.msg}`);
     }
 
-    console.log(`${bar.forum_name}: ${r.msg}，等待 ${(wait / 1000).toFixed(2)} 秒`);
+    console.log(`${bar.forum_name}: ${r.msg}，前置等待 ${(wait / 1000).toFixed(2)} 秒`);
   }
 
   notify(
@@ -106,8 +110,35 @@ function getForum() {
   });
 }
 
-// 签到接口
-function sign(kw, tbs) {
+// 签到控制器（包含重试机制）
+async function sign(kw, tbs) {
+  let lastResult = { success: false, msg: "未知错误" };
+
+  for (let attempt = 1; attempt <= MAX_RETRY; attempt++) {
+    let r = await signOnce(kw, tbs);
+    
+    // 如果签到成功，直接返回结果
+    if (r.success) {
+      return r;
+    }
+
+    lastResult = r;
+    console.log(`[重试提示] ${kw} 第 ${attempt} 次尝试失败: ${r.msg}`);
+
+    // 如果未达到最大重试次数，则等待一段时间后重试
+    if (attempt < MAX_RETRY) {
+      let retryWait = random(2000, 5000); // 重试前等待 2 到 5 秒
+      console.log(`[重试提示] ${kw} 将在 ${(retryWait / 1000).toFixed(2)} 秒后进行第 ${attempt + 1} 次尝试...`);
+      await sleep(retryWait);
+    }
+  }
+
+  // 达到最大重试次数依然失败
+  return { success: false, msg: `重试${MAX_RETRY}次后放弃 (${lastResult.msg})` };
+}
+
+// 单次签到接口请求
+function signOnce(kw, tbs) {
   return new Promise((resolve) => {
     $httpClient.post(
       {
