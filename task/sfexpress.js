@@ -317,9 +317,9 @@ function showMsg() {
   }
 
   // 通知
-  let msg = `🪙 今日获取: 签到 ${pointInfo.signPoints} 分 | 任务 ${pointInfo.taskPoints} 分\n`;
-  msg += `💰 当前总计: ${pointInfo.totalPoints} 分\n`;
-  msg += `🎉 自动任务: 成功完成并领取 ${successCount} 个`;
+  let msg = `今日获取: 签到 ${pointInfo.signPoints} 分 | 任务 ${pointInfo.taskPoints} 分\n`;
+  msg += `当前总计: ${pointInfo.totalPoints} 分\n`;
+  msg += `任务: 成功完成并领取 ${successCount} 个`;
 
   $notification.post("顺丰速运", title, msg);
 }
