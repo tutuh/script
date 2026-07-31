@@ -42,10 +42,10 @@
       "keys": ["sfexpress_session"],
       "author": "@wangfei021325, @chavyleung",
       "repo": "https://github.com/tutuh/script/tree/master",
-      "script": "https://raw.githubusercontent.com/tutuh/script/refs/heads/master/task/sf.js",
+      "script": "https://raw.githubusercontent.com/tutuh/script/master/task/sfexpress.js",
       "icons": [
-        "https://raw.githubusercontent.com/tutuh/icon/main/iconSet/sfexpress-Light.png",
-        "https://raw.githubusercontent.com/tutuh/icon/main/iconSet/sfexpress-Color.png"
+        "https://raw.githubusercontent.com/tutuh/icon/main/iconSet/sfexpress1.png",
+        "https://raw.githubusercontent.com/tutuh/icon/main/iconSet/sfexpress.png"
       ]
     },
     {
