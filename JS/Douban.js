@@ -41,6 +41,7 @@ let seen = url.match(/\?seen=(\d)$/)
 let collect = false  //收藏功能，默认关闭，需自行配置
 let region = "US" //流媒体区域
 let tmdb_api_key = "" // TMDB API KEY
+let douban_api_key = "" // Douban API KEY
 
 if (!seen) douban_addons()
 if (seen) collect_movie()
@@ -55,7 +56,7 @@ async function douban_addons() {
     let mweb = [`<div class="sub-ddgksf2013" style="background:rgba(0,0,0,0.1);border-radius:6px;padding:13px 15px;margin-top:10px"> <img src="https://raw.githubusercontent.com/tutuh/script/master/icons/cbh.png" height="23" width="32" style="vertical-align: middle;"><a href="https://www.cupfox.app/search?key=${title[1]}"><span class="vendor-text" style="display: inline-block;vertical-align:middle;font-size:15px;color:#fff;margin-left:5px;">茶杯狐 👉 Click to Play 👈</span> </a></div>`]
     mweb.push(`<div class="sub-ddgksf2013" style="background:rgba(0,0,0,0.1);border-radius:6px;padding:13px 15px;margin-top:10px"> <img src="https://raw.githubusercontent.com/tutuh/script/master/icons/dsx.png" height="32" width="32" style="vertical-align: middle;"><a href="https://dsxys.pro/sb/ke7nhZe3c1-.html?wd=${title[1]}&submit="><span class="vendor-text" style="display: inline-block;vertical-align:middle;font-size:15px;color:#fff;margin-left:5px;">大师兄 👉 Click to Play 👈</span> </a></div>`);
     let douban_options = {
-        url: `https://frodo.douban.com/api/v2/movie/${movieId[1]}?apiKey=0ac44ae016490db2204ce0a042db2916`,
+        url: `https://frodo.douban.com/api/v2/movie/${movieId[1]}?apiKey=${douban_api_key}`,
         method: "GET",
         headers: {
             "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000323) NetType/WIFI Language/en",
@@ -105,7 +106,7 @@ async function douban_addons() {
 async function collect_movie() {
     if ($response) $done({})
     let options = {
-        url: `https://frodo.douban.com/api/v2/movie/${movieId[1]}?apiKey=0ac44ae016490db2204ce0a042db2916`,
+        url: `https://frodo.douban.com/api/v2/movie/${movieId[1]}?apiKey=${douban_api_key}`,
         method: "GET",
         headers: {
             "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000323) NetType/WIFI Language/en",
