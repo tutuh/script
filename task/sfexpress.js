@@ -12,7 +12,7 @@ const SF_KEY = "sfexpress_session";
 let login = null;
 let signData = null;
 let taskList = [];
-let pointInfo = { signPoints: 0, taskPoints: 0, totalPoints: 0 }; 
+let pointInfo = { signPoints: 0, taskPoints: 0, totalPoints: 0 };
 
 (async () => {
   console.log("🔔顺丰速运 开始");
@@ -46,7 +46,7 @@ let pointInfo = { signPoints: 0, taskPoints: 0, totalPoints: 0 };
     await wait(1000);
     await dailyTask();
     await wait(1000);
-    await getPointDetail(); 
+    await getPointDetail();
 
     showMsg();
 
@@ -121,6 +121,7 @@ async function loginWeb() {
 }
 
 async function sign() {
+  // 查询签到状态
   let body = await requestPost({
     url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralSignV2Service~getTodaySign",
     headers: {
@@ -137,6 +138,7 @@ async function sign() {
     return;
   }
 
+  // 已签到
   if (data.obj.signed) {
     signData = {
       success: true,
@@ -145,10 +147,12 @@ async function sign() {
         countDay: data.obj.dayCount
       }
     };
+
     console.log(`今日已签到 连续${data.obj.dayCount}天`);
     return;
   }
 
+  // 执行签到
   body = await requestPost({
     url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralSignV2Service~sign",
     headers: {
@@ -167,6 +171,7 @@ async function sign() {
         countDay: data.obj.dayCount
       }
     };
+
     console.log(`签到成功 连续${data.obj.dayCount}天`);
   } else {
     signData = data;
@@ -213,7 +218,6 @@ async function dailyTask() {
     }
   }
 
-  // 【修改点】重新加回在日志中打印任务明细的功能
   console.log("--- 任务执行明细 ---");
   console.log(
     taskList.map((task) => `${task.title}: ${task.result || "未完成"}`).join("\n")
@@ -245,6 +249,7 @@ async function getPoint(task) {
   task.result = "成功";
 }
 
+// 获取今天日期的辅助函数，格式：YYYY-MM-DD
 function getTodayStr() {
   const d = new Date();
   const year = d.getFullYear();
@@ -253,6 +258,7 @@ function getTodayStr() {
   return `${year}-${month}-${day}`;
 }
 
+// 积分明细
 async function getPointDetail() {
   try {
     const body = await requestPost({
@@ -266,13 +272,15 @@ async function getPointDetail() {
     const data = JSON.parse(body);
 
     if (data.success && data.obj && data.obj.data) {
-      const todayStr = getTodayStr();
+      const todayStr = getTodayStr(); // 获取当天的日期字符串
       const records = data.obj.data;
 
+      // 如果有数据，获取第一条数据的 curPoint 作为当前总积分
       if (records.length > 0) {
         pointInfo.totalPoints = records[0].curPoint;
       }
 
+      // 遍历列表，统计今天的各项积分收益
       for (const item of records) {
         if (item.createTm && item.createTm.startsWith(todayStr)) {
           const val = parseInt(item.pointVal || 0);
@@ -290,7 +298,9 @@ async function getPointDetail() {
   }
 }
 
+// 整合统计结果并展示
 function showMsg() {
+  // 统计成功或已领取的任务数量
   let successCount = 0;
   for (const task of taskList) {
     if (task.result === "成功" || task.result === "已领取") {
@@ -306,6 +316,7 @@ function showMsg() {
       `签到成功 (连续${signData.obj.countDay}天)`;
   }
 
+  // 通知
   let msg = `🪙 今日获取: 签到 ${pointInfo.signPoints} 分 | 任务 ${pointInfo.taskPoints} 分\n`;
   msg += `💰 当前总计: ${pointInfo.totalPoints} 分\n`;
   msg += `🎉 自动任务: 成功完成并领取 ${successCount} 个`;
