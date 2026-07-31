@@ -312,8 +312,8 @@ function showMsg() {
   
   if (signData && signData.success) {
     title = signData.obj.hasFinishSign ? 
-      `今日已签到 (连续${signData.obj.countDay}天)` : 
-      `签到成功 (连续${signData.obj.countDay}天)`;
+      `今日已签到，已连续签到${signData.obj.countDay}天` : 
+      `签到成功，已连续签到${signData.obj.countDay}天`;
   }
 
   // 通知
