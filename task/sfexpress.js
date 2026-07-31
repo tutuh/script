@@ -218,11 +218,9 @@ async function dailyTask() {
     }
   }
 
-  console.log("--- 任务执行明细 ---");
   console.log(
     taskList.map((task) => `${task.title}: ${task.result || "未完成"}`).join("\n")
   );
-  console.log("--------------------");
 }
 
 async function getPoint(task) {
