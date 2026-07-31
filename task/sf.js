@@ -47,7 +47,7 @@ let taskList = [];
 
     showMsg();
 
-  } catch(e) {
+  } catch (e) {
     console.log("异常: " + e);
     $notification.post("顺丰速运", "执行失败", String(e));
   }
@@ -56,7 +56,7 @@ let taskList = [];
 })();
 
 function wait(ms) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(resolve, ms);
   });
 }
@@ -87,6 +87,7 @@ function requestGet(opts) {
 
 async function loginApp() {
   const data = $persistentStore.read(SF_KEY);
+  
   if (!data) {
     throw "没有顺丰会话";
   }
@@ -117,24 +118,61 @@ async function loginWeb() {
 }
 
 async function sign() {
-  const body = await requestPost({
-    url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskSignPlusService~automaticSignFetchPackage",
+  // 查询签到状态
+  let body = await requestPost({
+    url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralSignV2Service~getTodaySign",
     headers: {
       "Content-Type": "application/json"
     },
-    body: '{"comeFrom":"vioin","channelFrom":"SFAPP"}'
+    body: "{}"
   });
 
-  signData = JSON.parse(body);
+  let data = JSON.parse(body);
 
-  if (signData.success) {
-    if (signData.obj.hasFinishSign) {
-      console.log(`今日已签到 连续${signData.obj.countDay}天`);
-    } else {
-      console.log(`签到成功 连续${signData.obj.countDay}天`);
-    }
+  if (!data.success) {
+    console.log("查询签到状态失败");
+    signData = data;
+    return;
+  }
+
+  // 已签到
+  if (data.obj.signed) {
+    signData = {
+      success: true,
+      obj: {
+        hasFinishSign: true,
+        countDay: data.obj.dayCount
+      }
+    };
+
+    console.log(`今日已签到 连续${data.obj.dayCount}天`);
+    return;
+  }
+
+  // 执行签到
+  body = await requestPost({
+    url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralSignV2Service~sign",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: "{}"
+  });
+
+  data = JSON.parse(body);
+
+  if (data.success) {
+    signData = {
+      success: true,
+      obj: {
+        hasFinishSign: false,
+        countDay: data.obj.dayCount
+      }
+    };
+
+    console.log(`签到成功 +${data.obj.awardNum}积分 连续${data.obj.dayCount}天`);
   } else {
-    console.log("签到失败");
+    signData = data;
+    console.log("签到失败：" + (data.errorMessage || "未知错误"));
   }
 }
 
@@ -144,10 +182,18 @@ async function dailyTask() {
     headers: {
       "Content-Type": "application/json"
     },
-    body: '{"channelType":"1"}'
+    body: JSON.stringify({ channelType: "1" })
   });
 
-  taskList = JSON.parse(body).obj.taskTitleLevels;
+  const data = JSON.parse(body);
+
+  if (!data.success || !data.obj) {
+    console.log("获取任务失败");
+    taskList = [];
+    return;
+  }
+
+  taskList = data.obj.taskTitleLevels || [];
   console.log("任务数量: " + taskList.length);
 
   for (const task of taskList) {
@@ -156,7 +202,12 @@ async function dailyTask() {
     } else if (task.status === 2) {
       await requestPost({
         url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonRoutePost/memberEs/taskRecord/finishTask",
-        body: `{"taskCode":"${task.taskCode}"}`
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          taskCode: task.taskCode
+        })
       });
       await getPoint(task);
     } else if (task.status === 3) {
@@ -165,7 +216,7 @@ async function dailyTask() {
   }
 
   console.log(
-    taskList.map(task => `${task.title}: ${task.result || "未完成"}`).join("\n")
+    taskList.map((task) => `${task.title}: ${task.result || "未完成"}`).join("\n")
   );
 }
 
@@ -184,7 +235,13 @@ async function getPoint(task) {
   });
 
   const data = JSON.parse(body);
-  task.result = data.success ? "成功" : data.errorMessage;
+
+  if (!data.success) {
+    task.result = data.errorMessage || "领取失败";
+    return;
+  }
+
+  task.result = "成功";
 }
 
 function showMsg() {
