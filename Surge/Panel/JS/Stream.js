@@ -204,7 +204,7 @@ async function checkGemini(timeout) {
 // Netflix
 async function checkNetflix(timeout) {
   try {
-    // 1. 先检测非自制剧 (绝命毒师)，判断是否解锁了完整版权
+    // 检测非自制剧 (绝命毒师)，判断是否解锁了完整版权
     const r1 = await request('GET', 'https://www.netflix.com/title/70143836', timeout);
     if (r1.error || !r1.response) return { name: 'Netflix', status: STATUS_TIMEOUT };
 
@@ -214,7 +214,6 @@ async function checkNetflix(timeout) {
     // 403 代表节点 IP 被明确封禁
     if (status1 === 403) return { name: 'Netflix', status: STATUS_NOT_AVAILABLE };
 
-    // 健壮的地区代码提取函数 (兼容空格、转义符和新旧字段)
     const extractRegion = (htmlData) => {
       let match;
 
@@ -237,8 +236,8 @@ async function checkNetflix(timeout) {
     }
 
     if (status1 === 404) {
-      // 非自制剧 404，说明可能是“仅自制”或者“该地区不提供网飞服务”
-      // 2. 进一步检测自制剧 (怪奇物语)
+
+      // 检测自制剧 (怪奇物语)
       const r2 = await request('GET', 'https://www.netflix.com/title/80062035', timeout);
       if (r2.error || !r2.response) return { name: 'Netflix', status: STATUS_TIMEOUT };
       
@@ -246,13 +245,12 @@ async function checkNetflix(timeout) {
       const data2 = r2.data || '';
       
       if (status2 === 200) {
-        // 只有自制剧能访问，说明是仅解锁自制剧
+
         let region = extractRegion(data2) || 'US';
-        // STATUS_COMING 在你的主函数里会被展示为 "自制"
+
         return { name: 'Netflix', status: STATUS_COMING, region }; 
       }
       
-      // 连自制剧都 404，说明未解锁
       return { name: 'Netflix', status: STATUS_NOT_AVAILABLE };
     }
 
@@ -317,11 +315,25 @@ async function getDisneyLocationInfo(timeout) {
 async function testDisneyHomePage(timeout) {
   const r = await request('GET', 'https://www.disneyplus.com/', timeout);
   if (r.error || !r.response) return null;
+  
+  // 拦截重定向或禁止访问的状态码
   if (r.response.status !== 200) return { available: false };
-  if (r.data && r.data.includes('Sorry, Disney+ is not available in your region.')) {
+  
+  const data = r.data || '';
+  
+  // 加入多语言“未解锁”提示
+  const isNotAvailable = data.includes('Sorry, Disney+ is not available in your region.') ||
+                         data.includes('not available in your region') ||
+                         data.includes('尚未在您的地區提供服務') ||
+                         data.includes('目前無法提供') ||
+                         data.includes('not available in your location');
+                         
+  if (isNotAvailable) {
     return { available: false };
   }
-  const match = (r.data || '').match(/Region: ([A-Za-z]{2})/i);
+  
+  // 提取 Region 代码
+  const match = data.match(/Region:\s*([A-Za-z]{2})/i);
   return { available: true, region: match ? match[1].toUpperCase() : '' };
 }
 
