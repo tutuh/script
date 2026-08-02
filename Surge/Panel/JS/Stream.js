@@ -31,7 +31,7 @@ function getAlignedName(name, mode) {
       default:        return name.padEnd(10, ' ');
     }
   } else {
-    // 默认：等宽极客风，100%完美对齐 (\u2007 是等宽数字空格)
+    // 默认：等宽极客风 (\u2007 是等宽数字空格)
     const monoMap = {
       'ChatGPT': '𝙲𝚑𝚊𝚝𝙶𝙿𝚃\u2007',
       'Gemini':  '𝙶𝚎𝚖𝚒𝚗𝚒\u2007\u2007',
@@ -51,7 +51,6 @@ function getArgs() {
     for (const param of params) {
       const [key, value] = param.split('=');
       if (key && value) {
-        // 将键名转换为小写方便后续兼容读取，但保留原始值的大小写
         args[key.trim().toLowerCase()] = value.trim();
       }
     }
@@ -70,12 +69,9 @@ function getCurrentTime() {
 
 // 主入口
 (async function () {
-  // 1. 解析参数
   const args = getArgs();
   const baseTitle = args.title || '网络解锁检测';
   const timeoutLimit = parseInt(args.timeout) || 3000;
-  
-  // 动态读取对齐模式，默认使用 monospace
   const alignMode = args.align_mode || args.mode || 'monospace';
   
   const panel = {
@@ -95,35 +91,26 @@ function getCurrentTime() {
     ]);
 
     panel.content = results.map(r => {
-      // 传入动态对齐模式
       const paddedName = getAlignedName(r.name, alignMode);
-      let statusText = '';
-      
       switch (r.status) {
         case STATUS_AVAILABLE:
-          statusText = `${paddedName}➟  ${r.region}`;
-          break;
+          return `${paddedName}➟  ${r.region}`;
         case STATUS_NOT_AVAILABLE:
-          statusText = `${paddedName}➟  未解锁`;
-          break;
+          return `${paddedName}➟  未解锁`;
         case STATUS_TIMEOUT:
-          statusText = `${paddedName}➟  超时`;
-          break;
+          return `${paddedName}➟  超时`;
         case STATUS_ERROR:
-          statusText = `${paddedName}➟  检测失败`;
-          break;
+          return `${paddedName}➟  检测失败`;
         case STATUS_COMING:
           const tag = r.name === 'Netflix' ? '自制' : '即将';
-          statusText = `${paddedName}➟  ${tag} ${r.region}`;
-          break;
+          return `${paddedName}➟  ${tag} ${r.region}`;
+        default:
+          return `${paddedName}➟  未知`;
       }
-      return statusText;
     }).join('\n');
-
   } catch (e) {
     panel.content = '检测过程发生异常';
   }
-
   $done(panel);
 })();
 
@@ -132,7 +119,6 @@ function request(method, url, timeout, headers = REQUEST_HEADERS, body = null, m
   return new Promise((resolve) => {
     const opts = { url, headers, timeout: timeout / 1000 };
     if (body) opts.body = body;
-
     const attempt = (currentTry) => {
       const callback = (error, response, data) => {
         if (error && currentTry < maxRetries) {
@@ -141,14 +127,12 @@ function request(method, url, timeout, headers = REQUEST_HEADERS, body = null, m
           resolve({ error, response: response || {}, data: data || '' });
         }
       };
-
       if (method.toUpperCase() === 'POST') {
         $httpClient.post(opts, callback);
       } else {
         $httpClient.get(opts, callback);
       }
     };
-
     attempt(0);
   });
 }
@@ -160,10 +144,8 @@ async function checkChatGPT(timeout) {
   try {
     const r = await request('GET', 'https://chatgpt.com/cdn-cgi/trace', timeout);
     if (r.error || !r.data) return { name: 'ChatGPT', status: STATUS_TIMEOUT };
-
     const locMatch = r.data.match(/loc=([A-Z]{2})/i);
     if (!locMatch) return { name: 'ChatGPT', status: STATUS_ERROR };
-
     const region = locMatch[1].toUpperCase();
     if (!GPT_BLOCKED_REGIONS.includes(region)) {
       return { name: 'ChatGPT', status: STATUS_AVAILABLE, region };
@@ -179,10 +161,8 @@ async function checkGemini(timeout) {
   try {
     const r = await request('GET', 'https://gemini.google.com/app', timeout);
     if (r.error || !r.response) return { name: 'Gemini', status: STATUS_TIMEOUT };
-
     const status = r.response.status || 0;
     const data = r.data || '';
-
     if (status === 200) {
       if (data.includes('not available') || data.includes('unavailable in your country')) {
         return { name: 'Gemini', status: STATUS_NOT_AVAILABLE };
@@ -191,7 +171,6 @@ async function checkGemini(timeout) {
       const region = m && m[1] ? m[1].slice(0, 2).toUpperCase() : 'US';
       return { name: 'Gemini', status: STATUS_AVAILABLE, region };
     }
-
     if ([403, 404, 302].includes(status)) {
       return { name: 'Gemini', status: STATUS_NOT_AVAILABLE };
     }
@@ -204,56 +183,40 @@ async function checkGemini(timeout) {
 // Netflix
 async function checkNetflix(timeout) {
   try {
-    // 检测非自制剧 (绝命毒师)，判断是否解锁了完整版权
     const r1 = await request('GET', 'https://www.netflix.com/title/70143836', timeout);
     if (r1.error || !r1.response) return { name: 'Netflix', status: STATUS_TIMEOUT };
-
     const status1 = r1.response.status || 0;
     const data1 = r1.data || '';
-
-    // 403 代表节点 IP 被明确封禁
+    
     if (status1 === 403) return { name: 'Netflix', status: STATUS_NOT_AVAILABLE };
 
     const extractRegion = (htmlData) => {
-      let match;
-
-      match = htmlData.match(/(?:"|\\")(?:requestCountryCode|countryCode)(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
+      let match = htmlData.match(/(?:"|\\")(?:requestCountryCode|countryCode)(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
       if (match && match[1]) return match[1].toUpperCase();
-      
       match = htmlData.match(/(?:"|\\")(?:geolocation|location)(?:"|\\")\s*:\s*\{[^}]*?(?:"|\\")country(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
       if (match && match[1]) return match[1].toUpperCase();
-      
       match = htmlData.match(/(?:"|\\")country(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
       if (match && match[1]) return match[1].toUpperCase();
-
       return null;
     };
 
     if (status1 === 200) {
-      // 200 说明完整版权解锁
       let region = extractRegion(data1) || 'US';
       return { name: 'Netflix', status: STATUS_AVAILABLE, region };
     }
 
     if (status1 === 404) {
-
-      // 检测自制剧 (怪奇物语)
       const r2 = await request('GET', 'https://www.netflix.com/title/80062035', timeout);
       if (r2.error || !r2.response) return { name: 'Netflix', status: STATUS_TIMEOUT };
-      
       const status2 = r2.response.status || 0;
       const data2 = r2.data || '';
       
       if (status2 === 200) {
-
         let region = extractRegion(data2) || 'US';
-
         return { name: 'Netflix', status: STATUS_COMING, region }; 
       }
-      
       return { name: 'Netflix', status: STATUS_NOT_AVAILABLE };
     }
-
     return { name: 'Netflix', status: STATUS_ERROR };
   } catch (e) {
     return { name: 'Netflix', status: STATUS_ERROR };
@@ -267,16 +230,13 @@ async function checkDisneyPlus(timeout) {
       testDisneyHomePage(timeout),
       getDisneyLocationInfo(timeout)
     ]);
-
     let region = loc?.countryCode ? loc.countryCode.toUpperCase() : '';
     if (!region && home?.region) region = home.region.toUpperCase();
 
     if (loc?.inSupportedLocation === false || loc?.inSupportedLocation === 'false') {
       return { name: 'Disney+', status: STATUS_COMING, region: region || 'UN' };
     }
-
     if (region) return { name: 'Disney+', status: STATUS_AVAILABLE, region };
-    
     if (home && home.available === false) return { name: 'Disney+', status: STATUS_NOT_AVAILABLE };
     if (home && home.available === true) return { name: 'Disney+', status: STATUS_AVAILABLE, region: home.region || 'US' };
 
@@ -299,7 +259,6 @@ async function getDisneyLocationInfo(timeout) {
 
   const r = await request('POST', 'https://disney.api.edge.bamgrid.com/graph/v1/device/graphql', timeout, headers, body);
   if (r.error || !r.response || r.response.status !== 200) return null;
-  
   try {
     const obj = JSON.parse(r.data);
     const session = obj?.extensions?.sdk?.session;
@@ -315,24 +274,17 @@ async function getDisneyLocationInfo(timeout) {
 async function testDisneyHomePage(timeout) {
   const r = await request('GET', 'https://www.disneyplus.com/', timeout);
   if (r.error || !r.response) return null;
-  
-  // 拦截重定向或禁止访问的状态码
   if (r.response.status !== 200) return { available: false };
   
   const data = r.data || '';
-  
-  // 加入多语言“未解锁”提示
   const isNotAvailable = data.includes('Sorry, Disney+ is not available in your region.') ||
                          data.includes('not available in your region') ||
                          data.includes('尚未在您的地區提供服務') ||
                          data.includes('目前無法提供') ||
                          data.includes('not available in your location');
                          
-  if (isNotAvailable) {
-    return { available: false };
-  }
+  if (isNotAvailable) return { available: false };
   
-  // 提取 Region 代码
   const match = data.match(/Region:\s*([A-Za-z]{2})/i);
   return { available: true, region: match ? match[1].toUpperCase() : '' };
 }
@@ -342,7 +294,6 @@ async function checkYouTubePremium(timeout) {
   try {
     const r = await request('GET', 'https://www.youtube.com/premium', timeout);
     if (r.error || !r.response) return { name: 'YouTube', status: STATUS_TIMEOUT };
-
     const data = r.data || '';
     
     const isNotAvailable = data.includes('Premium is not available in your country') || 
@@ -352,15 +303,11 @@ async function checkYouTubePremium(timeout) {
                            data.includes('not available in your location') ||
                            data.includes('目前無法使用');
 
-    if (isNotAvailable) {
-      return { name: 'YouTube', status: STATUS_NOT_AVAILABLE };
-    }
+    if (isNotAvailable) return { name: 'YouTube', status: STATUS_NOT_AVAILABLE };
 
     if (r.response.status === 200) {
       let region = 'US';
-      
       const glMatch = data.match(/"GL"\s*:\s*"([A-Za-z]{2})"/i);
-
       const countryMatch = data.match(/(?:"|\\")countryCode(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
       
       if (glMatch && glMatch[1]) {
@@ -370,13 +317,10 @@ async function checkYouTubePremium(timeout) {
       } else if (data.includes('www.google.cn')) {
         region = 'CN';
       }
-      
       return { name: 'YouTube', status: STATUS_AVAILABLE, region };
     }
-
     return { name: 'YouTube', status: STATUS_ERROR };
   } catch (e) {
     return { name: 'YouTube', status: STATUS_ERROR };
   }
 }
-
