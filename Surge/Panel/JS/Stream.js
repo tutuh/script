@@ -204,26 +204,60 @@ async function checkGemini(timeout) {
 // Netflix
 async function checkNetflix(timeout) {
   try {
-    const r = await request('GET', 'https://www.netflix.com/title/80062035', timeout);
-    if (r.error || !r.response) return { name: 'Netflix', status: STATUS_TIMEOUT };
+    // 1. 先检测非自制剧 (绝命毒师)，判断是否解锁了完整版权
+    const r1 = await request('GET', 'https://www.netflix.com/title/70143836', timeout);
+    if (r1.error || !r1.response) return { name: 'Netflix', status: STATUS_TIMEOUT };
 
-    const status = r.response.status || 0;
-    const data = r.data || '';
+    const status1 = r1.response.status || 0;
+    const data1 = r1.data || '';
 
-    if (status === 403) return { name: 'Netflix', status: STATUS_NOT_AVAILABLE };
-    
-    if (status === 200 || status === 404) {
-      let region = 'US';
-      const match = data.match(/"(?:requestCountryCode|countryCode)":"([A-Z]{2})"/i);
-      if (match && match[1]) {
-        region = match[1].toUpperCase();
-      }
+    // 403 代表节点 IP 被明确封禁
+    if (status1 === 403) return { name: 'Netflix', status: STATUS_NOT_AVAILABLE };
 
-      if (status === 404) {
-         return { name: 'Netflix', status: STATUS_COMING, region };
-      }
+    // 健壮的地区代码提取函数 (兼容空格、转义符和新旧字段)
+    const extractRegion = (htmlData) => {
+      let match;
+      // 优先级1: requestCountryCode 或 countryCode (最准)
+      match = htmlData.match(/(?:"|\\")(?:requestCountryCode|countryCode)(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
+      if (match && match[1]) return match[1].toUpperCase();
+      
+      // 优先级2: geolocation 或 location 里的 country
+      match = htmlData.match(/(?:"|\\")(?:geolocation|location)(?:"|\\")\s*:\s*\{[^}]*?(?:"|\\")country(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
+      if (match && match[1]) return match[1].toUpperCase();
+      
+      // 优先级3: 纯 country 字段
+      match = htmlData.match(/(?:"|\\")country(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
+      if (match && match[1]) return match[1].toUpperCase();
+
+      return null;
+    };
+
+    if (status1 === 200) {
+      // 200 说明完整版权解锁
+      let region = extractRegion(data1) || 'US';
       return { name: 'Netflix', status: STATUS_AVAILABLE, region };
     }
+
+    if (status1 === 404) {
+      // 非自制剧 404，说明可能是“仅自制”或者“该地区不提供网飞服务”
+      // 2. 进一步检测自制剧 (怪奇物语)
+      const r2 = await request('GET', 'https://www.netflix.com/title/80062035', timeout);
+      if (r2.error || !r2.response) return { name: 'Netflix', status: STATUS_TIMEOUT };
+      
+      const status2 = r2.response.status || 0;
+      const data2 = r2.data || '';
+      
+      if (status2 === 200) {
+        // 只有自制剧能访问，说明是仅解锁自制剧
+        let region = extractRegion(data2) || 'US';
+        // STATUS_COMING 在你的主函数里会被展示为 "自制"
+        return { name: 'Netflix', status: STATUS_COMING, region }; 
+      }
+      
+      // 连自制剧都 404，说明未解锁
+      return { name: 'Netflix', status: STATUS_NOT_AVAILABLE };
+    }
+
     return { name: 'Netflix', status: STATUS_ERROR };
   } catch (e) {
     return { name: 'Netflix', status: STATUS_ERROR };
