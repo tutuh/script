@@ -217,15 +217,13 @@ async function checkNetflix(timeout) {
     // 健壮的地区代码提取函数 (兼容空格、转义符和新旧字段)
     const extractRegion = (htmlData) => {
       let match;
-      // 优先级1: requestCountryCode 或 countryCode (最准)
+
       match = htmlData.match(/(?:"|\\")(?:requestCountryCode|countryCode)(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
       if (match && match[1]) return match[1].toUpperCase();
       
-      // 优先级2: geolocation 或 location 里的 country
       match = htmlData.match(/(?:"|\\")(?:geolocation|location)(?:"|\\")\s*:\s*\{[^}]*?(?:"|\\")country(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
       if (match && match[1]) return match[1].toUpperCase();
       
-      // 优先级3: 纯 country 字段
       match = htmlData.match(/(?:"|\\")country(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
       if (match && match[1]) return match[1].toUpperCase();
 
@@ -335,18 +333,32 @@ async function checkYouTubePremium(timeout) {
 
     const data = r.data || '';
     
-    if (data.includes('Premium is not available in your country') || data.includes('is not available in your country')) {
+    const isNotAvailable = data.includes('Premium is not available in your country') || 
+                           data.includes('is not available in your country') ||
+                           data.includes('在您所在的国家') ||
+                           data.includes('尚未推出') || 
+                           data.includes('not available in your location') ||
+                           data.includes('目前無法使用');
+
+    if (isNotAvailable) {
       return { name: 'YouTube', status: STATUS_NOT_AVAILABLE };
     }
 
     if (r.response.status === 200) {
       let region = 'US';
-      const m = data.match(/"countryCode":"([A-Za-z]{2})"/i);
-      if (m && m[1]) {
-        region = m[1].toUpperCase();
+      
+      const glMatch = data.match(/"GL"\s*:\s*"([A-Za-z]{2})"/i);
+
+      const countryMatch = data.match(/(?:"|\\")countryCode(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i);
+      
+      if (glMatch && glMatch[1]) {
+        region = glMatch[1].toUpperCase();
+      } else if (countryMatch && countryMatch[1]) {
+        region = countryMatch[1].toUpperCase();
       } else if (data.includes('www.google.cn')) {
         region = 'CN';
       }
+      
       return { name: 'YouTube', status: STATUS_AVAILABLE, region };
     }
 
@@ -355,3 +367,4 @@ async function checkYouTubePremium(timeout) {
     return { name: 'YouTube', status: STATUS_ERROR };
   }
 }
+
