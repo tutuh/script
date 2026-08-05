@@ -23,7 +23,6 @@ DOMAIN-SUFFIX,amazonaws.com
 DOMAIN-SUFFIX,bbc.com
 DOMAIN-SUFFIX,bbc.co.uk
 DOMAIN-SUFFIX,bbci.co.uk
-DOMAIN-SUFFIX,bbcmedia.co.uk
 
 # Developer
 DOMAIN-SUFFIX,stackoverflow.com
@@ -52,6 +51,7 @@ DOMAIN-SUFFIX,discord.gg
 DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,discordapp.net
 DOMAIN-SUFFIX,discord.media
+DOMAIN-SUFFIX,discord.dev
 
 # Dropbox
 DOMAIN-SUFFIX,dropbox.com
@@ -65,6 +65,7 @@ DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,githubassets.com
 DOMAIN-SUFFIX,github.io
 DOMAIN-SUFFIX,github.dev
+DOMAIN-SUFFIX,githubstatus.com
 
 # Gitlab
 DOMAIN-SUFFIX,gitlab.com
@@ -101,17 +102,21 @@ DOMAIN-SUFFIX,messenger.com
 DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,instagr.am
-# > Whatsapp
+DOMAIN-SUFFIX,ig.me
+# > WhatsApp
 DOMAIN-SUFFIX,whatsapp.com
 DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,wa.me
 # > Threads
 DOMAIN-SUFFIX,threads.net
 # > Meta
 DOMAIN-SUFFIX,meta.com
-# > Oculus VR
+DOMAIN-SUFFIX,meta.ai
+# > Oculus
 DOMAIN-SUFFIX,metaquest.com
 DOMAIN-SUFFIX,oculus.com
 DOMAIN-SUFFIX,oculuscdn.com
+DOMAIN-SUFFIX,oculusvr.com
 
 # Pinterest
 DOMAIN-SUFFIX,pinterest.com
@@ -130,10 +135,6 @@ DOMAIN-KEYWORD,missav
 DOMAIN-KEYWORD,netflav
 DOMAIN-KEYWORD,javmost
 
-# Spark
-DOMAIN-SUFFIX,readdle.com
-DOMAIN-SUFFIX,smartmailcloud.com
-
 # Steam
 DOMAIN-SUFFIX,steampowered.com
 DOMAIN-SUFFIX,steamcommunity.com
@@ -143,12 +144,10 @@ DOMAIN-SUFFIX,steamgames.com
 DOMAIN-SUFFIX,steamserver.net
 DOMAIN-SUFFIX,steamstat.us
 DOMAIN-SUFFIX,valvesoftware.com
-
-# Store
-DOMAIN-SUFFIX,fanatical.com
-DOMAIN-SUFFIX,humblebundle.com
+DOMAIN-SUFFIX,steamusercontent.com
 
 # TapTap
+DOMAIN-SUFFIX,taptap.com
 DOMAIN-SUFFIX,taptap.io
 DOMAIN-SUFFIX,taptap.tw
 DOMAIN-SUFFIX,tap.io
@@ -192,6 +191,7 @@ DOMAIN-SUFFIX,teraboxcdn.com
 # Twitch
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,ttvnw.net
+DOMAIN-SUFFIX,jtvnw.net
 
 # Twitter / X
 DOMAIN-SUFFIX,x.com
@@ -199,7 +199,6 @@ DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,t.co
 DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,twitter.jp
-DOMAIN-SUFFIX,twitpic.com
 DOMAIN-SUFFIX,periscope.tv
 DOMAIN-SUFFIX,pscp.tv
 
@@ -239,7 +238,6 @@ DOMAIN-SUFFIX,hulu.com
 DOMAIN-SUFFIX,huluim.com
 DOMAIN-SUFFIX,vimeo.com
 DOMAIN-SUFFIX,vimeocdn.com
-DOMAIN-SUFFIX,jtvnw.net
 DOMAIN-SUFFIX,tvb.com
 DOMAIN-SUFFIX,overcast.fm
 DOMAIN-SUFFIX,soundcloud.com
