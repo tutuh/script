@@ -25,12 +25,6 @@ DOMAIN-SUFFIX,bbc.co.uk
 DOMAIN-SUFFIX,bbci.co.uk
 DOMAIN-SUFFIX,bbcmedia.co.uk
 
-# Claude
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,claude.com
-DOMAIN-SUFFIX,claudeusercontent.com
-
 # Developer
 DOMAIN-SUFFIX,stackoverflow.com
 DOMAIN-SUFFIX,stackexchange.com
@@ -112,26 +106,12 @@ DOMAIN-SUFFIX,whatsapp.com
 DOMAIN-SUFFIX,whatsapp.net
 # > Threads
 DOMAIN-SUFFIX,threads.net
-# > Meta AI
+# > Meta
 DOMAIN-SUFFIX,meta.com
-DOMAIN-SUFFIX,meta.ai
 # > Oculus VR
 DOMAIN-SUFFIX,metaquest.com
 DOMAIN-SUFFIX,oculus.com
 DOMAIN-SUFFIX,oculuscdn.com
-
-# OpenAI
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,chat.com
-DOMAIN-SUFFIX,sora.com
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN,openaiapi-site.azureedge.net
-DOMAIN-SUFFIX,livekit.cloud
-DOMAIN,api.statsig.com
-DOMAIN,api-iam.intercom.io
-DOMAIN,o33249.ingest.us.sentry.io
 
 # Pinterest
 DOMAIN-SUFFIX,pinterest.com
