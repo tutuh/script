@@ -33,13 +33,22 @@ function request(url, timeout) {
 
   // 1. 测试网络延迟 (Ping)
   const pingstart = Date.now();
-  await request(`http://cp.cloudflare.com/generate_204?t=${timestamp}`, 5000);
+  try {
+    await request(`http://cp.cloudflare.com/generate_204?t=${timestamp}`, 5000);
+  } catch (err) {
+    throw new Error(`Ping阶段失败: ${err.message || String(err)}`);
+  }
   const pingt = Date.now() - pingstart;
   
   // 2. 测试下行速率 (Speed)
   const start = Date.now();
-  await request(`https://speed.cloudflare.com/__down?bytes=${bytes}&t=${timestamp}`, 10000);
+  try {
+    await request(`https://speed.cloudflare.com/__down?bytes=${bytes}&t=${timestamp}`, 10000);
+  } catch (err) {
+    throw new Error(`测速阶段失败: ${err.message || String(err)}`);
+  }
   const end = Date.now();
+
   
   // 避免请求过快 duration 为 0 导致测速结果变成 Infinity
   const duration = Math.max((end - start) / 1000, 0.001);
