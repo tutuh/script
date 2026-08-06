@@ -21,34 +21,39 @@ function request(url, timeout) {
 }
 
 !(async () => {
-  // 从 arguments 参数获取下载流量档位 (此处默认测试微软 CDN 文件)
+  // 从 arguments 参数获取下载流量，默认 1MB
+  const rawMb = Number(arg.mb) || 1;
+  
+  // 强行限制最大不得超过 3MB
+  const mb = Math.min(rawMb, 3); 
+  const bytes = mb * 1024 * 1024;
+  
+  // 生成随机时间戳，强制节点不走缓存，获取真实测速数据
   const timestamp = Date.now();
 
   // 1. 测试网络延迟 (Ping)
   const pingstart = Date.now();
-  await request(`http://captive.apple.com/hotspot-detect.html?t=${timestamp}`, 5000);
+  await request(`http://cp.cloudflare.com/generate_204?t=${timestamp}`, 5000);
   const pingt = Date.now() - pingstart;
   
   // 2. 测试下行速率 (Speed)
-  const downloadUrl = `https://assets.fast.com/app-5.6.2.js?t=${timestamp}`;
-  const fileMb = 1.25; // 文件真实大小 MB
-
   const start = Date.now();
-  // 延长超时时间至 12 秒，照顾慢节点，防止直接抛出 Timeout 错误
-  await request(downloadUrl, 12000);
+  await request(`https://speed.cloudflare.com/__down?bytes=${bytes}&t=${timestamp}`, 10000);
   const end = Date.now();
   
-  // 计算速率
+  // 避免请求过快 duration 为 0 导致测速结果变成 Infinity
   const duration = Math.max((end - start) / 1000, 0.001);
-  const speedMbps = Math.round((fileMb / duration) * 8 * 100) / 100; // 转 Mbps 并保留两位小数
+  const speed = mb / duration;
+  const speedMbps = Math.round(speed * 8 * 100) / 100; // 转 Mbps 并保留两位小数
 
-  console.log(`测速完成 -> 耗时: ${duration.toFixed(3)}s | 延迟: ${pingt}ms | 速率: ${speedMbps}Mbps`);
+  console.log(`测速完成 -> 耗时: ${duration.toFixed(3)}s | 延迟: ${pingt}ms | 速率: ${speedMbps}Mbps (实际文件: ${mb}MB)`);
 
-  // 图标与颜色动态映射
+  // 网速区间判断逻辑：1 (<30Mbps), 2 (30Mbps~100Mbps), 3 (>=100Mbps)
   let speedLevel = 1;
   if (speedMbps >= 100) speedLevel = 3;
   else if (speedMbps >= 30) speedLevel = 2;
 
+  // 图标与颜色动态映射
   const icon = (speedLevel === 1 ? arg.iconslow : speedLevel === 2 ? arg.iconmid : arg.iconfast) 
     || (speedLevel === 1 ? 'tortoise' : speedLevel === 2 ? 'hare' : 'bolt');
   
@@ -66,6 +71,7 @@ function request(url, timeout) {
   });
 
 })().catch(e => {
+  // 异常处理
   console.log('❌ 测速失败: ' + (e.message || String(e)));
   
   $done({ 
