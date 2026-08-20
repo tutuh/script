@@ -1,9 +1,10 @@
 // 基础配置
 const REQUEST_HEADERS = {
-  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  'User-Agent':
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
   'Accept-Language': 'en-US,en;q=0.9',
   'Cache-Control': 'no-cache',
-  'Pragma': 'no-cache'
+  Pragma: 'no-cache'
 };
 
 // 状态定义
@@ -16,32 +17,17 @@ const STATUS_ERROR = -2;
 // ChatGPT 不支持的地区黑名单
 const GPT_BLOCKED_REGIONS = ['CN', 'HK', 'MO', 'RU', 'IR', 'KP', 'SY', 'CU', 'BY'];
 
-/**
- * 根据对齐模式格式化名称
- */
-function getAlignedName(name, alignMode) {
-  if (alignMode === 'native') {
-    // 原生系统字体像素对齐
-    switch (name) {
-      case 'ChatGPT': return 'ChatGPT' + '     ';
-      case 'Gemini': return 'Gemini' + '         ';
-      case 'Netflix': return 'Netflix' + '          ';
-      case 'Disney+': return 'Disney+' + '       ';
-      case 'YouTube': return 'YouTube' + '      ';
-      default: return name.padEnd(10, ' ');
-    }
-  }
-
-  // 等宽极客风
-  const monoMap = {
-    'ChatGPT': '𝙲𝚑𝚊𝚝𝙶𝙿𝚃\u2007',
-    'Gemini': '𝙶𝚎𝚖𝚒𝚗𝚒\u2007\u2007',
-    'Netflix': '𝙽𝚎𝚝𝚏𝚕𝚒𝚡\u2007',
-    'Disney+': '𝙳𝚒𝚜𝚗𝚎𝚢+\u2007',
-    'YouTube': '𝚈𝚘𝚞𝚃𝚞𝚋𝚎\u2007'
+// 格式化名称
+function getAlignedName(name) {
+  const nameMap = {
+    ChatGPT: 'ChatGPT  \u2009',
+    Gemini: 'Gemini      ',
+    Netflix: 'Netflix       ',
+    'Disney+': 'Disney+    ',
+    YouTube: 'YouTube  \u2009\u2009\u2009'
   };
 
-  return monoMap[name] || name.padEnd(8, '\u2007');
+  return nameMap[name] || name;
 }
 
 // 解析 Surge 参数
@@ -52,9 +38,7 @@ function getArgs() {
     return args;
   }
 
-  const params = $argument.split('&');
-
-  for (const param of params) {
+  for (const param of $argument.split('&')) {
     const separatorIndex = param.indexOf('=');
 
     if (separatorIndex === -1) {
@@ -72,14 +56,56 @@ function getArgs() {
   return args;
 }
 
-// 获取格式化的当前时间
+// 获取当前时间
 function getCurrentTime() {
   const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const seconds = String(now.getSeconds()).padStart(2, '0');
 
-  return `${hours}:${minutes}:${seconds}`;
+  return [
+    String(now.getHours()).padStart(2, '0'),
+    String(now.getMinutes()).padStart(2, '0'),
+    String(now.getSeconds()).padStart(2, '0')
+  ].join(':');
+}
+
+// 创建检测结果
+function createResult(name, status, region) {
+  const result = {
+    name,
+    status
+  };
+
+  if (region) {
+    result.region = region;
+  }
+
+  return result;
+}
+
+// 格式化检测结果
+function formatResult(result) {
+  const alignedName = getAlignedName(result.name);
+
+  switch (result.status) {
+    case STATUS_AVAILABLE:
+      return `${alignedName}➟  ${result.region}`;
+
+    case STATUS_NOT_AVAILABLE:
+      return `${alignedName}➟  未解锁`;
+
+    case STATUS_TIMEOUT:
+      return `${alignedName}➟  超时`;
+
+    case STATUS_ERROR:
+      return `${alignedName}➟  检测失败`;
+
+    case STATUS_COMING: {
+      const tag = result.name === 'Netflix' ? '自制' : '即将';
+      return `${alignedName}➟  ${tag} ${result.region}`;
+    }
+
+    default:
+      return `${alignedName}➟  未知`;
+  }
 }
 
 // 主入口
@@ -87,8 +113,12 @@ function getCurrentTime() {
   const args = getArgs();
 
   const baseTitle = args.title || '网络解锁检测';
-  const timeoutMs = parseInt(args.timeout, 10) || 3000;
-  const alignMode = args.align_mode || args.mode || 'monospace';
+
+  // 脚本检测超时
+  const detectionTimeoutSeconds =
+    parseInt(args.detection_timeout, 10) || 3;
+
+  const detectionTimeoutMs = detectionTimeoutSeconds * 1000;
 
   const panel = {
     title: `${baseTitle} | ${getCurrentTime()}`,
@@ -99,38 +129,14 @@ function getCurrentTime() {
 
   try {
     const results = await Promise.all([
-      checkChatGPT(timeoutMs),
-      checkGemini(timeoutMs),
-      checkNetflix(timeoutMs),
-      checkDisneyPlus(timeoutMs),
-      checkYouTubePremium(timeoutMs)
+      checkChatGPT(detectionTimeoutMs),
+      checkGemini(detectionTimeoutMs),
+      checkNetflix(detectionTimeoutMs),
+      checkDisneyPlus(detectionTimeoutMs),
+      checkYouTubePremium(detectionTimeoutMs)
     ]);
 
-    panel.content = results.map(result => {
-      const alignedName = getAlignedName(result.name, alignMode);
-
-      switch (result.status) {
-        case STATUS_AVAILABLE:
-          return `${alignedName}➟  ${result.region}`;
-
-        case STATUS_NOT_AVAILABLE:
-          return `${alignedName}➟  未解锁`;
-
-        case STATUS_TIMEOUT:
-          return `${alignedName}➟  超时`;
-
-        case STATUS_ERROR:
-          return `${alignedName}➟  检测失败`;
-
-        case STATUS_COMING: {
-          const tag = result.name === 'Netflix' ? '自制' : '即将';
-          return `${alignedName}➟  ${tag} ${result.region}`;
-        }
-
-        default:
-          return `${alignedName}➟  未知`;
-      }
-    }).join('\n');
+    panel.content = results.map(formatResult).join('\n');
   } catch (error) {
     panel.content = '检测过程发生异常';
   }
@@ -139,7 +145,14 @@ function getCurrentTime() {
 })();
 
 // 基础网络请求封装
-function request(method, url, timeoutMs, headers = REQUEST_HEADERS, body = null, maxRetries = 1) {
+function request(
+  method,
+  url,
+  timeoutMs,
+  headers = REQUEST_HEADERS,
+  body = null,
+  maxRetries = 1
+) {
   return new Promise(resolve => {
     const requestOptions = {
       url,
@@ -159,6 +172,7 @@ function request(method, url, timeoutMs, headers = REQUEST_HEADERS, body = null,
           setTimeout(() => {
             attemptRequest(retryCount + 1);
           }, 200);
+
           return;
         }
 
@@ -190,40 +204,24 @@ async function checkChatGPT(timeoutMs) {
     );
 
     if (response.error || !response.data) {
-      return {
-        name: 'ChatGPT',
-        status: STATUS_TIMEOUT
-      };
+      return createResult('ChatGPT', STATUS_TIMEOUT);
     }
 
     const locationMatch = response.data.match(/loc=([A-Z]{2})/i);
 
     if (!locationMatch) {
-      return {
-        name: 'ChatGPT',
-        status: STATUS_ERROR
-      };
+      return createResult('ChatGPT', STATUS_ERROR);
     }
 
     const region = locationMatch[1].toUpperCase();
 
     if (!GPT_BLOCKED_REGIONS.includes(region)) {
-      return {
-        name: 'ChatGPT',
-        status: STATUS_AVAILABLE,
-        region
-      };
+      return createResult('ChatGPT', STATUS_AVAILABLE, region);
     }
 
-    return {
-      name: 'ChatGPT',
-      status: STATUS_NOT_AVAILABLE
-    };
+    return createResult('ChatGPT', STATUS_NOT_AVAILABLE);
   } catch (error) {
-    return {
-      name: 'ChatGPT',
-      status: STATUS_ERROR
-    };
+    return createResult('ChatGPT', STATUS_ERROR);
   }
 }
 
@@ -237,10 +235,7 @@ async function checkGemini(timeoutMs) {
     );
 
     if (response.error || !response.response) {
-      return {
-        name: 'Gemini',
-        status: STATUS_TIMEOUT
-      };
+      return createResult('Gemini', STATUS_TIMEOUT);
     }
 
     const responseStatus = response.response.status || 0;
@@ -251,47 +246,57 @@ async function checkGemini(timeoutMs) {
         htmlData.includes('not available') ||
         htmlData.includes('unavailable in your country')
       ) {
-        return {
-          name: 'Gemini',
-          status: STATUS_NOT_AVAILABLE
-        };
+        return createResult('Gemini', STATUS_NOT_AVAILABLE);
       }
 
       const regionMatch = htmlData.match(/,2,1,200,"([A-Z]{2,3})"/);
 
       if (!regionMatch || !regionMatch[1]) {
-        return {
-          name: 'Gemini',
-          status: STATUS_ERROR
-        };
+        return createResult('Gemini', STATUS_ERROR);
       }
 
       const region = regionMatch[1].slice(0, 2).toUpperCase();
 
-      return {
-        name: 'Gemini',
-        status: STATUS_AVAILABLE,
-        region
-      };
+      return createResult('Gemini', STATUS_AVAILABLE, region);
     }
 
     if ([403, 404, 302].includes(responseStatus)) {
-      return {
-        name: 'Gemini',
-        status: STATUS_NOT_AVAILABLE
-      };
+      return createResult('Gemini', STATUS_NOT_AVAILABLE);
     }
 
-    return {
-      name: 'Gemini',
-      status: STATUS_ERROR
-    };
+    return createResult('Gemini', STATUS_ERROR);
   } catch (error) {
-    return {
-      name: 'Gemini',
-      status: STATUS_ERROR
-    };
+    return createResult('Gemini', STATUS_ERROR);
   }
+}
+
+// 提取 Netflix 地区
+function extractNetflixRegion(htmlData) {
+  let regionMatch = htmlData.match(
+    /(?:"|\\")(?:requestCountryCode|countryCode)(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i
+  );
+
+  if (regionMatch && regionMatch[1]) {
+    return regionMatch[1].toUpperCase();
+  }
+
+  regionMatch = htmlData.match(
+    /(?:"|\\")(?:geolocation|location)(?:"|\\")\s*:\s*\{[^}]*?(?:"|\\")country(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i
+  );
+
+  if (regionMatch && regionMatch[1]) {
+    return regionMatch[1].toUpperCase();
+  }
+
+  regionMatch = htmlData.match(
+    /(?:"|\\")country(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i
+  );
+
+  if (regionMatch && regionMatch[1]) {
+    return regionMatch[1].toUpperCase();
+  }
+
+  return null;
 }
 
 // Netflix
@@ -304,58 +309,20 @@ async function checkNetflix(timeoutMs) {
     );
 
     if (primaryResponse.error || !primaryResponse.response) {
-      return {
-        name: 'Netflix',
-        status: STATUS_TIMEOUT
-      };
+      return createResult('Netflix', STATUS_TIMEOUT);
     }
 
     const primaryStatus = primaryResponse.response.status || 0;
     const primaryHtml = primaryResponse.data || '';
 
     if (primaryStatus === 403) {
-      return {
-        name: 'Netflix',
-        status: STATUS_NOT_AVAILABLE
-      };
+      return createResult('Netflix', STATUS_NOT_AVAILABLE);
     }
 
-    const extractRegion = htmlData => {
-      let regionMatch = htmlData.match(
-        /(?:"|\\")(?:requestCountryCode|countryCode)(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i
-      );
-
-      if (regionMatch && regionMatch[1]) {
-        return regionMatch[1].toUpperCase();
-      }
-
-      regionMatch = htmlData.match(
-        /(?:"|\\")(?:geolocation|location)(?:"|\\")\s*:\s*\{[^}]*?(?:"|\\")country(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i
-      );
-
-      if (regionMatch && regionMatch[1]) {
-        return regionMatch[1].toUpperCase();
-      }
-
-      regionMatch = htmlData.match(
-        /(?:"|\\")country(?:"|\\")\s*:\s*(?:"|\\")([A-Za-z]{2})(?:"|\\")/i
-      );
-
-      if (regionMatch && regionMatch[1]) {
-        return regionMatch[1].toUpperCase();
-      }
-
-      return null;
-    };
-
     if (primaryStatus === 200) {
-      const region = extractRegion(primaryHtml) || 'US';
+      const region = extractNetflixRegion(primaryHtml) || 'US';
 
-      return {
-        name: 'Netflix',
-        status: STATUS_AVAILABLE,
-        region
-      };
+      return createResult('Netflix', STATUS_AVAILABLE, region);
     }
 
     if (primaryStatus === 404) {
@@ -366,40 +333,24 @@ async function checkNetflix(timeoutMs) {
       );
 
       if (secondaryResponse.error || !secondaryResponse.response) {
-        return {
-          name: 'Netflix',
-          status: STATUS_TIMEOUT
-        };
+        return createResult('Netflix', STATUS_TIMEOUT);
       }
 
       const secondaryStatus = secondaryResponse.response.status || 0;
       const secondaryHtml = secondaryResponse.data || '';
 
       if (secondaryStatus === 200) {
-        const region = extractRegion(secondaryHtml) || 'US';
+        const region = extractNetflixRegion(secondaryHtml) || 'US';
 
-        return {
-          name: 'Netflix',
-          status: STATUS_COMING,
-          region
-        };
+        return createResult('Netflix', STATUS_COMING, region);
       }
 
-      return {
-        name: 'Netflix',
-        status: STATUS_NOT_AVAILABLE
-      };
+      return createResult('Netflix', STATUS_NOT_AVAILABLE);
     }
 
-    return {
-      name: 'Netflix',
-      status: STATUS_ERROR
-    };
+    return createResult('Netflix', STATUS_ERROR);
   } catch (error) {
-    return {
-      name: 'Netflix',
-      status: STATUS_ERROR
-    };
+    return createResult('Netflix', STATUS_ERROR);
   }
 }
 
@@ -423,57 +374,43 @@ async function checkDisneyPlus(timeoutMs) {
       locationInfo?.inSupportedLocation === false ||
       locationInfo?.inSupportedLocation === 'false'
     ) {
-      return {
-        name: 'Disney+',
-        status: STATUS_COMING,
-        region: region || 'UN'
-      };
+      return createResult('Disney+', STATUS_COMING, region || 'UN');
     }
 
     if (region) {
-      return {
-        name: 'Disney+',
-        status: STATUS_AVAILABLE,
-        region
-      };
+      return createResult('Disney+', STATUS_AVAILABLE, region);
     }
 
     if (homePageInfo && homePageInfo.available === false) {
-      return {
-        name: 'Disney+',
-        status: STATUS_NOT_AVAILABLE
-      };
+      return createResult('Disney+', STATUS_NOT_AVAILABLE);
     }
 
     if (homePageInfo && homePageInfo.available === true) {
-      return {
-        name: 'Disney+',
-        status: STATUS_AVAILABLE,
-        region: homePageInfo.region || 'US'
-      };
+      return createResult(
+        'Disney+',
+        STATUS_AVAILABLE,
+        homePageInfo.region || 'US'
+      );
     }
 
-    return {
-      name: 'Disney+',
-      status: STATUS_TIMEOUT
-    };
+    return createResult('Disney+', STATUS_TIMEOUT);
   } catch (error) {
-    return {
-      name: 'Disney+',
-      status: STATUS_ERROR
-    };
+    return createResult('Disney+', STATUS_ERROR);
   }
 }
 
+// 获取 Disney+ 地区信息
 async function getDisneyLocationInfo(timeoutMs) {
   const requestHeaders = {
     ...REQUEST_HEADERS,
-    'Authorization': 'Bearer ZGlzbmV5JmJyb3dzZXImMS4wLjA.Cu56AgSfBTDag5NiRA81oLHkDZfu5L3CKadnefEAY84',
+    Authorization:
+      'Bearer ZGlzbmV5JmJyb3dzZXImMS4wLjA.Cu56AgSfBTDag5NiRA81oLHkDZfu5L3CKadnefEAY84',
     'Content-Type': 'application/json'
   };
 
   const requestBody = JSON.stringify({
-    query: 'mutation registerDevice($input: RegisterDeviceInput!) { registerDevice(registerDevice: $input) { grant { grantType assertion } } }',
+    query:
+      'mutation registerDevice($input: RegisterDeviceInput!) { registerDevice(registerDevice: $input) { grant { grantType assertion } } }',
     variables: {
       input: {
         applicationRuntime: 'chrome',
@@ -522,6 +459,7 @@ async function getDisneyLocationInfo(timeoutMs) {
   }
 }
 
+// 检测 Disney+ 首页
 async function testDisneyHomePage(timeoutMs) {
   const response = await request(
     'GET',
@@ -572,10 +510,7 @@ async function checkYouTubePremium(timeoutMs) {
     );
 
     if (response.error || !response.response) {
-      return {
-        name: 'YouTube',
-        status: STATUS_TIMEOUT
-      };
+      return createResult('YouTube', STATUS_TIMEOUT);
     }
 
     const htmlData = response.data || '';
@@ -589,10 +524,7 @@ async function checkYouTubePremium(timeoutMs) {
       htmlData.includes('目前無法使用');
 
     if (isNotAvailable) {
-      return {
-        name: 'YouTube',
-        status: STATUS_NOT_AVAILABLE
-      };
+      return createResult('YouTube', STATUS_NOT_AVAILABLE);
     }
 
     if (response.response.status === 200) {
@@ -612,27 +544,14 @@ async function checkYouTubePremium(timeoutMs) {
       }
 
       if (!region) {
-        return {
-          name: 'YouTube',
-          status: STATUS_ERROR
-        };
+        return createResult('YouTube', STATUS_ERROR);
       }
 
-      return {
-        name: 'YouTube',
-        status: STATUS_AVAILABLE,
-        region
-      };
+      return createResult('YouTube', STATUS_AVAILABLE, region);
     }
 
-    return {
-      name: 'YouTube',
-      status: STATUS_ERROR
-    };
+    return createResult('YouTube', STATUS_ERROR);
   } catch (error) {
-    return {
-      name: 'YouTube',
-      status: STATUS_ERROR
-    };
+    return createResult('YouTube', STATUS_ERROR);
   }
 }
