@@ -7,43 +7,43 @@
 
 [URL Rewrite]
 # bd xxx (百度)
-^https:\/\/duckduckgo\.com\/\?q=bd(?:%20|\+)([^&]+) https://www.baidu.com/s?wd=$1 302
+^https:\/\/duckduckgo\.com\/\?q=bd(?:%20|\+)([^&]+).* https://www.baidu.com/s?wd=$1 302
 
 # bk xxx (百度百科)
-^https:\/\/duckduckgo\.com\/\?q=bk(?:%20|\+)([^&]+) https://baike.baidu.com/item/$1 302
+^https:\/\/duckduckgo\.com\/\?q=bk(?:%20|\+)([^&]+).* https://baike.baidu.com/item/$1 302
 
 # db xxx (豆瓣)
-^https:\/\/duckduckgo\.com\/\?q=db(?:%20|\+)([^&]+) https://www.douban.com/search?q=$1 302
+^https:\/\/duckduckgo\.com\/\?q=db(?:%20|\+)([^&]+).* https://www.douban.com/search?q=$1 302
 
 # zh xxx (知乎)
-^https:\/\/duckduckgo\.com\/\?q=zh(?:%20|\+)([^&]+) https://www.zhihu.com/search?q=$1 302
+^https:\/\/duckduckgo\.com\/\?q=zh(?:%20|\+)([^&]+).* https://www.zhihu.com/search?q=$1 302
 
 # wb xxx (微博)
-^https:\/\/duckduckgo\.com\/\?q=wb(?:%20|\+)([^&]+) https://s.weibo.com/weibo/$1 302
+^https:\/\/duckduckgo\.com\/\?q=wb(?:%20|\+)([^&]+).* https://s.weibo.com/weibo/$1 302
 
 # gp xxx (Google 图片)
-^https:\/\/duckduckgo\.com\/\?q=gp(?:%20|\+)([^&]+) https://www.google.com/search?tbm=isch&q=$1 302
+^https:\/\/duckduckgo\.com\/\?q=gp(?:%20|\+)([^&]+).* https://www.google.com/search?&tbm=isch&q=$1 302
 
 # wiki xxx (维基百科)
-^https:\/\/duckduckgo\.com\/\?q=wiki(?:%20|\+)([^&]+) https://wikipedia.org/wiki/$1 302
+^https:\/\/duckduckgo\.com\/\?q=wiki(?:%20|\+)([^&]+).* https://wikipedia.org/wiki/$1 302
 
 # wk xxx (维基中文)
-^https:\/\/duckduckgo\.com\/\?q=wk(?:%20|\+)([^&]+) https://zh.wikipedia.org/wiki/$1 302
+^https:\/\/duckduckgo\.com\/\?q=wk(?:%20|\+)([^&]+).* https://zh.wikipedia.org/wiki/$1 302
 
 # gh xxx (GitHub)
-^https:\/\/duckduckgo\.com\/\?q=gh(?:%20|\+)([^&]+) https://github.com/search?q=$1 302
+^https:\/\/duckduckgo\.com\/\?q=gh(?:%20|\+)([^&]+).* https://github.com/search?q=$1 302
 
 # csdn xxx (CSDN)
-^https:\/\/duckduckgo\.com\/\?q=csdn(?:%20|\+)([^&]+) https://so.csdn.net/so/search/s.do?q=$1 302
+^https:\/\/duckduckgo\.com\/\?q=csdn(?:%20|\+)([^&]+).* https://so.csdn.net/so/search/s.do?q=$1 302
 
 # by xxx (必应)
-^https:\/\/duckduckgo\.com\/\?q=by(?:%20|\+)([^&]+) https://cn.bing.com/search?q=$1 302
+^https:\/\/duckduckgo\.com\/\?q=by(?:%20|\+)([^&]+).* https://cn.bing.com/search?q=$1 302
 
 # ddg xxx (还原 DuckDuckGo)
-^https:\/\/duckduckgo\.com\/\?q=ddg(?:%20|\+)([^&]+) https://duckduckgo.com/?ia=about&q=$1 302
+^https:\/\/duckduckgo\.com\/\?q=ddg(?:%20|\+)([^&]+).* https://duckduckgo.com/?ia=about&q=$1 302
 
 # xxx （无指令默认为 Google）
-^https:\/\/duckduckgo\.com\/\?q=([^&]+) https://www.google.com/search?q=$1 302
+^https:\/\/duckduckgo\.com\/\?q=([^&]+).* https://www.google.com/search?q=$1 302
 
 [MITM]
 hostname = %APPEND% duckduckgo.com
