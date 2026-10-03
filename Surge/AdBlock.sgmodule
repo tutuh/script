@@ -8,7 +8,7 @@
 ^https:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 10086 - client.app.coc.10086.cn
-^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(?:explorePage\/getAdverList|init\/startInit) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # (B)
 # > 百度网盘 - pan.baidu.com
@@ -42,9 +42,9 @@
 
 # (J)
 # > Jump - switch.jumpvg.com
-^https:\/\/switch\.jumpvg\.com\/jump\/(getlaunchad|recommend\/ad_conf) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/switch\.jumpvg\.com\/jump\/(?:getlaunchad|recommend\/ad_conf) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 京东 - api.m.jd.com
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 驾考宝典 - *.kakamobi.cn
 ^https:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
@@ -63,17 +63,17 @@
 
 # (M)
 # > 米家 - home.mi.com
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|openingBanner) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(?:banner|carousel\/banners|openingBanner) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 美味不用等 - capi.mwee.cn
-^https:\/\/capi\.mwee\.cn\/app-api\/V\d+\/app\/(ad|getstartad) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/capi\.mwee\.cn\/app-api\/V\d+\/app\/(?:ad|getstartad) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 麦当劳 - api.mcd.cn
-^https:\/\/api\.mcd\.cn\/bff\/portal\/(home\/splash|richpop) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.mcd\.cn\/bff\/portal\/(?:home\/splash|richpop) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # (P)
 # > 票根 - pss.txffp.com
 ^https:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ data-type=text data="" status-code=200
 # > 拼多多 - api.yangkeduo.com, api.pinduoduo.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
-^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.(?:pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/.* data-type=text data="" status-code=200
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_.* data-type=text data="" status-code=200
 ^https:\/\/images\.pinduoduo\.com\/mrk\/.* data-type=text data="" status-code=200
@@ -82,9 +82,9 @@
 # (T)
 # > 淘宝 - gw.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com
 ^https:\/\/(?:gw|heic)\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(?:octopus|tps)-(?:1080|1125)-\d{4}\.(?:jpg|png)_(?:1\d{3}|9\d{2})x(?:\d|1\d{3}|9\d{2})q[59]0 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(?:volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 一淘网 - acs.m.taobao.com
-^https:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ data-type=text data="" status-code=200
+^https:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(?:jpg|png)$ data-type=text data="" status-code=200
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # (U)
