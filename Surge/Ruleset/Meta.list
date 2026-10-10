@@ -1,0 +1,28 @@
+# Meta
+# > Facebook
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fb.me
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,messenger.com
+# > Instagram
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,instagr.am
+DOMAIN-SUFFIX,ig.me
+# > WhatsApp
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,wa.me
+# > Threads
+DOMAIN-SUFFIX,threads.net
+# > Meta
+DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,meta.ai
+# > Oculus
+DOMAIN-SUFFIX,metaquest.com
+DOMAIN-SUFFIX,oculus.com
+DOMAIN-SUFFIX,oculuscdn.com
+DOMAIN-SUFFIX,oculusvr.com
