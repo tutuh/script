@@ -233,13 +233,6 @@ DOMAIN-SUFFIX,xiaomi.com
 DOMAIN-SUFFIX,xiaomi.net
 DOMAIN-SUFFIX,xiaomicp.com
 
-# Microsoft Mail
-DOMAIN-SUFFIX,hotmail.com
-DOMAIN-SUFFIX,outlook.com
-DOMAIN-SUFFIX,live.com
-DOMAIN-SUFFIX,live.net
-DOMAIN-SUFFIX,msn.com
-
 # NetEase - 网易
 DOMAIN-SUFFIX,126.com
 DOMAIN-SUFFIX,126.net
