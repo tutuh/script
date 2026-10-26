@@ -7,6 +7,7 @@ DOMAIN-SUFFIX,csair.com
 
 # 国航
 DOMAIN-SUFFIX,airchina.com.cn
+DOMAIN-SUFFIX,airchina.com
 
 # 深航
 DOMAIN-SUFFIX,shenzhenair.com
@@ -113,6 +114,9 @@ DOMAIN-SUFFIX,malaysiaairlines.com
 # 亚洲航空
 DOMAIN-SUFFIX,airasia.com
 
+# 捷星航空
+DOMAIN-SUFFIX,jetstar.com
+
 # 泰国国际航空
 DOMAIN-SUFFIX,thaiairways.com
 
@@ -138,9 +142,13 @@ DOMAIN-SUFFIX,united.com
 
 # 达美航空
 DOMAIN-SUFFIX,delta.com
+DOMAIN-SUFFIX,delta-air.com
 
 # 美国航空
 DOMAIN-SUFFIX,aa.com
+
+# 阿拉斯加航空
+DOMAIN-SUFFIX,alaskaair.com
 
 # 加拿大航空
 DOMAIN-SUFFIX,aircanada.com
@@ -151,8 +159,9 @@ DOMAIN-SUFFIX,britishairways.com
 # 维珍航空
 DOMAIN-SUFFIX,virginatlantic.com
 
-# 汉莎航空
+# 汉莎航空及集团
 DOMAIN-SUFFIX,lufthansa.com
+DOMAIN-SUFFIX,lhgroup.com
 
 # 瑞士国际航空
 DOMAIN-SUFFIX,swiss.com
@@ -165,6 +174,15 @@ DOMAIN-SUFFIX,klm.com
 
 # 芬兰航空
 DOMAIN-SUFFIX,finnair.com
+
+# 北欧航空
+DOMAIN-SUFFIX,flysas.com
+
+# 西班牙航空
+DOMAIN-SUFFIX,iberia.com
+
+# ITA意大利航空
+DOMAIN-SUFFIX,ita-airways.com
 
 # 阿联酋航空
 DOMAIN-SUFFIX,emirates.com
