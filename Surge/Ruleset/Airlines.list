@@ -1,0 +1,185 @@
+# 中国大陆航司
+# 东航、上海航空
+DOMAIN-SUFFIX,ceair.com
+
+# 南航
+DOMAIN-SUFFIX,csair.com
+
+# 国航
+DOMAIN-SUFFIX,airchina.com.cn
+
+# 深航
+DOMAIN-SUFFIX,shenzhenair.com
+
+# 厦航
+DOMAIN-SUFFIX,xiamenair.com
+
+# 海航
+DOMAIN-SUFFIX,hainanairlines.com
+
+# 吉祥航空
+DOMAIN-SUFFIX,juneyaoair.com
+
+# 川航
+DOMAIN-SUFFIX,sichuanair.com
+
+# 山东航空
+DOMAIN-SUFFIX,sda.cn
+
+# 春秋航空
+DOMAIN-SUFFIX,ch.com
+
+# 中国联合航空
+DOMAIN-SUFFIX,flycua.com
+
+# 成都航空
+DOMAIN-SUFFIX,cdal.com.cn
+
+# 天津航空
+DOMAIN-SUFFIX,tianjin-air.com
+
+# 西部航空
+DOMAIN-SUFFIX,westair.cn
+
+# 昆明航空
+DOMAIN-SUFFIX,airkunming.com
+
+# 瑞丽航空
+DOMAIN-SUFFIX,rlair.net
+
+# 河北航空
+DOMAIN-SUFFIX,hbhk.com.cn
+
+# 长龙航空
+DOMAIN-SUFFIX,loongair.cn
+
+# 重庆航空
+DOMAIN-SUFFIX,chongqingairlines.cn
+
+
+# 香港及澳门航司
+# 国泰航空
+DOMAIN-SUFFIX,cathaypacific.com
+
+# 香港航空
+DOMAIN-SUFFIX,hkairlines.com
+
+# 香港快运航空
+DOMAIN-SUFFIX,hkexpress.com
+
+# 大湾区航空
+DOMAIN-SUFFIX,greaterbay-airlines.com
+
+# 澳门航空
+DOMAIN-SUFFIX,airmacau.com.mo
+
+
+# 台湾航司
+# 中华航空
+DOMAIN-SUFFIX,china-airlines.com
+
+# 长荣航空
+DOMAIN-SUFFIX,evaair.com
+
+# 星宇航空
+DOMAIN-SUFFIX,starlux-airlines.com
+
+# 台湾虎航
+DOMAIN-SUFFIX,tigerairtw.com
+
+
+# 亚洲航司
+# 新加坡航空
+DOMAIN-SUFFIX,singaporeair.com
+
+# 酷航
+DOMAIN-SUFFIX,flyscoot.com
+
+# 日本航空
+DOMAIN-SUFFIX,jal.co.jp
+
+# 全日空
+DOMAIN-SUFFIX,ana.co.jp
+
+# 大韩航空
+DOMAIN-SUFFIX,koreanair.com
+
+# 韩亚航空
+DOMAIN-SUFFIX,flyasiana.com
+
+# 马来西亚航空
+DOMAIN-SUFFIX,malaysiaairlines.com
+
+# 亚洲航空
+DOMAIN-SUFFIX,airasia.com
+
+# 泰国国际航空
+DOMAIN-SUFFIX,thaiairways.com
+
+# 越南航空
+DOMAIN-SUFFIX,vietnamairlines.com
+
+# 越捷航空
+DOMAIN-SUFFIX,vietjetair.com
+
+# 菲律宾航空
+DOMAIN-SUFFIX,philippineairlines.com
+
+# 宿务太平洋航空
+DOMAIN-SUFFIX,cebupacificair.com
+
+# 靛蓝航空
+DOMAIN-SUFFIX,goindigo.in
+
+
+# 欧美及中东航司
+# 美国联合航空
+DOMAIN-SUFFIX,united.com
+
+# 达美航空
+DOMAIN-SUFFIX,delta.com
+
+# 美国航空
+DOMAIN-SUFFIX,aa.com
+
+# 加拿大航空
+DOMAIN-SUFFIX,aircanada.com
+
+# 英国航空
+DOMAIN-SUFFIX,britishairways.com
+
+# 维珍航空
+DOMAIN-SUFFIX,virginatlantic.com
+
+# 汉莎航空
+DOMAIN-SUFFIX,lufthansa.com
+
+# 瑞士国际航空
+DOMAIN-SUFFIX,swiss.com
+
+# 法国航空
+DOMAIN-SUFFIX,airfrance.com
+
+# 荷兰皇家航空
+DOMAIN-SUFFIX,klm.com
+
+# 芬兰航空
+DOMAIN-SUFFIX,finnair.com
+
+# 阿联酋航空
+DOMAIN-SUFFIX,emirates.com
+
+# 卡塔尔航空
+DOMAIN-SUFFIX,qatarairways.com
+
+# 阿提哈德航空
+DOMAIN-SUFFIX,etihad.com
+
+# 土耳其航空
+DOMAIN-SUFFIX,turkishairlines.com
+
+# 瑞安航空
+DOMAIN-SUFFIX,ryanair.com
+
+# 易捷航空
+DOMAIN-SUFFIX,easyjet.com
